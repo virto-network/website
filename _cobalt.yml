@@ -4,5 +4,6 @@ site:
   base_url: https://valibre.org
 ignore:
   - README.md
+  - cobalt*
 posts:
   rss: rss.xml
