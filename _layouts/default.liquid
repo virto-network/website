@@ -12,12 +12,16 @@
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00ccff">
 	<meta name="theme-color" content="#00ccff">
 	<style>
-	:root { --text: #145; }
-	html, body { margin: 0; padding: 0; height: 100%; color: var(--text); font-family: Arial, sans-serif; }
+	:root { --text: #446; }
 	body {
 		background: linear-gradient(to right, #00c4f5 50%, #00ccff 50%);
 		display: flex; flex-direction: column;
 	}
+	@font-face { font-family: "WS Pen"; src: url("img/ws-pen.woff2") format("woff2"); }
+	h1, h2 { font-family: "WS Pen", sans-serif; }
+	h1 { font-size: 3rem; }
+	h2 { font-size: 2rem; }
+	html, body { margin: 0; padding: 0; height: 100%; color: var(--text); font-family: Arial, sans-serif; }
 	main { margin: auto; }
 	#gh { fill: white; transition: color 200ms; }
 	#gh:hover, #gh:active { fill: var(--text) }
