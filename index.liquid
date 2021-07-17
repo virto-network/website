@@ -26,6 +26,8 @@ section#projects {
 #logo { margin: auto; }
 #logo svg { width: 60vmin; margin: auto; max-width: 500px; display: block; }
 #logo:hover path { animation: none; }
+#logo path:first-of-type { fill: var(--greend); }
+#logo path:last-of-type { fill: var(--green); }
 #logo path {
 	animation: flap 10s linear infinite 500ms;
 	transition: transform 400ms;
@@ -46,8 +48,8 @@ section#projects {
 <section id="home">
 	<figure id="logo" title="Valibre">
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63.5 60.21">
-			<path d="m 30.116,31.47 v 23.45 L 5.3,28.74 V 5.29 Z" style="fill:#41e506" />
-			<path d="m 33.39,31.47 v 23.45 l 24.8,-26.19 V 5.29 Z" style="fill:#46f805" />
+			<path d="m 30.116,31.47 v 23.45 L 5.3,28.74 V 5.29 Z" />
+			<path d="m 33.39,31.47 v 23.45 l 24.8,-26.19 V 5.29 Z" />
 		</svg>
 		<figcation>
 		<h1>{{ page.title }}</h1>

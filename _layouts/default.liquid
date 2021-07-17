@@ -12,7 +12,7 @@
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00ccff">
 	<meta name="theme-color" content="#00ccff">
 	<style>
-	:root { --text: #446; --main: #0cf }
+	:root { --text: #446; --main: #0cf; --maind: #00c0f0; --green: #5e4; --greend: #3d2; }
 	body {
 		font-family: Arial, sans-serif; 
 		overflow: hidden;
@@ -32,7 +32,7 @@
 	html, body, main { margin: 0; padding: 0; height: 100%; }
 	main { overflow: auto; scroll-snap-type: y proximity; }
 	section {
-		background: linear-gradient(to right, #00c4f5 50%, #0cf 50%);
+		background: linear-gradient(to right, var(--maind) 50%, var(--main) 50%);
 		margin: auto;
 		min-height: calc(100vh - calc(100vh - 100%));
 		scroll-snap-align: start;
