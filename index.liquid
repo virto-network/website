@@ -18,7 +18,7 @@ data:
 }
 section { display: flex; flex-direction: column; }
 section#projects {
-	background: linear-gradient(to right, #fcfcfc 50%, #fff 50%);
+	background: linear-gradient(to right, var(--bgd) 50%, var(--bg) 50%);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	box-sizing: border-box;
 	padding: 2rem 1.5rem;
@@ -36,14 +36,20 @@ section#projects {
 }
 #logo path:hover { transform: rotateY(25deg); }
 #logo figcation { text-align: center; font-weight: bold;  }
-#logo h1 { margin-bottom: 0.3rem; color: white; }
-#logo p { color: rgba(255, 255, 255, 0.8); font-size: 0.9em; margin-top: 0.3rem; }
+#logo h1 { margin-bottom: 0.3rem; color: var(--bg); }
+#logo p { color: rgba(255, 255, 255, 0.7); font-size: 0.9em; margin-top: 0.3rem; }
 
-#gh { fill: white; transition: color 200ms; }
+#gh { fill: var(--bg); transition: color 200ms; }
 #gh:hover, #gh:active { fill: var(--text) }
 
 :is(#projects) p, ul { line-height: 1.6em; max-width: 600px; margin: 1rem auto; }
 #projects img { margin: 2rem auto; }
+
+@media (prefers-color-scheme: dark) {
+	#logo h1 { color: var(--text); }
+	#gh { fill: var(--text); }
+	#gh:hover, #gh:active { fill: var(--bg) }
+}
 </style>
 
 <section id="home">

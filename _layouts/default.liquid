@@ -12,7 +12,10 @@
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00ccff">
 	<meta name="theme-color" content="#00ccff">
 	<style>
-	:root { --text: #446; --main: #0cf; --maind: #00c0f0; --green: #5e4; --greend: #3d2; }
+	:root { --text: #446; --main: #0cf; --maind: #00c0f0; --green: #5e4; --greend: #3d2; --bg: #fff; --bgd: #fcfcfc; }
+	@media (prefers-color-scheme: dark) { 
+		:root { --text: #eee; --main: #0ad; --maind: #00a0d0; --green: #3c2; --greend: #1b0; --bg: #161616; --bgd: #111; }
+	}
 	body {
 		font-family: Arial, sans-serif; 
 		overflow: hidden;
