@@ -42,11 +42,18 @@
 	p a:hover { text-decoration: underline; text-underline-offset: 3px; }
 	ul { list-style: none; }
 	ul li::before { content: '▪'; color: var(--main); font-size: 1.5em; margin-right: 0.5rem; }
+	footer {
+		min-height: 4rem;
+		background: linear-gradient(to right, var(--greend) 50%, var(--green) 50%);
+	}
 	</style>
 </head>
 
 <body>
-	<main>{{ page.content }}</main>
+	<main>
+		{{ page.content }}
+		<footer></footer>
+	</main>
 </body>
 
 </html>
