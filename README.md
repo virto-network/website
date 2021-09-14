@@ -1,6 +1,6 @@
-# valibre
+# Virto Network
 
-Website of [valibre.org](https://valibre.org) with links to the projects
+Website of [virto.network](https://virto.network) 
 
 ## Build this site
 
