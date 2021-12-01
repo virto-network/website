@@ -1,7 +1,7 @@
 
 site:
-  description: Blockchain for the masses
-  base_url: https://valibre.org
+  description: Local communities and desentralized marketplaces
+  base_url: https://virto.network
 ignore:
   - README.md
   - cobalt*
