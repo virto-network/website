@@ -21,7 +21,7 @@ section>article {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	height: calc(80vh - var(--header-height));
+	height: calc(70vh - var(--header-height));
 	justify-content: center;
 	position: relative;
 }
@@ -170,7 +170,7 @@ ul.carousel li {
 	display: flex;
 	flex-direction: column;
 	flex-shrink: 0;
-	height: calc(var(--card-size) * 1.4);
+	min-height: calc(var(--card-size) * 1.4);
 	justify-content: space-around;
 	margin: 1rem;
 	opacity: 0.9;
@@ -189,3 +189,10 @@ ul.carousel .logo {
 	border: solid 5px lightgrey;
 }
 ul.carousel a { font-weight: bold; text-decoration: none; color: gray; }
+ul.carousel p {
+	color: rgba(0, 0, 0, 0.4);
+	font-size: 0.7rem;
+	line-height: 1em;
+	text-align: center;
+	margin: 0;
+}
