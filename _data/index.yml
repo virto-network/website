@@ -1,32 +1,47 @@
-description: Decentralized marketplace infrastructure for autonomous local communities
+description: Decentralized commerce infrastructure with local impact
 
 lip: |
-  At its heart Virto's infrastructure is designed to empower local communities with 
-  their own micro-economies, it's the users themselves who decide how resources 
-  collected from marketplace activity are used for the benefit of their own community.
+  Virto gives cryptocurrencies <strong>utility</strong> in the real world, 
+  it allows people to securely exchange any kind of products or services via 
+  decentralized marketplaces that contribute to the economy of local communities.
 
 community: |
-  Establish your community together with people around you, earn rewards and 
-  make an impact in your area.
+  The physical world connects us, establish your community joining people 
+  around you to make decisions that have an impact in your area. Decide how local
+  resources are spent and be part of your community's prosperous future.
 
 marketplace: |
-  Build and be part of the business of future without worrying about complex 
-  backend infrastructure.
+  Virto introduces <strong>De-Commerce</strong>, it gives builders the tools 
+  to easily create decentralized marketplaces and bring blockchain technology
+  to the masses.  
+  All sorts of economic activities can take place in Virto, be the first
+  to bring the business of the future to your area.
 marketplace_list:
-- name: Bloque
-- name: flea.market
-- name: go.delivery
 - name: swap.cash
+  desc: Decentralized on & off ramps
+  logo: null
+- name: Bloque
+  desc: Payments and analytics for local business in LATAM
+  logo: null
+- name: flea.market
+  desc: P2P trade of local goods
+  logo: null
+- name: go.delivery
+  desc: Deliveries without intermediaries
+  logo: null
+
 
 apis: |
-  Bring de-commerce applications to the masses building with simple to use APIs
-  using the technologies you already know and love.
+  The first step to make decentralization easy for users is to make it easy for developers.
+  Use our APIs to quickly build products with the technologies you already know and love. 
 apis_list:
 - name: Blockchain
 - name: Wallet
 - name: Payments
-- name: Markets
-- name: Exchange
 - name: Assets
-- name: Location
+- name: Merchant
+- name: Customer
+- name: Market
 
+parachain: |
+  bridge real world assets to kusama

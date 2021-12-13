@@ -41,18 +41,21 @@ layout: default.liquid
 
 <section id="APIs">
 	<article>
-		<h2>APIs for Marketplace buliders</h2>
+		<h2>De-Commerce APIs</h2>
 		<p>{{ site.data.index.apis }}</p>
 		<ul>
 			{% for api in site.data.index.apis_list %}
-			<li><a href="#">{{ api.name }}</a></li>
+			<li>
+				<a href="https://github.com/virto-network/virto-apis">{{ api.name }}</a>
+			</li>
 			{% endfor %}
 		</ul>
 	</article>
 </section>
 
 <script>
-const $ = document.querySelector.bind(document), $$ = document.querySelectorAll.bind(document);
+const $ = document.querySelector.bind(document),
+	$$ = document.querySelectorAll.bind(document);
 const highlightActive = elements => {
 	elements.forEach(e => e.target.classList.toggle('visible', e.isIntersecting));
 }
