@@ -116,7 +116,7 @@ section>article {
 }
 
 @media screen and (min-width:600px) {
-	main>section { height: 1px; min-height: 40vh; }
+	main>section { display: flex; height: fit-content; min-height: 40vh; }
 	main>section>article { display: grid; height: 100%; column-gap: 5vmin; }
 	main>section>article>h2 { align-self: end; }
 	main>section>article>p { align-self: start; }
