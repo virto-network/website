@@ -27,7 +27,7 @@ mechanisms governments have for reducing economic inequalities are taxes, cash
 and in-kind transfers. However these fiscal policies that help shape more
 equitable societies play a small role in low-income countries. 
 
-source:UNDP https://unstats.un.org/sdgs/report/2021/goal-10/
+ ![UNDP https://unstats.un.org/sdgs/report/2021/goal-10/](goal_undp.jpg)
 
 Through historical perspective, we observe the limitations of the current
 government taxing system to resolve economic inequality Fairness: Tributed local
@@ -73,9 +73,9 @@ The world is divided into geo land cells. Each geo land cell represents around 5
 km2. When an individual creates an account, they’re attached to a geo land that
 they select.
 
-Individuals have two means of trading, through P2P or marketplace.  In p2p
-trading mode, individuals could freely trade as buyer and seller When trading in
-marketplace, individuals could either connect through markets as selected
+Individuals have two means of trading, through P2P or marketplace.  
+- In p2p trading mode, individuals could freely trade as buyer and seller 
+- When trading in marketplace, individuals could either connect through markets as selected
 qualified sellers to sell or as buyers to buy
 
 Therefore, individuals can freely trade with each other or in a regulated
@@ -113,9 +113,12 @@ with. All sorts of economic activities can take place in the marketplaces. All
 the following applications are in developing status or in place for builder
 teams within or outside Virto teams.
 
-Swap.cash: Decentralized on & off ramps, which enables an easy exchange between
-fiat money and crypto currencies Bloque: Payments and analytics for local
-business in LATAM Flea.market: P2P trade of local goods Go.delivery: Deliveries
+- Swap.cash: Decentralized on & off ramps, which enables an easy exchange between
+fiat money and crypto currencies 
+- Bloque: Payments and analytics for local
+business in LATAM 
+- Flea.market: P2P trade of local goods 
+- Go.delivery: Deliveries
 without intermediaries
 
 ### 2.4 Infrastructure: tokenless parachain
@@ -135,6 +138,7 @@ in the end be only sufficient to maintain the system operation while
 marketplaces, communities continue to increase their governance power time by
 time.
 
+ ![governance](governance.png)
 
 ### 2.6 Economics 
 
@@ -169,6 +173,10 @@ the individual to get the land token, usually higher staking capitals, higher
 chance until reaches a certain threshold, the winning chance no longer
 increases. The mechanism tried to increase fairness by preventing early birds
 and whales’ absolute advantage and monopoly governance. 
+
+ ![econ_1](token econ 1.png)
+ 
+ ![econ_2](token econ 2.png)
 
 #### 2.6.4 Parachain Auction
 
