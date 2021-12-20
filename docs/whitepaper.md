@@ -186,7 +186,7 @@ marketplace and is also utilized in network activities, e.g. crowdloan rewards.
 their holders voting rights within the marketplace and chain level governance.
 
 #### 5.2.2 Minting and Distribution
-Markerplace are free to design their own token economics with two conditions of:
+Markerplaces are free to design their own token economics with two conditions of
 the token allocations:
 
 - Virto Network: >= 5% of total tokens supply 
