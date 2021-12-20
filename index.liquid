@@ -1,7 +1,14 @@
 ---
 title: Virto Network
-layout: default.liquid
+layout: index.liquid
 ---
+
+<div class="sticky-hack"></div>
+<nav>
+	<a href="#home">{% include "virto_logo_small.svg" %}</a>
+	<a href="#community">🗨️ Community</a>
+	<a href="docs/whitepaper.html" data-status="draft">📜 Whitepaper</a>
+</nav>
 
 <section id="home">
 	<figure id="logo" title="Virto Network">{% include "virto_logo.svg" %}</figure>
@@ -30,7 +37,7 @@ layout: default.liquid
 		<p>{{ site.data.index.marketplace }}</p>
 		<ul class="carousel">
 			{% for market in site.data.index.marketplace_list %}
-			<li>
+			<li tabindex="-1">
 				<figure class="logo"></figure>
 				<a href="#">{{ market.name }}</a>
 				<p>{{ market.desc }}</p>
@@ -54,12 +61,17 @@ layout: default.liquid
 	</article>
 </section>
 
+<aside id="sponsors"></aside>
+
+<footer>
+	<a id="gh" title="Follow us on Github" href="https://github.com/virto-network">{% include "gh.svg" %} Check us on Github</a>
+	<a id="community" href="https://matrix.to/#/#virto-network:virto.community">{% include "element.svg" %} Chat in our community!</a>
+	<a href="mailto:contact@virto.team">{% include "email.svg" %} A formal message?</a>
+</footer>
+
 <script>
 const $ = document.querySelector.bind(document),
 	$$ = document.querySelectorAll.bind(document);
-const highlightActive = elements => {
-	elements.forEach(e => e.target.classList.toggle('visible', e.isIntersecting));
-}
 const addViewedClass = ([e], ob) => {
 	e.target.classList.add('viewed');
 	ob.unobserve(e.target);
@@ -67,21 +79,10 @@ const addViewedClass = ([e], ob) => {
 const whenVisible = (elements, fn, opts) => {
 	const ob = new IntersectionObserver(fn, opts);
 	$$(elements).forEach(e => ob.observe(e));
-}
+};
+const addSticky = ([br]) => 
+	br.target.nextElementSibling.classList.toggle('sticky', br.intersectionRatio === 0);
 
-whenVisible('.carousel li', highlightActive, { root: $('.carousel'),  threshold: 0.9 });
 whenVisible('main>section', addViewedClass, { threshold: 0.2 });
-
-// delay activation of card until scroll is likely to end
-let isScrolling;
-let lastVisible;
-$('#marketplaces ul').addEventListener('scroll', e => {
-	clearTimeout(isScrolling);
-	isScrolling = setTimeout(() => requestAnimationFrame(() => {
-		lastVisible?.classList.remove('active');
-		lastVisible = e.target.querySelector('.visible');
-		lastVisible?.classList.add('active')
-	}), 66);
-}, false);
-
+whenVisible('.sticky-hack', addSticky, { threshold: [0, 1] });
 </script>

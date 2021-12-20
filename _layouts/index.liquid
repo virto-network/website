@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{ site.description }}">
+	<title>{{ page.title }}</title>
+	
+	<meta name="theme-color" content="#3A3387">
+	<link rel="stylesheet" href="css/{{ page.slug }}.css">
+	<style>
+	:root { --color-black: #333; --color-main: #3A3387; --color-main2: #9A337D; --color-alt: #00517E; --header-height: calc(3rem + 0.5vh);  }
+	html, body { margin: 0; padding: 0; min-height: 100%; scroll-behavior: smooth; }
+	body { display: flex; flex-direction: column; font-family: sans-serif; color: var(--color-black); }
+	header { height: var(--header-height); flex-shrink: 0; }
+	header nav { height: 100%; display: flex; flex-direction: row-reverse; margin: auto; max-width: 90vmin; }
+	header nav a { padding: 1rem; color: gray }
+	main { flex: 1; }
+	</style>
+</head>
+
+<body>
+	<main>{{ page.content }}</main>
+</body>
+
+</html>
