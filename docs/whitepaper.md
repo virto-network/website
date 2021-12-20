@@ -70,7 +70,7 @@ All are enforced by blockchain technology.
 ### 2.2 Process
 
 The world is divided into geo land cells. Each geo land cell represents around 5
-km2. When an individual creates an account, they’re attached to a geo land that
+km<sup>2</sup>. When an individual creates an account, they’re attached to a geo land that
 they select.
 
 Individuals have two means of trading, through P2P or marketplace.  
@@ -141,24 +141,23 @@ time.
 
 ## 5 Economics 
 
-### 5.1 Tokens: 
-
-1. Native Token Our chain uses Kusama as our native token, which follows Kusama
+1. Native Token: Our chain uses Kusama as our native token, which follows Kusama
 Network governance and distribution. We allow staking with Kusama for
 participants to get rewards. 
-2. Marketplace Token Each marketplace that connects to LIP can mint their own
+2. Land Token: Land token is the NFT within LIP representing the geo land. On
+each community level, the total geo land cell that represents a single community
+is around 5 km<sup>2</sup>, derived from level 7 of H3([Hexagonal hierarchical geospatial
+indexing system](https://h3geo.org/)) [Resolution](https://h3geo.org/docs/core-library/restable/). The higher level it goes, the land size is divided
+by 7 until level 13 which represents around 43.9m<sup>2</sup>. These minimal land units
+represent 1 unit of the land token. Therefore each community holds around 117.6K
+land tokens within the 5 km<sup>2</sup> geo cell.
+3. Marketplace Token: Each marketplace that connects to LIP can mint their own
 tokens by enabling their services. They also establish their own governance
 system and token economics. For every trade in the marketplace, the marketplace
 token is charged as local tax and locked within the land cell.
-3. Land Token Land token is the NFT within LIP representing the geo land. On
-each community level, the total geo land cell that represents a single community
-is around 5 km2, derived from level 7 of H3([Hexagonal hierarchical geospatial
-indexing system](https://h3geo.org/)) [Resolution](https://h3geo.org/docs/core-library/restable/). The higher level it goes, the land size is divided
-by 7 until level 13 which represents around 43.9m2. These minimal land units
-represent 1 unit of the land token. Therefore each community holds around 117.6K
-land tokens within the 5 km2 geo cell.
 
-### 5.2 Key Functions of Land Token 
+### 5.1 Land Token
+#### 5.1.1 Key Functions
 - Network Utility Token: Land token is a
 tradable NFT token, and also utilized in reward for staking and other network
 activities.  
@@ -166,8 +165,8 @@ activities.
 provide their holders voting rights in community level and chain level
 governance.
 
-### 5.3 Minting and Distribution of Land token 
-The total 117.6K( =76) land tokens of each community is minted starting from 
+#### 5.1.2 Minting and Distribution
+The total 117.6K( =7<sup>6</sup>) land tokens of each community is minted starting from 
 time 0. The speed of token minting is rather slow in the beginning and getting faster and then slows down
 shown below.  In each period, the total staking capital decides the chance for
 the individual to get the land token, usually higher staking capitals, higher
@@ -179,7 +178,14 @@ and whales’ absolute advantage and monopoly governance.
  
  ![econ_2](token_econ_2.png)
 
-### 5.4 Parachain Auction
+### 5.2 Marketplace Token
+#### 5.2.1 Key Functions
+- 
+
+
+#### 5.2.2 Minting and Distribution
+
+### 5.3 Parachain Auction
 
 We plan to launch our mainnet on a Parachain slot within the Kusama network. To
 increase the chance of winning, we will allocate a certain share of land tokens
