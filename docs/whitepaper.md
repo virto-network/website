@@ -219,4 +219,4 @@ increase the chance of winning, marketplaces distribute their predefined crowdlo
 tokens to our supporters who locked their Kusama for the duration of the lease. We might
 distribute land tokens as rewards as well to KSM holders who participate in our first
 auction successfully to compensate for their opportunity costs of having their
-Kusamas locked for 12 months.
+KSM locked for 12 months.
