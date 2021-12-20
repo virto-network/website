@@ -180,16 +180,43 @@ and whales’ absolute advantage and monopoly governance.
 
 ### 5.2 Marketplace Token
 #### 5.2.1 Key Functions
-- 
-
+- Network Utility Token: Marketplace token is a native fee token for each 
+marketplace and is also utilized in network activities, e.g. crowdloan rewards.
+- Community Governance Token: As a governance token, marketplace tokens provide 
+their holders voting rights within the marketplace and chain level governance.
 
 #### 5.2.2 Minting and Distribution
+Markerplaces are free to design their own token economics with two conditions of
+the token allocations:
+
+- Virto Network: >= 5% of total tokens supply 
+- Parachain Crowdloan: >=10% total tokens supply
+. Below is the example 
+
+For the team's reference applications, e.g. Swap.cash, the total supply of marketplace tokens will 
+be minted at the launch of the marketplace project and stored to be distributed 
+for:
+
+- Parachain Crowdloan: 30% to raise KSM needed for a crowdloan to bid in the 
+Kusama parachain auction for an initial 48-week year parachain slot. Upon launch
+ of the Virto parachain, these tokens will be distributed immediately to the crowdloan 
+contributors
+- Community and Parachain Slot: 30% to secure future Kusama parachain slot leases
+  and other community initiatives
+- Project Development and Sustainability: 25% to support projects, ecosystem 
+development, maintainence and other network needs.
+- Founding team: 5% to reward founders and core development team
+- Virto Network: 5% to secure and sustain Virto Network 
+- Token Sale: 5% to pre-sell to early backers and contributers
+
+![marketplace_token distribution.](marketplace_token distribution.png)
+
 
 ### 5.3 Parachain Auction
 
 We plan to launch our mainnet on a Parachain slot within the Kusama network. To
-increase the chance of winning, we will allocate a certain share of land tokens
-to our crowdloan supporters who locked their Kusama to support us. We will
-distribute land tokens as rewards to Kusma owners who participate in our first
+increase the chance of winning, marketplaces distribute their predefined crowdloan share of   
+tokens to our supporters who locked their Kusama for the duration of the lease. We might
+distribute land tokens as rewards as well to KSM holders who participate in our first
 auction successfully to compensate for their opportunity costs of having their
-Kusamas locked for 12 months.
+KSM locked for 12 months.
