@@ -193,7 +193,7 @@ the token allocations:
 - Parachain Crowdloan: >=10% total tokens supply
 . Below is the example 
 
-For reference APIs, e.g. Swap.cash, the total supply of marketplace tokens will 
+For the team's reference applications, e.g. Swap.cash, the total supply of marketplace tokens will 
 be minted at the launch of the marketplace project and stored to be distributed 
 to:
 
