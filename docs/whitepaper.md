@@ -217,6 +217,6 @@ development, maintainence and other network needs.
 We plan to launch our mainnet on a Parachain slot within the Kusama network. To
 increase the chance of winning, marketplaces distribute their predefined crowdloan share of   
 tokens to our supporters who locked their Kusama for the duration of the lease. We might
-distribute land tokens as rewards to Kusma owners who participate in our first
+distribute land tokens as rewards as well to KSM holders who participate in our first
 auction successfully to compensate for their opportunity costs of having their
 Kusamas locked for 12 months.
