@@ -195,7 +195,7 @@ the token allocations:
 
 For the team's reference applications, e.g. Swap.cash, the total supply of marketplace tokens will 
 be minted at the launch of the marketplace project and stored to be distributed 
-to:
+for:
 
 - Parachain Crowdloan: 30% to raise KSM needed for a crowdloan to bid in the 
 Kusama parachain auction for an initial 48-week year parachain slot. Upon launch
