@@ -181,7 +181,7 @@ and whales’ absolute advantage and monopoly governance.
 ### 5.2 Marketplace Token
 #### 5.2.1 Key Functions
 - Network Utility Token: Marketplace token is a native fee token for each 
-marketplace and is also utilized in network activities,e.g. reward for crowdloan.
+marketplace and is also utilized in network activities, e.g. crowdloan rewards.
 - Community Governance Token: As a governance token, marketplace tokens provide 
 their holders voting rights within the marketplace and chain level governance.
 
