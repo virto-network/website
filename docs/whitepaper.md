@@ -67,7 +67,7 @@ All are enforced by blockchain technology.
 - Union: Community and Marketplace could together form union, as a higher level
   DAOs to make decision to tackle global level topic 
 
-### 2.2 Process/interactions
+### 2.2 Process
 
 The world is divided into geo land cells. Each geo land cell represents around 5
 km2. When an individual creates an account, they’re attached to a geo land that
@@ -109,21 +109,20 @@ focus.
 ### 2.3 Applications
 
 Marketplaces are applications that connect to LIP for users directly to interact
-with. All sorts of economic activities can take place in the marketplaces. All
-the following applications are in developing status or in place for builder
-teams within or outside Virto teams.
+with. All sorts of economic activities can take place in the marketplaces. The following 
+are reference applications developed by the core team to showcase. More applications in 
+the future could be developed by builder teams.
 
 - Swap.cash: Decentralized on & off ramps, which enables an easy exchange between
 fiat money and crypto currencies 
-- Bloque: Payments and analytics for local
-business in LATAM 
 - Flea.market: P2P trade of local goods 
-- Go.delivery: Deliveries
-without intermediaries
+- Go.delivery: Deliveries without intermediaries
 
-### 2.4 Infrastructure: tokenless parachain
+## 3 Infrastructure
 
-### 2.5 Governance In the beginning, the LIP is governed mainly by the founding
+## 4 Governance 
+
+In the beginning, the LIP is governed mainly by the founding
 team which aims to function as a benevolent dictatorship to set up the initial
 system and maximize overall welfare and efficiency. 
 
@@ -140,9 +139,9 @@ time.
 
  ![governance](governance.png)
 
-### 2.6 Economics 
+## 5 Economics 
 
-#### 2.6.1 Tokens: 
+### 5.1 Tokens: 
 
 1. Native Token Our chain uses Kusama as our native token, which follows Kusama
 Network governance and distribution. We allow staking with Kusama for
@@ -159,15 +158,17 @@ by 7 until level 13 which represents around 43.9m2. These minimal land units
 represent 1 unit of the land token. Therefore each community holds around 117.6K
 land tokens within the 5 km2 geo cell.
 
-#### 2.6.2 Key Functions of Land Token Network Utility Token: Land token is a
+### 5.2 Key Functions of Land Token 
+- Network Utility Token: Land token is a
 tradable NFT token, and also utilized in reward for staking and other network
-activities.  Community Governance Token: As a governance token, land tokens
+activities.  
+- Community Governance Token: As a governance token, land tokens
 provide their holders voting rights in community level and chain level
 governance.
 
-#### 2.6.3 Minting and Distribution of Land token The total 117.6K( =76) land
-tokens of each community is minted starting from time 0. The speed of token
-minting is rather slow in the beginning and getting faster and then slows down
+### 5.3 Minting and Distribution of Land token 
+The total 117.6K( =76) land tokens of each community is minted starting from 
+time 0. The speed of token minting is rather slow in the beginning and getting faster and then slows down
 shown below.  In each period, the total staking capital decides the chance for
 the individual to get the land token, usually higher staking capitals, higher
 chance until reaches a certain threshold, the winning chance no longer
@@ -178,7 +179,7 @@ and whales’ absolute advantage and monopoly governance.
  
  ![econ_2](token_econ_2.png)
 
-#### 2.6.4 Parachain Auction
+### 5.4 Parachain Auction
 
 We plan to launch our mainnet on a Parachain slot within the Kusama network. To
 increase the chance of winning, we will allocate a certain share of land tokens
