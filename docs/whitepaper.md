@@ -153,8 +153,8 @@ system and token economics. For every trade in the marketplace, the marketplace
 token is charged as local tax and locked within the land cell.
 3. Land Token Land token is the NFT within LIP representing the geo land. On
 each community level, the total geo land cell that represents a single community
-is around 5 km2, derived from level 7 of H3(Hexagonal hierarchical geospatial
-indexing system) Resolution. The higher level it goes, the land size is divided
+is around 5 km2, derived from level 7 of H3([Hexagonal hierarchical geospatial
+indexing system](https://h3geo.org/)) [Resolution](https://h3geo.org/docs/core-library/restable/). The higher level it goes, the land size is divided
 by 7 until level 13 which represents around 43.9m2. These minimal land units
 represent 1 unit of the land token. Therefore each community holds around 117.6K
 land tokens within the 5 km2 geo cell.
