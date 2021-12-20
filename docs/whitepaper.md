@@ -215,7 +215,7 @@ development, maintainence and other network needs.
 ### 5.3 Parachain Auction
 
 We plan to launch our mainnet on a Parachain slot within the Kusama network. To
-increase the chance of winning, we will allocate a certain share of marketplace 
+increase the chance of winning, marketplaces distribute their predefined crowdloan share of   
 tokens to our crowdloan supporters who locked their Kusama to support us. We will
 distribute land tokens as rewards to Kusma owners who participate in our first
 auction successfully to compensate for their opportunity costs of having their
