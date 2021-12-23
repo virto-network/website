@@ -26,17 +26,19 @@ equitable societies play a small role in low-income countries.
  ![UNDP https://unstats.un.org/sdgs/report/2021/goal-10/](goal_undp.jpg)
 
 Through historical perspective, we observe the limitations of the current
-government taxing system to resolve economic inequality Fairness: Tributed
-local resources are managed by people with different interests Efficiency:
-Redundant intermediaries and bureaucratic bodies cost time and money
-Transparency: If people can’t track and feel the benefit of the spending
-process it lowers the trust in the system Therefore we believe that LIP enables
+government taxing system to resolve economic inequality 
+- Fairness: Tributed local resources are managed by people with different interests 
+- Efficiency:Redundant intermediaries and bureaucratic bodies cost time and money
+- Transparency: If people can’t track and feel the benefit of the spending process it 
+lowers the trust in the system 
+
+Therefore we believe that LIP enables
 connected decentralized marketplaces to empower autonomous local communities by
 letting people and local communities be in control to collect and spend local
 tax in a fair, efficient and transparent way. Built around the protocol, Virto
 Network provides Marketplace builders developer friendly API’s to help them
 build secure & highly scalable decentralized dApps so they can focus on solving
-the real problems.(link)
+the real problems.
 
 ## 2. Local Incentives Protocol
 
