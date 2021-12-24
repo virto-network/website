@@ -4,18 +4,18 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="{{ site.description }}">
+	<meta name="theme-color" content="#3A3387">
 	<title>{{ page.title }}</title>
 	
-	<meta name="theme-color" content="#3A3387">
 	<style>
+	html, body { all: initial; }
+	main { max-width: 1140px; margin: auto; padding: 2rem 1rem; }
+	img { max-width: 100%; }
+	@media screen and (min-width: 700px) { main { columns: 2 auto; column-gap: 3rem; } }
 	</style>
 </head>
 
 <body>
-	<header>
-		<nav></nav>
-	</header>
-
 	<main>
 		{{ page.content }}
 	</main>
