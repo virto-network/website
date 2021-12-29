@@ -268,13 +268,14 @@ stored to be distributed for:
   Kusama parachain auction for an initial 48-week year parachain slot. Upon
   launch of the Virto parachain, these tokens will be distributed immediately
   to the crowdloan contributors
-- Community and Parachain Slot: 30% to secure future Kusama parachain slot
+- Community and Parachain Slot: 25% to secure future Kusama parachain slot
   leases and other community initiatives
-- Project Development and Sustainability: 25% to support projects, ecosystem
+- Project Development and Sustainability: 20% to support projects, ecosystem
   development, maintenance and other network needs.
-- Founding team: 5% to reward founders and core development team
+- Founding team: 10% to reward founders and core development team
 - Virto Network: 5% to secure and sustain Virto Network 
 - Token Sale: 5% to pre-sell to early backers and contributors
+- Seed Fund: 5% to reward early backers and investors
 
 ![marketplace token distribution](marketplace_token_distribution.png)
 
