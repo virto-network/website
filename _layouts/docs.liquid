@@ -9,9 +9,13 @@
 	
 	<style>
 	html, body { all: initial; }
-	main { max-width: 1140px; margin: auto; padding: 2rem 1rem; }
+	main { max-width: 1140px; margin: auto; padding: 2rem 1.5rem; }
+	h1, h1+h3 { column-span: all; text-align: center; }
+	h2 { margin-top: 1.5em; }
+	p { text-align: justify; }
 	img { max-width: 100%; }
-	@media screen and (min-width: 700px) { main { columns: 2 auto; column-gap: 3rem; } }
+	@media screen and (min-width: 700px) { main { columns: 2 auto; column-gap: 8vmin; } }
+	@media print { main { columns: 2 auto; column-gap: 5rem; } }
 	</style>
 </head>
 
