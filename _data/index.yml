@@ -19,16 +19,17 @@ marketplace: |
 marketplace_list:
 - name: swap.cash
   desc: Decentralized on & off ramps
-  logo: null
+  logo: img/markets/swap.svg
 - name: Bloque
   desc: Payments and analytics for local business in LATAM
-  logo: null
+  home: https://joinbloque.com
+  logo: img/markets/bloque.svg
 - name: flea.market
   desc: P2P trade of local goods
-  logo: null
+  logo: img/markets/flea.svg
 - name: go.delivery
   desc: Deliveries without intermediaries
-  logo: null
+  logo: img/markets/go.svg
 
 
 apis: |

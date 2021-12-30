@@ -107,12 +107,6 @@ aside#sponsors { height: var(--nav-height); order: 4; }
 #LIP { order: 5; }
 #LIP figure { width: 80%; }
 
-:is(#communities, #marketplaces) h3 {
-	width: 15vmin;
-	min-width: 140px;
-	margin: auto;
-}
-
 #communities {
 	background: var(--color-gray);
 	border-radius: 60vw 40vw 0 0 / 5vw 0.5vw 0 0;
@@ -235,12 +229,13 @@ ul.carousel li {
 	background: var(--color-gray);
 	border-radius: 10px;
 	box-sizing: border-box;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 	display: flex;
 	flex-direction: column;
 	flex-shrink: 0;
-	min-height: calc(var(--card-size) * 1.4);
 	justify-content: space-around;
 	margin: 1rem;
+	min-height: calc(var(--card-size) * 1.4);
 	opacity: 0.96;
 	padding: 1rem;
 	scroll-snap-align: center;
@@ -254,9 +249,12 @@ ul.carousel .logo {
 	width: calc(var(--card-size) * 0.7);
 	height: calc(var(--card-size) * 0.7);
 	border-radius: calc(var(--card-size) * 0.5);
-	border: solid 5px lightgrey;
+	border: solid 5px white;
+	overflow: hidden;
 }
-ul.carousel a { font-weight: bold; text-decoration: none; color: gray; }
+ul.carousel .logo img { width: 100%; }
+ul.carousel h3 { all: initial; font-family: inherit; color: var(--color-purple); font-weight: bold; }
+ul.carousel a { text-decoration: none; color: var(--color-purple); }
 ul.carousel p {
 	color: rgba(0, 0, 0, 0.4);
 	font-size: 0.7rem;

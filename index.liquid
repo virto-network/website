@@ -38,8 +38,16 @@ layout: index.liquid
 		<ul class="carousel">
 			{% for market in site.data.index.marketplace_list %}
 			<li tabindex="-1">
-				<figure class="logo"></figure>
-				<a href="#">{{ market.name }}</a>
+				<figure class="logo">
+					{% if market.logo %}
+					<img src="{{ market.logo }}" alt="{{ market.name }} logo">
+					{% endif %}
+				</figure>
+				<h3>
+					{% if market.home %}<a href="{{ market.home }}" target="_blank">{% endif %}
+					{{ market.name }}
+					{% if market.home %}</a>{% endif %}
+				</h3>
 				<p>{{ market.desc }}</p>
 			</li>
 			{% endfor %}
