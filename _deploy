@@ -1,0 +1,21 @@
+#!/bin/sh
+
+set -e
+
+DIR=_site/
+NOW=$(date '+%y%m%d_%H%M')
+PIN_SRV=$(ipfs pin remote service ls | cut -f1 -d' ')
+
+cobalt clean && cobalt build
+
+CID=$(ipfs add --recursive --quiet  $DIR | tail -n1)
+
+echo \> pinning locally
+ipfs pin add --recursive $CID
+for srv in $PIN_SRV; do
+	echo \> remote pinning with \"$srv\"
+	ifps pin remote add --service $srv --name "virto_web_$NOW" $CID
+done
+
+echo $CID > _last_ipfs_deploy
+
