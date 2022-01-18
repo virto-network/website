@@ -6,6 +6,7 @@ layout: docs.liquid
 # Local Incentives Protocol 
 
 ### Decentralized Marketplace Infrastructure 
+_by Qian Che and Daniel Olano_
 
 ## 1. Introduction
 
@@ -43,9 +44,10 @@ government taxing system to resolve economic inequality
 Therefore we believe that LIP enables connected decentralized marketplaces to
 empower autonomous local communities by letting people and local communities be
 in control to collect and spend local tax in a fair, efficient and transparent
-way. Built around the protocol, Virto Network provides Marketplace builders
-developer friendly API’s to help them build secure & highly scalable
-decentralized dApps so they can focus on solving the real problems.
+way. Virto Network implements LIP as a token-less parachain in the Polkadot
+network providing Marketplace builders developer friendly API’s to easily build
+secure & highly scalable decentralized commerce applications so they can focus
+on solving the real problems.
 
 ## 2. Local Incentives Protocol
 
@@ -76,50 +78,61 @@ way. All are enforced by blockchain technology.
 
 The world is divided into Geo land cells. Each cell represents around 5
 km<sup>2</sup>. When an individual creates an account, they register themselves
-to in the cell of their choosing.
+in the cell of their choosing.
 
 Individuals have two means of trading, through P2P or marketplace.  
 
-- In p2p trading mode, individuals could freely trade as buyer and seller 
-- When trading in marketplace, individuals could either connect through markets
-  as selected qualified sellers to sell or as buyers to buy
+- In p2p trading, individuals can freely trade as buyer and seller.
+- When trading in marketplaces, individuals apply to become qualified sellers
+  or buyers that are subject to higher quality standards of the marketplace
+  community.
 
 Therefore, individuals can freely trade with each other or in a regulated
 marketplace through a secure payment system embedded in the protocol, which
 enables cryptocurrencies as payment method for service and off-chain assets.
-For the trade in the marketplace, the marketplace receives market fees in their
-native token format as the cost of their service, which encourages new
+For the trade in the marketplace, the marketplace receives **market fees** in
+their native token format as the cost of their service, which encourages new
 marketplaces to join the system by creating applications to serve the demands
-of the market.
+of the market.  
+Marketplaces also play a crucial role in the system as infrastructure
+providers, with the collected fees they are expected to maintain a minimum
+required server infrastructure to serve the market they wish to target, to
+serve larger geographical and more densely populated areas, more infrastructure
+or staked capital will necessary, a mechanism that could incentivize the
+creation of more smaller markets instead of bigger ones. 
 
 For every trade within the system, a minimal **system fee** is charged to
 secure the network and prevent abusive usage. Besides, a certain percent of the
-price is collected as local tax, which is directly locked in the Geo land cells
-as potential assets for future community. To form a community, individuals need
-to union together to pass threshold for both the total staking capitals and the
-total amounts of individuals. The system allows native token Kusama staking and
-earning not only Kusama token staking reward but also land tokens. Land tokens
-could be freely traded and collected for further governance. Due to the
-accumulated local tax, people are incentivized to create communities with their
-peers, bonding assets to unlock existing and future resources that are
-collected in the cells from trading activity. Besides, the system fee collected
-also belongs to local communities. These communities will become DAOs and
-decide to spend resources based on their needs to create powerful autonomous
-micro-economies. Communities could decide about their own governance system to
-better facilitate their economy in a dynamic way.
+traded amount is collected as **local tax**, which is directly locked in the Geo land
+cells that could become future local communities. To form a community,
+individuals from the same cell need to stake together enough resources passing a
+threshold that indicates their willingness to form the community.  
+The system allows **staking DOT tokens** in local pools as they are the native
+currency of the network to earn rewards coming from the Polkadot relay-chain as
+well as getting rewards in **land tokens**.  
+Land tokens are unique non fungible assets that can be freely traded and
+collected for use in local and system governance.  
+Due to the accumulated local tax, people are incentivized to create communities
+with their peers, bonding assets to unlock existing and future resources that
+are collected in the cells from trading activity. Besides, the system fee
+collected also belongs to local communities. These communities will become DAOs
+and decide to spend resources based on their needs to create powerful
+autonomous micro-economies. Communities could decide about their own governance
+system to better facilitate their economy in a dynamic way.
 
-Communities or marketplaces could form a union with either communities or
+Communities or marketplaces could form **unions** with either communities or
 marketplaces to join forces to solve global problems, e.g. climate change. They
 could establish a decision model by voting and allocate certain resources on
 the focus.
 
 ### 2.3 Applications
 
-Marketplaces often create their own decentralized applications that connect to
-LIP for users directly to interact with their listings. All sorts of economic
-activities can take place in the marketplaces. The following are reference
-applications developed by the core team as a showcase. More applications are
-expected to be developed by other builder teams.
+To better serve their users, Marketplaces often create their own decentralized
+applications that connect to LIP for users to directly to interact with their
+well curated listings.  
+All sorts of economic activities can take place in the marketplaces. The
+following are reference applications developed by the core team as a showcase.
+More applications are expected to be developed by other builders.
 
 - Swap.cash: Decentralized on & off ramps, which enables an easy exchange
   between fiat money and cryptocurrencies 
@@ -134,9 +147,10 @@ software to to participate, it becomes a **requirement** for them as they have
 the economic incentives to do so.
 
 LIP distinct feature is to combine three different kinds of decentralized
-technology, a **Substrate based parachain** to be deployed in the [Kusama
-network](https://kusama.network), **Matrix**, the network for secure
-decentralization communications and **Valor**, Virto's lightweight runtime.
+technology, a **Substrate based parachain** to be deployed in the [Polkadot
+network](https://polkadot.network), **Matrix**, the network for secure
+decentralization communications and **Valor**, Virto's lightweight plugin
+runtime.
 
 ### 3.1 Parachain
 
@@ -199,8 +213,8 @@ communities decide the future fate of entire system.
 Different tokens are used across the system.
 
 1. **Native Token**: The parachain doesn't issue its own token, instead it uses
-   Kusama's KSM as native token, which follows Kusama Network governance and
-   distribution. We allow KSM staking via communities for participants to get
+   Polkadot's DOT as native token, which follows Polkadot Network governance and
+   distribution. We allow DOT staking via communities for participants to get
    rewards. 
 2. **Land Token**: Land token is the NFT within LIP representing the land. On
    each community level, the total Geo land cells that represents a single
@@ -264,11 +278,11 @@ For the team's reference applications, e.g. Swap.cash, the total supply of
 marketplace tokens will be minted at the launch of the marketplace project and
 stored to be distributed for:
 
-- Parachain Crowdloan: 30% to raise KSM needed for a crowdloan to bid in the
-  Kusama parachain auction for an initial 48-week year parachain slot. Upon
+- Parachain Crowdloan: 30% to raise DOT needed for a crowdloan to bid in the
+  Polkadot parachain auction for an initial 48-week year parachain slot. Upon
   launch of the Virto parachain, these tokens will be distributed immediately
   to the crowdloan contributors
-- Community and Parachain Slot: 25% to secure future Kusama parachain slot
+- Community and Parachain Slot: 25% to secure future Polkadot parachain slot
   leases and other community initiatives
 - Project Development and Sustainability: 20% to support projects, ecosystem
   development, maintenance and other network needs.
@@ -279,11 +293,20 @@ stored to be distributed for:
 
 ![marketplace token distribution](marketplace_token_distribution.png)
 
-### 5.3 Parachain Auction
+### 5.3 Polkadot Parachain
 
-We plan to launch our mainnet on a Parachain slot within the Kusama network. To
-increase the chance of winning, marketplaces distribute a required predefined
-crowdloan share of tokens to reward supporters who locked their KSM for the
-duration of the lease. We might distribute land tokens as rewards as well to
-KSM holders who participate in the first auction successfully to compensate for
-their opportunity costs of having their KSM locked for 12 months.j
+Virto Network is the only planned implementation of LIP as we believe the
+uniqueness of the Land Tokens should be kept(i.e. not two people should own
+the same land in different systems). Also given its social impact and being
+designed as a sustainable "token less" chain that inherits the relay chain
+token(DOT) we believe there is place for the network to be considered a common
+good chain.  
+As an alternative, Virto Network will participate in the crowdloan mechanism to
+secure a Parachain slot within the Polkadot network. 
+To increase the chance of winning, marketplaces distribute a required predefined
+crowdloan share of tokens to reward supporters who locked their DOT for the
+duration of the lease, the size of the marketplace token allocation gives them
+the right to operate in a smaller or larger geographical area.  
+We might distribute land tokens as rewards as well to DOT holders who
+participate in the first auction successfully to compensate for their
+opportunity costs of having their DOT locked for 24 months.
