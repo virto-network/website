@@ -41,10 +41,10 @@ apis: |
 apis_list:
 - name: Blockchain
 - name: Wallet
-- name: Payments
-- name: Assets
 - name: Merchant
 - name: Customer
+- name: Payments
+- name: Assets
 - name: Market
 
 parachain: |
