@@ -265,7 +265,23 @@ ul.carousel p {
 	text-align: center;
 	margin: 0;
 }
-
+ul.carousel li[data-when]::after {
+	border-left: 28px solid transparent;
+	border-bottom: 28px solid var(--color-main);
+	border-right: 28px solid transparent;
+	color: white;
+	content: attr(data-when);
+	font-weight: bold;
+	height: 0px;
+	line-height: 28px;
+	position: absolute;
+	text-align: center;
+	top: 0; right: -38px;
+	transform-origin: 36px;
+	transform: rotate(45deg);
+	white-space: nowrap;
+	width: 70px;
+}
 
 footer {
 	padding: calc(1rem + 0.8vmin);

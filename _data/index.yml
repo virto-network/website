@@ -21,17 +21,20 @@ marketplace_list:
 - name: swap.cash
   desc: Decentralized on & off ramps
   logo: img/markets/swap.svg
+  when: Q2
 - name: Bloque
   desc: Payments and analytics for local business in LATAM
   home: https://joinbloque.com
   logo: img/markets/bloque.svg
+  when: Q2
 - name: flea.market
   desc: P2P trade of local goods
   logo: img/markets/flea.svg
+  when: Q4
 - name: go.delivery
   desc: Deliveries without intermediaries
   logo: img/markets/go.svg
-
+  when: Q1 2023
 
 apis: |
   The first step to make decentralization easy for users is to make it easy
