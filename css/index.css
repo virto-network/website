@@ -246,11 +246,12 @@ ul.carousel li {
 	z-index: 0;
 }
 ul.carousel .logo {
-	width: calc(var(--card-size) * 0.7);
-	height: calc(var(--card-size) * 0.7);
-	border-radius: calc(var(--card-size) * 0.5);
+	background: white;
 	border: solid 5px white;
+	border-radius: calc(var(--card-size) * 0.5);
+	height: calc(var(--card-size) * 0.7);
 	overflow: hidden;
+	width: calc(var(--card-size) * 0.7);
 }
 ul.carousel .logo img { width: 100%; }
 ul.carousel h3 { all: initial; font-family: inherit; color: var(--color-purple); font-weight: bold; }

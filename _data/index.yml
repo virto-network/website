@@ -1,21 +1,22 @@
 description: Decentralized marketplace infrastructure with local impact
 
 lip: |
-  Virto gives cryptocurrencies <strong>utility</strong> in the real world, 
-  it allows people to securely exchange any kind of products or services via 
-  decentralized marketplaces that contribute to the economy of local communities.
+  Virto gives cryptocurrencies <strong>utility</strong> in the real world, it
+  allows people to securely exchange any kind of products or services via
+  decentralized marketplaces that contribute to the economy of local
+  communities.
 
 community: |
-  The physical world connects us, establish your community joining people 
-  around you to make decisions that have an impact in your area. Decide how local
-  resources are spent and be part of your community's prosperous future.
+  The physical world connects us, establish your community joining people
+  around you to make decisions that have an impact in your area. Decide how
+  local resources are spent and be part of your community's prosperous future.
 
 marketplace: |
-  Virto introduces <strong>De-Commerce</strong> and gives builders the tools 
-  to easily create decentralized marketplaces and bring blockchain technology
-  to the masses.  
-  All sorts of economic activities can take place in Virto, be the first
-  to bring the business of the future to your area.
+  Virto introduces <strong>De-Commerce</strong> and gives builders the tools to
+  easily create decentralized marketplaces and bring blockchain technology to
+  the masses.  
+  All sorts of economic activities can take place in Virto, be the first to
+  bring the business of the future to your area.
 marketplace_list:
 - name: swap.cash
   desc: Decentralized on & off ramps
@@ -33,8 +34,10 @@ marketplace_list:
 
 
 apis: |
-  The first step to make decentralization easy for users is to make it easy for developers.
-  Use our APIs to quickly build products with the technologies you already know and love. 
+  The first step to make decentralization easy for users is to make it easy
+  <strong>for developers</strong>.
+  Use our APIs to quickly build products with the technologies you already know
+  and love. 
 apis_list:
 - name: Blockchain
 - name: Wallet
