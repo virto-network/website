@@ -34,7 +34,7 @@ marketplace_list:
 - name: go.delivery
   desc: Deliveries without intermediaries
   logo: img/markets/go.svg
-  when: Q1 2023
+  when: Q2 2023
 
 apis: |
   The first step to make decentralization easy for users is to make it easy
