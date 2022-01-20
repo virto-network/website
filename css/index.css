@@ -194,7 +194,7 @@ aside#sponsors { height: var(--nav-height); order: 4; }
 	background: white;
 	border: 2px solid var(--color-purple);
 	border-radius: 25px / 8px;
-	margin: 3px 0;
+	margin: 1px 0;
 	text-align: center;
 }
 #APIs li a {
