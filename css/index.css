@@ -22,14 +22,15 @@ section>article {
 
 #home { 
 	align-items: center;
+	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 	height: calc(100vh - (var(--nav-height) * 2));
 	justify-content: center;
-	position: relative;
-	box-sizing: border-box;
-	padding-top: calc(2rem + 15vh);
 	order: 1;
+	overflow: hidden;
+	padding-top: calc(2rem + 15vh);
+	position: relative;
 }
 #home figure { width: 80%; max-width: 70vmin; }
 #home p { font-size: calc(0.9em + 1vmin); margin-top: 10vmin; text-align: center; }
