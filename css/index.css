@@ -32,11 +32,32 @@ section>article {
 	order: 1;
 }
 #home figure { width: 80%; max-width: 70vmin; }
-#home p { color: gray; font-size: calc(0.9em + 1vmin); margin-top: 10vmin; text-align: center; }
+#home p { font-size: calc(0.9em + 1vmin); margin-top: 10vmin; text-align: center; }
+#home p img { height: calc(0.9em + 1vmin); vertical-align: text-bottom; }
+/* spinning polkadot logo */
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+#home::after {
+	--size: 120vmin;
+	animation: spin 120s infinite linear;
+	background: url(../img/polkadot_ic.svg) no-repeat;
+	background-size: contain;
+	bottom: calc(var(--size) / -2);
+	content: '';
+	display: block;
+	height: var(--size);
+	opacity: 0.02;
+	position: absolute;
+	right: calc(var(--size) / -2);
+	transition: opacity 2s;
+	width: var(--size);
+	z-index: -1;
+}
 
-.sticky-hack { display: block; height: 1px; width: 100%; order: 2; }
+.sticky-hack { border: none; display: block; height: 1px; width: 100%; order: 2; }
 nav {
-	background: rgba(255, 255, 255, 0.98);
 	box-sizing: border-box;
 	display: flex;
 	height: var(--nav-height);
@@ -49,7 +70,11 @@ nav {
 	overflow: hidden;
 	order: 3;
 }
-nav.sticky { padding: 0; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+nav.sticky {
+	padding: 0;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	background: rgba(255, 255, 255, 0.98);
+}
 nav::after {
 	content: '';
 	background: linear-gradient(to right, var(--color-main2), var(--color-main));
@@ -65,7 +90,7 @@ nav::after {
 	width: calc(100vw - (var(--nav-padding) * 2));
 }
 nav.sticky::after { transform: scale(1.2, 0.6); }
-nav a:not(:first-child):hover { background: var(--color-gray); }
+nav a:not(:first-child):hover { background: rgba(245,245,250,0.7); }
 nav a { display: inline-block; padding: 0 calc(0.6rem + 1.5vw); box-sizing: border-box; }
 nav a:first-child svg { height: 100%; }
 nav a:first-child {
@@ -104,7 +129,7 @@ nav a[data-status]::before {
 
 aside#sponsors { height: var(--nav-height); order: 4; }
 
-#LIP { order: 5; }
+#LIP { order: 5; position: relative; }
 #LIP figure { width: 80%; }
 
 #communities {
