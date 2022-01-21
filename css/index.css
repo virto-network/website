@@ -236,7 +236,7 @@ aside#sponsors { height: var(--nav-height); order: 4; }
 	#APIs :is(h2, p) { grid-column: 2; }
 }
 
-ul.carousel {
+.carousel {
 	--card-size: 150px;
 	position: relative;
 	box-sizing: border-box;
@@ -251,15 +251,9 @@ ul.carousel {
 	scrollbar-width: none;
 	width: 100%;
 }
-ul.carousel::-webkit-scrollbar { display: none; }
-ul.carousel li:first-child { margin-left: calc(var(--card-size) / 2 + 1rem); }
-ul.carousel li:last-child { margin-right: calc(var(--card-size) / 2 + 1rem); }
-ul.carousel li:focus {
-	transform: scale(1.1);
-	opacity: 1;
-	z-index: 1;
-}
-ul.carousel li {
+.carousel::-webkit-scrollbar { display: none; }
+
+.card {
 	align-items: center;
 	background: var(--color-gray);
 	border-radius: 10px;
@@ -280,7 +274,14 @@ ul.carousel li {
 	will-change: transform, opacity;
 	z-index: 0;
 }
-ul.carousel .logo {
+.card:first-child { margin-left: calc(var(--card-size) / 2 + 1rem); }
+.card:last-child { margin-right: calc(var(--card-size) / 2 + 1rem); }
+.card:focus {
+	transform: scale(1.1);
+	opacity: 1;
+	z-index: 1;
+}
+.card .logo {
 	background: white;
 	border: solid 5px white;
 	border-radius: calc(var(--card-size) * 0.5);
@@ -288,17 +289,17 @@ ul.carousel .logo {
 	overflow: hidden;
 	width: calc(var(--card-size) * 0.7);
 }
-ul.carousel .logo img { width: 100%; }
-ul.carousel h3 { all: initial; font-family: inherit; color: var(--color-purple); font-weight: bold; }
-ul.carousel a { text-decoration: none; color: var(--color-purple); }
-ul.carousel p {
+.card .logo img { width: 100%; }
+.card h3 { all: initial; font-family: inherit; color: var(--color-purple); font-weight: bold; }
+.card a { text-decoration: none; color: var(--color-purple); }
+.card p {
 	color: rgba(0, 0, 0, 0.4);
 	font-size: 0.7rem;
 	line-height: 1em;
 	text-align: center;
 	margin: 0;
 }
-ul.carousel li[data-when]::after {
+.card[data-when]::after {
 	border-left: 28px solid transparent;
 	border-bottom: 28px solid var(--color-main);
 	border-right: 28px solid transparent;
