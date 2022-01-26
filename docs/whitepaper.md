@@ -98,8 +98,8 @@ Marketplaces also play a crucial role in the system as infrastructure
 providers, with the collected fees they are expected to maintain a minimum
 required server infrastructure to serve the market they wish to target, to
 serve larger geographical and more densely populated areas, more infrastructure
-or staked capital will necessary, a mechanism that could incentivize the
-creation of more smaller markets instead of bigger ones. 
+and support from token holders is necessary, a mechanism that could incentivize
+the creation of smaller markets instead of bigger ones. 
 
 For every trade within the system, a minimal **system fee** is charged to
 secure the network and prevent abusive usage. Besides, a certain percent of the
@@ -235,10 +235,15 @@ Different tokens are used across the system.
 ### 5.1 Land Token 
 
 #### 5.1.1 Key Functions
-- Network Utility Token: Land token is a tradable NFT token, and also utilized
-  in reward for staking and other network activities.  
-- Community Governance Token: As a governance token, land tokens provide their
-  holders voting rights in community level and chain level governance.
+- Network Utility: Land token is a tradable NFT token that can be transfered
+  across chains.  and also utilized
+- Community Governance: Land tokens provide their holders voting rights in
+  community level and chain level governance.
+- Staking reward: Land tokens are minted as reward for staking DOT.
+- Community creation: Communities are created when enough land token holders
+  within the community cell second the proposal for the community to be formed.
+- Marketplace support: Enough land token holders also need to support
+  marketplaces that wish to trade in a given geographical area.
 
 #### 5.1.2 Minting and Distribution 
 
@@ -248,7 +253,7 @@ minting is rather slow in the beginning and getting faster and then slows down
 shown below.  In each period, the total staking capital decides the chance for
 the individual to get the land token, usually higher staking capitals, higher
 chance until reaches a certain threshold, the winning chance no longer
-increases. The mechanism tried to increase fairness by preventing early birds
+increases. The mechanism tries to increase fairness by preventing early birds
 and whales’ absolute advantage and monopoly governance. 
 
  ![econ_1](token_econ_1.png)
