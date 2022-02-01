@@ -42,16 +42,16 @@ section>article {
 }
 #home::after {
 	--size: 120vmin;
-	animation: spin 120s infinite linear;
+	animation: spin 240s infinite linear;
 	background: url(../img/polkadot_ic.svg) no-repeat;
 	background-size: contain;
-	bottom: calc(var(--size) / -2);
+	top: calc(var(--size) * -0.4);
 	content: '';
 	display: block;
 	height: var(--size);
-	opacity: 0.02;
+	opacity: 0.025;
 	position: absolute;
-	right: calc(var(--size) / -2);
+	left: calc(var(--size) * -0.4);
 	transition: opacity 2s;
 	width: var(--size);
 	z-index: -1;
