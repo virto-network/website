@@ -2,6 +2,16 @@ description: |
   Empowering marketplace infrastructure for 
   <a href="https://polkadot.network"><img alt="Polkadot" src="img/polkadot.svg" /></a>
 
+sponsors:
+  - name: Web3 Foundation
+    logo: img/web3_foundation.svg
+  - name: Substrate Builders Program
+    logo: img/builders_program.svg
+  - name: Polkadot treasury
+    logo: img/polkadot_treasury.svg
+  - name: Kusama treasury
+    logo: img/kusama_treasury.svg
+
 lip: |
   Virto gives cryptocurrencies <strong>utility</strong> in the real world, it
   allows people to securely exchange any kind of products or services via

@@ -69,7 +69,13 @@ layout: index.liquid
 	</article>
 </section>
 
-<aside id="sponsors"></aside>
+<aside id="sponsors">
+	<ul>
+		{% for sponsor in site.data.index.sponsors %}
+		<li><img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" height="38"></li>
+		{% endfor %}
+	</ul>
+</aside>
 
 <footer>
 	<a id="gh" title="Follow us on Github" href="https://github.com/virto-network">{% include "gh.svg" %} Check us on Github</a>
