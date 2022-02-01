@@ -1,5 +1,5 @@
 description: |
-  Empowering marketplace infrastructure for 
+  Impactful marketplace infrastructure for 
   <a href="https://polkadot.network"><img alt="Polkadot" src="img/polkadot.svg" /></a>
 
 sponsors:
@@ -24,11 +24,9 @@ community: |
   local resources are spent and be part of your community's prosperous future.
 
 marketplace: |
-  Virto introduces <strong>De-Commerce</strong> and gives builders the tools to
-  easily create decentralized marketplaces and bring blockchain technology to
-  the masses.  
-  All sorts of economic activities can take place in Virto, be the first to
-  bring the business of the future to your area.
+  Easily create any <strong>de-commerce</strong> application that rewards its
+  users with crypto, use our simple tools to bring your decentralized
+  marketplace to life.  
 marketplace_list:
 - name: swap.cash
   desc: Decentralized on & off ramps
@@ -49,10 +47,9 @@ marketplace_list:
   when: Q2 2023
 
 apis: |
-  The first step to make decentralization easy for users is to make it easy
-  <strong>for developers</strong>.
-  Use our APIs to quickly build products with the technologies you already know
-  and love. 
+  Bring <strong>blockchain to the masses</strong> with our composable APIs and
+  focus on delivering the best user experiences with the technologies you
+  already know and love.
 apis_list:
 - name: Blockchain
 - name: Wallet
