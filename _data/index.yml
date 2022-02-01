@@ -33,8 +33,8 @@ marketplace_list:
   logo: img/markets/swap.svg
   when: Q2
 - name: Bloque
-  desc: Payments and analytics for local business in LATAM
-  home: https://joinbloque.com
+  desc: Your easy Instagram store
+  home: https://bloque.app
   logo: img/markets/bloque.svg
   when: Q2
 - name: flea.market
