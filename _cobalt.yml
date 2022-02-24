@@ -1,6 +1,6 @@
 
 site:
-  description: Local communities and desentralized marketplaces
+  description: Social marketplace infrastructure for Polkadot
   base_url: https://virto.network
 ignore:
   - README.md
