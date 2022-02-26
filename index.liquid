@@ -4,19 +4,17 @@ layout: index.liquid
 ---
 
 <hr class="sticky-hack">
-<nav>
-	<a href="#home">{% include "virto_logo_small.svg" %}</a>
-	<a href="#community">🗨️ Community</a>
-	<a href="docs/whitepaper.html" data-status="draft">📜 Whitepaper</a>
-</nav>
+{% include "nav.liquid" active: "", class: "fixed" %}
 
 <section id="home">
-	<figure id="logo" title="Virto Network">{% include "virto_logo.svg" %}</figure>
+	<figure id="logo" title="Virto Network">
+		{% include "virto_logo.svg" domain: true %}
+	</figure>
 	<p>{{ site.data.index.description }}</p>
 </section>
 
 <section id="LIP">
-	<article>
+	<article class="max">
 		<h2>Local Incentives Protocol</h2>
 		<figure><img src="img/protocol.svg" alt="protocol summary"></figure>
 		<p>{{ site.data.index.lip }}</p>
@@ -24,7 +22,7 @@ layout: index.liquid
 </section>
 
 <section id="communities">
-	<article class="lip">
+	<article class="max">
 		<h2 data-img="img/comunidad.svg">Communities</h2>
 		<p>{{ site.data.index.community }}</p>
 		<div class="globe"></div>
@@ -32,7 +30,7 @@ layout: index.liquid
 </section>
 
 <section id="marketplaces">
-	<article class="lip">
+	<article class="max">
 		<h2 data-img="img/marketplace.svg">Marketplaces</h2>
 		<p>{{ site.data.index.marketplace }}</p>
 		<ul class="carousel">
@@ -56,7 +54,7 @@ layout: index.liquid
 </section>
 
 <section id="APIs">
-	<article>
+	<article class="max">
 		<h2>De-Commerce APIs</h2>
 		<p>{{ site.data.index.apis }}</p>
 		<ul>
@@ -77,7 +75,7 @@ layout: index.liquid
 	</ul>
 </aside>
 
-<footer>
+<footer class="max">
 	<a id="gh" title="Follow us on Github" href="https://github.com/virto-network">{% include "gh.svg" %} Check us on Github</a>
 	<a id="community" href="https://matrix.to/#/#virto-network:virto.community">{% include "element.svg" %} Chat in our community!</a>
 	<a href="mailto:contact@virto.team">{% include "email.svg" %} A formal message?</a>
@@ -94,8 +92,8 @@ const whenVisible = (elements, fn, opts) => {
 	const ob = new IntersectionObserver(fn, opts);
 	$$(elements).forEach(e => ob.observe(e));
 };
-const addSticky = ([br]) => 
-	br.target.nextElementSibling.classList.toggle('sticky', br.intersectionRatio === 0);
+	const addSticky = ([br]) =>
+			br.target.nextElementSibling.classList.toggle('fixed', br.intersectionRatio === 1);
 
 whenVisible('main>section', addViewedClass, { threshold: 0.2 });
 whenVisible('.sticky-hack', addSticky, { threshold: [0, 1] });

@@ -1,5 +1,4 @@
 :root {
-	--nav-height: calc(3rem + 3vh);
 	--nav-padding: 7vw;
 	--color-gray: #F7F7FB;
 	--color-purple: #664c86;
@@ -15,8 +14,6 @@ p { line-height: 2em; }
 section>article {
 	display: flex;
 	flex-direction: column;
-	margin: auto;
-	max-width: 1140px;
 	align-items: center;
 }
 
@@ -33,6 +30,7 @@ section>article {
 	position: relative;
 }
 #home figure { width: 80%; max-width: 70vmin; }
+#home figure svg { width: 100%; height: fit-content; }
 #home p { font-size: calc(0.9em + 1vmin); margin-top: 10vmin; text-align: center; }
 #home p img { height: calc(0.9em + 1vmin); vertical-align: text-bottom; }
 /* spinning polkadot logo */
@@ -58,18 +56,12 @@ section>article {
 }
 
 nav {
-	box-sizing: border-box;
-	display: flex;
-	height: var(--nav-height);
-	justify-content: end;
-	padding: 0 var(--nav-padding);
-	position: sticky;
-	top: 0;
-	width: 100%;
-	z-index: 99;
-	overflow: hidden;
+	background: rgba(255, 255, 255, 0.98);
 	order: 3;
+	position: sticky; top: 0;
+	z-index: 99;
 }
+nav.fixed .logo { opacity: 0; visibility: hidden; }
 .sticky-hack {
 	border: none;
 	display: block;
@@ -77,62 +69,6 @@ nav {
 	margin: 0;
 	order: 2;
 	width: 100%;
-}
-nav.sticky {
-	padding: 0;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	background: rgba(255, 255, 255, 0.98);
-}
-nav::after {
-	content: '';
-	background: linear-gradient(to right, var(--color-main2), var(--color-main));
-	bottom: 0;
-	left: var(--nav-padding);
-	display: block;
-	height: 0.5vh;
-	min-height: 3px;
-	opacity: 0.5;
-	position: absolute;
-	transform-origin: bottom;
-	transition: transform 400ms;
-	width: calc(100vw - (var(--nav-padding) * 2));
-}
-nav.sticky::after { transform: scale(1.2, 0.6); }
-nav a:not(:first-child):hover { background: rgba(245,245,250,0.7); }
-nav a { display: inline-block; padding: 0 calc(0.6rem + 1.5vw); box-sizing: border-box; }
-nav a:first-child svg { height: 100%; }
-nav a:first-child {
-	margin: auto auto auto 0;
-	height: 60%;
-	opacity: 0;
-	transition: transform 200ms, opacity 400ms;
-	transform: scale(0.9);
-	visibility: hidden;
-}
-nav.sticky a:first-child { opacity: 1; transform: scale(1); visibility: visible; }
-nav a:not(:first-child) {
-	text-decoration: none;
-	color: var(--color-main);
-	height: var(--nav-height);
-	line-height: var(--nav-height);
-	white-space: nowrap;
-	position: relative;
-	text-shadow: 0 0 2px white;
-}
-nav a[data-status]::before {
-	content: attr(data-status);
-	color: var(--color-main);
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 2em;
-	opacity: 0.08;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	text-align: center;
-	display: block;
-	transform: rotate(-15deg);
 }
 
 #sponsors {
@@ -230,6 +166,9 @@ nav a[data-status]::before {
 }
 
 @media screen and (min-width:600px) {
+	nav.fixed .max { width: 80%; }
+	nav.fixed::after { transform: scale(0.8, 1.1); }
+
 	main>section { display: flex; height: fit-content; min-height: 40vh; }
 	main>section>article { display: grid; height: 100%; column-gap: 5vmin; }
 	main>section>article>h2 { align-self: end; }
@@ -318,7 +257,7 @@ nav a[data-status]::before {
 }
 .card[data-when]::after {
 	border-left: 28px solid transparent;
-	border-bottom: 28px solid var(--color-main);
+	border-bottom: 28px solid var(--color-accent);
 	border-right: 28px solid transparent;
 	color: white;
 	content: attr(data-when);
@@ -336,6 +275,7 @@ nav a[data-status]::before {
 
 footer {
 	padding: calc(1rem + 0.8vmin);
+	box-sizing: border-box;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
@@ -356,8 +296,8 @@ footer a {
 	background: white;
 }
 footer svg { vertical-align: middle; margin-right: 0.5rem; fill: #CCC; width: 2rem; }
-footer a:is(:hover, :focus) { border: 1px solid var(--color-main2); outline: none; }
-footer a:is(:hover, :focus) svg { fill: var(--color-main); opacity: 0.8; }
+footer a:is(:hover, :focus) { border: 1px solid var(--color-alt); outline: none; }
+footer a:is(:hover, :focus) svg { fill: var(--color-accent); opacity: 0.8; }
 
 #community:target {
 	position: relative;
@@ -366,7 +306,7 @@ footer a:is(:hover, :focus) svg { fill: var(--color-main); opacity: 0.8; }
 	content: "";
 	width: calc(100% + 1.8rem);
 	height: calc(100% + 1.8rem);
-	background: var(--color-main2);
+	background: var(--color-alt);
 	opacity: 0;
 	display: block;
 	top: -0.9rem;

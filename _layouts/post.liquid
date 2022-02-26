@@ -8,28 +8,44 @@
 	<title>{{ page.title }}</title>
 	
 	<style>
-	:root { --color-accent: darkslateblue; }
-	html, body { all: initial; font-family: sans-serif; }
-	main { max-width: 900px; margin: auto; padding: 2rem 1rem; }
-	nav { height: 4rem; margin-bottom: 2rem; }
-	footer { height: 5rem; background: whitesmoke; }
+	:root {
+		--color-accent: darkslateblue;
+		--color-alt: #937;
+		--color-text: #335;
+		--nav-height: calc(3rem + 2vh);
+		--max-width: 950px;
+	}
+	html, body { all: initial; scroll-behavior: smooth; }
+	body { font-family: sans-serif; color: var(--color-text); }
+	.max { width: 100%; max-width: var(--max-width); margin: auto; }
+
+	main { padding: 2rem 1rem; box-sizing: border-box; }
+	footer {
+		height: 5rem;
+		padding-top: 2rem;
+		border-radius: 50vw 50vw 0 0 / 1rem 1rem 0 0;
+		background: whitesmoke;
+	}
 	header h1, header p { text-align: center; }
-	header h1 { color: var(--color-accent); }
+	header h1 { margin-top: 8vh; color: var(--color-accent); }
 	header p { font-style: italic; } 
-	header time::after { content: '⬣'; margin: 0 1em; color: var(--color-accent); }
+	header time::after { content: '⬣'; margin: 0 1em; color: var(--color-alt); }
 	header picture {
+		align-items: center;
 		background: var(--color-accent);
+		box-sizing: border-box;
 		color: white;
-		display: block;
+		display: flex;
+		justify-content: center;
 		margin: 3rem 0;
 		padding: 1rem; border-radius: 5px;
-		width: 100%; height: 20vh;
-		box-sizing: border-box;
+		width: 100%; height: 24vmax;
+		max-height: calc(var(--max-width) / 2);
 	}
 	article { line-height: 1.6em; max-width: 700px; margin: auto; }
-	:is(article) a, strong { color: var(--color-accent); }
+	article strong { color: var(--color-accent); }
+	article a { color: var(--color-alt); }
 	article ul { list-style: "⬡   "; }
-	p { color: darkslategray; }
 	blockquote {
 		background: whitesmoke;
 		border-radius: 5px;
@@ -40,8 +56,8 @@
 </head>
 
 <body>
-	<nav></nav>
-	<main>
+	{% include "nav.liquid" active:"blog", class:"" %}
+	<main class="max">
 		<header>
 			<h1>{{ page.title }}</h1>
 			<p>
