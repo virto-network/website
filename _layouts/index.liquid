@@ -9,16 +9,7 @@
 	<meta name="theme-color" content="#3A3387">
 	<link rel="stylesheet" href="css/{{ page.slug }}.css">
 	<style>
-	:root {
-		--color-accent: darkslateblue;
-		--color-alt: #937;
-		--color-text: #335;
-		--nav-height: calc(3rem + 2vh);
-		--max-width: 1100px; 
-	}
-	html, body { all: initial; scroll-behavior: smooth; }
-	body { font-family: sans-serif; color: var(--color-text); }
-	.max { width: 100%; max-width: var(--max-width); margin: auto; }
+	{% include "style_prelude.css" %}
 	</style>
 </head>
 
