@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{ site.description }}">
+	<meta name="theme-color" content="#3A3387">
+	<title>{{ page.title }}</title>
+	
+	<style>
+	{% include "style_prelude.css" %}
+	body { background: var(--color-bg-alt); display: flex; flex-direction: column; }
+	main { flex: 1; padding: 1rem; }
+	h1 { height: 30vh; display: flex; padding: 0 1rem; }
+	h1 img { height: 100%; width: 100%; max-width: 500px; margin: auto; }
+
+	#posts { flex: 1; margin: 0; padding: 0; list-style: none; }
+	#posts li {
+		display: flex;
+		flex-direction: column;
+		border-radius: 5px;
+		background: var(--color-bg);
+		box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+		margin: auto;
+		min-height: 150px;
+		width: 100%;
+		overflow: hidden;
+	}
+	#posts img {
+		order: -1;
+		width: 100%;
+		filter: saturate(50%) sepia(70%) hue-rotate(260deg);
+		transition: filter 300ms;
+	}
+	#posts :is(li:hover img, a:focus+img) {
+		filter: saturate(100%) sepia(0%) hue-rotate(0deg);
+	}
+
+	#posts li time {
+		display: block;
+		color: var(--color-alt);
+		font-size: 0.9em; font-style: italic;
+		text-align: end;
+		line-height: 1.5rem;
+	}
+	#posts li a { display: block; color: var(--color-text); text-decoration: none; outline: none; }
+	#posts li a h2 { margin: 0; text-underline-offset: 4px; }
+	#posts li a:is(:hover,:focus) h2 { text-decoration: underline var(--color-alt) 3px; }
+	#posts li :is(time,a,p) { padding: 0 1rem; box-sizing: border-box; }
+	#posts li p { margin: 1rem 0 1.5rem; }
+
+	@media screen and (min-width: 700px) {
+		#posts {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			column-gap: 2rem; row-gap: 2rem;
+		}
+		#posts li { grid-column: span 2; }
+		#posts li:is(:nth-of-type(1),:nth-of-type(2)) { grid-column: span 3; }
+	}
+	</style>
+</head>
+
+<body>
+	{% include "nav.liquid" active:"blog", class:"" %}
+	<main class="max">
+		{{ page.content }}
+	</main>
+	<footer></footer>
+</body>
+</html>
+

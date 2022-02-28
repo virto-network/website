@@ -1,10 +1,14 @@
 :root {
 	--color-accent: darkslateblue;
 	--color-alt: #937;
+	--color-bg: white;
+	--color-bg-alt: whitesmoke;
 	--color-text: #335;
 	--nav-height: calc(3rem + 2vh);
 	--max-width: 1100px;
 }
-html, body { all: initial; scroll-behavior: smooth; }
-body { font-family: sans-serif; color: var(--color-text); }
+@media print { :root { --color-text: black; } }
+html, body { all: initial; display: block; scroll-behavior: smooth; }
+body { background: var(--color-bg); font-family: sans-serif; color: var(--color-text); min-height: 100vh }
 .max { width: 100%; max-width: var(--max-width); margin: auto; box-sizing: border-box; }
+.sticky-hack { border: none; display: block; height: 1px; margin: 0; width: 100%; }

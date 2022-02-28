@@ -3,7 +3,7 @@
 		<a href="/#home" class="logo">
 			{% include "virto_logo.svg" %}
 		</a>
-	<a {% if active == "blog" %}class="active"{% else %}href="/posts"{% endif %}>
+	<a {% if active == "blog" %}class="active"{% endif %} href="/blog/">
 			<svg width="28" height="28" viewBox="0 0 50 50"><path d="m10 39h22m-22-5.4h22m-17-30h-9.5c-0.14 0-0.25 0.11-0.25 0.25v41c0 0.14 0.11 0.25 0.25 0.25h31c0.14 0 0.25-0.11 0.25-0.25v-4.1l6.3-0.72c0.13-0.015 0.22-0.13 0.21-0.26l-4.2-39c-0.013-0.11-0.29-0.33-0.4-0.34zm-5 25h22m-22-19h22c0.096 0 0.17 0.035 0.17 0.078v13c0 0.044-0.077 0.078-0.17 0.078h-22c-0.096 0-0.17-0.035-0.17-0.078v-13c0-0.043 0.077-0.078 0.17-0.078zm-4.7-6h31c0.14 0 0.25 0.11 0.25 0.25v41c0 0.14-0.11 0.25-0.25 0.25h-31c-0.14 0-0.25-0.11-0.25-0.25v-41c0-0.14 0.11-0.25 0.25-0.25z" style="fill:none;stroke-linecap:round"/></svg>
 			Blog</a>
 	<a {% if active == "paper" %}class="active"{% else %}href="/docs/whitepaper.html"{% endif %} data-status="draft">
@@ -13,7 +13,7 @@
 </nav>
 
 <style>
-nav { height: var(--nav-height); }
+nav { height: var(--nav-height); background: var(--color-bg, white); }
 nav .row {
 	align-items: center;
 	box-sizing: border-box;
@@ -60,15 +60,15 @@ nav a.logo svg {
 	align-self: start;
 }
 
-nav a:not(.logo):hover { background: rgba(245,245,250,0.7); }
+nav a:not(.logo):is(:hover,:focus) { background: var(--color-bg-alt); }
 nav a:not(.logo) {
-	text-decoration: none;
 	color: var(--color-accent);
 	height: var(--nav-height);
-	white-space: nowrap;
-	position: relative;
-	text-shadow: 0 0 2px white;
+	outline: none;
 	padding: 0 calc(1rem + 0.5vw);
+	position: relative;
+	text-decoration: none;
+	white-space: nowrap;
 }
 
 /* DRAFT msg */
@@ -100,4 +100,5 @@ nav a:not(.logo) svg {
 	nav a.logo svg #letters { display: initial; }
 	nav a { font-size: 1em; flex-direction: row; }
 }
+@media print { nav { display: none; } }
 </style>

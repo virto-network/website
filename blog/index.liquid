@@ -1,0 +1,16 @@
+---
+layout: blog.liquid
+---
+
+<h1><img src="/img/blog.svg" alt="Virto Blog"></h1>
+
+<ul id="posts">
+{% for post in collections.posts.pages %}{% if post.slug != "index" %}
+	<li>
+		<time datetime="{{ post.published_date }}">{{ post.published_date | date: "%d %b" }}</time>
+		<a href="/{{ post.permalink }}"><h2>{{ post.title }}</h2></a>
+		<img src="/img/blog/{{ post.slug }}-cover_s.jpg" alt="Cover image">
+		<p>{{ post.description }}</p>
+	</li>
+{% endif %}{% endfor %}
+</ul>

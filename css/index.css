@@ -1,12 +1,10 @@
 :root {
-	--nav-padding: 7vw;
-	--color-gray: #F7F7FB;
+	--color-gray: whitesmoke;
 	--color-purple: #664c86;
 	--color-purple-light: #c859f3;
 }
 
 main { display: flex; flex-direction: column; }
-section { padding: calc(2rem + 5vmin) calc(1rem + 4vmin); }
 section h2 { font-size: calc(1.5em + 2vmin); }
 figure { margin: 0 auto; }
 p { line-height: 2em; }
@@ -62,14 +60,7 @@ nav {
 	z-index: 99;
 }
 nav.fixed .logo { opacity: 0; visibility: hidden; }
-.sticky-hack {
-	border: none;
-	display: block;
-	height: 1px;
-	margin: 0;
-	order: 2;
-	width: 100%;
-}
+.sticky-hack { order: 2; }
 
 #sponsors {
 	height: var(--nav-height);
@@ -92,6 +83,7 @@ nav.fixed .logo { opacity: 0; visibility: hidden; }
 
 #LIP { order: 5; position: relative; }
 #LIP figure { width: 80%; }
+#LIP figure img { width: 100%; }
 
 #communities {
 	background: var(--color-gray);

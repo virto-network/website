@@ -7,10 +7,11 @@
 	<title>{{ page.title }}</title>
 	
 	<meta name="theme-color" content="#3A3387">
-	<link rel="stylesheet" href="css/{{ page.slug }}.css">
 	<style>
 	{% include "style_prelude.css" %}
+	section { padding: calc(2rem + 5vmin) calc(1rem + 4vmin); }
 	</style>
+	<link rel="stylesheet" href="css/{{ page.slug }}.css">
 </head>
 
 <body>

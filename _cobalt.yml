@@ -6,4 +6,7 @@ ignore:
   - README.md
   - cobalt*
 posts:
+  dir: blog
   rss: rss.xml
+  default:
+    layout: post.liquid

@@ -1,7 +1,10 @@
 ---
-layout: post.liquid
 title: "Virto: De-Commerce Solution for Everyone"
+description: |
+  Welcome to Virto Network, a decentralized infrastructure
+  for marketplaces that make a difference.
 published_date: 2022-01-05 12:34:56 +0100
+permalink: /blog/first-post
 data:
   author: Qian Che
 is_draft: true
