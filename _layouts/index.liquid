@@ -7,15 +7,13 @@
 	<title>{{ page.title }}</title>
 	
 	<meta name="theme-color" content="#3A3387">
-	<style>
-	{% include "style_prelude.css" %}
-	section { padding: calc(2rem + 5vmin) calc(1rem + 4vmin); }
-	</style>
+	<link rel="stylesheet" href="css/layout.css">
 	<link rel="stylesheet" href="css/{{ page.slug }}.css">
 </head>
 
 <body>
 	<main>{{ page.content }}</main>
+	{% include "footer.liquid" %}
 </body>
 
 </html>

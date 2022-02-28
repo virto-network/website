@@ -7,15 +7,9 @@
 	<meta name="theme-color" content="#3A3387">
 	<title>{{ page.title }}</title>
 	
+	<link rel="stylesheet" href="/css/layout.css">
 	<style>
-	{% include "style_prelude.css" %}
 	main { padding: 2rem 1rem; box-sizing: border-box; }
-	footer {
-		height: 5rem;
-		padding-top: 2rem;
-		border-radius: 50vw 50vw 0 0 / 1rem 1rem 0 0;
-		background: var(--color-bg-alt);
-	}
 	header h1, header p { text-align: center; }
 	header h1 { margin-top: 8vh; color: var(--color-accent); }
 	header p { font-style: italic; } 
@@ -61,7 +55,7 @@
 		</header>
 		<article>{{ page.content }}</article>
 	</main>
-	<footer></footer>
+	{% include "footer.liquid" %}
 </body>
 </html>
 

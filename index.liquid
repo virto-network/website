@@ -6,6 +6,14 @@ layout: index.liquid
 <hr class="sticky-hack">
 {% include "nav.liquid" active: "", class: "fixed" %}
 
+<aside id="sponsors">
+	<ul>
+		{% for sponsor in site.data.index.sponsors %}
+		<li><img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" height="38"></li>
+		{% endfor %}
+	</ul>
+</aside>
+
 <section id="home">
 	<figure id="logo" title="Virto Network">
 		{% include "virto_logo.svg" domain: true %}
@@ -67,20 +75,6 @@ layout: index.liquid
 	</article>
 </section>
 
-<aside id="sponsors">
-	<ul>
-		{% for sponsor in site.data.index.sponsors %}
-		<li><img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" height="38"></li>
-		{% endfor %}
-	</ul>
-</aside>
-
-<footer class="max">
-	<a id="gh" title="Follow us on Github" href="https://github.com/virto-network">{% include "gh.svg" %} Check us on Github</a>
-	<a id="community" href="https://matrix.to/#/#virto-network:virto.community">{% include "element.svg" %} Chat in our community!</a>
-	<a href="mailto:contact@virto.team">{% include "email.svg" %} A formal message?</a>
-</footer>
-
 <script>
 const $ = document.querySelector.bind(document),
 	$$ = document.querySelectorAll.bind(document);
@@ -92,9 +86,9 @@ const whenVisible = (elements, fn, opts) => {
 	const ob = new IntersectionObserver(fn, opts);
 	$$(elements).forEach(e => ob.observe(e));
 };
-	const addSticky = ([br]) =>
-			br.target.nextElementSibling.classList.toggle('fixed', br.intersectionRatio === 1);
+const makeSticky = ([br]) =>
+	br.target.nextElementSibling.classList.toggle('fixed', br.intersectionRatio === 1);
 
 whenVisible('main>section', addViewedClass, { threshold: 0.2 });
-whenVisible('.sticky-hack', addSticky, { threshold: [0, 1] });
+whenVisible('.sticky-hack', makeSticky, { threshold: [0, 1] });
 </script>

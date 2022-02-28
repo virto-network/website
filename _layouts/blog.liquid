@@ -7,10 +7,11 @@
 	<meta name="theme-color" content="#3A3387">
 	<title>{{ page.title }}</title>
 	
+	<link rel="stylesheet" href="/css/layout.css">
 	<style>
-	{% include "style_prelude.css" %}
 	body { background: var(--color-bg-alt); display: flex; flex-direction: column; }
 	main { flex: 1; padding: 1rem; }
+	footer { background: var(--color-bg); }
 	h1 { height: 30vh; display: flex; padding: 0 1rem; }
 	h1 img { height: 100%; width: 100%; max-width: 500px; margin: auto; }
 
@@ -66,7 +67,7 @@
 	<main class="max">
 		{{ page.content }}
 	</main>
-	<footer></footer>
+	{% include "footer.liquid" %}
 </body>
 </html>
 

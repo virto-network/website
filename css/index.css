@@ -1,10 +1,6 @@
-:root {
-	--color-gray: whitesmoke;
-	--color-purple: #664c86;
-	--color-purple-light: #c859f3;
-}
-
 main { display: flex; flex-direction: column; }
+footer { background: var(--color-bg); }
+section { padding: calc(2rem + 5vmin) calc(1rem + 4vmin); }
 section h2 { font-size: calc(1.5em + 2vmin); }
 figure { margin: 0 auto; }
 p { line-height: 2em; }
@@ -22,7 +18,7 @@ section>article {
 	flex-direction: column;
 	height: calc(100vh - (var(--nav-height) * 2));
 	justify-content: center;
-	order: 1;
+	order: -1;
 	overflow: hidden;
 	padding-top: calc(2rem + 15vh);
 	position: relative;
@@ -55,16 +51,13 @@ section>article {
 
 nav {
 	background: rgba(255, 255, 255, 0.98);
-	order: 3;
 	position: sticky; top: 0;
 	z-index: 99;
 }
-nav.fixed .logo { opacity: 0; visibility: hidden; }
-.sticky-hack { order: 2; }
+nav.fixed .logo { display: none; }
 
 #sponsors {
 	height: var(--nav-height);
-	order: 4;
 	overflow-x: auto;
 	scrollbar-width: none;
 }
@@ -81,17 +74,15 @@ nav.fixed .logo { opacity: 0; visibility: hidden; }
 	width: fit-content;
 }
 
-#LIP { order: 5; position: relative; }
 #LIP figure { width: 80%; }
 #LIP figure img { width: 100%; }
 
 #communities {
-	background: var(--color-gray);
+	background: var(--color-bg-alt);
 	border-radius: 60vw 40vw 0 0 / 5vw 0.5vw 0 0;
-	order: 6;
 }
 #communities .globe {
-	background: linear-gradient(to top, var(--color-gray), transparent, transparent),
+	background: linear-gradient(to top, var(--color-bg-alt), transparent, transparent),
 		url(../img/globe.svg) no-repeat top;
 	background-size: cover;
 	height: 50vw;
@@ -104,9 +95,8 @@ nav.fixed .logo { opacity: 0; visibility: hidden; }
 #marketplaces {
 	position: relative;
 	overflow: hidden;
-	background: var(--color-purple);
-	color: white;
-	order: 7;
+	background: rgba(var(--color-accent-rgb), 0.9);
+	color: var(--color-bg);
 }
 #marketplaces.viewed::after {
 	transform: scale(1);
@@ -118,7 +108,7 @@ nav.fixed .logo { opacity: 0; visibility: hidden; }
 	border-radius: 60vmin;
 	width: 60vmin;
 	height: 60vmin;
-	background: var(--color-purple-light);
+	background: var(--color-alt);
 	top: -48vmin;
 	right: -20vmin;
 	transition: transform 300ms 250ms;
@@ -126,9 +116,8 @@ nav.fixed .logo { opacity: 0; visibility: hidden; }
 }
 
 #APIs {
-	background: var(--color-gray) no-repeat center;
+	background: var(--color-bg-alt) no-repeat center;
 	border-radius: 0 0 60vw 0 / 0 0 5vw 0;
-	order: 8;
 }
 #APIs ul {
 	background-size: contain;
@@ -139,13 +128,13 @@ nav.fixed .logo { opacity: 0; visibility: hidden; }
 	padding: 2rem 1rem;
 	width: 100%;
 }
-#APIs h2 { color: var(--color-purple); }
+#APIs h2 { color: var(--color-accent); }
 #APIs li {
 	display: block;
 	height: 2.4rem;
 	width: 40%;
 	background: white;
-	border: 2px solid var(--color-purple);
+	border: 2px solid var(--color-accent);
 	border-radius: 25px / 8px;
 	margin: 1px 0;
 	text-align: center;
@@ -154,7 +143,7 @@ nav.fixed .logo { opacity: 0; visibility: hidden; }
 	line-height: 2.4rem;
 	text-decoration: none;
 	font-weight: bold;
-	color: var(--color-main);
+	color: var(--color-accent);
 }
 
 @media screen and (min-width:600px) {
@@ -173,13 +162,11 @@ nav.fixed .logo { opacity: 0; visibility: hidden; }
 	}
 	:is(#communities, #marketplaces) p { grid-column: 1; }
 	#communities .globe {
-		grid-row: 1 / 3;
-		grid-column: 2 / 4;
+		grid-row: 1 / 3; grid-column: 2 / 4;
 		height: 100%;
 		background: url(../img/globe.svg) no-repeat center;
 		background-size: contain;
 	}
-	#marketplaces ul.carousel { --card-size: 190px; }
 	#APIs ul { grid-row: 1 / 3; grid-column: 1; padding: 3rem 2rem; }
 	#APIs :is(h2, p) { grid-column: 2; }
 }
@@ -203,7 +190,7 @@ nav.fixed .logo { opacity: 0; visibility: hidden; }
 
 .card {
 	align-items: center;
-	background: var(--color-gray);
+	background: var(--color-bg-alt);
 	border-radius: 10px;
 	box-sizing: border-box;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -238,8 +225,8 @@ nav.fixed .logo { opacity: 0; visibility: hidden; }
 	width: calc(var(--card-size) * 0.7);
 }
 .card .logo img { width: 100%; }
-.card h3 { all: initial; font-family: inherit; color: var(--color-purple); font-weight: bold; }
-.card a { text-decoration: none; color: var(--color-purple); }
+.card h3 { all: initial; font-family: inherit; color: var(--color-accent); font-weight: bold; }
+.card a { text-decoration: none; color: var(--color-accent); }
 .card p {
 	color: rgba(0, 0, 0, 0.4);
 	font-size: 0.7rem;
@@ -264,53 +251,8 @@ nav.fixed .logo { opacity: 0; visibility: hidden; }
 	white-space: nowrap;
 	width: 70px;
 }
-
-footer {
-	padding: calc(1rem + 0.8vmin);
-	box-sizing: border-box;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	flex-wrap: wrap;
-	order: 9;
-}
-footer a {
-	border: 1px solid lightgray;
-	border-radius: 0.5rem;
-	display: inline-block;
-	height: 2.2rem;
-	line-height: 2.2rem;
-	padding: 0.4rem 1rem;
-	text-decoration: none;
-	color: var(--color-black);
-	font-weight: bold;
-	margin: 0.5rem;
-	background: white;
-}
-footer svg { vertical-align: middle; margin-right: 0.5rem; fill: #CCC; width: 2rem; }
-footer a:is(:hover, :focus) { border: 1px solid var(--color-alt); outline: none; }
-footer a:is(:hover, :focus) svg { fill: var(--color-accent); opacity: 0.8; }
-
-#community:target {
-	position: relative;
-}
-#community:target::after {
-	content: "";
-	width: calc(100% + 1.8rem);
-	height: calc(100% + 1.8rem);
-	background: var(--color-alt);
-	opacity: 0;
-	display: block;
-	top: -0.9rem;
-	left: -0.9rem;
-	position: absolute;
-	z-index: -1;
-	border-radius: 0.5rem;
-	animation: attention 1s 350ms forwards;
-}
-
-@keyframes attention {
-	0% { opacity: 0.05; }
-	50% { opacity: 0.2; }
-	100% { opacity: 0.05; }
+@media screen and (min-width:600px) { .carousel { --card-size: 180px; } }
+@media screen and (min-width:1200px) {
+	.carousel { --card-size: 200px; }
+	.card p { font-size: 0.9rem;
 }
