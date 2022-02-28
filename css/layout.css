@@ -6,8 +6,24 @@
 	--color-bg: white;
 	--color-bg-alt: whitesmoke;
 	--color-text: #335;
+	--color-text-alt: #335;
 	--nav-height: calc(3rem + 2vh);
 	--max-width: 1100px;
+}
+/* experimental dark theme */
+@media (prefers-color-scheme: dark) {
+	body.nord {
+		--color-accent-rgb: 94, 129, 172;
+		--color-accent: rgb(var(--color-accent-rgb));
+		--color-alt-rgb: 180, 142, 173, 1;
+		--color-alt: rgb(var(--color-alt-rgb));
+		--color-bg: #2e3440;
+		--color-bg-alt: #4c566a;
+		--color-text: #eceff4;
+		--color-text-alt: #d8dee9;
+		--nav-height: calc(3rem + 2vh);
+		--max-width: 1100px;
+	}
 }
 @media print { :root { --color-text: black; } }
 html, body { all: initial; display: block; scroll-behavior: smooth; }
@@ -64,6 +80,7 @@ nav a.logo svg {
 	height: 100%;
 	width: auto;
 	align-self: start;
+	fill: var(--color-text);
 }
 
 nav a:not(.logo):is(:hover,:focus) { background: var(--color-bg-alt); }

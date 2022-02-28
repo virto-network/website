@@ -18,7 +18,10 @@ layout: index.liquid
 	<figure id="logo" title="Virto Network">
 		{% include "virto_logo.svg" domain: true %}
 	</figure>
-	<p>{{ site.data.index.description }}</p>
+	<p>
+		{{ site.data.index.description }}
+		<a href="https://polkadot.network">{% include "polkadot.svg" %}</a>
+	</p>
 </section>
 
 <section id="LIP">

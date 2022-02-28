@@ -24,9 +24,9 @@ section>article {
 	position: relative;
 }
 #home figure { width: 80%; max-width: 70vmin; }
-#home figure svg { width: 100%; height: fit-content; }
+#home figure svg { width: 100%; height: fit-content; fill: var(--color-text); }
 #home p { font-size: calc(0.9em + 1vmin); margin-top: 10vmin; text-align: center; }
-#home p img { height: calc(0.9em + 1vmin); vertical-align: text-bottom; }
+#home p svg { height: calc(0.9em + 1vmin); fill: var(--color-text); vertical-align: text-bottom; }
 /* spinning polkadot logo */
 @keyframes spin {
 	from { transform: rotate(0deg); }
@@ -50,7 +50,6 @@ section>article {
 }
 
 nav {
-	background: rgba(255, 255, 255, 0.98);
 	position: sticky; top: 0;
 	z-index: 99;
 }
@@ -133,7 +132,7 @@ nav.fixed .logo { display: none; }
 	display: block;
 	height: 2.4rem;
 	width: 40%;
-	background: white;
+	background: var(--color-bg);
 	border: 2px solid var(--color-accent);
 	border-radius: 25px / 8px;
 	margin: 1px 0;
@@ -217,8 +216,8 @@ nav.fixed .logo { display: none; }
 	z-index: 1;
 }
 .card .logo {
-	background: white;
-	border: solid 5px white;
+	background: var(--color-bg);
+	border: solid 5px var(--color-bg);
 	border-radius: calc(var(--card-size) * 0.5);
 	height: calc(var(--card-size) * 0.7);
 	overflow: hidden;
@@ -228,7 +227,7 @@ nav.fixed .logo { display: none; }
 .card h3 { all: initial; font-family: inherit; color: var(--color-accent); font-weight: bold; }
 .card a { text-decoration: none; color: var(--color-accent); }
 .card p {
-	color: rgba(0, 0, 0, 0.4);
+	color: var(--color-text-alt);
 	font-size: 0.7rem;
 	line-height: 1em;
 	text-align: center;

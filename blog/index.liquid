@@ -2,7 +2,7 @@
 layout: blog.liquid
 ---
 
-<h1><img src="/img/blog.svg" alt="Virto Blog"></h1>
+<h1>{% include "blog.svg" %}</h1>
 
 <ul id="posts">
 {% for post in collections.posts.pages %}{% if post.slug != "index" %}
