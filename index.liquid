@@ -7,7 +7,7 @@ layout: index.liquid
 {% include "nav.liquid" active: "", class: "fixed" %}
 
 <aside id="sponsors">
-	<ul>
+	<ul class="max">
 		{% for sponsor in site.data.index.sponsors %}
 		<li><img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" height="38"></li>
 		{% endfor %}

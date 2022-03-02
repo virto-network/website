@@ -66,11 +66,9 @@ nav.fixed .logo { display: none; }
 #sponsors ul {
 	display: flex;
 	height: 100%;
-	justify-content: center;
+	justify-content: space-between;
 	list-style: none;
-	margin: 0 auto;
-	padding: 0;
-	width: fit-content;
+	padding: 3px 0 0;
 }
 
 #LIP figure { width: 80%; }

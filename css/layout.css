@@ -50,8 +50,7 @@ nav::after {
 	background: linear-gradient(to left, var(--color-accent), var(--color-alt));
 	display: block;
 	box-sizing: border-box;
-	height: 0.3vh;
-	min-height: 3px;
+	height: 0.3vh; min-height: 3px;
 	opacity: 0.8;
 	transform-origin: bottom;
 	transition: transform 300ms;
