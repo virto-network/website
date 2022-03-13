@@ -21,39 +21,60 @@
 	}
 
 	#posts { flex: 1; margin: 0; padding: 0; list-style: none; }
-	#posts li {
+	#posts li { position: relative; width: 100%; margin: 1rem 0; }
+
+	#posts .card {
+		background: var(--color-bg);
+		border-radius: 5px;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
-		border-radius: 5px;
-		background: var(--color-bg);
-		box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-		margin: auto;
-		min-height: 150px;
-		width: 100%;
 		overflow: hidden;
+		padding-bottom: 5%;
 	}
-	#posts img {
+
+	#posts .card img {
+		filter: saturate(50%) sepia(50%) hue-rotate(220deg) brightness(0.9);
+		flex-shrink: 0;
+		height: 40vmin;
+		object-fit: cover;
 		order: -1;
-		width: 100%;
-		filter: saturate(50%) sepia(70%) hue-rotate(260deg);
 		transition: filter 300ms;
+		width: 100%;
 	}
+	#posts li:nth-of-type(n+3) .card img { height: 30vmin; }
 	#posts :is(li:hover img, a:focus+img) {
 		filter: saturate(100%) sepia(0%) hue-rotate(0deg);
 	}
 
-	#posts li time {
-		display: block;
+	#posts .card time {
+		display: flex; align-items: center;
 		color: var(--color-alt);
 		font-size: 0.9em; font-style: italic;
-		text-align: end;
+		justify-content: flex-end;
 		line-height: 1.5rem;
+		flex: 1;
 	}
-	#posts li a { display: block; color: var(--color-text); text-decoration: none; outline: none; }
-	#posts li a h2 { margin: 0; text-underline-offset: 4px; }
-	#posts li a:is(:hover,:focus) h2 { text-decoration: underline var(--color-alt) 3px; }
-	#posts li :is(time,a,p) { padding: 0 1rem; box-sizing: border-box; }
-	#posts li p { margin: 1rem 0 1.5rem; }
+	#posts .card a {
+		display: flex;
+		align-items: center;
+		color: var(--color-text);
+		text-decoration: none;
+		outline: none;
+		flex: 2;
+	}
+	#posts .card a:is(:hover,:focus) h2 { text-decoration: underline var(--color-alt) 3px; }
+	#posts .card a h2 {
+		margin: 0;
+		text-underline-offset: 4px;
+		font-weight: 500;
+		font-size: 1.4em;
+	}
+	#posts li:nth-of-type(n+3) .card h2 { font-size: 1.3em;}
+	#posts .card :is(time,a,p) { padding: 0 1rem; box-sizing: border-box; }
+	#posts .card p { margin: 0.5rem 0 0; }
+	#posts li:nth-of-type(n+3) .card p { display: none; }
 
 	@media screen and (min-width: 700px) {
 		#posts {
@@ -61,8 +82,33 @@
 			grid-template-columns: repeat(6, 1fr);
 			column-gap: 2rem; row-gap: 2rem;
 		}
-		#posts li { grid-column: span 2; }
-		#posts li:is(:nth-of-type(1),:nth-of-type(2)) { grid-column: span 3; }
+		#posts li { grid-column: span 3; margin: 0; }
+		#posts li:before {
+			content: '';
+			display: block;
+			width: 100%;
+			padding-top: 90%;
+		}
+		#posts li:nth-of-type(n+3):before { padding-top: 80%; }
+		#posts .card { position: absolute; top: 0; left: 0; height: 100%; width: 100%; }
+		#posts .card img { height: 60%; }
+		#posts li:nth-of-type(n+3) .card img { height: 60%; }
+		#posts .card a h2 { font-size: calc(0.9em + 0.6vmin); }
+		#posts li:nth-of-type(n+3) .card a h2 { font-size: calc(0.7em + 0.6vmin);}
+		#posts .card p {
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+		#posts li:nth-of-type(n+3) { grid-column: span 2; }
+	}
+	@media screen and (min-width: 950px) {
+		#posts li:before { padding-top: 70%; }
+		#posts li:nth-of-type(n+3):before { padding-top: 60%; }
+		#posts .card a h2 { font-size: 1.3em; }
+		#posts li:nth-of-type(n+3) .card a h2 { font-size: 1.1em; }
+		#posts .card img { height: 65%; }
 	}
 	</style>
 </head>
