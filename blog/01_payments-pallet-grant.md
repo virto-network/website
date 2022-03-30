@@ -56,7 +56,7 @@ engage with real-world assets.
 
 We are very excited about what this milestone represents for the future of
 Virto Network, payments pallet is just the first step in our path towards
-making blockchain technology usable in the day to day live of common users and
+making blockchain technology usable in the day to day life of common users and
 making _decentralized commerce with social impact_ the default way of conducting
 buissiness in the world of Web3. 
 Now it's the time to showcase together with our first partners what the world
