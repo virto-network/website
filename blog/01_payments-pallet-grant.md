@@ -31,7 +31,7 @@ and secure experience when paying for real world goods and services.
 marketplaces with local impact in the Polkadot ecosystem. To ensure the success
 of marketplaces, it's Virto's responsibility and pursuit to provide
 marketplaces with a secure and convenient payment system. With this goal and
-expectation **Virto Payment Pallet** was born. 
+expectation the **Virto Payment Pallet** was born. 
 
 **Virto Payment Pallet** tries to tell people a story of trust, which starts
 with **trustless**. Imagine you want to start your own business, what would be
