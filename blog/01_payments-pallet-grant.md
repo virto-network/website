@@ -49,7 +49,7 @@ recipient to dispute the payment request of sender.
 
 How does Virto Payments Pallet achieve the desired functionality? As the
 fundamental part of [LIP][lip], it's an escrow like system that allows people
-pay with cryptocurrency for any product or service from the real world, it has
+to pay with cryptocurrency for any product or service from the real world, it has
 been redesigned from the ground up to be highly configurable to serve the needs
 of the Virto Network as well as any other Substrate based chain that wants to
 engage with real-world assets.
