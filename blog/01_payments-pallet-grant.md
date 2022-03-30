@@ -19,7 +19,7 @@ is_draft: true
 
 Virto team is glad to announce the completion of the initial development of its
 [`payments pallet`][pallet], a payments primitive that enables any blockchain
-in the [Polkadot][polkadot] and [Kusama][kusama] ecosystems deliver a simple
+in the [Polkadot][polkadot] and [Kusama][kusama] ecosystems to deliver a simple
 and secure experience when paying for real world goods and services.
 
 >*Web3 Foundation funds research and development teams building the technology
