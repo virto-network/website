@@ -40,7 +40,7 @@ the word **trust** appears often. For example, how could you build the trust
 with your business partners? How could you gain trust from your customers every
 time they purchase from you? How could your trust other services and goods
 whenever you buy? We know it's not easy to start with just naive trust, that's
-why Virto purpose to build the Payment Pallet with the trustless design. People
+why Virto's purpose is to build the Payment Pallet with a trustless design. People
 could pay each other easily using the pallet. The payment from buyers will
 always be locked first and only be released to sellers once the buyers
 confirmed to have received the product or services. The payment pallet also
