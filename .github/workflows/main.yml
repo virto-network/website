@@ -24,12 +24,3 @@ jobs:
         run: |
           tar xfv cobalt-*
           ./cobalt build
-        
-      - name: Upload to IPFS
-        uses: aquiladev/ipfs-action@v0.1.6-1
-        with:
-          path: _site
-          service: pinata
-          pinataKey: ${{ secrets.PINATA_KEY }}
-          pinataSecret: ${{ secrets.PINATA_SECRET }}
-          pinataPinName: valibre_org
