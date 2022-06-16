@@ -7,7 +7,7 @@ published_date: 2022-03-01 14:53:00 +0100
 permalink: /blog/payments-pallet-web3-grant
 data:
   author: Qian & Daniel
-is_draft: true
+is_draft: false
 ---
 
 [pallet]: https://github.com/virto-network/open-runtime-module-library/tree/payments-pallet/payments
