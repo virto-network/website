@@ -23,27 +23,28 @@ community: |
   local resources are spent and be part of your community's prosperous future.
 
 marketplace: |
-  Easily create any <strong>de-commerce</strong> application that rewards its
-  users with crypto, use our simple tools to bring your decentralized
-  marketplace to life.  
+  Join like-minded people to collectively satisfy the growing demands 
+  of clients in your bussiness domain. Use our simple development tools
+  to create a successful <strong>dCommerce marketplace</strong>.
+  
 marketplace_list:
-- name: swap.cash
-  desc: Decentralized on & off ramps
-  logo: img/markets/swap.svg
-  when: Q2
 - name: Bloque
-  desc: Your easy Instagram store
+  desc: Instastores for entrepreneurs
   home: https://bloque.app
   logo: img/markets/bloque.svg
-  when: Q2
+- name: SwapCash
+  desc: Decentralized on & off ramps
+  home: https://swap.cash
+  logo: img/markets/swap.svg
+  when: Q1 2023
 - name: flea.market
   desc: P2P trade of local goods
   logo: img/markets/flea.svg
-  when: Q4
+  when: Q4 2023
 - name: go.delivery
   desc: Deliveries without intermediaries
   logo: img/markets/go.svg
-  when: Q2 2023
+  when: 2024
 
 apis: |
   Bring <strong>blockchain to the masses</strong> with our composable APIs and
