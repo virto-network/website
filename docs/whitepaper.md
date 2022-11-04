@@ -63,38 +63,40 @@ way. All are enforced by blockchain technology.
   that wants to buy goods or services from any other user.
 - Sellers/Merchants: More experienced users trading their real world assets and
   services in exchange for cryptocurrency.
-- Community: People sharing a physical space who are incentivized to create
+- Local community: People sharing a physical space who are incentivized to create
   communities and unlock existing and future resources which are collected from
   every trade with a **local tax**. Communities as DAOs decide to spend
   resources based on their needs to create powerful autonomous micro-economies
-- Marketplace: People with a common interest in an economic activity create
+- Commercial community: People with a common interest in an economic activity create
   marketplaces that act like *token curated registries* where merchants post
-  their products and services. They issue their own token used to pay for the
-  **market fee** on every trade.
+  their products and services. They issue their own token used to bring value
+  and utility to their community.
 - Union: Communities and Marketplaces can together form unions, as a higher
   level DAOs to make decision to tackle global level topics.
 
 ### 2.2 Process
 
-The world is divided into Geo land cells. Each cell represents around 5
+The world is divided into "Geo land cells". Each cell represents around 5
 km<sup>2</sup>. When an individual creates an account, they register themselves
 in the cell of their choosing.
 
-Individuals have two means of trading, through P2P or marketplace.  
+Individuals willing to exchange goods or services have two means of trading, 
+peer-to-peer or via a commercial community.  
 
-- In p2p trading, individuals can freely trade as buyer and seller.
-- When trading in marketplaces, individuals apply to become qualified sellers
-  or buyers that are subject to higher quality standards of the marketplace
-  community.
+- In P2P trading, people can freely trade as buyer and seller but are subject
+  to a higher cost per transaction.
+- When trading in in a commercial community, individuals apply to become qualified sellers
+  or buyers that are subject to the higher quality standards of said community.
 
 Therefore, individuals can freely trade with each other or in a regulated
-marketplace through a secure payment system embedded in the protocol, which
+marketplace run by the commercial community, both benefiting from the same
+secure payment system embedded in the protocol, which
 enables cryptocurrencies as payment method for service and off-chain assets.
-For the trade in the marketplace, the marketplace receives **market fees** in
-their native token format as the cost of their service, which encourages new
-marketplaces to join the system by creating applications to serve the demands
+Trading in a marketplace means the commercial community collects a **market fee** in
+their native token as the cost of their service, which encourages new
+commercial communities to join the system by creating applications to serve the demands
 of the market.  
-Marketplaces also play a crucial role in the system as infrastructure
+Commercial communities also play a crucial role in the system as infrastructure
 providers, with the collected fees they are expected to maintain a minimum
 required server infrastructure to serve the market they wish to target, to
 serve larger geographical and more densely populated areas, more infrastructure
@@ -120,15 +122,15 @@ and decide to spend resources based on their needs to create powerful
 autonomous micro-economies. Communities could decide about their own governance
 system to better facilitate their economy in a dynamic way.
 
-Communities or marketplaces could form **unions** with either communities or
-marketplaces to join forces to solve global problems, e.g. climate change. They
-could establish a decision model by voting and allocate certain resources on
-the focus.
+Local and commercial communities can also form **unions**, a permanent or 
+temporary organization, to collectively solve bigger common goals. For example,
+all communities in the system can be part of a global union that collects
+funds to fight climate change.
 
 ### 2.3 Applications
 
-To better serve their users, Marketplaces often create their own decentralized
-applications that connect to LIP for users to directly to interact with their
+To better serve their users, Commercial Communities often create their own decentralized
+marketplace applications that connect to LIP for users to directly to interact with their
 well curated listings.  
 All sorts of economic activities can take place in the marketplaces. The
 following are reference applications developed by the core team as a showcase.
@@ -141,7 +143,7 @@ More applications are expected to be developed by other builders.
 
 ## 3. Infrastructure
 
-Local communities and Marketplaces are the main key entities in charge of
+Local and Commercial communities are the main key entities in charge of
 providing infrastructure to the network, although anyone can run the necessary
 software to to participate, it becomes a **requirement** for them as they have
 the economic incentives to do so.
@@ -149,8 +151,8 @@ the economic incentives to do so.
 LIP distinct feature is to combine three different kinds of decentralized
 technology, a **Substrate based parachain** to be deployed in the [Polkadot
 network](https://polkadot.network), **Matrix**, the network for secure
-decentralization communications and **Valor**, Virto's lightweight plugin
-runtime.
+decentralization communications and **Valor**, an application runtime and
+development platform.
 
 ### 3.1 Parachain
 
@@ -160,8 +162,8 @@ functionality.
 - **Payments**: The core functionality of the system, enables secure payments
   of off-chain assets with a highly configurable escrow-like system that
   protects users funds until the different parties have come to an agreement. 
-- **Communities & Marketplaces**: DAO management tools that allow participants
-  take part in on-chain governance, treasury management, etc.
+- **Communities**: DAO management tools that allow Unions, Local and Commercial
+  communities take part in on-chain governance, treasury management, etc.
 - **Network assets**: The parachain makes strong usage of inter-chain
   communication to allow merchants transact with all kinds of assets that might
   exist elsewhere. 
@@ -183,9 +185,11 @@ LIP uses the communications protocol in different ways,
 
 ### 3.3 Valor
 
-A lightweight runtime that allows composing plugins to create *decentralizable
-APIs*, that is, HTTP based APIs that Web 2 developers are familiar with and
-have extensive support across all kinds of platforms. Due to the portability of
+A lightweight application runtime that allows composing community developed 
+services that run in a community's infrastructure or fully decentralized in a
+user's device. One big focus of the runtime is to allow developers to use
+technologies the are already familiar with(e.g. HTTP based APIs) and have 
+extensive support across all kinds of platforms. Due to the portability of
 the runtime and keeping applications' state in decentralized storages (i.e.
 blockchain, Matrix homeservers, IPFS), said APIs can be run unchanged in the
 user devices, including web browsers, making it an excellent Web 3 development
@@ -197,14 +201,13 @@ In its early days, LIP is governed mainly by the founding team which aims to
 function as a benevolent dictatorship to set up the initial system and maximize
 overall welfare and efficiency. 
 
-When more and more marketplaces and communities are formed, each of them will
+The more local and commercial communities are formed, each of them will
 form their own governance structure and achieve autonomy with a democratic and
-self-sufficient political economic system. Each marketplace has its own token
-while communities use the LIP land tokens for their governance. The overall LIP
-system is governed by marketplaces, communities and founding the team forming
-together a joint governance body. The founding team’s governance power however
-is expected to get smaller until the point where only marketplaces and
-communities decide the future fate of entire system.
+self-sufficient political economic system. Each community adopts their preferred
+democratic system based on different choices given by the protocol, being 
+the one-person-one-vote system the default one. The global LIP
+system is governed by local and commercial communities as well as the founding
+that is programed to reduce its decision power gradually over time.
 
  ![governance](governance.png)
 
@@ -216,20 +219,23 @@ Different tokens are used across the system.
    Polkadot's DOT as native token, which follows Polkadot Network governance and
    distribution. We allow DOT staking via communities for participants to get
    rewards. 
-2. **Land Token**: Land token is the NFT within LIP representing the land. On
-   each community level, the total Geo land cells that represents a single
-   community is around 5 km<sup>2</sup>, derived from level 7 of H3([Hexagonal
-   hierarchical geospatial indexing system](https://h3geo.org/))
-   [Resolution](https://h3geo.org/docs/core-library/restable/). The higher
-   level it goes, the land size is divided by 7 until level 13 which represents
-   around 43.9m<sup>2</sup>. These minimal land units represent 1 unit of the
-   land token. Therefore each community holds around 117.6K land tokens within
-   the 5 km<sup>2</sup> geo cell.
-3. **Marketplace Token**: Each marketplace that connects to LIP can mint its
-   own token for its functioning. They also establish their own governance
-   system and token economics. For every trade in the marketplace, the
-   marketplace token is charged as fee which is split in a *market fee* for the
-   marketplace itself and a *local tax* that gets locked within the land cell
+2. **Land Token**: Land token is a form of hierarchical non-fungible "geo-token"
+   within LIP representing land in the real world. Geo-tokens have different levels
+   representing different varying sizes of land. Local communities are represented
+   with geo-tokens starting at around 5 km<sup>2</sup>, derived from a
+   H3([Hexagonal hierarchical geospatial indexing system](https://h3geo.org/)) cell
+   of level 7 [resolution](https://h3geo.org/docs/core-library/restable/). The higher
+   the level, the smaller the represented land size. The minimal unit of a 
+   geo-token that can be held and traded by a user is *level 13* that represents
+   around 43.9m<sup>2</sup>. 
+   The hierarchical nature of the token means a community(Lv7) holds around 
+   117.6K of geo-token units.
+3. **Marketplace Token**: Each commercial community that connects to LIP can mint its
+   own token for its operation. They also establish their own governance
+   system and token economics. For every trade in a marketplace, the
+   marketplace token is charged as the *market fee* and is converted from whichever
+   currency was used for the trade, like a stable-coin, using a local decentralized
+   exchange. A *local tax* that gets locked within the land cell
    for local communities to use.
 
 ### 5.1 Land Token 
@@ -237,24 +243,25 @@ Different tokens are used across the system.
 #### 5.1.1 Key Functions
 - Network Utility: Land token is a tradable NFT token that can be transfered
   across chains.  and also utilized
-- Community Governance: Land tokens provide their holders voting rights in
-  community level and chain level governance.
-- Staking reward: Land tokens are minted as reward for staking DOT.
+- Local Governance: Land tokens can provide their holders voting rights at local
+  community level and protocol wide voting power.
+- Staking reward: Land tokens can be minted as reward for staking DOT.
 - Community creation: Communities are created when enough land token holders
   within the community cell second the proposal for the community to be formed.
-- Marketplace support: Enough land token holders also need to support
-  marketplaces that wish to trade in a given geographical area.
+- Commercial community support: Land token holders can require deny or approve
+  new businesses from operating in their geographical area.
 
 #### 5.1.2 Minting and Distribution 
 
-The total 117.6K( =7<sup>6</sup>) land
+The total of 117.6K( =7<sup>6</sup>) land
 tokens of each community is minted starting from time 0. The speed of token
-minting is rather slow in the beginning and getting faster and then slows down
-shown below.  In each period, the total staking capital decides the chance for
-the individual to get the land token, usually higher staking capitals, higher
-chance until reaches a certain threshold, the winning chance no longer
-increases. The mechanism tries to increase fairness by preventing early birds
-and whales’ absolute advantage and monopoly governance. 
+minting is rather slow in the beginning, then it speeds up to finally slow down
+as shown below. In each period, the total staking capital decides the chance for
+the individual to get the land token, usually staking higher capital means
+there is a higher chance of a reward until it reaches a certain threshold when 
+the chance of winning no longer increases. The mechanism tries to increase 
+fairness by preventing early birds and whales to take absolute advantage 
+and monopoly the system's governance. 
 
  ![econ_1](token_econ_1.png)
  
@@ -264,41 +271,24 @@ and whales’ absolute advantage and monopoly governance.
 
 #### 5.2.1 Key Functions
 
-- Network Utility Token: Marketplace token is a native fee token for each
-  marketplace and is also utilized in network activities, e.g. crowdloan
-  rewards.
-- Community Governance Token: As a governance token, marketplace tokens provide
-  their holders voting rights within the marketplace and chain level
-  governance.
+Marketplaces are free to decide how their token is used. Some examples are:
+
+- Value accrual: Marketplace token is used to collect fees on every trade.
+- Community Governance: As a governance token, marketplace tokens provide
+  their holders voting rights within the community.
+- Transparent marketing and growth: Commercial communities often allocate tokens
+  to be used as rewards to attract more users into their platforms.
 
 #### 5.2.2 Minting and Distribution
 
-Marketplaces are free to design their own token economics with two conditions
-of the token allocations:
+Commercial communities are free to design their own token economics as they
+see fit with the condition that the system's governance controls their token's 
+issuance, in the case of Virto Network the parachain will reserve minimum a
+5% of a community's token allocation for itself so other actors in the system
+can participate in the community's governance and take decisions that benefit
+everyone in the system.
 
-- Virto Network: >= 5% of total tokens supply 
-- Parachain Crowdloan: >=10% total tokens supply . Below is the example 
-
-For the team's reference applications, e.g. Swap.cash, the total supply of
-marketplace tokens will be minted at the launch of the marketplace project and
-stored to be distributed for:
-
-- Parachain Crowdloan: 30% to raise DOT needed for a crowdloan to bid in the
-  Polkadot parachain auction for an initial 48-week year parachain slot. Upon
-  launch of the Virto parachain, these tokens will be distributed immediately
-  to the crowdloan contributors
-- Community and Parachain Slot: 25% to secure future Polkadot parachain slot
-  leases and other community initiatives
-- Project Development and Sustainability: 20% to support projects, ecosystem
-  development, maintenance and other network needs.
-- Founding team: 10% to reward founders and core development team
-- Virto Network: 5% to secure and sustain Virto Network 
-- Token Sale: 5% to pre-sell to early backers and contributors
-- Seed Fund: 5% to reward early backers and investors
-
-![marketplace token distribution](marketplace_token_distribution.png)
-
-### 5.3 Polkadot Parachain
+### 5.3 Launch on Polkadot as Parathread
 
 Virto Network is the only planned implementation of LIP as we believe the
 uniqueness of the Land Tokens should be kept(i.e. not two people should own
@@ -306,12 +296,6 @@ the same land in different systems). Also given its social impact and being
 designed as a sustainable "token less" chain that inherits the relay chain
 token(DOT) we believe there is place for the network to be considered a common
 good chain.  
-As an alternative, Virto Network will participate in the crowdloan mechanism to
-secure a Parachain slot within the Polkadot network. 
-To increase the chance of winning, marketplaces distribute a required predefined
-crowdloan share of tokens to reward supporters who locked their DOT for the
-duration of the lease, the size of the marketplace token allocation gives them
-the right to operate in a smaller or larger geographical area.  
-We might distribute land tokens as rewards as well to DOT holders who
-participate in the first auction successfully to compensate for their
-opportunity costs of having their DOT locked for 24 months.
+As an alternative, Virto Network will operate as a Parathread paying for its
+operation using the *system fee* until it can produce enough value to secure
+a long-term parachain slot for itself in the future.
