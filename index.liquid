@@ -6,75 +6,55 @@ layout: index.liquid
 <hr class="sticky-hack">
 {% include "nav.liquid" active: "", class: "fixed" %}
 
-<aside id="sponsors">
-	<ul class="max">
-		{% for sponsor in site.data.index.sponsors %}
-		<li><img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" height="38"></li>
-		{% endfor %}
-	</ul>
+<aside id="submenu">
+	<p>submenu cooming soon</p>
 </aside>
 
-<section id="home">
-	<figure id="logo" title="Virto Network">
-		{% include "virto_logo.svg" domain: true %}
-	</figure>
-	<p>
-		{{ site.data.index.description }}
-		<a href="https://polkadot.network">{% include "polkadot.svg" %}</a>
-	</p>
+<section id="about">
+		<ul>
+			{% for about in site.data.index.about_list %}	
+			<li>
+					<h3>
+					{{ about.name }}
+					</h3>
+			</li>
+			{% endfor %}
+		</ul>
 </section>
 
-<section id="LIP">
-	<article class="max">
-		<h2>Local Incentives Protocol</h2>
-		<figure><img src="img/protocol.svg" alt="protocol summary"></figure>
-		<p>{{ site.data.index.lip }}</p>
-	</article>
-</section>
-
-<section id="communities">
+<section id="communities"> <!-- local comunnities-->
 	<article class="max">
 		<h2 data-img="img/comunidad.svg">Local Communities</h2>
 		<p>{{ site.data.index.community }}</p>
-		<div class="globe"></div>
 	</article>
 </section>
 
-<section id="marketplaces">
+<section id="use-cases">
 	<article class="max">
-		<h2 data-img="img/marketplace.svg">Commercial Communities</h2>
-		<p>{{ site.data.index.marketplace }}</p>
-		<ul class="carousel">
-			{% for market in site.data.index.marketplace_list %}
-				<li class="card" tabindex="-1"{% if market.when %} data-when="{{ market.when }}"{% endif %}>
-				<figure class="logo">
-					{% if market.logo %}
-					<img src="{{ market.logo }}" alt="{{ market.name }} logo">
-					{% endif %}
-				</figure>
-				<h3>
-					{% if market.home %}<a href="{{ market.home }}" target="_blank">{% endif %}
-					{{ market.name }}
-					{% if market.home %}</a>{% endif %}
-				</h3>
-				<p>{{ market.desc }}</p>
-			</li>
-			{% endfor %}
-		</ul>
+		<h2>Use cases</h2>
+		<p>{{ site.data.index.use_cases }}</p>
 	</article>
 </section>
 
-<section id="APIs">
+<section id="for-developers">
 	<article class="max">
-		<h2>De-Commerce APIs</h2>
-		<p>{{ site.data.index.apis }}</p>
-		<ul>
-			{% for api in site.data.index.apis_list %}
-			<li>
-				<a href="https://github.com/virto-network/virto-apis">{{ api.name }}</a>
-			</li>
-			{% endfor %}
-		</ul>
+		<h2>Developers resources</h2>
+		<p>{{ site.data.index.developers }}</p>
+	</article>
+</section>
+
+<section id="blog">
+	<article class="max">
+		<h2>Blog</h2>
+		<button>Developers</button>
+		<button>Users</button>
+	</article>
+</section>
+
+<section id="contact">
+	<article class="max">
+		<h2>Contact</h2>
+		<p>{{ site.data.index.contact }}</p>
 	</article>
 </section>
 
