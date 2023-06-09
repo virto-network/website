@@ -1,3 +1,4 @@
+/*change variables when the design is ready*/
 :root {
 	--color-accent-rgb: 72, 61, 139;
 	--color-accent: rgb(var(--color-accent-rgb));
@@ -10,7 +11,8 @@
 	--nav-height: calc(3rem + 2vh);
 	--max-width: 1100px;
 }
-/* experimental dark theme */
+/* alternative-color theme */
+/* if used, change */
 @media (prefers-color-scheme: dark) {
 	body.nord {
 		--color-accent-rgb: 94, 129, 172;

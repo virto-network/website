@@ -1,32 +1,38 @@
 description: |
   Impactful marketplace infrastructure for
 
-sponsors:
-  - name: Web3 Foundation
+default_comingsoon:
+    Coming soon.
+
+sections:
+  - name: Something 1
     logo: img/web3_foundation.svg
-  - name: Substrate Builders Program
+  - name: Something 2
     logo: img/builders_program.svg
-  - name: Polkadot treasury
+  - name: Something 3
     logo: img/polkadot_treasury.svg
-  - name: Kusama treasury
+  - name: Something 4
     logo: img/kusama_treasury.svg
 
-lip: |
-  Virto gives cryptocurrencies <strong>utility</strong> in the real world, it
-  allows people to securely exchange any kind of products or services via
-  decentralized marketplaces that contribute to the economic development of
-  local communities.
+use_cases: |
+  Coming soon.
 
 community: |
-  The physical world connects us, establish your community joining people
-  around you to make decisions that have an impact in your area. Decide how
-  local resources are spent and be part of your community's prosperous future.
+  Comming soon.
 
-marketplace: |
-  Join like-minded people to collectively satisfy the growing demands 
-  of clients in your bussiness domain. Use our simple development tools
-  to create a successful <strong>dCommerce marketplace</strong>.
+developers: |
+  Comming soon.
   
+about_list:
+- name: Meet Virto
+  desc: unavailable
+- name: Team Virto
+  desc: unavailable
+- name: Partners
+  desc: unavailable
+- name: Why Virto
+  desc: unavailable
+
 marketplace_list:
 - name: Bloque
   desc: Instastores for entrepreneurs
@@ -46,18 +52,20 @@ marketplace_list:
   logo: img/markets/go.svg
   when: 2024
 
+contact: |
+  Feel free to <strong>contact us</strong> by email or joining to our element room.
+
+
+blogs: |
+  section: developers
+  section: users
+
 apis: |
-  Bring <strong>blockchain to the masses</strong> with our composable APIs and
-  focus on delivering the best user experiences with the technologies you
-  already know and love.
+  Feel free to <strong>contact us</strong> by email or joining to our element room.
+
 apis_list:
-- name: Blockchain
-- name: Wallet
-- name: Merchant
-- name: Customer
-- name: Payments
-- name: Assets
-- name: Market
+- name: Email
+- name: Element
 
 parachain: |
   bridge real world assets to kusama
