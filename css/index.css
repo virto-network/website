@@ -25,11 +25,7 @@ section>article {
 
 #about p { font-size: calc(0.9em + 1vmin); margin-top: 10vmin; text-align: center; }
 #about p svg { height: calc(0.9em + 1vmin); fill: var(--color-text); vertical-align: text-bottom; }
-/* spinning polkadot logo */
-@keyframes spin {
-	from { transform: rotate(0deg); }
-	to { transform: rotate(360deg); }
-}
+
 #about::after {
 	--size: 120vmin;
 	animation: spin 240s infinite linear;
@@ -61,8 +57,7 @@ nav.fixed .logo { display: none; }
 }
 
 #submenu > p {
-	display: flex;
-	justify-content: center;
+	text-align: center;
 }
 
 /*temporarily unused*/
@@ -93,7 +88,6 @@ nav.fixed .logo { display: none; }
 	transition: transform 300ms 250ms;
 	transform: translateY(10%);
 }
-#communities.viewed .globe { transform: translateY(0); }
 
 #for-developers {
 	position: relative;
@@ -173,23 +167,6 @@ nav.fixed .logo { display: none; }
 	#blog ul { grid-row: 1 / 3; grid-column: 1; padding: 3rem 2rem; }
 	#blog :is(h2, p) { grid-column: 2; }
 }
-
-.carousel {
-	--card-size: 150px;
-	position: relative;
-	box-sizing: border-box;
-	display: flex;
-	grid-column: 2 / 4;
-	grid-row: 1 / 3;
-	margin: auto;
-	max-width: 500px;
-	overflow-x: scroll;
-	padding: 2rem;
-	scroll-snap-type: x mandatory;
-	scrollbar-width: none;
-	width: 100%;
-}
-.carousel::-webkit-scrollbar { display: none; }
 
 .card {
 	align-items: center;

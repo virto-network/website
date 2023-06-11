@@ -11,6 +11,7 @@ layout: index.liquid
 </aside>
 
 <section id="about">
+	<h2>About Virto</h2>
 		<ul>
 			{% for about in site.data.index.about_list %}	
 			<li>
@@ -22,24 +23,24 @@ layout: index.liquid
 		</ul>
 </section>
 
-<section id="communities"> <!-- local comunnities-->
+<section id="communities">
 	<article class="max">
 		<h2 data-img="img/comunidad.svg">Local Communities</h2>
-		<p>{{ site.data.index.community }}</p>
+		<p>{{ site.data.index.default_message }}</p>
 	</article>
 </section>
 
 <section id="use-cases">
 	<article class="max">
 		<h2>Use cases</h2>
-		<p>{{ site.data.index.use_cases }}</p>
+		<p>{{ site.data.index.default_message }}</p>
 	</article>
 </section>
 
 <section id="for-developers">
 	<article class="max">
 		<h2>Developers resources</h2>
-		<p>{{ site.data.index.developers }}</p>
+		<p>{{ site.data.index.default_message }}</p>
 	</article>
 </section>
 
@@ -54,7 +55,7 @@ layout: index.liquid
 <section id="contact">
 	<article class="max">
 		<h2>Contact</h2>
-		<p>{{ site.data.index.contact }}</p>
+		<p>{{ site.data.index.default_message }}</p>
 	</article>
 </section>
 

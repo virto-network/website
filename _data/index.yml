@@ -1,7 +1,7 @@
 description: |
   Impactful marketplace infrastructure for
 
-default_comingsoon:
+default_message:
     Coming soon.
 
 sections:
@@ -15,13 +15,10 @@ sections:
     logo: img/kusama_treasury.svg
 
 use_cases: |
-  Coming soon.
 
 community: |
-  Comming soon.
 
 developers: |
-  Comming soon.
   
 about_list:
 - name: Meet Virto
@@ -33,39 +30,15 @@ about_list:
 - name: Why Virto
   desc: unavailable
 
-marketplace_list:
-- name: Bloque
-  desc: Instastores for entrepreneurs
-  home: https://bloque.app
-  logo: img/markets/bloque.svg
-- name: SwapCash
-  desc: Decentralized on & off ramps
-  home: https://swap.cash
-  logo: img/markets/swap.svg
-  when: Q1 2023
-- name: flea.market
-  desc: P2P trade of local goods
-  logo: img/markets/flea.svg
-  when: Q4 2023
-- name: go.delivery
-  desc: Deliveries without intermediaries
-  logo: img/markets/go.svg
-  when: 2024
-
 contact: |
-  Feel free to <strong>contact us</strong> by email or joining to our element room.
-
 
 blogs: |
   section: developers
   section: users
 
 apis: |
-  Feel free to <strong>contact us</strong> by email or joining to our element room.
 
 apis_list:
-- name: Email
-- name: Element
 
 parachain: |
-  bridge real world assets to kusama
+
