@@ -15,7 +15,7 @@ nav {
 	z-index: 99;
 }
 
-#about { background-color: red;}
+#about { background-color: var(--clr-lavender-darker);}
 #for-developers { background: blue; }
 
 @media screen and (min-width:600px) {
@@ -34,3 +34,4 @@ nav {
 	}
 	:is(#communities, #for-developers) p { grid-column: 1; }
 }
+
