@@ -2,23 +2,18 @@ description: |
   Impactful marketplace infrastructure for
 
 default_message:
-    Coming soon.
+  Coming soon.
 
-sections:
-  - name: Something 1
-    logo: img/web3_foundation.svg
-  - name: Something 2
-    logo: img/builders_program.svg
-  - name: Something 3
-    logo: img/polkadot_treasury.svg
-  - name: Something 4
-    logo: img/kusama_treasury.svg
+use_cases:
+  - cubo
+  - bloque
 
-use_cases: |
+community: 
 
-community: |
-
-developers: |
+developers: 
+  - whitepapers
+  - tools
+  - guides
   
 about_list:
 - name: Meet Virto
@@ -30,15 +25,16 @@ about_list:
 - name: Why Virto
   desc: unavailable
 
-contact: |
+contact:
 
-blogs: |
-  section: developers
-  section: users
+blogs:
+  -  for developers
+  -  for users
 
-apis: |
 
-apis_list:
-
-parachain: |
-
+about:
+  one: 'Virto es un revolucionario proyecto basado en el ecosistema Polkadot, diseñado para proporcionar las herramientas que necesitas para desarrollar, integrar y gestionar la tecnología blockchain, facilitando su adopción en tu negocio, no importa el tamaño o tipo.'
+  two: 'Desde nuestro ecosistema ayudamos a los negocios a reducir costos de transacción y a mejorar su eficiencia operativa. ¿Te imaginas aumentar tus ingresos y abrir nuevas oportunidades en mercados emergentes? Con Virto lo puedes lograr sin complicaciones mientras ahorras tiempo.'
+  three: 'Creamos una plataforma donde las transacciones son confiables, sin necesidad de intermediarios. Queremos que te sientas seguro al saber que estás creando un impacto positivo en tu comunidad local al permitir un comercio más directo y justo.'
+  four: 'Ahora, imagina todo lo que puedes lograr con Virto: desarrolla tu propio negocio blockchain, ahorra costos y tiempo, mejora la eficiencia de tu operación y crea un impacto positivo en tu comunidad.'
+  call_to_action: '¿Te atrae la idea? Entonces, ¡únete a nuestra comunidad hoy!'

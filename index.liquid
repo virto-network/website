@@ -4,58 +4,31 @@ layout: index.liquid
 ---
 
 <hr class="sticky-hack">
-{% include "nav.liquid" active: "", class: "fixed" %}
-
-<aside id="submenu">
-	<p>submenu cooming soon</p>
-</aside>
-
+	{% include "nav.liquid" active: "", class: "fixed" %}
 <section id="about">
-	<h2>About Virto</h2>
-		<ul>
-			{% for about in site.data.index.about_list %}	
-			<li>
-					<h3>
-					{{ about.name }}
-					</h3>
-			</li>
-			{% endfor %}
-		</ul>
 </section>
 
 <section id="communities">
 	<article class="max">
-		<h2 data-img="img/comunidad.svg">Local Communities</h2>
-		<p>{{ site.data.index.default_message }}</p>
 	</article>
 </section>
 
 <section id="use-cases">
 	<article class="max">
-		<h2>Use cases</h2>
-		<p>{{ site.data.index.default_message }}</p>
 	</article>
 </section>
 
 <section id="for-developers">
 	<article class="max">
-		<h2>Developers resources</h2>
-		<p>{{ site.data.index.default_message }}</p>
-	</article>
 </section>
 
 <section id="blog">
 	<article class="max">
-		<h2>Blog</h2>
-		<button>Developers</button>
-		<button>Users</button>
 	</article>
 </section>
 
 <section id="contact">
 	<article class="max">
-		<h2>Contact</h2>
-		<p>{{ site.data.index.default_message }}</p>
 	</article>
 </section>
 

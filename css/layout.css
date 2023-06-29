@@ -158,16 +158,8 @@ footer a {
 	width: 2.2rem;
 }
 footer a span { display: none; margin-left: 0.4rem; }
-footer svg {
-	fill: var(--color-text);
-	height: 1.8rem; width: 1.8rem;
-	vertical-align: middle;
-}
-footer a:is(:hover, :focus) {
-	border: 1px solid var(--color-alt);
-	box-shadow: 0 0 0 1px var(--color-alt);
-	outline: none;
-}
+
+
 footer a:is(:hover, :focus) svg { fill: var(--color-accent); }
 @media screen and (min-width:600px) {
 	footer a { width: fit-content; }
