@@ -1,30 +1,7 @@
-/*change variables when the design is ready*/
-:root {
-	--color-accent-rgb: 72, 61, 139;
-	--color-accent: rgb(var(--color-accent-rgb));
-	--color-alt-rgb: 212, 173, 207;
-	--color-alt: rgb(var(--color-alt-rgb));
-	--color-bg: white;
-	--color-bg-alt: whitesmoke;
-	--color-text: #224;
-	--color-text-alt: #446;
-	--nav-height: calc(3rem + 2vh);
-	--max-width: 1100px;
-}
-/* alternative-color theme */
-/* if used, change */
 @media (prefers-color-scheme: dark) {
-	body.nord {
-		--color-accent-rgb: 94, 129, 172;
-		--color-accent: rgb(var(--color-accent-rgb));
-		--color-alt-rgb: 180, 142, 173, 1;
-		--color-alt: rgb(var(--color-alt-rgb));
-		--color-bg: #2e3440;
-		--color-bg-alt: #4c566a;
-		--color-text: #eceff4;
-		--color-text-alt: #d8dee9;
-		--nav-height: calc(3rem + 2vh);
-		--max-width: 1100px;
+	body.dark {
+		--clr-white: black;
+		--clr-black: white;
 	}
 }
 @media print { :root { --color-text: black; } }
