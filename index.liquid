@@ -7,6 +7,8 @@ layout: index.liquid
 	{% include "nav.liquid" active: "", class: "fixed" %}
 <section id="about">
 </section>
+<section id="team" class="team-grid">
+</section>
 
 <section id="communities">
 	<article class="max">
@@ -48,4 +50,43 @@ const makeSticky = ([br]) =>
 
 whenVisible('main>section', addViewedClass, { threshold: 0.2 });
 whenVisible('.sticky-hack', makeSticky, { threshold: [0, 1] });
+document.addEventListener("DOMContentLoaded", function () {
+    const teamMembers = [
+        { platform: 'github', username: 'olanod' },
+        { platform: 'github', username: 'darkforest0202' },
+        { platform: 'github', username: 'S0c5' },
+        { platform: 'github', username: 'pandres95' },
+        { platform: 'github', username: 'johandroid' },
+        { platform: 'github', username: 'b-avb' },
+        { platform: 'github', username: 'ail3ngrimaldi' },
+        { platform: 'linkedin', name: 'Camila Olano', image: 'https://media.licdn.com/dms/image/C4E03AQEtFZ7Gm_8_fQ/profile-displayphoto-shrink_200_200/0/1618617055495?e=1693440000&v=beta&t=cEfwYIuGiQloNvEyP9c5rm7U5YUXl339Rt4tP1WbjuE' },
+        { platform: 'linkedin', name: 'Isabella Paz', image: 'https://media.licdn.com/dms/image/C4E03AQFC7dwPv5dkQA/profile-displayphoto-shrink_200_200/0/1566399674332?e=1693440000&v=beta&t=flsGg23c6bEpPmoTNdGTUgBJNeBQ74Oi-as3UFdTyVE' }
+    ];
+
+    const teamGrid = document.querySelector('.team-grid');
+
+    teamMembers.forEach(member => {
+        if (member.platform === 'github') {
+            fetch(`https://api.github.com/users/${member.username}`)
+                .then(response => response.json())
+                .then(data => {
+                    createCard(data.avatar_url, data.name || data.login);
+                });
+        } else if (member.platform === 'linkedin') {
+            createCard(member.image, member.name);
+        }
+    });
+
+    function createCard(imageUrl, name) {
+        const card = document.createElement('div');
+        card.classList.add('team-card');
+        card.innerHTML = `
+            <img src="${imageUrl}" alt="${name}">
+            <h3>${name}</h3>
+        `;
+        teamGrid.appendChild(card);
+    }
+});
+
+
 </script>
