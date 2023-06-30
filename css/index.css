@@ -35,3 +35,38 @@ nav {
 	:is(#communities, #for-developers) p { grid-column: 1; }
 }
 
+#team {
+	background-color: var(--clr-lavender-lighter);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.team-card {
+    background-color: var(--clr-white);
+    padding: 20px;
+    text-align: center;
+}
+
+.team-card img {
+    max-width: 100px;
+    margin-bottom: var(--margin);
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 900px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 679px) {
+    .team-card:last-child {
+        margin: 0 auto;
+        grid-column: span 2;
+    }
+}
