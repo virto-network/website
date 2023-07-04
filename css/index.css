@@ -1,7 +1,6 @@
 main { display: flex; flex-direction: column; }
 section { padding: calc(2rem + 5vmin) calc(1rem + 4vmin); height: calc(100vh - (var(--nav-height) * 2)); }
 section h2 { font-size: calc(1.5em + 2vmin); }
-figure { margin: 0 auto; }
 p { line-height: 2em; }
 
 section>article {
@@ -35,21 +34,22 @@ nav {
 	:is(#communities, #for-developers) p { grid-column: 1; }
 }
 
-#team {
-	background-color: var(--clr-lavender-lighter);
-}
+#team { background-color: var(--clr-lavender-lighter); }
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: var(--padding);
+    max-width: 100%;
+    height: auto;
 }
 
 .team-card {
     background-color: var(--clr-white);
     padding: 20px;
     text-align: center;
+    font-size: var(--step--1);
 }
 
 .team-card img {
@@ -58,13 +58,13 @@ nav {
     border-radius: 50%;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 750px) {
     .team-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media screen and (max-width: 679px) {
+@media screen and (max-width: 640px) {
     .team-card:last-child {
         margin: 0 auto;
         grid-column: span 2;
