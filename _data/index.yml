@@ -39,7 +39,7 @@ about:
   four: 'Ahora, imagina todo lo que puedes lograr con Virto: desarrolla tu propio negocio blockchain, ahorra costos y tiempo, mejora la eficiencia de tu operación y crea un impacto positivo en tu comunidad.'
   call_to_action: '¿Te atrae la idea? Entonces, ¡únete a nuestra comunidad hoy!'
 
-team:
+team_members:
   - name: Daniel Olano
     link: https://github.com/olanod
     avatar: https://avatars.githubusercontent.com/u/1329925?v=4
@@ -61,7 +61,7 @@ team:
   - name: David Barinas
     link: https://github.com/S0c5
     avatar: https://avatars.githubusercontent.com/u/5241972?v=4
-  - name: 
+  - name: Nicolas
     link: https://github.com/darkforest0202
     avatar: https://avatars.githubusercontent.com/u/5241972?v=4
   - name: Ailén Grimaldi

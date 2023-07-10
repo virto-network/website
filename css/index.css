@@ -2,7 +2,7 @@ main { display: flex; flex-direction: column; }
 section { padding: calc(2rem + 5vmin) calc(1rem + 4vmin); height: calc(100vh - (var(--nav-height) * 2)); }
 section h2 { font-size: calc(1.5em + 2vmin); }
 p { line-height: 2em; }
-
+a { text-decoration: none; color: var(--clr-green-darker); cursor: pointer;}
 section>article {
 	display: flex;
 	flex-direction: column;
@@ -35,7 +35,7 @@ nav {
 }
 
 #team { background-color: var(--clr-lavender-lighter); }
-
+#team ul>li { list-style: none; display: inline;}
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));

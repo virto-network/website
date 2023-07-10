@@ -7,8 +7,21 @@ layout: index.liquid
 	{% include "nav.liquid" active: "", class: "fixed" %}
 <section id="about">
 </section>
-<section id="team" class="team-grid">
+<section id="team">
+    <ul class="team-grid">
+		{% for team_member in site.data.index.team_members %}
+		    <li>
+                <div class="team-card">
+                    <a href={{ team_member.link }}>
+                        <img src="{{ team_member.avatar }}" alt="{{ team_member.name }}" height="38">
+                        <h3>{{ team_member.name }}</h3>
+                    </a>
+                </div>
+		    </li>
+		{% endfor %}
+	</ul>
 </section>
+
 
 <section id="communities">
 	<article class="max">
