@@ -38,3 +38,35 @@ about:
   three: 'Creamos una plataforma donde las transacciones son confiables, sin necesidad de intermediarios. Queremos que te sientas seguro al saber que estás creando un impacto positivo en tu comunidad local al permitir un comercio más directo y justo.'
   four: 'Ahora, imagina todo lo que puedes lograr con Virto: desarrolla tu propio negocio blockchain, ahorra costos y tiempo, mejora la eficiencia de tu operación y crea un impacto positivo en tu comunidad.'
   call_to_action: '¿Te atrae la idea? Entonces, ¡únete a nuestra comunidad hoy!'
+
+team:
+  - name: Daniel Olano
+    link: https://github.com/olanod
+    avatar: https://avatars.githubusercontent.com/u/1329925?v=4
+  - name: Isabella Paz
+    link: https://www.linkedin.com/in/isabellapazpaz-copywriter/
+    avatar: https://media.licdn.com/dms/image/C4E03AQFC7dwPv5dkQA/profile-displayphoto-shrink_200_200/0/1566399674332?e=1693440000&v=beta&t=flsGg23c6bEpPmoTNdGTUgBJNeBQ74Oi-as3UFdTyVE
+  - name: Pablo Andrés Dorado Suárez
+    link: https://github.com/pandres95
+    avatar: https://avatars.githubusercontent.com/u/2502577?v=4
+  - name: Johan Alexis Duque Cadena
+    link: https://github.com/johandroid
+    avatar: https://avatars.githubusercontent.com/u/1792179?v=4
+  - name: Brayan Vargas
+    link: https://github.com/b-avb
+    avatar: https://avatars.githubusercontent.com/u/86427419?v=4
+  - name: Camila Olano
+    link: https://www.linkedin.com/in/camilaolanocastro/
+    avatar: https://media.licdn.com/dms/image/C4E03AQEtFZ7Gm_8_fQ/profile-displayphoto-shrink_200_200/0/1618617055495?e=1693440000&v=beta&t=cEfwYIuGiQloNvEyP9c5rm7U5YUXl339Rt4tP1WbjuE
+  - name: David Barinas
+    link: https://github.com/S0c5
+    avatar: https://avatars.githubusercontent.com/u/5241972?v=4
+  - name: 
+    link: https://github.com/darkforest0202
+    avatar: https://avatars.githubusercontent.com/u/5241972?v=4
+  - name: Ailén Grimaldi
+    link: https://github.com/ail3ngrimaldi
+    avatar: https://avatars.githubusercontent.com/u/63558201?v=4
+
+
+        
