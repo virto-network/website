@@ -8,13 +8,11 @@
 html, body { all: initial; display: block; scroll-behavior: smooth; }
 body { background: var(--color-bg); font-family: sans-serif; color: var(--color-text); min-height: 100vh }
 
-.max { width: 100%; max-width: var(--max-width); margin: auto; box-sizing: border-box; }
+.max { width: 100%; box-sizing: border-box; }
 .sticky-hack { border: none; display: block; height: 1px; margin: 0; width: 100%; }
 
-/**
- * Top navigation
- */
-nav { height: var(--nav-height); background: var(--color-bg, white); }
+/** Top navigation**/
+nav { height: var(--nav-height); padding: 2.5rem 4rem; }
 nav .row {
 	align-items: center;
 	box-sizing: border-box;
@@ -23,29 +21,17 @@ nav .row {
 	justify-content: end;
 }
 
-/* colorful separator */
-nav::after {
-	content: '';
-	background: linear-gradient(to left, var(--color-accent), var(--color-alt));
-	display: block;
-	box-sizing: border-box;
-	height: 0.3vh; min-height: 3px;
-	opacity: 0.8;
-	transform-origin: bottom;
-	transition: transform 300ms;
-	width: 100%;
-}
-
 nav a {
 	align-items: center;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	font-size: 0.8em;
+	font-size:var(--step-0);
 	justify-content: center;
 	overflow: hidden;
+	font-family: var(--font-primary);
 }
-nav a.active { font-weight: bold; }
+nav a.active { font-weight: 700; }
 nav a.active svg path { stroke-width: 3; }
 
 nav a.logo {
@@ -58,18 +44,24 @@ nav a.logo svg {
 	height: 100%;
 	width: auto;
 	align-self: start;
-	fill: var(--color-text);
+	fill: var(--clr-verde-pablo);
 }
 
-nav a:not(.logo):is(:hover,:focus) { background: var(--color-bg-alt); }
+nav a:not(.logo):is(:hover,:focus) { background: var(--clr-green-lighter); }
 nav a:not(.logo) {
-	color: var(--color-accent);
+	color: var(--clr-verde-pablo);
 	height: var(--nav-height);
+	font-weight: 500;
 	outline: none;
-	padding: 0 calc(1rem + 0.5vw);
+	padding: 0 calc(.8rem + 0.5vw);
 	position: relative;
 	text-decoration: none;
 	white-space: nowrap;
+}
+
+/*color nav about link*/
+div.max.row > a:nth-child(2) {
+	color: var(--clr-letter-pablo);
 }
 
 /* DRAFT msg */
@@ -96,10 +88,8 @@ nav a:not(.logo) svg {
 
 @media screen and (min-width:600px) {
 	nav svg { display: initial; margin-right: 0.5rem; }
-	nav a.logo { width: initial; height: calc(var(--nav-height) - 2rem); }
-	nav a.logo svg { width: fit-content; }
+	nav a.logo { width: initial; height: calc(var(--nav-height) - 3rem); }
 	nav a.logo svg #letters { display: initial; }
-	nav a { font-size: 1em; flex-direction: row; }
 }
 @media print { nav { display: none; } }
 

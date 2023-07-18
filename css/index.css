@@ -14,11 +14,10 @@ nav {
 	z-index: 99;
 }
 
-#about { background-color: var(--clr-lavender-darker);}
+#about, nav { background-color: var(--clr-background-pablo); }
 #for-developers { background: blue; }
 
 @media screen and (min-width:600px) {
-	nav.fixed .max { width: 80%; }
 	nav.fixed::after { transform: scale(0.8, 1.1); }
 
 	main>section { display: flex; height: fit-content; min-height: 40vh; }

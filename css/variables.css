@@ -2,11 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
+    --clr-background-pablo: #A8E6A5;
+    --clr-letter-pablo: #8f5dd0;
+    --clr-verde-pablo: #1C4334;
     --clr-white: hsl(150, 9%, 96%);
     --clr-black: #000;
     --clr-green-darker: #56c95f;
     --clr-green-lighter: #b6f1b3;
-    --clr-olive-darker: hsl(163, 49%, 14%);
+    --clr-olive-darker: #12352b;
     --clr-olive-lighter: hsl(160, 8%, 79%);
     --clr-lavender-darker: hsl(269, 54%, 56%);
     --clr-lavender-lighter: hsl(271, 48%, 87%);
@@ -22,4 +25,5 @@
     --step-2: clamp(2.53rem, calc(2.18rem + 1.75vw), 3.66rem);
     --margin: 1rem;
     --padding: 1em;
+    --max-width: 1100px;
 }

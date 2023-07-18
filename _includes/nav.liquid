@@ -3,5 +3,23 @@
 		<a href="/#home" class="logo">
 			{% include "virto_logo.svg" %}
 		</a>
+		<a {% if active == "about" %}class="active"{% endif %} href="/about/">
+			Sobre Virto
+		</a>
+		<a {% if active == "comunidades" %}class="active"{% else %}href="/comunidades/"{% endif %}>
+			Comunidades locales
+		</a>
+		<a {% if active == "casos" %}class="active"{% else %}href="/comunidades/"{% endif %}>
+			Casos de uso
+		</a>
+		<a {% if active == "desarrolladores" %}class="active"{% else %}href="/docs/whitepaper.html"{% endif %}>
+			Para desarrolladores
+		</a>
+		<a {% if active == "blog" %}class="active"{% else %}href="/blog/"{% endif %}>
+			Blog
+		</a>
+		<a {% if active == "contacto" %}class="active"{% else %}href="/contacto/"{% endif %}>
+			Contacto
+		</a>
 	</div>
 </nav>
