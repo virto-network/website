@@ -14,7 +14,9 @@ nav {
 	z-index: 99;
 }
 
-#about, nav { background-color: var(--clr-background-pablo); }
+#home, nav { background-color: var(--clr-background-pablo);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 #for-developers { background: blue; }
 
 @media screen and (min-width:600px) {
@@ -31,6 +33,31 @@ nav {
 		grid-template-columns: repeat(3, 1fr);
 	}
 	:is(#communities, #for-developers) p { grid-column: 1; }
+}
+
+p, button {
+    font-size: var(--step-0);
+}
+
+button {
+    border: none;
+    border-radius: 25px;
+    background-color: var(--clr-verde-2);
+    width: 50px;
+}
+
+#home {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+#home> * {
+    flex: 1 0 50%; /* grow | shrink | basis */
+    padding: 20px;
+}
+
+#home> img {
+    order: 2;
 }
 
 #team { background-color: var(--clr-lavender-lighter); }
