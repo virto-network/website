@@ -60,10 +60,13 @@ nav a:not(.logo) {
 }
 
 /*color nav about link*/
-div.max.row > a:nth-child(2),h1>span {
+div.max.row > a:nth-child(2), h1>span {
 	color: var(--clr-letter-pablo);
 }
 
+h2>span{
+	color: var(--clr-lila-pablo);
+}
 /* DRAFT msg */
 nav a[data-status]::before {
 	content: attr(data-status);

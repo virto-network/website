@@ -1,10 +1,9 @@
 body { box-sizing: border-box; padding: 0; }
 * { margin-top: 0px; margin-bottom: 0px; }
 main { display: flex; flex-direction: column; }
-section { height: calc(100vh - (var(--nav-height) * 2)); }
+section { height: calc(100vh - (var(--nav-height) * 2)); display: flex; }
 /* padding: calc(2rem + 5vmin) calc(1rem + 4vmin);  */
 section h2 { font-size: calc(1.5em + 2vmin); }
-p { line-height: 2em; }
 a { text-decoration: none; color: var(--clr-green-darker); cursor: pointer; }
 section>article {
 	display: flex;
@@ -13,15 +12,69 @@ section>article {
 	align-items: center;
 }
 
+/*Text styles*/
+.title {
+    font-size: calc(var(--step-2) + 1em);
+    font-weight: 500;
+    color: var(--clr-bg);
+    line-height: 75px;
+}
+
+.subtitle {
+    font-size: var(--step-1);
+    font-weight: 400;
+}
+
+.small-paragraph {
+    font-size: calc(var(--step-1) - 1em);
+    font-weight: 400;
+    color: var(--clr-background-pablo);
+    line-height: 35px;
+    max-width: 650px;
+}
+
+.link {
+    color: var(--clr-background-pablo);
+    font-size: calc(var(--step-0) - .1em);
+    font-weight: 500;
+}
+
+.link, .small-paragraph, .subtitle {
+    font-family:  var(--font-secondary);
+}
+
+#presentacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  #presentacion> article {
+    width: max-content;
+    margin: auto; /* .5rem 10rem 5rem 14.5rem;*/
+    padding: 5rem 5rem;
+    gap: 3rem;
+    flex-direction: column;
+    align-items: self-start;
+
+  }
+
+#presentacion>article:first-child {
+    padding: 5rem 5rem 5rem 13.5rem;
+}
+
+
 nav {
-	position: sticky; top: 0;
+	position:static;
+     top: 0;
 	z-index: 99;
 }
 
 #home, nav { background-color: var(--clr-background-pablo);   }
 
 .text-section {
-    padding: .5rem 10rem 5rem 14.5rem;
+    padding: .5rem 10rem 5rem 13.5rem;
     display: flex;
     flex-direction: column;
     align-items: self-start;
@@ -45,7 +98,7 @@ nav {
 } */
 
 
-p, button {
+#home p, button {
     font-size: calc(var(--step-1) - 1em);
     font-weight: 400;
     color: var(--clr-bg);
@@ -63,18 +116,21 @@ button {
     width: fit-content;
     padding: 20px 40px;
     text-align: center;
-    *margin-top: 2rem;
 }
 
-h1, h2, h3 {
+#home h1 {
     font-size: calc(var(--step-2) + 1em);
     font-weight: 500;
     color: var(--clr-bg);
     line-height: 75px;
 }
 
+#presentacion h2, h3, p {
+    color: var(--clr-background-pablo);
+}
+
 figure.logo svg {
-    width: 30vw; /* O el valor que desees */
+    width: 35vw;
     height: auto;
 }
 
