@@ -6,11 +6,17 @@ layout: index.liquid
 <hr class="sticky-hack">
 	{% include "nav.liquid" active: "", class: "fixed" %}
 <section id="home">
- 	<p>¡Bienvenido a Virto!</p>
- 	<h1>Aquí podrás construir y comerciar con comunidades <span>en todo el mundo.</span></h1>
- 	<p>Sigue con nosotros y descubre como hacerlo.</p>
- 	<button>Aprender cómo</button>
-	 <img src="element.svg" alt="Imagen Descriptiva">
+	<article>
+	<div class="text-section">
+			<p>¡Bienvenido a Virto!</p>
+			<h1>Aquí podrás <br>construir y comerciar con comunidades <span>en todo el mundo.</span></h1>
+			<p>Sigue con nosotros y descubre cómo hacerlo.</p>
+			<button>Aprender cómo</button>
+		</div>
+		<figure class="logo">
+		{% include "Ilustraciones_1_Slider 1.svg" %}
+		</figure>
+	 </article>
 </section>
 <section id="team">
     <ul class="team-grid">
