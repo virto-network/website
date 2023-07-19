@@ -6,7 +6,7 @@
 }
 @media print { :root { --color-text: black; } }
 html, body { all: initial; display: block; scroll-behavior: smooth; }
-body { background: var(--color-bg); font-family: sans-serif; color: var(--color-text); min-height: 100vh }
+body { background: var(--clr-bg); font-family:  var(--font-primary); color: var(--color-text); min-height: 100vh }
 
 .max { width: 100%; box-sizing: border-box; }
 .sticky-hack { border: none; display: block; height: 1px; margin: 0; width: 100%; }
