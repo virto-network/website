@@ -16,7 +16,7 @@ section>article {
 .title {
     font-size: calc(var(--step-2) + 1em);
     font-weight: 500;
-    color: var(--clr-bg);
+    *color: var(--clr-bg); /*comente esto pero no esta del todo bien, creo?*/
     line-height: 75px;
 }
 
@@ -33,17 +33,27 @@ section>article {
     max-width: 650px;
 }
 
+.medium-paragraph {
+    font-size: var(--step-1);
+    font-weight: 400;
+    color: var(--clr-background-pablo);
+    line-height: 50px;
+    *max-width: 950px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
 .link {
     color: var(--clr-background-pablo);
     font-size: calc(var(--step-0) - .1em);
     font-weight: 500;
 }
 
-.link, .small-paragraph, .subtitle {
+.link, .small-paragraph, .subtitle, .medium-paragraph {
     font-family:  var(--font-secondary);
 }
 
-#presentacion {
+#presentacion, #not-programmer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,6 +82,22 @@ nav {
 }
 
 #home, nav { background-color: var(--clr-background-pablo);   }
+#not-programmer h2 { text-align: center;}
+#not-programmer { justify-content: center; padding-top: 3rem; }
+#not-programmer>article { 
+    align-self: center; 
+    flex-direction: column; 
+    color: var(--clr-background-pablo);
+    gap: 5rem;
+}
+#not-programmer button { background-color: var(--clr-lila-pablo);}
+
+#arrow {
+    width: 3vw;
+    height: auto;
+    position: relative;
+    top: -60px;
+}
 
 .text-section {
     padding: .5rem 10rem 5rem 13.5rem;
@@ -107,12 +133,11 @@ nav {
 }
 
 #home p { margin-bottom: 1rem; letter-spacing: 1px;  }
-
+#home button { background-color: var(--clr-verde-2);}
 
 button {
     border: none;
     border-radius: 50px;
-    background-color: var(--clr-verde-2);
     width: fit-content;
     padding: 20px 40px;
     text-align: center;
