@@ -49,14 +49,6 @@ section>article {
     font-weight: 500;
 }
 
-.right {
-    text-align: right;
-}
-
-.special-margin {
-    margin: 7rem;
-}
-
 .center-arrow {
     display: flex;  /* Para alinear el texto y la flecha */
     align-items: center;  /* Centra verticalmente el texto y la flecha */
@@ -149,7 +141,6 @@ nav {
 
 h3.subtitle.dark:nth-child(1), h3.subtitle.dark.right.special-margin:nth-child(3) > a {
     font-weight: 700;
-    *margin: 7rem 5rem 2rem 5rem;
 }
 
 .three-column-section>article>h3 {
@@ -159,7 +150,7 @@ h3.subtitle.dark:nth-child(1), h3.subtitle.dark.right.special-margin:nth-child(3
 }
 
 h3.subtitle.dark:nth-child(3) > a {
-    color: var(--clr-bg)
+    color: var(--clr-bg);
 }
 
 .three-column-section {
@@ -191,6 +182,9 @@ h3.subtitle.dark:nth-child(3) > a {
   margin-bottom: 30px; 
 }
 
+.right {
+    justify-self: end;
+  }
 
  
 /* @media screen and (min-width:600px) {
