@@ -215,8 +215,54 @@ h3.subtitle.dark:nth-child(3) > a {
     justify-self: end;
 }
 
-/*Team section - no design style*/
+.left { text-align: left;}
 
+/*Local community*/
+#local-community { background-color: var(--clr-whitest); display: grid; gap: 1rem; position: relative; }
+#local-community > span { color: var(--clr-background-pablo); } /*wrong selector, there's other one with more specificity add color classes on next commit*/
+#local-community h2, #local-community figure.logo { max-width: 930px;}
+
+#local-community> article {
+    width: max-content;
+    margin: auto;
+    padding: 5rem 5rem;
+    gap: 3rem;
+    align-items: end;
+    display: flex;
+}
+
+#local-community > article > article {
+    display: grid;
+    justify-content: start;
+    gap: 7rem;
+}
+
+#local-community > article >article:nth-child(1){
+    justify-content: center;
+}
+
+#local-community figure.arrow-relative svg {
+    width: 10vw;
+    position: relative;
+    top: 500px;
+    left: 900px;
+}
+
+#local-community>article>article:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-self: self-end;
+    padding-bottom: 5rem;
+}
+
+#local-community > article > article > figure.logo {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+
+/*Team section - no design style*/
 #team { background-color: var(--clr-lavender-lighter); }
 #team ul>li { list-style: none; display: inline;}
 .team-grid {
