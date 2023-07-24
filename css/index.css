@@ -43,7 +43,6 @@ figure.logo svg {
 .small-paragraph {
     font-size: calc(var(--step-1) - 1em);
     font-weight: 400;
-    color: var(--clr-background-pablo);
     line-height: 35px;
     max-width: 650px;
 }
@@ -51,14 +50,12 @@ figure.logo svg {
 .medium-paragraph {
     font-size: var(--step-1);
     font-weight: 400;
-    color: var(--clr-background-pablo);
     line-height: 50px;
     text-align: center;
     letter-spacing: 1px;
 }
 
 .link {
-    color: var(--clr-background-pablo);
     font-size: calc(var(--step-0) - .1em);
     font-weight: 500;
 }
@@ -82,8 +79,12 @@ figure.logo svg {
     margin-left: 0.5em;
 }
 
+/*Add one of this classes to your element to add a text-color*/
 .grey { color: var(--clr-grey); }
 .dark { color: var(--clr-bg); }
+.light-green-text { color: var(--clr-background-pablo); }
+.light-lavender-text { color: var(--clr-lila-pablo); }
+
 .link, .small-paragraph, .subtitle, .medium-paragraph {
     font-family:  var(--font-secondary);
 }
@@ -138,17 +139,12 @@ figure.logo svg {
     padding: 5rem 5rem 5rem 13.5rem;
 }
 
-#presentacion h2, h3, p, #presentacion a {
-    color: var(--clr-background-pablo);
-}
-
 /*Not a programmer*/
 #not-programmer h2 { text-align: center;}
 #not-programmer { justify-content: center; padding-top: 3rem; }
 #not-programmer>article { 
     align-self: center; 
     flex-direction: column; 
-    color: var(--clr-background-pablo);
     gap: 5rem;
 }
 #not-programmer button { background-color: var(--clr-lila-pablo);}
@@ -219,7 +215,6 @@ h3.subtitle.dark:nth-child(3) > a {
 
 /*Local community*/
 #local-community { background-color: var(--clr-whitest); display: grid; gap: 1rem; position: relative; }
-#local-community > span { color: var(--clr-background-pablo); } /*wrong selector, there's other one with more specificity add color classes on next commit*/
 #local-community h2, #local-community figure.logo { max-width: 930px;}
 
 #local-community> article {
@@ -265,12 +260,15 @@ h3.subtitle.dark:nth-child(3) > a {
 #you-decide { background-color: var(--clr-lavender-lighter); flex-direction: column; gap:3rem;}
 #you-decide h2 {
     text-align: center;
+    font-size: calc(var(--step-2) + 3rem);
 }
+
 #you-decide h2 figure svg{
-    width: 25vw;
+    width: 30vw;
     height: auto;
     position: relative;
     bottom: 40px;
+    font-weight: 900;
 }
 
 #you-decide button {
