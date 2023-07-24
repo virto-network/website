@@ -114,15 +114,28 @@ reduciendo costos y brindándote más beneficios.</p>
 
 <section id="you-decide">
 	<h3 class="subtitle dark">Tú decides y ayudas a mejorar tu entorno.</h3>
-	<h2 class="title dark">¡Así, juntos hacemos un <br>mundo mejor!
-	<figure class="logo center">
-		{% include "underline.svg" %}
-	</figure>
+	<h2 class="title dark">
+		<span>¡Así, juntos hacemos un </span>
+		<span>mundo mejor!</span>
+		<figure class="logo center">
+			{% include "underline.svg" %}
+		</figure>
 	</h2>
 	<button>Aprender cómo</button>
-	<article>
-	<ul>
-	</ul>
+	{% assign matrix_to = "#virto-network:virto.community?via=virto.community" %}
+	<article class="max">
+		<a title="E-mail" href="mailto:contact@virto.team" class="dark">
+			{% include "email.svg" %}
+			<span>Good Ol' E-mail</span>
+		</a>
+		<a title="Community" href="https://matrix.to/#/{{ matrix_to }}" class="dark">
+			{% include "element.svg" %}
+			<span>Chat with the community!</span>
+		</a>
+		<a title="Github" href="https://github.com/virto-network" class="dark">
+			{% include "gh.svg" %}
+			<span>Follow our Github</span>
+		</a>
 	</article>
 </section>
 
