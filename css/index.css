@@ -4,7 +4,7 @@ body { box-sizing: border-box; padding: 0; }
 main { display: flex; flex-direction: column; }
 section { min-height: 100vh; display: flex; }
 section h2 { font-size: calc(1.5em + 2vmin); }
-a { text-decoration: none; cursor: pointer; }
+a, button { text-decoration: none; cursor: pointer; }
 section>article {
 	display: flex;
 	flex-direction: row;
@@ -103,7 +103,7 @@ figure.logo svg {
     font-weight: 400;
     color: var(--clr-bg);
     font-family:  var(--font-secondary);
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0;
 }
 
 #home p { margin-bottom: 1rem; letter-spacing: 1px;  }
@@ -258,21 +258,47 @@ h3.subtitle.dark:nth-child(3) > a {
 
 /*You decide*/
 #you-decide { background-color: var(--clr-lavender-lighter); flex-direction: column; gap:3rem;}
+#you-decide h3 { font-weight: 600;}
 #you-decide h2 {
     text-align: center;
     font-size: calc(var(--step-2) + 3rem);
+    line-height: 1;
 }
-
+#you-decide h2 span {
+    display: block;
+    margin-bottom: 5px;  
+}
 #you-decide h2 figure svg{
     width: 30vw;
     height: auto;
     position: relative;
-    bottom: 40px;
-    font-weight: 900;
+    bottom: 70px;
+    font-weight:bolder;
 }
 
-#you-decide button {
-    background-color: var(--clr-verde-2);
+#you-decide button { background-color: var(--clr-verde-2); margin: -3rem 0 6rem 0; }
+#you-decide>article.max {
+    align-items: center;
+	display: flex;
+    gap: 7rem;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#you-decide>article.max a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: var(--step-0);
+    font-weight: 300;
+}
+
+#you-decide>article svg {
+    fill: var(--clr-bg);
+    height: 4rem; width: 4rem;
+    margin-bottom: 1.5rem;
 }
 
 /*Team section - no design style*/
