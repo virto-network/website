@@ -89,7 +89,7 @@ figure.logo svg {
 }
 
 /*General styles for all sections*/
-#presentacion, #not-programmer {
+#presentacion, #not-programmer, #you-decide {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -261,6 +261,21 @@ h3.subtitle.dark:nth-child(3) > a {
     padding-left: 0;
 }
 
+/*You decide*/
+#you-decide { background-color: var(--clr-lavender-lighter); flex-direction: column; gap:3rem;}
+#you-decide h2 {
+    text-align: center;
+}
+#you-decide h2 figure svg{
+    width: 25vw;
+    height: auto;
+    position: relative;
+    bottom: 40px;
+}
+
+#you-decide button {
+    background-color: var(--clr-verde-2);
+}
 
 /*Team section - no design style*/
 #team { background-color: var(--clr-lavender-lighter); }
