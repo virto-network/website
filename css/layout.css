@@ -64,9 +64,6 @@ div.max.row > a:nth-child(2), h1>span {
 	color: var(--clr-letter-pablo);
 }
 
-h2>span, h2.title:nth-child(2){
-	color: var(--clr-lila-pablo);
-}
 /* DRAFT msg */
 nav a[data-status]::before {
 	content: attr(data-status);
