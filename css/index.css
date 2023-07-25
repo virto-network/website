@@ -97,7 +97,7 @@ figure.logo svg {
 }
 
 /*Home*/
-#home, nav.fixed { background-color: var(--clr-background-pablo);   }
+#home, .top-nav { background-color: var(--clr-background-pablo);   }
 #home p, button {
     font-size: calc(var(--step-1) - 1em);
     font-weight: 400;

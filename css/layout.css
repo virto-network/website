@@ -1,9 +1,3 @@
-@media (prefers-color-scheme: dark) {
-	body.dark {
-		--clr-white: black;
-		--clr-black: white;
-	}
-}
 @media print { :root { --color-text: black; } }
 html, body { all: initial; display: block; scroll-behavior: smooth; }
 body { background: var(--clr-bg); font-family:  var(--font-primary); color: var(--color-text); min-height: 100vh }
@@ -58,6 +52,7 @@ nav a:not(.logo):is(:hover,:focus) { text-decoration: underline; }
 	height: var(--nav-height);
 	font-weight: 500;
 	position: relative;
+	--step-0: clamp(1rem, calc(0.9rem + 0.7vw), 1.6rem);
 	font-size:var(--step-0);
 }
 
@@ -66,22 +61,6 @@ div.max.row > a:nth-child(2), h1>span {
 	color: var(--clr-letter-pablo);
 }
 
-/* DRAFT msg */
-nav a[data-status]::before {
-	content: attr(data-status);
-	color: var(--color-alt);
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 2em;
-	opacity: 0.08;
-	position: absolute;
-	top: calc(50% - 1rem);
-	left: 0;
-	width: 100%;
-	text-align: center;
-	display: block;
-	transform: rotate(-15deg);
-}
 /* icons */
 nav a:not(.logo) svg {
 	stroke: var(--color-accent);
@@ -94,6 +73,17 @@ nav a:not(.logo) svg {
 	nav a.logo svg #letters { display: initial; }
 }
 @media print { nav { display: none; } }
+
+@media screen and (max-width:1300px) {
+    nav a:not(.logo):not(.menu-icon) {
+        display: none;
+    }
+}
+@media screen and (min-width:1300px) {
+    nav a.menu-icon {
+        display: none;
+    }
+}
 
 /**
  * Footer links
@@ -143,7 +133,7 @@ footer .max {
 .max.footer-container > a.logo svg {
     width: 6vw; 
     height: auto;
-	padding: 4rem 0 4rem 6rem; /*Padding-top larger on original design*/
+	padding: 4rem 0 4rem 6rem;
 }
 
 /*Font color and family font footer*/
