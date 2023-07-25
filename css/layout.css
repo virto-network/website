@@ -26,7 +26,6 @@ nav a {
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	font-size:var(--step-0);
 	justify-content: center;
 	overflow: hidden;
 	font-family: var(--font-primary);
@@ -47,16 +46,19 @@ nav a.logo svg {
 	fill: var(--clr-verde-pablo);
 }
 
-nav a:not(.logo):is(:hover,:focus) { background: var(--clr-green-lighter); }
 nav a:not(.logo) {
-	color: var(--clr-verde-pablo);
-	height: var(--nav-height);
-	font-weight: 500;
-	outline: none;
 	padding: 0 calc(.8rem + 0.5vw);
-	position: relative;
 	text-decoration: none;
 	white-space: nowrap;
+	outline: none;
+}
+nav a:not(.logo):is(:hover,:focus) { text-decoration: underline; }
+.top-nav a:not(.logo) {
+	color: var(--clr-verde-pablo);  
+	height: var(--nav-height);
+	font-weight: 500;
+	position: relative;
+	font-size:var(--step-0);
 }
 
 /*color nav about link*/
@@ -96,40 +98,62 @@ nav a:not(.logo) svg {
 /**
  * Footer links
  */
-footer {
-	background: var(--color-bg-alt);
-	border-radius: 50vw 50vw 0 0 / 1rem 1rem 0 0;
-	box-sizing: border-box;
-	margin-top: 2rem;
-	padding: 2rem 1rem;
+ footer {
+    display: block;
 }
+
+.max.footer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.max.footer-container > .nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% - 6vw - 10rem); /* El ancho restante después de restar el ancho del logo y el margen */
+}
+
 footer .max {
-	align-items: center;
-	display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.nav-links, .secondary-links {
+    display: flex;
+    gap: 3.5rem;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    width: 90%;
+}
+
+.nav-links {
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	row-gap: 1rem;
+	padding: 1rem 0 0 3rem;
 }
-footer a {
-	background: var(--color-bg);
-	border-radius: 8px;
-	border: 1px solid var(--color-accent);
-	color: var(--color-text);
-	display: inline-block;
-	font-weight: 500;
-	height: 2.2rem;
-	line-height: 2rem;
-	margin: 0.5rem;
-	padding: 0.4rem 1rem;
-	text-align: center;
-	text-decoration: none;
-	width: 2.2rem;
-}
-footer a span { display: none; margin-left: 0.4rem; }
 
-
-footer a:is(:hover, :focus) svg { fill: var(--color-accent); }
-@media screen and (min-width:600px) {
-	footer a { width: fit-content; }
-	footer a span { display: inline; }
+ /*Logo's margin and size*/
+.max.footer-container > a.logo svg {
+    width: 6vw; 
+    height: auto;
+	padding: 4rem 0 4rem 6rem; /*Padding-top larger on original design*/
 }
+
+/*Font color and family font footer*/
+footer .footer-container nav a {
+	color: var(--clr-footer);
+	font-family: var(--font-secondary);
+}
+
+/*Weight and size for each navegation bar*/
+ul.nav-links> * { font-size: var(--step-1); font-weight: 600; }
+ul.secondary-links> * { font-weight: 300; font-size: var(--step--1); margin: 8rem 0 5rem -2rem;}
+
 @media print { footer { display: none; } }
