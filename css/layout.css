@@ -75,7 +75,7 @@ nav a:not(.logo) svg {
 @media print { nav { display: none; } }
 
 @media screen and (max-width:1300px) {
-    nav a:not(.logo):not(.menu-icon) {
+    .top-nav a:not(.logo):not(.menu-icon) {
         display: none;
     }
 }

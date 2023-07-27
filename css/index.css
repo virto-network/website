@@ -2,18 +2,16 @@
 body { box-sizing: border-box; padding: 0; }
 * { margin-top: 0px; margin-bottom: 0px; }
 main { display: flex; flex-direction: column; }
-section { min-height: 100vh; display: flex; }
-section h2 { font-size: calc(1.5em + 2vmin); }
+section { min-height: auto; display: flex; padding: clamp(10px, 2vw, 2rem);}
 a, button { text-decoration: none; cursor: pointer; }
 section>article {
 	display: flex;
-	flex-direction: row;
-    justify-content: space-between;
-	align-items: center;
+    justify-content: center;
 }
-nav {
+
+.top-nav {
 	position:static; /*Change later when the performance of the nav is decided*/
-     top: 0;
+    top: 0;
 	z-index: 99;
 }
 button {
@@ -24,7 +22,7 @@ button {
     text-align: center;
 }
 figure.logo svg {
-    width: 35vw;
+    width: 30vw;
     height: auto;
 }
 
@@ -91,7 +89,6 @@ figure.logo svg {
 
 /*General styles for all sections*/
 #presentacion, #not-programmer, #you-decide {
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -116,34 +113,63 @@ figure.logo svg {
     line-height: 75px;
 }
 
-.text-section {
-    padding: .5rem 10rem 5rem 13.5rem;
+/* Asegurarse de que el elemento "article" sea un contenedor flex */
+#home .max {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 clamp(1rem, 2vw, 5rem);
+    margin-top: clamp(0em, 2vw, -10em);
+}
+
+
+
+#home .text-section {
+    text-align: left;
+    max-width: clamp(300px, 50%, 700px);
     display: flex;
     flex-direction: column;
-    align-items: self-start;
-    max-width: 800px;
+    align-items: left;
+    gap: 2em;
+}
+
+#home figure.logo {
+    margin-bottom: 2em;
+}
+
+#home figure.logo {
+    align-self: center;
+}
+
+@media (max-width: 1200px) {
+    #home .text-section, #presentacion>article> *, .max.footer-container {
+        text-align: center;
+        align-items: center;
+    }
+
 }
 
 /*Presentation*/
+#presentacion {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
 #presentacion> article {
-    width: max-content;
+    max-width: 600px;
     margin: auto;
-    padding: 5rem 5rem;
     gap: 3rem;
     flex-direction: column;
     align-items: self-start;
-}
-
-#presentacion>article:first-child {
-    padding: 5rem 5rem 5rem 13.5rem;
 }
 
 /*Not a programmer*/
 #not-programmer h2 { text-align: center;}
 #not-programmer { justify-content: center; padding-top: 3rem; }
 #not-programmer>article { 
-    align-self: center; 
+    align-items: center; 
     flex-direction: column; 
     gap: 5rem;
 }
@@ -153,7 +179,6 @@ figure.logo svg {
 #here-you-can {
     background-color: var(--clr-white);
     align-items: center;
-    min-height: 120vh;
     display: grid;
     grid-template-columns: auto 1fr auto;
     gap: 1rem;
@@ -299,6 +324,13 @@ h3.subtitle.dark:nth-child(3) > a {
     fill: var(--clr-bg);
     height: 4rem; width: 4rem;
     margin-bottom: 1.5rem;
+}
+
+/*Media queries*/
+@media screen and (max-width:1200px) {
+    figure { display: flex; } 
+    section>article, .max.footer-container { flex-direction: column; }
+    .footer-container nav { padding: 0; }
 }
 
 /*Team section - no design style*/
