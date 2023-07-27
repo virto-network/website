@@ -1,6 +1,6 @@
 @media print { :root { --color-text: black; } }
 html, body { all: initial; display: block; scroll-behavior: smooth; }
-body { background: var(--clr-bg); font-family:  var(--font-primary); color: var(--color-text); min-height: 100vh }
+body { background: var(--clr-olive-darker); font-family:  var(--font-primary); color: var(--color-text); min-height: 100vh }
 
 .max { width: 100%; box-sizing: border-box; }
 .sticky-hack { border: none; display: block; height: 1px; margin: 0; width: 100%; }
@@ -37,7 +37,7 @@ nav a.logo svg {
 	height: 100%;
 	width: auto;
 	align-self: start;
-	fill: var(--clr-verde-pablo);
+	fill: var(--clr-olive-darker);
 }
 
 nav a:not(.logo) {
@@ -48,7 +48,7 @@ nav a:not(.logo) {
 }
 nav a:not(.logo):is(:hover,:focus) { text-decoration: underline; }
 .top-nav a:not(.logo) {
-	color: var(--clr-verde-pablo);  
+	color: var(--clr-olive-darker);  
 	height: var(--nav-height);
 	font-weight: 500;
 	position: relative;
@@ -58,7 +58,7 @@ nav a:not(.logo):is(:hover,:focus) { text-decoration: underline; }
 
 /*color nav about link*/
 div.max.row > a:nth-child(2), h1>span {
-	color: var(--clr-letter-pablo);
+	color: var(--clr-lavender-darker);
 }
 
 /* icons */
@@ -138,7 +138,7 @@ footer .max {
 
 /*Font color and family font footer*/
 footer .footer-container nav a {
-	color: var(--clr-footer);
+	color: var(--clr-lavender-lightest);
 	font-family: var(--font-secondary);
 }
 
