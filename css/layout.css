@@ -1,8 +1,11 @@
 @media print { :root { --color-text: black; } }
 html, body { all: initial; display: block; scroll-behavior: smooth; }
 body { background: var(--clr-olive-darker); font-family:  var(--font-primary); color: var(--color-text); min-height: 100vh }
-
-.max { width: 100%; box-sizing: border-box; }
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+  }
+.max { width: 100%; }
 .sticky-hack { border: none; display: block; height: 1px; margin: 0; width: 100%; }
 
 /** Top navigation**/
@@ -133,7 +136,7 @@ footer .max {
 .max.footer-container > a.logo svg {
     width: 6vw; 
     height: auto;
-	padding: 4rem 0 4rem 6rem;
+	margin: 4rem;
 }
 
 /*Font color and family font footer*/

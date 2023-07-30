@@ -1,8 +1,7 @@
 /*General styles*/
-body { box-sizing: border-box; padding: 0; }
-* { margin-top: 0px; margin-bottom: 0px; }
+* { margin: 0; padding: 0; font-family: var(--font-primary); box-sizing: border-box;}
 main { display: flex; flex-direction: column; }
-section { min-height: auto; display: flex; padding: clamp(10px, 2vw, 2rem);}
+section { min-height: auto; display: flex; padding: var(--padding-top-bottom) var(--padding-left-right);}
 a, button { text-decoration: none; cursor: pointer; }
 section>article {
 	display: flex;
@@ -99,7 +98,6 @@ figure.logo svg {
     font-size: calc(var(--step-1) - 1em);
     font-weight: 400;
     font-family:  var(--font-secondary);
-    margin: 2rem 0;
 }
 
 #home p { margin-bottom: 1rem; letter-spacing: 1px;  }
@@ -121,11 +119,9 @@ figure.logo svg {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0 clamp(1rem, 2vw, 5rem);
-    margin-top: clamp(0em, 2vw, -10em);
 }
 
-#home .text-section {
+ #home .text-section {
     text-align: left;
     max-width: clamp(300px, 50%, 700px);
     display: flex;
@@ -135,11 +131,7 @@ figure.logo svg {
 }
 
 #home figure.logo {
-    margin-bottom: 2em;
-}
-
-#home figure.logo {
-    align-self: center;
+    align-self: start;
 }
 
 @media (max-width: 1200px) {
@@ -167,7 +159,7 @@ figure.logo svg {
 
 /*Not a programmer*/
 #not-programmer h2 { text-align: center;}
-#not-programmer { justify-content: center; padding-top: 3rem; }
+#not-programmer { justify-content: center; }
 #not-programmer>article { 
     align-items: center; 
     flex-direction: column; 
@@ -182,7 +174,6 @@ figure.logo svg {
     display: grid;
     grid-template-columns: auto 1fr auto;
     gap: 1rem;
-    padding: 7rem 5rem 2rem 5rem;
 }
 
 #here-you-can > h3.subtitle.dark, #here-you-can > .three-column-section {
@@ -211,6 +202,7 @@ figure.logo svg {
     object-fit: contain;
 }
   
+/*Change later with here-you-can refactor and responsive commit*/
 .three-column-section article h3,
 .three-column-section article p,
 .three-column-section article a {
@@ -222,6 +214,7 @@ h3.subtitle.dark:nth-child(1), h3.subtitle.dark.right.special-margin:nth-child(3
     font-weight: 700;
 }
 
+/*Change later with here-you-can refactor and responsive commit*/
 .three-column-section>article>h3 {
     margin: 2rem 0;
     font-weight: 600;
@@ -240,7 +233,6 @@ h3.subtitle.dark:nth-child(1), h3.subtitle.dark.right.special-margin:nth-child(3
 #local-community> article {
     width: max-content;
     margin: auto;
-    padding: 5rem 5rem;
     gap: 3rem;
     align-items: end;
     display: flex;
@@ -268,12 +260,6 @@ h3.subtitle.dark:nth-child(1), h3.subtitle.dark.right.special-margin:nth-child(3
     flex-direction: column;
     gap: 2rem;
     align-self: self-end;
-    padding-bottom: 5rem;
-}
-
-#local-community > article > article > figure.logo {
-    margin-left: 0;
-    padding-left: 0;
 }
 
 /*You decide*/
@@ -325,43 +311,4 @@ h3.subtitle.dark:nth-child(1), h3.subtitle.dark.right.special-margin:nth-child(3
 @media screen and (max-width:1200px) {
     figure { display: flex; } 
     section>article, .max.footer-container { flex-direction: column; }
-    .footer-container nav { padding: 0; }
-}
-
-/*Team section - no design style*/
-#team { background-color: var(--clr-lavender-lighter); }
-#team ul>li { list-style: none; display: inline;}
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    gap: 20px;
-    padding: var(--padding);
-    max-width: 100%;
-    height: auto;
-}
-
-.team-card {
-    background-color: var(--clr-white);
-    padding: 20px;
-    text-align: center;
-    font-size: var(--step--1);
-}
-
-.team-card img {
-    max-width: 100px;
-    margin-bottom: var(--margin);
-    border-radius: 50%;
-}
-
-@media screen and (min-width: 750px) {
-    .team-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .team-card:last-child {
-        margin: 0 auto;
-        grid-column: span 2;
-    }
 }

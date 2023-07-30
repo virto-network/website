@@ -25,6 +25,7 @@
     --step-1: clamp(1.225rem, calc(1.45rem + 1.17vw), 2.44rem);
     --step-2: clamp(1.425rem, calc(2.18rem + 1.75vw), 3.66rem);
     --margin: 1rem;
-    --padding: 1em;
+    --padding-top-bottom: calc(2rem + 5vmin);
+    --padding-left-right: calc(1rem + 4vmin);
     --max-width: 1100px;
 }
