@@ -4,6 +4,7 @@ body { background: var(--clr-olive-darker); font-family:  var(--font-primary); c
 h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
 	padding: 0;
+	line-height: calc(1em + 0.5vh);
   }
 .max { width: 100%; }
 .sticky-hack { border: none; display: block; height: 1px; margin: 0; width: 100%; }

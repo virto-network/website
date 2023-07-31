@@ -1,7 +1,7 @@
 /*General styles*/
 * { margin: 0; padding: 0; font-family: var(--font-primary); box-sizing: border-box;}
 main { display: flex; flex-direction: column; }
-section { min-height: auto; display: flex; padding: var(--padding-top-bottom) var(--padding-left-right);}
+section { min-height: auto; display: flex; padding: calc(2rem + 5vmin) calc(1rem + 4vmin);}
 a, button { text-decoration: none; cursor: pointer; }
 section>article {
 	display: flex;
@@ -17,19 +17,18 @@ button {
     border: none;
     border-radius: 50px;
     width: fit-content;
-    padding: 20px 40px;
+    padding: clamp(5px, 2vh, 20px) clamp(20px, 4vw, 40px);
     text-align: center;
 }
 figure.logo svg {
-    width: 30vw;
-    height: auto;
+    width: clamp(100px, 30vw, 600px);
+    height: fit-content;
 }
 
 /*Text styles (colors, fonts, links, arrows) */
 .title {
-    font-size: calc(var(--step-2) + 1em);
+    font-size: clamp(1.5rem, 4vw, 2.75rem);
     font-weight: 500;
-    line-height: 75px;
 }
 
 .subtitle {
@@ -37,11 +36,11 @@ figure.logo svg {
     font-weight: 400;
 }
 
-.small-paragraph {
+.regular-font {
     font-size: calc(var(--step-1) - 1em);
     font-weight: 400;
     line-height: 35px;
-    max-width: 650px;
+    max-width: 600px;
 }
 
 .medium-paragraph {
@@ -82,7 +81,7 @@ figure.logo svg {
 .light-green-text { color: var(--clr-green-lighter); }
 .light-lavender-text { color: var(--clr-lavender-lighter); }
 
-.link, .small-paragraph, .subtitle, .medium-paragraph {
+.link, .regular-font, .subtitle, .medium-paragraph {
     font-family:  var(--font-secondary);
 }
 
@@ -94,26 +93,7 @@ figure.logo svg {
 
 /*Home*/
 #home, .top-nav { background-color: var(--clr-green-lighter);   }
-#home p, button {
-    font-size: calc(var(--step-1) - 1em);
-    font-weight: 400;
-    font-family:  var(--font-secondary);
-}
-
-#home p { margin-bottom: 1rem; letter-spacing: 1px;  }
 #home button { background-color: var(--clr-green-darker); }
-
-#home h1 {
-    font-size: calc(var(--step-2) + 1em);
-    font-weight: 500;
-    line-height: 75px;
-}
-
-#home h1, #home p, button {
-    color: var(--clr-olive-darker);
-}
-
-/* Asegurarse de que el elemento "article" sea un contenedor flex */
 #home .max {
     display: flex;
     justify-content: center;
@@ -121,25 +101,23 @@ figure.logo svg {
     flex-wrap: wrap;
 }
 
- #home .text-section {
+#home .text-section {
     text-align: left;
-    max-width: clamp(300px, 50%, 700px);
+    max-width: clamp(300px, 50%, 600px);
     display: flex;
     flex-direction: column;
-    align-items: left;
     gap: 2em;
 }
 
-#home figure.logo {
-    align-self: start;
-}
+#home figure.logo { align-items: start; }
 
 @media (max-width: 1200px) {
     #home .text-section, #presentacion>article> *, .max.footer-container {
         text-align: center;
         align-items: center;
     }
-
+    #home .text-section { order: 2; }
+    #home .logo { order: 1; align-self: center;}
 }
 
 /*Presentation*/
