@@ -22,6 +22,7 @@ layout: index.liquid
 
 <section id="presentacion">
 	<article class="max">
+	<article class="column">
 	<h2 class="title light-green-text">Te presentamos<br>
 	<span class="light-lavender-text">Virto®</span>
 	</h2>
@@ -29,13 +30,16 @@ layout: index.liquid
 		{% include "presentamos_virto.svg" %}
 		</figure>
 		</article>
-		<article>
+		<article class="text-section">
 		<h3 class="subtitle light-green-text">Una infraestructura descentralizada
 basada en el ecosistema <strong>Polkadot.</strong></h3>
 		<p class="regular-font light-green-text">Te ofrecemos herramientas para integrar la tecnología
 blockchain a tu negocio, mejorando la eficiencia operativa,
 reduciendo costos y brindándote más beneficios.</p>
-		<a class="link light-green-text">Conoce las herramientas</a>
+		<a class="link light-green-text center-arrow">Conoce las herramientas
+			<figure class="link-arrow color">{% include "see_more.svg" %}</figure>
+		</a>
+		</article>
 	</article>
 </section>
 

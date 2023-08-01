@@ -1,7 +1,7 @@
 /*General styles*/
 * { margin: 0; padding: 0; font-family: var(--font-primary); box-sizing: border-box;}
 main { display: flex; flex-direction: column; }
-section { min-height: auto; display: flex; padding: calc(2rem + 5vmin) calc(1rem + 4vmin);}
+section { min-height: auto; display: flex; padding: calc(2rem + 5vmin) calc(1rem + 4vmin); height: 90dvh; }
 a, button { text-decoration: none; cursor: pointer; }
 section>article {
 	display: flex;
@@ -94,16 +94,10 @@ figure.logo svg {
 /*Home*/
 #home, .top-nav { background-color: var(--clr-green-lighter);   }
 #home button { background-color: var(--clr-green-darker); }
-#home .max {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
 
-#home .text-section {
+.text-section {
     text-align: left;
-    max-width: clamp(300px, 50%, 600px);
+    max-width: clamp(300px, 50%, 650px);
     display: flex;
     flex-direction: column;
     gap: 2em;
@@ -115,25 +109,29 @@ figure.logo svg {
     #home .text-section, #presentacion>article> *, .max.footer-container {
         text-align: center;
         align-items: center;
+        justify-content: center;
     }
     #home .text-section { order: 2; }
     #home .logo { order: 1; align-self: center;}
 }
 
-/*Presentation*/
-#presentacion {
-    justify-content: center;
+#home .max, #presentacion .max {
+    display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
 
-#presentacion> article {
-    max-width: 600px;
-    margin: auto;
-    gap: 3rem;
-    flex-direction: column;
-    align-items: self-start;
+#presentacion .max, #home .max {
+    justify-content: space-evenly;
 }
+/*Presentation*/
+#presentacion {
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.column { flex-direction: column; }
+.link-arrow.color { color: var(--clr-green-lighter); }
 
 /*Not a programmer*/
 #not-programmer h2 { text-align: center;}
