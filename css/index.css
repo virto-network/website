@@ -1,7 +1,7 @@
 /*General styles*/
 * { margin: 0; padding: 0; font-family: var(--font-primary); box-sizing: border-box;}
 main { display: flex; flex-direction: column; }
-section { min-height: auto; display: flex; padding: calc(2rem + 5vmin) calc(1rem + 4vmin); height: 90dvh; }
+section { display: flex; padding: calc(2rem + 5vmin) calc(1rem + 4vmin); min-height: 90dvh; }
 a, button { text-decoration: none; cursor: pointer; }
 section>article {
 	display: flex;
@@ -27,24 +27,20 @@ figure.logo svg {
 
 /*Text styles (colors, fonts, links, arrows) */
 .title {
-    font-size: clamp(1.5rem, 4vw, 2.75rem);
     font-weight: 500;
 }
 
 .subtitle {
-    font-size: var(--step-1);
     font-weight: 400;
 }
 
 .regular-font {
-    font-size: calc(var(--step-1) - 1em);
     font-weight: 400;
     line-height: 35px;
     max-width: 600px;
 }
 
 .medium-paragraph {
-    font-size: var(--step-1);
     font-weight: 400;
     line-height: 50px;
     text-align: center;
@@ -52,7 +48,6 @@ figure.logo svg {
 }
 
 .link {
-    font-size: calc(var(--step-0) - .1em);
     font-weight: 500;
 }
 
@@ -119,18 +114,21 @@ figure.logo svg {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-}
-
-#presentacion .max, #home .max {
     justify-content: space-evenly;
 }
+
 /*Presentation*/
 #presentacion {
     align-items: center;
     flex-wrap: wrap;
 }
 
-.column { flex-direction: column; }
+#presentacion > article > article.text-section {
+    margin-top: 2em;
+}
+
+/*Not sure about the name of this class*/
+.column { display: flex; gap: 2em; flex-direction: column;}
 .link-arrow.color { color: var(--clr-green-lighter); }
 
 /*Not a programmer*/
@@ -243,7 +241,6 @@ h3.subtitle.dark:nth-child(1), h3.subtitle.dark.right.special-margin:nth-child(3
 #you-decide h3 { font-weight: 600;}
 #you-decide h2 {
     text-align: center;
-    font-size: calc(var(--step-2) + 3rem);
     line-height: 1;
 }
 #you-decide h2 span {
@@ -273,7 +270,6 @@ h3.subtitle.dark:nth-child(1), h3.subtitle.dark.right.special-margin:nth-child(3
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: var(--step-0);
     font-weight: 300;
 }
 
