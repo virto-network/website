@@ -26,34 +26,19 @@ figure.logo svg {
 }
 
 /*Text styles (colors, fonts, links, arrows) */
-.title {
-    font-weight: 500;
-}
-
-.subtitle {
-    font-weight: 400;
-}
-
 .regular-font {
-    font-weight: 400;
     line-height: 35px;
     max-width: 600px;
 }
 
 .medium-paragraph {
-    font-weight: 400;
     line-height: 50px;
     text-align: center;
     letter-spacing: 1px;
 }
 
-.link {
-    font-weight: 500;
-}
-
-
-.arrow { /*Curly svg arrow on not-a-programmer section */
-    width: 3vw;
+.arrow {
+    width: clamp(2em, 3vw, 4em);
     height: auto;
     position: relative;
     top: -60px;
@@ -70,13 +55,25 @@ figure.logo svg {
     margin-left: 0.5em;
 }
 
+/*Add one of these classes to your element to add a text-alignment*/
+.right { justify-self: end; } /*Check reusability later, parent has to be display:grid*/
+.left { text-align: left;}
+.center { text-align: center; }
+
+/*Add one of this classes to your element to add a font-weight*/
+.thin { font-weight: var(--font-weight-300); }
+.regular { font-weight: var(--font-weight-400); }
+.bold { font-weight: var(--font-weight-500); }
+.bolder { font-weight: var(--font-weight-600); }
+.boldest { font-weight: var(--font-weight-700); }
+
 /*Add one of this classes to your element to add a text-color*/
 .grey-text { color: var(--clr-grey); }
 .dark-olive-text { color: var(--clr-olive-darker); }
 .light-green-text { color: var(--clr-green-lighter); }
 .light-lavender-text { color: var(--clr-lavender-lighter); }
 
-.link, .regular-font, .subtitle, .medium-paragraph {
+a, button, .regular-font, .subtitle, .medium-paragraph {
     font-family:  var(--font-secondary);
 }
 
@@ -150,7 +147,7 @@ figure.logo svg {
     gap: 1rem;
 }
 
-#here-you-can > h3.subtitle.dark, #here-you-can > .three-column-section {
+#here-you-can > h3.subtitle.dark-olive-text, #here-you-can > .three-column-section {
     grid-column: 2;
 }
 
@@ -184,21 +181,10 @@ figure.logo svg {
   margin-bottom: 30px; 
 }
 
-h3.subtitle.dark:nth-child(1), h3.subtitle.dark.right.special-margin:nth-child(3) > a {
-    font-weight: 700;
-}
-
 /*Change later with here-you-can refactor and responsive commit*/
 .three-column-section>article>h3 {
     margin: 2rem 0;
-    font-weight: 600;
 }
-
-.right {
-    justify-self: end;
-}
-
-.left { text-align: left;}
 
 /*Local community*/
 #local-community { background-color: var(--clr-whitest); display: grid; gap: 1rem; position: relative; }
@@ -238,7 +224,6 @@ h3.subtitle.dark:nth-child(1), h3.subtitle.dark.right.special-margin:nth-child(3
 
 /*You decide*/
 #you-decide { background-color: var(--clr-lavender-lightest); flex-direction: column; gap:3rem;}
-#you-decide h3 { font-weight: 600;}
 #you-decide h2 {
     text-align: center;
     line-height: 1;
@@ -252,7 +237,6 @@ h3.subtitle.dark:nth-child(1), h3.subtitle.dark.right.special-margin:nth-child(3
     height: auto;
     position: relative;
     bottom: 70px;
-    font-weight:bolder;
 }
 
 #you-decide button { background-color: var(--clr-green-darker); margin: -3rem 0 6rem 0; }
@@ -270,7 +254,6 @@ h3.subtitle.dark:nth-child(1), h3.subtitle.dark.right.special-margin:nth-child(3
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-weight: 300;
 }
 
 #you-decide>article svg {
