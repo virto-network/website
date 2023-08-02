@@ -24,6 +24,12 @@
     --font-size-paragraph: clamp(1rem, 2vw, 1.25rem);
     --font-size-subtitle: clamp(1.3rem, 3vw, 1.88rem);
     --font-size-button: clamp(1rem, 3vw, 1.3rem);
+/*Font weights*/
+    --font-weight-300: 300;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
 
     --margin: 1rem;
     --padding-top-bottom: calc(2rem + 5vmin);
