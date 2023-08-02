@@ -6,6 +6,23 @@ h1, h2, h3, h4, h5, h6, p {
 	padding: 0;
 	line-height: calc(1em + 0.5vh);
   }
+
+h1, h2 {
+	font-size: var(--font-size-title-page);
+}
+  
+p, a {
+	font-size: var(--font-size-paragraph);
+}
+
+h3, h4 {
+	font-size: var(--font-size-subtitle);
+}
+  
+button {
+	font-size: var(--font-size-button);
+}
+
 .max { width: 100%; }
 .sticky-hack { border: none; display: block; height: 1px; margin: 0; width: 100%; }
 
@@ -56,7 +73,7 @@ nav a:not(.logo):is(:hover,:focus) { text-decoration: underline; }
 	height: var(--nav-height);
 	font-weight: 500;
 	position: relative;
-	--step-0: clamp(1rem, calc(0.9rem + 0.7vw), 1.6rem);
+	--step-0: clamp(1rem, calc(0.9rem + 0.7vw), 1.3rem);
 	font-size:var(--step-0);
 }
 
@@ -147,7 +164,7 @@ footer .footer-container nav a {
 }
 
 /*Weight and size for each navegation bar*/
-ul.nav-links> * { font-size: var(--step-1); font-weight: 600; }
-ul.secondary-links> * { font-weight: 300; font-size: var(--step--1); margin: 8rem 0 5rem -2rem;}
+ul.nav-links> * { font-weight: 600; }
+ul.secondary-links> * { font-weight: 300; margin: 8rem 0 5rem -2rem;}
 
 @media print { footer { display: none; } }
