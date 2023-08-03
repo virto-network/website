@@ -144,46 +144,33 @@ a, button, .regular-font, .subtitle, .medium-paragraph {
     align-items: center;
     display: grid;
     grid-template-columns: auto 1fr auto;
-    gap: 1rem;
+    gap: 4em;
 }
 
-#here-you-can > h3.subtitle.dark-olive-text, #here-you-can > .three-column-section {
+#here-you-can > h3.dark-olive-text, #here-you-can > .auto-grid {
     grid-column: 2;
 }
 
-.three-column-section {
+a.center-arrow.dark-olive-text.boldest {
+    font-size: var(--font-size-subtitle);
+}
+
+.auto-grid {
     display: grid;
-    grid-template-columns: repeat(3, 553px);
+    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
     justify-content: center;
     gap: 3em;
 }
 
-.three-column-section>article {
-    flex-direction: column;
-    text-align: left;
-    width: 100%;
-    max-width: 553px;
-    align-content: center;
+.auto-grid>li {
+    list-style: none;
+    display: grid;
+    gap: 1.75em;
 }
 
-.three-column-section>article>img {
+.auto-grid>li>img {
     width: 100%;
-    max-width: 553px;
-    max-height: 426px;
     object-fit: contain;
-}
-  
-/*Change later with here-you-can refactor and responsive commit*/
-.three-column-section article h3,
-.three-column-section article p,
-.three-column-section article a {
-  margin-top: 20px; 
-  margin-bottom: 30px; 
-}
-
-/*Change later with here-you-can refactor and responsive commit*/
-.three-column-section>article>h3 {
-    margin: 2rem 0;
 }
 
 /*Local community*/
