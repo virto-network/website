@@ -21,14 +21,13 @@ button {
     text-align: center;
 }
 figure.logo svg {
-    width: clamp(100px, 30vw, 600px);
+    width: clamp(250px, 30vw, 600px);
     height: fit-content;
 }
 
 /*Text styles (colors, fonts, links, arrows) */
 .regular-font {
     line-height: 35px;
-    max-width: 600px;
 }
 
 .medium-paragraph {
@@ -103,8 +102,21 @@ a, button, .regular-font, .subtitle, .medium-paragraph {
         align-items: center;
         justify-content: center;
     }
+    section {
+        justify-content: center;
+    }
     #home .text-section { order: 2; }
     #home .logo { order: 1; align-self: center;}
+    .build-machine::after {
+        content: '';
+    }
+    /*Add here arrows that are not displayed on mobile version*/
+    .build-machine::after {
+        display: none;
+    }
+    #local-community .max  {
+        align-content: flex-start;
+    }
 }
 
 #home .max, #presentacion .max {
@@ -170,43 +182,50 @@ a.center-arrow.dark-olive-text.boldest {
 
 .auto-grid>li>img {
     width: 100%;
+    height: auto;
     object-fit: contain;
 }
 
 /*Local community*/
-#local-community { background-color: var(--clr-whitest); display: grid; gap: 1rem; position: relative; }
-#local-community h2, #local-community figure.logo { max-width: 930px;}
-
-#local-community> article {
-    width: max-content;
-    margin: auto;
-    gap: 3rem;
-    align-items: end;
-    display: flex;
-}
+#local-community { background-color: var(--clr-whitest); display: grid; gap: 1rem; }
 
 #local-community > article > article {
-    display: grid;
-    justify-content: start;
-    gap: 7rem;
+    gap: clamp(2em, 10vw, 5em);
 }
 
-#local-community > article >article:nth-child(1){
-    justify-content: center;
+.logo.build-machine svg {
+    width: 100%;
+    max-width: 1100px; /*No hace que la imagen sea más grande*/
 }
 
-#local-community figure.arrow-relative svg {
-    width: 10vw;
+@media (min-width: 1200px) {
+    .build-machine::after {
+      content: url('../img/arrow_left.svg');
+      display: inline-block;
     position: relative;
-    top: 500px;
-    left: 900px;
-}
+    bottom: 35vh;
+    left: 32vw;
+    width: 10vw;
+    height: auto;
+    }
+  }
 
-#local-community>article>article:nth-child(2) {
+#local-community .max .text-section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    align-self: self-end;
+    align-self: center;
+}
+
+.fixed-width {
+    width: clamp(7em, 50vw, 13em);
+}
+
+#local-community .max {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
 /*You decide*/
