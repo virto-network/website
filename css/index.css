@@ -231,20 +231,17 @@ a.center-arrow.dark-olive-text.boldest {
 #you-decide { background-color: var(--clr-lavender-lightest); flex-direction: column; gap:5rem;}
 #you-decide h2 {
     text-align: center;
+    font-size: clamp(2.5rem, 5vw, 5.75rem);
     line-height: 1;
 }
+
+#you-decide h3 { text-align: center;}
 #you-decide h2 span {
     display: block;
     margin-bottom: 5px;  
 }
-#you-decide h2 figure svg{
-    width: 30vw;
-    height: auto;
-    position: relative;
-    bottom: 70px;
-}
 
-#you-decide button { background-color: var(--clr-green-darker); margin: -3rem 0 6rem 0; }
+#you-decide button { background-color: var(--clr-green-darker); margin: -3rem 0 3rem 0; }
 #you-decide>article.max {
     align-items: center;
 	display: flex;
@@ -259,12 +256,20 @@ a.center-arrow.dark-olive-text.boldest {
     align-items: center;
     justify-content: center;
     text-align: center;
+    gap: 2em;
 }
 
 #you-decide>article svg {
     fill: var(--clr-olive-darker);
     height: 4rem; width: 4rem;
-    margin-bottom: 1.5rem;
+}
+
+.underlined-element::after {
+    content: url('../img/underline.svg');
+    position: relative;
+    bottom: 3vh;
+    width: 10vw;
+    height: auto;
 }
 
 /*Media queries*/
