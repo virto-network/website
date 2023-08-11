@@ -4,8 +4,11 @@ body { background: var(--clr-olive-darker); font-family:  var(--font-primary); c
 h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
 	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
 	line-height: calc(1em + 0.5vh);
-  }
+}
 
 h1, h2 {
 	font-size: var(--font-size-title-page);
@@ -13,6 +16,7 @@ h1, h2 {
   
 p, a {
 	font-size: var(--font-size-paragraph);
+	line-height: clamp(1.5, 3vw, 1.6);
 }
 
 h3, h4 {
@@ -27,7 +31,7 @@ button {
 .sticky-hack { border: none; display: block; height: 1px; margin: 0; width: 100%; }
 
 /** Top navigation**/
-nav { height: var(--nav-height); padding: 2.5rem 4rem; }
+nav { height: var(--nav-height); }
 nav .row {
 	align-items: center;
 	box-sizing: border-box;
@@ -48,17 +52,19 @@ nav a {
 nav a.active { font-weight: 700; }
 nav a.active svg path { stroke-width: 3; }
 
-nav a.logo {
+.top-nav { padding: 2.5rem 4rem; }
+
+#virto-logo {
 	margin-right: auto;
-	margin-left: 1rem;
+	display: flex;
 	height: calc(var(--nav-height) - 1rem);
-	width: calc(var(--nav-height) - 1.4rem);
-}
-nav a.logo svg {
-	height: 100%;
 	width: auto;
+}
+#virto-logo svg {
 	align-self: start;
 	fill: var(--clr-olive-darker);
+	width: auto;
+    height: 60%;
 }
 
 nav a:not(.logo) {
@@ -89,79 +95,79 @@ nav a:not(.logo) svg {
 
 @media screen and (min-width:600px) {
 	nav svg { display: initial; margin-right: 0.5rem; }
-	nav a.logo { width: initial; height: calc(var(--nav-height) - 3rem); }
 	nav a.logo svg #letters { display: initial; }
+	nav a.logo { width: initial; height: calc(var(--nav-height) - 3rem); }
 }
-@media print { nav { display: none; } }
 
 @media screen and (max-width:1300px) {
-    .top-nav a:not(.logo):not(.menu-icon) {
+    .top-nav a:not(.menu-icon) {
         display: none;
     }
 }
+
 @media screen and (min-width:1300px) {
     nav a.menu-icon {
         display: none;
     }
 }
 
-/**
- * Footer links
- */
- footer {
-    display: block;
-}
-
-.max.footer-container {
+/** Footer **/
+footer {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
+	margin: 3rem;
+	gap: 3rem;
 }
 
-.max.footer-container > .nav-container {
+footer > nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: calc(100% - 6vw - 10rem); /* El ancho restante después de restar el ancho del logo y el margen */
+    width: calc(100% - 6vw - 10rem);
 }
 
-footer .max {
-    align-items: center;
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+footer .nav-links {
+	text-align: center;
+	max-width: 800px;
 }
 
-.nav-links, .secondary-links {
+.nav-links {
     display: flex;
     gap: 3.5rem;
     flex-direction: row;
     align-items: center;
     list-style: none;
-    width: 90%;
-}
-
-.nav-links {
+    width: 100%;
 	flex-wrap: wrap;
 	row-gap: 1rem;
-	padding: 1rem 0 0 3rem;
+}
+
+.nav-links li {
+    align-self: flex-start;
+    margin-bottom: 1rem;
 }
 
  /*Logo's margin and size*/
-.max.footer-container > a.logo svg {
+footer > a.logo svg {
     width: 6vw; 
     height: auto;
-	margin: 4rem;
 }
 
 /*Font color and family font footer*/
-footer .footer-container nav a {
+footer nav a {
 	color: var(--clr-lavender-lightest);
 	font-family: var(--font-secondary);
 }
 
-ul.secondary-links> * { margin: 8rem 0 5rem -2rem;}
+@media screen and (max-width:700px) {
+	.nav-links {
+		justify-content: center;
+		margin: 0 auto;
+	}
+	footer { flex-direction: column; }
+}
 
-@media print { footer { display: none; } }
+@media print { footer, nav { display: none; } }

@@ -25,17 +25,6 @@ figure.logo svg {
     height: fit-content;
 }
 
-/*Text styles (colors, fonts, links, arrows) */
-.regular-font {
-    line-height: 35px;
-}
-
-.medium-paragraph {
-    line-height: 50px;
-    text-align: center;
-    letter-spacing: 1px;
-}
-
 .arrow {
     width: clamp(2em, 3vw, 4em);
     height: auto;
@@ -72,7 +61,7 @@ figure.logo svg {
 .light-green-text { color: var(--clr-green-lighter); }
 .light-lavender-text { color: var(--clr-lavender-lighter); }
 
-a, button, .regular-font, .subtitle, .medium-paragraph {
+a, button, p, .subtitle {
     font-family:  var(--font-secondary);
 }
 
@@ -97,7 +86,7 @@ a, button, .regular-font, .subtitle, .medium-paragraph {
 #home figure.logo { align-items: start; }
 
 @media (max-width: 1200px) {
-    #home .text-section, #presentacion>article> *, .max.footer-container {
+    #home .text-section, #presentacion>article> *, footer {
         text-align: center;
         align-items: center;
         justify-content: center;
@@ -132,22 +121,23 @@ a, button, .regular-font, .subtitle, .medium-paragraph {
     flex-wrap: wrap;
 }
 
-#presentacion > article > article.text-section {
+#presentacion > article > article.text-section, #presentacion figure.logo {
     margin-top: 2em;
 }
 
 /*Not sure about the name of this class*/
-.column { display: flex; gap: 2em; flex-direction: column;}
+.column { display: flex; flex-direction: column;}
 .link-arrow.color { color: var(--clr-green-lighter); }
 
 /*Not a programmer*/
-#not-programmer h2 { text-align: center;}
+#not-programmer h2 { text-align: center; max-width: 700px;}
 #not-programmer { justify-content: center; }
-#not-programmer>article { 
+#not-programmer, #not-programmer>article { 
     align-items: center; 
-    flex-direction: column; 
-    gap: 5rem;
+    flex-direction: column;
 }
+#not-programmer>article { gap: 5rem; }
+#not-programmer>article.max { margin-top: 5rem; max-width: 800px; }
 #not-programmer button { background-color: var(--clr-lavender-lighter);}
 
 /*Here you can*/
@@ -156,7 +146,7 @@ a, button, .regular-font, .subtitle, .medium-paragraph {
     align-items: center;
     display: grid;
     grid-template-columns: auto 1fr auto;
-    gap: 4em;
+    row-gap: 4em;
 }
 
 #here-you-can > h3.dark-olive-text, #here-you-can > .auto-grid {
@@ -189,8 +179,8 @@ a.center-arrow.dark-olive-text.boldest {
 /*Local community*/
 #local-community { background-color: var(--clr-whitest); display: grid; gap: 1rem; }
 
-#local-community > article > article {
-    gap: clamp(2em, 10vw, 5em);
+#local-community > article > article { 
+    gap: clamp(20em, 10vw, 50em);
 }
 
 .logo.build-machine svg {
@@ -199,13 +189,13 @@ a.center-arrow.dark-olive-text.boldest {
 
 @media (min-width: 1200px) {
     .build-machine::after {
-      content: url('../img/arrow_left.svg');
-      display: inline-block;
-    position: relative;
-    bottom: 35vh;
-    left: 7vw;
-    width: 10vw;
-    height: auto;
+        content: url('../img/arrow_left.svg');
+        display: inline-block;
+        position: relative;
+        bottom: 35vh;
+        left: 7vw;
+        width: 10vw;
+        height: auto;
     }
   }
 
@@ -232,7 +222,6 @@ a.center-arrow.dark-olive-text.boldest {
 #you-decide h2 {
     text-align: center;
     font-size: clamp(2.5rem, 5vw, 5.75rem);
-    line-height: 1;
 }
 
 #you-decide h3 { text-align: center;}
@@ -242,15 +231,14 @@ a.center-arrow.dark-olive-text.boldest {
 }
 
 #you-decide button { background-color: var(--clr-green-darker); margin: -3rem 0 3rem 0; }
-#you-decide>article.max {
+#you-decide>ul.max {
     align-items: center;
 	display: flex;
-    gap: 7rem;
-	flex-wrap: wrap;
+    gap: clamp(.5rem, 6vw, 3rem);;
 	justify-content: center;
 }
 
-#you-decide>article.max a {
+#you-decide>ul.max a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -259,7 +247,7 @@ a.center-arrow.dark-olive-text.boldest {
     gap: 2em;
 }
 
-#you-decide>article svg {
+#you-decide>ul svg {
     fill: var(--clr-olive-darker);
     height: 4rem; width: 4rem;
 }
@@ -275,7 +263,7 @@ a.center-arrow.dark-olive-text.boldest {
 /*Media queries*/
 @media screen and (max-width:1200px) {
     figure { display: flex; } 
-    section>article, .max.footer-container { flex-direction: column; }
+    section>article { flex-direction: column; }
     #local-community .max {
         align-items: start;
         gap: 2rem;
