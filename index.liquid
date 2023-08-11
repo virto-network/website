@@ -8,87 +8,89 @@ layout: index.liquid
 
 <section id="home">
 	<article class="max">
-		<article class="text-section dark-olive-text">
-			<p class="regular-font regular">¡Bienvenido a Virto!</p>
-			<h1 class="bold">Aquí podrás<br> construir y comerciar<br> con comunidades <span>en<br> todo el mundo.</span></h1>
-			<p class="regular-font regular">Sigue con nosotros y descubre cómo hacerlo.</p>
+		<div class="text-section dark-olive-text">
+			<p class="regular">¡Bienvenido a Virto!</p>
+			<h1 class="bold">Aquí podrás construir y comerciar con comunidades <span>en todo el mundo.</span></h1>
+			<p class="regular">Sigue con nosotros y descubre cómo hacerlo.</p>
 			<button class="regular">Aprender cómo</button>
-		</article>
+		</div>
 		<figure class="logo image">
-		{% include "Ilustraciones_1_Slider 1.svg" %}
+			{% include "Ilustraciones_1_Slider 1.svg" %}
 		</figure>
 	 </article>
 </section>
 
 <section id="presentacion">
 	<article class="max">
-	<article class="column">
-	<h2 class="bold light-green-text">Te presentamos<br>
-	<span class="light-lavender-text">Virto®</span>
-	</h2>
-	<figure class="logo">
-		{% include "presentamos_virto.svg" %}
-		</figure>
-		</article>
-		<article class="text-section">
-		<h3 class="subtitle regular light-green-text">Una infraestructura descentralizada
-basada en el ecosistema <strong>Polkadot.</strong></h3>
-		<p class="regular-font light-green-text regular">Te ofrecemos herramientas para integrar la tecnología
-blockchain a tu negocio, mejorando la eficiencia operativa,
-reduciendo costos y brindándote más beneficios.</p>
-		<a class="bold light-green-text center-arrow">Conoce las herramientas
-			<figure class="link-arrow color">{% include "see_more.svg" %}</figure>
-		</a>
-		</article>
+		<div class="column">
+			<h2 class="bold light-green-text">Te presentamos</h2>
+			<h2 class="bold"><span class="light-lavender-text">Virto®</span></h2>
+			<figure class="logo">
+				{% include "presentamos_virto.svg" %}
+			</figure>
+		</div>
+		<div class="text-section">
+			<h3 class="subtitle regular light-green-text">Una infraestructura descentralizada basada en el ecosistema <strong>Polkadot.</strong></h3>
+			<p class="light-green-text regular">Te ofrecemos herramientas para integrar la tecnología blockchain a tu negocio, mejorando la eficiencia operativa, reduciendo costos y brindándote más beneficios.</p>
+			<a class="bold light-green-text center-arrow">Conoce las herramientas
+				<figure class="link-arrow color">
+					{% include "see_more.svg" %}
+				</figure>
+			</a>
+		</div>
 	</article>
 </section>
 
 <section id="not-programmer">
+	<h2 class="bold light-green-text">¿No eres programador?</h2>
+	<h2 class="bold"><span class="light-lavender-text">¡No hay problema!</span></h2>
 	<article class="max">
-	<h2 class="bold light-green-text">¿No eres programador?<br>
-	<span class="light-lavender-text">¡No hay problema!</span></h2>
-	<h3 class="subtitle regular light-green-text center">Con Virto® no necesitas ser un experto en tecnología<br> para disfrutar de los beneficios de nuestra<br> infraestructura.</h3>
-	<button>Aprender cómo</button>
-	<figure class="arrow">
-		{% include "arrow_down.svg" %}
-	</figure>
+		<h3 class="subtitle regular light-green-text center">Con Virto® no necesitas ser un experto en tecnología para disfrutar de los beneficios de nuestra infraestructura.</h3>
+		<button>Aprender cómo</button>
+		<figure class="arrow">
+			{% include "arrow_down.svg" %}
+		</figure>
 	</article>
 </section>
 
 <section id="here-you-can">
-<h3 class="subtitle boldest dark-olive-text">Aquí podrás</h3>
+	<h3 class="subtitle boldest dark-olive-text">Aquí podrás</h3>
 	<ul class="auto-grid max">
 		<li>
-		<img src="img/build.svg" alt="Define when content is decided"/>
-		<h3 class="subtitle bolder dark-olive-text">¿Por qué Virto?</h3>
-		<p class="regular-font grey-text regular">Podrás tener voz y voto. Además podrás beneficiarte de ellos.</p>
-		<a class="bold dark-olive-text center-arrow" href="#">
-			Ver más
-			<figure class="link-arrow">{% include "see_more.svg" %}</figure>
-		</a>
+			<img src="img/build.svg" alt="Define when content is decided"/>
+			<h3 class="subtitle bolder dark-olive-text">¿Por qué Virto?</h3>
+			<p class="grey-text regular">Podrás tener voz y voto. Además podrás beneficiarte de ellos.</p>
+			<a class="bold dark-olive-text center-arrow" href="#">
+				Ver más
+				<figure class="link-arrow">{% include "see_more.svg" %}</figure>
+			</a>
 		</li>
 		<li>
-		<img src="img/window.svg" alt="Define when content is decided"/>
-		<h3 class="subtitle bolder dark-olive-text">Partners</h3>
-		<p class="regular-font grey-text regular">Podrás tener voz y voto. Además podrás beneficiarte de ellos.</p>
-		<a class="bold dark-olive-text center-arrow" href="#">
-			Ver más
-			<figure class="link-arrow">{% include "see_more.svg" %}</figure>
-		</a>
+			<img src="img/window.svg" alt="Define when content is decided"/>
+			<h3 class="subtitle bolder dark-olive-text">Partners</h3>
+			<p class="grey-text regular">Podrás tener voz y voto. Además podrás beneficiarte de ellos.</p>
+			<a class="bold dark-olive-text center-arrow" href="#">
+				Ver más
+				<figure class="link-arrow">{% include "see_more.svg" %}</figure>
+			</a>
 		</li>
 		<li>
-		<img src="img/group.svg" alt="Define when content is decided"/>		
-		<h3 class="subtitle bolder dark-olive-text">Unirte a comunidades locales</h3>
-		<p class="regular-font grey-text regular">Podrás tener voz y voto. Además podrás beneficiarte de ellos.</p>
-		<a class="bold dark-olive-text center-arrow" href="#">
-			Ver más
-			<figure class="link-arrow">{% include "see_more.svg" %}</figure>
-		</a>
+			<img src="img/group.svg" alt="Define when content is decided"/>		
+			<h3 class="subtitle bolder dark-olive-text">Unirte a comunidades locales</h3>
+			<p class="grey-text regular">Podrás tener voz y voto. Además podrás beneficiarte de ellos.</p>
+			<a class="bold dark-olive-text center-arrow" href="#">
+				Ver más
+				<figure class="link-arrow">{% include "see_more.svg" %}</figure>
+			</a>
 		</li>
 	</ul>
-		<h3 class="dark-olive-text right"><a class="center-arrow dark-olive-text boldest" href="#">¿Listo para empezar?
-		<figure class="link-arrow">{% include "ready_to_start.svg" %}</figure>
-		</a></h3>
+		<h3 class="dark-olive-text right">
+			<a class="center-arrow dark-olive-text boldest" href="#">¿Listo para empezar?
+				<figure class="link-arrow">
+					{% include "ready_to_start.svg" %}
+				</figure>
+			</a>
+		</h3>
 </section>
 
 <section id="local-community">
@@ -97,13 +99,13 @@ reduciendo costos y brindándote más beneficios.</p>
 			<figure class="img-container logo build-machine">
 				{% include "build_machine.svg" %}
 			</figure>
-		<article class="text-section">
+		<div class="text-section">
 			<h3 class="dark-olive-text regular">En Virto®, te lo facilitamos.</h3>
-			<p class="regular-font grey-text regular">Por cada transacción que realizas en nuestro ecosistema, un porcentaje se destina para un fondo común que beneficia a la comunidad a la cual perteneces.</p>
+			<p class="grey-text regular">Por cada transacción que realizas en nuestro ecosistema, un porcentaje se destina para un fondo común que beneficia a la comunidad a la cual perteneces.</p>
 			<a class="bold dark-olive-text center-arrow">Ver más
 			<figure class="link-arrow">{% include "see_more.svg" %}</figure>
 			</a>
-		</article>
+		</div>
 	</article>
 </section>
 
@@ -115,7 +117,7 @@ reduciendo costos y brindándote más beneficios.</p>
 	</h2>
 	<button>Aprender cómo</button>
 	{% assign matrix_to = "#virto-network:virto.community?via=virto.community" %}
-	<article class="max">
+	<ul class="max">
 		<a title="E-mail" href="mailto:contact@virto.team" class="dark-olive-text thin">
 			{% include "email.svg" %}
 			<span>Good Ol' E-mail</span>
@@ -128,7 +130,7 @@ reduciendo costos y brindándote más beneficios.</p>
 			{% include "gh.svg" %}
 			<span>Follow our Github</span>
 		</a>
-	</article>
+	</ul>
 </section>
 
 <script>
