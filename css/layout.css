@@ -171,3 +171,58 @@ footer nav a {
 }
 
 @media print { footer, nav { display: none; } }
+
+#menu-dropdown {
+    background-color: hsla(163, 49%, 14%, 0.855);
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	transform: translateY(-100%);
+    transform-origin: top center;
+    transition: transform .7s ease-in-out;
+    z-index: 999;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+	padding: 5rem 0;
+}
+
+#menu-icon:focus + #menu-dropdown, #menu-dropdown:focus-within {
+    top: 0;
+	transform: translateY(0);
+}
+
+#menu-dropdown a {
+	display: flex;
+	position: relative;
+	color: var(--clr-green-darker);
+}
+
+#menu-dropdown a.close-menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+#menu-dropdown a.close-menu::before,
+#menu-dropdown a.close-menu::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 20px;
+	background-color: var(--clr-green-darker);
+    transform: rotate(45deg);
+}
+#menu-dropdown a.close-menu::before { transform: rotate(-45deg); }
+
+#menu-dropdown:target {
+    display: none;
+}
