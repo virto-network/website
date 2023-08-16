@@ -114,7 +114,7 @@ a, button, p, .subtitle {
     }
 	.scroll-link {
 		position: static;
-		margin: 2rem auto; /* Ajusta el margen según tus preferencias */
+		margin: 2rem auto;
 		left: auto;
 		top: auto;
 		transform: none;
