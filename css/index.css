@@ -118,7 +118,6 @@ a, button, p, .subtitle {
     #local-community .max  {
         align-content: flex-start;
     }
-
 	.scroll-down-link {
 		position: static;
 		margin: 2rem auto;
