@@ -73,6 +73,7 @@ nav a:not(.logo) {
 	outline: none;
 }
 nav a:not(.logo):is(:hover,:focus) { text-decoration: underline; }
+#virto-logo:focus { outline: 3px solid var(--clr-lavender-darker); }
 .top-nav a:not(.logo) {
 	color: var(--clr-olive-darker);  
 	height: var(--nav-height);
