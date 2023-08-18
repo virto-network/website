@@ -1,51 +1,52 @@
-<nav class="{{ class }} top-nav"  aria-label="Navegación principal">
+<nav class="{{ class }} top-nav" aria-label="Principal">
 	<div class="max row bold">
-		<a href="/#home" id="virto-logo">
+		<a href="/#home" id="virto-logo" role="menuitem" aria-label="Inicio">
 			{% include "virto_logo.svg" %}
 		</a>
-		<a {% if active == "about" %}class="active"{% endif %} href="/about/">
+		<a {% if active == "about" %}class="active"{% endif %} href="/about/" role="menuitem" aria-label="Sobre Virto">
 			Sobre Virto
 		</a>
-		<a {% if active == "comunidades" %}class="active"{% else %}href="/comunidades/"{% endif %}>
+		<a {% if active == "comunidades" %}class="active"{% else %}href="/comunidades/"{% endif %} role="menuitem" aria-label="Comunidades locales">
 			Comunidades locales
 		</a>
-		<a {% if active == "casos" %}class="active"{% else %}href="/comunidades/"{% endif %}>
+		<a {% if active == "casos" %}class="active"{% else %}href="/casos-de-uso/"{% endif %} role="menuitem" aria-label="Casos de uso">
 			Casos de uso
 		</a>
-		<a {% if active == "desarrolladores" %}class="active"{% else %}href="/docs/whitepaper.html"{% endif %}>
+		<a {% if active == "desarrolladores" %}class="active"{% else %}href="/docs/whitepaper.html"{% endif %} role="menuitem" aria-label="Para desarrolladores">
 			Para desarrolladores
 		</a>
-		<a {% if active == "blog" %}class="active"{% else %}href="/blog/"{% endif %}>
+		<a {% if active == "blog" %}class="active"{% else %}href="/blog/"{% endif %} role="menuitem" aria-label="Blog">
 			Blog
 		</a>
-		<a {% if active == "contacto" %}class="active"{% else %}href="/contacto/"{% endif %}>
+		<a {% if active == "contacto" %}class="active"{% else %}href="/contacto/"{% endif %} role="menuitem" aria-label="Contacto">
 			Contacto
 		</a>
 		<a id="menu-icon" class="menu-icon" aria-label="Abrir menú" tabindex="1">
-			<svg width="30" height="30" viewBox="-2 -2 34 34">
+			<svg width="30" height="30" viewBox="-2 -2 34 34" aria-labelledby="Icono menu mobile">
+				<title id="Icono menu mobile">Menu mobile</title>
 				<line x1="2" y1="7" x2="28" y2="7" stroke="#10352B" stroke-width="3" stroke-linecap="round"/>
 				<line x1="28" y1="17" x2="15" y2="17" stroke="#10352B" stroke-width="3" stroke-linecap="round"/>
 				<line x1="2" y1="27" x2="28" y2="27" stroke="#10352B" stroke-width="3" stroke-linecap="round"/>
 			</svg>
 		</a>
-		<nav id="menu-dropdown">
+		<nav id="menu-dropdown" aria-label="Secundaria">
 		    <a id="close-menu" class="close-menu" aria-label="Cerrar menú"></a>
-			<a {% if active == "about" %}class="active"{% endif %} href="/about/">
+			<a {% if active == "about" %}class="active"{% endif %} href="/about/" role="menuitem" aria-label="Sobre Virto">
 				Sobre Virto
 			</a>
-			<a {% if active == "comunidades" %}class="active"{% else %}href="/comunidades/"{% endif %}>
+			<a {% if active == "comunidades" %}class="active"{% else %}href="/comunidades/"{% endif %} role="menuitem" aria-label="Comunidades locales">
 				Comunidades locales
 			</a>
-			<a {% if active == "casos" %}class="active"{% else %}href="/comunidades/"{% endif %}>
+			<a {% if active == "casos" %}class="active"{% else %}href="/comunidades/"{% endif %} role="menuitem" aria-label="Casos de uso">
 				Casos de uso
 			</a>
-			<a {% if active == "desarrolladores" %}class="active"{% else %}href="/docs/whitepaper.html"{% endif %}>
+			<a {% if active == "desarrolladores" %}class="active"{% else %}href="/docs/whitepaper.html"{% endif %} role="menuitem" aria-label="Para desarrolladores">
 				Para desarrolladores
 			</a>
-			<a {% if active == "blog" %}class="active"{% else %}href="/blog/"{% endif %}>
+			<a {% if active == "blog" %}class="active"{% else %}href="/blog/"{% endif %} role="menuitem" aria-label="Blog">
 				Blog
 			</a>
-			<a {% if active == "contacto" %}class="active"{% else %}href="/contacto/"{% endif %}>
+			<a {% if active == "contacto" %}class="active"{% else %}href="/contacto/"{% endif %} role="menuitem" aria-label="Contacto">
 				Contacto
 			</a>
 		</nav>
