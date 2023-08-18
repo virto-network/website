@@ -69,7 +69,6 @@ nav a.active svg path { stroke-width: 3; }
 
 nav a:not(.logo) {
 	padding: 0 calc(.8rem + 0.5vw);
-	text-decoration: none;
 	white-space: nowrap;
 	outline: none;
 }
