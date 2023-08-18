@@ -173,7 +173,7 @@ footer nav a {
 @media print { footer, nav { display: none; } }
 
 #menu-dropdown {
-    background-color: hsla(163, 49%, 14%, 0.855);
+    background-color: hsla(163, 49%, 14%, .97);
     position: fixed;
     top: -100%;
     left: 0;
@@ -203,8 +203,8 @@ footer nav a {
 
 #menu-dropdown a.close-menu {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 2rem;
+    right: 5rem;
     width: 30px;
     height: 30px;
     background-color: transparent;
