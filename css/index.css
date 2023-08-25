@@ -13,13 +13,16 @@ section>article {
     top: 0;
 	z-index: 99;
 }
+
 button {
     border: none;
     border-radius: 50px;
     width: fit-content;
     padding: clamp(5px, 2vh, 20px) clamp(20px, 4vw, 40px);
     text-align: center;
+	background-color: var(--clr-green-darker);
 }
+
 figure.logo svg {
     width: clamp(250px, 30vw, 600px);
     height: fit-content;
@@ -85,7 +88,6 @@ a, button, p, .subtitle {
 
 /*Home*/
 #home, .top-nav { background-color: var(--clr-green-lighter);   }
-#home button { background-color: var(--clr-green-darker); }
 
 .text-section {
     text-align: left;
@@ -252,7 +254,7 @@ a.center-arrow.dark-olive-text.boldest {
     margin-bottom: 5px;  
 }
 
-#you-decide button { background-color: var(--clr-green-darker); margin: -3rem 0 3rem 0; }
+#you-decide button { margin: -3rem 0 3rem 0; }
 #you-decide>ul.max {
     align-items: center;
 	display: flex;
@@ -303,3 +305,8 @@ a.center-arrow.dark-olive-text.boldest {
 	opacity: 1;
 	transform: translateY(0);
 }
+
+/*Button animation*/
+button { transition: background-color 662ms ease, color 662ms ease; }
+button:hover { background-color: var(--clr-lavender-darker); color: white; }
+#not-programmer button:hover { background-color: var(--clr-green-darker); }
