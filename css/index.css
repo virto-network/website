@@ -310,3 +310,6 @@ a.center-arrow.dark-olive-text.boldest {
 button { transition: background-color 662ms ease, color 662ms ease; }
 button:hover { background-color: var(--clr-lavender-darker); color: white; }
 #not-programmer button:hover { background-color: var(--clr-green-darker); }
+
+/*Links animation*/
+a:hover, a:focus { text-decoration-line: underline; }
