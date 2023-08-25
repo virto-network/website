@@ -72,7 +72,7 @@ nav a:not(.logo) {
 	white-space: nowrap;
 	outline: none;
 }
-nav a:not(.logo):is(:hover,:focus) { text-decoration: underline; }
+
 #virto-logo:focus { outline: 3px solid var(--clr-lavender-darker); }
 .top-nav a:not(.logo) {
 	color: var(--clr-olive-darker);  
@@ -226,3 +226,15 @@ footer nav a {
 #menu-dropdown:target {
     display: none;
 }
+
+#nav {
+	animation: show .8s cubic-bezier(.45,.05,.55,.95);
+}
+@keyframes show {
+	from {
+	  transform: translateY(-100%);
+	}
+	to {
+	  transform: translateY(0%)
+	}
+  }

@@ -1,7 +1,7 @@
 
-<nav class="{{ class }} top-nav" aria-label="Principal">
+<nav id="nav" class="{{ class }} top-nav" aria-label="Principal">
 	<div class="max row bold">
-		<a href="/#home" id="virto-logo" role="menuitem" aria-label="Inicio">
+		<a href="#" id="virto-logo" role="menuitem" aria-label="Inicio">
 			{% include "virto_logo.svg" %}
 		</a>
 		<a {% if active == "about" %}class="active"{% endif %} href="/about/" role="menuitem" aria-label="Sobre Virto">
