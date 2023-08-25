@@ -292,7 +292,7 @@ a.center-arrow.dark-olive-text.boldest {
     }
 }
 
-/*Animacion de todos los elementos de la página al hacer scroll*/
+/*Add this class to the element for a scroll animation*/
 .animated {
 	opacity: 0;
 	transform: translateY(100px);
