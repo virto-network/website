@@ -116,7 +116,7 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: end;
     flex-wrap: wrap;
 	margin: 3rem;
 	gap: 3rem;
