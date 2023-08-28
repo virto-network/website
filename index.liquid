@@ -114,27 +114,29 @@ layout: index.liquid
 </section>
 
 <section id="you-decide">
-	<h3 class="subtitle bolder dark-olive-text animated">Tú decides y ayudas a mejorar tu entorno.</h3>
-	<h2 class="dark-olive-text bolder animated">
-		<span>¡Así, juntos hacemos un </span>
-		<span class="underlined-element">mundo mejor!</span>
-	</h2>
-	<button class="animated">Aprender cómo</button>
-	{% assign matrix_to = "#virto-network:virto.community?via=virto.community" %}
-	<ul class="max animated">
-		<a title="E-mail" href="mailto:contact@virto.team" class="dark-olive-text thin">
-			{% include "email.svg" %}
-			<span>Good Ol' E-mail</span>
-		</a>
-		<a title="Community" href="https://matrix.to/#/{{ matrix_to }}" class="dark-olive-text thin">
-			{% include "element.svg" %}
-			<span>Chat with the community!</span>
-		</a>
-		<a title="Github" href="https://github.com/virto-network" class="dark-olive-text thin">
-			{% include "gh.svg" %}
-			<span>Follow our Github</span>
-		</a>
-	</ul>
+	<article class="animated">
+		<h3 class="subtitle bolder dark-olive-text">Tú decides y ayudas a mejorar tu entorno.</h3>
+		<h2 class="dark-olive-text bolder">
+			<span>¡Así, juntos hacemos un </span>
+			<span class="underlined-element">mundo mejor!</span>
+		</h2>
+		<button>Aprender cómo</button>
+		{% assign matrix_to = "#virto-network:virto.community?via=virto.community" %}
+		<ul class="max">
+			<a title="E-mail" href="mailto:contact@virto.team" class="dark-olive-text thin">
+				{% include "email.svg" %}
+				<span>Good Ol' E-mail</span>
+			</a>
+			<a title="Community" href="https://matrix.to/#/{{ matrix_to }}" class="dark-olive-text thin">
+				{% include "element.svg" %}
+				<span>Chat with the community!</span>
+			</a>
+			<a title="Github" href="https://github.com/virto-network" class="dark-olive-text thin">
+				{% include "gh.svg" %}
+				<span>Follow our Github</span>
+			</a>
+		</ul>
+	</article>
 </section>
 <script>
 const $ = document.querySelector.bind(document),

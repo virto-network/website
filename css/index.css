@@ -242,27 +242,20 @@ a.center-arrow.dark-olive-text.boldest {
 }
 
 /*You decide*/
-#you-decide { background-color: var(--clr-lavender-lightest); flex-direction: column; gap:5rem;}
-#you-decide h2 {
-    text-align: center;
-    font-size: clamp(2.5rem, 5vw, 5.75rem);
-}
-
-#you-decide h3 { text-align: center;}
-#you-decide h2 span {
-    display: block;
-    margin-bottom: 5px;  
-}
-
-#you-decide button { margin: -3rem 0 3rem 0; }
-#you-decide>ul.max {
+#you-decide { background-color: var(--clr-lavender-lightest); }
+#you-decide article { flex-direction: column; gap:5rem; align-items: center; }
+#you-decide article h2 { text-align: center; font-size: clamp(2.5rem, 5vw, 5.75rem); }
+#you-decide article h3 { text-align: center; }
+#you-decide article h2 span { display: block; margin-bottom: 5px; }
+#you-decide article button { margin: -3rem 0 3rem 0; }
+#you-decide article>ul.max {
     align-items: center;
 	display: flex;
     gap: clamp(.5rem, 6vw, 3rem);;
 	justify-content: center;
 }
 
-#you-decide>ul.max a {
+#you-decide article>ul.max a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -271,7 +264,7 @@ a.center-arrow.dark-olive-text.boldest {
     gap: 2em;
 }
 
-#you-decide>ul svg {
+#you-decide article>ul svg {
     fill: var(--clr-olive-darker);
     height: 4rem; width: 4rem;
 }
