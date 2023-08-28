@@ -168,5 +168,9 @@ animatedElements.forEach(element => {
   observer.observe(element);
 });
 
+document.fonts.ready.then((fontFaceSet) => {
+	let body = document.querySelector('body');
+	body.classList.remove('hidden');
+})
 
 </script>

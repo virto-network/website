@@ -1,6 +1,7 @@
 @media print { :root { --color-text: black; } }
 html, body { all: initial; display: block; scroll-behavior: smooth; }
 body { background: var(--clr-olive-darker); font-family:  var(--font-primary); color: var(--color-text); min-height: 100vh }
+body.hidden { opacity: 0;}
 h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
 	padding: 0;
@@ -226,15 +227,3 @@ footer nav a {
 #menu-dropdown:target {
     display: none;
 }
-
-#nav {
-	animation: show .8s cubic-bezier(.45,.05,.55,.95);
-}
-@keyframes show {
-	from {
-	  transform: translateY(-100%);
-	}
-	to {
-	  transform: translateY(0%)
-	}
-  }
