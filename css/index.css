@@ -207,7 +207,7 @@ a.center-arrow.dark-olive-text.boldest {
     gap: clamp(20em, 10vw, 50em);
 }
 
-.logo.build-machine svg {
+.logo.build-machine img {
     width:clamp(300px, 38vw, 800px);
 }
 
