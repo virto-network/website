@@ -35,6 +35,19 @@ figure.logo svg {
     top: -60px;
 }
 
+.arrow-right {
+	position: absolute;
+	right: clamp(40%, 2vw, 45%);
+	top: 20%;
+}
+
+.buttons-container {
+	position: absolute;
+	left: 3%;
+}
+
+.buttons-container > figure:nth-child(1) { margin-bottom: 2rem; }
+
 .center-arrow { /*Applied to <a> that contains an arrow*/
     display: flex;
     align-items: center;
@@ -114,7 +127,7 @@ a, button, p, .subtitle {
         content: '';
     }
     /*Add here arrows that are not displayed on mobile version*/
-    .build-machine::after {
+    .build-machine::after, .arrow-right {
         display: none;
     }
     #local-community .max  {
