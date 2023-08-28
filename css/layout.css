@@ -1,6 +1,7 @@
 @media print { :root { --color-text: black; } }
 html, body { all: initial; display: block; scroll-behavior: smooth; }
 body { background: var(--clr-olive-darker); font-family:  var(--font-primary); color: var(--color-text); min-height: 100vh }
+body.hidden { opacity: 0;}
 h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
 	padding: 0;
@@ -72,7 +73,7 @@ nav a:not(.logo) {
 	white-space: nowrap;
 	outline: none;
 }
-nav a:not(.logo):is(:hover,:focus) { text-decoration: underline; }
+
 #virto-logo:focus { outline: 3px solid var(--clr-lavender-darker); }
 .top-nav a:not(.logo) {
 	color: var(--clr-olive-darker);  

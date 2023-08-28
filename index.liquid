@@ -3,11 +3,10 @@ title: Virto Network
 layout: index.liquid
 ---
 
-<hr class="sticky-hack">
 	{% include "nav.liquid" active: "", class: "fixed" %}
 
 <section id="home">
-	<article class="max">
+	<article class="max animated">
 		<div class="text-section dark-olive-text">
 			<p class="regular">¡Bienvenido a Virto!</p>
 			<h1 class="bold">Aquí podrás construir y comerciar con comunidades <span>en todo el mundo.</span></h1>
@@ -26,7 +25,7 @@ layout: index.liquid
 </section>
 
 <section id="presentacion">
-	<article class="max">
+	<article class="max animated">
 		<div class="column">
 			<h2 class="bold light-green-text">Te presentamos</h2>
 			<h2 class="bold"><span class="light-lavender-text">Virto®</span></h2>
@@ -46,7 +45,7 @@ layout: index.liquid
 	</article>
 </section>
 
-<section id="not-programmer">
+<section id="not-programmer" class="animated">
 	<h2 class="bold light-green-text">¿No eres programador?</h2>
 	<h2 class="bold"><span class="light-lavender-text">¡No hay problema!</span></h2>
 	<article class="max">
@@ -61,7 +60,7 @@ layout: index.liquid
 <section id="here-you-can">
 	<h3 class="subtitle boldest dark-olive-text">Aquí podrás</h3>
 	<ul class="auto-grid max">
-		<li>
+		<li class="animated">
 			<img src="img/build.svg" alt="Define when content is decided"/>
 			<h3 class="subtitle bolder dark-olive-text">¿Por qué Virto?</h3>
 			<p class="grey-text regular">Podrás tener voz y voto. Además podrás beneficiarte de ellos.</p>
@@ -70,7 +69,7 @@ layout: index.liquid
 				<figure class="link-arrow">{% include "see_more.svg" %}</figure>
 			</a>
 		</li>
-		<li>
+		<li class="animated">
 			<img src="img/window.svg" alt="Define when content is decided"/>
 			<h3 class="subtitle bolder dark-olive-text">Partners</h3>
 			<p class="grey-text regular">Podrás tener voz y voto. Además podrás beneficiarte de ellos.</p>
@@ -79,7 +78,7 @@ layout: index.liquid
 				<figure class="link-arrow">{% include "see_more.svg" %}</figure>
 			</a>
 		</li>
-		<li>
+		<li class="animated">
 			<img src="img/group.svg" alt="Define when content is decided"/>		
 			<h3 class="subtitle bolder dark-olive-text">Unirte a comunidades locales</h3>
 			<p class="grey-text regular">Podrás tener voz y voto. Además podrás beneficiarte de ellos.</p>
@@ -99,8 +98,8 @@ layout: index.liquid
 </section>
 
 <section id="local-community">
-	<h2 class="bold dark-olive-text fixed-width">¿Te has preguntado cómo puedes marcar <span class="light-green-text">la diferencia en tu comunidad local?</span></h2>
-	<article class="max">
+	<h2 class="bold dark-olive-text fixed-width animated">¿Te has preguntado cómo puedes marcar <span class="light-green-text">la diferencia en tu comunidad local?</span></h2>
+	<article class="max animated">
 			<figure class="img-container logo build-machine">
 				{% include "build_machine.svg" %}
 			</figure>
@@ -115,29 +114,30 @@ layout: index.liquid
 </section>
 
 <section id="you-decide">
-	<h3 class="subtitle bolder dark-olive-text">Tú decides y ayudas a mejorar tu entorno.</h3>
-	<h2 class="dark-olive-text bolder">
-		<span>¡Así, juntos hacemos un </span>
-		<span class="underlined-element">mundo mejor!</span>
-	</h2>
-	<button>Aprender cómo</button>
-	{% assign matrix_to = "#virto-network:virto.community?via=virto.community" %}
-	<ul class="max">
-		<a title="E-mail" href="mailto:contact@virto.team" class="dark-olive-text thin">
-			{% include "email.svg" %}
-			<span>Good Ol' E-mail</span>
-		</a>
-		<a title="Community" href="https://matrix.to/#/{{ matrix_to }}" class="dark-olive-text thin">
-			{% include "element.svg" %}
-			<span>Chat with the community!</span>
-		</a>
-		<a title="Github" href="https://github.com/virto-network" class="dark-olive-text thin">
-			{% include "gh.svg" %}
-			<span>Follow our Github</span>
-		</a>
-	</ul>
+	<article class="animated">
+		<h3 class="subtitle bolder dark-olive-text">Tú decides y ayudas a mejorar tu entorno.</h3>
+		<h2 class="dark-olive-text bolder">
+			<span>¡Así, juntos hacemos un </span>
+			<span class="underlined-element">mundo mejor!</span>
+		</h2>
+		<button>Aprender cómo</button>
+		{% assign matrix_to = "#virto-network:virto.community?via=virto.community" %}
+		<ul class="max">
+			<a title="E-mail" href="mailto:contact@virto.team" class="dark-olive-text thin">
+				{% include "email.svg" %}
+				<span>Good Ol' E-mail</span>
+			</a>
+			<a title="Community" href="https://matrix.to/#/{{ matrix_to }}" class="dark-olive-text thin">
+				{% include "element.svg" %}
+				<span>Chat with the community!</span>
+			</a>
+			<a title="Github" href="https://github.com/virto-network" class="dark-olive-text thin">
+				{% include "gh.svg" %}
+				<span>Follow our Github</span>
+			</a>
+		</ul>
+	</article>
 </section>
-
 <script>
 const $ = document.querySelector.bind(document),
 	$$ = document.querySelectorAll.bind(document);
@@ -155,5 +155,23 @@ const makeSticky = ([br]) =>
 whenVisible('main>section', addViewedClass, { threshold: 0.2 });
 whenVisible('.sticky-hack', makeSticky, { threshold: [0, 1] });
 
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0) {
+      entry.target.classList.add('animate');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 }); 
+
+const animatedElements = document.querySelectorAll('.animated');
+
+animatedElements.forEach(element => {
+  observer.observe(element);
+});
+
+document.fonts.ready.then((fontFaceSet) => {
+	document.body.classList.remove('hidden');
+})
 
 </script>

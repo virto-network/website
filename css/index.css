@@ -13,13 +13,16 @@ section>article {
     top: 0;
 	z-index: 99;
 }
+
 button {
     border: none;
     border-radius: 50px;
     width: fit-content;
     padding: clamp(5px, 2vh, 20px) clamp(20px, 4vw, 40px);
     text-align: center;
+	background-color: var(--clr-green-darker);
 }
+
 figure.logo svg {
     width: clamp(250px, 30vw, 600px);
     height: fit-content;
@@ -85,7 +88,6 @@ a, button, p, .subtitle {
 
 /*Home*/
 #home, .top-nav { background-color: var(--clr-green-lighter);   }
-#home button { background-color: var(--clr-green-darker); }
 
 .text-section {
     text-align: left;
@@ -240,27 +242,20 @@ a.center-arrow.dark-olive-text.boldest {
 }
 
 /*You decide*/
-#you-decide { background-color: var(--clr-lavender-lightest); flex-direction: column; gap:5rem;}
-#you-decide h2 {
-    text-align: center;
-    font-size: clamp(2.5rem, 5vw, 5.75rem);
-}
-
-#you-decide h3 { text-align: center;}
-#you-decide h2 span {
-    display: block;
-    margin-bottom: 5px;  
-}
-
-#you-decide button { background-color: var(--clr-green-darker); margin: -3rem 0 3rem 0; }
-#you-decide>ul.max {
+#you-decide { background-color: var(--clr-lavender-lightest); }
+#you-decide article { flex-direction: column; gap:5rem; align-items: center; }
+#you-decide article h2 { text-align: center; font-size: clamp(2.5rem, 5vw, 5.75rem); }
+#you-decide article h3 { text-align: center; }
+#you-decide article h2 span { display: block; margin-bottom: 5px; }
+#you-decide article button { margin: -3rem 0 3rem 0; }
+#you-decide article>ul.max {
     align-items: center;
 	display: flex;
     gap: clamp(.5rem, 6vw, 3rem);;
 	justify-content: center;
 }
 
-#you-decide>ul.max a {
+#you-decide article>ul.max a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -269,7 +264,7 @@ a.center-arrow.dark-olive-text.boldest {
     gap: 2em;
 }
 
-#you-decide>ul svg {
+#you-decide article>ul svg {
     fill: var(--clr-olive-darker);
     height: 4rem; width: 4rem;
 }
@@ -291,3 +286,23 @@ a.center-arrow.dark-olive-text.boldest {
         gap: 2rem;
     }
 }
+
+/*Add this class to the element for a scroll animation*/
+.animated {
+	opacity: 0;
+	transform: translateY(100px);
+	transition: opacity 1s ease, transform 0.5s ease;
+}
+
+.animated.animate {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/*Button animation*/
+button { transition: background-color 662ms ease, color 662ms ease; }
+button:hover { background-color: var(--clr-lavender-darker); color: white; }
+#not-programmer button:hover { background-color: var(--clr-green-darker); }
+
+/*Links animation*/
+a:hover, a:focus { text-decoration-line: underline; }
