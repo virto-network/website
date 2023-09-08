@@ -1,6 +1,8 @@
 --- 
 title: Local Incentives Protocol 
-layout: docs.liquid 
+layout: docs.liquid
+data:
+  route: whitepaper
 ---
 
 # Local Incentives Protocol 
