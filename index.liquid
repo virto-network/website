@@ -5,8 +5,6 @@ data:
   route: home
 ---
 
-	{% include "nav.liquid" active: "", class: "fixed" %}
-
 <section id="home">
 	<article class="max animated">
 		<div class="text-section dark-olive-text">
@@ -182,9 +180,5 @@ const animatedElements = document.querySelectorAll('.animated');
 animatedElements.forEach(element => {
   observer.observe(element);
 });
-
-document.fonts.ready.then((fontFaceSet) => {
-	document.body.classList.remove('hidden');
-})
 
 </script>

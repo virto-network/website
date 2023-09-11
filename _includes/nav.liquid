@@ -1,25 +1,29 @@
-
-<nav id="nav" class="{{ class }} top-nav" aria-label="Principal">
+<head>
+	<link rel="stylesheet" href="/css/index.css">
+	<link rel="stylesheet" href="/css/layout.css">
+	<link rel="stylesheet" href="/css/variables.css">
+</head>
+<nav id="nav" class="top-nav" aria-label="Principal">
 	<div class="max row bold">
 		<a {% if page.data.route == "home"%}current{%endif%}" href="/" id="virto-logo" role="menuitem" aria-label="Inicio">
 			{% include "virto_logo.svg" %}
 		</a>
-		<a {% if active == "about" %}class="active"{% endif %} href="/about/" role="menuitem" aria-label="Sobre Virto">
+		<a {% if page.data.route == "about"%}current{%endif%}" href="/about/" role="menuitem" aria-label="Sobre Virto">
 			Sobre Virto
 		</a>
-		<a {% if active == "comunidades" %}class="active"{% else %}href="/comunidades/"{% endif %} role="menuitem" aria-label="Comunidades locales">
+		<a {% if page.data.route == "comunidades"%}current{%endif%}" href="/comunidades/" role="menuitem" aria-label="Comunidades locales">
 			Comunidades locales
 		</a>
-		<a {% if active == "casos" %}class="active"{% else %}href="/casos-de-uso/"{% endif %} role="menuitem" aria-label="Casos de uso">
+		<a {% if page.data.route == "casos-de-uso"%}current{%endif%}" href="/casos-de-uso/" role="menuitem" aria-label="Casos de uso">
 			Casos de uso
 		</a>
-		<a {% if active == "desarrolladores" %}class="active"{% else %}href="/docs/whitepaper.html"{% endif %} role="menuitem" aria-label="Para desarrolladores">
+		<a {% if page.data.route == "whitepaper"%}current{%endif%}" href="/docs/whitepaper.html" role="menuitem" aria-label="Para desarrolladores">
 			Para desarrolladores
 		</a>
-		<a {% if active == "blog" %}class="active"{% else %}href="/blog/"{% endif %} role="menuitem" aria-label="Blog">
+		<a {% if page.data.route == "blog"%}current{%endif%}" href="/blog/" role="menuitem" aria-label="Blog">
 			Blog
 		</a>
-		<a {% if active == "contacto" %}class="active"{% else %}href="/contacto/"{% endif %} role="menuitem" aria-label="Contacto">
+		<a {% if page.data.route == "contacto"%}current{%endif%}" href="/contacto/" role="menuitem" aria-label="Contacto">
 			Contacto
 		</a>
 		<a id="menu-icon" class="menu-icon" aria-label="Abrir menú" tabindex="1">
@@ -32,22 +36,22 @@
 		</a>
 		<nav id="menu-dropdown" aria-label="Secundaria">
 		    <a id="close-menu" class="close-menu" aria-label="Cerrar menú"></a>
-			<a {% if active == "about" %}class="active"{% endif %} href="/about/" role="menuitem" aria-label="Sobre Virto">
+			<a {% if page.data.route == "about"%}current{%endif%}" href="/about/" role="menuitem" aria-label="Sobre Virto">
 				Sobre Virto
 			</a>
-			<a {% if active == "comunidades" %}class="active"{% else %}href="/comunidades/"{% endif %} role="menuitem" aria-label="Comunidades locales">
+			<a {% if page.data.route == "comunidades"%}current{%endif%}" href="/comunidades/" role="menuitem" aria-label="Comunidades locales">
 				Comunidades locales
 			</a>
-			<a {% if active == "casos" %}class="active"{% else %}href="/comunidades/"{% endif %} role="menuitem" aria-label="Casos de uso">
+			<a {% if page.data.route == "casos-de-uso"%}current{%endif%}" href="/casos-de-uso/" role="menuitem" aria-label="Casos de uso">
 				Casos de uso
 			</a>
-			<a {% if active == "desarrolladores" %}class="active"{% else %}href="/docs/whitepaper.html"{% endif %} role="menuitem" aria-label="Para desarrolladores">
+			<a {% if page.data.route == "whitepaper"%}current{%endif%}" href="/docs/whitepaper.html" role="menuitem" aria-label="Para desarrolladores">
 				Para desarrolladores
 			</a>
-			<a {% if active == "blog" %}class="active"{% else %}href="/blog/"{% endif %} role="menuitem" aria-label="Blog">
+			<a {% if page.data.route == "blog"%}current{%endif%}" href="/blog/" role="menuitem" aria-label="Blog">
 				Blog
 			</a>
-			<a {% if active == "contacto" %}class="active"{% else %}href="/contacto/"{% endif %} role="menuitem" aria-label="Contacto">
+			<a {% if page.data.route == "contacto"%}current{%endif%}" href="/contacto/" role="menuitem" aria-label="Contacto">
 				Contacto
 			</a>
 		</nav>

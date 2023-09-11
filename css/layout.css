@@ -32,6 +32,8 @@ button {
 .sticky-hack { border: none; display: block; height: 1px; margin: 0; width: 100%; }
 
 /** Top navigation**/
+#nav { background-color: var(--clr-green-lighter);}
+
 nav { height: var(--nav-height); }
 nav .row {
 	align-items: center;

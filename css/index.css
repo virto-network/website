@@ -112,7 +112,7 @@ a, button, p, .subtitle {
 }
 
 /*Home*/
-#home, .top-nav { background-color: var(--clr-green-lighter);   }
+#home { background-color: var(--clr-green-lighter); }
 
 .text-section {
     text-align: left;
