@@ -25,7 +25,7 @@ Al ser una solución diseñada para esta nueva web, Virto te permite navegar, co
 
 **1. Definición de Virto**
 
-**Virto **es una plataforma que ofrece el desarrollo e integración de herramientas digitales diseñadas para potenciar comunidades y negocios en el entorno web 3. Entre estas herramientas se encuentran:
+**Virto** es una plataforma que ofrece el desarrollo e integración de herramientas digitales diseñadas para potenciar comunidades y negocios en el entorno web 3. Entre estas herramientas se encuentran:
 
 
 
