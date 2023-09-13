@@ -7,9 +7,9 @@
 	<meta name="theme-color" content="#3A3387">
 	<title>{{ page.title }}</title>
 	
-	<link rel="stylesheet" href="/css/layout.css">
 	<style>
 	body { background: var(--color-bg-alt); display: flex; flex-direction: column; }
+	#blog { background-color: var(--clr-white); }
 	main { flex: 1; padding: 1rem; }
 	footer { background: var(--color-bg); }
 	h1 { height: 30vh; display: flex; padding: 0 1rem; }
@@ -115,7 +115,7 @@
 
 <body>
 	{% include "nav.liquid" %}
-	<main class="max">
+	<main class="max" id="blog">
 		{{ page.content }}
 	</main>
 	{% include "footer.liquid" %}

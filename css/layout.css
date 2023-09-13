@@ -55,7 +55,13 @@ nav a {
 nav a.active { font-weight: 700; }
 nav a.active svg path { stroke-width: 3; }
 
-.top-nav { padding: 2.5rem 4rem; }
+.top-nav { 
+	padding: 2.5rem 4rem;
+	position: fixed;
+	width: 100%;
+    top: 0;
+	z-index: 99;
+}
 
 #virto-logo {
 	margin-right: auto;
