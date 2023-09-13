@@ -1,0 +1,55 @@
+* { margin: 0; padding: 0; font-family: var(--font-primary); box-sizing: border-box;}
+body { margin-top: var(--nav-height) !important; } /*temporary solution*/
+a, button { text-decoration: none; cursor: pointer; }
+main { display: flex; flex-direction: column; }
+section { display: flex; padding: calc(2rem + 5vmin) calc(1rem + 4vmin); min-height: 90dvh; padding-top: var(--nav-height); }
+section>article {
+	display: flex;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    border-radius: 50px;
+    width: fit-content;
+    padding: clamp(5px, 2vh, 20px) clamp(20px, 4vw, 40px);
+    text-align: center;
+	background-color: var(--clr-green-darker);
+}
+
+.center-arrow { /*Applied to <a> that contains an arrow*/
+    display: flex;
+    align-items: center;
+}
+
+.link-arrow { /*svg container for arrow*/
+    height: 1em;
+    width: 1em;
+    margin-left: 0.5em;
+}
+
+/*Add one of these classes to your element to add a text-alignment*/
+.right { text-align: right; }
+.left { text-align: left;}
+.center { text-align: center; }
+
+/*Add one of this classes to your element to add a font-weight*/
+.thin { font-weight: var(--font-weight-300); }
+.regular { font-weight: var(--font-weight-400); }
+.bold { font-weight: var(--font-weight-500); }
+.bolder { font-weight: var(--font-weight-600); }
+.boldest { font-weight: var(--font-weight-700); }
+
+/*Add one of this classes to your element to add a background-color*/
+.white-bg { background-color: var(--clr-white); }
+.whitest-bg { background-color: var(--clr-whitest); }
+.dark-olive-bg { background-color: var(--clr-olive-darker); }
+.light-green-bg { background-color: var(--clr-green-lighter); }
+.light-lavender-bg { background-color: var(--clr-lavender-lightest); }
+
+/*Add one of this classes to your element to add a text-color*/
+.grey-text { color: var(--clr-grey); }
+.dark-olive-text { color: var(--clr-olive-darker); }
+.light-green-text { color: var(--clr-green-lighter); }
+.light-lavender-text { color: var(--clr-lavender-lighter); }
+.lightest-lavender-text { color: var(--clr-lavender-lightest); }
