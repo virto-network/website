@@ -11,9 +11,19 @@
                 <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
-			<a href="#home" class="scroll-up-link lightest-lavender-text center-arrow">Volver arriba
+			<a id="scroll-up" class="scroll-up-link lightest-lavender-text center-arrow">Volver arriba
 				<figure class="link-arrow">
 						{% include "up.svg" %}
 				</figure>
 	 		</a>
 </footer>
+<script>
+	let scrollLink = document.querySelector('#scroll-up');
+
+	scrollLink.addEventListener('click', () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth"
+		})
+	});
+</script>
