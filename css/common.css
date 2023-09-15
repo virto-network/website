@@ -28,6 +28,9 @@ button {
     margin-left: 0.5em;
 }
 
+/*General font-family for these elements, add here any other element you want*/
+a, button, p, h3 { font-family:  var(--font-secondary); }
+
 /*Add one of these classes to your element to add a text-alignment*/
 .right { text-align: right; }
 .left { text-align: left;}
