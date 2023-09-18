@@ -56,3 +56,18 @@ a, button, p, h3 { font-family:  var(--font-secondary); }
 .light-green-text { color: var(--clr-green-lighter); }
 .light-lavender-text { color: var(--clr-lavender-lighter); }
 .lightest-lavender-text { color: var(--clr-lavender-lightest); }
+
+/*General media queries*/
+@media (max-width: 1200px) {
+	.scroll-up-link {
+		display: none;
+	}
+	section {
+        justify-content: center;
+    }
+	footer {
+		text-align: center;
+        align-items: center;
+        justify-content: center;
+	}
+}

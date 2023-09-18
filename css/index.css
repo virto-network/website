@@ -64,14 +64,12 @@ figure.logo svg {
 #home figure.logo { align-items: start; }
 
 @media (max-width: 1200px) {
-    #home .text-section, #presentacion>article> *, footer {
+    #home .text-section, #presentacion>article> * {
         text-align: center;
         align-items: center;
         justify-content: center;
     }
-    section {
-        justify-content: center;
-    }
+   
     #home .text-section { order: 2; }
     #home .logo { order: 1; align-self: center;}
     .build-machine::after {
@@ -91,9 +89,6 @@ figure.logo svg {
 		top: auto;
 		transform: none;
 	  }
-	.scroll-up-link {
-		display: none;
-	}
 }
 
 #home .max, #presentacion .max {
