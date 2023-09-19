@@ -23,8 +23,8 @@
 	</style>
 </head>
 
-<body>
-	{% include "nav.liquid" active:"paper", class:"" %}
+<body data-route={{ page.data.route }}>
+	{% include "nav.liquid" %}
 	<main class="max">
 		{{ page.content }}
 	</main>

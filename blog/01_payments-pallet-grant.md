@@ -6,6 +6,7 @@ description: |
 published_date: 2022-03-01 14:53:00 +0100
 permalink: /blog/payments-pallet-web3-grant
 data:
+  route: blog
   author: Qian & Daniel
 is_draft: false
 ---

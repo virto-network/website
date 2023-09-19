@@ -32,6 +32,8 @@ button {
 .sticky-hack { border: none; display: block; height: 1px; margin: 0; width: 100%; }
 
 /** Top navigation**/
+#nav { background-color: var(--clr-green-lighter);}
+
 nav { height: var(--nav-height); }
 nav .row {
 	align-items: center;
@@ -53,7 +55,13 @@ nav a {
 nav a.active { font-weight: 700; }
 nav a.active svg path { stroke-width: 3; }
 
-.top-nav { padding: 2.5rem 4rem; }
+.top-nav { 
+	padding: 2.5rem 4rem;
+	position: fixed;
+	width: 100%;
+    top: 0;
+	z-index: 99;
+}
 
 #virto-logo {
 	margin-right: auto;
@@ -116,7 +124,6 @@ nav a:not(.logo) svg {
 footer {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
     justify-content: end;
     flex-wrap: wrap;
 	margin: 3rem;

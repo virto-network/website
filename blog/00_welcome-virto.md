@@ -6,6 +6,7 @@ description: |
 published_date: 2022-01-05 12:34:56 +0100
 permalink: /blog/first-post
 data:
+  route: blog
   author: Qian Che
 is_draft: false
 ---
