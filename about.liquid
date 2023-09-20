@@ -6,15 +6,38 @@ data:
   route: about
 ---
 <style>
-	#about { height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; }
-	#about h1 { font-size: 7rem; font-family: var(--font-primary);}
-	#about h3 { font-family: var(--font-secondary); }
+	#nav { background-color: var(--clr-olive-darker); }
+	#nav a:not(#about-link) { color: var(--clr-blue-light); }
+	#virto-logo svg path { fill: var(--clr-lavender-lightest); }
+	#about { 
+		height: 90vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		color: var(--clr-blue-light);
+		gap: 3rem;
+		overflow: hidden;
+	}
+	#about h1 { font-size: calc(var(--font-size-title-page) + 3rem); font-family: var(--font-primary);}
+	#about h3 { margin: 0 clamp(7rem, 8vw, 20rem); font-family: var(--font-secondary); line-height: 1.5; font-size: var(--font-size-subtitle); }
+	#about h1::after {
+		content: url('../img/arrow_right.svg');
+        display: inline-block;
+        position: absolute;
+		left: 44%;
+		z-index: -1;
+        width: 15vw;
+        height: auto;
+	}
+	button { background-color: var(--clr-lavender-lightest); }
 </style>
 
 <body>
-	<section id="about">
-		<h1>Sobre Virto</h1>
-		<h3>Próximamente</h3>
-	</section>
+	<article id="about" class="lightest-green-text center">
+		<h1>Virto</h1>
+		<h3 class="bold">Virto es un revolucionario proyecto basado en el ecosistema descentralizado <span class="light-lavender-text">Polkadot</span>, diseñado para proporcionar las herramientas que necesitas para desarrollar, integrar y gestionar la tecnología blockchain, facilitando su adopción en tu negocio, no importa el tamaño o tipo.</h3>
+		<p>Sigue con nosotros y descubre como hacerlo</p>
+		<button>Aprender cómo</button>
+	</article>
 <body>
-

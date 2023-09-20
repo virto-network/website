@@ -30,7 +30,7 @@ button {
 
 /*General font-family for these elements, add here any other element you want*/
 a, button, p, h3 { font-family:  var(--font-secondary); }
-
+span { font-family: inherit; }
 /*Add one of these classes to your element to add a text-alignment*/
 .right { text-align: right; }
 .left { text-align: left;}
@@ -54,6 +54,8 @@ a, button, p, h3 { font-family:  var(--font-secondary); }
 .grey-text { color: var(--clr-grey); }
 .dark-olive-text { color: var(--clr-olive-darker); }
 .light-green-text { color: var(--clr-green-lighter); }
+.lightest-green-text { color: var(--clr-green-lighter); }
+.dark-lavender-text { color: var(--clr-lavender-darker); }
 .light-lavender-text { color: var(--clr-lavender-lighter); }
 .lightest-lavender-text { color: var(--clr-lavender-lightest); }
 

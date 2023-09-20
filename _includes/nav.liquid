@@ -8,7 +8,7 @@
 		<a {% if page.data.route == "home"%}current{%endif%}" href="/" id="virto-logo" role="menuitem" aria-label="Inicio">
 			{% include "virto_logo.svg" %}
 		</a>
-		<a {% if page.data.route == "about"%}current{%endif%}" href="/about/" role="menuitem" aria-label="Sobre Virto">
+		<a {% if page.data.route == "about"%}current{%endif%}" href="/about/" id="about-link" role="menuitem" aria-label="Sobre Virto">
 			Sobre Virto
 		</a>
 		<a {% if page.data.route == "comunidades"%}current{%endif%}" href="/comunidades/" role="menuitem" aria-label="Comunidades locales">

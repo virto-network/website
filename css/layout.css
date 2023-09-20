@@ -71,9 +71,12 @@ nav a.active svg path { stroke-width: 3; }
 }
 #virto-logo svg {
 	align-self: start;
-	fill: var(--clr-olive-darker);
 	width: auto;
     height: 60%;
+}
+
+#virto-logo svg path {
+	fill: var(--clr-olive-darker);
 }
 
 nav a:not(.logo) {
@@ -92,7 +95,7 @@ nav a:not(.logo) {
 }
 
 /*color nav about link*/
-div.max.row > a:nth-child(2), h1>span {
+#about-link, h1>span {
 	color: var(--clr-lavender-darker);
 }
 
