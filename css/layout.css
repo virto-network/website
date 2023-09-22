@@ -15,7 +15,7 @@ h1, h2 {
 	font-size: var(--font-size-title-page);
 }
   
-p, a {
+p, a, li {
 	font-size: var(--font-size-paragraph);
 	line-height: clamp(1.5, 3vw, 1.6);
 }

@@ -10,8 +10,6 @@ data:
 	#nav a:not(#about-link) { color: var(--clr-blue-light); }
 	#virto-logo svg path { fill: var(--clr-lavender-lightest); }
 	#about {
-		height: 90vh;
-		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
@@ -20,21 +18,35 @@ data:
 	}
 	#about h1 { font-size: calc(var(--font-size-title-page) + 3rem);}
 	#about h3 { margin: 0 clamp(7rem, 8vw, 20rem); font-family: var(--font-secondary); line-height: 1.5; font-size: var(--font-size-subtitle); }
-	#about h1::after {
-		content: url('../img/arrow_right.svg');
-        display: inline-block;
-        position: absolute;
-		left: 44%;
+	#animated-svg-2 { 	
+		position: absolute;
+		top: 17%;
+		left: 35%;
 		z-index: -1;
-        width: 15vw;
-        height: auto;
 	}
-	button { background-color: var(--clr-lavender-lightest); }
+	#animated-svg-2 path {
+		stroke-dasharray: 1000;
+    	stroke-dashoffset: 1000;
+    	animation: draw 4s ease-in-out forwards;
+	}
+
+	@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+	button { background-color: var(--clr-lavender-lighter); }
 
 	#benefits { flex-direction: column; gap: 2rem; }
-	section ul { list-style: '⬣   '; }
+	#benefits ul { list-style: '⬣   '; max-width: 600px; margin-left: clamp(1rem, 5vw, 4rem); }
 	ul span { color: var(--clr-lavender-darker); font-weight: 700; }
 	ul li { color: var(--clr-olive-darker); margin: 2rem; }
+	figure.logo svg {
+		position: absolute;
+		right: 5rem;
+		top: 130%;
+	    width: clamp(250px, 30vw, 400px);
+	}
 
 	#team { flex-direction: column; gap: 1rem; }
 	#team h1 { padding-bottom: 4rem; }
@@ -81,27 +93,33 @@ data:
 			display: none;
 		}
 	}
-	
+
 </style>
 
 <body>
 	<section id="about" class="lightest-green-text center">
 		<h1>Virto</h1>
+		<figure class="logo">
+			{% include "arrow_right_lavender.svg" %}
+		</figure>
 		<h3 class="bold">Virto es un revolucionario proyecto basado en el ecosistema descentralizado <span class="light-lavender-text">Polkadot</span>, diseñado para proporcionar las herramientas que necesitas para desarrollar, integrar y gestionar la tecnología blockchain, facilitando su adopción en tu negocio, no importa el tamaño o tipo.</h3>
 		<p>Sigue con nosotros y descubre como hacerlo</p>
 		<button>Aprender cómo</button>
 	</section>
 	<section id="benefits" class="white-bg">
 		<h2 class="dark-lavender-text bolder center">Desde nuestro ecosistema, ayudamos a los negocios a implementar la tecnología Blockchain y Web 3.0.</h2>
-		<ul>
-			<li><span>Aumentamos la seguridad</span> de tus transacciones.</li>
-			<li><span>Reducimos</span> costos de las transacciones.</li>
-			<li>Mejoramos su <span>eficiencia operativa.</span></li>
-			<li>Al usar nuestras herramientas puedes <span>formar parte de comunidades.</span></li>
-			<li>Acercamos un <span>comercio más directo y justo</span>, con la <span>participación en la gobernanza</span> de los proyectos.</li>
-		<ul>
+			<ul>
+				<li><span>Aumentamos la seguridad</span> de tus transacciones.</li>
+				<li><span>Reducimos</span> costos de las transacciones.</li>
+				<li>Mejoramos su <span>eficiencia operativa.</span></li>
+				<li>Al usar nuestras herramientas puedes <span>formar parte de comunidades.</span></li>
+				<li>Acercamos un <span>comercio más directo y justo</span>, con la <span>participación en la gobernanza</span> de los proyectos.</li>
+			<ul>
+		<figure class="logo">
+			{% include "colmenas.svg" %}
+		</figure>
 	</section>
-	<section id="team" class="white-bg dark-olive-text">
+	<section id="team" class="whitest-bg dark-olive-text">
 		<h2>Equipo Virto</h2>
 		<h3 class="bold">Conoce el alma, cabeza y corazón de este gran proyecto:</h3>
 			<ul id="team-list">
@@ -109,7 +127,7 @@ data:
 				<li>
 					<img src="{{ team_member.avatar }}" alt="{{ team_member.name }}" height="38">
 					<div>
-						<a href={{ team_member.link }}>
+						<a href={{ team_member.link }} class="dark-olive-text">
 								<h4>{{ team_member.name }}</h4>
 								<h5 class="thin">{{ team_member.rol }}</h5>
 						</a>
@@ -120,9 +138,9 @@ data:
 			</ul>
 	</section>
 	<section id="partners">
-
+		<h2 class="lightest-lavender-text">Partners</h2>
 	</section>
 	<section id="why-virto">
-
+		<h2 class="light-lavender-text"></h2>
 	</section>
 <body>
