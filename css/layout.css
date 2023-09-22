@@ -2,31 +2,6 @@
 html, body { all: initial; display: block; scroll-behavior: smooth; }
 body { background: var(--clr-olive-darker); font-family:  var(--font-primary); color: var(--color-text); min-height: 100vh }
 body.hidden { opacity: 0;}
-h1, h2, h3, h4, h5, h6, p {
-	margin: 0;
-	padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	line-height: calc(1em + 0.5vh);
-}
-
-h1, h2 {
-	font-size: var(--font-size-title-page);
-}
-  
-p, a, li {
-	font-size: var(--font-size-paragraph);
-	line-height: clamp(1.5, 3vw, 1.6);
-}
-
-h3, h4 {
-	font-size: var(--font-size-subtitle);
-}
-  
-button {
-	font-size: var(--font-size-button);
-}
 
 .max { width: 100%; }
 .sticky-hack { border: none; display: block; height: 1px; margin: 0; width: 100%; }
@@ -90,8 +65,7 @@ nav a:not(.logo) {
 	color: var(--clr-olive-darker);  
 	height: var(--nav-height);
 	position: relative;
-	--step-0: clamp(1rem, calc(0.9rem + 0.7vw), 1.3rem);
-	font-size:var(--step-0);
+	font-size: clamp(1rem, calc(0.9rem + 0.7vw), 1.3rem);
 }
 
 /*color nav about link*/
