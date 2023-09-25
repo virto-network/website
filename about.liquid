@@ -31,26 +31,35 @@ data:
 	}
 
 	@keyframes draw {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+
 	button { background-color: var(--clr-lavender-lighter); }
 
 	#benefits { flex-direction: column; gap: 2rem; }
 	#benefits h2 { font-size: clamp(2.5rem, 4vw, 3.25rem);}
-	#benefits ul { list-style: '⬣   '; max-width: 600px; margin-left: clamp(1rem, 5vw, 4rem); }
+	#benefits article { display: flex; justify-content: space-evenly; }
+	@media (max-width: 700px) {
+		#benefits article { flex-direction: column; }
+		figure.colmenas  { align-self: center; }
+	}
+	#benefits ul { list-style: '⬣   '; max-width: 560px; margin-left: clamp(1rem, 5vw, 4rem); }
 	@media (min-width: 1350px) {
 		#benefits ul { 
 			margin-left: clamp(3rem, 10vw, 10rem);
+			align-self: center;
 		}
 	}
 	ul span { color: var(--clr-lavender-darker); font-weight: 700; }
-	ul li { color: var(--clr-olive-darker); margin: 2rem; }
-	figure.logo svg {
-		position: absolute;
-		right: 5rem;
-		top: 130%;
+	#benefits-list li { color: var(--clr-olive-darker); margin: 2rem; }
+	#benefits figure.colmenas svg {
+		transform: rotateX(-3.46deg);
+		display: inline;
+		position: static;
+		top: -400px;
+		left: 580px;
 	    width: clamp(250px, 30vw, 400px);
 	}
 
@@ -117,16 +126,18 @@ data:
 	</section>
 	<section id="benefits" class="white-bg">
 		<h2 class="dark-lavender-text bolder center">Desde nuestro ecosistema, ayudamos a los negocios a implementar la tecnología Blockchain y Web 3.0.</h2>
-			<ul>
-				<li><span>Aumentamos la seguridad</span> de tus transacciones.</li>
-				<li><span>Reducimos</span> costos de las transacciones.</li>
-				<li>Mejoramos su <span>eficiencia operativa.</span></li>
-				<li>Al usar nuestras herramientas puedes <span>formar parte de comunidades.</span></li>
-				<li>Acercamos un <span>comercio más directo y justo</span>, con la <span>participación en la gobernanza</span> de los proyectos.</li>
-			<ul>
-		<figure class="logo">
-			{% include "colmenas.svg" %}
-		</figure>
+			<article>
+				<ul id="benefits-list">
+					<li><span>Aumentamos la seguridad</span> de tus transacciones.</li>
+					<li><span>Reducimos</span> costos de las transacciones.</li>
+					<li>Mejoramos su <span>eficiencia operativa.</span></li>
+					<li>Al usar nuestras herramientas puedes <span>formar parte de comunidades.</span></li>
+					<li>Acercamos un <span>comercio más directo y justo</span>, con la <span>participación en la gobernanza</span> de los proyectos.</li>
+				</ul>
+				<figure class="colmenas">
+						{% include "colmenas.svg" %}
+				</figure>
+			</article>
 	</section>
 	<article class="light-green-bg center">
 		<h3 class="dark-lavender-text">¿Te atrae la idea?</h3>

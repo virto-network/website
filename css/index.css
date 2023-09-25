@@ -237,7 +237,7 @@ a.center-arrow.dark-olive-text.boldest {
 /*Media queries*/
 @media screen and (max-width:1200px) {
     figure, .scroll-link { display: flex; } 
-    section>article, .scroll-link { flex-direction: column; }
+    section>article:not(.colmenas) .scroll-link { flex-direction: column; }
     #local-community .max {
         align-items: start;
         gap: 2rem;
