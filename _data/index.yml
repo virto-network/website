@@ -78,11 +78,9 @@ team_members:
     rol: Frontend Developer       
 
 partners:
-  - eyebrow: RED PRINCIPAL
-    name: Polkadot
-    link: https://www.polkadot.network/
-    content: Es una infraestructura única de blockchain compuesta de dos redes interconectadas, la red principal y la red de parachains, generando un ecosistema de blockchain escalable y adaptable.
-  - eyebrow: PARACHAIN
-    name: Kusama
-    link: https://kusama.network/
-    content: La red de parachains experimental de Polkadot, que sirve para testear implementaciones rápidas de actualizaciones, facilitando la detección de problemas.
+  - eyebrow: TESORERÍA
+    name: <a href="https://www.polkadot.network/">Polkadot</a> y <a href="https://kusama.network/">Kusama</a>
+    content: Las tesorerías sirven para financiar proyectos comunitarios. A través de una gobernanza estructurada de cada red, los proyectos se exponen, financian y monitorean, incentivando la innovación continua.
+  - eyebrow: GRANTS PROGRAM
+    name: <a href="https://web3.foundation/">Web3 Foundation</a>
+    content: Facilita donativos a desarrolladores que contribuyen a la infraestructura de Polkadot y Kusama. A través de programas como Hackathons y Grants, se busca promover soluciones avanzadas en la Web 3.0.
