@@ -72,3 +72,11 @@ team_members:
     link: https://github.com/ail3ngrimaldi
     avatar: https://avatars.githubusercontent.com/u/63558201?v=4
     rol: Frontend Developer       
+
+partners:
+  - eyebrow: RED PRINCIPAL
+    name: Polkadot
+    content: Es una infraestructura única de blockchain compuesta de dos redes interconectadas, la red principal y la red de parachains, generando un ecosistema de blockchain escalable y adaptable.
+  - eyebrow: PARACHAIN
+    name: Kusama
+    content: La red de parachains experimental de Polkadot, que sirve para testear implementaciones rápidas de actualizaciones, facilitando la detección de problemas.

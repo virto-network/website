@@ -69,7 +69,7 @@ data:
 
 	article { padding: clamp(2rem, 10vh, 6rem) 0; }
 	article> * { margin: 1rem; }
-	article button:hover { background-color: var(--clr-olive-darker); color: white; }
+	article button:hover { background-color: var(--clr-olive-darker); }
 
 	#team { flex-direction: column; gap: 1rem; }
 	#team h1 { padding-bottom: 4rem; }
@@ -119,6 +119,27 @@ data:
 		}
 	}
 
+	#partners {
+		flex-direction: column;
+		gap: 2rem;
+	}
+	#partners p { max-width: 500px; font-size: 1.5rem; }
+	#partners-list { display: flex; justify-content: center; margin-top: -15rem;}
+	#partners-list li { list-style: none; border-radius: 5px; margin: 1.5rem; padding: 2rem; flex-basis: 50% }
+	#partners-list li > * { line-height: 2; }
+	
+	#two-arrows { position: relative; top:-180px; left: 35%;}
+	#two-arrows path {
+		stroke-dasharray: 1100;
+    	stroke-dashoffset: 1000;
+    	animation: draw 3s ease-in-out forwards;
+	}
+
+	article.white-bg {
+		display: flex;
+		padding: 2rem;
+	}
+	article.white-bg h5 { font-size: var(--font-size-subtitle); max-width: 500px; }
 </style>
 
 <body>
@@ -171,9 +192,24 @@ data:
 			</ul>
 	</section>
 	<section id="partners">
-		<h2 class="lightest-lavender-text center">Conoce a quienes nos apoyan</h2>
+		<h2 class="white-text bold">Conoce a quienes nos apoyan</h2>
+		<p class="left lightest-lavender-text">Aquí te mostramos un poco de quienes creen en la visión de Virto y ven el potencial de su aplicación en el mundo real.</p>
+			<figure class="logo">
+						{% include "two_arrows.svg" %}
+				</figure>
+			<ul id="partners-list">
+			{% for partner in site.data.index.partners %}
+				<li class="light-lavender-bg">
+					<p class="dark-lavender-text bold">{{ partner.eyebrow }}</p>
+						<h4 class="regular">{{ partner.name }}</h4>
+						<h5 class="regular">{{ partner.content }}</h5>
+				</li>
+			{% endfor %}
+			</ul>
 	</section>
-	<section id="why-virto">
-		<h2 class="light-lavender-text"></h2>
-	</section>
+	<article class="white-bg">
+		<h5 class="regular dark-olive-text">Ambas redes son <span class="boldest">gobernadas por sus respectivas comunidades</span>, siguiendo un proceso de actualizaciones y cambios consensuados por quienes poseen tokens.</h5>
+		<h2 class="dark-olive-text"> = </h2> 
+		<h2 class="dark-lavender-text bold">Transacciones seguras y confiables</h2>
+	</article>
 <body>

@@ -39,6 +39,7 @@ h1, h2, h3, h4, h5, h6, p {
 h1, h2, h3, h4, h5, h6 { line-height: calc(1em + 0.5vh); }
 h1, h2 { font-size: var(--font-size-title-page); }
 h3, h4 { font-size: var(--font-size-subtitle); }
+h5 { font-size: calc(var(--font-size-paragraph) - 1px )}
 p, a { font-size: var(--font-size-paragraph); }
 li { font-size: var(--font-size-list); }
 
