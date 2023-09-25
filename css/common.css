@@ -16,6 +16,7 @@ button {
     text-align: center;
 	background-color: var(--clr-green-darker);
 	font-size: var(--font-size-button);
+	transition: background-color 650ms ease, color 650ms ease;
 }
 
 .center-arrow { /*Applied to <a> that contains an arrow*/
