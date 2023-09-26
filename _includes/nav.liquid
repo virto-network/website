@@ -11,20 +11,22 @@
 		<a {% if page.data.route == "about"%}current{%endif%}" href="/about/" id="about-link" role="menuitem" aria-label="Sobre Virto">
 			Sobre Virto
 		</a>
-		<a {% if page.data.route == "comunidades"%}current{%endif%}" href="/comunidades/" role="menuitem" aria-label="Comunidades locales">
-			Comunidades locales
-		</a>
-		<a {% if page.data.route == "casos-de-uso"%}current{%endif%}" href="/casos-de-uso/" role="menuitem" aria-label="Casos de uso">
-			Casos de uso
-		</a>
+		<div class="hide">
+			<a {% if page.data.route == "comunidades"%}current{%endif%}" href="/comunidades/" role="menuitem" aria-label="Comunidades locales">
+				Comunidades locales
+			</a>
+			<a {% if page.data.route == "casos-de-uso"%}current{%endif%}" href="/casos-de-uso/" role="menuitem" aria-label="Casos de uso">
+				Casos de uso
+			</a>
+			<a {% if page.data.route == "contacto"%}current{%endif%}" href="/contacto/" role="menuitem" aria-label="Contacto">
+				Contacto
+			</a>
+		</div>
 		<a {% if page.data.route == "whitepaper"%}current{%endif%}" href="/docs/whitepaper.html" role="menuitem" aria-label="Para desarrolladores">
-			Para desarrolladores
+			Whitepaper
 		</a>
 		<a {% if page.data.route == "blog"%}current{%endif%}" href="/blog/" role="menuitem" aria-label="Blog">
 			Blog
-		</a>
-		<a {% if page.data.route == "contacto"%}current{%endif%}" href="/contacto/" role="menuitem" aria-label="Contacto">
-			Contacto
 		</a>
 		<a id="menu-icon" class="menu-icon" aria-label="Abrir menú" tabindex="1">
 			<svg width="30" height="30" viewBox="-2 -2 34 34" aria-labelledby="Icono menu mobile">
@@ -39,20 +41,22 @@
 			<a {% if page.data.route == "about"%}current{%endif%}" href="/about/" role="menuitem" aria-label="Sobre Virto">
 				Sobre Virto
 			</a>
+			<div class="hide">
 			<a {% if page.data.route == "comunidades"%}current{%endif%}" href="/comunidades/" role="menuitem" aria-label="Comunidades locales">
 				Comunidades locales
 			</a>
 			<a {% if page.data.route == "casos-de-uso"%}current{%endif%}" href="/casos-de-uso/" role="menuitem" aria-label="Casos de uso">
 				Casos de uso
 			</a>
+			<a {% if page.data.route == "contacto"%}current{%endif%}" href="/contacto/" role="menuitem" aria-label="Contacto">
+				Contacto
+			</a>
+			</div>
 			<a {% if page.data.route == "whitepaper"%}current{%endif%}" href="/docs/whitepaper.html" role="menuitem" aria-label="Para desarrolladores">
-				Para desarrolladores
+				Whitepaper
 			</a>
 			<a {% if page.data.route == "blog"%}current{%endif%}" href="/blog/" role="menuitem" aria-label="Blog">
 				Blog
-			</a>
-			<a {% if page.data.route == "contacto"%}current{%endif%}" href="/contacto/" role="menuitem" aria-label="Contacto">
-				Contacto
 			</a>
 		</nav>
 	</div>

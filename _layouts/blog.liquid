@@ -9,16 +9,17 @@
 	
 	<style>
 	body { background: var(--color-bg-alt); display: flex; flex-direction: column; }
-	#blog { background-color: var(--clr-white); }
+	#blog { background-color: var(--clr-white); padding: 5rem 2rem; }
 	main { flex: 1; padding: 1rem; }
 	footer { background: var(--color-bg); }
-	h1 { height: 30vh; display: flex; padding: 0 1rem; }
-	h1 svg {
-		height: 100%; width: 100%;
+	figure { display: flex; align-items: center; flex-direction: column; }
+	figure svg {
+		height: 100%; 
+		width: 100%;
 		max-width: 500px;
 		margin: auto;
-		fill: var(--color-text);
 	}
+	h1 { height: 20vh; display: flex; padding: 0 1rem; }
 
 	#posts { flex: 1; margin: 0; padding: 0; list-style: none; }
 	#posts li { position: relative; width: 100%; margin: 1rem 0; }

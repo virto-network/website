@@ -43,16 +43,16 @@ data:
 	button { background-color: var(--clr-lavender-lighter); }
 
 	#benefits { flex-direction: column; gap: 2rem; }
-	#benefits h2 { font-size: clamp(2.5rem, 4vw, 3.25rem);}
+	#benefits h2 { font-size: clamp(2.5rem, 4vw, 3.25rem); max-width: 70%; margin-left: clamp(3rem, 10vw, 7rem);}
 	#benefits article { display: flex; justify-content: space-evenly; }
 	@media (max-width: 700px) {
 		#benefits article { flex-direction: column; }
 		figure.colmenas  { align-self: center; }
 	}
-	#benefits ul { list-style: '⬣   '; max-width: 560px; margin-left: clamp(1rem, 5vw, 4rem); }
+	#benefits ul { list-style: '⬣   '; width: clamp(300px, 50%, 900px); margin-left: clamp(1rem, 5vw, 4rem); }
 	@media (min-width: 1350px) {
 		#benefits ul { 
-			margin-left: clamp(3rem, 10vw, 10rem);
+			margin-left: clamp(3rem, 10vw, 7rem);
 			align-self: center;
 		}
 	}
@@ -103,7 +103,13 @@ data:
 		background-color: #ccc;
 	}
 
-	@media (max-width: 800px) {
+	@media (min-width: 1600px) {
+		#team-list {
+			grid-template-columns: repeat(5, 1fr);
+		}
+	}
+
+	@media (max-width: 700px) {
 		#team-list { 
 			display: flex;
 			flex-direction: column;
@@ -111,9 +117,6 @@ data:
 		#team-list li {
 			margin-top: 10px;
 		}
-	}
-
-	@media (max-width: 900px) {
 		.space {
 			display: none;
 		}
@@ -162,10 +165,10 @@ data:
 		</h1>
 			<h3 class="animated bold">Virto es un revolucionario proyecto basado en el ecosistema descentralizado <span class="light-lavender-text">Polkadot</span>, diseñado para proporcionar las herramientas que necesitas para desarrollar, integrar y gestionar la tecnología blockchain, facilitando su adopción en tu negocio, no importa el tamaño o tipo.</h3>
 			<p class="animated">Sigue con nosotros y descubre como hacerlo</p>
-			<button class="animated">Aprender cómo</button>
+			<button class="animated"><a href="/coming-soon/">Aprender cómo</a></button>
 	</section>
 	<section id="benefits" class="white-bg">
-		<h2 class="animated dark-lavender-text bolder center">Desde nuestro ecosistema, ayudamos a los negocios a implementar la tecnología Blockchain y Web 3.0.</h2>
+		<h2 class="animated dark-lavender-text bolder left">Desde nuestro ecosistema, ayudamos a los negocios a implementar la tecnología Blockchain y Web 3.0.</h2>
 			<article class="animated">
 				<ul id="benefits-list">
 					<li><span>Aumentamos la seguridad</span> de tus transacciones.</li>
@@ -180,9 +183,10 @@ data:
 			</article>
 	</section>
 	<article class="light-green-bg center">
+		{% assign matrix_to = "#virto-network:virto.community?via=virto.community" %}
 		<h3 class="animated dark-lavender-text">¿Te atrae la idea?</h3>
 		<h2 class="animated dark-olive-text bolder">Entonces, ¡únete a nuestra comunidad hoy!</h2>
-		<button class="animated dark-lavender-bg white-text">Únete a Virto</button>
+		<button class="animated dark-lavender-bg white-text"><a href="https://matrix.to/#/{{ matrix_to }}" >Únete a Virto</a></button>
 	</article>
 	<section id="team" class="whitest-bg dark-olive-text">
 		<h2>Equipo Virto</h2>
@@ -194,7 +198,7 @@ data:
 					<div>
 						<a href={{ team_member.link }} class="dark-olive-text">
 								<h4>{{ team_member.name }}</h4>
-								<h5 class="thin">{{ team_member.rol }}</h5>
+								<h5 class="thin">{{ team_member.role }}</h5>
 						</a>
 					</div>
 				</li>

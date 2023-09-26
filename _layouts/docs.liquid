@@ -9,11 +9,24 @@
 	
 	<link rel="stylesheet" href="/css/layout.css">
 	<style>
-	main { margin: auto; padding: 2rem 1.5rem; }
+	/*font sizes*/
+	#whitepaper h2 { font-size: 2.5em; }
+	#whitepaper h3 { font-size: 2em; }
+	#whitepaper h4 { font-size: 1.7em; }
+	#whitepaper li, #whitepaper p {font-size: 1em; font-family: sans-serif !important; }
+	
+	body { min-height: 100vh; }
+	main { display: block !important; margin: auto; padding: 2rem 1.5rem; line-height: 1.5; }
 	h1, h1+h3, h1+h3+p { column-span: all; text-align: center; }
-	h2 { margin-top: 1.5em; }
+	#whitepaper h2, #whitepaper h3, #whitepaper h4 { margin-top: 2em; margin-bottom: 1em; }
 	p { text-align: justify; }
 	img { max-width: 100%; }
+	.max {
+		width: 100%;
+		max-width: var(--max-width);
+		margin: auto;
+		box-sizing: border-box;
+	}
 	@media screen and (min-width: 700px) {
 		main { columns: 2 auto; column-gap: 8vmin; }
 	}
@@ -23,9 +36,9 @@
 	</style>
 </head>
 
-<body data-route={{ page.data.route }}>
+<body data-route={{ page.data.route }} class="white-bg">
 	{% include "nav.liquid" %}
-	<main class="max">
+	<main class="max" id="whitepaper">
 		{{ page.content }}
 	</main>
 </body>
