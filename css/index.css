@@ -123,15 +123,15 @@ figure.logo svg {
 #not-programmer>article.max { margin-top: 5rem; max-width: 800px; }
 #not-programmer button { background-color: var(--clr-lavender-lighter);}
 
-/*Here you can*/
-#here-you-can {
+/*Know more section*/
+#know-more {
     align-items: center;
     display: grid;
     grid-template-columns: auto 1fr auto;
     row-gap: 4em;
 }
 
-#here-you-can > h3.dark-olive-text, #here-you-can > .auto-grid {
+#know-more > h3.dark-olive-text, #know-more > .auto-grid {
     grid-column: 2;
 }
 
