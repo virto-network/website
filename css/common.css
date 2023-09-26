@@ -71,6 +71,7 @@ span { font-family: inherit; }
 .white-text { color: var(--clr-white); }
 .grey-text { color: var(--clr-grey); }
 .dark-olive-text { color: var(--clr-olive-darker); }
+.dark-green-text { color: var(--clr-green-darker); }
 .light-green-text { color: var(--clr-green-lighter); }
 .lightest-green-text { color: var(--clr-green-lighter); }
 .dark-lavender-text { color: var(--clr-lavender-darker); }
@@ -91,3 +92,5 @@ span { font-family: inherit; }
         justify-content: center;
 	}
 }
+
+.hide { display: none; }
