@@ -43,39 +43,39 @@ team_members:
   - name: <span>Daniel</span><br> Olano
     link: https://github.com/olanod
     avatar: https://avatars.githubusercontent.com/u/1329925?v=4
-    rol: Blockchain Engineer
+    role: Blockchain Engineer
   - name: <span>Isabella</span><br> Paz
     link: https://www.linkedin.com/in/isabellapazpaz-copywriter/
     avatar: https://media.licdn.com/dms/image/C4E03AQFC7dwPv5dkQA/profile-displayphoto-shrink_400_400/0/1566399674332?e=1701302400&v=beta&t=WDoniwgwpNrBTa0TPfHXywXXR-GpT3OQb1rFGcS3TgM
-    rol: Community manager
+    role: Community manager
   - name: <span>Pablo Andrés</span><br> Dorado Suárez
     link: https://github.com/pandres95
     avatar: https://avatars.githubusercontent.com/u/2502577?v=4
-    rol: Blockchain Engineer
+    role: Blockchain Engineer
   - name: <span>Johan Alexis</span><br> Duque Cadena
     link: https://github.com/johandroid
     avatar: https://avatars.githubusercontent.com/u/1792179?v=4
-    rol: Hardware Engineer
+    role: Senior Embedded Software Engineer
   - name: <span>Camila</span><br> Olano
     link: https://www.linkedin.com/in/camilaolanocastro/
     avatar: https://media.licdn.com/dms/image/C4E03AQEtFZ7Gm_8_fQ/profile-displayphoto-shrink_400_400/0/1618617055495?e=1701302400&v=beta&t=cbsDNklO6Tz8rRL_MLQKUjlfH-It0Y628yivC9jsrUY
-    rol: Content manager
+    role: Content manager
   - name: <span>Brayan</span><br> Vargas
     link: https://github.com/b-avb
     avatar: https://avatars.githubusercontent.com/u/86427419?v=4
-    rol: Developer
+    role: Developer
   - name: <span>David</span><br> Barinas
     link: https://github.com/S0c5
     avatar: https://avatars.githubusercontent.com/u/5241972?v=4
-    rol: Developer
+    role: Developer
   - name: <span>Nicolas</span>
     link: https://github.com/darkforest0202
     avatar: https://avatars.githubusercontent.com/u/92313673?v=4
-    rol: Blockchain Engineer
+    role: Blockchain Engineer
   - name: <span>Ailén</span><br> Grimaldi
     link: https://github.com/ail3ngrimaldi
     avatar: https://avatars.githubusercontent.com/u/63558201?v=4
-    rol: Frontend Developer       
+    role: Frontend Developer       
 
 partners:
   - eyebrow: TESORERÍA
