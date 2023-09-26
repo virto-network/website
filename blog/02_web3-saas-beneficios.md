@@ -6,6 +6,7 @@ description: |
 published_date: 2023-09-11 12:34:56 +0100
 permalink: /blog/web3-saas-beneficios
 data:
+  route: blog
   author: Isabella Paz
 is_draft: false
 ---
