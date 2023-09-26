@@ -77,6 +77,6 @@ Al ser una solución diseñada para esta nueva web, Virto te permite navegar, co
 
 ¿Cansado de que las herramientas digitales no se adapten a las necesidades únicas de tu negocio? En **Virto**, entendemos tus desafíos. **Regístrate** y cuéntanos tus inquietudes; trabajaremos juntos para ofrecerte **soluciones personalizadas** que realmente funcionen para ti. **¡Da el siguiente paso hacia el éxito digital!** 🚀
 
-**[Regístrate](https://virto.network/)**
+**[Regístrate](https://forms.gle/hSjzyETwuGMadsaU8)**
 
 
