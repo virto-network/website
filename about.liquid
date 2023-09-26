@@ -43,7 +43,7 @@ data:
 	button { background-color: var(--clr-lavender-lighter); }
 
 	#benefits { flex-direction: column; gap: 2rem; }
-	#benefits h2 { font-size: clamp(2.5rem, 4vw, 3.25rem);}
+	#benefits h2 { font-size: clamp(2.5rem, 4vw, 3.25rem); max-width: 70%; margin-left: clamp(3rem, 10vw, 7rem);}
 	#benefits article { display: flex; justify-content: space-evenly; }
 	@media (max-width: 700px) {
 		#benefits article { flex-direction: column; }
@@ -52,7 +52,7 @@ data:
 	#benefits ul { list-style: '⬣   '; width: clamp(300px, 50%, 900px); margin-left: clamp(1rem, 5vw, 4rem); }
 	@media (min-width: 1350px) {
 		#benefits ul { 
-			margin-left: clamp(3rem, 10vw, 10rem);
+			margin-left: clamp(3rem, 10vw, 7rem);
 			align-self: center;
 		}
 	}
@@ -103,7 +103,13 @@ data:
 		background-color: #ccc;
 	}
 
-	@media (max-width: 800px) {
+	@media (min-width: 1600px) {
+		#team-list {
+			grid-template-columns: repeat(5, 1fr);
+		}
+	}
+
+	@media (max-width: 700px) {
 		#team-list { 
 			display: flex;
 			flex-direction: column;
@@ -111,9 +117,6 @@ data:
 		#team-list li {
 			margin-top: 10px;
 		}
-	}
-
-	@media (max-width: 900px) {
 		.space {
 			display: none;
 		}
@@ -165,7 +168,7 @@ data:
 			<button class="animated"><a href="/coming-soon/">Aprender cómo</a></button>
 	</section>
 	<section id="benefits" class="white-bg">
-		<h2 class="animated dark-lavender-text bolder center">Desde nuestro ecosistema, ayudamos a los negocios a implementar la tecnología Blockchain y Web 3.0.</h2>
+		<h2 class="animated dark-lavender-text bolder left">Desde nuestro ecosistema, ayudamos a los negocios a implementar la tecnología Blockchain y Web 3.0.</h2>
 			<article class="animated">
 				<ul id="benefits-list">
 					<li><span>Aumentamos la seguridad</span> de tus transacciones.</li>
