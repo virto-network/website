@@ -166,19 +166,4 @@ const makeSticky = ([br]) =>
 whenVisible('main>section', addViewedClass, { threshold: 0.2 });
 whenVisible('.sticky-hack', makeSticky, { threshold: [0, 1] });
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.intersectionRatio > 0) {
-      entry.target.classList.add('animate');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.2 }); 
-
-const animatedElements = document.querySelectorAll('.animated');
-
-animatedElements.forEach(element => {
-  observer.observe(element);
-});
-
 </script>

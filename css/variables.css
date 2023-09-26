@@ -11,11 +11,11 @@
     --clr-olive-darker: hsl(163, 49%, 14%);
     --clr-olive-medium: hsl(157, 41%, 19%);
     --clr-olive-lighter: hsl(160, 8%, 79%);
-    --clr-lavender-darker: hsl(269, 54%, 56%);
+    --clr-lavender-darker: #8d52cb;
     --clr-lavender-lighter: hsl(266, 55%, 76%);
     --clr-lavender-lightest: hsl(266, 55%, 88%);
-    --clr-blue-darker: hsl(200, 96%, 55%);
-    --clr-blue-lighter: hsl(193, 77%, 81%);
+    --clr-blue-dark: hsl(200, 96%, 55%);
+	--clr-blue-light: hsl(196, 80%, 86%);
     --nav-height: calc(4rem + 2vh);
     --font-primary: 'Outfit', sans-serif;
     --font-secondary: 'Plus Jakarta Sans', sans-serif;
@@ -23,6 +23,7 @@
     --font-size-title-page: clamp(2.5rem, 5vw, 3.75rem);
     --font-size-paragraph: clamp(1rem, 2vw, 1.25rem);
     --font-size-subtitle: clamp(1.3rem, 3vw, 1.88rem);
+	--font-size-list: clamp(1.2rem, 3vw, 1.4rem);
     --font-size-button: clamp(1rem, 3vw, 1.3rem);
 /*Font weights*/
     --font-weight-300: 300;

@@ -237,7 +237,7 @@ a.center-arrow.dark-olive-text.boldest {
 /*Media queries*/
 @media screen and (max-width:1200px) {
     figure, .scroll-link { display: flex; } 
-    section>article, .scroll-link { flex-direction: column; }
+    section>article:not(.colmenas) .scroll-link { flex-direction: column; }
     #local-community .max {
         align-items: start;
         gap: 2rem;
@@ -257,7 +257,6 @@ a.center-arrow.dark-olive-text.boldest {
 }
 
 /*Button animation*/
-button { transition: background-color 662ms ease, color 662ms ease; }
 button:hover { background-color: var(--clr-lavender-darker); color: white; }
 #not-programmer button:hover { background-color: var(--clr-green-darker); }
 

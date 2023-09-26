@@ -15,6 +15,8 @@ button {
     padding: clamp(5px, 2vh, 20px) clamp(20px, 4vw, 40px);
     text-align: center;
 	background-color: var(--clr-green-darker);
+	font-size: var(--font-size-button);
+	transition: background-color 650ms ease, color 650ms ease;
 }
 
 .center-arrow { /*Applied to <a> that contains an arrow*/
@@ -28,9 +30,23 @@ button {
     margin-left: 0.5em;
 }
 
-/*General font-family for these elements, add here any other element you want*/
-a, button, p, h3 { font-family:  var(--font-secondary); }
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0;
+}
 
+/*General font-sizes and line-heights*/
+h1, h2, h3, h4, h5, h6 { line-height: calc(1em + 0.5vh); }
+h1, h2 { font-size: var(--font-size-title-page); }
+h3, h4 { font-size: var(--font-size-subtitle); }
+h5 { font-size: calc(var(--font-size-paragraph) - 1px )}
+p, a { font-size: var(--font-size-paragraph); }
+li { font-size: var(--font-size-list); }
+
+
+/*General font-family for these elements, add here any other element you want*/
+a, button, p, li, h3, h5 { font-family:  var(--font-secondary); }
+span { font-family: inherit; }
 /*Add one of these classes to your element to add a text-alignment*/
 .right { text-align: right; }
 .left { text-align: left;}
@@ -49,11 +65,15 @@ a, button, p, h3 { font-family:  var(--font-secondary); }
 .dark-olive-bg { background-color: var(--clr-olive-darker); }
 .light-green-bg { background-color: var(--clr-green-lighter); }
 .light-lavender-bg { background-color: var(--clr-lavender-lightest); }
+.dark-lavender-bg { background-color: var(--clr-lavender-darker); }
 
 /*Add one of this classes to your element to add a text-color*/
+.white-text { color: var(--clr-white); }
 .grey-text { color: var(--clr-grey); }
 .dark-olive-text { color: var(--clr-olive-darker); }
 .light-green-text { color: var(--clr-green-lighter); }
+.lightest-green-text { color: var(--clr-green-lighter); }
+.dark-lavender-text { color: var(--clr-lavender-darker); }
 .light-lavender-text { color: var(--clr-lavender-lighter); }
 .lightest-lavender-text { color: var(--clr-lavender-lightest); }
 
