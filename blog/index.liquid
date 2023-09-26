@@ -4,7 +4,10 @@ data:
   route: blog
 ---
 
-<h1>{% include "blog.svg" %}</h1>
+<figure class="logo">
+	{% include "blog.svg" %}
+	<h1>Blog</h1>
+</figure>
 
 <ul id="posts">
 {% for post in collections.posts.pages %}{% if post.slug != "index" %}

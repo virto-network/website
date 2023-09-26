@@ -18,6 +18,8 @@ button {
 	font-size: var(--font-size-button);
 	transition: background-color 650ms ease, color 650ms ease;
 }
+button a { color: inherit; }
+button a:hover { text-decoration: none; }
 
 .center-arrow { /*Applied to <a> that contains an arrow*/
     display: flex;
