@@ -161,10 +161,6 @@ a.center-arrow.dark-olive-text.boldest {
 /*Local community*/
 #local-community { display: grid; gap: 1rem; }
 
-#local-community > article > article { 
-    gap: clamp(20em, 10vw, 50em);
-}
-
 .logo.build-machine img {
     width:clamp(300px, 38vw, 800px);
 }
@@ -173,10 +169,11 @@ a.center-arrow.dark-olive-text.boldest {
     .build-machine::after {
         content: url('../img/arrow_left.svg');
         display: inline-block;
-        position: relative;
-        bottom: 35vh;
-        left: 7vw;
-        width: 10vw;
+        position: absolute;
+        bottom: 70%;
+        left: 45%;
+        transform: translate(-100%, -50%);
+        width: 20px;
         height: auto;
     }
   }
@@ -208,17 +205,8 @@ a.center-arrow.dark-olive-text.boldest {
 #you-decide article>ul.max {
     align-items: center;
 	display: flex;
-    gap: clamp(.5rem, 6vw, 3rem);;
+    gap: clamp(.5rem, 6vw, 3rem);
 	justify-content: center;
-}
-
-#you-decide article>ul.max a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 2em;
 }
 
 #you-decide article>ul svg {
@@ -229,8 +217,9 @@ a.center-arrow.dark-olive-text.boldest {
 .underlined-element::after {
     content: url('../img/underline.svg');
     position: relative;
-    bottom: 3vh;
-    width: 10vw;
+    bottom: clamp(3vh, 4vh + 1vw, 7vh);
+	left: 7.5vw;
+    width: 7vw;
     height: auto;
 }
 

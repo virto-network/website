@@ -1,15 +1,21 @@
 @media print { :root { --color-text: black; } }
 html, body { all: initial; display: block; scroll-behavior: smooth; }
-body { background: var(--clr-olive-darker); font-family:  var(--font-primary); color: var(--color-text); min-height: 100vh }
+body { background: var(--clr-olive-darker); font-family:  var(--font-primary); color: var(--color-text); min-height: 100vh; margin-top: var(--nav-height); }
 body.hidden { opacity: 0;}
 
 .max { width: 100%; }
-.sticky-hack { border: none; display: block; height: 1px; margin: 0; width: 100%; }
 
 /** Top navigation**/
-#nav { background-color: var(--clr-green-lighter);}
+#nav { 
+	background-color: var(--clr-green-lighter);
+	height: var(--nav-height);
+	padding: 2.5rem 1rem;
+	position: fixed;
+	width: 100%;
+    top: 0;
+	z-index: 99;
+}
 
-nav { height: var(--nav-height); }
 nav .row {
 	align-items: center;
 	box-sizing: border-box;
@@ -26,16 +32,6 @@ nav a {
 	justify-content: center;
 	overflow: hidden;
 	font-family: var(--font-primary);
-}
-nav a.active { font-weight: 700; }
-nav a.active svg path { stroke-width: 3; }
-
-.top-nav { 
-	padding: 2.5rem 4rem;
-	position: fixed;
-	width: 100%;
-    top: 0;
-	z-index: 99;
 }
 
 #virto-logo {
@@ -68,22 +64,7 @@ nav a:not(.logo) {
 	font-size: clamp(1rem, calc(0.9rem + 0.7vw), 1.3rem);
 }
 
-/*color nav about link*/
-#about-link, h1>span {
-	color: var(--clr-lavender-darker);
-}
-
-/* icons */
-nav a:not(.logo) svg {
-	stroke: var(--color-accent);
-	stroke-width: 2;
-}
-
-@media screen and (min-width:600px) {
-	nav svg { display: initial; margin-right: 0.5rem; }
-	nav a.logo svg #letters { display: initial; }
-	nav a.logo { width: initial; height: calc(var(--nav-height) - 3rem); }
-}
+#about-link { color: var(--clr-lavender-darker); }
 
 @media screen and (max-width:1300px) {
     .top-nav a:not(.menu-icon) {
@@ -97,7 +78,6 @@ nav a:not(.logo) svg {
     }
 }
 
-/** Footer **/
 footer {
     display: flex;
     flex-direction: row;
