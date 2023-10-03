@@ -18,7 +18,9 @@ button {
 	font-size: var(--font-size-button);
 	transition: background-color 650ms ease, color 650ms ease;
 }
-button a { color: inherit; }
+
+/*Property added in order to avoid default iOS configurations, once deployed it needs to be tested */
+button a { color: inherit !important; }
 button a:hover { text-decoration: none; }
 
 .center-arrow { /*Applied to <a> that contains an arrow*/
