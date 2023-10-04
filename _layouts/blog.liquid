@@ -4,28 +4,26 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="{{ site.description }}">
-	<meta name="theme-color" content="#3A3387">
+	<meta name="theme-color" content="#8d52cb">
 	<title>{{ page.title }}</title>
 	
 	<style>
-	body { background: var(--color-bg-alt); display: flex; flex-direction: column; }
-	#blog { background-color: var(--clr-white); padding: 5rem 2rem; }
+	body { display: flex; flex-direction: column; }
+	#blog { width: 100%; max-width: var(--max-width); margin: auto; }
 	main { flex: 1; padding: 1rem; }
-	footer { background: var(--color-bg); }
 	figure { display: flex; align-items: center; flex-direction: column; }
 	figure svg {
 		height: 100%; 
 		width: 100%;
-		max-width: 500px;
+		max-width: 200px;
 		margin: auto;
 	}
-	h1 { height: 20vh; display: flex; padding: 0 1rem; }
+	h1 { height: 20vh; display: flex; }
 
 	#posts { flex: 1; margin: 0; padding: 0; list-style: none; }
 	#posts li { position: relative; width: 100%; margin: 1rem 0; }
 
 	#posts .card {
-		background: var(--color-bg);
 		border-radius: 5px;
 		box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 		box-sizing: border-box;
@@ -51,7 +49,7 @@
 
 	#posts .card time {
 		display: flex; align-items: center;
-		color: var(--color-alt);
+		color: var(--clr-lavender-lighter);
 		font-size: 0.9em; font-style: italic;
 		justify-content: flex-end;
 		line-height: 1.5rem;
@@ -60,12 +58,12 @@
 	#posts .card a {
 		display: flex;
 		align-items: center;
-		color: var(--color-text);
+		color: inherit;
 		text-decoration: none;
 		outline: none;
 		flex: 2;
 	}
-	#posts .card a:is(:hover,:focus) h2 { text-decoration: underline var(--color-alt) 3px; }
+	#posts .card a:is(:hover,:focus) h2 { text-decoration: underline var(--clr-lavender-lighter) 3px; }
 	#posts .card a h2 {
 		margin: 0;
 		text-underline-offset: 4px;
@@ -74,7 +72,7 @@
 	}
 	#posts li:nth-of-type(n+3) .card h2 { font-size: 1.3em;}
 	#posts .card :is(time,a,p) { padding: 0 1rem; box-sizing: border-box; }
-	#posts .card p { margin: 0; }
+	#posts .card p { margin: 0; font-size: .750em; }
 	#posts li:nth-of-type(n+3) .card p { display: none; }
 
 	@media screen and (min-width: 700px) {
@@ -114,7 +112,7 @@
 	</style>
 </head>
 
-<body>
+<body class="white-bg">
 	{% include "nav.liquid" %}
 	<main class="max" id="blog">
 		{{ page.content }}
