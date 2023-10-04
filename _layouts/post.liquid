@@ -4,19 +4,18 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="{{ site.description }}">
-	<meta name="theme-color" content="#3A3387">
+	<meta name="theme-color" content="#8d52cb">
 	<title>{{ page.title }}</title>
 	
 	<style>
 	#post { background-color: var(--clr-white); }
 	main { padding: 2rem 1rem; box-sizing: border-box; }
 	header h1, header p { text-align: center; }
-	header h1 { margin-top: 8vh; color: var(--color-accent); }
-	header p { font-style: italic; } 
-	header time::after { content: '⬣'; margin: 0 1em; color: var(--color-alt); }
+	header h1 { margin-top: 8vh; }
+	header p { font-style: italic; color: var(--clr-olive-darker); margin-top: 1em; } 
+	header time::after { content: '⬣'; margin: 0 1em; color: var(--clr-lavender-lighter); }
 	header picture {
 		align-items: center;
-		background: var(--color-accent);
 		color: white;
 		display: flex;
 		justify-content: center;
@@ -29,15 +28,15 @@
 	header img { object-fit: cover; width: 100%; height: 100%; }
 	article { font-size: 1.1em; line-height: 1.8em; max-width: 700px; margin: auto; }
 	article>p { margin: calc(1.5rem + 2vmin) 0; }
-	article strong { color: var(--color-accent); }
-	article a { color: var(--color-alt); }
+	article strong { color: var(--clr-olive-darker); }
+	article a { color: var(--clr-lavender-darker); }
 	article ul { list-style: "⬡   "; }
 	blockquote {
-		background: var(--color-bg-alt);
+		background: var(--clr-green-lighter);
 		border-radius: 5px;
 		margin: 2rem 0; padding: 1rem;
 	}
-	blockquote p { margin: 0; color: var(--color-text-alt); }
+	blockquote p { margin: 0; }
 	code { vertical-align: bottom; }
 	</style>
 </head>
