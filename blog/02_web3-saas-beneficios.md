@@ -12,7 +12,7 @@ is_draft: false
 ---
 
 
-**Virto: Desarrollo e Integración de Herramientas Digitales para Tu Negocio**
+# Virto: Desarrollo e Integración de Herramientas Digitales para Tu Negocio
 
 En Virto te ofrecemos soluciones personalizadas para la Web 3.0, así proteges tus datos sin perder la libertad que mereces en el mundo digital. **¡Sigue leyendo!**
 
@@ -24,7 +24,7 @@ Ahora, la **Web 3.0** busca cambiar el juego. Se trata de darte el control total
 
 Al ser una solución diseñada para esta nueva web, Virto te permite navegar, compartir y trabajar en línea con la seguridad de que tus datos están protegidos y en tus manos. No más intermediarios que decidan por ti, **¡tú tienes el control!**
 
-**1. Definición de Virto**
+### 1. Definición de Virto
 
 **Virto** es una plataforma que ofrece el desarrollo e integración de herramientas digitales diseñadas para potenciar comunidades y negocios en el entorno web 3. Entre estas herramientas se encuentran:
 
@@ -34,9 +34,9 @@ Al ser una solución diseñada para esta nueva web, Virto te permite navegar, co
 * **Pasarelas de pago descentralizadas:** Son sistemas de pago que operan en una red blockchain, asegurando transacciones rápidas y seguras.
 * **Gestión de comunidades y más:** Ofrece herramientas para administrar y crecer comunidades en línea, desde chats hasta votaciones y decisiones comunitarias en una plataforma descentralizada
 
-**Nuestro objetivo es hacer que la tecnología moderna, como la Web 3.0, sea accesible y útil para todos.**
+>	**Nuestro objetivo es hacer que la tecnología moderna, como la Web 3.0, sea accesible y útil para todos.**
 
-**2. Arquitectura de Virto**
+### 2. Arquitectura de Virto
 
 **2.1 Blockchain**
 
@@ -78,6 +78,8 @@ Al ser una solución diseñada para esta nueva web, Virto te permite navegar, co
 
 ¿Cansado de que las herramientas digitales no se adapten a las necesidades únicas de tu negocio? En **Virto**, entendemos tus desafíos. **Regístrate** y cuéntanos tus inquietudes; trabajaremos juntos para ofrecerte **soluciones personalizadas** que realmente funcionen para ti. **¡Da el siguiente paso hacia el éxito digital!** 🚀
 
-**[Regístrate](https://forms.gle/hSjzyETwuGMadsaU8)**
-
-
+<button>
+	<a href="https://forms.gle/hSjzyETwuGMadsaU8" >
+	¡Registrate!
+	</a>
+</button>
