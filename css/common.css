@@ -48,7 +48,7 @@ li { font-size: var(--font-size-list); }
 
 
 /*General font-family for these elements, add here any other element you want*/
-a, button, p, li, h3, h5 { font-family:  var(--font-secondary); }
+a, button, p, li, h3, h5, strong { font-family:  var(--font-secondary); }
 span { font-family: inherit; }
 /*Add one of these classes to your element to add a text-alignment*/
 .right { text-align: right; }
