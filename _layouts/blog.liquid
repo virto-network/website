@@ -8,15 +8,14 @@
 	<title>{{ page.title }}</title>
 	
 	<style>
-	body { background: var(--color-bg-alt); display: flex; flex-direction: column; }
-	#blog { background-color: var(--clr-white); padding: 5rem 2rem; }
+	body { display: flex; flex-direction: column; }
+	#blog { width: 100%; max-width: var(--max-width); margin: auto; }
 	main { flex: 1; padding: 1rem; }
-	footer { background: var(--color-bg); }
 	figure { display: flex; align-items: center; flex-direction: column; }
 	figure svg {
 		height: 100%; 
 		width: 100%;
-		max-width: 500px;
+		max-width: 200px;
 		margin: auto;
 	}
 	h1 { height: 20vh; display: flex; padding: 0 1rem; }
@@ -25,7 +24,6 @@
 	#posts li { position: relative; width: 100%; margin: 1rem 0; }
 
 	#posts .card {
-		background: var(--color-bg);
 		border-radius: 5px;
 		box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 		box-sizing: border-box;
@@ -114,7 +112,7 @@
 	</style>
 </head>
 
-<body>
+<body class="white-bg">
 	{% include "nav.liquid" %}
 	<main class="max" id="blog">
 		{{ page.content }}
