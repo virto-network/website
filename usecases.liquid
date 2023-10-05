@@ -1,0 +1,107 @@
+---
+permalink: /casos-de-uso/
+title: Sobre Virto
+layout: index.liquid
+data:
+  route: casos-de-uso
+---
+
+<style>
+	body { background-color: var(--clr-olive-darker); }
+	#introduction { justify-content: space-evenly; align-items: center; gap: 2rem; }
+	.text-section { max-width: 500px; }
+	.text-section h5 { line-height: 1.5; }
+	figure.logo svg {
+    	width: clamp(250px, 35vw, 800px);
+	}
+
+	#introduction figure.lavender-arrow svg { width: clamp(200px, 25vw, 300px); }
+
+	#introduction .lavender-arrow { position: relative; left: 16%; top: -45px;}
+
+	#cubo {
+		align-items: center;
+		gap: 2em;
+	}
+
+	figure.hand svg {
+    	width: clamp(250px, 35vw, 400px);
+	}
+
+	.hand {
+		float: left;
+		position: relative;
+		left: 0;
+		margin-left: -3.5em;
+		margin-right: 5em;
+	}
+
+
+	.text-container { flex: 1; max-width: 670px; }
+	.text-container > *:not(h2) { margin-top: 2em; }
+	.text-container h5 { line-height: 1.5; }
+	.text-container h3 { line-height: 1.2; }
+
+	#cubo-benefits { max-height: fit-content;  }
+	#cubo-benefits ul { list-style: none; display: flex; gap: 1em; justify-content: center; flex-wrap: wrap; align-items: center; }
+	#cubo-benefits ul li { display: flex; flex-direction: column; flex: 30%; height: 300px; padding: 1.5em; text-align: center; align-content: center; gap: 1em;}
+	i { font-style: normal; }
+
+	@media (max-width: 700px) {
+		section { flex-direction: column; }
+		#introduction { flex-direction: column-reverse; }
+		.text-container > * { margin: .5em 0; }
+		.text-container h5 { line-height: 1.7; }
+		.text-container h3 { line-height: 1.5; }
+		#introduction .lavender-arrow { position: relative; left: 18%; }
+	}
+
+	#CTA {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: 2em;
+		padding: 3em 1em;
+	}
+
+</style>
+
+<section id="introduction">
+	<div class="text-section">
+		<h1 class="light-green-text regular">Casos de uso</h1>
+		<h3 class="lightest-lavender-text regular">Conoce casos reales donde las herramientas de Virto han logrado resolver problemas del día a día.</h3>
+		<a class="lightest-lavender-text bolder" href="#cubo">Quiero saber más</a>
+		<figure class="lavender-arrow">
+			{% include "arrow_down_lavender.svg" %}
+	</figure>
+	</div>
+	<figure class="logo">
+			{% include "website.svg" %}
+	</figure>
+</section>
+	
+<section id="cubo" class="light-green-text">
+	<figure class="logo hand">
+			{% include "hand.svg" %}
+	</figure>
+	<div class="text-container">
+		<h2 class="regular">Cubo</h2>
+		<h5 class="regular">Con las herramientas que proporciona Virto, se ha desarrollado Cubo, una plataforma en la que puedes invertir en propiedades fraccionadas de forma fácil y accesible.</h5>
+		<h3 class="bold">Cubo se encarga de todo el proceso de inversión y administración de las propiedades, mientras tú disfrutas de los beneficios:</h3>
+	</div>
+</section>
+<section id="cubo-benefits" class="whitest-bg">
+	<ul>
+		{% for cubo_benefit in site.data.index.cubo_benefits %}
+				<li class="white-bg dark-olive-text">
+				<i>{{ cubo_benefit.icon }}</i>
+					<h4 class="bolder">{{ cubo_benefit.title }}</h4>
+					<h5 class="bold">{{ cubo_benefit.description }}</h5>
+				</li>
+			{% endfor %}
+	</ul>
+</section>
+<article id="CTA" class="light-green-bg">
+	<h3 class="dark-lavender-text center">Agenda una cita personalizada con el equipo y obten guía permanente</h3>
+	<button><a href="https://calendly.com/cuboland/30min">¡Haciendo click aquí!</a></button>
+</article>

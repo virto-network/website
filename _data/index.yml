@@ -84,3 +84,20 @@ partners:
   - eyebrow: GRANTS PROGRAM
     name: <a href="https://web3.foundation/">Web3 Foundation</a>
     content: Facilita donativos a desarrolladores que contribuyen a la infraestructura de Polkadot y Kusama. A través de programas como Hackathons y Grants, se busca promover soluciones avanzadas en la Web 3.0.
+
+cubo_benefits:
+  - title: Ingresos pasivos mensuales
+    icon: 💸 
+    description: Genera ganancias y disfruta de un flujo constante de dinero.
+  - title: Diversificación
+    icon: 🔥
+    description: Invierte en diferentes propiedades y minimiza riesgos para proteger tu inversión.
+  - title: Apalancamiento
+    icon: 📈 
+    description: Conviértete en propietario compartiento el bien con otros inversionistas.
+  - title: Sin complicaciones
+    icon: 👍
+    description: Olvidate de trámites engorrosos. Cubo se encarga de todo el proceso por ti.
+  - title: Seguridad y confianza
+    icon: 🔐
+    description: Cubo ofrece transparencia, al usar tecnología blockchain las transacciones son públicas.
