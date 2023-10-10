@@ -17,18 +17,14 @@ data:
 	#cubo-intro { justify-content: space-evenly; align-items: center; gap: 2rem; padding-bottom: 0; }
 	.text-section { max-width: 500px; }
 	.text-section h5 { line-height: 1.5; }
+	.text-section a, .text-container h3 a { font-size: var(--font-size-subtitle); }
 	figure.logo svg {
     	width: clamp(250px, 35vw, 800px);
 	}
-
-	#cubo-intro figure.lavender-arrow svg { width: clamp(200px, 25vw, 300px); }
-
-	#cubo-intro .lavender-arrow { position: relative; left: 16%; top: -45px;}
-
-	#cubo {
+	#cubo-intro figure.lavender-arrow svg { width: clamp(200px, 25vw, 300px);  }
+	#cubo-intro {
 		align-items: center;
 		gap: 2em;
-		padding-top: 0;
 	}
 
 	figure.hand svg {
@@ -55,9 +51,8 @@ data:
 
 	@media (max-width: 700px) {
 		section { flex-direction: column; }
-		#cubo-intro { flex-direction: column-reverse; }
+		#cubo-intro { overflow: hidden; flex-direction: column-reverse; }
 		.text-container > * { margin: .5em 0; }
-		#cubo-intro .lavender-arrow { position: relative; left: 18%; }
 		.cube { align-self: center; order: 3; }
 		h2.bold.light-green-text { margin: 0 1em; margin-bottom: 1em; }
 	}
