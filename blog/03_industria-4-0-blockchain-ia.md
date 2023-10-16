@@ -3,7 +3,7 @@ title: "Industria 4.0: Evolución empresarial con Blockchain, IA, Big Data & IoT
 description: |
  Descubre cómo la Industria 4.0 transforma el mundo empresarial, la economía y el empleo. Aprovecha las tecnologías emergentes para impulsar el éxito de tu negocio.
 published_date: 2023-10-12 12:34:56 +0100
-permalink: /blog/industria4.0-blockchain-IA
+permalink: /blog/industria4-blockchain-IA
 data:
   route: blog
   author: Isabella Paz
