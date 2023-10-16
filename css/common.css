@@ -1,7 +1,7 @@
 * { margin: 0; padding: 0; font-family: var(--font-primary); box-sizing: border-box;}
 a, button { text-decoration: none; cursor: pointer; }
 main { display: flex; flex-direction: column; }
-section { display: flex; padding: calc(2rem + 5vmin) calc(1rem + 4vmin); padding-top: var(--nav-height); }
+section {  flex: 1; display: flex; padding: calc(2rem + 5vmin) calc(1rem + 4vmin); padding-top: var(--nav-height); }
 section>article {
 	display: flex;
     justify-content: center;
