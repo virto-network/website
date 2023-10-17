@@ -101,3 +101,20 @@ cubo_benefits:
   - title: Seguridad y confianza
     icon: 🔐
     description: Cubo ofrece transparencia, al usar tecnología blockchain las transacciones son públicas.
+
+services:
+  - icon:
+      url: '/../img/mobile.svg'
+      alt: Aplicacion móvil
+    title: Desarrollo de<br> dApps
+    description: Construimos <strong>aplicaciones descentralizadas</strong> robustas, aprovechando la seguridad y transparencia de la tecnología blockchain.
+  - icon:
+      url: ../img/wallet.svg
+      alt: Billetera
+    title: Pasarelas de pago descentralizadas
+    description: Agiliza tus transacciones con <strong>sistemas de pago rápidos, fáciles y seguros</strong>, operando en una red blockchain.
+  - icon:
+      url: ../img/puzzle.svg
+      alt: Rompecabezas
+    title: Gestión de comunidades
+    description: Te ofrecemos <strong>soluciones personalizadas</strong> dependiendo tus necesidades para gestionar y hacer crecer tu comunidad en línea, <strong>desde plataformas de chat especializado</strong> para que crees los canales que necesites, pasando por tener tu propio dominio y servidor para que tus usuarios se registren directamente en tu plataforma, hacer tu tienda virtual o website, <strong>hasta sistemas de gobernanza, votaciones y decisiones comunitarias en entornos descentralizados.</strong>
