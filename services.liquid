@@ -24,6 +24,7 @@ data:
 		top: -5rem;
 	}
 	#services div { display: flex; flex-direction: column; gap: 2rem; max-width: 800px; }
+	h3 { line-height: 1.5; }
 
 	#services-list { flex-direction: column; flex-wrap: wrap; justify-content: space-between;}
 	
@@ -60,6 +61,11 @@ data:
 		ul li { flex-direction: column; }
 		img { align-self: center; margin-top: 1rem; }
 	}
+
+	#solution-as-service { flex-direction: column; gap: 2rem;  }
+	#solution-as-service h2, #solution-as-service h3 { max-width: 860px; }
+
+	#cta { flex-direction: column; gap: 2rem; align-items:center; }
 </style>
 	<section id="services" class="light-blue-bg">
 		<h1>Servicios</h1>
@@ -82,4 +88,12 @@ data:
 			{% endfor %}
 		</ul>
 	</section>
-
+	<section id="solution-as-service" class="white-bg">
+		<h2 class="bold dark-lavender-text">¿Eres una persona o comunidad con propósito comercial?</h2>
+		<h3 class="thin">Virto adopta un enfoque de <strong class="dark-lavender-text">'Solution as a Service'</strong>, desarrollando herramientas para montar el negocio a la medida de tus necesidades.</h3>
+	</section>
+	<section id="cta" class="dark-olive-bg light-blue-text">
+		<h2 class="bold">¡Queremos hacerte la vida lo más fácil posible!</h2>
+		<h3 class="regular">Te contactaremos para brindarte toda la asesoría que necesites.</h3>
+		<button>Registrate acá</button>
+	<section>
