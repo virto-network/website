@@ -6,94 +6,129 @@ data:
   route: servicios
 ---
 <style>
+ 	/* Navbar */
 	#nav { background-color: var(--clr-blue-light); }
 	#nav a:not(#about-link) { color: var(--clr-olive-darker); }
 	#menu-dropdown a { color: var(--clr-blue-light) !important; }
 	#menu-icon svg line { stroke: var(--clr-olive-darker); }
 	#virto-logo svg path { fill: var(--clr-olive-darker); }
 
-	#services { height: 80vh; display: flex; align-items: center; justify-content: center; gap: 10rem; }
-	#services h1 { position: relative; left: 4rem; }
-	#services h1::before {
-		content: url('../img/colmenas.svg');
-		display: relative;
-		width: 150px;
-		display: inline-block;
-		position: absolute;
-		left: -7rem;
-		top: -5rem;
-	}
-	#services div { display: flex; flex-direction: column; gap: 2rem; max-width: 800px; }
-	h3 { line-height: 1.5; }
+	/*These should be on common.css, keep here until final refactor is done*/
+	section { padding: 0 !important; align-items: center; justify-content: center; } 
+	article { margin: 1em 7.8vw; flex-direction: column; gap: 2em; }
+	button { margin: 1em 0; font-weight: 400; } /*With this we can have a min gap between texts and a larger space within the button*/
 
-	#services-list { flex-direction: column; flex-wrap: wrap; justify-content: space-between;}
+	/* This is a test for next sections in order to change the way we set font-weights and sizes, according to the design review.*/
+	h1, h2 { font-weight: 500; line-heigh: 100%; }
+	h3 { font-weight: 400; line-height: 120%; }
 	
-	img { 
-		width: 120px;
+	#services { max-height: 80vh; }
+	#services article { flex-direction: row; flex-wrap: wrap; }
+	#services div { display: flex; flex-direction: column; max-width: 650px; justify-content: center;}
+
+	#container-header { position: relative; right: 2%; align-self: start; }
+	#container-header:not(.text) { width: clamp(250px, 35vw, 800px); }
+	
+	/*svg animation*/
+	.hive>path { opacity: 0; }
+	.path1 { animation: appear 0.5s ease-in-out 0.3s forwards; }
+	.path2 { animation: appear 0.5s ease-in-out 0.7s forwards; }
+	.path3 { animation: appear 0.5s ease-in-out 1s forwards; }
+	.path4 { animation: appear 0.5s ease-in-out 1.3s forwards; }
+	.path5 { animation: appear 0.5s ease-in-out 1.5s forwards; }
+
+	@keyframes appear {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
 	}
+
+	#services-list { flex-wrap: wrap; margin: 2em 0;}
+	img { width: 120px; }
 	#services-list ul {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: auto auto;
 		gap: 2rem;
-		padding-top: 3rem;
+		padding-top: 2rem;
 		list-style: none;
 	}
-
-	ul li:last-child {
-		grid-row: 2;
-		grid-column: span 2;
-	}
-
+	ul li:last-child { grid-row: 2;	grid-column: span 2; }
 	ul li { 
 		padding: 2rem;
 		border-radius: 5px;
 		display: flex;
-		justify-content: space-between;
+		align-items: center;
+		justify-content: space-evenly;
 	}
 	.text-container h4 { margin-bottom: 1rem; }
 	.text-container h5 { line-height: 1.5; padding-right: 1rem; }
 
+	#solution-as-service { justify-content: space-evenly; align-items: center; flex-direction: row; }
+	.text-section { max-width: 960px; }
+	.text-section h3 { max-width: 740px; }
+
+	/*This class will be on common.css in order to use it for every cta section */
+	.cta { justify-content: center; }
+	.cta article { flex-direction: column; align-items: center; }
+
 	@media (max-width: 750px) {
 		section { flex-direction: column; }
-		#services h1 { position: relative; top: 1.2rem; }
-		#services-list ul { display: flex; flex-direction: column; flex-wrap: wrap; }
+		article { margin: 2em 1em; }
+		#services-list ul, #solution-as-service { display: flex; flex-direction: column; flex-wrap: wrap; }
 		ul li { flex-direction: column; }
 		img { align-self: center; margin-top: 1rem; }
 	}
-
-	#solution-as-service { flex-direction: column; gap: 2rem;  }
-	#solution-as-service h2, #solution-as-service h3 { max-width: 860px; }
-
-	#cta { flex-direction: column; gap: 2rem; align-items:center; }
 </style>
+
 	<section id="services" class="light-blue-bg">
-		<h1>Servicios</h1>
-		<div>
-			<h3 class="regular">Sumergirse en la Web 3.0 puede parecer abrumador, pero no estás solo en este viaje.</h3>
-			<h3 class="regular">En Virto, no solo te proporcionamos las herramientas; te acompañamos y guiamos en cada paso para <span class="bolder dark-lavender-text">adaptar tu negocio al nuevo horizonte digital.<span></h3>
-		</div>
+		<article class="animated">
+			<figure class="logo" id="container-header">
+					{% include "serv.svg" %}
+			</figure>
+			<div class="text-section">
+				<h3>Sumergirse en la Web 3.0 puede parecer abrumador, pero no estás solo en este viaje.</h3>
+				<h3>En Virto, no solo te proporcionamos las herramientas; te acompañamos y guiamos en cada paso para <span class="bolder dark-lavender-text">adaptar tu negocio al nuevo horizonte digital.<span></h3>
+			</div>
+		</article>
 	</section>
+
 	<section id="services-list">
-		<h2 class="bold white-text">Servicios esenciales de Virto</h2>
-		<ul>
-				{% for service in site.data.index.services %}
-				<li class="light-blue-bg dark-olive-text">
-					<div class="text-container">
-						<h4 class="bolder">{{ service.title }}</h4>
-						<h5 class="bold">{{ service.description }}</h5>
-					</div>
-					<img src="{{ service.icon.url }}" alt="{{ service.icon.alt }}"></img>
-				</li>
-			{% endfor %}
-		</ul>
+		<article>
+			<h1 id="header-1" class="animated white-text">Servicios esenciales de Virto</h1>
+			<ul class="animated">
+					{% for service in site.data.index.services %}
+					<li class="light-blue-bg dark-olive-text">
+						<div class="text-container">
+							<h4 class="bolder">{{ service.title }}</h4>
+							<h5 class="bold">{{ service.description }}</h5>
+						</div>
+						<img src="{{ service.icon.url }}" alt="{{ service.icon.alt }}"></img>
+					</li>
+				{% endfor %}
+			</ul>
+		</article>
 	</section>
-	<section id="solution-as-service" class="white-bg">
-		<h2 class="bold dark-lavender-text">¿Eres una persona o comunidad con propósito comercial?</h2>
-		<h3 class="thin">Virto adopta un enfoque de <strong class="dark-lavender-text">'Solution as a Service'</strong>, desarrollando herramientas para montar el negocio a la medida de tus necesidades.</h3>
+
+	<section class="white-bg">
+		<article class="animated" id="solution-as-service">
+			<div class="text-section">
+				<h2 class="dark-lavender-text">¿Eres una persona o comunidad con propósito comercial?</h2>
+				<h3>Virto adopta un enfoque de <strong class="dark-lavender-text">'Solution as a Service'</strong>, desarrollando herramientas para montar el negocio a la medida de tus necesidades.</h3>
+			</div>
+			<figure class="logo">
+				{% include "in_progress.svg" %}
+			</figure>
+		</article>
 	</section>
-	<section id="cta" class="dark-olive-bg light-blue-text">
-		<h2 class="bold">¡Queremos hacerte la vida lo más fácil posible!</h2>
-		<h3 class="regular">Te contactaremos para brindarte toda la asesoría que necesites.</h3>
-		<button>Registrate acá</button>
-	<section>
+
+	<section class="cta dark-olive-bg light-blue-text">
+		<article class="animated">
+			<h2 class="header-1 center">¡Queremos hacerte la vida lo más fácil posible!</h2>
+			<h3 class="center">Te contactaremos para brindarte toda la asesoría que necesites.</h3>
+			<button class="medium-lavender-bg"><a href="https://forms.gle/hSjzyETwuGMadsaU8">Registrate acá</a></button>
+		</article>
+	</section>

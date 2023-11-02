@@ -109,7 +109,7 @@ services:
     title: Desarrollo de<br> dApps
     description: Construimos <strong>aplicaciones descentralizadas</strong> robustas, aprovechando la seguridad y transparencia de la tecnología blockchain.
   - icon:
-      url: ../img/wallet.svg
+      url: ../img/payments.svg
       alt: Billetera
     title: Pasarelas de pago descentralizadas
     description: Agiliza tus transacciones con <strong>sistemas de pago rápidos, fáciles y seguros</strong>, operando en una red blockchain.

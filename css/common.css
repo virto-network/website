@@ -66,6 +66,7 @@ span { font-family: inherit; }
 .dark-olive-bg { background-color: var(--clr-olive-darker); }
 .light-green-bg { background-color: var(--clr-green-lighter); }
 .light-lavender-bg { background-color: var(--clr-lavender-lightest); }
+.medium-lavender-bg { background-color: var(--clr-lavender-lighter); }
 .dark-lavender-bg { background-color: var(--clr-lavender-darker); }
 .light-blue-bg { background-color: var(--clr-blue-light); }
 .dark-blue-bg { background-color: var(--clr-blue-dark); }
