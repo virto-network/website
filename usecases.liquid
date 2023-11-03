@@ -6,120 +6,119 @@ data:
   route: casos-de-uso
 ---
 
-<style>
+<style>	
+	/* Navbar */
 
 	#nav { background-color: var(--clr-olive-darker); }
-	#nav a:not(#about-link) { color: var(--clr-blue-light); }
+	#nav a:not(#about-link) { color: var(--clr-lavender-lightest); }
 	#menu-icon svg line { stroke: var(--clr-lavender-lightest); }
 	#virto-logo svg path { fill: var(--clr-lavender-lightest); }
 
-	body { background-color: var(--clr-olive-darker); }
-	#cubo-intro { justify-content: space-evenly; align-items: center; gap: 2rem; padding-bottom: 0; }
-	.text-section { max-width: 500px; }
-	.text-section h5 { line-height: 1.5; }
-	.text-section a, .text-container h3 a { font-size: var(--font-size-subtitle); }
-	figure.logo svg {
-    	width: clamp(250px, 35vw, 800px);
-	}
-	#cubo-intro figure.lavender-arrow svg { width: clamp(200px, 25vw, 300px);  }
-	#cubo-intro {
-		align-items: center;
-		gap: 2em;
-	}
+	/*Idem services file*/
+	body { background-color: var(--clr-olive-darker);  }
+	section { padding: 0 !important; align-items: center; justify-content: center; }
+	article { margin: 1em 14vw; gap: 2em; overflow: hidden;}
+	button { margin: 1em 0; font-weight: 400; }
+	h1, h2 { font-weight: 500; line-heigh: 100%; }
+	h3 { font-weight: 400; line-height: 120%; }
+	.text-section a, article> h3 a { font-size: var(--font-size-subtitle); text-decoration: underline; }
+	
+	#use-cases figure.lavender-arrow svg { width: clamp(200px, 25vw, 300px);  }
+	.text-section { max-width: 800px; }
+	figure.logo svg { width: clamp(250px, 35vw, 800px); }
 
-	figure.hand svg {
-    	width: clamp(250px, 35vw, 400px);
-	}
-
-	.hand {
-		float: left;
-		position: relative;
-		left: 0;
-		margin-left: -3.5em;
-		margin-right: 5em;
-	}
-
-	.text-container { max-width: 670px; }
-	.text-container > *:not(h2) { margin-top: 2em; }
-	.text-container h3 { line-height: 1.5; }
-	h2.bold.light-green-text { margin: 0 2em; margin-bottom: 1em; }
+	#cubo { justify-content: flex-end; }
+	figure.hand svg { width: clamp(250px, 35vw, 400px); }
+	.hand { position: absolute; left: 0; }
 
 	#cubo-benefits { max-height: fit-content; flex-direction: column; }
-	#cubo-benefits ul { list-style: none; display: flex; gap: 1em; justify-content: center; flex-wrap: wrap; align-items: center; margin-top: 2em; }
-	#cubo-benefits ul li { display: flex; flex-direction: column; flex: 30%; height: 300px; padding: 1.5em; text-align: center; align-content: center; gap: 1em;}
+	#cubo-benefits ul { list-style: none; display: flex; gap: 2em; justify-content: center; flex-wrap: wrap; align-items: center; margin-top: 2em; }
+	#cubo-benefits ul li { display: flex; flex-direction: column; flex: 30%; height: 300px; padding: 1.5em; text-align: center; align-content: center; gap: 1em; border-radius: 5px; }
 	i { font-style: normal; font-size: 2em; }
 
+	figure.cube svg {
+    	width: clamp(250px, 15vw, 300px);
+		margin-top: 1em;
+	}
+
+	.cta > article, #cubo > article {
+		flex-direction: column;
+		align-items: center;
+		max-width: 700px;
+	}
+	.cta > article { max-width: 1000px; }
+
 	@media (max-width: 700px) {
-		section { flex-direction: column; }
-		#cubo-intro { overflow: hidden; flex-direction: column-reverse; }
+		article { flex-direction: column; margin: 2em 1em;}
+		#cubo > article { justify-content: flex-start; }
+		#use-cases { overflow: hidden; flex-direction: column-reverse; }
 		.text-container > * { margin: .5em 0; }
 		.cube { align-self: center; order: 3; }
-		h2.bold.light-green-text { margin: 0 1em; margin-bottom: 1em; }
+		.hand { align-self: flex-end; }
 	}
-
-	#cubo-description { gap: 2em; justify-content: space-evenly;}
-	figure.cube svg {
-    	width: clamp(250px, 35vw, 400px);
-	}
-
-	#CTA {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		gap: 2em;
-		padding: 3em 1em;
-	}
-	#CTA h3 { max-width: 700px; }
-
 
 </style>
 
-<section id="cubo-intro">
-	<div class="text-section">
-		<h1 class="light-green-text regular">Casos de uso</h1>
-		<h3 class="lightest-lavender-text regular">Conoce casos reales donde las herramientas de Virto han logrado resolver problemas del día a día.</h3>
-		<a class="lightest-lavender-text bolder" href="#cubo">Quiero saber más</a>
-		<figure class="lavender-arrow">
-			{% include "arrow_down_lavender.svg" %}
-	</figure>
-	</div>
-	<figure class="logo">
-			{% include "website.svg" %}
-	</figure>
+<section id="use-cases">
+	<article class="animated">
+		<div class="text-section">
+			<h1 class="light-green-text">Casos de uso</h1>
+			<h3 class="lightest-lavender-text">Conoce casos reales donde las herramientas de Virto han logrado resolver problemas del día a día.</h3>
+			<a class="lightest-lavender-text bolder" href="#cubo">Quiero saber más</a>
+			<figure class="lavender-arrow">
+				{% include "arrow_down_lavender.svg" %}
+		</figure>
+		</div>
+		<figure class="logo">
+				{% include "website.svg" %}
+		</figure>
+	</article>
 </section>
 	
 <section id="cubo" class="light-green-text">
 	<figure class="logo hand">
-			{% include "hand.svg" %}
+		{% include "hand.svg" %}
 	</figure>
-	<div class="text-container">
-		<h2 class="regular">Cubo</h2>
-		<h3 class="regular">Con las herramientas que proporciona Virto, se ha desarrollado <a href="https://cubo.land" class="dark-lavender-text">Cubo</a>, una plataforma en la que puedes invertir en propiedades fraccionadas de forma fácil y accesible.</h3>
-	</div>
+	<article class="animated right">
+			<h2>Cubo</h2>
+			<h3>Con las herramientas que proporciona Virto, se ha desarrollado <a href="https://cubo.land" class="lightest-lavender-text">Cubo</a>, una plataforma en la que puedes invertir en propiedades fraccionadas de forma fácil y accesible.</h3>
+	</article>
 </section>
-	<h2 class="bold light-green-text">Cubo se encarga de todo el proceso, mientras tú disfrutas de los beneficios:</h2>
-<section id="cubo-benefits" class="light-green-bg">
-	<ul>
-		{% for cubo_benefit in site.data.index.cubo_benefits %}
-				<li class="white-bg dark-olive-text">
-				<i>{{ cubo_benefit.icon }}</i>
-					<h4 class="bolder">{{ cubo_benefit.title }}</h4>
-					<h5 class="bold">{{ cubo_benefit.description }}</h5>
-				</li>
-			{% endfor %}
-	</ul>
-</section>
-<section id="cubo-description" class="white-bg">
-	<figure class="logo cube">
-			{% include "cubos.svg" %}
-	</figure>
-	<div class="text-container">
-		<h2 class="regular dark-lavender-text">¿Cómo es posible esto?</h2>
-		<h3 class="regular">Todas las propiedades están ubicadas en Colombia, México y Estados Unidos, y son cuidadosamente seleccionadas por el equipo de expertos. </h3>
-		<h3 class="dark-green-text">Cada persona que compra Cubos, se convierte automáticamente en accionista del portafolio de Cubo.Land.</h3>
-	</div>
-</section>
-<article id="CTA" class="light-lavender-bg">
-	<h3 class="dark-lavender-text center">Agenda una cita personalizada con el equipo y obten guía permanente</h3>
-	<button class="dark-olive-bg light-green-text"><a href="https://calendly.com/cuboland/30min">¡Haciendo click aquí!</a></button>
+
+<article>
+	<h2 class="light-green-text">Cubo se encarga de todo el proceso, mientras tú disfrutas de los beneficios:</h2>
 </article>
+
+<section id="cubo-benefits" class="light-green-bg">
+	<article class="animated">
+		<ul>
+			{% for cubo_benefit in site.data.index.cubo_benefits %}
+					<li class="dark-olive-bg white-text">
+					<i>{{ cubo_benefit.icon }}</i>
+						<h3 class="bolder">{{ cubo_benefit.title }}</h3>
+						<h5 class="bold">{{ cubo_benefit.description }}</h5>
+					</li>
+				{% endfor %}
+		</ul>
+	</article>
+</section>
+
+<section id="cubo-description" class="white-bg">
+	<article class="animated">
+		<figure class="logo cube">
+				{% include "cubos.svg" %}
+		</figure>
+		<div class="text-section">
+			<h2 class="dark-lavender-text">¿Cómo es posible esto?</h2>
+			<h3>Todas las propiedades están ubicadas en Colombia, México y Estados Unidos, y son cuidadosamente seleccionadas por el equipo de expertos. </h3>
+			<h3 class="dark-lavender-text">Cada persona que compra Cubos, se convierte automáticamente en accionista del portafolio de Cubo.Land.</h3>
+		</div>
+	</article>
+</section>
+
+<section class="cta light-lavender-bg">
+	<article class="animated">
+		<h2 class="dark-lavender-text center">Agenda una cita personalizada con el equipo y obten guía permanente</h2>
+		<button class="dark-olive-bg light-green-text"><a href="https://calendly.com/cuboland/30min">¡Haciendo click aquí!</a></button>
+	</article>
+</section>
