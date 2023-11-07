@@ -47,9 +47,9 @@ Esta estructura permitiría a Polkadot manejar aún más transacciones y conexio
 
 - **Validadores y Nominators:** Se encargan de asegurar la Relay Chain.
 
-- **Collators y Fishermen:** Desempeñan funciones de monitoreo y reporte dentro de la red.
+- **Collators:** Recolectan las transacciones de las Parachains y las envían al Relay Chain para validación.
 
-- **Miembros del Consejo y Comité Técnico:** Desempeñan roles fundamentales en las decisiones de gobernanza y desarrollo de Polkadot.
+- **Gobernanza:** OpenGov es el sistema de toma de decisiones mas avanzado que es totalmente liderado por la comunidad.
 
 ### Innovaciones clave de Polkadot
 
@@ -62,9 +62,10 @@ Polkadot tiene la capacidad de renovar el camino existente sin interrupciones. E
 
 #### El rol del token DOT:
 Para quienes no estén familiarizados, DOT es el token o "moneda digital" específica de Polkadot. Pero, ¿qué hace tan especial a DOT? Aquí te lo explicamos:
+
 - **Gobernanza:** En Polkadot, los poseedores de DOT pueden tomar **decisiones sobre cómo se actualiza y se mantiene el sistema.** ¡Tienen voz y voto!
 
-- **Funcionamiento:** Poseer DOT no solo es un acto de inversión, sino también una responsabilidad. **Si actúas en beneficio de la red, te recompensan, pero si actúas en contra, puedes perder tus tokens.**
+- **Funcionamiento:** Poseer DOT no solo es un acto de inversión, sino también una responsabilidad para darle seguridad a la red. **Si actúas en beneficio de la red, te recompensan, pero si actúas en contra, puedes perder tus tokens.**
 
 Es una forma de mantener a todos honestos y asegurar que la red funcione correctamente.
 
