@@ -102,6 +102,24 @@ cubo_benefits:
     icon: 🔐
     description: Cubo ofrece transparencia, al usar tecnología blockchain las transacciones son públicas.
 
+bloque_benefits:
+  - content: Comisiones por transaccion
+    icon: 
+      url: '/../img/less.svg'
+      alt: Menos
+  - content: Costos
+    icon: 
+      url: '/../img/less.svg'
+      alt: Menos
+  - content: Eficiencia operativa
+    icon: 
+      url: '/../img/more.svg'
+      alt: Mas
+  - content: Ingresos
+    icon: 
+      url: '/../img/more.svg'
+      alt: Mas
+
 services:
   - icon:
       url: '/../img/mobile.svg'

@@ -8,7 +8,6 @@ data:
 
 <style>	
 	/* Navbar */
-
 	#nav { background-color: var(--clr-olive-darker); }
 	#nav a:not(#about-link) { color: var(--clr-lavender-lightest); }
 	#menu-icon svg line { stroke: var(--clr-lavender-lightest); }
@@ -17,7 +16,7 @@ data:
 	/*Idem services file*/
 	body { background-color: var(--clr-olive-darker);  }
 	section { padding: 0 !important; align-items: center; justify-content: center; }
-	article { margin: 1em 14vw; gap: 2em; overflow: hidden;}
+	article { margin: 1em 14vw; gap: 2em; }
 	button { margin: 1em 0; font-weight: 400; }
 	h1, h2 { font-weight: 500; line-heigh: 100%; }
 	h3 { font-weight: 400; line-height: 120%; }
@@ -37,7 +36,7 @@ data:
 	i { font-style: normal; font-size: 2em; }
 
 	figure.cube svg {
-    	width: clamp(250px, 15vw, 300px);
+    	width: clamp(200px, 15vw, 300px);
 		margin-top: 1em;
 	}
 
@@ -47,14 +46,36 @@ data:
 		max-width: 700px;
 	}
 	.cta > article { max-width: 1000px; }
+	
+	.split-title {
+		display: inline-block;
+		position: relative;
+	}
+
+	.title-bg {
+		color: var(--clr-green-lighter);
+		padding: 5px 0;
+		padding-left: 5px;
+		border-radius: 5px;
+	}
+
+	figure.develop svg { width: clamp(200px, 15vw, 400px); }
+
+	#bloque-benefits li { display: flex; align-items: center; margin-bottom: 1em; }
+	#bloque-benefits li img { margin-right: 10px; }
+
+
+	@media (max-width: 1250px) {
+		#cubo > article { justify-content: flex-start; }
+		.hand { align-self: flex-end; }
+	}
 
 	@media (max-width: 700px) {
 		article { flex-direction: column; margin: 2em 1em;}
-		#cubo > article { justify-content: flex-start; }
 		#use-cases { overflow: hidden; flex-direction: column-reverse; }
 		.text-container > * { margin: .5em 0; }
-		.cube { align-self: center; order: 3; }
-		.hand { align-self: flex-end; }
+		.cube { align-self: center; }
+		figure, button { align-self: center; }
 	}
 
 </style>
@@ -120,5 +141,52 @@ data:
 	<article class="animated">
 		<h2 class="dark-lavender-text center">Agenda una cita personalizada con el equipo y obten guía permanente</h2>
 		<button class="dark-olive-bg light-green-text"><a href="https://calendly.com/cuboland/30min">¡Haciendo click aquí!</a></button>
+	</article>
+</section>
+
+<section class="light-green-bg">
+	<article class="animated">
+	<div class="text-section">
+		<h2 class="split-title">
+ 			<span class="title-bg dark-olive-bg">Blo</span><span class="dark-olive-text">que</span>
+		</h2>
+		<h3>Bloque te permitirá <strong>crear tu propia tienda online e importar tu catálogo desde redes sociales</strong> como Instagram, con todos tus productos de manera sencilla y rápida.</h3>
+		<button>Marketplace descentralizado
+		<br>Proximamente</button>
+	</div>
+	<div class="text-section">
+		<figure class="logo develop">
+				{% include "in_progress.svg" %}
+		</figure>
+		<h3><strong>Nuestra plataforma genera trazabilidad en los procesos de venta</strong>, para que sepas exactamente de dónde viene cada producto.
+		</h3>
+	</div>
+	</article>
+</section>
+
+<section class="white-bg">
+	<article class="animated">		
+		<figure class="logo cube">
+				{% include "wallet.svg" %}
+		</figure>
+	<div class="text-section">
+		<h2>Al operar en una estructura descentralizada, Bloque ofrece:</h2>
+	<div>
+		<ul id="bloque-benefits">
+			{% for bloque_benefit in site.data.index.bloque_benefits %}
+				<li>
+					<img alt="{{ bloque_benefit.icon.alt }}" src="{{ bloque_benefit.icon.url }}"></img>
+					<h3 class="bolder">{{ bloque_benefit.content }}</h3>
+				</li>
+			{% endfor %}
+		</ul>
+	</article>
+</section>
+
+<section class="cta light-lavender-bg">
+	<article class="animated dark-olive-text">
+	<h3 class="center">Asi, ayudamos a los negocios a reducir costos, optimizar la eficiencia operativa y potenciar sus ingresos.</h3>
+		<h2>¡Únete a nosotros!</h2>
+		<button class="dark-olive-text" type="button" disabled><a href="https://forms.gle/hSjzyETwuGMadsaU8">Crea tu tienda online</a></button>
 	</article>
 </section>
