@@ -45,6 +45,8 @@ h3, h4 { font-size: var(--font-size-subtitle); }
 h5 { font-size: calc(var(--font-size-paragraph) - 1px )}
 p, a, li { font-size: var(--font-size-paragraph); }
 
+.header-0 { font-size: var(--font-size-main-title); } /*PROBAR*/
+
 /*General font-family for these elements, add here any other element you want*/
 a, button, p, li, h3, h5, strong { font-family:  var(--font-secondary); }
 span { font-family: inherit; }
@@ -99,3 +101,6 @@ span { font-family: inherit; }
 }
 
 .hide { display: none; }
+
+/*Class created for call to action sections*/
+.cta article { flex-direction: column; align-items: center; }

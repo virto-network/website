@@ -4,40 +4,19 @@ description: |
 default_message:
   Coming soon.
 
-use_cases:
-  - cubo
-  - bloque
-
-community: 
-
-developers: 
-  - whitepapers
-  - tools
-  - guides
-  
-about_list:
-- name: Meet Virto
-  desc: unavailable
-- name: Team Virto
-  desc: unavailable
-- name: Partners
-  desc: unavailable
-- name: Why Virto
-  desc: unavailable
-
-contact:
-
-blogs:
-  -  for developers
-  -  for users
-
-
 about:
   one: 'Virto es un revolucionario proyecto basado en el ecosistema Polkadot, diseñado para proporcionar las herramientas que necesitas para desarrollar, integrar y gestionar la tecnología blockchain, facilitando su adopción en tu negocio, no importa el tamaño o tipo.'
   two: 'Desde nuestro ecosistema ayudamos a los negocios a reducir costos de transacción y a mejorar su eficiencia operativa. ¿Te imaginas aumentar tus ingresos y abrir nuevas oportunidades en mercados emergentes? Con Virto lo puedes lograr sin complicaciones mientras ahorras tiempo.'
   three: 'Creamos una plataforma donde las transacciones son confiables, sin necesidad de intermediarios. Queremos que te sientas seguro al saber que estás creando un impacto positivo en tu comunidad local al permitir un comercio más directo y justo.'
   four: 'Ahora, imagina todo lo que puedes lograr con Virto: desarrolla tu propio negocio blockchain, ahorra costos y tiempo, mejora la eficiencia de tu operación y crea un impacto positivo en tu comunidad.'
   call_to_action: '¿Te atrae la idea? Entonces, ¡únete a nuestra comunidad hoy!'
+
+virto_benefits:
+  - item: <span>Aumentamos la seguridad</span> de tus transacciones.
+  - item: <span>Reducimos costos</span> de las transacciones.
+  - item: Mejoramos su <span>eficiencia operativa.</span>
+  - item: Al usar nuestras herramientas puedes <span>formar parte de comunidades.</span>
+  - item: Acercamos un <span>comercio más directo y justo</span>, con la <span>participación en la gobernanza</span> de los proyectos.
 
 team_members:
   - name: <span>Daniel</span><br> Olano
