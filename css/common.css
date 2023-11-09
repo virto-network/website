@@ -103,4 +103,5 @@ span { font-family: inherit; }
 .hide { display: none; }
 
 /*Class created for call to action sections*/
+.cta { min-height: 70dvh; }
 .cta article { flex-direction: column; align-items: center; }

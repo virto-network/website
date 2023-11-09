@@ -22,7 +22,7 @@ data:
 	figure.container { position: relative; }
 	#animated-svg-2 { 	
 		position: absolute;
-		top: -160px;
+		top: clamp(-15vh, -10vh, -30vh);
 		left: 50%;
   		transform: translateX(-50%);
 		z-index: -1;
@@ -82,6 +82,7 @@ data:
 		#benefits h2 { max-width: 70%; }
 	}
 	@media (max-width: 1000px) {
+		#animated-svg-2 { top: -80px;}
 		#two-arrows { display: none; }
 		#partners-list { margin-top: 0;}
 	}
