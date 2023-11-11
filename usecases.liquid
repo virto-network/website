@@ -20,25 +20,25 @@ data:
 	button { margin: 1em 0; font-weight: 400; }
 	h1, h2 { font-weight: 500; line-heigh: 100%; }
 	h3 { font-weight: 400; line-height: 120%; }
+
 	.text-section a, article> h3 a { font-size: var(--font-size-subtitle); text-decoration: underline; }
-	
-	#use-cases figure.lavender-arrow svg { width: clamp(200px, 25vw, 300px);  }
 	.text-section { max-width: 800px; }
 	figure.logo svg { width: clamp(250px, 35vw, 800px); }
+	
+	#use-cases figure.lavender-arrow svg { width: clamp(200px, 25vw, 300px); }
 
 	#cubo { justify-content: flex-end; }
 	figure.hand svg { width: clamp(250px, 35vw, 400px); }
 	.hand { position: absolute; left: 0; }
 
+	figure.cube svg, figure.wallet svg  {
+    	width: clamp(200px, 15vw, 300px);
+	}
+
 	#cubo-benefits { max-height: fit-content; flex-direction: column; }
 	#cubo-benefits ul { list-style: none; display: flex; gap: 2em; justify-content: center; flex-wrap: wrap; align-items: center; margin-top: 2em; }
 	#cubo-benefits ul li { display: flex; flex-direction: column; flex: 30%; height: 300px; padding: 1.5em; text-align: center; align-content: center; gap: 1em; border-radius: 5px; }
 	i { font-style: normal; font-size: 2em; }
-
-	figure.cube svg {
-    	width: clamp(200px, 15vw, 300px);
-		margin-top: 1em;
-	}
 
 	.cta > article, #cubo > article {
 		flex-direction: column;
@@ -46,24 +46,29 @@ data:
 		max-width: 700px;
 	}
 	.cta > article { max-width: 1000px; }
-	
+
+	#bloque .text-section {  min-width: 100px; max-width: 700px; width: 100%; }
 	.split-title {
 		display: inline-block;
 		position: relative;
 	}
-
 	.title-bg {
 		color: var(--clr-green-lighter);
 		padding: 5px 0;
 		padding-left: 5px;
 		border-radius: 5px;
 	}
-
-	figure.develop svg { width: clamp(200px, 15vw, 400px); }
+	figure.develop svg { width: clamp(250px, 15vw, 400px); }
+  	figure.logo.develop { display: flex; justify-content: center; }
+	#bloque .text-section h3.end { margin-top: auto; }
 
 	#bloque-benefits li { display: flex; align-items: center; margin-bottom: 1em; }
 	#bloque-benefits li img { margin-right: 10px; }
-
+	.wallet {  
+		position: relative;
+  		top: 0%;
+  		transform: translateY(25%); 
+	}
 
 	@media (max-width: 1250px) {
 		#cubo > article { justify-content: flex-start; }
@@ -74,8 +79,8 @@ data:
 		article { flex-direction: column; margin: 2em 1em;}
 		#use-cases { overflow: hidden; flex-direction: column-reverse; }
 		.text-container > * { margin: .5em 0; }
-		.cube { align-self: center; }
-		figure, button { align-self: center; }
+		figure, button, .cube { align-self: center; }
+		.wallet { transform: translateY(0%); }
 	}
 
 </style>
@@ -144,7 +149,7 @@ data:
 	</article>
 </section>
 
-<section class="light-green-bg">
+<section id="bloque" class="light-green-bg">
 	<article class="animated">
 	<div class="text-section">
 		<h2 class="split-title">
@@ -152,21 +157,21 @@ data:
 		</h2>
 		<h3>Bloque te permitirá <strong>crear tu propia tienda online e importar tu catálogo desde redes sociales</strong> como Instagram, con todos tus productos de manera sencilla y rápida.</h3>
 		<button>Marketplace descentralizado
-		<br>Proximamente</button>
+		<br>Próximamente</button>
 	</div>
 	<div class="text-section">
 		<figure class="logo develop">
 				{% include "in_progress.svg" %}
 		</figure>
-		<h3><strong>Nuestra plataforma genera trazabilidad en los procesos de venta</strong>, para que sepas exactamente de dónde viene cada producto.
+		<h3 class="end"><strong>Nuestra plataforma genera trazabilidad en los procesos de venta</strong>, para que sepas exactamente de dónde viene cada producto.
 		</h3>
 	</div>
 	</article>
 </section>
 
-<section class="white-bg">
+<section class="white-bg dark-olive-text">
 	<article class="animated">		
-		<figure class="logo cube">
+		<figure class="logo wallet">
 				{% include "wallet.svg" %}
 		</figure>
 	<div class="text-section">
@@ -186,7 +191,7 @@ data:
 <section class="cta light-lavender-bg">
 	<article class="animated dark-olive-text">
 	<h3 class="center">Asi, ayudamos a los negocios a reducir costos, optimizar la eficiencia operativa y potenciar sus ingresos.</h3>
-		<h2>¡Únete a nosotros!</h2>
-		<button class="dark-olive-text" type="button" disabled><a href="https://forms.gle/hSjzyETwuGMadsaU8">Crea tu tienda online</a></button>
+		<h2 class="center">¡Únete a nosotros!</h2>
+		<button class="dark-olive-text" type="button"><a href="https://forms.gle/hSjzyETwuGMadsaU8">Crea tu tienda online</a></button>
 	</article>
 </section>
