@@ -9,7 +9,7 @@ data:
 	<article class="max animated">
 		<div class="text-section dark-olive-text">
 			<p class="regular">¡Bienvenido a Virto!</p>
-			<h1 class="bold">Aquí podrás construir y comerciar con comunidades <span>en todo el mundo.</span></h1>
+			<h1 class="bold">Aquí podrás construir y comerciar con comunidades <span class="dark-lavender-text">en todo el mundo.</span></h1>
 			<p class="regular">Sigue con nosotros y descubre cómo hacerlo.</p>
 			<button class="regular"><a href="/coming-soon/">Aprender cómo</a></button>
 			<a href="#footer" class="scroll-down-link dark-olive-text center-arrow">Ir al final
@@ -35,7 +35,7 @@ data:
 	</article>
 </section>
 
-<section id="presentacion">
+<section id="presentation">
 	<article class="max animated">
 		<div class="column">
 			<h2 class="bold light-green-text">Te presentamos</h2>
@@ -56,12 +56,12 @@ data:
 	</article>
 </section>
 
-<section id="not-programmer" class="animated">
-	<h2 class="bold light-green-text">¿No eres programador?</h2>
-	<h2 class="bold"><span class="light-lavender-text">¡No hay problema!</span></h2>
-	<article class="max">
-		<h3 class="regular light-green-text center">Con Virto® no necesitas ser un experto en tecnología para disfrutar de los beneficios de nuestra infraestructura.</h3>
-		<button><a href="/coming-soon/">Aprender cómo</a></button>
+<section id="not-programmer" class="cta">
+	<article class="max animated">
+		<h2 class="light-green-text center">¿No eres programador?
+		<span class="light-lavender-text">¡No hay problema!</span></h2>
+		<h3 class="light-green-text center">Con Virto® no necesitas ser un experto en tecnología para disfrutar de los beneficios de nuestra infraestructura.</h3>
+		<button class="medium-lavender-bg"><a href="/coming-soon/">Aprender cómo</a></button>
 		<figure class="arrow">
 			{% include "arrow_down.svg" %}
 		</figure>
@@ -69,8 +69,9 @@ data:
 </section>
 
 <section id="know-more" class="white-bg">
+	<article class="max">
 	<h3 class="boldest dark-olive-text">Conoce más sobre</h3>
-	<ul class="auto-grid max">
+	<ul class="auto-grid">
 		<li class="animated">
 			<img src="img/build.svg" alt="build"/>
 			<h3 class="bolder dark-olive-text">¿Por qué Virto?</h3>
@@ -99,21 +100,24 @@ data:
 			</a>
 		</li>
 	</ul>
-		<h3 class="dark-olive-text right">
-			<a class="center-arrow dark-olive-text boldest" href="/coming-soon/">¿Listo para empezar?
+		<h3 class="dark-olive-text">
+			<a class="center-arrow dark-olive-text boldest header-2" href="/coming-soon/">¿Listo para empezar?
 				<figure class="link-arrow">
 					{% include "ready_to_start.svg" %}
 				</figure>
 			</a>
 		</h3>
+	<article>
 </section>
 
 <section id="local-community" class="whitest-bg">
-	<h2 class="bold dark-olive-text fixed-width animated">¿Te has preguntado cómo puedes marcar <span class="dark-green-text">la diferencia en tu comunidad local?</span></h2>
 	<article class="max animated">
-			<figure class="img-container logo build-machine">
-				<img src="img/build_machine.svg" alt="Define when content is decided"/>
+		<div class="text-section">
+			<h2 class="bold dark-olive-text">¿Te has preguntado cómo puedes marcar <span class="dark-green-text">la diferencia en tu comunidad local?</span></h2>
+			<figure class="logo build-machine">
+				{% include "build_machine.svg" %}
 			</figure>
+		</div>
 		<div class="text-section">
 			<h3 class="dark-olive-text regular">En Virto®, te lo facilitamos.</h3>
 			<p class="grey-text regular">Por cada transacción que realizas en nuestro ecosistema, un porcentaje se destina para un fondo común que beneficia a la comunidad a la cual perteneces.</p>
@@ -124,10 +128,10 @@ data:
 	</article>
 </section>
 
-<section id="you-decide" class="light-lavender-bg">
+<section id="you-decide" class="cta light-lavender-bg">
 	<article class="animated">
-		<h3 class="bolder dark-olive-text">Tú decides y ayudas a mejorar tu entorno.</h3>
-		<h2 class="dark-olive-text bolder">
+		<h3 class="center bolder dark-olive-text">Tú decides y ayudas a mejorar tu entorno.</h3>
+		<h2 class="header-0 center dark-olive-text bolder">
 			<span>¡Así, juntos hacemos un </span>
 			<span class="underlined-element">mundo mejor!</span>
 		</h2>
@@ -146,6 +150,7 @@ data:
 		</ul>
 	</article>
 </section>
+
 <script>
 const $ = document.querySelector.bind(document),
 	$$ = document.querySelectorAll.bind(document);
