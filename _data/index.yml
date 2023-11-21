@@ -4,12 +4,25 @@ description: |
 default_message:
   Coming soon.
 
-about:
-  one: 'Virto es un revolucionario proyecto basado en el ecosistema Polkadot, diseñado para proporcionar las herramientas que necesitas para desarrollar, integrar y gestionar la tecnología blockchain, facilitando su adopción en tu negocio, no importa el tamaño o tipo.'
-  two: 'Desde nuestro ecosistema ayudamos a los negocios a reducir costos de transacción y a mejorar su eficiencia operativa. ¿Te imaginas aumentar tus ingresos y abrir nuevas oportunidades en mercados emergentes? Con Virto lo puedes lograr sin complicaciones mientras ahorras tiempo.'
-  three: 'Creamos una plataforma donde las transacciones son confiables, sin necesidad de intermediarios. Queremos que te sientas seguro al saber que estás creando un impacto positivo en tu comunidad local al permitir un comercio más directo y justo.'
-  four: 'Ahora, imagina todo lo que puedes lograr con Virto: desarrolla tu propio negocio blockchain, ahorra costos y tiempo, mejora la eficiencia de tu operación y crea un impacto positivo en tu comunidad.'
-  call_to_action: '¿Te atrae la idea? Entonces, ¡únete a nuestra comunidad hoy!'
+cards_to_sections:
+  - title: ¿Por qué Virto?
+    img: "img/build.svg"
+    alt: build
+    content: Explora cómo Virto equipa con herramientas para crear en la Web 3.0, impulsando soluciones reales en un ecosistema descentralizado.
+    href: "/sobre-virto/#benefits"
+    link: Ver más
+  - title: Quienes nos apoyan
+    img: "img/window.svg"
+    alt: window
+    content: Conoce a nuestros partners estratégicos que respaldan la visión de Virto, uniendo fuerzas para una Web 3.0 inclusiva y sostenible.
+    href: "/sobre-virto/#partners"
+    link: Ver más
+  - title: Unirte a comunidades locales
+    img: "img/group.svg"
+    alt: "community"
+    content: Descubre cómo Virto reduce costos de intermediación, fomentando democracia y colaboración en comunidades locales a través de la blockchain.
+    href: "/coming-soon/"
+    link: Ver más
 
 virto_benefits:
   - item: <span>Aumentamos la seguridad</span> de tus transacciones.
