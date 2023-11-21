@@ -86,7 +86,7 @@ span { font-family: inherit; }
 
 /*General media queries*/
 @media (max-width: 1200px) {
-	.scroll-up-link {
+	.scroll-up-link, .scroll-down-link {
 		display: none;
 	}
 	footer {
@@ -118,3 +118,6 @@ span { font-family: inherit; }
 button:hover { background-color: var(--clr-lavender-darker); color: white; }
 button.medium-lavender-bg:hover { background-color: var(--clr-green-darker); color: var(--clr-olive-darker); }
 a:hover, a:focus { text-decoration-line: underline; }
+
+.scroll-down-link {	position: absolute; bottom: 5%; right: 5%; }
+.scroll-up-link { position: relative; bottom: 20%; }

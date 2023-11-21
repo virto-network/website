@@ -18,17 +18,6 @@ figure.logo svg {
 .buttons-container { position: absolute; left: 1%; }
 .buttons-container > figure:nth-child(1) { margin-bottom: 2rem; }
 
-.scroll-down-link {
-	position: absolute;
-	top: 80%;
-	left: 90%;
-}
-
-.scroll-up-link { 
-	position: relative; 
-	bottom: 20%; 
-}
-
 #home figure.logo { align-items: start; }
 section>article.max {
     display: flex;
@@ -137,12 +126,5 @@ figure.build-machine svg { width: 100%; }
     .arrow-right {
         display: none;
     }
-	.scroll-down-link {
-		position: static;
-		margin: 2rem auto;
-		left: auto;
-		top: auto;
-		transform: none;
-	  } 
     figure { display: flex; } 
 }
