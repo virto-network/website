@@ -11,14 +11,14 @@
 	body { display: flex; flex-direction: column; }
 	#blog { width: 100%; max-width: var(--max-width); margin: auto; }
 	main { flex: 1; padding: 1rem; }
-	figure { display: flex; align-items: center; flex-direction: column; }
+	figure { margin: 1em 0; display: flex; align-items: center; justify-content: center; flex-direction: column; }
 	figure svg {
 		height: 100%; 
 		width: 100%;
 		max-width: 200px;
 		margin: auto;
 	}
-	h1 { height: 20vh; display: flex; }
+	h1 { display: flex; }
 
 	#posts { flex: 1; margin: 0; padding: 0; list-style: none; }
 	#posts li { position: relative; width: 100%; margin: 1rem 0; }
@@ -30,7 +30,7 @@
 		display: flex;
 		flex-direction: column;
 		overflow: hidden;
-		padding-bottom: 5%;
+		padding-bottom: 10%;
 	}
 
 	#posts .card img {
