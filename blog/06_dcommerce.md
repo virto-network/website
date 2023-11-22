@@ -4,7 +4,7 @@ Ecommerce Descentralizado: El Futuro del Comercio Digital"
 description: |
  Descubre cómo los dCommerce como Bloque evolucionan el comercio digital, brindando seguridad y eficiencia tanto a vendedores como a compradores, a través del uso de la tecnología Blockchain. ¿Quieres saber más? ¡Sigue leyendo!
 published_date: 2023-11-22 12:34:56 +0100
-permalink: /blog/dcommerce
+permalink: /blog/dcommerce-blockchain-web3
 data:
   route: blog
   author: Isabella Paz
