@@ -8,8 +8,8 @@
 		<a {% if page.data.route == "home"%}current{%endif%}" href="/" id="virto-logo" role="menuitem" aria-label="Inicio">
 			{% include "virto_logo.svg" %}
 		</a>
-		<a {% if page.data.route == "about"%}current{%endif%}" href="/about/" id="about-link" role="menuitem" aria-label="Sobre Virto">
-			Sobre Virto
+		<a {% if page.data.route == "about"%}current{%endif%}" href="/sobre-virto/" id="about-link" role="menuitem" aria-label="Sobre Virto">
+		Sobre Virto
 		</a>
 		<a {% if page.data.route == "casos-de-uso"%}current{%endif%}" href="/casos-de-uso/" role="menuitem" aria-label="Casos de uso">
 			Casos de uso
@@ -41,7 +41,7 @@
 		</a>
 		<nav id="menu-dropdown" aria-label="Secundaria">
 		    <a id="close-menu" class="close-menu" aria-label="Cerrar menú"></a>
-			<a {% if page.data.route == "about"%}current{%endif%}" href="/about/" role="menuitem" aria-label="Sobre Virto">
+			<a {% if page.data.route == "about"%}current{%endif%}" href="/sobre-virto/" role="menuitem" aria-label="Sobre Virto">
 				Sobre Virto
 			</a>
 			<a {% if page.data.route == "casos-de-uso"%}current{%endif%}" href="/casos-de-uso/" role="menuitem" aria-label="Casos de uso">

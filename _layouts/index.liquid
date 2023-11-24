@@ -16,6 +16,11 @@
 <body class="hidden">
 	{% include "nav.liquid" %}
 		<main>{{ page.content }}</main>
+		<a href="#footer" class="scroll-down-link dark-olive-text center-arrow">Ir al final
+			<figure class="link-arrow">
+				{% include "down.svg" %}
+			</figure>
+	 	</a>
 	{% include "footer.liquid" %}
 	<script>
 	const observer = new IntersectionObserver(entries => {
