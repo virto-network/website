@@ -17,10 +17,10 @@
 		<a {% if page.data.route == "servicios"%}current{%endif%}" href="/servicios/" role="menuitem" aria-label="Servicios">
 			Servicios
 		</a>
-		<div class="hide">
-			<a {% if page.data.route == "comunidades"%}current{%endif%}" href="/comunidades/" role="menuitem" aria-label="Comunidades locales">
+		<a {% if page.data.route == "comunidades-locales"%}current{%endif%}" href="/comunidades-locales/" role="menuitem" aria-label="Comunidades locales">
 				Comunidades locales
 			</a>
+		<div class="hide">
 			<a {% if page.data.route == "contacto"%}current{%endif%}" href="/contacto/" role="menuitem" aria-label="Contacto">
 				Contacto
 			</a>
@@ -50,13 +50,13 @@
 			<a {% if page.data.route == "servicios"%}current{%endif%}" href="/servicios/" role="menuitem" aria-label="Servicios">
 				Servicios
 			</a>
-			<div class="hide">
-			<a {% if page.data.route == "comunidades"%}current{%endif%}" href="/comunidades/" role="menuitem" aria-label="Comunidades locales">
+			<a {% if page.data.route == "comunidades-locales"%}current{%endif%}" href="/comunidades-locales/" role="menuitem" aria-label="Comunidades locales">
 				Comunidades locales
 			</a>
-			<a {% if page.data.route == "contacto"%}current{%endif%}" href="/contacto/" role="menuitem" aria-label="Contacto">
-				Contacto
-			</a>
+			<div class="hide">
+				<a {% if page.data.route == "contacto"%}current{%endif%}" href="/contacto/" role="menuitem" aria-label="Contacto">
+					Contacto
+				</a>
 			</div>
 			<a {% if page.data.route == "whitepaper"%}current{%endif%}" href="/docs/whitepaper.html" role="menuitem" aria-label="Para desarrolladores">
 				Whitepaper

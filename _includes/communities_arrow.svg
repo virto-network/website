@@ -1,0 +1,15 @@
+<svg id="animated-svg-3" viewBox="0 0 210 208" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <defs>
+  <clipPath id="clip0_124_2">
+   <rect fill="white" height="207.1" id="svg_1" width="209.7"/>
+  </clipPath>
+ </defs>
+  <g clip-path="url(#clip0_124_2)" id="svg_2">
+   <path d="m1.4,126.7c24,86 148.9,78.2 97,14c-24.5,-35.5 -73.4,-40.1 -31,7c42.4,57.1 99.3,33.9 98.5,-13.5c-0.7,-48.1 42.2,-46.1 42.2,-46.1" fill="none" id="svg_3" stroke="#51CB59" stroke-miterlimit="10" stroke-width="3"/>
+   <path d="m194.4,68.6l12.4,24.4l-23.7,16.9" fill="none" id="svg_4" stroke="#51CB59" stroke-miterlimit="10" stroke-width="3" transform="rotate(-23.9701 194.95 89.25)"/>
+ </g>
+</svg>
+
+
+    <!-- PUNTA DE LA FLECHA <path d="M195.4 174.6001L207.8 199L184.1 215.9" stroke="#51CB59" stroke-width="3" stroke-miterlimit="10"/> -->
+
