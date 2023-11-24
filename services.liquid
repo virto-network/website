@@ -13,18 +13,10 @@ data:
 	#menu-icon svg line { stroke: var(--clr-olive-darker); }
 	#virto-logo svg path { fill: var(--clr-olive-darker); }
 
-	/*These should be on common.css, keep here until final refactor is done*/
-	section { padding: 0 !important; align-items: center; justify-content: center; } 
-	article { margin: 1em 7.8vw; flex-direction: column; gap: 2em; }
-	button { margin: 1em 0; font-weight: 400; } /*With this we can have a min gap between texts and a larger space within the button*/
-
-	/* This is a test for next sections in order to change the way we set font-weights and sizes, according to the design review.*/
-	h1, h2 { font-weight: 500; line-heigh: 100%; }
-	h3 { font-weight: 400; line-height: 120%; }
+	article { margin: 3em 7.8vw; flex-direction: column; }
 	
-	#services { max-height: 90vh; }
 	#services article { flex-direction: row; flex-wrap: wrap; }
-	#services div { display: flex; flex-direction: column; max-width: 650px; justify-content: center;}
+	#services .text-section { max-width: 650px; justify-content: center;}
 
 	#container-header { position: relative; right: 2%; align-self: start; }
 	#container-header:not(.text) { width: clamp(250px, 35vw, 800px); }
@@ -71,12 +63,7 @@ data:
 	.text-section { max-width: 960px; }
 	.text-section h3 { max-width: 740px; }
 
-	/*This class will be on common.css in order to use it for every cta section */
-	.cta { justify-content: center; }
-	.cta article { flex-direction: column; align-items: center; }
-
 	@media (max-width: 750px) {
-		section { flex-direction: column; }
 		article { margin: 2em 1em; }
 		#services-list ul, #solution-as-service { display: flex; flex-direction: column; flex-wrap: wrap; }
 		ul li { flex-direction: column; }
