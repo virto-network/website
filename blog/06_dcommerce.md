@@ -36,6 +36,9 @@ De ahí surge la idea de un Comercio Electrónico *descentralizado*, que busca d
 
 ### ¿Qué es el Ecommerce Descentralizado?
 
+![Dot, criptomoneda de Polkadot](/img/blog/dot.jpg)
+
+
 El Ecommerce Descentralizado o *dCommerce* es una forma de Comercio Electrónico que utiliza la tecnología de **descentralización para eliminar intermediarios y reducir costos.**
 
 La descentralización es un concepto económico que implica la distribución o reparto del control o autoridad. Es decir, el **poder o la toma de decisiones** no está concentrada en una sola entidad o persona, sino que **está repartida entre muchas.**
@@ -47,6 +50,8 @@ Puede resultar en una **mayor eficiencia, menores costos y mayor transparencia**
 Es importante tener en cuenta que el dCommerce es un campo emergente y **todavía está en desarrollo**. A medida que la tecnología avanza, es probable que veamos más innovaciones y aplicaciones.
 
 ### Beneficios del Ecommerce Descentralizado
+
+![Red descentralizada, nodos conectados entre si](/img/blog/red.jpg)
 
 **1. Seguridad Mejorada:** Los sistemas descentralizados pueden proporcionar una mayor seguridad al eliminar intermediarios y reducir el riesgo de ataques centralizados.
 Esto puede beneficiar a **vendedores y compradores al proteger sus datos y transacciones.**
@@ -72,6 +77,8 @@ Esta característica aumentará la transparencia y la confianza en el sistema, l
 Aunque Bloque todavía está en desarrollo, su propuesta de valor es clara: proporcionar una plataforma descentralizada que facilite el Comercio Electrónico y **mejore la experiencia tanto para vendedores como para compradores.**
 
 ¡Estamos ansiosos por ver cómo evoluciona Bloque y cómo contribuirá a la transformación del Comercio Electrónico, te mantendremos informado!
+
+***
 
 ¿Quieres aplicar los beneficios de la tecnología Blockchain a tu negocio? En Virto, entendemos tus desafíos. **Regístrate** y cuéntanos tus inquietudes. Trabajaremos juntos para ofrecerte **soluciones personalizadas** que realmente funcionen para ti.
 
