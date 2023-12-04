@@ -36,6 +36,7 @@ De ahí surge la idea de un Comercio Electrónico *descentralizado*, que busca d
 
 ### ¿Qué es el Ecommerce Descentralizado?
 
+
 ![Dot, criptomoneda de Polkadot](/img/blog/dot.jpg)
 
 
