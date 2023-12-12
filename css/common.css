@@ -1,6 +1,6 @@
 * { margin: 0; padding: 0; font-family: var(--font-primary); box-sizing: border-box;}
 a, button { text-decoration: none; cursor: pointer; }
-main { display: flex; flex-direction: column; }
+main { display: flex; flex-direction: column; flex: 1; }
 section { display: flex; min-height: 90dvh; align-items: center; justify-content: center; }
 article { margin: 3em 0; gap: 2em; }
 section>article {
