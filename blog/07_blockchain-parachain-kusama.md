@@ -20,11 +20,11 @@ A través de Kusama, los proyectos pueden **validar sus ideas y tecnologías** a
 
 ### ¿Cuáles son sus Ventajas y Aplicaciones?
 
-- Aunque Kusama no está destinada a operar como una **Parachain**, tiene la capacidad de procesar hasta 1.000 transacciones por segundo, lo que la hace considerablemente más rápida que Bitcoin.
+- Kusama no es una **Parachain**, al igual que Polkadot tiene la capacidad de miles de transacciones por segundo, lo que la hace considerablemente más rápida que redes como Bitcoin o Ethereum.
 
 - Kusama acelera el proceso de desarrollo y mejora la calidad de los proyectos, permitiendo pruebas tempranas y feedback real de la comunidad.
 
-- Algunas de sus aplicaciones son: para la **identificación digital, las finanzas descentralizadas (DeFi)**, y la **propiedad y transferencia de activos digitales.**
+- Todo tipo de blockchains de aplicación especifica(appchains) pueden correr en Kusama como: para la **identificación digital, las finanzas descentralizadas (DeFi)**, y la **propiedad y transferencia de activos digitales.**
 
 ### Componentes Clave de Kusama
 
@@ -40,14 +40,14 @@ Los componentes clave de Kusama y Polkadot son muy similares, ya que ambas redes
 
 - **Gobernanza Transparente**: La gobernanza en Kusama es llevada a cabo por la comunidad de dueños de **tokens KSM**, lo que les permite **proponer cambios y votar en las propuestas**, además de participar en otras actividades como la **validación** y **nominación**.
 
-- **Upgradeability Sin Bifurcaciones**: Una bifurcación en el contexto Blockchain se refiere a una división en la cadena de bloques que resulta en dos versiones separadas de la cadena, cada una con su propio historial de transacciones. 
-Kusama tiene una característica de _"Upgradeability Sin Bifurcaciones"_ que permite actualizar la red sin crear una bifurcación, lo que facilita la adaptación y mejora continua de la red.
+- **Actualizaciones sin "forks"**: Un *fork* en el contexto Blockchain se refiere a una división en la cadena de bloques que resulta en dos versiones separadas de la cadena, cada una con su propio historial de transacciones. 
+Kusama tiene una característica de _"forkless upgrades"_ que permite actualizar la red sin crear una bifurcación, lo que facilita la adaptación y mejora continua de la red.
 
-- **Interoperabilidad**: A través de las Parachains y Bridges, Kusama facilita la comunicación entre diferentes Blockchain, creando un ecosistema conectado.
+- **Interoperabilidad**: Gracias a XCM, un sistema de mensajería entre cadenas único, las Parachains y Bridges, Kusama facilita la comunicación entre diferentes Blockchain, creando un ecosistema conectado.
 
 ### El Rol de KSM Tokens
 
-Los tokens KSM son como las llaves de la red Kusama, ayudan a su funcionamiento, gobernanza y mantenimiento; es decir, que todo funcione bien y que la gente tome decisiones sobre cómo mejorar la red.
+Los tokens KSM son como las llaves de la red Kusama, ayudan a su funcionamiento, gobernanza y garantizar la seguridad del sistema; es decir, que todo funcione bien, que la gente tome decisiones sobre cómo mejorar la red y que las aplicacines cuenten con la mejor seguridad.
 
 Ahora, imagina Kusama como un gran centro comercial y cada tienda en este centro comercial es una "Parachain".
 
@@ -59,7 +59,7 @@ Si quieres comprar tokens KSM, puedes hacerlo en sitios web como Crypto.com, Coi
 
 ### Ahora, ¿Cuál es la relación de Virto y Kusama?
 
-Virto ganó un espacio o “slot” en Kusama al ofrecer 10 tokens KSM en una subasta. Ahora tiene permiso para usar esa red desde el 23 de agosto de 2023 hasta el 31 de julio de 2024. Este espacio le permite a Virto ejecutar su propio proyecto en la red Kusama.
+Virto ganó un espacio o “slot” en Kusama al ofrecer tokens KSM en una subasta. Ahora tiene permiso para usar esa red desde el 23 de agosto de 2023 hasta el 31 de julio de 2024. Este espacio le permite a Virto ejecutar su propio proyecto en la red Kusama.
 
 Para finalizar Virto, al adquirir un espacio en Kusama, ahora puede operar su proyecto en una red bien establecida y experimentada.
 
