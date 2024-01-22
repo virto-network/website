@@ -8,7 +8,7 @@ data:
 # Local Incentives Protocol 
 
 ### Decentralized Marketplace Infrastructure 
-_by Qian Che and Daniel Olano_
+_by Qian Che and Daniel Olano · 2021_
 
 ## 1. Introduction
 
