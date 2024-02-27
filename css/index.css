@@ -1,5 +1,5 @@
 figure.logo svg {
-    width: clamp(250px, 30vw, 600px);
+    width: clamp(250px, 30vw, 500px);
     height: fit-content;
 }
 
@@ -35,6 +35,11 @@ section>article.max {
     align-items: center;
     flex-wrap: wrap;
 }
+
+#presentation h2 {
+    max-width: 600px;
+}
+
 .column { display: flex; flex-direction: column;}
 .link-arrow.color { color: var(--clr-green-lighter); }
 
@@ -85,8 +90,8 @@ figure.build-machine img { width: 100%; }
 }
 #local-community .max { flex-wrap: wrap; }
 
-#you-decide article { gap: 2em; }
-#you-decide article h2 span { display: block; margin-bottom: 5px; }
+#you-decide article h2 span { display: block; }
+#you-decide article h2 { margin-top: .75em; }
 #you-decide article>ul.max {
     align-items: center;
 	display: flex;

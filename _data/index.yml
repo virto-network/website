@@ -4,26 +4,53 @@ description: |
 default_message:
   Coming soon.
 
-cards_to_sections:
-  - title: ¿Por qué Virto?
-    img: "img/build.svg"
-    alt: build
-    content: Explora cómo Virto equipa con herramientas para crear en la Web 3.0, impulsando soluciones reales en un ecosistema descentralizado.
-    href: "/sobre-virto/#benefits"
-    link: Ver más
-  - title: Quienes nos apoyan
-    img: "img/window.svg"
-    alt: window
-    content: Conoce a nuestros partners estratégicos que respaldan la visión de Virto, uniendo fuerzas para una Web 3.0 inclusiva y sostenible.
-    href: "/sobre-virto/#partners"
-    link: Ver más
-  - title: Unirte a comunidades locales
-    img: "img/group.svg"
-    alt: "community"
-    content: Descubre cómo Virto reduce costos de intermediación, fomentando democracia y colaboración en comunidades locales a través de la blockchain.
-    href: "/coming-soon/"
-    link: Ver más
+# Home
+home_sections:
+    - id: home
+      title: ¿Necesitas integrar  <span class="dark-lavender-text">nuevas tecnologías web3</span> en tu startup?
+      paragraph: En Virto, desarrollamos tecnología Blockchain para ofrecerte soluciones en pasarelas de pago, creación de dApps y más.
+      call_to_action: ¡Agenda una cita ahora!
+    - id: presentation
+      title: Innova y prospera con <span class="light-lavender-text">Virto®</span>
+      subtitle: Aumenta tus ingresos y reduce costos operativos con nuestra tecnología Blockchain.
+      paragraph: Aumenta tus ingresos y reduce costos operativos con nuestra tecnología Blockchain.
+      call_to_action: ¡Hablemos de tu proyecto!
+    - id: not-programmer
+      title: Soluciones que <span class="light-lavender-text">transforman</span>
+      paragraph: "Imagina simplificar tus operaciones y abrir nuevos mercados con solo un clic. Eso es lo que Virto hace por ti: soluciones reales, resultados tangibles a la medida."
+      call_to_action: ¡Envíanos tu consulta!
+    - id: know-more
+      cards_to_sections:
+          - title: ¿Por qué Virto?
+            img: "img/build.svg"
+            alt: build
+            content: Amplía el impacto de tu negocio en el ecosistema descentralizado con nuestras herramientas diseñadas según tu necesidad.
+            href: "/sobre-virto/#benefits"
+            call_to_action: Ver más
+          - title: Quienes nos apoyan
+            img: "img/window.svg"
+            alt: window
+            content: Junto a nuestros partners, impulsamos una Web 3.0 inclusiva y sostenible. Tu visión, respaldada por líderes del sector. 
+            href: "/sobre-virto/#partners"
+            call_to_action: ¡Descubre quiénes son!
+          - title: Unirte a comunidades locales
+            img: "img/group.svg"
+            alt: "community"
+            content: Tu participación apoya directamente a causas locales elegidas por ti y otros usuarios. 
+            href: "/coming-soon/"
+            call_to_action: ¡Únete a nosotros!
+    - id: local-community
+      title: ¿Quieres impulsar cambios reales en tu <span class="dark-green-text">emprendimiento local?</span>
+      paragraph: "Cada transacción apoya causas valiosas, desde mejoras locales hasta grandes retos globales. <br>Tu acción, nuestro compromiso: juntos transformamos."
+      call_to_action: Únete y contribuye con cada click.
+    - id: you-decide
+      eyebrow: Tú decides y ayudas a mejorar tu entorno.
+      title: ¡Dale vida a tus ideas con <span class="underlined-element">tecnologías Web 3!</span>
+      call_to_action: Agenda tu videollamada gratuita
 
+  
+
+# About Virto
 virto_benefits:
   - item: <span>Aumentamos la seguridad</span> de tus transacciones.
   - item: <span>Reducimos costos</span> de las transacciones.
@@ -77,6 +104,7 @@ partners:
     name: <a href="https://web3.foundation/">Web3 Foundation</a>
     content: Facilita donativos a desarrolladores que contribuyen a la infraestructura de Polkadot y Kusama. A través de programas como Hackathons y Grants, se busca promover soluciones avanzadas en la Web 3.0.
 
+# Use Cases
 cubo_benefits:
   - title: Ingresos pasivos mensuales
     icon: 💸 
@@ -112,6 +140,7 @@ bloque_benefits:
       url: '/../img/more.svg'
       alt: Mas
 
+# Services
 services:
   - icon:
       url: '/../img/mobile.svg'
