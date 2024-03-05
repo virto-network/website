@@ -12,7 +12,7 @@ data:
 			<p>¡Bienvenido a Virto!</p>
 			<h1>{{ home_section.title }}</h1>
 			<p>{{ home_section.paragraph }}</p>
-			<button><a href="/coming-soon/">{{ home_section.call_to_action }}</a></button>
+			<button><a href={{ home_section.href }}>{{ home_section.call_to_action }}</a></button>
 		</div>
 		<div class="buttons-container hide">
 			<figure>
@@ -43,7 +43,7 @@ data:
 		<div class="text-section light-green-text">
 			<h3>Una infraestructura descentralizada basada en el ecosistema <strong>Polkadot.</strong></h3>
 			<p>{{ home_section.paragraph }}</p>
-			<a href="/docs/whitepaper.html"class="bold light-green-text center-arrow">{{ home_section.call_to_action }}
+			<a href={{ home_section.href }} class="bold light-green-text center-arrow">{{ home_section.call_to_action }}
 				<figure class="link-arrow color">
 					{% include "see_more.svg" %}
 				</figure>
@@ -57,7 +57,7 @@ data:
 	<article class="max animated light-green-text center">
 		<h2>{{ home_section.title }}
 		<h3>{{ home_section.paragraph }}</h3>
-		<button class="medium-lavender-bg"><a href="/coming-soon/">{{ home_section.call_to_action }}</a></button>
+		<button class="medium-lavender-bg"><a href={{ home_section.href }}>{{ home_section.call_to_action }}</a></button>
 		<figure class="arrow">
 			{% include "arrow_down.svg" %}
 		</figure>
@@ -104,7 +104,7 @@ data:
 		<div class="text-section">
 			<h3 class="dark-olive-text">En Virto®, te lo facilitamos.</h3>
 			<p class="grey-text">{{ home_section.paragraph }}</p>
-			<a class="dark-olive-text center-arrow" href="/coming-soon/">{{ home_section.call_to_action }}
+			<a class="dark-olive-text center-arrow" href={{ home_section.href }}>{{ home_section.call_to_action }}
 			<figure class="link-arrow">{% include "see_more.svg" %}</figure>
 			</a>
 		</div>
@@ -118,7 +118,7 @@ data:
 		<h2 class="header-0 bolder">
 			<span>{{ home_section.title }}</span>
 		</h2>
-		<button><a href="/docs/whitepaper.html" >{{ home_section.call_to_action }}</a></button>
+		<button><a href={{ home_section.href }} >{{ home_section.call_to_action }}</a></button>
 		{% assign matrix_to = "#virto-network:virto.community?via=virto.community" %}
 		<ul class="max">
 			<a title="E-mail" href="mailto:contact@virto.team" class="dark-olive-text thin">
