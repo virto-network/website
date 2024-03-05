@@ -9,43 +9,48 @@ home_sections:
     - id: home
       title: ¿Necesitas integrar  <span class="dark-lavender-text">nuevas tecnologías web3</span> en tu startup?
       paragraph: En Virto, desarrollamos tecnología Blockchain para ofrecerte soluciones en pasarelas de pago, creación de dApps y más.
+      href: https://calendly.com/isa-virto-team/30min?month=2024-03
       call_to_action: ¡Agenda una cita ahora!
     - id: presentation
       title: Innova y prospera con <span class="light-lavender-text">Virto®</span>
       subtitle: Aumenta tus ingresos y reduce costos operativos con nuestra tecnología Blockchain.
       paragraph: Aumenta tus ingresos y reduce costos operativos con nuestra tecnología Blockchain.
+      href: docs/whitepaper.html
       call_to_action: ¡Hablemos de tu proyecto!
     - id: not-programmer
       title: Soluciones que <span class="light-lavender-text">transforman</span>
       paragraph: "Imagina simplificar tus operaciones y abrir nuevos mercados con solo un clic. Eso es lo que Virto hace por ti: soluciones reales, resultados tangibles a la medida."
+      href: mailto:contact@virto.team
       call_to_action: ¡Envíanos tu consulta!
     - id: know-more
       cards_to_sections:
           - title: ¿Por qué Virto?
-            img: "img/build.svg"
+            img: img/build.svg
             alt: build
             content: Amplía el impacto de tu negocio en el ecosistema descentralizado con nuestras herramientas diseñadas según tu necesidad.
-            href: "/sobre-virto/#benefits"
+            href: sobre-virto/#benefits
             call_to_action: Ver más
           - title: Quienes nos apoyan
-            img: "img/window.svg"
+            img: img/window.svg
             alt: window
             content: Junto a nuestros partners, impulsamos una Web 3.0 inclusiva y sostenible. Tu visión, respaldada por líderes del sector. 
-            href: "/sobre-virto/#partners"
+            href: sobre-virto/#partners
             call_to_action: ¡Descubre quiénes son!
           - title: Unirte a comunidades locales
-            img: "img/group.svg"
-            alt: "community"
+            img: img/group.svg
+            alt: community
             content: Tu participación apoya directamente a causas locales elegidas por ti y otros usuarios. 
-            href: "/coming-soon/"
+            href: comunidades-locales
             call_to_action: ¡Únete a nosotros!
     - id: local-community
       title: ¿Quieres impulsar cambios reales en tu <span class="dark-green-text">emprendimiento local?</span>
       paragraph: "Cada transacción apoya causas valiosas, desde mejoras locales hasta grandes retos globales. <br>Tu acción, nuestro compromiso: juntos transformamos."
+      href: coming-soon
       call_to_action: Únete y contribuye con cada click.
     - id: you-decide
       eyebrow: Tú decides y ayudas a mejorar tu entorno.
       title: ¡Dale vida a tus ideas con <span class="underlined-element">tecnologías Web 3!</span>
+      href: https://calendly.com/isa-virto-team/30min?month=2024-03
       call_to_action: Agenda tu videollamada gratuita
 
   
