@@ -36,12 +36,18 @@ section>article.max {
     flex-wrap: wrap;
 }
 
-#presentation h2 {
-    max-width: 600px;
+#presentation h2 { max-width: 600px; }
+#presentation .logo { margin-top: 2em; }
+
+#polkadot {
+    color: inherit;
+    font-size: var(--font-size-subtitle);
+    text-decoration: underline;
 }
 
 .column { display: flex; flex-direction: column;}
 .link-arrow.color { color: var(--clr-green-lighter); }
+
 
 #not-programmer article h2 { max-width: 700px; }
 #not-programmer>article.max { max-width: 800px; }
@@ -89,6 +95,10 @@ figure.build-machine img { width: 100%; }
     width: 90%;
 }
 #local-community .max { flex-wrap: wrap; }
+
+@media (max-width: 400px) {
+    #local-community h2 { font-size: calc(var(--font-size-subtitle) + .5em); }
+}
 
 #you-decide article h2 span { display: block; }
 #you-decide article h2 { margin-top: .75em; }
