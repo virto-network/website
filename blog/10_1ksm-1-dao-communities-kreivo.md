@@ -1,6 +1,15 @@
-# 1 `KSM` = 1 DAO: How to create your Community at Kreivo
-
-![kreivo-1ksm1dao](https://hackmd.io/_uploads/SkIm7hSbR.png)
+---
+title: "1KSM = 1DAO: How to create your Community at Kreivo"
+description: |
+  Creating a DAO is usually a not so straightforward process, until now.
+  In this article, you'll learn how to create a community in Kreivo.
+published_date: 2024-04-23 23:29:53 -0500
+permalink: /blog/1ksm-1dao-create-community-kreivo
+data:
+  route: blog
+  author: Pablo Dorado
+is_draft: false
+---
 
 ## Introduction
 
@@ -42,7 +51,7 @@ To dispatch those calls correctly, you have to call them either as a Community O
 
 This Admin Origin can be any caller in Kreivo (like a Community Origin, or a Signed Origin —i.e. you signing an extrinsic—).
 
-Usually, the first Admin Origin on a Community is a Signed where the signing account belongs to the founder of the community. This is because to vote in a community, you need to be a member of it, and communities are created without members. We'll talk about [adding members](#Initial-members) later.
+Usually, the first Admin Origin on a Community is a Signed where the signing account belongs to the founder of the community. This is because to vote in a community, you need to be a member of it, and communities are created without members. We'll talk about [adding members](#initial-members) later.
 
 Once your community has enough members, you can set the admin origin to be the Community itself, reaching to the point where your Community is a fully decentalized DAO.
 
@@ -98,7 +107,7 @@ Here you have [an example](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.ibp
 ### 2. Create the Community
 
 > 💵 Note: When creating a community, you'll be charged `0.5` KSM as a deposit for covering the expenses of creating the community. This is to prevent spamming.
-> 
+>
 > For now, a community is not destroyable, so the deposit is not refundable, and funds are sent directly to the Kreivo Treasury. If you need a chargeback, and to destroy the community, you'll have to submit a referenda to the Kreivo Governance to ask for this.
 
 > :warning: Note: It's really important you remember the Community Id you entered when registering the community. This will be the main identification of your community in Kreivo, and (as you will see below), will be used anywhere.
@@ -109,11 +118,10 @@ Enter the details we already discussed about earlier in the form to call `Commun
 
 > Here you have [an example](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fkreivo.io%2F#/extrinsics/decode/0x4b000903484d79204c75636b7920436f6d6d756e697479010001d8dba69752ffb04fa563b126a31b037c8bebeb73e3c66cacd7c8efab46bd3423010300) with some parameters you can use to create a Kreivo community administered by the signature of the founder (that is, you), for which its members vote using a _rank-based membership voting_ method.
 
-
 ### 3. Acquire memberships and add members
 
 > 💵 Note: acquiring memberships means you have to pay for them. This is to prevent spamming.
-> 
+>
 > We know it's a big commitment for our first communitise. So, for a limited time, communities will be able to acquire memberships that don't expire and will enable their members to make free transactions.
 
 In order to acquire the memberships for your community members to use them, there are two ways of doing it:
