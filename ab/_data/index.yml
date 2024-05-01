@@ -1,0 +1,55 @@
+description: |
+  Impactful marketplace infrastructure for
+
+#Landing-a
+landing_a:
+    - id: section-a
+      title: Ahorra<span class="dark-lavender-text"> Dinero y Tiempo </span>con Gestión Eficaz
+      paragraph: ¿Frustrado con la burocracia y los procesos lentos? Optimiza la gestión de capital humano y finanzas en tu organización con Virto. Regístrate ahora y no te pierdas nuestros tres meses gratis en esta oferta exclusiva.
+      href: https://calendly.com/katherinelopezvirto/45min
+      call_to_action: Regístrate e Inicia tu Consulta Gratuita
+    - id: section-b
+      title: Potencia Tu Operativa con <span class="light-lavender-text">Soluciones Inteligentes</span>
+      subtitle: 'Descubre lo que Virto puede hacer por ti:'
+      list:
+          - content: Sistemas de pago seguros y eficientes.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content:  Sistema para tomar decisiones con tu equipo
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: Gestión transparente y trazable de fondos comunes.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: Administración simplificada de contactos.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: Conexiones estratégicas con otras organizaciones.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: Innovación a través de nuestra infraestructura integrada con tecnología Web 3.0.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+      href: https://calendly.com/katherinelopezvirto/45min
+      call_to_action: Regístrate e Inicia tu Consulta Gratuita
+    - id: section-c
+      title: Gestiona Mejor,<br><span class="light-lavender-text">Logra Más</span>
+      subtitle: Virto te equipa con herramientas diseñadas para el éxito.
+      paragraph: "Imagina gestionar proyectos sin estrés y con total transparencia.<br> Sé parte del cambio:"
+      href: https://calendly.com/katherinelopezvirto/45min
+      call_to_action: ¡Envíanos tu consulta!
+      list:
+          - content: Sistemas de pago seguros y eficientes.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content:  Sistema para tomar decisiones con tu equipo
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: Gestión transparente y trazable de fondos comunes.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+    - id: section-d
+      title: Inicia Tu Transformación <span class="dark-green-text">con Virto</span>
+      paragraph: "Agenda tu cita en calendly y comienza con una consultoría personalizada por parte de nuestro equipo en Virto.<br>Además, disfruta de tres meses gratis y una tarifa especial de solo $5 USD mensuales.<br><strong> Si no estás satisfecho, te devolvemos tu dinero.</strong>"
+      href: https://calendly.com/katherinelopezvirto/45min
+      call_to_action: Regístrate e Inicia tu Consulta Gratuita

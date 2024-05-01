@@ -1,0 +1,123 @@
+* { margin: 0; padding: 0; font-family: var(--font-primary); box-sizing: border-box;}
+a, button { text-decoration: none; cursor: pointer; }
+main { display: flex; flex-direction: column; flex: 1; }
+section { display: flex; min-height: 90dvh; align-items: center; justify-content: center; }
+article { margin: 3em 0; gap: 2em; }
+section>article {
+	display: flex;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    margin: 1em 0;
+    font-weight: 400;
+    border-radius: 50px;
+    width: fit-content;
+    padding: clamp(5px, 2vh, 20px) clamp(20px, 4vw, 40px);
+    text-align: center;
+	background-color: var(--clr-green-darker);
+	font-size: var(--font-size-button);
+	transition: background-color 650ms ease, color 650ms ease;
+}
+
+/*Property added in order to avoid default iOS configurations, once deployed it needs to be tested */
+button a { color: inherit !important; }
+button a:hover { text-decoration: none; }
+
+/*Classes for links with an arrow on them*/
+.center-arrow { display: flex; align-items: center; }
+.link-arrow { height: 1em; width: 1em; margin-left: 0.5em; }
+
+h1, h2, h3, h4, h5, h6, p, a, ul {
+	margin: 0;
+	padding: 0;
+}
+
+/*General configurations for text elements*/
+h1, h2 { font-size: var(--font-size-title-page); }
+h3, h4 { font-size: var(--font-size-subtitle); }
+h5 { font-size: calc(var(--font-size-paragraph) - 1px )}
+p, a, li { font-size: var(--font-size-paragraph); }
+h1, h2, h5, h4 { font-weight: 500; line-height: 100%; }
+h3 { font-weight: 400; line-height: 120%; }
+.header-0 { font-size: var(--font-size-main-title); }
+.header-1 { font-size: var(--font-size-title-page); }
+.header-2 { font-size: var(--font-size-subtitle); }
+
+/*Font family*/
+a, button, p, li, h3, h5, strong { font-family:  var(--font-secondary); }
+span { font-family: inherit; }
+
+/*Add one of these classes to your element to add a text-alignment*/
+.right { text-align: right; }
+.left { text-align: left;}
+.center { text-align: center; }
+
+/*Add one of this classes to your element to add a font-weight*/
+.thin { font-weight: var(--font-weight-300); }
+.regular { font-weight: var(--font-weight-400); }
+.bold { font-weight: var(--font-weight-500); }
+.bolder { font-weight: var(--font-weight-600); }
+.boldest { font-weight: var(--font-weight-700); }
+
+/*Add one of this classes to your element to add a background-color*/
+.white-bg { background-color: var(--clr-white); }
+.whitest-bg { background-color: var(--clr-whitest); }
+.dark-olive-bg { background-color: var(--clr-olive-darker); }
+.light-green-bg { background-color: var(--clr-green-lighter); }
+.light-lavender-bg { background-color: var(--clr-lavender-lightest); }
+.medium-lavender-bg { background-color: var(--clr-lavender-lighter); }
+.dark-lavender-bg { background-color: var(--clr-lavender-darker); }
+.light-blue-bg { background-color: var(--clr-blue-light); }
+.dark-blue-bg { background-color: var(--clr-blue-dark); }
+
+/*Add one of this classes to your element to add a text-color*/
+.white-text { color: var(--clr-white); }
+.grey-text { color: var(--clr-grey); }
+.light-blue-text { color: var(--clr-blue-light); }
+.dark-olive-text { color: var(--clr-olive-darker); }
+.dark-green-text { color: var(--clr-green-darker); }
+.light-green-text { color: var(--clr-green-lighter); }
+.lightest-green-text { color: var(--clr-green-lighter); }
+.dark-lavender-text { color: var(--clr-lavender-darker); }
+.light-lavender-text { color: var(--clr-lavender-lighter); }
+.lightest-lavender-text { color: var(--clr-lavender-lightest); }
+
+/*General media queries*/
+@media (max-width: 1200px) {
+	.scroll-up-link, .scroll-down-link {
+		display: none;
+	}
+	footer {
+		text-align: center;
+        align-items: center;
+        justify-content: center;
+	}
+}
+
+/*Useful classes*/
+.hide { display: none; }
+
+.cta { min-height: 80dvh; }
+.cta article { flex-direction: column; align-items: center; justify-content: center; margin: 3em 7.8vw;}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+	text-align: left;
+    max-width: clamp(300px, 50%, 650px);
+    gap: 2em;
+}
+
+/*Add this class to the element for a scroll animation*/
+.animated { opacity: 0; transform: translateY(100px); transition: opacity 1s ease, transform 0.5s ease; }
+.animated.animate { opacity: 1;	transform: translateY(0); }
+
+/*Button and anchor hovers and focus*/
+button:hover { background-color: var(--clr-lavender-darker); color: white; }
+button.medium-lavender-bg:hover { background-color: var(--clr-green-darker); color: var(--clr-olive-darker); }
+a:hover, a:focus { text-decoration-line: underline; }
+
+.scroll-down-link {	position: absolute; bottom: 5%; right: 5%; }
+.scroll-up-link { position: relative; bottom: 20%; }

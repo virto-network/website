@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --clr-blackest: #000;
+    --clr-grey: #90A19C;
+    --clr-whitest: #FFFFFF;
+    --clr-white: #F3F5F4;
+    --clr-green-darker: hsl(125, 52%, 56%);
+    --clr-green-lighter: hsl(117, 69%, 82%);
+    --clr-olive-darker: hsl(163, 49%, 14%);
+    --clr-olive-medium: hsl(157, 41%, 19%);
+    --clr-olive-lighter: hsl(160, 8%, 79%);
+    --clr-lavender-darker: #8d52cb;
+    --clr-lavender-lighter: hsl(266, 55%, 76%);
+    --clr-lavender-lightest: hsl(266, 55%, 88%);
+    --clr-blue-dark: hsl(200, 96%, 55%);
+	--clr-blue-light: hsl(196, 80%, 86%);
+    --nav-height: calc(4rem + 2vh);
+    --font-primary: 'Outfit', sans-serif;
+    --font-secondary: 'Plus Jakarta Sans', sans-serif;
+/* The names of the font-sizes variables are temporary and subject to changes and suggestions */
+    --font-size-main-title: clamp(3.5rem, 6vw, 5.25rem);
+    --font-size-title-page: clamp(2.5rem, 5vw, 3.75rem);
+    --font-size-paragraph: clamp(1rem, 2vw, 1.25rem);
+    --font-size-subtitle: clamp(1.3rem, 3vw, 1.88rem);
+    --font-size-button: clamp(1rem, 3vw, 1.3rem);
+/*Font weights*/
+    --font-weight-300: 300;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+
+    --margin: 1rem;
+    --padding-top-bottom: calc(2rem + 5vmin);
+    --padding-left-right: calc(1rem + 4vmin);
+    --max-width: 1100px;
+}
