@@ -50,6 +50,6 @@ landing_a:
             alt: cubo
     - id: section-d
       title: Inicia Tu Transformación <span class="dark-green-text">con Virto</span>
-      paragraph: "Agenda una cita con el equipo Virto y comienza con una consultoría personalizada.<br><strong>Disfruta de los beneficios: Trese meses gratis y tarifas especiales.</strong>"
+      paragraph: "Agenda una cita con el equipo Virto y comienza con una consultoría personalizada.<br><strong>Disfruta de los beneficios: Tres meses gratis y tarifas especiales.</strong>"
       href: https://apply.virto.network
       call_to_action: ¡Registrate e inicia tu consulta gratuita!
