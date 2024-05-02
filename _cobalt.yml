@@ -2,6 +2,9 @@
 site:
   description: Social marketplace infrastructure for Polkadot
   base_url: https://virto.network
+pages:
+  default:
+    layout: landing.liquid
 ignore:
   - README.md
   - cobalt*
