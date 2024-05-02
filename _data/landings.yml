@@ -50,6 +50,6 @@ landing_a:
             alt: cubo
     - id: section-d
       title: Inicia Tu Transformación <span class="dark-green-text">con Virto</span>
-      paragraph: "Agenda tu cita en calendly y comienza con una consultoría personalizada por parte de nuestro equipo en Virto.<br>Además, disfruta de tres meses gratis y una tarifa especial de solo $5 USD mensuales.<br><strong> Si no estás satisfecho, te devolvemos tu dinero.</strong>"
+      paragraph: "Agenda una cita con el equipo Virto y comienza con una consultoría personalizada.<br><strong>Disfruta de los beneficios: Trese meses gratis y tarifas especiales.</strong>"
       href: https://apply.virto.network
-      call_to_action: Regístrate e Inicia tu Consulta Gratuita
+      call_to_action: ¡Registrate e inicia tu consulta gratuita!
