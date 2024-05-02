@@ -1,0 +1,24 @@
+<footer id="footer" class="dark-olive-bg">
+        <a href="#" class="logo">
+            {% include "virto_logo_small.svg" %}
+        </a>
+        <nav>
+            <ul class="nav-links bolder">
+            </ul>
+        </nav>
+			<a id="scroll-up" class="scroll-up-link lightest-lavender-text center-arrow">Volver arriba
+				<figure class="link-arrow">
+						{% include "up.svg" %}
+				</figure>
+	 		</a>
+</footer>
+<script>
+	let scrollLink = document.querySelector('#scroll-up');
+
+	scrollLink.addEventListener('click', () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth"
+		})
+	});
+</script>
