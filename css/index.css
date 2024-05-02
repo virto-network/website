@@ -77,7 +77,7 @@ section>article.max {
 #local-community article div { max-width: 40rem; }
 #local-community article div:nth-child(2) { margin-bottom: 5em;}
 figure.build-machine img { width: 100%; }
-@media (min-width: 1312px) {
+@media (min-width: 1400px) {
     .build-machine::after {
         content: url('../img/arrow_left.svg');
         display: inline-block;
