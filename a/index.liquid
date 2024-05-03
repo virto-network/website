@@ -26,6 +26,7 @@ ul li, .auto-grid li { display: flex; align-items: center; }
 
 #section-b h2 { max-width: 700px; margin-left: 20px; }
 #section-b .logo { margin-top: 2em; margin-left: 20px; }
+#section-b .text-section { gap: 5em; }
 
 #section-c, #section-b { align-items: center;  flex-wrap: wrap; }
 #section-c { padding: 0 1rem; }
@@ -43,11 +44,13 @@ ul li, .auto-grid li { display: flex; align-items: center; }
 
 /*MOBILE*/
 @media only screen and (max-width: 767px) {
-    article div, { width: 90%; }
+    article div { width: 90%; }
     .text-section { max-width: 85%; }
-    .column { order: -1; width: 90%; }
 }
 
+@media only screen and (max-width: 1295px) {
+    .column { order: -1; width: fit-content(300px); }
+}
 
 </style>
 
