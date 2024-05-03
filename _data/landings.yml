@@ -63,7 +63,7 @@ landing_b:
       href: https://apply.virto.network
       call_to_action: Agéndate y Obtén tu Consulta Gratuita
     - id: section-b
-      title: Innova con <span class="light-lavender-text">DAOs y Pagos P2P</span>
+      title: Innova con <br><span class="light-lavender-text">DAOs y Pagos P2P</span>
       subtitle: 'Explora las capacidades que Virto tiene para tu organización:'
       list:
           - content: DAOs para una gobernanza transparente.
