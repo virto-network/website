@@ -14,7 +14,7 @@ img:not(#build_machine) {
 }
 .logo.img-c svg { width: 600px; }
 
-ul li, .auto-grid li { display: flex; align-items: center; margin-bottom: -16px;}
+ul li, .auto-grid li { display: flex; align-items: center; }
 #section-c ul li { margin-bottom: 1em; }
 
 #section-a figure.logo { align-items: start; }
@@ -27,10 +27,11 @@ ul li, .auto-grid li { display: flex; align-items: center; margin-bottom: -16px;
 #section-b h2 { max-width: 700px; margin-left: 20px; }
 #section-b .logo { margin-top: 2em; margin-left: 20px; }
 
-#section-c, #section-b {  align-items: center;  flex-wrap: wrap; }
+#section-c, #section-b { align-items: center;  flex-wrap: wrap; }
+#section-c { padding: 0 1rem; }
 #section-c .logo { margin-top: 2em; }
 
-#section-d { display: grid; }
+#section-d { padding: 0 1rem; display: grid; }
 #section-d article div { max-width: 41rem; }
 #section-d article div:nth-child(2) { margin-bottom: 1em; }
 #section-d .max .text-section {
@@ -50,7 +51,7 @@ ul li, .auto-grid li { display: flex; align-items: center; margin-bottom: -16px;
 
 </style>
 
-{% for landing_a in site.data.index.landing_a %}
+{% for landing_a in site.data.landings.landing_a %}
 <section {% if landing_a.id == "section-a" %} id="section-a" class="light-green-bg">
 	<article class="max animated">
 		<div class="text-section dark-olive-text">
@@ -136,7 +137,7 @@ ul li, .auto-grid li { display: flex; align-items: center; margin-bottom: -16px;
 			</figure>
 		</div>
 		<div class="text-section">
-			<h3 class="dark-olive-text">Aprovecha esta oportunidad única.</h3>
+			<h3 class="dark-olive-text">¡Aprovecha esta oportunidad única!</h3>
 			<p class="dark-olive-text">{{ landing_a.paragraph }}</p>
 			<a class="dark-olive-text center-arrow" href={{ landing_a.href }}>{{ landing_a.call_to_action }}
 			<figure class="link-arrow">{% include "see_more.svg" %}</figure>
