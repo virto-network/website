@@ -154,13 +154,17 @@ ul li, .auto-grid li { display: flex; align-items: center; }
 
 
 <script>
-	window.amplitude.track(`view:landing:a`);
+	window.document.onload = () => { window.amplitude.track(`view:landing:a`); }
 
-	let cta = document.querySelector(".track-cta");
-		cta.addEventListener('click', () => {
+	let cta = document.querySelectorAll(".track-cta");
+		cta.forEach((c) => {
+			c.addEventListener('click', () => {
+			let newWindow = window.open();
 			let searchParams = new URL(window.location.href);
 			window.amplitude.track(`landing:a:click-apply`);
-			window.open(`https://apply.virto.network${searchParams.search}`, '_blank');
+			let url = `https://apply.virto.network${searchParams.search}`;
+			newWindow.location = url;
+		})
 	});
 
 const $ = document.querySelector.bind(document),
