@@ -6,7 +6,6 @@ landing_a:
     - id: section-a
       title: Ahorra<span class="dark-lavender-text"> Dinero y Tiempo </span>con Gestión Eficaz
       paragraph: ¿Frustrado con la burocracia y los procesos lentos?<br> Optimiza la gestión de capital humano y finanzas en tu organización con Virto.
-      href: https://apply.virto.network
       call_to_action: Regístrate e Inicia tu Consulta Gratuita
     - id: section-b
       title: Potencia Tu Operativa con <span class="light-lavender-text">Soluciones Inteligentes</span>
@@ -30,13 +29,11 @@ landing_a:
           - content: Innovación a través de nuestra infraestructura integrada con tecnología Web 3.0.
             icon: ../img/lavender_cube.svg
             alt: cubo
-      href: https://apply.virto.network
       call_to_action: Regístrate e Inicia tu Consulta Gratuita
     - id: section-c
       title: Gestiona Mejor,<br><span class="light-lavender-text">Logra Más</span>
       subtitle: Virto te equipa con herramientas diseñadas para el éxito.
       paragraph: "Imagina gestionar proyectos sin estrés y con total transparencia.<br> Sé parte del cambio:"
-      href: https://apply.virto.network
       call_to_action: Regístrate e Inicia tu Consulta Gratuita
       list:
           - content: Sistemas de pago seguros y eficientes.
@@ -51,7 +48,6 @@ landing_a:
     - id: section-d
       title: Inicia Tu Transformación <span class="dark-green-text">con Virto</span>
       paragraph: "Agenda una cita con el equipo Virto y comienza con una consultoría personalizada.<br><strong>Disfruta de los beneficios: Tres meses gratis y tarifas especiales.</strong>"
-      href: https://apply.virto.network
       call_to_action: Regístrate e Inicia tu Consulta Gratuita
 
 #Landing-b
@@ -60,7 +56,6 @@ landing_b:
       title:  Optimiza <span class="dark-lavender-text"> Tu Gestión Organizacional </span>con DAOs
       question: ¿Quieres mejorar la gestión en tu comunidad con tecnología Web 3.0?
       paragraph: Virto te ofrece herramientas avanzadas para DAOs que transforman la eficiencia y la transparencia.
-      href: https://apply.virto.network
       call_to_action: Agéndate y Obtén tu Consulta Gratuita
     - id: section-b
       title: Innova con <br><span class="light-lavender-text">DAOs y Pagos P2P</span>
@@ -78,12 +73,10 @@ landing_b:
           - content: Chat privados para una comunicación segura.
             icon: ../img/lavender_cube.svg
             alt: cubo
-      href: https://apply.virto.network
       call_to_action: Agéndate y Obtén tu Consulta Gratuita
     - id: section-c
       title: Simplifica la Gobernanza con <br><span class="light-lavender-text">Herramientas Intuitivas</span>
       subtitle: 'Superamos la complejidad de los productos tradicionales con soluciones fáciles de usar que potencian la colaboración:'
-      href: https://apply.virto.network
       call_to_action: Agéndate y Obtén tu Consulta Gratuita
       list:
           - content: Procesos de votación claros y seguros para una gobernanza efectiva.
@@ -98,5 +91,4 @@ landing_b:
     - id: section-d
       title: Da el Salto a la Optimización <span class="dark-green-text">con Virto</span>
       paragraph: Regístrate ahora y agenda una consultoría personalizada de Virto.<br><strong>¡No pierdas la oportunidad de disfrutar de tres meses gratuitos!</strong>
-      href: https://apply.virto.network
       call_to_action: Agéndate y Obtén tu Consulta Gratuita
