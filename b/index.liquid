@@ -61,7 +61,7 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 			<h1>{{ landing_b.title }}</h1>
 			<p>{{ landing_b.question }}</p>
 			<p>{{ landing_b.paragraph }}</p>
-			<button><a href={{ landing_b.href }}>{{ landing_b.call_to_action }}</a></button>
+			<button><a class="track-cta" href={{ landing_b.href }}>{{ landing_b.call_to_action }}</a></button>
 		</div>
 		<figure class="arrow-right">
 				{% include "arrow_right.svg" %}
@@ -91,7 +91,7 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 				</li>
             {% endfor %}
             </ul>
-			<a href={{ landing_b.href }} class="bold light-lavender-text center-arrow">{{ landing_b.call_to_action }}
+			<a href={{ landing_b.href }} class="track-cta bold light-lavender-text center-arrow">{{ landing_b.call_to_action }}
 				<figure class="link-arrow light-lavender-text">
 					{% include "see_more.svg" %}
 				</figure>
@@ -113,7 +113,7 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
                     </li>
                 {% endfor %}
             </ul>
-			<a href={{ landing_b.href }} class="bold light-lavender-text center-arrow">{{ landing_b.call_to_action }}
+			<a href={{ landing_b.href }} class="track-cta bold light-lavender-text center-arrow">{{ landing_b.call_to_action }}
 				<figure class="link-arrow light-lavender-text">
 					{% include "see_more.svg" %}
 				</figure>
@@ -141,7 +141,7 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 		<div class="text-section">
 			<h3 class="dark-olive-text">Transforma tu organización con facilidad.</h3>
 			<p class="dark-olive-text">{{ landing_b.paragraph }}</p>
-			<a class="dark-olive-text center-arrow" href={{ landing_b.href }}>{{ landing_b.call_to_action }}
+			<a class="track-cta dark-olive-text center-arrow" href={{ landing_b.href }}>{{ landing_b.call_to_action }}
 			<figure class="link-arrow">{% include "see_more.svg" %}</figure>
 			</a>
 		</div>

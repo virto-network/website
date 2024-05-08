@@ -61,7 +61,7 @@ ul li, .auto-grid li { display: flex; align-items: center; }
 			<p>¡Bienvenido a Virto!</p>
 			<h1>{{ landing_a.title }}</h1>
 			<p>{{ landing_a.paragraph }}</p>
-			<button><a href={{ landing_a.href }}>{{ landing_a.call_to_action }}</a></button>
+			<button><a class="track-cta" href={{ landing_a.href }}>{{ landing_a.call_to_action }}</a></button>
 		</div>
 		<figure class="arrow-right">
 				{% include "arrow_right.svg" %}
@@ -91,7 +91,7 @@ ul li, .auto-grid li { display: flex; align-items: center; }
 				</li>
             {% endfor %}
             </ul>
-			<a href={{ landing_a.href }} class="bold light-lavender-text center-arrow">{{ landing_a.call_to_action }}
+			<a href={{ landing_a.href }} class="track-cta bold light-lavender-text center-arrow">{{ landing_a.call_to_action }}
 				<figure class="link-arrow light-lavender-text">
 					{% include "see_more.svg" %}
 				</figure>
@@ -114,7 +114,7 @@ ul li, .auto-grid li { display: flex; align-items: center; }
                     </li>
                 {% endfor %}
             </ul>
-			<a href={{ landing_a.href }} class="bold light-lavender-text center-arrow">{{ landing_a.call_to_action }}
+			<a href={{ landing_a.href }} class="track-cta bold light-lavender-text center-arrow">{{ landing_a.call_to_action }}
 				<figure class="link-arrow light-lavender-text">
 					{% include "see_more.svg" %}
 				</figure>
@@ -142,7 +142,7 @@ ul li, .auto-grid li { display: flex; align-items: center; }
 		<div class="text-section">
 			<h3 class="dark-olive-text">¡Aprovecha esta oportunidad única!</h3>
 			<p class="dark-olive-text">{{ landing_a.paragraph }}</p>
-			<a class="dark-olive-text center-arrow" href={{ landing_a.href }}>{{ landing_a.call_to_action }}
+			<a class="track-cta dark-olive-text center-arrow" href={{ landing_a.href }}>{{ landing_a.call_to_action }}
 			<figure class="link-arrow">{% include "see_more.svg" %}</figure>
 			</a>
 		</div>
