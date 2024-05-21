@@ -9,13 +9,13 @@ home_sections:
     - id: home
       title: ¿Necesitas integrar  <span class="dark-lavender-text">nuevas tecnologías web3</span> en tu startup?
       paragraph: En Virto, desarrollamos tecnología Blockchain para ofrecerte soluciones en pasarelas de pago, creación de dApps y más.
-      href: https://calendly.com/isa-virto-team/30min?month=2024-03
+      href: https://calendly.com/katherinelopezvirto/45min
       call_to_action: ¡Agenda una cita ahora!
     - id: presentation
       title: Innova y prospera con <span class="light-lavender-text">Virto®</span>
       subtitle: Una infraestructura descentralizada basada en el ecosistema <strong><a id="polkadot" href="https://polkadot.network/">Polkadot.</a></strong>
       paragraph: Aumenta tus ingresos y reduce costos operativos con nuestra tecnología Blockchain.
-      href: https://calendly.com/isa-virto-team/30min?month=2024-03
+      href: https://calendly.com/katherinelopezvirto/45min
       call_to_action: ¡Hablemos de tu proyecto!
     - id: not-programmer
       title: Soluciones que <span class="light-lavender-text">transforman</span>
@@ -50,7 +50,7 @@ home_sections:
     - id: you-decide
       eyebrow: Tú decides y ayudas a mejorar tu entorno.
       title: ¡Dale vida a tus ideas con <span class="underlined-element">tecnologías Web 3!</span>
-      href: https://calendly.com/isa-virto-team/30min?month=2024-03
+      href: https://calendly.com/katherinelopezvirto/45min
       call_to_action: Agenda tu videollamada gratuita
 
   
