@@ -8,6 +8,7 @@
 		<a {% if page.data.route == "home"%}current{%endif%}" href="/" id="virto-logo" role="menuitem" aria-label="Inicio">
 			{% include "virto_logo.svg" %}
 		</a>
+		<div class="hide">
 		<a {% if page.data.route == "about"%}current{%endif%}" href="/sobre-virto/" id="about-link" role="menuitem" aria-label="Sobre Virto">
 		Sobre Virto
 		</a>
@@ -20,7 +21,6 @@
 		<a {% if page.data.route == "comunidades-locales"%}current{%endif%}" href="/comunidades-locales/" role="menuitem" aria-label="Comunidades locales">
 				Comunidades locales
 			</a>
-		<div class="hide">
 			<a {% if page.data.route == "contacto"%}current{%endif%}" href="/contacto/" role="menuitem" aria-label="Contacto">
 				Contacto
 			</a>
@@ -34,13 +34,14 @@
 		<a id="menu-icon" class="menu-icon" aria-label="Abrir menú" tabindex="1">
 			<svg width="30" height="30" viewBox="-2 -2 34 34" aria-labelledby="Icono menu mobile">
 				<title id="Icono menu mobile">Menu mobile</title>
-				<line x1="2" y1="7" x2="28" y2="7" stroke="#10352B" stroke-width="3" stroke-linecap="round"/>
-				<line x1="28" y1="17" x2="15" y2="17" stroke="#10352B" stroke-width="3" stroke-linecap="round"/>
-				<line x1="2" y1="27" x2="28" y2="27" stroke="#10352B" stroke-width="3" stroke-linecap="round"/>
+				<line x1="2" y1="7" x2="28" y2="7" stroke="#DECFF1" stroke-width="3" stroke-linecap="round"/>
+				<line x1="28" y1="17" x2="15" y2="17" stroke="#DECFF1" stroke-width="3" stroke-linecap="round"/>
+				<line x1="2" y1="27" x2="28" y2="27" stroke="#DECFF1" stroke-width="3" stroke-linecap="round"/>
 			</svg>
 		</a>
 		<nav id="menu-dropdown" aria-label="Secundaria">
 		    <a id="close-menu" class="close-menu" aria-label="Cerrar menú"></a>
+			<div class="hide">
 			<a {% if page.data.route == "about"%}current{%endif%}" href="/sobre-virto/" role="menuitem" aria-label="Sobre Virto">
 				Sobre Virto
 			</a>
@@ -53,16 +54,15 @@
 			<a {% if page.data.route == "comunidades-locales"%}current{%endif%}" href="/comunidades-locales/" role="menuitem" aria-label="Comunidades locales">
 				Comunidades locales
 			</a>
-			<div class="hide">
 				<a {% if page.data.route == "contacto"%}current{%endif%}" href="/contacto/" role="menuitem" aria-label="Contacto">
 					Contacto
 				</a>
 			</div>
 			<a {% if page.data.route == "whitepaper"%}current{%endif%}" href="/docs/whitepaper.html" role="menuitem" aria-label="Para desarrolladores">
-				Whitepaper
+				WHITEPAPER
 			</a>
 			<a {% if page.data.route == "blog"%}current{%endif%}" href="/blog/" role="menuitem" aria-label="Blog">
-				Blog
+				BLOG
 			</a>
 		</nav>
 	</div>
