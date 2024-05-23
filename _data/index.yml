@@ -7,51 +7,73 @@ default_message:
 # Home
 home_sections:
     - id: home
-      title: ¿Necesitas integrar  <span class="dark-lavender-text">nuevas tecnologías web3</span> en tu startup?
-      paragraph: En Virto, desarrollamos tecnología Blockchain para ofrecerte soluciones en pasarelas de pago, creación de dApps y más.
+      eyebrow: ¿Te enfrentas a complicaciones para establecer y administrar tu negocio?
+      title: <span class="dark-green-text">Crea y Gestiona</span> tu Organización en Minutos
+      paragraph: 'Virto te ofrece una cuenta organizacional que simplifica la creación y gestión de tu organización, permitiéndote enfocarte en lo que realmente importa: hacer crecer tu negocio.'
       href: https://calendly.com/katherinelopezvirto/45min
       call_to_action: ¡Agenda una cita ahora!
-    - id: presentation
-      title: Innova y prospera con <span class="light-lavender-text">Virto®</span>
-      subtitle: Una infraestructura descentralizada basada en el ecosistema <strong><a id="polkadot" href="https://polkadot.network/">Polkadot.</a></strong>
-      paragraph: Aumenta tus ingresos y reduce costos operativos con nuestra tecnología Blockchain.
+    - id: jobs
+      title: Cómo Virto <br/><span class="light-lavender-text">Hace el Trabajo por Ti</span>
+      cards:
+          - title: "Configuración Rápida y Fácil:"
+            content: Crea tu empresa en menos de 15 minutos, sin complicaciones.
+          - title: "Gestión de Miembros Simplificada:"
+            content: Organiza tu equipo con membresías, asigna roles y administra decisiones.
+          - title: "Recepción y Ejecución de Pagos Eficiente: "
+            content: Realiza transacciones globales de manera segura y rápida.
+          - title: "Gobernanza de Fondos Avanzada:"
+            content: Toma decisiones financieras informadas y gestiona tus recursos con eficacia.
+          - title: "Acceso a la billetera organizacional:"
+            content: Mantén los recursos de tu organización y realiza movimientos cuando lo necesites.
+            class: center      
+    - id: benefits
+      title: Beneficios de Usar <span class="light-lavender-text">Virto</span>
+      cards:
+          - title: "Ahorra Tiempo:"
+            content: Inicia tu empresa rápidamente y reduce el tiempo dedicado a tareas administrativas.
+            svg: "Ahorra Tiempo.svg"
+            class: benefits-row
+          - title: "Optimiza la Gestión Financiera:"
+            content: Mantén un control claro y preciso sobre tus fondos.
+            svg: "Gestion Financiera.svg"
+            class: benefits-row-reverse
+          - title: "Simplifica la Colaboración:"
+            content: Facilita la comunicación y coordinación dentro de tu equipo.
+            svg: "Colaboracion.svg"
+            class: benefits-row
+          - title: "Garantiza la Seguridad:"
+            content: Protege tu información y transacciones con las mejores prácticas de seguridad manteniendo trazabilidad de las mismas.
+            svg: "Seguridad.svg"
+            class: benefits-row-reverse
+          - title: "Conectividad Estratégica:"
+            content: Establece conexiones valiosas con otras organizaciones afines y promoviendo oportunidades de colaboración.
+            svg: 5.svg
+            class: benefits-row
+    - id: testimonials
+      title: Testimonios
+      testimonials:
+          - avatar: "/../img/dani.jpeg"
+            person: Juan P., Fundador y CEO
+            message: "Virto nos permitió establecer nuestra empresa en tiempo récord y nos ha facilitado enormemente la gestión diaria permitiendo la toma de decisiones y la participación de todos mis colaboradores”. ¡Una herramienta indispensable!"
+          - avatar: "/../img/dani.jpeg"
+            person: Daniel Olano, CEO de Virto
+            message: "Gracias a Virto, nuestra toma de decisiones es más rápida y transparente, lo que ha hecho que nuestro equipo se sienta más unido y comprometido."
+    - id: qa
+      title: Preguntas Frecuentes
+      questions:
+          - question: ¿Cuánto tiempo toma configurar Virto?
+            answer: Menos de 15 minutos para tener tu organización lista y operativa.
+          - question: ¿Es seguro?
+            answer: Sí, utilizamos tecnología avanzada para proteger todos tus datos y transacciones.
+          - question: ¿Puedo probarlo gratis?
+            answer: Sí, ofrecemos un período de prueba gratuito para que puedas experimentar todas nuestras funcionalidades sin costo alguno.
+    - id: cta
+      eyebrow: Comienza Ahora
+      title: Da el primer paso hacia el éxito de tu <span class="underlined-element">organización con Virto.</span>
+      content: Regístrate <strong>antes de que finalice junio</strong> y prueba gratis nuestra plataforma, diseñada para simplificar la creación y gestión de tu negocio.
       href: https://calendly.com/katherinelopezvirto/45min
-      call_to_action: ¡Hablemos de tu proyecto!
-    - id: not-programmer
-      title: Soluciones que <span class="light-lavender-text">transforman</span>
-      paragraph: "Imagina simplificar tus operaciones y abrir nuevos mercados con solo un clic. Eso es lo que Virto hace por ti: soluciones reales, resultados tangibles a la medida."
-      href: mailto:contact@virto.team
-      call_to_action: ¡Envíanos tu consulta!
-    - id: know-more
-      cards_to_sections:
-          - title: ¿Por qué Virto?
-            img: img/build.svg
-            alt: build
-            content: Amplía el impacto de tu negocio en el ecosistema descentralizado con nuestras herramientas diseñadas según tu necesidad.
-            href: sobre-virto/#benefits
-            call_to_action: Ver más
-          - title: Quienes nos apoyan
-            img: img/window.svg
-            alt: window
-            content: Junto a nuestros partners, impulsamos una Web 3.0 inclusiva y sostenible. Tu visión, respaldada por líderes del sector. 
-            href: sobre-virto/#partners
-            call_to_action: ¡Descubre quiénes son!
-          - title: Unirte a comunidades locales
-            img: img/group.svg
-            alt: community
-            content: Tu participación apoya directamente a causas locales elegidas por ti y otros usuarios. 
-            href: comunidades-locales
-            call_to_action: ¡Únete a nosotros!
-    - id: local-community
-      title: ¿Quieres impulsar cambios reales en tu <span class="dark-green-text">emprendimiento local?</span>
-      paragraph: "Cada transacción apoya causas valiosas, desde mejoras locales hasta grandes retos globales. <br>Tu acción, nuestro compromiso: juntos transformamos."
-      href: coming-soon
-      call_to_action: Únete y contribuye con cada click.
-    - id: you-decide
-      eyebrow: Tú decides y ayudas a mejorar tu entorno.
-      title: ¡Dale vida a tus ideas con <span class="underlined-element">tecnologías Web 3!</span>
-      href: https://calendly.com/katherinelopezvirto/45min
-      call_to_action: Agenda tu videollamada gratuita
+      call_to_action: Regístrate y Aprovecha la Oferta
+
 
   
 
