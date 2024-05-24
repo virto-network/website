@@ -28,7 +28,7 @@ body.hidden {
 
 /** Top navigation**/
 #nav {
-  background-color: var(--clr-green-lighter);
+  background-color: var(--clr-olive-darker);
   height: var(--nav-height);
   padding: 2.5rem 1rem;
   position: fixed;
@@ -68,7 +68,7 @@ nav a {
 }
 
 #virto-logo svg path {
-  fill: var(--clr-olive-darker);
+  fill: var(--clr-lavender-lightest);
 }
 
 nav a:not(.logo) {
@@ -81,7 +81,7 @@ nav a:not(.logo) {
   outline: 3px solid var(--clr-lavender-darker);
 }
 .top-nav a:not(.logo) {
-  color: var(--clr-olive-darker);
+  color: var(--clr-lavender-lightest);
   height: var(--nav-height);
   position: relative;
   font-size: clamp(1rem, calc(0.9rem + 0.7vw), 1.3rem);

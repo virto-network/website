@@ -8,6 +8,13 @@ section>article {
     justify-content: center;
 }
 
+section>article.max {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+}
+
 button {
     border: none;
     margin: 1em 0;
@@ -106,7 +113,7 @@ span { font-family: inherit; }
     display: flex;
     flex-direction: column;
 	text-align: left;
-    max-width: clamp(300px, 50%, 650px);
+    max-width: clamp(300px, 50%, 750px);
     gap: 2em;
 }
 
@@ -121,3 +128,6 @@ a:hover, a:focus { text-decoration-line: underline; }
 
 .scroll-down-link {	position: absolute; bottom: 5%; right: 5%; }
 .scroll-up-link { position: relative; bottom: 20%; }
+
+.column { display: flex; flex-direction: column;}
+.title-max-width { max-width: 80%; }
