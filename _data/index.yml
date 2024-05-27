@@ -74,9 +74,6 @@ home_sections:
       href: https://calendly.com/katherinelopezvirto/45min
       call_to_action: Regístrate y Aprovecha la Oferta
 
-
-  
-
 # About Virto
 virto_benefits:
   - item: <span>Aumentamos la seguridad</span> de tus transacciones.
@@ -167,23 +164,34 @@ bloque_benefits:
       url: '/../img/more.svg'
       alt: Mas
 
+
 # Services
 services:
-  - icon:
-      url: '/../img/mobile.svg'
-      alt: Aplicacion móvil
-    title: Desarrollo de<br> dApps
-    description: Construimos <strong>aplicaciones descentralizadas</strong> robustas, aprovechando la seguridad y transparencia de la tecnología blockchain.
-  - icon:
-      url: ../img/payments.svg
-      alt: Billetera
-    title: Pasarelas de pago descentralizadas
-    description: Agiliza tus transacciones con <strong>sistemas de pago rápidos, fáciles y seguros</strong>, operando en una red blockchain.
-  - icon:
-      url: ../img/puzzle.svg
-      alt: Rompecabezas
-    title: Gestión de comunidades
-    description: Te ofrecemos <strong>soluciones personalizadas</strong> dependiendo tus necesidades para gestionar y hacer crecer tu comunidad en línea, <strong>desde plataformas de chat especializado</strong> para que crees los canales que necesites, pasando por tener tu propio dominio y servidor para que tus usuarios se registren directamente en tu plataforma, hacer tu tienda virtual o website, <strong>hasta sistemas de gobernanza, votaciones y decisiones comunitarias en entornos descentralizados.</strong>
+  - id: intro
+    title: <span class="lightest-lavender-text">Rápido, Seguro y con Menos Costos</span>
+    paragraph: En Virto, transformamos tu capacidad de operar y administrar recursos, permitiéndote alcanzar metas con mayor rapidez y menos esfuerzo.
+    call_to_action: Nuestra plataforma te permite
+  - id: key_features
+    list:
+        - title: 'Billetera Organizacional:'
+          content: Abre una billetera digital para tu organización en pocos pasos, disponible en múltiples monedas.
+        - title: 'Pagos Virto:'
+          content: Flexibilidad y alcance global en los pagos, incluyendo criptomonedas.
+        - title: 'Administración de Fondos:'
+          content: Gestión eficiente y transparente a través de un sistema de membresías colaborativas <strong>¡Tomar decisiones en equipo nunca fue tan fácil!</strong>
+  - id: optimize_resources
+    title: Maximiza la Eficiencia de tus Recursos con Virto
+    paragraph: 'A través de Virto, optimizarás el uso de tus recursos financieros y mejorarás la colaboración interna:'
+    list:
+        - title: Administración Colaborativa de Fondos
+          content: Permite a los miembros coadministrar recursos, manteniendo un control claro y detallado sobre cada operación.
+          img: 'group.svg'
+        - title: Transparencia Total
+          content: Todos los movimientos y decisiones son registrados, asegurando integridad y claridad.
+          img: 'group.svg'
+        - title: Control Definido
+          content: Establece roles y permisos específicos para garantizar una gestión adecuada y segura de tus activos.
+          img: 'group.svg'
 
 #Landing-a
 landing_a:
