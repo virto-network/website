@@ -29,23 +29,23 @@ home_sections:
     - id: benefits
       title: Beneficios de Usar <span class="light-lavender-text">Virto</span>
       cards:
-          - title: "Ahorra Tiempo:"
+          - title: Ahorra Tiempo
             content: Inicia tu empresa rápidamente y reduce el tiempo dedicado a tareas administrativas.
             svg: "Ahorra Tiempo.svg"
             class: benefits-row
-          - title: "Optimiza la Gestión Financiera:"
+          - title: Optimiza la Gestión Financiera
             content: Mantén un control claro y preciso sobre tus fondos.
             svg: "Gestion Financiera.svg"
             class: benefits-row-reverse
-          - title: "Simplifica la Colaboración:"
+          - title: Simplifica la Colaboración
             content: Facilita la comunicación y coordinación dentro de tu equipo.
             svg: "Colaboracion.svg"
             class: benefits-row
-          - title: "Garantiza la Seguridad:"
+          - title: Garantiza la Seguridad
             content: Protege tu información y transacciones con las mejores prácticas de seguridad manteniendo trazabilidad de las mismas.
             svg: "Seguridad.svg"
             class: benefits-row-reverse
-          - title: "Conectividad Estratégica:"
+          - title: Conectividad Estratégica
             content: Establece conexiones valiosas con otras organizaciones afines y promoviendo oportunidades de colaboración.
             svg: "Conectividad Estrategica.svg"
             class: benefits-row

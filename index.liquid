@@ -51,12 +51,12 @@ data:
 		<div class="benefits-container dark-olive-text">
 			{% for card in home_section.cards %}
 			<div class={{ card.class }}>
-				<div class="benefits-column">
+				<div class="animated benefits-column">
 					<figure class="benefits-image">
 						{% include card.svg %}
 					</figure>
 				</div>
-				<div class="benefits-column text">
+				<div class="animated benefits-column text">
 					<h2>{{ card.title }}</h2>
 					<p>{{ card.content }}</p>
 				</div>  
