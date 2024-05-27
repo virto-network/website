@@ -188,10 +188,10 @@ services:
           img: 'group.svg'
         - title: Transparencia Total
           content: Todos los movimientos y decisiones son registrados, asegurando integridad y claridad.
-          img: 'group.svg'
+          img: 'all_ok.svg'
         - title: Control Definido
           content: Establece roles y permisos específicos para garantizar una gestión adecuada y segura de tus activos.
-          img: 'group.svg'
+          img: 'rol_managment.svg'
 
 #Landing-a
 landing_a:
