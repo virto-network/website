@@ -53,11 +53,11 @@ home_sections:
       title: Testimonios
       testimonials:
           - avatar: "/../img/dani.jpeg"
+            person: Daniel Olano, CEO de Virto
+            message: "Como fundador de Virto, he experimentado de primera mano los beneficios de utilizar nuestra tecnología blockchain. Ha simplificado nuestro proceso de toma de decisiones, automatizado el manejo de mi equipo y pagos, y aumentado la transparencia en toda nuestra organización."
+          - avatar: "/../img/dani.jpeg"
             person: Juan P., Fundador y CEO
             message: "Virto nos permitió establecer nuestra empresa en tiempo récord y nos ha facilitado enormemente la gestión diaria permitiendo la toma de decisiones y la participación de todos mis colaboradores”. ¡Una herramienta indispensable!"
-          - avatar: "/../img/dani.jpeg"
-            person: Daniel Olano, CEO de Virto
-            message: "Gracias a Virto, nuestra toma de decisiones es más rápida y transparente, lo que ha hecho que nuestro equipo se sienta más unido y comprometido."
     - id: qa
       title: Preguntas Frecuentes
       questions:
