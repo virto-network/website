@@ -52,9 +52,15 @@ home_sections:
     - id: testimonials
       title: Testimonios
       testimonials:
-          - avatar: "/../img/dani.jpeg"
+          - avatar: "/../img/juan.png"
             person: Juan P., Fundador y CEO
-            message: "Virto nos permitió establecer nuestra empresa en tiempo récord y nos ha facilitado enormemente la gestión diaria permitiendo la toma de decisiones y la participación de todos mis colaboradores”. ¡Una herramienta indispensable!"
+            message: "A través de Virto abrí la cuenta organizacional de mi empresa de manera rápida, lo que me permitió recibir y realizar pagos de manera eficiente sin limitaciones."
+          - avatar: "/../img/alicia.png"
+            person: Alicia R., Jefa de Recursos Humanos
+            message: "Siempre había estado buscando una solución que me permitiera gestionar el presupuesto para mis equipos, y mantener una trazabilidad sobre los mismos; a tráves de Virto logré gestionar los recursos y a la vez mantenerme informada sobre el destino de cada uno de estos, sin tener que conciliar todo en un excel."
+          - avatar: "/../img/bob.jpg"
+            person: Bob B., CEO Start up
+            message: "Antes todas las decisiones en las que quería vincular a mi equipo las tomábamos en reuniones extensas, o conversaciones largas por whatsapp; ahora con Virto y con el sistema de membresías todos en la organización y sin importar su zona horaria pueden vincularse a las decisiones de la organización."
           - avatar: "/../img/dani.jpeg"
             person: Daniel Olano, CEO de Virto
             message: "Gracias a Virto, nuestra toma de decisiones es más rápida y transparente, lo que ha hecho que nuestro equipo se sienta más unido y comprometido."
@@ -72,10 +78,14 @@ home_sections:
       title: Da el primer paso hacia el éxito de tu <span class="underlined-element">organización con Virto.</span>
       content: Regístrate <strong>antes de que finalice junio</strong> y prueba gratis nuestra plataforma, diseñada para simplificar la creación y gestión de tu negocio.
       href: https://calendly.com/katherinelopezvirto/45min
-      call_to_action: Regístrate y Aprovecha la Oferta
-
-
-  
+      call_to_action: Regístrate
+      socials:
+            - title: E-mail
+              svg: email.svg
+              link: mailto:contact@virto.team
+            - title: Linkedin
+              svg: linkedin.svg
+              link: https://www.linkedin.com/company/virto-network/
 
 # About Virto
 virto_benefits:
