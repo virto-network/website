@@ -87,6 +87,7 @@ home_sections:
               svg: linkedin.svg
               link: https://www.linkedin.com/company/virto-network/
 
+
 # About Virto
 virto_benefits:
   - item: <span>Aumentamos la seguridad</span> de tus transacciones.
@@ -219,6 +220,7 @@ services:
     paragraph: Regístrate en Virto antes de que finalice junio y experimenta cómo nuestra plataforma transforma la gestión de tu organización con una prueba gratuita.
     strong_paragraph: Disfruta de configuración rápida y soporte continuo para asegurar una transición eficiente hacia una gestión más efectiva y rentable.
     cta: Registrate y activa tu Comunidad Gratis👈
+
 
 #Landing-a
 landing_a:
