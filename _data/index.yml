@@ -47,7 +47,7 @@ home_sections:
             class: benefits-row-reverse
           - title: "Conectividad Estratégica:"
             content: Establece conexiones valiosas con otras organizaciones afines y promoviendo oportunidades de colaboración.
-            svg: 5.svg
+            svg: "Conectividad Estrategica.svg"
             class: benefits-row
     - id: testimonials
       title: Testimonios
