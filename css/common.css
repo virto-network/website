@@ -131,3 +131,7 @@ a:hover, a:focus { text-decoration-line: underline; }
 
 .column { display: flex; flex-direction: column;}
 .title-max-width { max-width: 80%; }
+
+.maxwidth--text_desktop {
+    max-width: 700px;
+}
