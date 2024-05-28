@@ -175,23 +175,36 @@ services:
     list:
         - title: 'Billetera Organizacional:'
           content: Abre una billetera digital para tu organización en pocos pasos, disponible en múltiples monedas.
+          class: 
         - title: 'Pagos Virto:'
           content: Flexibilidad y alcance global en los pagos, incluyendo criptomonedas.
+          class: align-right
         - title: 'Administración de Fondos:'
           content: Gestión eficiente y transparente a través de un sistema de membresías colaborativas <strong>¡Tomar decisiones en equipo nunca fue tan fácil!</strong>
+          class:
   - id: optimize_resources
     title: Maximiza la Eficiencia de tus Recursos con Virto
     paragraph: 'A través de Virto, optimizarás el uso de tus recursos financieros y mejorarás la colaboración interna:'
     list:
-        - title: Administración Colaborativa de Fondos
-          content: Permite a los miembros coadministrar recursos, manteniendo un control claro y detallado sobre cada operación.
-          img: 'group.svg'
         - title: Transparencia Total
           content: Todos los movimientos y decisiones son registrados, asegurando integridad y claridad.
           img: 'all_ok.svg'
+        - title: Administración Colaborativa de Fondos
+          content: Permite a los miembros coadministrar recursos, manteniendo un control claro y detallado sobre cada operación.
+          img: 'group.svg'
         - title: Control Definido
           content: Establece roles y permisos específicos para garantizar una gestión adecuada y segura de tus activos.
           img: 'rol_managment.svg'
+  - id: allies
+    title: <span class="dark-green-text">Tu Aliado en la Gestión Remota</span>
+    paragraph: Somos Virto, pioneros en implementar infraestructura web 3 para proporcionar una plataforma robusta y segura.
+    strong_paragraph: Nuestras herramientas están diseñadas para superar los desafíos de la gestión remota, reduciendo costos y elevando la seguridad en todas tus operaciones organizacionales.
+  - id: cta_services
+    title: "Actúa Ahora: Simplifica, Asegura y Economiza con Virto."
+    subtitle: ¡El momento es ahora!
+    paragraph: Regístrate en Virto antes de que finalice junio y experimenta cómo nuestra plataforma transforma la gestión de tu organización con una prueba gratuita.
+    strong_paragraph: Disfruta de configuración rápida y soporte continuo para asegurar una transición eficiente hacia una gestión más efectiva y rentable.
+    cta: Registrate y activa tu Comunidad Gratis👈
 
 #Landing-a
 landing_a:

@@ -6,6 +6,11 @@ data:
   route: servicios
 ---
 <style>
+
+section {
+  display: flex;
+  gap: 2em;
+}
 .services-section {
   justify-content: space-around;
 }
@@ -28,11 +33,11 @@ data:
 }
 
 #lock-icon .lock-glare {
-  stroke: var(--color-accent-1); /* O el color que quieras para los destellos */
-  stroke-width: 2; /* Ajusta el grosor del trazo según sea necesario */
-  stroke-dasharray: 5 5; /* Crea un patrón de rayas discontinuas */
-  stroke-dashoffset: 10; /* Desplaza el patrón de rayas */
-  animation: electrify 1s linear infinite;
+  stroke: var(--clr-green-lighter);
+  stroke-width: 1; 
+  stroke-dasharray: 5 5;
+  stroke-dashoffset: 10;
+  animation: electrify .5s linear infinite;
 }
 
 @keyframes electrify {
@@ -48,8 +53,7 @@ data:
 }
 .services-section__scroll-link {
   display: flex;
-  align-items: center; /* Alinea el texto y la flecha verticalmente */
-  cursor: pointer;
+  align-items: center;
 }
 
 .services-section__scroll-arrow {
@@ -70,7 +74,113 @@ data:
 
 #key_features {
     background-image: url('/img/features_bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.key_features--list {
+    display: flex;
+    width: 90%;
+    gap: 2em;
+    flex-direction: column;
+}
+
+.key_features--list li {
+    list-style: none;
+    width: 40%;
+    display: grid;
+    gap: .5em;
+}
+
+.key_features--list li h2 {
+    font-size: 1.75em;
+}
+
+.align-right {
+    align-self:self-end;
+    text-align: right;
+}
+
+@media (max-width: 430px) {
+    .optimize_resources--grid {
+        flex-direction: column;
+    }
+}
+
+    .optimize_resources article {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+  .optimize_resources--grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5em;
+  }
+
+  .optimize_resources--grid li {
+    display: grid; gap: .5em;
+    list-style: none; width: 30%;
+    margin-bottom: 1em;
+  }
+
+.optimize_resources--svg_list svg {
+    width: 100%; object-fit: contain;
+    height: 100%;
+}
+
+#allies {
+  display: flex;
+  gap: 100em;
+}
+
+.allies--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+}
+.allies--svg {
+    width: 40%;
+    margin-right: 5em;
+}
+
+.floating-rotation {
+  animation: floatAndRotate 5s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes floatAndRotate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+#cta_services {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 2em;
+}
+
+#cta_services article {
+  margin-top: 0;
+}
+
+
+.cta_services--svg {
+    align-items: flex-start;
+}
+
 
 </style>
 
@@ -97,35 +207,65 @@ data:
  
         <section {% if service.id == "key_features" %} id="key_features" class="light-lavender-bg">
           <article class="max animated">
+            <ul class="key_features--list">
             {% for item in service.list %}
-                <div>
-                    <div class="benefits-column text">
-                        <h2>{{ item.title }}</h2>
-                        <p>{{ item.content }}</p>
-                    </div>  
-                </div>
+                    <li class={{ item.class }}>
+                        <h2 class="dark-lavender-text">{{ item.title }}</h2>
+                        <p class="thin">{{ item.content }}</p>
+                    </li>  
             {% endfor %}
+            </ul>
           </article>
         </section>
       {% endif %}
 
       <section {% if service.id == "optimize_resources" %} id="optimize_resources" class="white-bg">
         <article class="max animated dark-olive-text">
-            <div class="text-section">
-                <h3 class="bold">{{ service.title }}</h3>
+                <h3 class="boldest">{{ service.title }}</h3>
                 <p>{{ service.paragraph }}</p>
-            </div>
-          {% for item in service.list %}
-              <div>
-                  <div >
-                    <figure class="services-section__lock-icon">
+              <ul class="optimize_resources--grid">
+                {% for item in service.list %}
+                  <li class="animated">
+                    <figure class="optimize_resources--svg_list">
                         {% include item.img %} 
                     </figure>
-                    <h2>{{ item.title }}</h2>
-                    <p>{{ item.content }}</p>
-                  </div>  
-              </div>
-          {% endfor %}
+                    <h3 class="bolder">{{ item.title }}</h3>
+                    <p class="grey-text">{{ item.content }}</p>
+                  </li>
+                {% endfor %}
+              </ul>
+        </article>
+      </section>
+    {% endif %}
+
+    <section {% if service.id == "allies" %} id="allies" class="whitest-bg">
+        <article class="max animated dark-olive-text center">
+                <h2 class="maxwidth--text_desktop bold">Innovación y Seguridad: {{ service.title }}</h2>
+                <div class="allies--container">
+                    <figure class="allies--svg">
+                        {% include "cubos.svg" %} 
+                    </figure>
+                    <h3 class="left">{{ service.paragraph }}</h3>
+                </div>
+                <h3 class="title-max-width dark-lavender-text bolder">{{ service.strong_paragraph }}</h3>
+        </article>
+      </section>
+    {% endif %}
+
+    <section {% if service.id == "cta_services" %} id="cta_services" class="dark-lavender-bg">
+      <div class="text-section">
+        <h2 class="title-max-width bold lightest-lavender-text">{{ service.title }}</h2>
+        <h2 class="title-max-width light-green-text">{{ service.subtitle }}</h2>
+        </div>
+        <article class="max animated light-green-text">
+                    <div class="text-section">
+                        <p>{{ service.paragraph }}</p>
+                        <h3 class="bolder">{{ service.strong_paragraph }}</h3>
+                        <button>{{ service.cta }} </button>
+                    </div>
+                <figure class="cta_services--svg">
+                    {% include "Happy person.svg" %} 
+                </figure>
         </article>
       </section>
     {% endif %}
