@@ -149,3 +149,7 @@ a:focus-visible {
 textarea:focus, input:focus {
     outline: none;
 }
+
+.maxwidth--text_desktop {
+    max-width: 700px;
+}
