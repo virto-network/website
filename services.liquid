@@ -6,7 +6,6 @@ data:
   route: servicios
 ---
 <style>
-<<<<<<< HEAD
 
 section {
   display: flex;
@@ -41,37 +40,6 @@ section {
   animation: electrify .5s linear infinite;
 }
 
-=======
-.services-section {
-  justify-content: space-around;
-}
-
-.services-section__lock-icon svg {
-  width: clamp(250px, 30vw, 500px);
-  height: auto;
-}
-
-#lock-icon path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: draw 4s ease-in-out forwards;
-}
-
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-#lock-icon .lock-glare {
-  stroke: var(--color-accent-1); /* O el color que quieras para los destellos */
-  stroke-width: 2; /* Ajusta el grosor del trazo según sea necesario */
-  stroke-dasharray: 5 5; /* Crea un patrón de rayas discontinuas */
-  stroke-dashoffset: 10; /* Desplaza el patrón de rayas */
-  animation: electrify 1s linear infinite;
-}
-
->>>>>>> 689d2a5 (ffirst commit)
 @keyframes electrify {
   0% {
     stroke-dashoffset: 10;
@@ -85,12 +53,8 @@ section {
 }
 .services-section__scroll-link {
   display: flex;
-<<<<<<< HEAD
   align-items: center;
-=======
-  align-items: center; /* Alinea el texto y la flecha verticalmente */
   cursor: pointer;
->>>>>>> 689d2a5 (ffirst commit)
 }
 
 .services-section__scroll-arrow {
