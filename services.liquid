@@ -101,39 +101,46 @@ section {
     text-align: right;
 }
 
-@media (max-width: 430px) {
-    .optimize_resources--grid {
-        flex-direction: column;
-    }
+.bottom {
+  position: relative;
+  bottom: -50px;
 }
 
-    .optimize_resources article {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
+#optimize_resources > article {
+  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 5em 0;
+  padding: 0 2em;
+}
 
-  .optimize_resources--grid {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1.5em;
-  }
+.optimize_resources--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2em;
+  grid-column: 1 / -1;
+}
 
-  .optimize_resources--grid li {
-    display: grid; gap: .5em;
-    list-style: none; width: 30%;
-    margin-bottom: 1em;
-  }
+.optimize_resources--grid li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
 
 .optimize_resources--svg_list svg {
-    width: 100%; object-fit: contain;
-    height: 100%;
+  width: 100%;
+  object-fit: contain;
+  height: auto;
+  margin-bottom: 1em;
 }
 
 #allies {
   display: flex;
-  gap: 100em;
+}
+
+#allies article {
+  gap: 3em;
 }
 
 .allies--container {
@@ -145,12 +152,11 @@ section {
 }
 .allies--svg {
     width: 40%;
-    margin-right: 5em;
 }
 
 .floating-rotation {
   animation: floatAndRotate 5s linear infinite;
-  transform-origin: center;
+  transform-origin: 45% 50%;
 }
 
 @keyframes floatAndRotate {
@@ -158,7 +164,7 @@ section {
     transform: translateY(0) rotate(0deg);
   }
   50% {
-    transform: translateY(-5px) rotate(180deg);
+    transform: translateY(-3px) rotate(180deg);
   }
   100% {
     transform: translateY(0) rotate(360deg);
@@ -169,18 +175,43 @@ section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 2em;
+  padding: 2em;
 }
 
 #cta_services article {
-  margin-top: 0;
+  margin: 0;
+  padding: 0;
 }
 
-
+#cta_services div {
+  display: flex;
+  gap: 1em;
+}
 .cta_services--svg {
     align-items: flex-start;
 }
 
+@media (max-width: 1279px) {
+  #cta_services article:nth-child(2) {
+    flex-wrap: wrap;
+  }
+  .allies--container {
+    flex-direction: column;
+    max-width: 320px;
+  }
+  .allies--container h3 {
+    text-align: center;
+  }
+  .allies--svg {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1279px) {
+  #cta_services article:nth-child(2) {
+    flex-wrap: nowrap;
+  }
+}
 
 </style>
 
@@ -200,7 +231,6 @@ section {
             <figure class="services-section__lock-icon">
               {% include "lock-icon.svg" %} 
             </figure>
-           
           </article>
         </section>
       {% endif %}
@@ -215,6 +245,7 @@ section {
                     </li>  
             {% endfor %}
             </ul>
+            <h2 class="bottom dark-lavender-text center">{{ service.last-title }}</h2>
           </article>
         </section>
       {% endif %}
@@ -243,7 +274,7 @@ section {
                 <h2 class="maxwidth--text_desktop bold">Innovación y Seguridad: {{ service.title }}</h2>
                 <div class="allies--container">
                     <figure class="allies--svg">
-                        {% include "cubos.svg" %} 
+                        {% include "cubos.svg" %}
                     </figure>
                     <h3 class="left">{{ service.paragraph }}</h3>
                 </div>
@@ -253,21 +284,22 @@ section {
     {% endif %}
 
     <section {% if service.id == "cta_services" %} id="cta_services" class="dark-lavender-bg">
-      <div class="text-section">
+      <article class="column">
         <h2 class="title-max-width bold lightest-lavender-text">{{ service.title }}</h2>
         <h2 class="title-max-width light-green-text">{{ service.subtitle }}</h2>
-        </div>
+        </article>
         <article class="max animated light-green-text">
-                    <div class="text-section">
+                    <div class="column">
                         <p>{{ service.paragraph }}</p>
                         <h3 class="bolder">{{ service.strong_paragraph }}</h3>
                         <button>{{ service.cta }} </button>
                     </div>
                 <figure class="cta_services--svg">
-                    {% include "Happy person.svg" %} 
+                    {% include "Happy person.svg" %}
                 </figure>
         </article>
       </section>
     {% endif %}
 
 {% endfor %}
+
