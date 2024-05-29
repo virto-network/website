@@ -52,18 +52,12 @@ home_sections:
     - id: testimonials
       title: Testimonios
       testimonials:
-          - avatar: "/../img/juan.png"
-            person: Juan P., Fundador y CEO
-            message: "A través de Virto abrí la cuenta organizacional de mi empresa de manera rápida, lo que me permitió recibir y realizar pagos de manera eficiente sin limitaciones."
-          - avatar: "/../img/alicia.png"
-            person: Alicia R., Jefa de Recursos Humanos
-            message: "Siempre había estado buscando una solución que me permitiera gestionar el presupuesto para mis equipos, y mantener una trazabilidad sobre los mismos; a tráves de Virto logré gestionar los recursos y a la vez mantenerme informada sobre el destino de cada uno de estos, sin tener que conciliar todo en un excel."
-          - avatar: "/../img/bob.jpg"
-            person: Bob B., CEO Start up
-            message: "Antes todas las decisiones en las que quería vincular a mi equipo las tomábamos en reuniones extensas, o conversaciones largas por whatsapp; ahora con Virto y con el sistema de membresías todos en la organización y sin importar su zona horaria pueden vincularse a las decisiones de la organización."
+          - avatar: "/../img/david.jpeg"
+            person: David Barinas, YC Founder
+            message: A través de Virto abrí la cuenta organizacional de mi empresa de manera rápida, lo que me permitió recibir y realizar pagos de manera eficiente sin limitaciones.
           - avatar: "/../img/dani.jpeg"
             person: Daniel Olano, CEO de Virto
-            message: "Gracias a Virto, nuestra toma de decisiones es más rápida y transparente, lo que ha hecho que nuestro equipo se sienta más unido y comprometido."
+            message: Como fundador de Virto, he experimentado de primera mano los beneficios de utilizar nuestra tecnología blockchain. Ha facilitado nuestro proceso de toma de decisiones, automatizado el manejo de mi equipo y pagos, y aumentado la transparencia en toda nuestra organización.
     - id: qa
       title: Preguntas Frecuentes
       questions:
