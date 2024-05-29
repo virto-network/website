@@ -71,6 +71,8 @@ home_sections:
             answer: La configuración inicial de una cuenta en Virto es sencilla. Solo necesitas registrarte, agregar los miembros de tu organización, y empezar a utilizar la plataforma para gestionar los fondos.
           - question: ¿Cómo puedo recargar fondos en mi cuenta Virto?
             answer: Para recargar fondos en tu cuenta Virto, inicia sesión en tu cuenta, selecciona la opción "Recargar fondos", elige el método de pago que prefieras (transferencia bancaria, tarjeta de crédito, etc.), ingresa el monto que deseas recargar y confirma la transacción.
+          - question: ¿Qué se necesita para abrir una cuenta con Virto?
+            answer: Para abrir una cuenta con Virto, necesitas proporcionar información básica sobre tu organización, incluyendo nombre, sector, descripción. Además podrás configurar tu cuenta y agregar miembros de tu organización.
     - id: cta
       eyebrow: Comienza Ahora
       title: Da el primer paso hacia el éxito de tu <span class="underlined-element">organización con Virto.</span>
