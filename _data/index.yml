@@ -53,7 +53,7 @@ home_sections:
       title: Testimonios
       testimonials:
           - avatar: "/../img/david.jpeg"
-            person: David Barinas, YC Founder
+            person: David Barinas, YCombinator Founder
             message: A través de Virto abrí la cuenta organizacional de mi empresa de manera rápida, lo que me permitió recibir y realizar pagos de manera eficiente sin limitaciones.
           - avatar: "/../img/dani.jpeg"
             person: Daniel Olano, CEO de Virto
