@@ -87,7 +87,6 @@ home_sections:
               svg: linkedin.svg
               link: https://www.linkedin.com/company/virto-network/
 
-
 # About Virto
 virto_benefits:
   - item: <span>Aumentamos la seguridad</span> de tus transacciones.
