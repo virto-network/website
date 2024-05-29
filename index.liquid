@@ -51,12 +51,12 @@ data:
 		<div class="benefits-container dark-olive-text">
 			{% for card in home_section.cards %}
 			<div class={{ card.class }}>
-				<div class="benefits-column">
+				<div class="animated benefits-column">
 					<figure class="benefits-image">
 						{% include card.svg %}
 					</figure>
 				</div>
-				<div class="benefits-column text">
+				<div class="animated benefits-column text">
 					<h2>{{ card.title }}</h2>
 					<p>{{ card.content }}</p>
 				</div>  
@@ -118,23 +118,17 @@ data:
 		</h2>
 		<h3>{{ home_section.content  }}</h3>
 		<button><a href={{ home_section.href }} >{{ home_section.call_to_action }}</a></button>
-		{% assign matrix_to = "#virto-network:virto.community?via=virto.community" %}
-		<ul class="max">
-			<a title="E-mail" href="mailto:contact@virto.team" class="dark-olive-text thin">
-				{% include "email.svg" %}
+		<ul>
+		{% for social in home_section.socials %}
+			<a title={{ social.title }} href={{ social.link }}>
+				{% include social.svg %}
 			</a>
-			<a title="Community" href="https://matrix.to/#/{{ matrix_to }}" class="dark-olive-text thin">
-				{% include "element.svg" %}
-			</a>
-			<a title="Github" href="https://github.com/virto-network" class="dark-olive-text thin">
-				{% include "gh.svg" %}
-			</a>
+		{% endfor %}
 		</ul>
 	</article>
 </section>
 {% endif %}
 {% endfor %}
-
 
 <script>
 const $ = document.querySelector.bind(document),
