@@ -1,178 +1,74 @@
 ---
-permalink: /sobre-virto/
-title: Sobre Virto
+permalink: /sobre-nosotros/
+title: Sobre Nosotros
 layout: index.liquid
 data:
-  route: sobre-virto
+  route: sobre-nosotros
 ---
 <style>
 	/*Dark Nav*/
-	#nav { background-color: var(--clr-olive-darker); }
-	#nav a:not(#about-link) { color: var(--clr-blue-light); }
-	#menu-icon svg line { stroke: var(--clr-lavender-lightest); }
-	#virto-logo svg path { fill: var(--clr-lavender-lightest); }
+	#nav { background-color: var(--clr-blue-light); }
+	#nav a:not(#about-link) { color: var(--clr-olive-darker); }
+	#menu-icon svg line { stroke: var(--clr-olive-darker); }
+	#virto-logo svg path { fill: var(--clr-olive-darker); }
 
-	article { margin: 3em 7.8vw; flex-direction: column; }
-	button { align-self: center; }
-	article button:hover { background-color: var(--clr-olive-darker); }
-
-	figure.container { position: relative; }
-	#animated-svg-2 { 	
-		position: absolute;
-		top: clamp(-15vh, -10vh, -30vh);
-		left: 50%;
-  		transform: translateX(-50%);
-		z-index: -1;
-	}
-	
-	#animated-svg-2 path {
-		stroke-dasharray: 1000;
-    	stroke-dashoffset: 1000;
-    	animation: draw 4s ease-in-out forwards;
-	}
-
-	@keyframes draw {
-		to {
-			stroke-dashoffset: 0;
-		}
-	}
-
-	#benefits-list { list-style: '⬣   '; width: clamp(300px, 60%, 900px); }
-	#benefits-list span { color: var(--clr-lavender-darker); font-weight: 700; }
-	#benefits-list li { color: var(--clr-olive-darker); margin: 2rem; font-size: var(--font-size-subtitle); }
-
-	#team-list {
-		list-style: none;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 10px;
-	}
-	#team-list span { color: var(--clr-green-darker); }
-	#team-list li:not(.space) {
-		padding: 10px;
+	body {
 		display: flex;
-		align-items: center; 
-	}
-	#team-list div { border-left: 3px solid var(--clr-green-darker); padding-left: 10px; }
-	#team-list img {
-		width: 70px;
-		height: 70px;
-		border-radius: 50%;
-		margin-right: 10px;
-		background-color: #ccc;
+		flex-direction: column;
 	}
 
-	#partners h3 { max-width: 500px; }
-	#partners-list { display: flex; justify-content: center; gap: 2em; margin-top: -15rem;}
-	#partners-list li { list-style: none; border-radius: 5px; padding: 2rem; flex-basis: 50%; }
-	#partners-list li > * { margin: .5em; }
-	#partners-list li h4 a { font-size: var(--font-size-subtitle); color: var(--clr-darker); }
-	#two-arrows { position: relative; top:-180px; left: clamp(37%, 5vw, 42%);}
-	#two-arrows path {
-		stroke-dasharray: 1100;
-    	stroke-dashoffset: 1000;
-    	animation: draw 3s ease-in-out forwards;
-	}
-	
-	@media (min-width: 1600px) {
-		#team-list { grid-template-columns: repeat(5, 1fr); }
-		#benefits h2 { max-width: 70%; }
-	}
-	@media (max-width: 1000px) {
-		#animated-svg-2 { top: -80px;}
-		#two-arrows { display: none; }
-		#partners-list { margin-top: 0;}
-	}
-	@media (max-width: 700px) {
-		#team-list { display: flex; flex-direction: column; }
-		#team-list li { margin-top: 10px; }
-		.space { display: none; }
-		#partners-list { flex-direction: column; }
-	}
+#hero article {
+	background-image: url('./img/about_bg.svg');
+}
 </style>
-
 <body>
-	<section id="about" class="center light-blue-text">
-		<article class="animated">
-			<h1 class="header-0">Virto
-			<figure class="logo container">
-				{% include "arrow_right_lavender.svg" %}
-			</figure>
-			</h1>
-			<h3>Virto es un revolucionario proyecto basado en el ecosistema descentralizado <span class="light-lavender-text">Polkadot</span>, diseñado para proporcionar las herramientas que necesitas para desarrollar, integrar y gestionar la tecnología blockchain, facilitando su adopción en tu negocio, no importa el tamaño o tipo.</h3>
-			<p>Sigue con nosotros y descubre como hacerlo</p>
-			<button class="medium-lavender-bg"><a href="/coming-soon/">Aprender cómo</a></button>
-		</article>
-	</section>
+{% for about in site.data.index.about_us %} 
 
-	<section id="benefits" class="white-bg">
-		<article class="animated">
-			<h2 class="dark-lavender-text left">Desde nuestro ecosistema, ayudamos a los negocios a implementar la tecnología Blockchain y Web 3.0.</h2>
-			<ul id="benefits-list">
-				{% for virto_benefit in site.data.index.virto_benefits %}
-					<li>
-						{{virto_benefit.item}}
-					</li>
-				{% endfor %}
-			</ul>
+	<section {% if about.id == "hero" %} id="hero" class="left dark-olive-text">
+		<article class="animated light-lavender-bg">
+			<h1>{{ about.title }}</h1>
 		</article>
 	</section>
+{% endif %}
+
+<section {% if about.id == "issue" %} id="issue" >
+	<article class="animated">
+		<h2>{{ about.title }}</h2>
+		<div>
+			<h3>{{ about.paragraph_one }}</h3>
+			<h3>{{ about.paragraph_two }}</h3>
+		</div>
+	</article>
+</section>
+{% endif %}
 	
-	<section class="cta light-green-bg">
-		<article class="animated dark-olive-text">
-			{% assign matrix_to = "#virto-network:virto.community?via=virto.community" %}
-			<h3>¿Te atrae la idea?</h3>
-			<h2 class="center">Entonces, ¡únete a nuestra comunidad hoy!</h2>
-			<button class="medium-lavender-bg"><a href="https://matrix.to/#/{{ matrix_to }}" >Únete a Virto</a></button>
-		</article>
-	</section>
-
-	<section id="team" class="whitest-bg dark-olive-text">
-		<article class="animated">
-			<h2>Equipo Virto</h2>
-			<h3>Conoce el alma, cerebro y corazón de este gran proyecto:</h3>
-				<ul id="team-list">
-					{% for team_member in site.data.index.team_members %}
-						<li>
-							<img src="{{ team_member.avatar }}" alt="{{ team_member.name }}" height="38">
-							<div>
-								<a href={{ team_member.link }} class="dark-olive-text">
-									<h4>{{ team_member.name }}</h4>
-									<h5 class="thin">{{ team_member.role }}</h5>
-								</a>
-							</div>
-						</li>
-						<li class="space"></li>
-					{% endfor %}
-				</ul>
-		</article>
-	</section>
-
-	<section id="partners">
-		<article class="animated">
-			<h2 class="white-text">Conoce a quienes nos apoyan</h2>
-			<h3 class="left lightest-lavender-text">Aquí te mostramos un poco de quienes creen en la visión de Virto y ven el potencial de su aplicación en el mundo real.</h3>
-				<figure class="logo">
-							{% include "two_arrows.svg" %}
-					</figure>
-				<ul id="partners-list">
-				{% for partner in site.data.index.partners %}
-					<li class="light-lavender-bg">
-						<p class="dark-lavender-text">{{ partner.eyebrow }}</p>
-							<h4 class="dark-olive-text">{{ partner.name }}</h4>
-							<h5>{{ partner.content }}</h5>
-					</li>
-				{% endfor %}
-				</ul>
-		</article>
-	</section>
+<section {% if about.id == "virto" %} id="virto">
+	<article class="animated">
+		<h2>{{ about.title }}</h2>
+			<div>
+				<h3>{{ about.paragraph_one }}</h3>
+				<h3>{{ about.paragraph_two }}</h3>
+				<h3>{{ about.paragraph_three }}</h3>
+			</div>
+	</article>
+</section>
+{% endif %}
 	
-	<section class="cta white-bg">
-		<article class="animated dark-olive-text">
-			<h3 class="center">Ambas redes son <strong>gobernadas por sus respectivas comunidades</strong>, siguiendo un proceso de actualizaciones y cambios consensuados por quienes poseen tokens, asegurando la confiabilidad y seguridad de las transacciones.</h3>
-			<h2 class="center">¿Quieres aprender más sobre Virto?</h2>
-			<button><a href="/blog/">Visita nuestro blog</a></button>
-		</article>
-	</section>
+<section {% if about.id == "action-plan" %} id="action-plan">
+	<article class="animated">
+		<h2>{{ about.title }}</h2>
+		<h3>{{ about.subtitle }}</h3>
+		<ul>
+		{% for step in about.step_list %}
+			<li>
+				<h3>{{ step.content }}</h3>
+			</li>
+		{% endfor %}
+		</ul>
+	</article>
+</section>
+{% endif %}
 
-<body>
+
+{% endfor %}
+</body>
