@@ -29,50 +29,63 @@ home_sections:
     - id: benefits
       title: Beneficios de Usar <span class="light-lavender-text">Virto</span>
       cards:
-          - title: "Ahorra Tiempo:"
+          - title: Ahorra Tiempo
             content: Inicia tu empresa rápidamente y reduce el tiempo dedicado a tareas administrativas.
             svg: "Ahorra Tiempo.svg"
             class: benefits-row
-          - title: "Optimiza la Gestión Financiera:"
+          - title: Optimiza la Gestión Financiera
             content: Mantén un control claro y preciso sobre tus fondos.
             svg: "Gestion Financiera.svg"
             class: benefits-row-reverse
-          - title: "Simplifica la Colaboración:"
+          - title: Simplifica la Colaboración
             content: Facilita la comunicación y coordinación dentro de tu equipo.
             svg: "Colaboracion.svg"
             class: benefits-row
-          - title: "Garantiza la Seguridad:"
+          - title: Garantiza la Seguridad
             content: Protege tu información y transacciones con las mejores prácticas de seguridad manteniendo trazabilidad de las mismas.
             svg: "Seguridad.svg"
             class: benefits-row-reverse
-          - title: "Conectividad Estratégica:"
+          - title: Conectividad Estratégica
             content: Establece conexiones valiosas con otras organizaciones afines y promoviendo oportunidades de colaboración.
-            svg: 5.svg
+            svg: "Conectividad Estrategica.svg"
             class: benefits-row
     - id: testimonials
       title: Testimonios
       testimonials:
+          - avatar: "/../img/david.jpeg"
+            person: David Barinas, YC Founder
+            message: A través de Virto abrí la cuenta organizacional de mi empresa de manera rápida, lo que me permitió recibir y realizar pagos de manera eficiente sin limitaciones.
           - avatar: "/../img/dani.jpeg"
             person: Daniel Olano, CEO de Virto
-            message: "Como fundador de Virto, he experimentado de primera mano los beneficios de utilizar nuestra tecnología blockchain. Ha simplificado nuestro proceso de toma de decisiones, automatizado el manejo de mi equipo y pagos, y aumentado la transparencia en toda nuestra organización."
-          - avatar: "/../img/dani.jpeg"
-            person: Juan P., Fundador y CEO
-            message: "Virto nos permitió establecer nuestra empresa en tiempo récord y nos ha facilitado enormemente la gestión diaria permitiendo la toma de decisiones y la participación de todos mis colaboradores”. ¡Una herramienta indispensable!"
+            message: Como fundador de Virto, he experimentado de primera mano los beneficios de utilizar nuestra tecnología blockchain. Ha facilitado nuestro proceso de toma de decisiones, automatizado el manejo de mi equipo y pagos, y aumentado la transparencia en toda nuestra organización.
     - id: qa
       title: Preguntas Frecuentes
       questions:
-          - question: ¿Cuánto tiempo toma configurar Virto?
-            answer: Menos de 15 minutos para tener tu organización lista y operativa.
-          - question: ¿Es seguro?
-            answer: Sí, utilizamos tecnología avanzada para proteger todos tus datos y transacciones.
-          - question: ¿Puedo probarlo gratis?
-            answer: Sí, ofrecemos un período de prueba gratuito para que puedas experimentar todas nuestras funcionalidades sin costo alguno.
+          - question: ¿Qué es Virto?
+            answer: Virto es una cuenta organizacional que permite a las organizaciones recibir y realizar pagos, así como co-administrar fondos de manera transparente entre todos sus miembros.
+          - question: ¿Quién puede usar Virto?
+            answer: Virto está diseñado para cualquier tipo de organización, desde pequeñas empresas y startups hasta grandes corporaciones y organizaciones sin fines de lucro que necesiten una solución para la administración de sus fondos de manera colaborativa.
+          - question: ¿Es seguro utilizar Virto para transacciones financieras?
+            answer: Sí, Virto  usa cryptografia avanzada en su tecnologia blockhain para proteger la información financiera y las transacciones de la organización.
+          - question: ¿Cómo se realiza la configuración inicial de una cuenta en Virto?
+            answer: La configuración inicial de una cuenta en Virto es sencilla. Solo necesitas registrarte, agregar los miembros de tu organización, y empezar a utilizar la plataforma para gestionar los fondos.
+          - question: ¿Cómo puedo recargar fondos en mi cuenta Virto?
+            answer: Para recargar fondos en tu cuenta Virto, inicia sesión en tu cuenta, selecciona la opción "Recargar fondos", elige el método de pago que prefieras (transferencia bancaria, tarjeta de crédito, etc.), ingresa el monto que deseas recargar y confirma la transacción.
+          - question: ¿Qué se necesita para abrir una cuenta con Virto?
+            answer: Para abrir una cuenta con Virto, necesitas proporcionar información básica sobre tu organización, incluyendo nombre, sector, descripción. Además podrás configurar tu cuenta y agregar miembros de tu organización.
     - id: cta
       eyebrow: Comienza Ahora
       title: Da el primer paso hacia el éxito de tu <span class="underlined-element">organización con Virto.</span>
       content: Regístrate <strong>antes de que finalice junio</strong> y prueba gratis nuestra plataforma, diseñada para simplificar la creación y gestión de tu negocio.
       href: https://calendly.com/katherinelopezvirto/45min
-      call_to_action: Regístrate y Aprovecha la Oferta
+      call_to_action: Regístrate
+      socials:
+            - title: E-mail
+              svg: email.svg
+              link: mailto:contact@virto.team
+            - title: Linkedin
+              svg: linkedin.svg
+              link: https://www.linkedin.com/company/virto-network/
 
 # About Virto
 virto_benefits:

@@ -26,6 +26,13 @@ button {
 	background-color: var(--clr-green-darker);
 	font-size: var(--font-size-button);
 	transition: background-color 650ms ease, color 650ms ease;
+
+    &:hover {
+        background-color: var(--clr-lavender-darker); color: white;
+    }
+    &:focus-visible {
+        outline: 2px solid var(--clr-lavender-darker); 
+    }
 }
 
 /*Property added in order to avoid default iOS configurations, once deployed it needs to be tested */
@@ -122,9 +129,12 @@ span { font-family: inherit; }
 .animated.animate { opacity: 1;	transform: translateY(0); }
 
 /*Button and anchor hovers and focus*/
-button:hover { background-color: var(--clr-lavender-darker); color: white; }
 button.medium-lavender-bg:hover { background-color: var(--clr-green-darker); color: var(--clr-olive-darker); }
-a:hover, a:focus { text-decoration-line: underline; }
+a:hover{ text-decoration: underline var(--clr-white); }
+a:focus-visible {
+    text-decoration: underline var(--clr-white);
+    outline: 2px solid var(--clr-lavender-darker);
+}
 
 .scroll-down-link {	position: absolute; bottom: 5%; right: 5%; }
 .scroll-up-link { position: relative; bottom: 20%; }
@@ -134,4 +144,8 @@ a:hover, a:focus { text-decoration-line: underline; }
 
 .maxwidth--text_desktop {
     max-width: 700px;
+}
+
+textarea:focus, input:focus {
+    outline: none;
 }
