@@ -180,8 +180,9 @@ services:
           content: Flexibilidad y alcance global en los pagos, incluyendo criptomonedas.
           class: align-right
         - title: 'Administración de Fondos:'
-          content: Gestión eficiente y transparente a través de un sistema de membresías colaborativas <strong>¡Tomar decisiones en equipo nunca fue tan fácil!</strong>
-          class:
+          content: Gestión eficiente y transparente a través de un sistema de membresías colaborativas.
+          class: 
+    last-title: ¡Tomar decisiones en equipo nunca fue tan fácil!
   - id: optimize_resources
     title: Maximiza la Eficiencia de tus Recursos con Virto
     paragraph: 'A través de Virto, optimizarás el uso de tus recursos financieros y mejorarás la colaboración interna:'
