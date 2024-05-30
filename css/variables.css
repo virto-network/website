@@ -22,6 +22,7 @@
 /* The names of the font-sizes variables are temporary and subject to changes and suggestions */
     --font-size-main-title: clamp(3.5rem, 6vw, 5.25rem);
     --font-size-title-page: clamp(2.5rem, 5vw, 3.75rem);
+    --font-size-small-title: clamp(1.7rem, 3vw, 2.25rem);
     --font-size-paragraph: clamp(1rem, 2vw, 1.25rem);
     --font-size-subtitle: clamp(1.3rem, 3vw, 1.88rem);
     --font-size-button: clamp(1rem, 3vw, 1.3rem);

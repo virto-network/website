@@ -110,6 +110,22 @@ data:
 	</section>
 {% endif %}
 
+	<section {% if home_section.id == "virto-supporters" %} id="virto-supporters" class="whitest-bg">
+		<article class="max animated column">
+			<h3 class="dark-olive-text boldest header-2">{{ home_section.title }}</h3>
+				<ul class="supporters-list">
+					{% for supporter in home_section.supporters %}
+						<li>
+						<a class="link-to" title={{ supporter.title }} href="{{ supporter.link }}">
+							{% include supporter.icon %}
+						</a>
+						</li>
+					{% endfor %}
+				</ul>
+		</article>
+	</section>
+{% endif %}
+
 <section {% if home_section.id == "cta" %} id="cta" class="cta light-lavender-bg">
 	<article class="animated center dark-olive-text">
 		<h3 class="bolder">{{ home_section.eyebrow }}</h3>
@@ -120,7 +136,7 @@ data:
 		<button><a href={{ home_section.href }} >{{ home_section.call_to_action }}</a></button>
 		<ul>
 		{% for social in home_section.socials %}
-			<a title={{ social.title }} href={{ social.link }}>
+			<a class="link-to" title={{ social.title }} href={{ social.link }}>
 				{% include social.svg %}
 			</a>
 		{% endfor %}

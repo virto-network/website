@@ -57,7 +57,7 @@ h1, h2, h5, h4 { font-weight: 500; line-height: 100%; }
 h3 { font-weight: 400; line-height: 120%; }
 .header-0 { font-size: var(--font-size-main-title); }
 .header-1 { font-size: var(--font-size-title-page); }
-.header-2 { font-size: var(--font-size-subtitle); }
+.header-2 { font-size: var(--font-size-small-title);}
 
 /*Font family*/
 a, button, p, li, h3, h5, strong { font-family:  var(--font-secondary); }

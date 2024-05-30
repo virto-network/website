@@ -228,3 +228,25 @@ figure.logo svg {
 .answer.show {
     display: block;
 }
+
+#virto-supporters {
+    min-height: 400px;
+}
+
+.supporters-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70%;
+}
+
+.link-to {
+    transition: transform 0.3s ease;
+}
+
+.link-to:hover {
+    transform: scale(1.2);
+}
