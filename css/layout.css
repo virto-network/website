@@ -55,6 +55,10 @@ nav a {
   font-family: var(--font-primary);
 }
 
+nav button a {
+  height: auto !important;
+}
+
 #virto-logo {
   margin-right: auto;
   display: flex;
@@ -92,7 +96,7 @@ nav a:not(.logo) {
 }
 
 @media screen and (max-width: 1300px) {
-  .top-nav a:not(.menu-icon) {
+  .top-nav a:not(.menu-icon), .app-button {
     display: none;
   }
 }
