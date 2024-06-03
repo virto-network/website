@@ -123,11 +123,16 @@ about_us:
       subtitle: "Para comenzar tu transformación, Virto te ofrece pasos concretos y simples:"
       step_list:
             - content: Regístrate y configura tu billetera organizacional en pocos minutos.
-              icon: 
+              icon: step1.svg
             - content: Gestiona pagos y fondos.
-              icon: 
+              icon: step2.svg
             - content: Fomenta la toma de decisiones democrática y colaborativa dentro de tu equipo.
-              icon:              
+              icon: step3.svg
+    - id: cta_about
+      title: Únete y Transforma
+      subtitle: Da el primer paso hacia una gestión más eficiente y segura.
+      paragraph: Con nuestra prueba gratuita, podrás experimentar cómo nuestra plataforma puede aliviar los desafíos de tu día a día.
+      call_to_action: Regístrate en Virto
 
 # Use Cases
 cubo_benefits:

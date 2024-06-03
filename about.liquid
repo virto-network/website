@@ -12,63 +12,185 @@ data:
 	#menu-icon svg line { stroke: var(--clr-olive-darker); }
 	#virto-logo svg path { fill: var(--clr-olive-darker); }
 
-	body {
-		display: flex;
-		flex-direction: column;
-	}
-
-#hero article {
-	background-image: url('./img/about_bg.svg');
+	section { padding: 2em;}
+#hero {
+	background-image: url('/img/about_bg.svg');
+	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: cover;
+	background-color: var(--clr-blue-light);
 }
+
+section >  article {
+	flex-direction: column
+}
+
+.timeline-section {
+  position: relative;
+}
+
+.timeline-container {
+	content: '';
+	position: absolute;
+	background: var(--clr-white);
+	height: 100%;
+	width: 5px;
+	left: 10%;
+}
+
+.timeline-item {
+	position: relative;
+	float: left;
+	padding: 2em;
+	width: 80vw;
+	overflow-x: hidden;
+}
+
+.timeline-item h2, .timeline-item h3 { 
+	margin: 30px;
+ }
+
+.timeline-content {
+	max-width: 900px;
+	min-height: 500px;
+	padding: 20px;
+}
+
+.animated-timeline {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1.5s ease, transform 0.5s ease;
+}
+
+.animated-timeline.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-content h2 {
+  animation-delay: 0.2s;
+}
+
+.timeline-content h3:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.timeline-content h3:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+#action-plan ul.step-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    padding: 0;
+}
+
+#action-plan ul.step-list li.step-card {
+    list-style: none;
+    border-radius: 15px;
+    padding: 2em;
+    flex: 1 1 300px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.step-icon {
+    margin-bottom: 1em;
+}
+
+#cta article div { gap: 2em; border: 10px solid pink;}
+
 </style>
 <body>
 {% for about in site.data.index.about_us %} 
 
 	<section {% if about.id == "hero" %} id="hero" class="left dark-olive-text">
-		<article class="animated light-lavender-bg">
+		<article class="animated">
 			<h1>{{ about.title }}</h1>
 		</article>
 	</section>
 {% endif %}
 
-<section {% if about.id == "issue" %} id="issue" >
-	<article class="animated">
-		<h2>{{ about.title }}</h2>
-		<div>
-			<h3>{{ about.paragraph_one }}</h3>
-			<h3>{{ about.paragraph_two }}</h3>
+<section {% if about.id == "issue" %} id="issue" class="timeline-section white-text">
+	<div class="timeline-container">
+	  <div class="timeline-item">
+		<div class="timeline-content">
+		  <h2 class="animated-timeline dark-green-text">{{ about.title }}</h2>
+		  <h3 class="animated-timeline">{{ about.paragraph_one }}</h3>
+		  <h3 class="animated-timeline">{{ about.paragraph_two }}</h3>
 		</div>
-	</article>
-</section>
-{% endif %}
+	  </div>
+	</div>
+  </section>
+  {% endif %}
+  
+  <section {% if about.id == "virto" %} id="virto" class="timeline-section white-text">
+	<div class="timeline-container">
+	  <div class="timeline-item">
+		<div class="timeline-content">
+		  <h2 class="animated-timeline dark-green-text">{{ about.title }}</h2>
+		  <h3 class="animated-timeline">{{ about.paragraph_one }}</h3>
+		  <h3 class="animated-timeline">{{ about.paragraph_two }}</h3>
+		  <h3 class="animated-timeline">{{ about.paragraph_three }}</h3>
+		</div>
+	  </div>
+	</div>
+  </section>
+  {% endif %}  
 	
-<section {% if about.id == "virto" %} id="virto">
-	<article class="animated">
-		<h2>{{ about.title }}</h2>
-			<div>
-				<h3>{{ about.paragraph_one }}</h3>
-				<h3>{{ about.paragraph_two }}</h3>
-				<h3>{{ about.paragraph_three }}</h3>
-			</div>
-	</article>
-</section>
-{% endif %}
-	
-<section {% if about.id == "action-plan" %} id="action-plan">
-	<article class="animated">
-		<h2>{{ about.title }}</h2>
-		<h3>{{ about.subtitle }}</h3>
-		<ul>
-		{% for step in about.step_list %}
-			<li>
-				<h3>{{ step.content }}</h3>
-			</li>
-		{% endfor %}
-		</ul>
-	</article>
+<section {% if about.id == "action-plan" %} id="action-plan" class="light-green-bg">
+    <article class="animated center">
+        <h2>{{ about.title }}</h2>
+        <h3>{{ about.subtitle }}</h3>
+        <ul class="step-list">
+            {% for step in about.step_list %}
+                <li class="step-card white-bg">
+                    <div class="step-icon">
+                        {% include step.icon %}  
+                    </div>
+                    <h3>{{ step.content }}</h3>
+                </li>
+            {% endfor %}
+        </ul>
+    </article>
 </section>
 {% endif %}
 
+<section {% if about.id == "cta_about" %} id="cta_about" class="cta dark-green-text">
+	<article class="animated">
+		<h3 class="center regular">{{ about.subtitle }}</h3>
+		<h2>{{ about.title }}</h2>
+		<h3 class="center bold white-text">{{ about.paragraph }}</h3>
+		<button>{{ about.call_to_action }}</button>
+	</article>
+</section>
+{% endif %}
 
 {% endfor %}
+
+<script>
+
+const observerTimeline = new IntersectionObserver(entries => {
+  		entries.forEach(entry => {
+			if (entry.intersectionRatio > 0) {
+				entry.target.classList.add('animate');
+				observer.unobserve(entry.target);
+			}
+  		});
+	}, { threshold: 0.8 }); 
+
+	const animatedTimelineElements = document.querySelectorAll('.animated-timeline');
+
+	animatedTimelineElements.forEach(element => {
+		observerTimeline.observe(element);
+	});
+
+
+</script>
 </body>
