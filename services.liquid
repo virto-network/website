@@ -6,116 +6,300 @@ data:
   route: servicios
 ---
 <style>
- 	/* Navbar */
-	#nav { background-color: var(--clr-blue-light); }
-	#nav a:not(#about-link) { color: var(--clr-olive-darker); }
-	#menu-dropdown a { color: var(--clr-blue-light) !important; }
-	#menu-icon svg line { stroke: var(--clr-olive-darker); }
-	#virto-logo svg path { fill: var(--clr-olive-darker); }
 
-	article { margin: 3em 7.8vw; flex-direction: column; }
-	
-	#services article { flex-direction: row; flex-wrap: wrap; }
-	#services .text-section { max-width: 650px; justify-content: center;}
+section {
+  display: flex;
+  gap: 2em;
+}
+.services-section {
+  justify-content: space-around;
+}
 
-	#container-header { position: relative; right: 2%; align-self: start; }
-	#container-header:not(.text) { width: clamp(250px, 35vw, 800px); }
-	
-	/*svg animation*/
-	.hive>path { opacity: 0; }
-	.path1 { animation: appear 0.5s ease-in-out 0.3s forwards; }
-	.path2 { animation: appear 0.5s ease-in-out 0.7s forwards; }
-	.path3 { animation: appear 0.5s ease-in-out 1s forwards; }
-	.path4 { animation: appear 0.5s ease-in-out 1.3s forwards; }
-	.path5 { animation: appear 0.5s ease-in-out 1.5s forwards; }
+.services-section__lock-icon svg {
+  width: clamp(250px, 30vw, 500px);
+  height: auto;
+}
 
-	@keyframes appear {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
+#lock-icon path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 4s ease-in-out forwards;
+}
 
-	#services-list { flex-wrap: wrap; margin: 2em 0;}
-	img { width: 120px; }
-	#services-list ul {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: auto auto;
-		gap: 2rem;
-		padding-top: 2rem;
-		list-style: none;
-	}
-	ul li:last-child { grid-row: 2;	grid-column: span 2; }
-	ul li { 
-		padding: 2rem;
-		border-radius: 5px;
-		display: flex;
-		align-items: center;
-		justify-content: space-evenly;
-	}
-	.text-container h4 { margin-bottom: 1rem; }
-	.text-container h5 { line-height: 1.5; padding-right: 1rem; }
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 
-	#solution-as-service { justify-content: space-evenly; align-items: center; flex-direction: row; }
-	.text-section { max-width: 960px; }
-	.text-section h3 { max-width: 740px; }
+#lock-icon .lock-glare {
+  stroke: var(--clr-green-lighter);
+  stroke-width: 1; 
+  stroke-dasharray: 5 5;
+  stroke-dashoffset: 10;
+  animation: electrify .5s linear infinite;
+}
 
-	@media (max-width: 750px) {
-		article { margin: 2em 1em; }
-		#services-list ul, #solution-as-service { display: flex; flex-direction: column; flex-wrap: wrap; }
-		ul li { flex-direction: column; }
-		img { align-self: center; margin-top: 1rem; }
-	}
+@keyframes electrify {
+  0% {
+    stroke-dashoffset: 10;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -10;
+  }
+}
+.services-section__scroll-link {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.services-section__scroll-arrow {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+#key_features {
+    background-image: url('/img/features_bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.key_features--list {
+    display: flex;
+    width: 90%;
+    gap: 2em;
+    flex-direction: column;
+}
+
+.key_features--list li {
+    list-style: none;
+    width: 40%;
+    display: grid;
+    gap: .5em;
+}
+
+.key_features--list li h2 {
+    font-size: 1.75em;
+}
+
+.align-right {
+    align-self:self-end;
+    text-align: right;
+}
+
+.bottom {
+  position: relative;
+  bottom: -50px;
+}
+
+#optimize_resources > article {
+  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 5em 0;
+  padding: 0 2em;
+}
+
+.optimize_resources--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2em;
+  grid-column: 1 / -1;
+}
+
+.optimize_resources--grid li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.optimize_resources--svg_list svg {
+  width: 100%;
+  object-fit: contain;
+  height: auto;
+  margin-bottom: 1em;
+}
+
+#allies {
+  display: flex;
+}
+
+#allies article {
+  gap: 3em;
+}
+
+.allies--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+}
+.allies--svg {
+    width: 40%;
+}
+
+.floating-rotation {
+  animation: floatAndRotate 5s linear infinite;
+  transform-origin: 45% 50%;
+}
+
+@keyframes floatAndRotate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-3px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+#cta_services {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2em;
+}
+
+#cta_services article {
+  margin: 0;
+  padding: 0;
+}
+
+#cta_services div {
+  display: flex;
+  gap: 1em;
+}
+.cta_services--svg {
+    align-items: flex-start;
+}
+
+@media (max-width: 1279px) {
+  #cta_services article:nth-child(2) {
+    flex-wrap: wrap;
+  }
+  .allies--container {
+    flex-direction: column;
+    max-width: 320px;
+  }
+  .allies--container h3 {
+    text-align: center;
+  }
+  .allies--svg {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1279px) {
+  #cta_services article:nth-child(2) {
+    flex-wrap: nowrap;
+  }
+}
+
 </style>
 
-	<section id="services" class="light-blue-bg">
-		<article class="animated">
-			<figure class="logo" id="container-header">
-					{% include "serv.svg" %}
-			</figure>
-			<div class="text-section">
-				<h3>Sumergirse en la Web 3.0 puede parecer abrumador, pero no estás solo en este viaje.</h3>
-				<h3>En Virto, no solo te proporcionamos las herramientas; te acompañamos y guiamos en cada paso para <span class="bolder dark-lavender-text">adaptar tu negocio al nuevo horizonte digital.<span></h3>
-			</div>
-		</article>
-	</section>
+{% for service in site.data.index.services %}
+        <section {% if service.id == "intro" %} id="intro" class="services-section dark-green-bg">
+          <article class="services-section__content max animated">
+            <div class="text-section lightest-lavender-text">
+              <h1 class="dark-green-text">Transforma tu Gestión: {{ service.title }}</h1>
+              <p>{{ service.paragraph }}</p> 
+              <a href="#key_features" class="services-section__scroll-link">
+                <span class="services-section__scroll-text dark-green-text">{{ service.call_to_action }}</span>
+                <figure class="services-section__scroll-arrow">
+                    {% include "services_arrow.svg" %} 
+                </figure>
+            </a>
+            </div>
+            <figure class="services-section__lock-icon">
+              {% include "lock-icon.svg" %} 
+            </figure>
+          </article>
+        </section>
+      {% endif %}
+ 
+        <section {% if service.id == "key_features" %} id="key_features" class="light-lavender-bg">
+          <article class="max animated">
+            <ul class="key_features--list">
+            {% for item in service.list %}
+                    <li class={{ item.class }}>
+                        <h2 class="dark-lavender-text">{{ item.title }}</h2>
+                        <p class="thin">{{ item.content }}</p>
+                    </li>  
+            {% endfor %}
+            </ul>
+            <h2 class="bottom dark-lavender-text center">{{ service.last-title }}</h2>
+          </article>
+        </section>
+      {% endif %}
 
-	<section id="services-list">
-		<article>
-			<h1 id="header-1" class="animated white-text">Servicios esenciales de Virto</h1>
-			<ul class="animated">
-					{% for service in site.data.index.services %}
-					<li class="light-blue-bg dark-olive-text">
-						<div class="text-container">
-							<h4 class="bolder">{{ service.title }}</h4>
-							<h5 class="bold">{{ service.description }}</h5>
-						</div>
-						<img src="{{ service.icon.url }}" alt="{{ service.icon.alt }}"></img>
-					</li>
-				{% endfor %}
-			</ul>
-		</article>
-	</section>
+      <section {% if service.id == "optimize_resources" %} id="optimize_resources" class="white-bg">
+        <article class="max animated dark-olive-text">
+                <h3 class="boldest">{{ service.title }}</h3>
+                <p>{{ service.paragraph }}</p>
+              <ul class="optimize_resources--grid">
+                {% for item in service.list %}
+                  <li class="animated">
+                    <figure class="optimize_resources--svg_list">
+                        {% include item.img %} 
+                    </figure>
+                    <h3 class="bolder">{{ item.title }}</h3>
+                    <p class="grey-text">{{ item.content }}</p>
+                  </li>
+                {% endfor %}
+              </ul>
+        </article>
+      </section>
+    {% endif %}
 
-	<section class="white-bg">
-		<article class="animated" id="solution-as-service">
-			<div class="text-section">
-				<h2 class="dark-lavender-text">¿Eres una persona o comunidad con propósito comercial?</h2>
-				<h3>Virto adopta un enfoque de <strong class="dark-lavender-text">'Solution as a Service'</strong>, desarrollando herramientas para montar el negocio a la medida de tus necesidades.</h3>
-			</div>
-			<figure class="logo">
-				{% include "in_progress.svg" %}
-			</figure>
-		</article>
-	</section>
+    <section {% if service.id == "allies" %} id="allies" class="whitest-bg">
+        <article class="max animated dark-olive-text center">
+                <h2 class="maxwidth--text_desktop bold">Innovación y Seguridad: {{ service.title }}</h2>
+                <div class="allies--container">
+                    <figure class="allies--svg">
+                        {% include "cubos.svg" %}
+                    </figure>
+                    <h3 class="left">{{ service.paragraph }}</h3>
+                </div>
+                <h3 class="title-max-width dark-lavender-text bolder">{{ service.strong_paragraph }}</h3>
+        </article>
+      </section>
+    {% endif %}
 
-	<section class="cta light-lavender-bg">
-		<article class="animated dark-olive-text">
-			<h2 class="header-1 center">¡Queremos hacerte la vida lo más fácil posible!</h2>
-			<h3 class="center">Te contactaremos para brindarte toda la asesoría que necesites.</h3>
-			<button class="dark-olive-text"><a href="https://forms.gle/hSjzyETwuGMadsaU8">Registrate aquí</a></button>
-		</article>
-	</section>
+    <section {% if service.id == "cta_services" %} id="cta_services" class="dark-lavender-bg">
+      <article class="column">
+        <h2 class="title-max-width bold lightest-lavender-text">{{ service.title }}</h2>
+        <h2 class="title-max-width light-green-text">{{ service.subtitle }}</h2>
+        </article>
+        <article class="max animated light-green-text">
+                    <div class="column">
+                        <p>{{ service.paragraph }}</p>
+                        <h3 class="bolder">{{ service.strong_paragraph }}</h3>
+                        <button>{{ service.cta }} </button>
+                    </div>
+                <figure class="cta_services--svg">
+                    {% include "Happy person.svg" %}
+                </figure>
+        </article>
+      </section>
+    {% endif %}
+
+{% endfor %}
