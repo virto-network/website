@@ -162,7 +162,6 @@ section >  article {
 	#hero {
 		background-image: url('/img/about_bg_sm.svg');
 	}
-
 	#core-team { display: flex; flex-direction: column; align-items: center;}
 	#core-team li { margin-top: 10px; }
 	.space { display: none; }
@@ -172,6 +171,10 @@ section >  article {
 		background-size: cover;
 	}
 }
+
+@media (min-width: 1600px) {
+		#team-list { grid-template-columns: repeat(5, 1fr); }
+	}
 
 </style>
 <body>
