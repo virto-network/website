@@ -104,7 +104,12 @@ section >  article {
     margin-bottom: 1em;
 }
 
-#cta article div { gap: 2em; border: 10px solid pink;}
+
+@media (max-width: 1279px) {
+	#hero {
+		background-image: url('/img/about_bg_sm.svg');
+	}
+}
 
 </style>
 <body>
@@ -163,10 +168,10 @@ section >  article {
 {% endif %}
 
 <section {% if about.id == "cta_about" %} id="cta_about" class="cta dark-green-text">
-	<article class="animated">
-		<h3 class="center regular">{{ about.subtitle }}</h3>
+	<article class="animated center">
+		<h3 class="regular">{{ about.subtitle }}</h3>
 		<h2>{{ about.title }}</h2>
-		<h3 class="center bold white-text">{{ about.paragraph }}</h3>
+		<h3 class="bold white-text">{{ about.paragraph }}</h3>
 		<button>{{ about.call_to_action }}</button>
 	</article>
 </section>
