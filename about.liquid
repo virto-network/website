@@ -104,12 +104,40 @@ section >  article {
     margin-bottom: 1em;
 }
 
+#team-list {
+		list-style: none;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 10px;
+	}
+	#team-list span { color: var(--clr-green-darker); }
+	#team-list li:not(.space) {
+		padding: 10px;
+		display: flex;
+		align-items: center; 
+	}
+	#team-list div { border-left: 3px solid var(--clr-green-darker); padding-left: 10px; }
+	#team-list img {
+		width: 70px;
+		height: 70px;
+		border-radius: 50%;
+		margin-right: 10px;
+		background-color: #ccc;
+	}
+
 
 @media (max-width: 1279px) {
 	#hero {
 		background-image: url('/img/about_bg_sm.svg');
 	}
+	#team-list { display: flex; flex-direction: column; }
+	#team-list li { margin-top: 10px; }
+	.space { display: none; }
 }
+
+@media (min-width: 1600px) {
+		#team-list { grid-template-columns: repeat(5, 1fr); }
+	}
 
 </style>
 <body>
@@ -164,6 +192,28 @@ section >  article {
             {% endfor %}
         </ul>
     </article>
+</section>
+{% endif %}
+
+<section {% if about.id == "team" %} id="team" class="whitest-bg dark-olive-text">
+	<article class="animated">
+		<h2>{{ about.title  }}</h2>
+		<h3>{{ about.subtitle  }}</h3>
+			<ul id="team-list">
+				{% for team_member in about.team_members %}
+					<li>
+						<img src="{{ team_member.avatar }}" alt="{{ team_member.name }}" height="38">
+						<div>
+							<a href={{ team_member.link }} class="dark-olive-text">
+								<h4>{{ team_member.name }}</h4>
+								<h5 class="thin">{{ team_member.role }}</h5>
+							</a>
+						</div>
+					</li>
+					<li class="space"></li>
+				{% endfor %}
+			</ul>
+	</article>
 </section>
 {% endif %}
 
