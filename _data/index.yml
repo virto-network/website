@@ -25,7 +25,13 @@ home_sections:
             content: Toma decisiones financieras informadas y gestiona tus recursos con eficacia.
           - title: "Acceso a la billetera organizacional:"
             content: Mantén los recursos de tu organización y realiza movimientos cuando lo necesites.
-            class: center      
+            class: center
+    - id: mail-cta
+      title: ¿Quieres ser una de las primeras organizaciones en tener una cuenta en Virto?
+      placeholder_name: Ingresa tu nombre.
+      placeholder_last_name: Ingresa tu apellido.
+      placeholder_email: Ingresa tu correo electrónico.
+      cta: ¡Ingresa a nuestra lista de espera!
     - id: benefits
       title: Beneficios de Usar <span class="light-lavender-text">Virto</span>
       cards:
