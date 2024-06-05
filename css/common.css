@@ -59,6 +59,11 @@ h3 { font-weight: 400; line-height: 120%; }
 .header-1 { font-size: var(--font-size-title-page); }
 .header-2 { font-size: var(--font-size-small-title);}
 
+/*By default we use lists without bullet points*/
+ul {
+    list-style-type: none;
+}
+
 /*Font family*/
 a, button, p, li, h3, h5, strong { font-family:  var(--font-secondary); }
 span { font-family: inherit; }
