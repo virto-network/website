@@ -11,7 +11,7 @@ home_sections:
       title: <span class="dark-green-text">Crea y Gestiona</span> tu Organización en Minutos
       paragraph: 'Virto te ofrece una cuenta organizacional que simplifica la creación y gestión de tu organización, permitiéndote enfocarte en lo que realmente importa: hacer crecer tu negocio.'
       href: https://calendly.com/katherinelopezvirto/45min
-      call_to_action: ¡Agenda una cita ahora!
+      call_to_action: Quiero más información
     - id: jobs
       title: Cómo Virto <br/><span class="light-lavender-text">Hace el Trabajo por Ti</span>
       cards:
@@ -25,7 +25,13 @@ home_sections:
             content: Toma decisiones financieras informadas y gestiona tus recursos con eficacia.
           - title: "Acceso a la billetera organizacional:"
             content: Mantén los recursos de tu organización y realiza movimientos cuando lo necesites.
-            class: center      
+            class: center
+    - id: mail-cta
+      title: ¿Quieres ser una de las primeras organizaciones en tener una cuenta en Virto?
+      placeholder_name: Ingresa tu nombre.
+      placeholder_last_name: Ingresa tu apellido.
+      placeholder_email: Ingresa tu correo electrónico.
+      cta: ¡Ingresa a nuestra lista de espera!
     - id: benefits
       title: Beneficios de Usar <span class="light-lavender-text">Virto</span>
       cards:
@@ -89,8 +95,8 @@ home_sections:
       eyebrow: Comienza Ahora
       title: Da el primer paso hacia el éxito de tu <span class="underlined-element">organización con Virto.</span>
       content: Regístrate <strong>antes de que finalice junio</strong> y prueba gratis nuestra plataforma, diseñada para simplificar la creación y gestión de tu negocio.
-      href: https://calendly.com/katherinelopezvirto/45min
-      call_to_action: Regístrate
+      href: https://apply.virto.network/
+      call_to_action: Regístrate ahora
       socials:
             - title: E-mail
               svg: email.svg

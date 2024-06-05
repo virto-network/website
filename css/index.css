@@ -250,3 +250,41 @@ figure.logo svg {
 .link-to:hover {
     transform: scale(1.2);
 }
+
+/*Mail Section*/
+
+#mail-button {
+    background-color: var(--clr-lavender-darker);
+    color: var(--clr-white);
+}
+
+#mail-cta {
+    width: 100%;
+}
+
+#mail-cta * {
+    width: 90%;
+}
+
+/*move to common css and set a more general name classes*/
+.services-section__scroll-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .services-section__scroll-arrow {
+    animation: bounce 1s ease-in-out infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
