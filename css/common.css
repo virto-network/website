@@ -113,6 +113,7 @@ span { font-family: inherit; }
 	.scroll-up-link, .scroll-down-link {
 		display: none;
 	}
+    .header-0 { font-size: var(--font-size-title-page); }
 	footer {
 		text-align: center;
         align-items: center;
