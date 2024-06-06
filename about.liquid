@@ -28,32 +28,36 @@ section >  article {
 
 .timeline-section {
   position: relative;
+  flex-grow: 1;
 }
 
 .timeline-container {
 	content: '';
 	position: absolute;
-	background: var(--clr-white);
-	height: 100%;
-	width: 5px;
+	background: var(--clr-green-darker);
+	width: 10px;
 	left: 10%;
+	height: 100dvh;
 }
 
 .timeline-item {
 	position: relative;
 	float: left;
 	padding: 2em;
-	width: 80vw;
-	overflow-x: hidden;
+	width: 95vw;
 }
 
 .timeline-item h2, .timeline-item h3 { 
-	margin: 30px;
+	margin: 28px;
  }
 
+.timeline-item h3 {
+	line-height: 1.6;
+}
+
 .timeline-content {
+	flex-wrap: wrap;
 	max-width: 900px;
-	min-height: 500px;
 	padding: 20px;
 }
 
@@ -105,26 +109,27 @@ section >  article {
 }
 
 #team-list {
-		list-style: none;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 10px;
-	}
-	#team-list span { color: var(--clr-green-darker); }
-	#team-list li:not(.space) {
-		padding: 10px;
-		display: flex;
-		align-items: center; 
-	}
-	#team-list div { border-left: 3px solid var(--clr-green-darker); padding-left: 10px; }
-	#team-list img {
-		width: 70px;
-		height: 70px;
-		border-radius: 50%;
-		margin-right: 10px;
-		background-color: #ccc;
-	}
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+}
 
+#team-list span { color: var(--clr-green-darker); }
+#team-list li:not(.space) {
+	padding: 10px;
+	display: flex;
+	align-items: center;
+}
+
+#team-list div { border-left: 3px solid var(--clr-green-darker); padding-left: 10px; }
+#team-list img {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	margin-right: 10px;
+	background-color: #ccc;
+}
 
 @media (max-width: 1279px) {
 	#hero {
@@ -171,6 +176,7 @@ section >  article {
 		  <h3 class="animated-timeline">{{ about.paragraph_one }}</h3>
 		  <h3 class="animated-timeline">{{ about.paragraph_two }}</h3>
 		  <h3 class="animated-timeline">{{ about.paragraph_three }}</h3>
+		  <h3 class="animated-timeline">{{ about.paragraph_four }}</h3>
 		</div>
 	  </div>
 	</div>
@@ -238,7 +244,7 @@ const observerTimeline = new IntersectionObserver(entries => {
 				observer.unobserve(entry.target);
 			}
   		});
-	}, { threshold: 0.8 }); 
+	}, { threshold: 0.3 }); 
 
 	const animatedTimelineElements = document.querySelectorAll('.animated-timeline');
 
