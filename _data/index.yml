@@ -115,9 +115,10 @@ about_us:
       paragraph_two: Los altos costos de comisión, las demoras en las transacciones internacionales y la burocracia excesiva pueden parecer obstáculos insuperables.
     - id: virto
       title: "Tu Aliado en el Camino: Virto"
-      paragraph_one: En este escenario, surge Virto, proporcionando las herramientas necesarias para <strong>transformar estos desafíos en oportunidades</strong>.
+      paragraph_one: En este escenario, surge Virto, proporcionando las herramientas necesarias para <span class="bolder dark-green-text">transformar estos desafíos en oportunidades</span>.
       paragraph_two: A través de nuestra avanzada plataforma, facilitamos una gestión organizacional más eficiente y segura.
-      paragraph_three: "Podrás enfocarte en lo que realmente importa: <strong>el crecimiento de tu organización</strong>."
+      paragraph_three: "Podrás enfocarte en lo que realmente importa:" 
+      paragraph_four: <span class="bolder dark-green-text">El crecimiento de tu organización</span>.
     - id: action-plan
       title: "El Camino Claro: Tu Plan de Acción"
       subtitle: "Para comenzar tu transformación, Virto te ofrece pasos concretos y simples:"
