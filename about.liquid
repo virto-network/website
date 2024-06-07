@@ -158,20 +158,37 @@ section >  article {
     overflow: hidden;
 }
 
-#team-list span { color: var(--clr-green-darker); }
-#team-list li:not(.space) {
+#core-team, #team h2, #team h3 {
+	padding-left: 28px;
+}
+
+#core-team span { color: var(--clr-green-darker); }
+#core-team li:not(.space) {
 	padding: 10px;
 	display: flex;
 	align-items: center;
 }
 
-#team-list div { border-left: 3px solid var(--clr-green-darker); padding-left: 10px; }
-#team-list img {
-	width: 70px;
-	height: 70px;
+#core-team div { border-left: 3px solid var(--clr-green-darker); padding-left: 10px; }
+#core-team img {
+	width: 250px;
+	height: 250px;
 	border-radius: 50%;
 	margin-right: 10px;
-	background-color: #ccc;
+	background-color: var(--clr-green-darker);
+}
+
+#team-members {
+	background-image: url('/img/team_l.svg');
+	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-size:contain;
+	height: 700px;
+	width: 100vw;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
 }
 
 @media (max-width: 1279px) {
@@ -187,10 +204,6 @@ section >  article {
 		background-size: cover;
 	}
 }
-
-@media (min-width: 1600px) {
-		#team-list { grid-template-columns: repeat(5, 1fr); }
-	}
 
 </style>
 <body>
