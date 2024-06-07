@@ -6,6 +6,10 @@ data:
   route: sobre-nosotros
 ---
 <style>
+
+body {
+	overflow-x: hidden !important;
+}
 	/*Dark Nav*/
 	#nav { background-color: var(--clr-blue-light); }
 	#nav a:not(#about-link) { color: var(--clr-olive-darker); }
@@ -108,41 +112,65 @@ section >  article {
     margin-bottom: 1em;
 }
 
-#team-list {
+#team {
+    position: relative;
+    overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+#core-team {
 	list-style: none;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 10px;
+	padding: 1em;
 }
 
-#team-list span { color: var(--clr-green-darker); }
-#team-list li:not(.space) {
+#core-team, #team h2, #team h3 {
+	padding-left: 28px;
+}
+
+#core-team span { color: var(--clr-green-darker); }
+#core-team li:not(.space) {
 	padding: 10px;
 	display: flex;
 	align-items: center;
 }
 
-#team-list div { border-left: 3px solid var(--clr-green-darker); padding-left: 10px; }
-#team-list img {
-	width: 70px;
-	height: 70px;
+#core-team div { border-left: 3px solid var(--clr-green-darker); padding-left: 10px; }
+#core-team img {
+	width: 250px;
+	height: 250px;
 	border-radius: 50%;
 	margin-right: 10px;
-	background-color: #ccc;
+	background-color: var(--clr-green-darker);
+}
+
+#team-members {
+	background-image: url('/img/team_l.svg');
+	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-size:contain;
+	height: 700px;
+	width: 100vw;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
 }
 
 @media (max-width: 1279px) {
 	#hero {
 		background-image: url('/img/about_bg_sm.svg');
 	}
-	#team-list { display: flex; flex-direction: column; }
-	#team-list li { margin-top: 10px; }
+	#core-team { display: flex; flex-direction: column; align-items: center;}
+	#core-team li { margin-top: 10px; }
 	.space { display: none; }
-}
-
-@media (min-width: 1600px) {
-		#team-list { grid-template-columns: repeat(5, 1fr); }
+	#team-members {
+		background-image: url('/img/team_s.svg');
+		height: 300px;
+		background-size: cover;
 	}
+}
 
 </style>
 <body>
@@ -205,20 +233,21 @@ section >  article {
 	<article class="animated">
 		<h2>{{ about.title  }}</h2>
 		<h3>{{ about.subtitle  }}</h3>
-			<ul id="team-list">
-				{% for team_member in about.team_members %}
+			<ul id="core-team">
+				{% for core_member in about.core_team %}
 					<li>
-						<img src="{{ team_member.avatar }}" alt="{{ team_member.name }}" height="38">
+						<img src="{{ core_member.avatar }}" alt="{{ core_member.name }}" height="50">
 						<div>
-							<a href={{ team_member.link }} class="dark-olive-text">
-								<h4>{{ team_member.name }}</h4>
-								<h5 class="thin">{{ team_member.role }}</h5>
+							<a href={{ core_member.link }} class="dark-olive-text">
+								<h4>{{ core_member.name }}</h4>
+								<h5 class="thin">{{ core_member.role }}</h5>
 							</a>
 						</div>
 					</li>
 					<li class="space"></li>
 				{% endfor %}
 			</ul>
+	<div id="team-members"></div>
 	</article>
 </section>
 {% endif %}
@@ -251,7 +280,6 @@ const observerTimeline = new IntersectionObserver(entries => {
 	animatedTimelineElements.forEach(element => {
 		observerTimeline.observe(element);
 	});
-
 
 </script>
 </body>

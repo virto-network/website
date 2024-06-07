@@ -132,43 +132,19 @@ about_us:
     - id: team
       title: Nuestro Equipo de Visionarios
       subtitle: En Virto contamos con un selecto grupo de profesionales que creen en las nuevas tecnologías, y como estás son soluciones eficientes.
-      team_members:
+      core_team:
             - name: <span>Daniel</span><br> Olano
               link: https://github.com/olanod
               avatar: https://avatars.githubusercontent.com/u/1329925?v=4
               role: Software Engineer
-            - name: <span>Isabella</span><br> Paz
-              link: https://www.linkedin.com/in/isabellapazpaz-copywriter/
-              avatar: "/../img/is.jpeg"
-              role: Growth Marketing
-            - name: <span>Katherine</span><br> López
-              link: https://www.linkedin.com/in/angy-katherine-l%C3%B3pez-pr/
-              avatar: "/../img/ka.jpeg"
-              role: Product Researcher
             - name: <span>Pablo Andrés</span><br> Dorado Suárez
               link: https://github.com/pandres95
               avatar: https://avatars.githubusercontent.com/u/2502577?v=4
               role: Blockchain Engineer
-            - name: <span>Brayan</span><br> Vargas
-              link: https://github.com/b-avb
-              avatar: "/../img/br.jpeg"
-              role: Software Engineer
             - name: <span>David</span><br> Barinas
               link: https://github.com/S0c5
               avatar: https://avatars.githubusercontent.com/u/5241972?v=4
               role: Software Engineer
-            - name: <span>Edgar</span><br> Salinas
-              link: https://www.linkedin.com/in/edgardanielsalinasledesma/
-              avatar: "/../img/ed.jpeg"
-              role: Blockchain Enthusiast
-            - name: <span>Ailén</span><br> Grimaldi
-              link: https://github.com/ail3ngrimaldi
-              avatar: https://avatars.githubusercontent.com/u/63558201?v=4
-              role: Frontend Developer     
-            - name: <span>Roberto</span><br> Heredia
-              link: https://www.linkedin.com/in/robertosteam/
-              avatar: "/../img/ro.jpeg"
-              role: Blockchain Enthusiast
     - id: cta_about
       title: Únete y Transforma
       subtitle: Da el primer paso hacia una gestión más eficiente y segura.
