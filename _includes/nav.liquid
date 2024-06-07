@@ -9,9 +9,6 @@
 			{% include "virto_logo.svg" %}
 		</a>
 		<div class="hide">
-		<a {% if page.data.route == "about"%}current{%endif%}" href="/sobre-virto/" id="about-link" role="menuitem" aria-label="Sobre Virto">
-		Sobre Virto
-		</a>
 		<a {% if page.data.route == "casos-de-uso"%}current{%endif%}" href="/casos-de-uso/" role="menuitem" aria-label="Casos de uso">
 			Casos de uso
 		</a>
@@ -22,6 +19,9 @@
 				Contacto
 			</a>
 		</div>
+		<a {% if page.data.route == "about"%}current{%endif%}" href="/sobre-nosotros/" id="about-link" role="menuitem" aria-label="Sobre Nosotros">
+			Sobre Nosotros
+		</a>
 		<a {% if page.data.route == "servicios"%}current{%endif%}" href="/servicios/" role="menuitem" aria-label="Servicios">
 			Servicios
 		</a>
@@ -47,9 +47,6 @@
 		<nav id="menu-dropdown" aria-label="Secundaria">
 		    <a id="close-menu" class="close-menu" aria-label="Cerrar menú"></a>
 			<div class="hide">
-			<a {% if page.data.route == "about"%}current{%endif%}" href="/sobre-virto/" role="menuitem" aria-label="Sobre Virto">
-				Sobre Virto
-			</a>
 			<a {% if page.data.route == "casos-de-uso"%}current{%endif%}" href="/casos-de-uso/" role="menuitem" aria-label="Casos de uso">
 				Casos de uso
 			</a>
@@ -60,6 +57,9 @@
 					Contacto
 				</a>
 			</div>
+			<a {% if page.data.route == "about"%}current{%endif%}" href="/sobre-nosotros/" role="menuitem" aria-label="Sobre Nosotros">
+				SOBRE NOSOTROS
+			</a>
 			<a {% if page.data.route == "servicios"%}current{%endif%}" href="/servicios/" role="menuitem" aria-label="Servicios">
 				SERVICIOS
 			</a>
