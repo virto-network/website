@@ -11,11 +11,7 @@ home_sections:
       title: <span class="dark-green-text">Crea y Gestiona</span> tu Organización en Minutos
       paragraph: 'Virto te ofrece una cuenta organizacional que simplifica la creación y gestión de tu organización, permitiéndote enfocarte en lo que realmente importa: hacer crecer tu negocio.'
       href: https://calendly.com/katherinelopezvirto/45min
-<<<<<<< HEAD
       call_to_action: Quiero más información
-=======
-      call_to_action: ¡Regístrate en nuestra lista de espera!
->>>>>>> 71a9a84 (Modify CTA and fix styles)
     - id: jobs
       title: Cómo Virto <br/><span class="light-lavender-text">Hace el Trabajo por Ti</span>
       cards:
