@@ -164,6 +164,8 @@ data:
 {% endif %}
 {% endfor %}
 
+{% assign env = site.data.env %}
+
 <script>
 const $ = document.querySelector.bind(document),
 	$$ = document.querySelectorAll.bind(document);
@@ -205,9 +207,9 @@ questionButtons.forEach(button => {
 });
 
 // Airtable Connection
-const apiKeyAirtable = '{AIRTABLE_API_KEY}';
-const baseId = '{AIRTABLE_BASE_ID}';
-const table = '{AIRTABLE_TABLE_ID}';
+const apiKeyAirtable = '{{ env.AIRTABLE_API_KEY }}';
+const baseId = '{{ env.BASE_ID }}';
+const table = '{{ env.TABLE_ID }}';
 
 const mailForm = document.getElementById('mail-form');
 const mailButton = document.getElementById('mail-button');
