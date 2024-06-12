@@ -20,18 +20,23 @@ jobs:
           file: cobalt-v0.19.2-x86_64-unknown-linux-gnu.tar.gz
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build site
+      - name: Generate _data/env.json
         run: |
-          tar xfv cobalt-*
-          rm -rf doc
-          sed -i 's/{AIRTABLE_API_KEY}/${AIRTABLE_API_KEY}/g' index.liquid
-          sed -i 's/{AIRTABLE_BASE_ID}/${AIRTABLE_BASE_ID}/g' index.liquid
-          sed -i 's/{AIRTABLE_TABLE_ID}/${AIRTABLE_TABLE_ID}/g' index.liquid
-          ./cobalt build
+          echo '{
+            "AIRTABLE_API_KEY": "${AIRTABLE_API_KEY}",
+            "AIRTABLE_BASE_ID": "${AIRTABLE_BASE_ID}",
+            "AIRTABLE_TABLE_ID": "${AIRTABLE_TABLE_ID}"
+          }' > _data/env.json
         env:
           AIRTABLE_API_KEY: ${{ vars.AIRTABLE_API_KEY }}
           AIRTABLE_BASE_ID: ${{ vars.AIRTABLE_BASE_ID }}
           AIRTABLE_TABLE_ID: ${{ vars.AIRTABLE_TABLE_ID }}
+
+      - name: Build site
+        run: |
+          tar xfv cobalt-*
+          rm -rf doc
+          ./cobalt build
 
       - name: Publish Cloudflare
         uses: cloudflare/pages-action@v1
