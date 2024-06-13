@@ -1,178 +1,321 @@
 ---
-permalink: /sobre-virto/
-title: Sobre Virto
+permalink: /sobre-nosotros/
+title: Sobre Nosotros
 layout: index.liquid
 data:
-  route: sobre-virto
+  route: sobre-nosotros
 ---
 <style>
+
+body {
+	overflow-x: hidden !important;
+}
 	/*Dark Nav*/
-	#nav { background-color: var(--clr-olive-darker); }
-	#nav a:not(#about-link) { color: var(--clr-blue-light); }
-	#menu-icon svg line { stroke: var(--clr-lavender-lightest); }
-	#virto-logo svg path { fill: var(--clr-lavender-lightest); }
+	#nav { background-color: var(--clr-blue-light); }
+	#nav a:not(#about-link) { color: var(--clr-olive-darker); }
+	#menu-icon svg line { stroke: var(--clr-olive-darker); }
+	#virto-logo svg path { fill: var(--clr-olive-darker); }
 
-	article { margin: 3em 7.8vw; flex-direction: column; }
-	button { align-self: center; }
-	article button:hover { background-color: var(--clr-olive-darker); }
+	section { padding: 2em;}
+#hero {
+	background-image: url('/img/about_bg.svg');
+	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: cover;
+	background-color: var(--clr-blue-light);
+}
 
-	figure.container { position: relative; }
-	#animated-svg-2 { 	
-		position: absolute;
-		top: clamp(-15vh, -10vh, -30vh);
-		left: 50%;
-  		transform: translateX(-50%);
-		z-index: -1;
-	}
-	
-	#animated-svg-2 path {
-		stroke-dasharray: 1000;
-    	stroke-dashoffset: 1000;
-    	animation: draw 4s ease-in-out forwards;
-	}
+section >  article {
+	flex-direction: column
+}
 
-	@keyframes draw {
-		to {
-			stroke-dashoffset: 0;
-		}
-	}
+.timeline-section {
+  position: relative;
+  flex-grow: 1;
+}
 
-	#benefits-list { list-style: '⬣   '; width: clamp(300px, 60%, 900px); }
-	#benefits-list span { color: var(--clr-lavender-darker); font-weight: 700; }
-	#benefits-list li { color: var(--clr-olive-darker); margin: 2rem; font-size: var(--font-size-subtitle); }
+.timeline-container {
+	content: '';
+	position: absolute;
+	background: var(--clr-green-darker);
+	width: 10px;
+	left: 10%;
+	height: 100dvh;
+}
 
-	#team-list {
-		list-style: none;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 10px;
-	}
-	#team-list span { color: var(--clr-green-darker); }
-	#team-list li:not(.space) {
-		padding: 10px;
-		display: flex;
-		align-items: center; 
-	}
-	#team-list div { border-left: 3px solid var(--clr-green-darker); padding-left: 10px; }
-	#team-list img {
-		width: 70px;
-		height: 70px;
-		border-radius: 50%;
-		margin-right: 10px;
-		background-color: #ccc;
-	}
+.timeline-item {
+	position: relative;
+	float: left;
+	padding: 3em 1em 0 0;
+	width: 90vw;
+}
 
-	#partners h3 { max-width: 500px; }
-	#partners-list { display: flex; justify-content: center; gap: 2em; margin-top: -15rem;}
-	#partners-list li { list-style: none; border-radius: 5px; padding: 2rem; flex-basis: 50%; }
-	#partners-list li > * { margin: .5em; }
-	#partners-list li h4 a { font-size: var(--font-size-subtitle); color: var(--clr-darker); }
-	#two-arrows { position: relative; top:-180px; left: clamp(37%, 5vw, 42%);}
-	#two-arrows path {
-		stroke-dasharray: 1100;
-    	stroke-dashoffset: 1000;
-    	animation: draw 3s ease-in-out forwards;
+.timeline-item h2, .timeline-item h3 { 
+	margin: 28px;
+ }
+
+.timeline-item h3 {
+	line-height: 1.6;
+}
+
+.timeline-content {
+	flex-wrap: wrap;
+	max-width: 900px;
+}
+
+.animated-timeline {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1.5s ease, transform 0.5s ease;
+}
+
+.animated-timeline.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-content h2 {
+  animation-delay: 0.2s;
+}
+
+.timeline-content h3:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.timeline-content h3:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+#action-plan ul.step-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    padding: 0;
+}
+
+#action-plan ul.step-list li.step-card {
+    list-style: none;
+    border-radius: 15px;
+    padding: 2em;
+    flex: 1 1 300px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.step-icon {
+    margin-bottom: 1em;
+}
+
+#team {
+    position: relative;
+    overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+#core-team {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	padding: 1em;
+}
+
+#core-team, #team h2, #team h3 {
+	padding-left: 28px;
+}
+
+#core-team span { color: var(--clr-green-darker); }
+#core-team li:not(.space) {
+	padding: 10px;
+	display: flex;
+	align-items: center;
+}
+
+#core-team div { border-left: 3px solid var(--clr-green-darker); padding-left: 10px; }
+#core-team img {
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	margin-right: 10px;
+	background-color: var(--clr-green-darker);
+}
+
+#team-members {
+	background-image: url('/img/team_l.svg');
+	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-size:contain;
+	height: 700px;
+	width: 100vw;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+#core-team, #team h2, #team h3 {
+	padding-left: 28px;
+}
+
+#core-team span { color: var(--clr-green-darker); }
+#core-team li:not(.space) {
+	padding: 10px;
+	display: flex;
+	align-items: center;
+}
+
+#core-team div { border-left: 3px solid var(--clr-green-darker); padding-left: 10px; }
+#core-team img {
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	margin-right: 10px;
+	background-color: var(--clr-green-darker);
+}
+
+#team-members {
+	background-image: url('/img/team_l.svg');
+	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-size:contain;
+	height: 700px;
+	width: 100vw;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+@media (max-width: 1279px) {
+	#hero {
+		background-image: url('/img/about_bg_sm.svg');
 	}
-	
-	@media (min-width: 1600px) {
-		#team-list { grid-template-columns: repeat(5, 1fr); }
-		#benefits h2 { max-width: 70%; }
+	#core-team { display: flex; flex-direction: column; align-items: center;}
+	#core-team li { margin-top: 10px; }
+	.space { display: none; }
+	#team-members {
+		background-image: url('/img/team_s.svg');
+		height: 300px;
+		background-size: cover;
 	}
-	@media (max-width: 1000px) {
-		#animated-svg-2 { top: -80px;}
-		#two-arrows { display: none; }
-		#partners-list { margin-top: 0;}
-	}
-	@media (max-width: 700px) {
-		#team-list { display: flex; flex-direction: column; }
-		#team-list li { margin-top: 10px; }
-		.space { display: none; }
-		#partners-list { flex-direction: column; }
-	}
+}
+
 </style>
-
 <body>
-	<section id="about" class="center light-blue-text">
+{% for about in site.data.index.about_us %} 
+
+	<section {% if about.id == "hero" %} id="hero" class="left dark-olive-text">
 		<article class="animated">
-			<h1 class="header-0">Virto
-			<figure class="logo container">
-				{% include "arrow_right_lavender.svg" %}
-			</figure>
-			</h1>
-			<h3>Virto es un revolucionario proyecto basado en el ecosistema descentralizado <span class="light-lavender-text">Polkadot</span>, diseñado para proporcionar las herramientas que necesitas para desarrollar, integrar y gestionar la tecnología blockchain, facilitando su adopción en tu negocio, no importa el tamaño o tipo.</h3>
-			<p>Sigue con nosotros y descubre como hacerlo</p>
-			<button class="medium-lavender-bg"><a href="/coming-soon/">Aprender cómo</a></button>
+			<h1>{{ about.title }}</h1>
 		</article>
 	</section>
+{% endif %}
 
-	<section id="benefits" class="white-bg">
-		<article class="animated">
-			<h2 class="dark-lavender-text left">Desde nuestro ecosistema, ayudamos a los negocios a implementar la tecnología Blockchain y Web 3.0.</h2>
-			<ul id="benefits-list">
-				{% for virto_benefit in site.data.index.virto_benefits %}
+<section {% if about.id == "issue" %} id="issue" class="timeline-section white-text">
+	<div class="timeline-container">
+	  <div class="timeline-item">
+		<div class="timeline-content">
+		  <h2 class="animated-timeline dark-green-text">{{ about.title }}</h2>
+		  <h3 class="animated-timeline">{{ about.paragraph_one }}</h3>
+		  <h3 class="animated-timeline">{{ about.paragraph_two }}</h3>
+		</div>
+	  </div>
+	</div>
+  </section>
+  {% endif %}
+  
+  <section {% if about.id == "virto" %} id="virto" class="timeline-section white-text">
+	<div class="timeline-container">
+	  <div class="timeline-item">
+		<div class="timeline-content">
+		  <h2 class="animated-timeline dark-green-text">{{ about.title }}</h2>
+		  <h3 class="animated-timeline">{{ about.paragraph_one }}</h3>
+		  <h3 class="animated-timeline">{{ about.paragraph_two }}</h3>
+		  <h3 class="animated-timeline">{{ about.paragraph_three }}</h3>
+		  <h3 class="animated-timeline">{{ about.paragraph_four }}</h3>
+		</div>
+	  </div>
+	</div>
+  </section>
+  {% endif %}  
+	
+<section {% if about.id == "action-plan" %} id="action-plan" class="light-green-bg">
+    <article class="animated center">
+        <h2>{{ about.title }}</h2>
+        <h3>{{ about.subtitle }}</h3>
+        <ul class="step-list">
+            {% for step in about.step_list %}
+                <li class="step-card white-bg">
+                    <div class="step-icon">
+                        {% include step.icon %}  
+                    </div>
+                    <h3>{{ step.content }}</h3>
+                </li>
+            {% endfor %}
+        </ul>
+    </article>
+</section>
+{% endif %}
+
+<section {% if about.id == "team" %} id="team" class="whitest-bg dark-olive-text">
+	<article class="animated">
+		<h2>{{ about.title  }}</h2>
+		<h3>{{ about.subtitle  }}</h3>
+			<ul id="core-team">
+				{% for core_member in about.core_team %}
 					<li>
-						{{virto_benefit.item}}
+						<img src="{{ core_member.avatar }}" alt="{{ core_member.name }}" height="50">
+						<div>
+							<a href={{ core_member.link }} class="dark-olive-text">
+								<h4>{{ core_member.name }}</h4>
+								<h5 class="thin">{{ core_member.role }}</h5>
+							</a>
+						</div>
 					</li>
+					<li class="space"></li>
 				{% endfor %}
 			</ul>
-		</article>
-	</section>
-	
-	<section class="cta light-green-bg">
-		<article class="animated dark-olive-text">
-			{% assign matrix_to = "#virto-network:virto.community?via=virto.community" %}
-			<h3>¿Te atrae la idea?</h3>
-			<h2 class="center">Entonces, ¡únete a nuestra comunidad hoy!</h2>
-			<button class="medium-lavender-bg"><a href="https://matrix.to/#/{{ matrix_to }}" >Únete a Virto</a></button>
-		</article>
-	</section>
+	<div id="team-members"></div>
+	</article>
+</section>
+{% endif %}
 
-	<section id="team" class="whitest-bg dark-olive-text">
-		<article class="animated">
-			<h2>Equipo Virto</h2>
-			<h3>Conoce el alma, cerebro y corazón de este gran proyecto:</h3>
-				<ul id="team-list">
-					{% for team_member in site.data.index.team_members %}
-						<li>
-							<img src="{{ team_member.avatar }}" alt="{{ team_member.name }}" height="38">
-							<div>
-								<a href={{ team_member.link }} class="dark-olive-text">
-									<h4>{{ team_member.name }}</h4>
-									<h5 class="thin">{{ team_member.role }}</h5>
-								</a>
-							</div>
-						</li>
-						<li class="space"></li>
-					{% endfor %}
-				</ul>
-		</article>
-	</section>
+<section {% if about.id == "cta_about" %} id="cta_about" class="cta dark-green-text">
+	<article class="animated center">
+		<h3 class="regular">{{ about.subtitle }}</h3>
+		<h2>{{ about.title }}</h2>
+		<h3 class="bold white-text">{{ about.paragraph }}</h3>
+		<button>
+			<a href={{ about.href }}>
+				{{ about.call_to_action }}
+			</a>	
+		</button>
+	</article>
+</section>
+{% endif %}
 
-	<section id="partners">
-		<article class="animated">
-			<h2 class="white-text">Conoce a quienes nos apoyan</h2>
-			<h3 class="left lightest-lavender-text">Aquí te mostramos un poco de quienes creen en la visión de Virto y ven el potencial de su aplicación en el mundo real.</h3>
-				<figure class="logo">
-							{% include "two_arrows.svg" %}
-					</figure>
-				<ul id="partners-list">
-				{% for partner in site.data.index.partners %}
-					<li class="light-lavender-bg">
-						<p class="dark-lavender-text">{{ partner.eyebrow }}</p>
-							<h4 class="dark-olive-text">{{ partner.name }}</h4>
-							<h5>{{ partner.content }}</h5>
-					</li>
-				{% endfor %}
-				</ul>
-		</article>
-	</section>
-	
-	<section class="cta white-bg">
-		<article class="animated dark-olive-text">
-			<h3 class="center">Ambas redes son <strong>gobernadas por sus respectivas comunidades</strong>, siguiendo un proceso de actualizaciones y cambios consensuados por quienes poseen tokens, asegurando la confiabilidad y seguridad de las transacciones.</h3>
-			<h2 class="center">¿Quieres aprender más sobre Virto?</h2>
-			<button><a href="/blog/">Visita nuestro blog</a></button>
-		</article>
-	</section>
+{% endfor %}
 
-<body>
+<script>
+
+const observerTimeline = new IntersectionObserver(entries => {
+  		entries.forEach(entry => {
+			if (entry.intersectionRatio > 0) {
+				entry.target.classList.add('animate');
+				observer.unobserve(entry.target);
+			}
+  		});
+	}, { threshold: 0.3 }); 
+
+	const animatedTimelineElements = document.querySelectorAll('.animated-timeline');
+
+	animatedTimelineElements.forEach(element => {
+		observerTimeline.observe(element);
+	});
+
+</script>
+</body>

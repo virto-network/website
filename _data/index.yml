@@ -105,59 +105,52 @@ home_sections:
               svg: linkedin.svg
               link: https://www.linkedin.com/company/virto-network/
 
-# About Virto
-virto_benefits:
-  - item: <span>Aumentamos la seguridad</span> de tus transacciones.
-  - item: <span>Reducimos costos</span> de las transacciones.
-  - item: Mejoramos su <span>eficiencia operativa.</span>
-  - item: Al usar nuestras herramientas puedes <span>formar parte de comunidades.</span>
-  - item: Acercamos un <span>comercio más directo y justo</span>, con la <span>participación en la gobernanza</span> de los proyectos.
-
-team_members:
-  - name: <span>Daniel</span><br> Olano
-    link: https://github.com/olanod
-    avatar: https://avatars.githubusercontent.com/u/1329925?v=4
-    role: Blockchain Engineer
-  - name: <span>Isabella</span><br> Paz
-    link: https://www.linkedin.com/in/isabellapazpaz-copywriter/
-    avatar: https://media.licdn.com/dms/image/C4E03AQFC7dwPv5dkQA/profile-displayphoto-shrink_400_400/0/1566399674332?e=1701302400&v=beta&t=WDoniwgwpNrBTa0TPfHXywXXR-GpT3OQb1rFGcS3TgM
-    role: Community manager
-  - name: <span>Pablo Andrés</span><br> Dorado Suárez
-    link: https://github.com/pandres95
-    avatar: https://avatars.githubusercontent.com/u/2502577?v=4
-    role: Blockchain Engineer
-  - name: <span>Johan Alexis</span><br> Duque Cadena
-    link: https://github.com/johandroid
-    avatar: https://avatars.githubusercontent.com/u/1792179?v=4
-    role: Senior Embedded Software Engineer
-  - name: <span>Camila</span><br> Olano
-    link: https://www.linkedin.com/in/camilaolanocastro/
-    avatar: https://media.licdn.com/dms/image/C4E03AQEtFZ7Gm_8_fQ/profile-displayphoto-shrink_400_400/0/1618617055495?e=1701302400&v=beta&t=cbsDNklO6Tz8rRL_MLQKUjlfH-It0Y628yivC9jsrUY
-    role: Content manager
-  - name: <span>Brayan</span><br> Vargas
-    link: https://github.com/b-avb
-    avatar: https://avatars.githubusercontent.com/u/86427419?v=4
-    role: Developer
-  - name: <span>David</span><br> Barinas
-    link: https://github.com/S0c5
-    avatar: https://avatars.githubusercontent.com/u/5241972?v=4
-    role: Developer
-  - name: <span>Nicolas</span>
-    link: https://github.com/darkforest0202
-    avatar: https://avatars.githubusercontent.com/u/92313673?v=4
-    role: Blockchain Engineer
-  - name: <span>Ailén</span><br> Grimaldi
-    link: https://github.com/ail3ngrimaldi
-    avatar: https://avatars.githubusercontent.com/u/63558201?v=4
-    role: Frontend Developer       
-
-partners:
-  - eyebrow: TESORERÍA
-    name: <a href="https://www.polkadot.network/">Polkadot</a> y <a href="https://kusama.network/">Kusama</a>
-    content: Las tesorerías sirven para financiar proyectos comunitarios. A través de una gobernanza estructurada de cada red, los proyectos se exponen, financian y monitorean, incentivando la innovación continua.
-  - eyebrow: GRANTS PROGRAM
-    name: <a href="https://web3.foundation/">Web3 Foundation</a>
-    content: Facilita donativos a desarrolladores que contribuyen a la infraestructura de Polkadot y Kusama. A través de programas como Hackathons y Grants, se busca promover soluciones avanzadas en la Web 3.0.
+# Sobre Nosotros
+about_us:
+    - id: hero
+      title: "Nuestra Misión: Ayudarte en Tu Viaje hacia el Éxito"
+    - id: issue
+      title: "El desafío: Un Mundo Complejo"
+      paragraph_one: En el mundo acelerado y exigente de hoy, te enfrentas a desafíos que pueden <i>ralentizar</i> el progreso de tu organización.
+      paragraph_two: Los altos costos de comisión, las demoras en las transacciones internacionales y la burocracia excesiva pueden parecer obstáculos insuperables.
+    - id: virto
+      title: "Tu Aliado en el Camino: Virto"
+      paragraph_one: En este escenario, surge Virto, proporcionando las herramientas necesarias para <span class="bolder dark-green-text">transformar estos desafíos en oportunidades</span>.
+      paragraph_two: A través de nuestra avanzada plataforma, facilitamos una gestión organizacional más eficiente y segura.
+      paragraph_three: "Podrás enfocarte en lo que realmente importa:" 
+      paragraph_four: <span class="bolder dark-green-text">El crecimiento de tu organización</span>.
+    - id: action-plan
+      title: "El Camino Claro: Tu Plan de Acción"
+      subtitle: "Para comenzar tu transformación, Virto te ofrece pasos concretos y simples:"
+      step_list:
+            - content: Regístrate y configura tu billetera organizacional en pocos minutos.
+              icon: step1.svg
+            - content: Gestiona pagos y fondos.
+              icon: step2.svg
+            - content: Fomenta la toma de decisiones democrática y colaborativa dentro de tu equipo.
+              icon: step3.svg
+    - id: team
+      title: Nuestro Equipo de Visionarios
+      subtitle: En Virto contamos con un selecto grupo de profesionales que creen en las nuevas tecnologías, y como estás son soluciones eficientes.
+      core_team:
+            - name: <span>Daniel</span><br> Olano
+              link: https://github.com/olanod
+              avatar: https://avatars.githubusercontent.com/u/1329925?v=4
+              role: Software Engineer
+            - name: <span>Pablo Andrés</span><br> Dorado Suárez
+              link: https://github.com/pandres95
+              avatar: https://avatars.githubusercontent.com/u/2502577?v=4
+              role: Blockchain Engineer
+            - name: <span>David</span><br> Barinas
+              link: https://github.com/S0c5
+              avatar: https://avatars.githubusercontent.com/u/5241972?v=4
+              role: Software Engineer
+    - id: cta_about
+      title: Únete y Transforma
+      subtitle: Da el primer paso hacia una gestión más eficiente y segura.
+      paragraph: Con nuestra prueba gratuita, podrás experimentar cómo nuestra plataforma puede aliviar los desafíos de tu día a día.
+      call_to_action: Regístrate en Virto
+      href: https://apply.virto.network/
 
 # Use Cases
 cubo_benefits:
@@ -237,57 +230,5 @@ services:
     paragraph: Regístrate en Virto antes de que finalice junio y experimenta cómo nuestra plataforma transforma la gestión de tu organización con una prueba gratuita.
     strong_paragraph: Disfruta de configuración rápida y soporte continuo para asegurar una transición eficiente hacia una gestión más efectiva y rentable.
     cta: Registrate y activa tu Comunidad Gratis👈
+    href: https://calendly.com/katherinelopezvirto/45min
 
-
-#Landing-a
-landing_a:
-    - id: section-a
-      title: Ahorra<span class="dark-lavender-text"> Dinero y Tiempo </span>con Gestión Eficaz
-      paragraph: ¿Frustrado con la burocracia y los procesos lentos? Optimiza la gestión de capital humano y finanzas en tu organización con Virto. Regístrate ahora y no te pierdas nuestros tres meses gratis en esta oferta exclusiva.
-      href: https://calendly.com/katherinelopezvirto/45min
-      call_to_action: Regístrate e Inicia tu Consulta Gratuita
-    - id: section-b
-      title: Potencia Tu Operativa con <span class="light-lavender-text">Soluciones Inteligentes</span>
-      subtitle: 'Descubre lo que Virto puede hacer por ti:'
-      list:
-          - content: Sistemas de pago seguros y eficientes.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content:  Sistema para tomar decisiones con tu equipo
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content: Gestión transparente y trazable de fondos comunes.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content: Administración simplificada de contactos.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content: Conexiones estratégicas con otras organizaciones.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content: Innovación a través de nuestra infraestructura integrada con tecnología Web 3.0.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-      href: https://calendly.com/katherinelopezvirto/45min
-      call_to_action: Regístrate e Inicia tu Consulta Gratuita
-    - id: section-c
-      title: Gestiona Mejor,<br><span class="light-lavender-text">Logra Más</span>
-      subtitle: Virto te equipa con herramientas diseñadas para el éxito.
-      paragraph: "Imagina gestionar proyectos sin estrés y con total transparencia.<br> Sé parte del cambio:"
-      href: https://calendly.com/katherinelopezvirto/45min
-      call_to_action: ¡Envíanos tu consulta!
-      list:
-          - content: Sistemas de pago seguros y eficientes.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content:  Sistema para tomar decisiones con tu equipo
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content: Gestión transparente y trazable de fondos comunes.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-    - id: section-d
-      title: Inicia Tu Transformación <span class="dark-green-text">con Virto</span>
-      paragraph: "Agenda tu cita en calendly y comienza con una consultoría personalizada por parte de nuestro equipo en Virto.<br>Además, disfruta de tres meses gratis y una tarifa especial de solo $5 USD mensuales.<br><strong> Si no estás satisfecho, te devolvemos tu dinero.</strong>"
-      href: https://calendly.com/katherinelopezvirto/45min
-      call_to_action: Regístrate e Inicia tu Consulta Gratuita
