@@ -289,7 +289,11 @@ section >  article {
 		<h3 class="regular">{{ about.subtitle }}</h3>
 		<h2>{{ about.title }}</h2>
 		<h3 class="bold white-text">{{ about.paragraph }}</h3>
-		<button>{{ about.call_to_action }}</button>
+		<button>
+			<a href={{ about.href }}>
+				{{ about.call_to_action }}
+			</a>	
+		</button>
 	</article>
 </section>
 {% endif %}

@@ -150,6 +150,7 @@ about_us:
       subtitle: Da el primer paso hacia una gestión más eficiente y segura.
       paragraph: Con nuestra prueba gratuita, podrás experimentar cómo nuestra plataforma puede aliviar los desafíos de tu día a día.
       call_to_action: Regístrate en Virto
+      href: https://apply.virto.network/
 
 # Use Cases
 cubo_benefits:
