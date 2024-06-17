@@ -199,7 +199,7 @@ footer nav a {
 #menu-dropdown a {
   display: flex;
   position: relative;
-  color: var(--clr-green-darker);
+  color: var(--clr-green-darker) !important;
 }
 
 #menu-dropdown a.close-menu {
