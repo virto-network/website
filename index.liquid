@@ -263,7 +263,7 @@ mailForm.addEventListener('submit', async (event) => {
     }
 
     const result = await response.json();
-	openModal(`<img src="/img/success.svg" alt="success" /><h2>¡Gracias!</h2><h3>Su mail ha sido registrado exitosamente.</h3>`);
+    openModal(`<img src="/img/success.svg" alt="success" /><h2>¡Gracias!</h2><h3>Su mail ha sido registrado exitosamente.</h3>`);
     console.log('Datos enviados exitosamente a Airtable:', result);
 
   	} catch (error) {
