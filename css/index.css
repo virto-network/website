@@ -210,10 +210,6 @@ figure.logo svg {
 }
 
 /*QA*/
-.faq-list {
-    list-style: none;
-}
-
 .question-button {
     background: none;
     width: 100%;
@@ -234,7 +230,6 @@ figure.logo svg {
 }
 
 .supporters-list {
-    list-style: none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
