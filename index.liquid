@@ -5,13 +5,10 @@ data:
   route: home
 ---
 
-<div id="modal">
-    <div class="modal-content light-green-bg">
+<dialog data-modal class="light-green-bg">
         <span class="close-button boldest">X</span>
-        <div id="modal-message" class="center">
-        </div>
-    </div>
-</div>
+        <div id="modal-message" class="center"></div>
+</dialog>
 
 {% for home_section in site.data.index.home_sections %}
 <section {% if home_section.id == "home" %} id="home">
@@ -220,21 +217,19 @@ const baseId = '{{ env.AIRTABLE_BASE_ID }}';
 const table = '{{ env.AIRTABLE_TABLE_ID }}';
 
 const mailForm = document.getElementById('mail-form');
+const modal = document.querySelector('[data-modal]')
 const mailButton = document.getElementById('mail-button');
-const modal = document.getElementById('modal');
 const closeButton = document.querySelector('.close-button');
 const modalMessage = document.getElementById('modal-message');
 
 function openModal(message) {
     modalMessage.innerHTML = message;
-    modal.style.display = 'flex';
+	modal.showModal();
 }
 
-function closeModal() {
-    modal.style.display = 'none';
-}
-
-closeButton.addEventListener('click', closeModal);
+closeButton.addEventListener('click', () => {
+	modal.close()
+});
 
 mailForm.addEventListener('submit', async (event) => {
   event.preventDefault();
