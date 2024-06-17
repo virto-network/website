@@ -12,7 +12,8 @@ body {
 }
 /*Dark Nav*/
 #nav { background-color: var(--clr-blue-light); }
-#nav a:not(#about-link) { color: var(--clr-olive-darker); }
+#nav a { color: var(--clr-olive-darker); }
+#menu-dropdown a { color: var(--clr-green-darker); }
 #menu-icon svg line { stroke: var(--clr-olive-darker); }
 #virto-logo svg path { fill: var(--clr-olive-darker); }
 
@@ -30,10 +31,6 @@ section >  article {
 	flex-direction: column
 }
 
-.timeline-section {
-  position: relative;
-  flex-grow: 1;
-}
 
 .timeline-container {
 	content: '';
@@ -45,8 +42,6 @@ section >  article {
 }
 
 .timeline-item {
-	position: relative;
-	float: left;
 	padding: 3em 1em 0 0;
 	width: 90vw;
 }
@@ -120,39 +115,6 @@ section >  article {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	padding: 1em;
-}
-
-#core-team, #team h2, #team h3 {
-	padding-left: 28px;
-}
-
-#core-team span { color: var(--clr-green-darker); }
-#core-team li:not(.space) {
-	padding: 10px;
-	display: flex;
-	align-items: center;
-}
-
-#core-team div { border-left: 3px solid var(--clr-green-darker); padding-left: 10px; }
-#core-team img {
-	width: 250px;
-	height: 250px;
-	border-radius: 50%;
-	margin-right: 10px;
-	background-color: var(--clr-green-darker);
-}
-
-#team-members {
-	background-image: url('/img/team_l.svg');
-	background-position: center center;
-  	background-repeat: no-repeat;
-  	background-size:contain;
-	height: 700px;
-	width: 100vw;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
 }
 
 #core-team, #team h2, #team h3 {

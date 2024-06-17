@@ -55,6 +55,10 @@ nav a {
   font-family: var(--font-primary);
 }
 
+.menu-item.current {
+  color: var(--clr-lavender-darker) !important;
+}
+
 nav button a {
   height: auto !important;
 }
@@ -89,10 +93,6 @@ nav a:not(.logo) {
   height: var(--nav-height);
   position: relative;
   font-size: clamp(1rem, calc(0.9rem + 0.7vw), 1.3rem);
-}
-
-#about-link {
-  color: var(--clr-lavender-darker);
 }
 
 @media screen and (max-width: 1300px) {
@@ -199,7 +199,7 @@ footer nav a {
 #menu-dropdown a {
   display: flex;
   position: relative;
-  color: var(--clr-green-darker) !important;
+  color: var(--clr-green-darker);
 }
 
 #menu-dropdown a.close-menu {
