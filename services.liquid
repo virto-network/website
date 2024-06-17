@@ -87,7 +87,6 @@ section {
 }
 
 .key_features--list li {
-    list-style: none;
     width: 40%;
     display: grid;
     gap: .5em;
@@ -123,7 +122,6 @@ section {
 }
 
 .optimize_resources--grid li {
-  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -195,6 +193,11 @@ section {
 @media (max-width: 1279px) {
   #cta_services article:nth-child(2) {
     flex-wrap: wrap;
+  }
+  #key_features {
+    background-image: url('/img/features_bg_sm.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .allies--container {
     flex-direction: column;

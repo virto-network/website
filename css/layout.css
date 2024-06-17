@@ -133,7 +133,6 @@ footer .nav-links {
   gap: 3.5rem;
   flex-direction: row;
   align-items: center;
-  list-style: none;
   width: 100%;
   flex-wrap: wrap;
   row-gap: 1rem;
@@ -200,7 +199,7 @@ footer nav a {
 #menu-dropdown a {
   display: flex;
   position: relative;
-  color: var(--clr-green-darker);
+  color: var(--clr-green-darker) !important;
 }
 
 #menu-dropdown a.close-menu {

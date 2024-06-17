@@ -210,10 +210,6 @@ figure.logo svg {
 }
 
 /*QA*/
-.faq-list {
-    list-style: none;
-}
-
 .question-button {
     background: none;
     width: 100%;
@@ -234,7 +230,6 @@ figure.logo svg {
 }
 
 .supporters-list {
-    list-style: none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -289,4 +284,43 @@ figure.logo svg {
     }
   }
 
+dialog::backdrop {
+    background-color: hsla(163, 49%, 14%, 0.97);
+}
 
+dialog {
+    padding: 20px;
+    background: none;
+    border-radius: 35px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    max-width: 700px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+dialog img {
+    width: 120px;
+}
+
+#modal-message * {
+    padding: .5em;
+}
+
+.close-button {
+    color: var(--clr-olive-darker);
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--clr-green-darker);
+    text-decoration: none;
+    cursor: pointer;
+}
