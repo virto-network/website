@@ -267,7 +267,7 @@ mailForm.addEventListener('submit', async (event) => {
     console.log('Datos enviados exitosamente a Airtable:', result);
 
   	} catch (error) {
-		openModal('<img src="/img/error.svg" alt="error" /><h2>Error</h2><h3>Hubo un problema al registrar su mail.</h3><h3 class="bolder">Por favor, intente nuevamente.</h3>');
+        openModal('<img src="/img/error.svg" alt="error" /><h2>Error</h2><h3>Hubo un problema al registrar su mail.</h3><h3 class="bolder">Por favor, intente nuevamente.</h3>');
     	console.error("Error al enviar datos a Airtable:", error);
   }
 });
