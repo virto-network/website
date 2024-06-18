@@ -224,11 +224,15 @@ services:
     title: <span class="dark-green-text">Tu Aliado en la Gestión Remota</span>
     paragraph: Somos Virto, pioneros en implementar infraestructura web 3 para proporcionar una plataforma robusta y segura.
     strong_paragraph: Nuestras herramientas están diseñadas para superar los desafíos de la gestión remota, reduciendo costos y elevando la seguridad en todas tus operaciones organizacionales.
+    cta: Conoce nuestro Protocolo
+    href: ./../docs/whitepaper.html
   - id: cta_services
     title: "Actúa Ahora: Simplifica, Asegura y Economiza con Virto."
     subtitle: ¡El momento es ahora!
     paragraph: Regístrate en Virto antes de que finalice junio y experimenta cómo nuestra plataforma transforma la gestión de tu organización con una prueba gratuita.
     strong_paragraph: Disfruta de configuración rápida y soporte continuo para asegurar una transición eficiente hacia una gestión más efectiva y rentable.
-    cta: Registrate y activa tu Comunidad Gratis👈
-    href: https://calendly.com/katherinelopezvirto/45min
+    placeholder_name: Ingresa tu nombre.
+    placeholder_last_name: Ingresa tu apellido.
+    placeholder_email: Ingresa tu correo electrónico.
+    cta: ¡Ingresa a nuestra lista de espera!
 

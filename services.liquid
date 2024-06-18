@@ -101,9 +101,10 @@ section {
     text-align: right;
 }
 
-.bottom {
+.key_features--title {
   position: relative;
   bottom: -50px;
+  width: 60%;
 }
 
 #optimize_resources > article {
@@ -190,6 +191,11 @@ section {
     align-items: flex-start;
 }
 
+#mail-button {
+  background-color: var(--clr-lavender-lighter);
+  color: var(--clr-olive-darker);
+}
+
 @media (max-width: 1279px) {
   #cta_services article:nth-child(2) {
     flex-wrap: wrap;
@@ -249,7 +255,7 @@ section {
                     </li>  
             {% endfor %}
             </ul>
-            <h2 class="bottom dark-lavender-text center">{{ service.last-title }}</h2>
+            <h2 class="key_features--title dark-lavender-text center">{{ service.last-title }}</h2>
           </article>
         </section>
       {% endif %}
@@ -265,7 +271,7 @@ section {
                         {% include item.img %} 
                     </figure>
                     <h3 class="bolder">{{ item.title }}</h3>
-                    <p class="grey-text">{{ item.content }}</p>
+                    <p>{{ item.content }}</p>
                   </li>
                 {% endfor %}
               </ul>
@@ -283,6 +289,7 @@ section {
                     <h3 class="left">{{ service.paragraph }}</h3>
                 </div>
                 <h3 class="title-max-width dark-lavender-text bolder">{{ service.strong_paragraph }}</h3>
+                <button><a href={{ service.href }}>{{ service.cta }}</a></button>
         </article>
       </section>
     {% endif %}
@@ -296,7 +303,12 @@ section {
                     <div class="column">
                         <p>{{ service.paragraph }}</p>
                         <h3 class="bolder">{{ service.strong_paragraph }}</h3>
-                        <button>{{ service.cta }} </button>
+                        <form id="mail-form">
+                          <input type="text" name="contactName" placeholder="{{ service.placeholder_name }}">
+                          <input type="text" name="contactLastName" placeholder="{{ service.placeholder_last_name }}">
+                          <input type="email" name="contactEmail" placeholder="{{ service.placeholder_email }}">
+                          <button type="submit" id="mail-button" class="bolder dark-green-bg">{{ service.cta }}</button>
+                        </form>
                     </div>
                 <figure class="cta_services--svg">
                     {% include "Happy person.svg" %}
