@@ -31,14 +31,12 @@ section >  article {
 	flex-direction: column
 }
 
-
 .timeline-container {
 	content: '';
-	position: absolute;
 	background: var(--clr-green-darker);
 	width: 10px;
 	left: 10%;
-	height: 100dvh;
+	position: relative;
 }
 
 .timeline-item {
@@ -57,17 +55,6 @@ section >  article {
 .timeline-content {
 	flex-wrap: wrap;
 	max-width: 900px;
-}
-
-.animated-timeline {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 1.5s ease, transform 0.5s ease;
-}
-
-.animated-timeline.animate {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .timeline-content h2 {
@@ -175,33 +162,28 @@ section >  article {
 	</section>
 {% endif %}
 
-<section {% if about.id == "issue" %} id="issue" class="timeline-section white-text">
-	<div class="timeline-container">
+	<div {% if about.id == "issue" %} id="issue" class="white-text timeline-container">
 	  <div class="timeline-item">
 		<div class="timeline-content">
-		  <h2 class="animated-timeline dark-green-text">{{ about.title }}</h2>
-		  <h3 class="animated-timeline">{{ about.paragraph_one }}</h3>
-		  <h3 class="animated-timeline">{{ about.paragraph_two }}</h3>
+		  <h2 class="dark-green-text">{{ about.title }}</h2>
+		  <h3 class="animated">{{ about.paragraph_one }}</h3>
+		  <h3 class="animated">{{ about.paragraph_two }}</h3>
 		</div>
 	  </div>
 	</div>
-  </section>
   {% endif %}
-  
-  <section {% if about.id == "virto" %} id="virto" class="timeline-section white-text">
-	<div class="timeline-container">
+	<div {% if about.id == "virto" %} id="virto" class=" white-text timeline-container">
 	  <div class="timeline-item">
 		<div class="timeline-content">
-		  <h2 class="animated-timeline dark-green-text">{{ about.title }}</h2>
-		  <h3 class="animated-timeline">{{ about.paragraph_one }}</h3>
-		  <h3 class="animated-timeline">{{ about.paragraph_two }}</h3>
-		  <h3 class="animated-timeline">{{ about.paragraph_three }}</h3>
-		  <h3 class="animated-timeline">{{ about.paragraph_four }}</h3>
+		  <h2 class=" dark-green-text">{{ about.title }}</h2>
+		  <h3 class="animated">{{ about.paragraph_one }}</h3>
+		  <h3 class="animated">{{ about.paragraph_two }}</h3>
+		  <h3 class="animated">{{ about.paragraph_three }}</h3>
+		  <h3 class="animated">{{ about.paragraph_four }}</h3>
 		</div>
 	  </div>
 	</div>
-  </section>
-  {% endif %}  
+  {% endif %}
 	
 <section {% if about.id == "action-plan" %} id="action-plan" class="light-green-bg">
     <article class="animated center">
@@ -271,7 +253,7 @@ const observerTimeline = new IntersectionObserver(entries => {
   		});
 	}, { threshold: 0.3 }); 
 
-	const animatedTimelineElements = document.querySelectorAll('.animated-timeline');
+	const animatedTimelineElements = document.querySelectorAll('.');
 
 	animatedTimelineElements.forEach(element => {
 		observerTimeline.observe(element);
