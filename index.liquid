@@ -5,11 +5,6 @@ data:
   route: home
 ---
 
-<dialog data-modal class="light-green-bg">
-        <span class="close-button boldest">X</span>
-        <div id="modal-message" class="center"></div>
-</dialog>
-
 {% for home_section in site.data.index.home_sections %}
 <section {% if home_section.id == "home" %} id="home">
 	<article class="max animated">
@@ -169,8 +164,6 @@ data:
 {% endif %}
 {% endfor %}
 
-{% assign env = site.data.env %}
-
 <script>
 const $ = document.querySelector.bind(document),
 	$$ = document.querySelectorAll.bind(document);
@@ -209,67 +202,6 @@ questionButtons.forEach(button => {
         const answer = button.nextElementSibling;
         answer.classList.toggle('show');
     });
-});
-
-// Airtable Connection
-const apiKeyAirtable = '{{ env.AIRTABLE_API_KEY }}';
-const baseId = '{{ env.AIRTABLE_BASE_ID }}';
-const table = '{{ env.AIRTABLE_TABLE_ID }}';
-
-const mailForm = document.getElementById('mail-form');
-const modal = document.querySelector('[data-modal]')
-const mailButton = document.getElementById('mail-button');
-const closeButton = document.querySelector('.close-button');
-const modalMessage = document.getElementById('modal-message');
-
-function openModal(message) {
-    modalMessage.innerHTML = message;
-    modal.showModal();
-}
-
-closeButton.addEventListener('click', () => {
-    modal.close()
-});
-
-mailForm.addEventListener('submit', async (event) => {
-  event.preventDefault();
-
-  const contactName = event.target.elements['contactName'].value;
-  const contactLastName = event.target.elements['contactLastName'].value;
-  const contactEmail = event.target.elements['contactEmail'].value;
-
-  try {
-	const data = {
-		fields: {
-			"Name": contactName,
-			"LastName": contactLastName,
-			"Email": contactEmail,
-		}
-	};
-
-    const response = await fetch(`https://api.airtable.com/${baseId}/${table}`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${apiKeyAirtable}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    });
-
-	console.log(response.json())
-
-    if (!response.ok) {
-      throw new Error(`Airtable API error: ${response.status}`);
-    }
-
-    const result = await response.json();
-    openModal(`<img src="/img/success.svg" alt="success" /><h2>¡Gracias!</h2><h3>Su mail ha sido registrado exitosamente.</h3>`);
-    console.log('Datos enviados exitosamente a Airtable:', result);
-
-  	} catch (error) {
-        openModal('<img src="/img/error.svg" alt="error" /><h2>Error</h2><h3>Hubo un problema al registrar su mail.</h3><h3 class="bolder">Por favor, intente nuevamente.</h3>');
-    	console.error("Error al enviar datos a Airtable:", error);
-  }
 });
 
 </script>
