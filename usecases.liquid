@@ -1,191 +1,93 @@
 ---
 permalink: /casos-de-uso/
-title: Sobre Virto
+title: Casos de Uso
 layout: index.liquid
 data:
   route: casos-de-uso
 ---
 
-<style>	
-	/* Navbar */
-	#nav { background-color: var(--clr-olive-darker); }
-	#nav a { color: var(--clr-lavender-lightest); }
-	#menu-icon svg line { stroke: var(--clr-lavender-lightest); }
-	#virto-logo svg path { fill: var(--clr-lavender-lightest); }
+<style> 
 
-	body { background-color: var(--clr-olive-darker);  }
-	article { margin: 1em 7.8vw; }
+.use-cases-list {
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+}
 
-	.text-section a, article> h3 a { font-size: var(--font-size-subtitle); text-decoration: underline; }
-	.text-section { max-width: 800px; }
-	figure.logo svg { width: clamp(250px, 35vw, 800px); }
-	
-	#use-cases figure.lavender-arrow svg { width: clamp(200px, 25vw, 300px); }
+.use-cases-card {
+    padding: 1em;
+    max-width: 95%;
+    border-radius: 35px;
+}
 
-	#cubo { justify-content: flex-end; }
-	figure.hand svg { width: clamp(250px, 35vw, 400px); }
-	.hand { position: absolute; left: 0; }
+.use-cases-card img {
+    float: left;
+    width: 800px;
+    border-radius: 35px 0 0 35px;
+}
 
-	figure.cube svg, figure.wallet svg  {
-    	width: clamp(200px, 15vw, 300px);
-	}
+.use-cases-content {
+    border: 10px solid red;
+    padding: 1em;
+    gap: 1em;
+}
 
-	#cubo-benefits { max-height: fit-content; flex-direction: column; }
-	#cubo-benefits ul { display: flex; gap: 2em; justify-content: center; flex-wrap: wrap; align-items: center; margin-top: 2em; }
-	#cubo-benefits ul li { display: flex; flex-direction: column; flex: 30%; height: 300px; padding: 1.5em; text-align: center; align-content: center; gap: 1em; border-radius: 5px; }
-	i { font-style: normal; font-size: 2em; }
-
-	#cubo > article {
-		flex-direction: column;
-		align-items: center;
-		max-width: 700px;
-	}
-
-	#bloque .text-section {  min-width: 100px; max-width: 700px; width: 100%; }
-	.split-title {
-		display: inline-block;
-		position: relative;
-	}
-	.title-bg {
-		color: var(--clr-green-lighter);
-		padding: 5px 0;
-		padding-left: 5px;
-		border-radius: 5px;
-	}
-	figure.develop svg { width: clamp(250px, 15vw, 400px); }
-  	figure.logo.develop { display: flex; justify-content: center; }
-	#bloque .text-section h3.end { margin-top: auto; }
-
-	#bloque-benefits li { display: flex; align-items: center; margin-bottom: 1em; }
-	#bloque-benefits li img { margin-right: 10px; }
-	.wallet {  
-		position: relative;
-  		top: 0%;
-  		transform: translateY(25%); 
-	}
-
-	@media (max-width: 1250px) {
-		#cubo > article { justify-content: flex-start; }
-		.hand { align-self: flex-end; }
-	}
-
-	@media (max-width: 700px) {
-		article { flex-direction: column; margin: 2em 1em;}
-		#use-cases { overflow: hidden; flex-direction: column-reverse; }
-		.text-container > * { margin: .5em 0; }
-		figure, button, .cube { align-self: center; }
-		.wallet { transform: translateY(0%); }
-	}
+.tag {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    text-align: center;
+    margin: 5px 0;
+}
 
 </style>
 
-<section id="use-cases">
-	<article class="animated">
-		<div class="text-section">
-			<h1 class="light-green-text">Casos de uso</h1>
-			<h3 class="lightest-lavender-text">Conoce casos reales donde las herramientas de Virto han logrado resolver problemas del día a día.</h3>
-			<a class="lightest-lavender-text bolder" href="#cubo">Quiero saber más</a>
-			<figure class="lavender-arrow">
-				{% include "arrow_down_lavender.svg" %}
-		</figure>
-		</div>
-		<figure class="logo">
-				{% include "website.svg" %}
-		</figure>
-	</article>
+{% for use_case in site.data.index.use_cases %}
+<section {% if use_case.id == "hero" %} id="hero" >
+    <article class="animated">
+        <div class="text-section">
+            <h1 class="light-green-text">{{ use_case.title }}</h1>
+            <h3 class="lightest-lavender-text">{{ use_case.subtitle }}</h3>
+            <h3 class="lightest-lavender-text bolder"><a href="#cases">{{ use_case.cta }}</a></h3>
+            <figure class="lavender-arrow">
+                {% include "arrow_down_lavender.svg" %}
+        </figure>
+        </div>
+        <figure class="logo">
+                {% include "website.svg" %}
+        </figure>
+    </article>
 </section>
-	
-<section id="cubo" class="light-green-text">
-	<figure class="logo hand">
-		{% include "hand.svg" %}
-	</figure>
-	<article class="animated right">
-			<h2>Cubo</h2>
-			<h3>Con las herramientas que proporciona Virto, se ha desarrollado <a href="https://cubo.land" class="lightest-lavender-text">Cubo</a>, una plataforma en la que puedes invertir en propiedades fraccionadas de forma fácil y accesible.</h3>
-	</article>
-</section>
+{% endif %}
 
-<article>
-	<h2 class="light-green-text">Cubo se encarga de todo el proceso, mientras tú disfrutas de los beneficios:</h2>
-</article>
-
-<section id="cubo-benefits" class="light-green-bg">
-	<article class="animated">
-		<ul>
-			{% for cubo_benefit in site.data.index.cubo_benefits %}
-					<li class="dark-olive-bg white-text">
-					<i>{{ cubo_benefit.icon }}</i>
-						<h3 class="bolder">{{ cubo_benefit.title }}</h3>
-						<h5 class="bold">{{ cubo_benefit.description }}</h5>
-					</li>
-				{% endfor %}
-		</ul>
-	</article>
+<section {% if use_case.id == "cases" %} id="cases" class="whitest-bg dark-olive-text">
+    <article class="animated">
+        <ul class="use-cases-list">
+            {% for case in use_case.cases %}
+                    <li class="animated white-bg use-cases-card">
+                        <img src="{{ case.img }}" />
+                        <div class="use-cases-content">
+                            <h3 class="boldest">{{ case.title  }}</h3>
+                            <div class="tag">{{ case.tag_one }}</div>
+                            <p>{{ case.description }}</p>
+                        </div>
+                    </li>
+                {% endfor %}
+        </ul>
+    </article>
 </section>
+{% endif %}
 
-<section id="cubo-description" class="white-bg">
-	<article class="animated">
-		<figure class="logo cube">
-				{% include "cubos.svg" %}
-		</figure>
-		<div class="text-section">
-			<h2 class="dark-lavender-text">¿Cómo es posible esto?</h2>
-			<h3>Todas las propiedades están ubicadas en Colombia, México y Estados Unidos, y son cuidadosamente seleccionadas por el equipo de expertos. </h3>
-			<h3 class="dark-lavender-text">Cada persona que compra Cubos, se convierte automáticamente en accionista del portafolio de Cubo.Land.</h3>
-		</div>
-	</article>
+<section {% if use_case.id == "cta" %} id="cta" class="cta light-lavender-bg">
+    <article class="animated center">
+        <h3 class="bolder">{{ use_case.eyebrow }}</h3>
+        <h2 class="header-0">{{ use_case.title }}</h2>
+        <button>{{ use_case.cta }}</button>
+    </article>
 </section>
+{% endif %}
 
-<section class="cta light-lavender-bg">
-	<article class="animated">
-		<h2 class="dark-lavender-text center">Agenda una cita personalizada con el equipo y obten guía permanente</h2>
-		<button class="dark-olive-bg light-green-text"><a href="https://calendly.com/cuboland/30min">¡Haciendo click aquí!</a></button>
-	</article>
-</section>
-
-<section id="bloque" class="light-green-bg">
-	<article class="animated">
-	<div class="text-section">
-		<h2 class="split-title">
- 			<span class="title-bg dark-olive-bg">Blo</span><span class="dark-olive-text">que</span>
-		</h2>
-		<h3>Bloque te permitirá <strong>crear tu propia tienda online e importar tu catálogo desde redes sociales</strong> como Instagram, con todos tus productos de manera sencilla y rápida.</h3>
-		<button>Marketplace descentralizado
-		<br>Próximamente</button>
-	</div>
-	<div class="text-section">
-		<figure class="logo develop">
-				{% include "in_progress.svg" %}
-		</figure>
-		<h3 class="end"><strong>Nuestra plataforma genera trazabilidad en los procesos de venta</strong>, para que sepas exactamente de dónde viene cada producto.
-		</h3>
-	</div>
-	</article>
-</section>
-
-<section class="white-bg dark-olive-text">
-	<article class="animated">		
-		<figure class="logo wallet">
-				{% include "wallet.svg" %}
-		</figure>
-	<div class="text-section">
-		<h2>Al operar en una estructura descentralizada, Bloque ofrece:</h2>
-	<div>
-		<ul id="bloque-benefits">
-			{% for bloque_benefit in site.data.index.bloque_benefits %}
-				<li>
-					<img alt="{{ bloque_benefit.icon.alt }}" src="{{ bloque_benefit.icon.url }}"></img>
-					<h3 class="bolder">{{ bloque_benefit.content }}</h3>
-				</li>
-			{% endfor %}
-		</ul>
-	</article>
-</section>
-
-<section class="cta light-lavender-bg">
-	<article class="animated dark-olive-text">
-	<h3 class="center">Asi, ayudamos a los negocios a reducir costos, optimizar la eficiencia operativa y potenciar sus ingresos.</h3>
-		<h2 class="center">¡Únete a nosotros!</h2>
-		<button class="dark-olive-text" type="button"><a href="https://forms.gle/hSjzyETwuGMadsaU8">Crea tu tienda online</a></button>
-	</article>
-</section>
+{% endfor %}

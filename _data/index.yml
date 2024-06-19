@@ -153,41 +153,48 @@ about_us:
       href: https://apply.virto.network/
 
 # Use Cases
-cubo_benefits:
-  - title: Ingresos pasivos mensuales
-    icon: 💸 
-    description: Genera ganancias y disfruta de un flujo constante de dinero.
-  - title: Diversificación
-    icon: 🔥
-    description: Invierte en diferentes propiedades y minimiza riesgos para proteger tu inversión.
-  - title: Apalancamiento
-    icon: 📈 
-    description: Conviértete en propietario compartiendo el bien con otros inversionistas.
-  - title: Sin complicaciones
-    icon: 👍
-    description: Olvidate de trámites engorrosos. Cubo se encarga de todo el proceso por ti.
-  - title: Seguridad y confianza
-    icon: 🔐
-    description: Cubo ofrece transparencia, al usar tecnología blockchain las transacciones son públicas.
-
-bloque_benefits:
-  - content: Comisiones por transaccion
-    icon: 
-      url: '/../img/less.svg'
-      alt: Menos
-  - content: Costos
-    icon: 
-      url: '/../img/less.svg'
-      alt: Menos
-  - content: Eficiencia operativa
-    icon: 
-      url: '/../img/more.svg'
-      alt: Mas
-  - content: Ingresos
-    icon: 
-      url: '/../img/more.svg'
-      alt: Mas
-
+use_cases:
+  - id: hero
+    title: ¿En qué casos usas Virto? 
+    subtitle: La solución de Virto aplica a varios escenarios. 
+    cta: Acá te contamos 👇
+  - id: cases
+    cases:
+      - title: Gobernanza en proyectos Blockchain.
+        description: <strong>¡Virto te ayuda a impulsar decisiones más efectivas y democráticas!</strong> Empodera a los miembros de tu comunidad blockchain, permiteles proponer proyectos y votar sobre los mismos. ¡Obtén su máximo potencial en pro del desarrollo de tu comunidad!  
+        tag_one: Comunidades Blockchain
+        tag_two:
+        img: "../img/gobernanza.jpg"
+      - title: Organizaciones sin fines de lucro
+        description: <strong>¡Virto asegura máxima transperencia en los fondos de ONGs!</strong> Virto facilita a los miembros de tu ONG la capacidad para proponer sobre las decisiones cruciales del manejo de donaciones y la distribución de los fondos.
+        tag_one: ONG
+        tag_two:
+        img: "../img/ong.jpg"
+      - title: Validación de ideas para startups
+        description: <strong>¡Con Virto haces realidad tus ideas más innovadoras!</strong> Los fundadores de startups pueden crear una cuenta organizativa en nuestra plataforma para validar su negocio. Virto te ayuda a recibir pagos, asegurar financiamiento y proponer, votar y financiar ideas.
+        tag_one: Startups
+        tag_two:
+        img: "../img/validacion.jpg"
+      - title: Crowdfunding, acceso a financiamiento
+        description: <strong>¡Emprende con confianza usando Virto para acceder al financiamiento que necesitas!</strong> Crea una cuenta en nuestro ecosistema y presenta propuestas de financiamiento para recaudar fondos y gestionar recursos de forma transparente.
+        tag_one: Emprendimientos
+        tag_two:
+        img: "../img/financiamiento.jpg"
+      - title: Proyectos de código abierto
+        description: <strong>¡Únete a la comunidad de desarrolladores innovadores en proyectos de código abierto!</strong> Con Virto, contribuye y recibe recompensas justas por tus aportaciones, proponiendo y definiendo sistemas de recompensas transparentes.
+        tag_one: Desarrolladores
+        tag_two:
+        img: "../img/contribuciones_codigo.jpg"
+      - title: Equipos Autogestionados
+        description: <strong>¡Empodera a tus equipos para tomar decisiones autónomas y efectivas!</strong> Con Virto, los miembros pueden proponer y votar proyectos, optimizar operaciones y gestionar recursos con el presupuesto asignado.
+        tag_one: Comunidades blockchain
+        tag_two:
+        img: "../img/equipos.jpg"
+  - id: cta
+    eyebrow: Tu cuenta organizacional de la mano de Virto
+    title: ¿Tu caso es atípico y  necesitas un plan personalizado? 
+    cta: Más información
+    href: https://calendly.com/katherinelopezvirto/45min
 
 # Services
 services:
