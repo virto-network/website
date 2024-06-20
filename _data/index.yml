@@ -156,43 +156,61 @@ about_us:
 use_cases:
   - id: hero
     title: ¿En qué casos usas Virto? 
-    subtitle: La solución de Virto aplica a varios escenarios. 
-    cta: Acá te contamos 👇
+    paragraph: En Virto <strong>el compromiso es tranformar</strong> la manera en que las organizaciones gestionan sus recursos y toman decisiones, desde el desarrollo de una cuenta organizacional a sistema para poder tomar decisiones sobre los recursos.
+    subtitle: <strong> La solución de Virto aplica a varios escenarios. </strong> Acá te contamos 👇
   - id: cases
     cases:
-      - title: Gobernanza en proyectos Blockchain.
-        description: <strong>¡Virto te ayuda a impulsar decisiones más efectivas y democráticas!</strong> Empodera a los miembros de tu comunidad blockchain, permiteles proponer proyectos y votar sobre los mismos. ¡Obtén su máximo potencial en pro del desarrollo de tu comunidad!  
+      - title: Gobernanza en proyectos Blockchain
+        subtitle: <strong>¡Virto te ayuda a impulsar decisiones más efectivas y democráticas!</strong>
+        description: Empodera a los miembros de tu comunidad blockchain, permiteles proponer proyectos y votar sobre los mismos. ¡Obtén su máximo potencial en pro del desarrollo de tu comunidad!  
         tag_one: Comunidades Blockchain
-        tag_two:
+        tag_two: Seguridad
+        tag_class: olive
+        example: Imagina a los miembros de tu plataforma blockchain  utilizando Virto para proponer innovaciones y votar sobre mejoras en la red, tales como ajustes en las tarifas.
         img: "../img/gobernanza.jpg"
       - title: Organizaciones sin fines de lucro
-        description: <strong>¡Virto asegura máxima transperencia en los fondos de ONGs!</strong> Virto facilita a los miembros de tu ONG la capacidad para proponer sobre las decisiones cruciales del manejo de donaciones y la distribución de los fondos.
+        subtitle: <strong>¡Virto asegura máxima transperencia en los fondos de ONGs!</strong>
+        description: Virto facilita a los miembros de tu ONG la capacidad para proponer sobre las decisiones cruciales del manejo de donaciones y la distribución de los fondos.
         tag_one: ONG
-        tag_two:
+        tag_two: Transparencia
+        tag_class: light-green
+        example: Imagina una ONG que utiliza Virto para gestionar sus donaciones y tomar decisiones clave sobre sus proyectos, garantizando la transparencia y la participación de todos los integrantes. Con Virto, cada miembro tiene la oportunidad de contribuir a la dirección estratégica de la organización y asegurar que los recursos se utilicen de manera efectiva y ética.
         img: "../img/ong.jpg"
       - title: Validación de ideas para startups
-        description: <strong>¡Con Virto haces realidad tus ideas más innovadoras!</strong> Los fundadores de startups pueden crear una cuenta organizativa en nuestra plataforma para validar su negocio. Virto te ayuda a recibir pagos, asegurar financiamiento y proponer, votar y financiar ideas.
+        subtitle: <strong>¡Con Virto haces realidad tus ideas más innovadoras!</strong>
+        description: Los fundadores de startups pueden crear una cuenta organizativa en nuestra plataforma para validar su negocio. Virto te ayuda a recibir pagos, asegurar financiamiento y proponer, votar y financiar ideas.
         tag_one: Startups
-        tag_two:
-        img: "../img/validacion.jpg"
+        tag_two: Menos costos
+        tag_class: green
+        example: Imagina una startup que crea una cuenta en Virto para validar su modelo de negocio. Desde la gestión de pagos de clientes potenciales hasta la recepción de inversiones, nuestra plataforma proporciona las herramientas necesarias. Además, empieza a tomar decisiones de manera colaborativa sobre los recursos. 
+        img: "../img/startups.jpg"
       - title: Crowdfunding, acceso a financiamiento
-        description: <strong>¡Emprende con confianza usando Virto para acceder al financiamiento que necesitas!</strong> Crea una cuenta en nuestro ecosistema y presenta propuestas de financiamiento para recaudar fondos y gestionar recursos de forma transparente.
+        subtitle: <strong>¡Emprende con confianza usando Virto para acceder al financiamiento que necesitas!</strong> 
+        description: Crea una cuenta en nuestro ecosistema y presenta propuestas de financiamiento para recaudar fondos y gestionar recursos de forma transparente.
         tag_one: Emprendimientos
-        tag_two:
+        tag_two: Transparencia
+        tag_class: lavender
+        example: Imagina un emprendimiento que abre una cuenta en Virto para crear su perfil en la red blockchain. Con nuestra plataforma, pueden presentar propuestas de financiamiento a las tesorerías y obtener los fondos necesarios para poner en marcha su idea. Además, logran evidenciar resultados y gestionar recursos de manera transparente, lo que genera confianza entre los inversores y la comunidad.
         img: "../img/financiamiento.jpg"
       - title: Proyectos de código abierto
-        description: <strong>¡Únete a la comunidad de desarrolladores innovadores en proyectos de código abierto!</strong> Con Virto, contribuye y recibe recompensas justas por tus aportaciones, proponiendo y definiendo sistemas de recompensas transparentes.
+        subtitle: <strong>¡Únete a la comunidad de desarrolladores innovadores en proyectos de código abierto!</strong>
+        description: Con Virto, contribuye y recibe recompensas justas por tus aportaciones, proponiendo y definiendo sistemas de recompensas transparentes.
         tag_one: Desarrolladores
-        tag_two:
-        img: "../img/contribuciones_codigo.jpg"
+        tag_two: Innovación
+        tag_class: olive
+        example: Imagina una comunidad de desarrolladores de software que utiliza Virto para recompensar a aquellos que contribuyen al proyecto de código abierto. Definen reglas claras y transparentes a través del sistema de toma de decisiones de Virto para garantizar la equidad y la transparencia en la distribución de recompensas.
+        img: "../img/desarrolladores.jpg"
       - title: Equipos Autogestionados
-        description: <strong>¡Empodera a tus equipos para tomar decisiones autónomas y efectivas!</strong> Con Virto, los miembros pueden proponer y votar proyectos, optimizar operaciones y gestionar recursos con el presupuesto asignado.
-        tag_one: Comunidades blockchain
-        tag_two:
+        subtitle: <strong>¡Empodera a tus equipos para tomar decisiones autónomas y efectivas!</strong>
+        description: Con Virto, los miembros pueden proponer y votar proyectos, optimizar operaciones y gestionar recursos con el presupuesto asignado.
+        tag_one: Equipos
+        tag_two: Independencia
+        tag_class: blue
+        example: Imagina un equipo de producto dentro de tu empresa utilizando Virto para recibir su presupuesto. Con nuestra plataforma, el equipo puede tomar decisiones sobre cómo utilizar estos recursos, ya sea para proyectos específicos o para optimizar operaciones, asegurando así una gestión eficiente y transparente.
         img: "../img/equipos.jpg"
   - id: cta
-    eyebrow: Tu cuenta organizacional de la mano de Virto
-    title: ¿Tu caso es atípico y  necesitas un plan personalizado? 
+    eyebrow: Comienza ahora <br> <span class="dark-lavender-text"> Da el primer paso hacia el éxito de tu organización con Virto</span>
+    title: ¿Quieres explorar un nuevo caso de uso? <br> ¡Agenda una llamada con nuestro equipo!
     cta: Más información
     href: https://calendly.com/katherinelopezvirto/45min
 

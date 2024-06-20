@@ -8,56 +8,101 @@ data:
 
 <style> 
 
+#hero article {
+	flex-direction: column;
+    max-width: 1200px;
+    padding: 1em;
+}
+
+article h3 a {
+    font-size: 1em;
+}
+
 .use-cases-list {
     display: flex;
     gap: 2em;
     flex-direction: column;
-    max-width: 100%;
+    width: 100%;
     align-items: center;
 }
 
 .use-cases-card {
     padding: 1em;
-    max-width: 95%;
+    width: 95%;
     border-radius: 35px;
+	box-shadow: 4px 4px 5px -3px rgba(158,158,158,0.47);
+	-webkit-box-shadow: 4px 4px 5px -3px rgba(158,158,158,0.47);
+	-moz-box-shadow: 4px 4px 5px -3px rgba(158,158,158,0.47);
+}
+
+.img-container {
+	width: 50%;
 }
 
 .use-cases-card img {
     float: left;
-    width: 800px;
+    width: 100%;
     border-radius: 35px 0 0 35px;
 }
 
 .use-cases-content {
-    border: 10px solid red;
+	display: flex;
+	flex-direction: column;
     padding: 1em;
     gap: 1em;
+	flex-grow: 1;
+	justify-content: space-between;
 }
 
-.tag {
-    display: inline-block;
+.use-cases-content p {
+	font-size: 1.2em;
+	line-height: 1.5;
+}
+
+.inline-container {
+	display: flex;
+	gap: 1em;
+}
+
+#tag {
+	display: inline;
     padding: 10px 15px;
-    background-color: #e0e0e0;
     border-radius: 25px;
     text-align: center;
     margin: 5px 0;
+	align-self: flex-start;
+	background-color: rgb(203, 187, 236);
 }
 
+#tag.green { background-color: var(--clr-green-darker); }
+#tag.lavender { background-color: var(--clr-lavender-darker); color: var(--clr-white); }
+#tag.olive { background-color: var(--clr-olive-darker); color: var(--clr-white); }
+#tag.light-green { background-color: var(--clr-green-lighter); }
+#tag.light-lavender { background-color: var(--clr-lavender-light);}
+#tag.blue { background-color: var(--clr-blue-dark); color: var(--clr-white); }
+
+.examples {
+    display: none;
+    flex-direction: column;
+    gap: 1em;
+    opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+
+@media (max-width: 1279px) {
+	.img-container { width: 100%; }
+	.use-cases-card img {  border-radius: 35px 35px 0 0; }
+}
 </style>
 
 {% for use_case in site.data.index.use_cases %}
-<section {% if use_case.id == "hero" %} id="hero" >
+<section {% if use_case.id == "hero" %} id="hero" class="white-bg" >
     <article class="animated">
-        <div class="text-section">
-            <h1 class="light-green-text">{{ use_case.title }}</h1>
-            <h3 class="lightest-lavender-text">{{ use_case.subtitle }}</h3>
-            <h3 class="lightest-lavender-text bolder"><a href="#cases">{{ use_case.cta }}</a></h3>
+            <h1 class="dark-lavender-text">{{ use_case.title }}</h1>
+            <h3>{{ use_case.paragraph }}</h3>
+            <h3><a href="#cases">{{ use_case.subtitle }}</a></h3>
             <figure class="lavender-arrow">
                 {% include "arrow_down_lavender.svg" %}
-        </figure>
-        </div>
-        <figure class="logo">
-                {% include "website.svg" %}
         </figure>
     </article>
 </section>
@@ -68,11 +113,25 @@ data:
         <ul class="use-cases-list">
             {% for case in use_case.cases %}
                     <li class="animated white-bg use-cases-card">
-                        <img src="{{ case.img }}" />
-                        <div class="use-cases-content">
-                            <h3 class="boldest">{{ case.title  }}</h3>
-                            <div class="tag">{{ case.tag_one }}</div>
+						<div class="img-container">
+                        	<img src="{{ case.img }}" />
+						</div>
+						<div class="use-cases-content">
+                            <h3 class="boldest header-2">{{ case.title }}</h3>
+							<div class="inline-container">
+								<div id="tag" class="{{ case.tag_class }}">{{ case.tag_one }}</div>
+								<div id="tag">{{ case.tag_two }}</div>
+							</div>
+							<p>{{ case.subtitle }}</p>
                             <p>{{ case.description }}</p>
+							<div class="examples">
+								<h3 class="bolder">Te lo explicamos con un ejemplo 👇</h3>
+								<p>{{ case.example }}</p>
+							</div>
+							<div class="inline-container">
+								<button class="show_more">Ver más</button>
+								<button><a href="https://calendly.com/katherinelopezvirto/45min">Contáctanos</a></button>
+							</div>
                         </div>
                     </li>
                 {% endfor %}
@@ -81,13 +140,32 @@ data:
 </section>
 {% endif %}
 
-<section {% if use_case.id == "cta" %} id="cta" class="cta light-lavender-bg">
+<section {% if use_case.id == "cta" %} id="cta" class="cta light-lavender-bg dark-olive-text">
     <article class="animated center">
         <h3 class="bolder">{{ use_case.eyebrow }}</h3>
-        <h2 class="header-0">{{ use_case.title }}</h2>
+        <h2 class="header-1">{{ use_case.title }}</h2>
         <button>{{ use_case.cta }}</button>
     </article>
 </section>
 {% endif %}
 
 {% endfor %}
+
+<script>
+    document.querySelectorAll('.show_more').forEach((button, index) => {
+        button.addEventListener('click', () => {
+            const examples = button.closest('.use-cases-content').querySelector('.examples');
+            if (examples.style.display === 'flex') {
+                examples.style.opacity = 0;
+                setTimeout(() => {
+                    examples.style.display = 'none';
+                }, 100);
+            } else {
+                examples.style.display = 'flex';
+                setTimeout(() => {
+                    examples.style.opacity = 1;
+                }, 10); 
+            }
+        });
+    });
+</script>
