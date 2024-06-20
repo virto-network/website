@@ -70,7 +70,7 @@ home_sections:
           - question: ¿Qué es Virto?
             answer: Virto es una cuenta organizacional que permite a las organizaciones recibir y realizar pagos, así como co-administrar fondos de manera transparente entre todos sus miembros.
           - question: ¿Quién puede usar Virto?
-            answer: Virto está diseñado para cualquier tipo de organización, desde pequeñas empresas y startups hasta grandes corporaciones y organizaciones sin fines de lucro que necesiten una solución para la administración de sus fondos de manera colaborativa.
+            answer: Virto está diseñado para cualquier tipo de organización, desde pequeñas empresas y startups hasta grandes corporaciones y organizaciones sin fines de lucro que necesiten una solución para la administración de sus fondos de manera colaborativa. <a href="/casos-de-uso/">Conoce nuestros casos de uso.</a>
           - question: ¿Es seguro utilizar Virto para transacciones financieras?
             answer: Sí, Virto  usa cryptografia avanzada en su tecnologia blockhain para proteger la información financiera y las transacciones de la organización.
           - question: ¿Cómo se realiza la configuración inicial de una cuenta en Virto?
