@@ -51,27 +51,6 @@ section {
     stroke-dashoffset: -10;
   }
 }
-.services-section__scroll-link {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.services-section__scroll-arrow {
-  animation: bounce 1s ease-in-out infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
-}
 
 #key_features {
     background-image: url('/img/features_bg.svg');
@@ -232,9 +211,9 @@ section {
             <div class="text-section lightest-lavender-text">
               <h1 class="dark-green-text">Transforma tu Gestión: {{ service.title }}</h1>
               <p>{{ service.paragraph }}</p> 
-              <a href="#key_features" class="services-section__scroll-link">
-                <span class="services-section__scroll-text dark-green-text">{{ service.call_to_action }}</span>
-                <figure class="services-section__scroll-arrow">
+              <a href="#key_features" class="scroll-link">
+                <span class="dark-green-text">{{ service.call_to_action }}</span>
+                <figure class="scroll-arrow">
                     {% include "services_arrow.svg" %} 
                 </figure>
             </a>
