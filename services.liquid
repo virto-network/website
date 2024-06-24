@@ -194,6 +194,7 @@ section {
 #mail-button {
   background-color: var(--clr-lavender-lighter);
   color: var(--clr-olive-darker);
+  width: 80%;
 }
 
 @media (max-width: 1279px) {
@@ -294,12 +295,12 @@ section {
       </section>
     {% endif %}
 
-    <section {% if service.id == "cta_services" %} id="cta_services" class="dark-lavender-bg">
+    <section {% if service.id == "cta_services" %} id="cta_services" class="light-lavender-bg dark-olive-text">
       <article class="column">
-        <h2 class="title-max-width bold lightest-lavender-text">{{ service.title }}</h2>
-        <h2 class="title-max-width light-green-text">{{ service.subtitle }}</h2>
+        <h2 class="title-max-width bold">{{ service.title }}</h2>
+        <h2 class="title-max-width">{{ service.subtitle }}</h2>
         </article>
-        <article class="max animated light-green-text">
+        <article class="max animated">
                     <div class="column">
                         <p>{{ service.paragraph }}</p>
                         <h3 class="bolder">{{ service.strong_paragraph }}</h3>
