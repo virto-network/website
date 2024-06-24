@@ -72,13 +72,13 @@ home_sections:
           - question: ¿Quién puede usar Virto?
             answer: Virto está diseñado para cualquier tipo de organización, desde pequeñas empresas y startups hasta grandes corporaciones y organizaciones sin fines de lucro que necesiten una solución para la administración de sus fondos de manera colaborativa. <a href="/casos-de-uso/">Conoce nuestros casos de uso.</a>
           - question: ¿Es seguro utilizar Virto para transacciones financieras?
-            answer: Sí, Virto  usa cryptografia avanzada en su tecnologia blockhain para proteger la información financiera y las transacciones de la organización.
+            answer: Sí, Virto  usa criptografia avanzada en su tecnologia blockhain para proteger la información financiera y las transacciones de la organización.
           - question: ¿Cómo se realiza la configuración inicial de una cuenta en Virto?
             answer: La configuración inicial de una cuenta en Virto es sencilla. Solo necesitas registrarte, agregar los miembros de tu organización, y empezar a utilizar la plataforma para gestionar los fondos.
           - question: ¿Cómo puedo recargar fondos en mi cuenta Virto?
             answer: Para recargar fondos en tu cuenta Virto, inicia sesión en tu cuenta, selecciona la opción "Recargar fondos", elige el método de pago que prefieras (transferencia bancaria, tarjeta de crédito, etc.), ingresa el monto que deseas recargar y confirma la transacción.
           - question: ¿Qué se necesita para abrir una cuenta con Virto?
-            answer: Para abrir una cuenta con Virto, necesitas proporcionar información básica sobre tu organización, incluyendo nombre, sector, descripción. Además podrás configurar tu cuenta y agregar miembros de tu organización.
+            answer: Para abrir una cuenta con Virto, necesitas proporcionar información básica sobre tu organización, incluyendo nombre, sector y descripción. Además podrás configurar tu cuenta y agregar miembros de tu organización.
     - id: virto-supporters
       title: Conoce a Quienes nos Apoyan
       supporters:
