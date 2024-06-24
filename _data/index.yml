@@ -58,10 +58,10 @@ home_sections:
     - id: testimonials
       title: Testimonios
       testimonials:
-          - avatar: "/../img/david.jpeg"
+          - avatar: https://avatars.githubusercontent.com/u/5241972?v=4
             person: David Barinas, YCombinator Founder
             message: A través de Virto abrí la cuenta organizacional de mi empresa de manera rápida, lo que me permitió recibir y realizar pagos de manera eficiente sin limitaciones.
-          - avatar: "/../img/dani.jpeg"
+          - avatar: https://avatars.githubusercontent.com/u/1329925?v=4
             person: Daniel Olano, CEO de Virto
             message: Como fundador de Virto, he experimentado de primera mano los beneficios de utilizar nuestra tecnología blockchain. Ha facilitado nuestro proceso de toma de decisiones, automatizado el manejo de mi equipo y pagos, y aumentado la transparencia en toda nuestra organización.
     - id: qa
