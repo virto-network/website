@@ -114,7 +114,7 @@ article h3 a {
             {% for case in use_case.cases %}
                     <li class="animated white-bg use-cases-card">
 						<div class="img-container">
-                        	<img src="{{ case.img }}" />
+                        	<img src={{ case.img }}  loading="lazy" alt={{ case.title }} />
 						</div>
 						<div class="use-cases-content">
                             <h3 class="boldest header-2">{{ case.title }}</h3>
@@ -152,6 +152,23 @@ article h3 a {
 {% endfor %}
 
 <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+        const observerUseCases = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    observerUseCases.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const animatedElements = document.querySelectorAll('.animated');
+        animatedElements.forEach(element => {
+            observerUseCases.observe(element);
+        });
+});
+
     document.querySelectorAll('.show_more').forEach((button, index) => {
         button.addEventListener('click', () => {
             const examples = button.closest('.use-cases-content').querySelector('.examples');
