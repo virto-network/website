@@ -255,7 +255,7 @@ services:
           img: 'rol_managment.svg'
   - id: allies
     title: <span class="dark-green-text">Tu Aliado en la Gestión Remota</span>
-    paragraph: Somos Virto, pioneros en implementar infraestructura web 3 para proporcionar una plataforma robusta y segura.
+    paragraph: Somos Virto, <strong>pioneros en implementar infraestructura web 3</strong> para proporcionar una plataforma robusta y segura.
     strong_paragraph: Nuestras herramientas están diseñadas para superar los desafíos de la gestión remota, reduciendo costos y elevando la seguridad en todas tus operaciones organizacionales.
     cta: Conoce nuestro Protocolo
     href: ./../docs/whitepaper.html
