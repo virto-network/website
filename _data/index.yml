@@ -94,7 +94,7 @@ home_sections:
     - id: cta
       eyebrow: Comienza Ahora
       title: Da el primer paso hacia el éxito de tu <span class="underlined-element">organización con Virto.</span>
-      content: Regístrate <strong>antes de que finalice junio</strong> y prueba gratis nuestra plataforma, diseñada para simplificar la creación y gestión de tu negocio.
+      content: Regístrate <strong>antes de que finalice julio</strong> y prueba gratis nuestra plataforma, diseñada para simplificar la creación y gestión de tu negocio.
       href: https://apply.virto.network/
       call_to_action: Regístrate ahora
       socials:
@@ -262,7 +262,7 @@ services:
   - id: cta_services
     title: "Actúa Ahora: Simplifica, Asegura y Economiza con Virto."
     subtitle: ¡El momento es ahora!
-    paragraph: Regístrate en Virto antes de que finalice junio y experimenta cómo nuestra plataforma transforma la gestión de tu organización con una prueba gratuita.
+    paragraph: Regístrate en Virto antes de que finalice julio y experimenta cómo nuestra plataforma transforma la gestión de tu organización con una prueba gratuita.
     strong_paragraph: Disfruta de configuración rápida y soporte continuo para asegurar una transición eficiente hacia una gestión más efectiva y rentable.
     placeholder_name: Ingresa tu nombre.
     placeholder_last_name: Ingresa tu apellido.
