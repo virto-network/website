@@ -10,12 +10,6 @@ data:
 body {
 	overflow-x: hidden !important;
 }
-/*Dark Nav*/
-#nav { background-color: var(--clr-blue-light); }
-#nav a { color: var(--clr-olive-darker); }
-#menu-dropdown a { color: var(--clr-green-darker); }
-#menu-icon svg line { stroke: var(--clr-olive-darker); }
-#virto-logo svg path { fill: var(--clr-olive-darker); }
 
 section { padding: 2em;}
 #hero {
@@ -24,7 +18,7 @@ section { padding: 2em;}
   	background-repeat: no-repeat;
   	background-attachment: fixed;
   	background-size: cover;
-	background-color: var(--clr-blue-light);
+	background-color: var(--clr-lavender-lightest);
 }
 
 section >  article {
@@ -57,17 +51,6 @@ section >  article {
 	max-width: 900px;
 }
 
-.timeline-content h2 {
-  animation-delay: 0.2s;
-}
-
-.timeline-content h3:nth-child(1) {
-  animation-delay: 0.4s;
-}
-
-.timeline-content h3:nth-child(2) {
-  animation-delay: 0.6s;
-}
 
 #action-plan ul.step-list {
     display: flex;
@@ -105,7 +88,7 @@ section >  article {
 }
 
 #core-team, #team h2, #team h3 {
-	padding-left: 28px;
+	padding: 0 32px;
 }
 
 #core-team span { color: var(--clr-green-darker); }
@@ -117,11 +100,13 @@ section >  article {
 
 #core-team div { border-left: 3px solid var(--clr-green-darker); padding-left: 10px; }
 #core-team img {
-	width: 250px;
-	height: 250px;
-	border-radius: 50%;
-	margin-right: 10px;
-	background-color: var(--clr-green-darker);
+    width: 100%;
+    max-width: 20vw;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    margin-right: 10px;
+	background-color: var(--clr-whitest);
 }
 
 #team-members {
@@ -157,7 +142,7 @@ section >  article {
 
 	<section {% if about.id == "hero" %} id="hero" class="left dark-olive-text">
 		<article class="animated">
-			<h1>{{ about.title }}</h1>
+			<h1 class="maxwidth--text_desktop">{{ about.title }}</h1>
 		</article>
 	</section>
 {% endif %}
@@ -241,23 +226,4 @@ section >  article {
 {% endif %}
 
 {% endfor %}
-
-<script>
-
-const observerTimeline = new IntersectionObserver(entries => {
-  		entries.forEach(entry => {
-			if (entry.intersectionRatio > 0) {
-				entry.target.classList.add('animate');
-				observer.unobserve(entry.target);
-			}
-  		});
-	}, { threshold: 0.3 }); 
-
-	const animatedTimelineElements = document.querySelectorAll('.');
-
-	animatedTimelineElements.forEach(element => {
-		observerTimeline.observe(element);
-	});
-
-</script>
 </body>
