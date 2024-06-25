@@ -59,10 +59,6 @@ nav a {
   color: var(--clr-lavender-darker) !important;
 }
 
-nav button a {
-  height: auto !important;
-}
-
 #virto-logo {
   margin-right: auto;
   display: flex;
@@ -88,11 +84,20 @@ nav a:not(.logo) {
 #virto-logo:focus {
   outline: 3px solid var(--clr-lavender-darker);
 }
-.top-nav a:not(.logo) {
+.top-nav a:not(.logo)  {
   color: var(--clr-lavender-lightest);
   height: var(--nav-height);
   position: relative;
   font-size: clamp(1rem, calc(0.9rem + 0.7vw), 1.3rem);
+}
+
+.top-nav a.app-button-link  {
+  height: 6vh;
+  border-radius:50px;
+}
+
+.app-button, .app-button-mobile {
+  padding: 0;
 }
 
 @media screen and (max-width: 1300px) {

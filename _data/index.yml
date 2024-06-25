@@ -58,10 +58,10 @@ home_sections:
     - id: testimonials
       title: Testimonios
       testimonials:
-          - avatar: "/../img/david.jpeg"
+          - avatar: https://avatars.githubusercontent.com/u/5241972?v=4
             person: David Barinas, YCombinator Founder
             message: A través de Virto abrí la cuenta organizacional de mi empresa de manera rápida, lo que me permitió recibir y realizar pagos de manera eficiente sin limitaciones.
-          - avatar: "/../img/dani.jpeg"
+          - avatar: https://avatars.githubusercontent.com/u/1329925?v=4
             person: Daniel Olano, CEO de Virto
             message: Como fundador de Virto, he experimentado de primera mano los beneficios de utilizar nuestra tecnología blockchain. Ha facilitado nuestro proceso de toma de decisiones, automatizado el manejo de mi equipo y pagos, y aumentado la transparencia en toda nuestra organización.
     - id: qa
@@ -72,13 +72,13 @@ home_sections:
           - question: ¿Quién puede usar Virto?
             answer: Virto está diseñado para cualquier tipo de organización, desde pequeñas empresas y startups hasta grandes corporaciones y organizaciones sin fines de lucro que necesiten una solución para la administración de sus fondos de manera colaborativa. <a href="/casos-de-uso/">Conoce nuestros casos de uso.</a>
           - question: ¿Es seguro utilizar Virto para transacciones financieras?
-            answer: Sí, Virto  usa cryptografia avanzada en su tecnologia blockhain para proteger la información financiera y las transacciones de la organización.
+            answer: Sí, Virto  usa criptografia avanzada en su tecnologia blockhain para proteger la información financiera y las transacciones de la organización.
           - question: ¿Cómo se realiza la configuración inicial de una cuenta en Virto?
             answer: La configuración inicial de una cuenta en Virto es sencilla. Solo necesitas registrarte, agregar los miembros de tu organización, y empezar a utilizar la plataforma para gestionar los fondos.
           - question: ¿Cómo puedo recargar fondos en mi cuenta Virto?
             answer: Para recargar fondos en tu cuenta Virto, inicia sesión en tu cuenta, selecciona la opción "Recargar fondos", elige el método de pago que prefieras (transferencia bancaria, tarjeta de crédito, etc.), ingresa el monto que deseas recargar y confirma la transacción.
           - question: ¿Qué se necesita para abrir una cuenta con Virto?
-            answer: Para abrir una cuenta con Virto, necesitas proporcionar información básica sobre tu organización, incluyendo nombre, sector, descripción. Además podrás configurar tu cuenta y agregar miembros de tu organización.
+            answer: Para abrir una cuenta con Virto, necesitas proporcionar información básica sobre tu organización, incluyendo nombre, sector y descripción. Además podrás configurar tu cuenta y agregar miembros de tu organización.
     - id: virto-supporters
       title: Conoce a Quienes nos Apoyan
       supporters:
@@ -208,6 +208,14 @@ use_cases:
         tag_class: blue
         example: Imagina un equipo de producto dentro de tu empresa utilizando Virto para recibir su presupuesto. Con nuestra plataforma, el equipo puede tomar decisiones sobre cómo utilizar estos recursos, ya sea para proyectos específicos o para optimizar operaciones, asegurando así una gestión eficiente y transparente.
         img: "../img/equipos.jpg"
+      - title: Creación y administración de token
+        subtitle: <strong>¡Lleva la innovación financiera a un siguiente nivel con Virto!</strong>
+        description: Crea y administra tu propio token usando la plataforma de Virto. Haz click en Ver más para conocer todos los beneficios.
+        tag_one: Startups
+        tag_two: Tokens
+        tag_class: green
+        example: Imagina que tu startup crea un token para su plataforma de ecommerce. Este token te permite reducir los costos transaccionales en comparación con los mercados tradicionales. Usando Virto, puedes tomar decisiones clave sobre la emisión y las políticas de uso del token. Esto optimiza tus operaciones y asegura una gestión transparente y participativa de tus recursos digitales. Además, puedes ofrecer recompensas y descuentos exclusivos a tus clientes, fomentando la lealtad y atrayendo a nuevos usuarios interesados en beneficios únicos. 
+        img: "../img/token.jpg"
   - id: cta
     eyebrow: Comienza ahora <br> <span class="dark-lavender-text"> Da el primer paso hacia el éxito de tu organización con Virto</span>
     title: ¿Quieres explorar un nuevo caso de uso? <br> ¡Agenda una llamada con nuestro equipo!
@@ -247,7 +255,7 @@ services:
           img: 'rol_managment.svg'
   - id: allies
     title: <span class="dark-green-text">Tu Aliado en la Gestión Remota</span>
-    paragraph: Somos Virto, pioneros en implementar infraestructura web 3 para proporcionar una plataforma robusta y segura.
+    paragraph: Somos Virto, <strong>pioneros en implementar infraestructura web 3</strong> para proporcionar una plataforma robusta y segura.
     strong_paragraph: Nuestras herramientas están diseñadas para superar los desafíos de la gestión remota, reduciendo costos y elevando la seguridad en todas tus operaciones organizacionales.
     cta: Conoce nuestro Protocolo
     href: ./../docs/whitepaper.html
