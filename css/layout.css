@@ -96,7 +96,7 @@ nav a:not(.logo) {
   border-radius:50px;
 }
 
-button.app-button {
+.app-button, .app-button-mobile {
   padding: 0;
 }
 
