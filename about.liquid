@@ -138,6 +138,7 @@ section >  article {
 
 </style>
 <body>
+{% assign form = site.data.index.globals.apply %}
 {% for about in site.data.index.about_us %} 
 
 	<section {% if about.id == "hero" %} id="hero" class="left dark-olive-text">
@@ -217,7 +218,7 @@ section >  article {
 		<h2>{{ about.title }}</h2>
 		<h3 class="bold white-text">{{ about.paragraph }}</h3>
 		<button>
-			<a href={{ about.href }}>
+			<a href={{ form }}>
 				{{ about.call_to_action }}
 			</a>	
 		</button>

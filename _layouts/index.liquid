@@ -99,11 +99,11 @@ mailForm.addEventListener('submit', async (event) => {
     }
 
     const result = await response.json();
-    openModal(`<img src="/img/success.svg" alt="success" /><h2>¡Gracias!</h2><h3>Su mail ha sido registrado exitosamente.</h3>`);
+    openModal(`<img src="/img/success.svg" alt="success" /><h2>¡Gracias!</h2><h3>¡Tu correo ha sido registrado exitosamente!</h3>`);
 
   } catch (error) {
     console.error('Error:', error); // Log the error for debugging
-    openModal('<img src="/img/error.svg" alt="error" /><h2>Error</h2><h3>Hubo un problema al registrar su mail.</h3><h3 class="bolder">Por favor, intente nuevamente.</h3>');
+    openModal('<img src="/img/error.svg" alt="error" /><h2>¡Ups!</h2><h3>Presentamos un error al registrar tu correo.</h3><h3 class="bolder">Inténtalo nuevamente, por favor.</h3>');
   }
 });
 
