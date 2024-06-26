@@ -95,6 +95,7 @@ article h3 a {
 }
 </style>
 
+{% assign calendly = site.data.index.globals.calendly %}
 {% for use_case in site.data.index.use_cases %}
 <section {% if use_case.id == "hero" %} id="hero" class="white-bg" >
     <article class="animated">
@@ -130,7 +131,7 @@ article h3 a {
 							</div>
 							<div class="inline-container">
 								<button class="show_more">Ver más</button>
-								<button><a href="https://calendly.com/katherinelopezvirto/45min">Contáctanos</a></button>
+								<button><a href="{{ calendly }}">Contáctanos</a></button>
 							</div>
                         </div>
                     </li>
@@ -144,7 +145,7 @@ article h3 a {
     <article class="animated center">
         <h3 class="bolder">{{ use_case.eyebrow }}</h3>
         <h2 class="header-1">{{ use_case.title }}</h2>
-        <button><a href="https://calendly.com/katherinelopezvirto/45min">{{ use_case.cta }}</a></button>
+        <button><a href="{{ calendly }}">{{ use_case.cta }}</a></button>
     </article>
 </section>
 {% endif %}

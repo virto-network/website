@@ -4,13 +4,17 @@ description: |
 default_message:
   Coming soon.
 
+globals:
+  calendly: https://calendly.com/katherinelopezvirto/45min
+  apply: https://apply.virto.network/
+
+
 # Home
 home_sections:
     - id: home
       eyebrow: ¿Te enfrentas a complicaciones para establecer y administrar tu negocio?
       title: <span class="dark-green-text">Crea y Gestiona</span> tu Organización en Minutos
       paragraph: 'Virto te ofrece una cuenta organizacional que simplifica la creación y gestión de tu organización, permitiéndote enfocarte en lo que realmente importa: hacer crecer tu negocio.'
-      href: https://calendly.com/katherinelopezvirto/45min
       call_to_action: Quiero más información
     - id: jobs
       title: Cómo Virto <br/><span class="light-lavender-text">Hace el Trabajo por Ti</span>
@@ -95,7 +99,6 @@ home_sections:
       eyebrow: Comienza Ahora
       title: Da el primer paso hacia el éxito de tu <span class="underlined-element">organización con Virto.</span>
       content: Regístrate <strong>antes de que finalice julio</strong> y prueba gratis nuestra plataforma, diseñada para simplificar la creación y gestión de tu negocio.
-      href: https://apply.virto.network/
       call_to_action: Regístrate ahora
       socials:
             - title: E-mail
@@ -150,7 +153,6 @@ about_us:
       subtitle: Da el primer paso hacia una gestión más eficiente y segura.
       paragraph: Con nuestra prueba gratuita, podrás experimentar cómo nuestra plataforma puede aliviar los desafíos de tu día a día.
       call_to_action: Regístrate en Virto
-      href: https://apply.virto.network/
 
 # Use Cases
 use_cases:
@@ -220,7 +222,6 @@ use_cases:
     eyebrow: Comienza ahora <br> <span class="dark-lavender-text"> Da el primer paso hacia el éxito de tu organización con Virto</span>
     title: ¿Quieres explorar un nuevo caso de uso? <br> ¡Agenda una llamada con nuestro equipo!
     cta: Más información
-    href: https://calendly.com/katherinelopezvirto/45min
 
 # Services
 services:
