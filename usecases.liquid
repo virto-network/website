@@ -131,7 +131,7 @@ article h3 a {
 							</div>
 							<div class="inline-container">
 								<button class="show_more">Ver más</button>
-								<button><a href="{{ calendly }}">Contáctanos</a></button>
+								<a class="button" href="{{ calendly }}">Contáctanos</a>
 							</div>
                         </div>
                     </li>
@@ -145,8 +145,7 @@ article h3 a {
     <article class="animated center">
         <h3 class="bolder">{{ use_case.eyebrow }}</h3>
         <h2 class="header-1">{{ use_case.title }}</h2>
-        <button><a href="{{ calendly }}">{{ use_case.cta }}</a></button>
-    </article>
+        <a class="button" href="{{ calendly }}">{{ use_case.cta }}</a>
 </section>
 {% endif %}
 

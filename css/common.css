@@ -21,19 +21,10 @@ section>article.max {
     /* justify-content: space-evenly; */
 }
 
-input {
+button, .button {
     border: none;
     margin: 1em 0;
-    border-radius: 50px;
-    width: 80%;
-    padding: clamp(5px, 2vh, 20px) clamp(20px, 4vw, 40px);
-    font-size: var(--font-size-button);
-}
-
-button {
-    border: none;
-    margin: 1em 0;
-    font-weight: 400;
+    font-weight: var(--font-weight-600);
     border-radius: 50px;
     width: fit-content;
     padding: clamp(5px, 2vh, 20px) clamp(20px, 4vw, 40px);
@@ -41,18 +32,16 @@ button {
 	background-color: var(--clr-green-darker);
 	font-size: var(--font-size-button);
 	transition: background-color 650ms ease, color 650ms ease;
+    color: var(--clr-olive-darker);
 
     &:hover {
-        background-color: var(--clr-lavender-darker); color: white;
+        background-color: var(--clr-lavender-darker); color: white !important;
+        text-decoration: none;
     }
     &:focus-visible {
         outline: 2px solid var(--clr-lavender-darker); 
     }
 }
-
-/*Property added in order to avoid default iOS configurations, once deployed it needs to be tested */
-button a { color: inherit !important; }
-button a:hover { text-decoration: none; }
 
 /*Classes for links with an arrow on them*/
 .center-arrow { display: flex; align-items: center; }
@@ -232,3 +221,45 @@ dialog img {
     cursor: pointer;
 }
 
+/* Mail Form */
+.mail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+#mail-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    margin: 1em 0;
+}
+  
+#mail-form input {
+    border: none;
+    border-radius: 50px;
+    padding: clamp(5px, 2vh, 20px) clamp(20px, 4vw, 40px);
+    margin: 0.25em 0;
+    font-size: var(--font-size-button);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#mail-button {
+    padding: clamp(5px, 2vh, 20px) clamp(20px, 4vw, 40px);
+    font-size: 1.2rem;
+    width: 100%;
+    background-color: var(--clr-lavender-lighter);
+    color: var(--clr-olive-darker);
+}
+
+#mail-button:focus-visible, .button:focus-visible {
+    outline: 2px solid var(--clr-lavender-darker);
+}
+
+#mail-button:hover {
+    background-color: var(--clr-lavender-darker); color: white;
+    text-decoration: none;
+}

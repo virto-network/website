@@ -245,18 +245,3 @@ figure.logo svg {
 .link-to:hover {
     transform: scale(1.2);
 }
-
-/*Mail Section*/
-
-#mail-button {
-    background-color: var(--clr-lavender-darker);
-    color: var(--clr-white);
-}
-
-#mail-cta {
-    width: 100%;
-}
-
-#mail-cta * {
-    width: 90%;
-}

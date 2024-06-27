@@ -1,9 +1,6 @@
 description: |
   Impactful marketplace infrastructure for
 
-default_message:
-  Coming soon.
-
 globals:
   calendly: https://calendly.com/katherinelopezvirto/45min
   apply: https://apply.virto.network/
