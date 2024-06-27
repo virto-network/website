@@ -35,7 +35,7 @@ button, .button {
     color: var(--clr-olive-darker);
 
     &:hover {
-        background-color: var(--clr-lavender-darker); color: white;
+        background-color: var(--clr-lavender-darker); color: white !important;
         text-decoration: none;
     }
     &:focus-visible {

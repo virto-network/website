@@ -93,15 +93,16 @@ nav a:not(.logo) {
 
 .top-nav a.app-button-link  {
   height: 6vh;
-  border-radius:50px;
 }
 
-.app-button, .app-button-mobile {
+.app-button-link {
+  font-weight: var(--font-weight-500);
   padding: 0;
+  color: var(--clr-olive-darker) !important;
 }
 
 @media screen and (max-width: 1300px) {
-  .top-nav a:not(.menu-icon), .app-button {
+  .top-nav a:not(.menu-icon) {
     display: none;
   }
 }
