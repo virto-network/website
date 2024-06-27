@@ -8,11 +8,6 @@
 		<a class="menu-item {% if page.data.route == "/"%}current{% endif %}" href="/" id="virto-logo" role="menuitem" aria-label="Inicio">
 			{% include "virto_logo.svg" %}
 		</a>
-		<div class="hide">
-		<a class="menu-item {% if page.data.route == "comunidades-locales"%}current{% endif %}" href="/comunidades-locales/" role="menuitem" aria-label="Comunidades locales">
-				Comunidades locales
-			</a>
-		</div>
 		<a class="menu-item {% if page.data.route == "sobre-nosotros"%}current{% endif %}" href="/sobre-nosotros/" role="menuitem" aria-label="Sobre Nosotros">
 			Sobre Nosotros
 		</a>
@@ -40,11 +35,6 @@
 		</a>
 		<nav id="menu-dropdown" aria-label="Secundaria">
 		    <a id="close-menu" class="close-menu" aria-label="Cerrar menú"></a>
-			<div class="hide">
-			<a class="menu-item {% if page.data.route == "comunidades-locales"%}current{% endif %}" href="/comunidades-locales/" role="menuitem" aria-label="Comunidades locales">
-				Comunidades locales
-			</a>
-			</div>
 			<a class="menu-item {% if page.data.route == "sobre-nosotros"%}current{% endif %}" href="/sobre-nosotros/" role="menuitem" aria-label="Sobre Nosotros">
 				SOBRE NOSOTROS
 			</a>
