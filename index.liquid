@@ -5,7 +5,15 @@ data:
   route: home
 ---
 {% assign form = site.data.index.globals.apply %}
-{% for home_section in site.data.index.home_sections %}
+
+{% assign lang = language %}
+{% if lang == "es" %}
+  {% assign home_sections = site.data.index.es.home_sections %}
+{% else %}
+  {% assign home_sections = site.data.index.en.home_sections %}
+{% endif %}
+
+{% for home_section in home_sections %}
 <section {% if home_section.id == "home" %} id="home">
 	<article class="max animated">
 		<div class="text-section lightest-lavender-text">

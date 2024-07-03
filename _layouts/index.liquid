@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +11,20 @@
 	<link rel="stylesheet" href="/css/layout.css">
 	<link rel="stylesheet" href="/css/variables.css">
 	<script defer data-domain="virto.network" src="https://plausible.io/js/script.js"></script>
+	<script>
+		// Consultamos si ya hay algun valor en language, en caso contrario consultamos la preferencia en idioma del usuario y segun sea una y otra, cambiamos el valor del atributo language. La idea es luego usar ese valor para renderizar un texto u otro.
+		(function() {
+		  var storedLang = localStorage.getItem('language');
+		  if (storedLang) {
+			document.documentElement.lang = storedLang;
+		  } else {
+			var language = window.navigator.languages ? window.navigator.languages[0] : (window.navigator.language || window.navigator.userLanguage);
+			var lang = language.startsWith("es") ? "es" : "en";
+			localStorage.setItem('language', lang);
+			document.documentElement.setAttribute('lang', lang);
+		  }
+		})();
+	  </script>
 </head>
 
 <body class="hidden">
