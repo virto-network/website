@@ -1,9 +1,8 @@
 ---
-permalink: /sobre-nosotros/
-title: Sobre Nosotros
+permalink: /about
 layout: index.liquid
 data:
-  route: sobre-nosotros
+  route: about
 ---
 <style>
 
@@ -138,8 +137,7 @@ section >  article {
 
 </style>
 <body>
-{% assign form = site.data.index.globals.apply %}
-{% for about in site.data.index.about_us %} 
+	{% for about in site.data.tr[site.data.lang].about_us %}
 
 	<section {% if about.id == "hero" %} id="hero" class="left dark-olive-text">
 		<article class="animated">
@@ -217,7 +215,7 @@ section >  article {
 		<h3 class="regular">{{ about.subtitle }}</h3>
 		<h2>{{ about.title }}</h2>
 		<h3 class="bold white-text">{{ about.paragraph }}</h3>
-			<a class="button" href={{ form }}>
+			<a class="button" href={{ site.data.apply }}>
 				{{ about.call_to_action }}
 			</a>	
 	</article>
