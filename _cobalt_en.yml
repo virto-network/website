@@ -1,0 +1,20 @@
+destination: ./_site/en
+site:
+  description: Your multi-currency wallet for managing group funds and making quick decisions through a voting system.
+  base_url: https://virto.network/en
+  data:
+    lang: en
+    t: _data/tr.yml
+    calendly: https://calendly.com/katherinelopezvirto/45min
+    apply: https://apply.virto.network/
+pages:
+  default:
+    layout: landing.liquid
+ignore:
+  - README.md
+  - cobalt*
+posts:
+  dir: blog
+  rss: rss.xml
+  default:
+    layout: post.liquid
