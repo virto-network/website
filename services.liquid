@@ -1,9 +1,8 @@
 ---
-permalink: /servicios/
-title: Servicios
+permalink: /services
 layout: index.liquid
 data:
-  route: servicios
+  route: services
 ---
 <style>
 
@@ -204,11 +203,11 @@ section {
 
 </style>
 
-{% for service in site.data.index.services %}
+{% for service in site.data.tr[site.data.lang].services %}
         <section {% if service.id == "intro" %} id="intro" class="services-section">
           <article class="services-section__content max animated">
             <div class="text-section lightest-lavender-text">
-              <h1 class="dark-green-text">Transforma tu Gestión: {{ service.title }}</h1>
+              <h1 class="dark-green-text">{{ service.title_part_one}} {{ service.title_part_two }}</h1>
               <p>{{ service.paragraph }}</p> 
               <a href="#key_features" class="scroll-link">
                 <span class="dark-green-text">{{ service.call_to_action }}</span>
@@ -260,7 +259,7 @@ section {
 
     <section {% if service.id == "allies" %} id="allies" class="whitest-bg">
         <article class="max animated dark-olive-text center">
-                <h2 class="maxwidth--text_desktop bold">Innovación y Seguridad: {{ service.title }}</h2>
+                <h2 class="maxwidth--text_desktop bold">{{ service.title_part_one }}{{ service.title_part_two }}</h2>
                 <div class="allies--container">
                     <figure class="allies--svg">
                         {% include "cubos.svg" %}

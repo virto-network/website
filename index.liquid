@@ -2,10 +2,10 @@
 title: Virto Network
 layout: index.liquid
 data:
-  route: home
+  route: /
 ---
-{% assign form = site.data.index.globals.apply %}
-{% for home_section in site.data.index.home_sections %}
+
+{% for home_section in site.data.tr[site.data.lang].home_sections %}
 <section {% if home_section.id == "home" %} id="home">
 	<article class="max animated">
 		<div class="text-section lightest-lavender-text">
@@ -151,7 +151,7 @@ data:
 			<span>{{ home_section.title }}</span>
 		</h2>
 		<h3>{{ home_section.content  }}</h3>
-		<a class="button" href={{ form }} >{{ home_section.call_to_action }}</a>
+		<a class="button" href={{ site.data.apply }} >{{ home_section.call_to_action }}</a>
 		<ul>
 		{% for social in home_section.socials %}
 			<a class="link-to" title={{ social.title }} href={{ social.link }}>

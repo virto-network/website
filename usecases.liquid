@@ -1,9 +1,8 @@
 ---
-permalink: /casos-de-uso/
-title: Casos de Uso
+permalink: /cases
 layout: index.liquid
 data:
-  route: casos-de-uso
+  route: cases
 ---
 
 <style> 
@@ -95,8 +94,7 @@ article h3 a {
 }
 </style>
 
-{% assign calendly = site.data.index.globals.calendly %}
-{% for use_case in site.data.index.use_cases %}
+{% for use_case in site.data.tr[site.data.lang].use_cases %}
 <section {% if use_case.id == "hero" %} id="hero" class="white-bg" >
     <article class="animated">
             <h1 class="dark-lavender-text">{{ use_case.title }}</h1>
@@ -126,12 +124,12 @@ article h3 a {
 							<p>{{ case.subtitle }}</p>
                             <p>{{ case.description }}</p>
 							<div class="examples">
-								<h3 class="bolder">Te lo explicamos con un ejemplo 👇</h3>
+								<h3 class="bolder">{{ case.example_title }}</h3>
 								<p>{{ case.example }}</p>
 							</div>
 							<div class="inline-container">
-								<button class="show_more">Ver más</button>
-								<a class="button" href="{{ calendly }}">Contáctanos</a>
+								<button class="show_more">{{ case.button_more }}</button>
+								<a class="button" href="{{ site.data.calendly }}">{{ case.button_contact }}</a>
 							</div>
                         </div>
                     </li>
@@ -145,7 +143,7 @@ article h3 a {
     <article class="animated center">
         <h3 class="bolder">{{ use_case.eyebrow }}</h3>
         <h2 class="header-1">{{ use_case.title }}</h2>
-        <a class="button" href="{{ calendly }}">{{ use_case.cta }}</a>
+        <a class="button" href="{{ site.data.calendly }}">{{ use_case.cta }}</a>
 </section>
 {% endif %}
 
