@@ -5,24 +5,14 @@
 </head>
 <nav id="nav" class="top-nav" aria-label="Principal">
 	<div class="max row bold">
-		<a class="menu-item {% if page.data.route == "/"%}current{% endif %}" href="/" id="virto-logo" role="menuitem" aria-label="Inicio">
+		<a class="menu-item" href="/" id="virto-logo" role="menuitem" aria-label="Inicio">
 			{% include "virto_logo.svg" %}
 		</a>
-		<a class="menu-item {% if page.data.route == "sobre-nosotros"%}current{% endif %}" href="/sobre-nosotros/" role="menuitem" aria-label="Sobre Nosotros">
-			Sobre Nosotros
-		</a>
-		<a class="menu-item {% if page.data.route == "servicios"%}current{% endif %}" href="/servicios/" role="menuitem" aria-label="Servicios">
-			Servicios
-		</a>
-		<a class="menu-item {% if page.data.route == "casos-de-uso"%}current{% endif %}" href="/casos-de-uso/" role="menuitem" aria-label="Casos de uso">
-			Casos de uso
-		</a>
-		<a class="menu-item {% if page.data.route == "blog"%}current{% endif %}" href="/blog/" role="menuitem" aria-label="Blog">
-			Blog
-		</a>
-		<a class="app-button-link button" href="https://virto.app/">
-			Ingresar a la app
-		</a>
+		{% for nav in site.data.tr[site.data.lang].nav %}
+			<a class="{{ nav.class }} {% if page.data.route == '{{ nav.route }}'%}current{% endif %}" href={{ nav.route }} role="menuitem" aria-label={{ nav.link }}>
+				{{ nav.link }}
+			</a>
+		{% endfor %}
 		<a id="menu-icon" class="menu-icon" aria-label="Abrir menú" tabindex="1">
 			<svg width="30" height="30" viewBox="-2 -2 34 34" aria-labelledby="Icono menu mobile">
 				<title id="Icono menu mobile">Menu mobile</title>
@@ -33,21 +23,11 @@
 		</a>
 		<nav id="menu-dropdown" aria-label="Secundaria">
 		    <a id="close-menu" class="close-menu" aria-label="Cerrar menú"></a>
-			<a class="menu-item {% if page.data.route == "sobre-nosotros"%}current{% endif %}" href="/sobre-nosotros/" role="menuitem" aria-label="Sobre Nosotros">
-				SOBRE NOSOTROS
+			{% for nav in site.data.tr[site.data.lang].nav %}
+			<a class="{{ nav.class }} {% if page.data.route == '{{ nav.route }}'%}current{% endif %}" href={{ nav.route }} role="menuitem" aria-label={{ nav.link }}>
+				{{ nav.link }}
 			</a>
-			<a class="menu-item {% if page.data.route == "servicios"%}current{% endif %}" href="/servicios/" role="menuitem" aria-label="Servicios">
-				SERVICIOS
-			</a>
-			<a class="menu-item {% if page.data.route == "casos-de-uso"%}current{% endif %}" href="/casos-de-uso/" role="menuitem" aria-label="Casos de uso">
-				CASOS DE USO
-			</a>
-			<a class="menu-item {% if page.data.route == "blog"%}current{% endif %}" href="/blog/" role="menuitem" aria-label="Blog">
-				BLOG
-			</a>
-			<a class="app-button-link button" href="https://virto.app/">
-				Ingresar a la app
-			</a>
+		{% endfor %}
 		</nav>
 	</div>
 </nav>
