@@ -3,16 +3,16 @@ globals:
   go-down: Ir al final
 nav:
   - link: Sobre Nosotros
-    route: about
+    route: /about
     class: menu-item
   - link: Servicios
-    route: services
+    route: /services
     class: menu-item
   - link: Casos de Uso
-    route: cases
+    route: /cases
     class: menu-item
   - link: Blog
-    route: blog
+    route: /blog
     class: menu-item
   - link: Ingresar a la app
     route: https://virto.app/

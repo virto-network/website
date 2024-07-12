@@ -9,7 +9,7 @@
 			{% include "virto_logo.svg" %}
 		</a>
 		{% for nav in site.data[site.data.lang].nav %}
-			<a class="{{ nav.class }} {% if page.data.route == '{{ nav.route }}'%}current{% endif %}" href={{ nav.route }} role="menuitem" aria-label={{ nav.link }}>
+			<a class="{{ nav.class }} {% if page.data.route == '{{ nav.route }}'%}current{% endif %}" href="{{ nav.route }}" role="menuitem" aria-label="{{ nav.link }}">
 				{{ nav.link }}
 			</a>
 		{% endfor %}
@@ -24,7 +24,7 @@
 		<nav id="menu-dropdown" aria-label="Secundaria">
 		    <a id="close-menu" class="close-menu" aria-label="Cerrar menú"></a>
 			{% for nav in site.data[site.data.lang].nav %}
-			<a class="{{ nav.class }} {% if page.data.route == '{{ nav.route }}'%}current{% endif %}" href={{ nav.route }} role="menuitem" aria-label={{ nav.link }}>
+			<a class="{{ nav.class }} {% if page.data.route == '{{ nav.route }}'%}current{% endif %}" href="{{ nav.route }}" role="menuitem" aria-label="{{ nav.link }}">
 				{{ nav.link }}
 			</a>
 		{% endfor %}

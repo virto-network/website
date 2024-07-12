@@ -1,9 +1,9 @@
-lang := "es" # for english run `just *command* lang=en`
+lang := "es" # for english run `just lang=en *command*`
 
 # default
 build-all:
-    lang=es just build 
-    lang=en just build
+    just lang=es build 
+    just lang=en build
 
 build: clean
     cobalt build --config _cobalt_{{ lang }}.yml
