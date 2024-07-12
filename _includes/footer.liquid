@@ -4,12 +4,12 @@
         </a>
         <nav>
             <ul class="nav-links bolder">
-				{% for footer in site.data.tr[site.data.lang].footer %}
+				{% for footer in site.data[site.data.lang].footer %}
 					<li><a href={{ footer.route }} >{{ footer.link }}</a></li>
 				{% endfor %}
             </ul>
         </nav>
-			<a id="scroll-up" class="scroll-up-link lightest-lavender-text center-arrow">{{ site.data.tr[site.data.lang].globals.go-up }}
+			<a id="scroll-up" class="scroll-up-link lightest-lavender-text center-arrow">{{ site.data[site.data.lang].globals.go-up }}
 				<figure class="link-arrow">
 						{% include "up.svg" %}
 				</figure>

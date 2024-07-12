@@ -137,7 +137,7 @@ section >  article {
 
 </style>
 <body>
-	{% for about in site.data.tr[site.data.lang].about_us %}
+	{% for about in site.data[site.data.lang].about_us %}
 
 	<section {% if about.id == "hero" %} id="hero" class="left dark-olive-text">
 		<article class="animated">

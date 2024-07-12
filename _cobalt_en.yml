@@ -4,7 +4,6 @@ site:
   base_url: https://virto.network/en
   data:
     lang: en
-    t: _data/tr.yml
     calendly: https://calendly.com/katherinelopezvirto/45min
     apply: https://apply.virto.network/
 pages:
