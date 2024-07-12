@@ -5,7 +5,7 @@ data:
   route: /
 ---
 
-{% for home_section in site.data.tr[site.data.lang].home_sections %}
+{% for home_section in site.data[site.data.lang].home_sections %}
 <section {% if home_section.id == "home" %} id="home">
 	<article class="max animated">
 		<div class="text-section lightest-lavender-text">

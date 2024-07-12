@@ -1,0 +1,306 @@
+globals:
+  go-up: Back to Top
+  go-down: Scroll to Bottom
+nav:
+  - link: About Us
+    route: about
+    class: menu-item
+  - link: Services
+    route: services
+    class: menu-item
+  - link: Use Cases
+    route: cases
+    class: menu-item
+  - link: Blog
+    route: blog
+    class: menu-item
+  - link: Go to the app
+    route: https://virto.app/
+    class: app-button-link button
+footer:
+  - link: About Us
+    route: /about
+  - link: Services
+    route: /services
+  - link: Use Cases
+    route: /cases
+  - link: Blog
+    route: /blog
+  - link: Whitepaper
+    route: /docs/whitepaper.html
+home_sections:
+  - id: home
+    eyebrow: Facing complications establishing and managing your business?
+    title: <span class="dark-green-text">Create and Manage</span> Your Organization in Minutes
+    paragraph: 'Virto offers you an organizational account that simplifies the creation and management of your organization, allowing you to focus on what truly matters: growing your business.'
+    call_to_action: Learn More
+  - id: jobs
+    title: How Virto <br/><span class="light-lavender-text">Does the Work for You</span>
+    cards:
+      - title: "Quick and Easy Setup:"
+        content: Create your company in less than 15 minutes, hassle-free.
+      - title: "Simplified Member Management:"
+        content: Organize your team with memberships, assign roles, and manage decisions.
+      - title: "Efficient Payment Reception and Execution:"
+        content: Conduct global transactions securely and quickly.
+      - title: "Advanced Fund Governance:"
+        content: Make informed financial decisions and manage your resources effectively.
+      - title: "Access to Organizational Wallet:"
+        content: Keep your organization's resources and make movements as needed.
+        class: center
+  - id: mail-cta
+    title: Want to be one of the first organizations to have an account with Virto?
+    placeholder_name: Enter your name.
+    placeholder_last_name: Enter your last name.
+    placeholder_email: Enter your email.
+    cta: Join our waiting list!
+  - id: benefits
+    title: Benefits of Using <span class="light-lavender-text">Virto</span>
+    cards:
+      - title: Save Time
+        content: Start your company quickly and reduce time spent on administrative tasks.
+        svg: "Ahorra Tiempo.svg"
+        class: benefits-row
+      - title: Optimize Financial Management
+        content: Maintain clear and precise control over your funds.
+        svg: "Gestion Financiera.svg"
+        class: benefits-row-reverse
+      - title: Simplify Collaboration
+        content: Facilitate communication and coordination within your team.
+        svg: "Colaboracion.svg"
+        class: benefits-row
+      - title: Ensure Security
+        content: Protect your information and transactions with best security practices while maintaining traceability.
+        svg: "Seguridad.svg"
+        class: benefits-row-reverse
+      - title: Strategic Connectivity
+        content: Establish valuable connections with like-minded organizations and promote collaboration opportunities.
+        svg: "Conectividad Estrategica.svg"
+        class: benefits-row
+  - id: testimonials
+    title: Testimonials
+    testimonials:
+      - avatar: https://avatars.githubusercontent.com/u/5241972?v=4
+        person: David Barinas, YCombinator Founder
+        message: Through Virto, I opened my company's organizational account quickly, allowing me to receive and make payments efficiently without limitations.
+      - avatar: https://avatars.githubusercontent.com/u/1329925?v=4
+        person: Daniel Olano, CEO of Virto
+        message: As the founder of Virto, I have firsthand experience with the benefits of using our blockchain technology. It has facilitated our decision-making process, automated team and payment management, and increased transparency throughout our organization.
+  - id: qa
+    title: Frequently Asked Questions
+    questions:
+      - question: What is Virto?
+        answer: Virto is an organizational account that allows organizations to receive and make payments, as well as co-manage funds transparently among all their members.
+      - question: Who can use Virto?
+        answer: Virto is designed for any type of organization, from small businesses and startups to large corporations and nonprofits that need a solution for collaboratively managing their funds. <a href="/cases/">Learn about our use cases.</a>
+      - question: Is it safe to use Virto for financial transactions?
+        answer: Yes, Virto uses advanced cryptography in its blockchain technology to protect the organization's financial information and transactions.
+      - question: How is the initial setup of a Virto account done?
+        answer: The initial setup of a Virto account is simple. You just need to sign up, add your organization's members, and start using the platform to manage funds.
+      - question: How can I reload funds into my Virto account?
+        answer: To reload funds into your Virto account, log in to your account, select the "Reload funds" option, choose your preferred payment method (bank transfer, credit card, etc.), enter the amount you wish to reload, and confirm the transaction.
+      - question: What do I need to open an account with Virto?
+        answer: To open an account with Virto, you need to provide basic information about your organization, including name, sector, and description. You can also set up your account and add members of your organization.
+  - id: virto-supporters
+    title: Meet Our Supporters
+    supporters:
+      - icon: polkadot.svg
+        link: https://polkadot.network/
+        title: Polkadot
+      - icon: kusama.svg
+        link: https://kusama.network/
+        title: Kusama
+      - icon: web3foundation.svg
+        link: https://web3.foundation/
+        title: Web3 Foundation
+  - id: cta
+    eyebrow: Start Now
+    title: Take the first step towards your organization's <span class="underlined-element">success with Virto.</span>
+    content: Sign up <strong>before the end of July</strong> and try our platform for free, designed to simplify the creation and management of your business.
+    call_to_action: Sign up now
+    socials:
+      - title: E-mail
+        svg: email.svg
+        link: mailto:contact@virto.team
+      - title: Linkedin
+        svg: linkedin.svg
+        link: https://www.linkedin.com/company/virto-network/
+about_us:
+  - id: hero
+    title: "Our Mission: Helping You on Your Journey to Success"
+  - id: issue
+    title: "The Challenge: A Complex World"
+    paragraph_one: In today's fast-paced and demanding world, you face challenges that can <i>slow down</i> your organization's progress.
+    paragraph_two: High commission costs, delays in international transactions, and excessive bureaucracy can seem like insurmountable obstacles.
+  - id: virto
+    title: "Your Ally on the Road: Virto"
+    paragraph_one: In this scenario, Virto comes out, providing the tools necessary to <span class="bolder dark-green-text">turn these challenges into opportunities</span>.
+    paragraph_two: Through our advanced platform, we facilitate more efficient and secure organizational management.
+    paragraph_three: "You can focus on what truly matters:" 
+    paragraph_four: <span class="bolder dark-green-text">Your organization's growth</span>.
+  - id: action-plan
+    title: "The Clear Path: Your Action Plan"
+    subtitle: "To start your transformation, Virto offers you concrete and simple steps:"
+    step_list:
+      - content: Sign up and set up your organizational wallet in a few minutes.
+        icon: step1.svg
+      - content: Manage payments and funds.
+        icon: step2.svg
+      - content: Foster democratic and collaborative decision-making within your team.
+        icon: step3.svg
+  - id: team
+    title: Our Team of Visionaries
+    subtitle: At Virto, we have a select group of professionals who believe in new technologies and their efficient solutions.
+    core_team:
+      - name: <span>Daniel</span><br> Olano
+        link: https://github.com/olanod
+        avatar: https://avatars.githubusercontent.com/u/1329925?v=4
+        role: Software Engineer
+      - name: <span>Pablo Andrés</span><br> Dorado Suárez
+        link: https://github.com/pandres95
+        avatar: https://avatars.githubusercontent.com/u/2502577?v=4
+        role: Blockchain Engineer
+      - name: <span>David</span><br> Barinas
+        link: https://github.com/S0c5
+        avatar: https://avatars.githubusercontent.com/u/5241972?v=4
+        role: Software Engineer
+  - id: cta_about
+    title: Join and Transform
+    subtitle: Take the first step towards more efficient and secure management.
+    paragraph: With our free trial, you can experience how our platform can relieve the challenges of your day-to-day.
+    call_to_action: Sign up for Virto
+use_cases:
+  - id: hero
+    title: What Cases Do You Use Virto For?
+    paragraph: At Virto <strong>we are committed to transforming</strong> the way organizations manage their resources and make decisions, from developing an organizational account to a system for making decisions about your company's resources.
+    subtitle: <strong>Virto's solution applies to various scenarios.</strong> Here we tell you 👇
+  - id: cases
+    cases:
+      - title: Crowdfunding, Access to Funding
+        subtitle: <strong>Start with confidence using Virto to access the funding you need!</strong> 
+        description: Create an account in our ecosystem and submit funding proposals to raise funds and manage resources transparently.
+        tag_one: Startups
+        tag_two: Transparency
+        tag_class: lavender
+        example_title: See it in action 👇
+        example: Imagine a startup opening an account on Virto to create its profile on the blockchain network. With our platform, they can submit funding proposals to treasuries and obtain the necessary funds to launch their idea. They also manage resources transparently, building trust among investors and the community.
+        img: "../img/financiamiento.jpg"
+        button_more: Learn More
+        button_contact: Contact Us
+      - title: Non-Profit Organizations
+        subtitle: <strong>Virto ensures maximum transparency in NGO funds!</strong>
+        description: Virto enables your NGO members to propose crucial decisions regarding donation management and fund distribution.
+        tag_one: NGOs
+        tag_two: Transparency
+        tag_class: light-green
+        example_title: See it in action 👇
+        example: Imagine an NGO using Virto to manage donations and make key decisions about their projects, ensuring transparency and participation from all members. With Virto, every member has the opportunity to contribute to the strategic direction of the organization and ensure that resources are used effectively and ethically.
+        img: "../img/ong.jpg"
+        button_more: Learn More
+        button_contact: Contact Us
+      - title: Idea Validation for Startups
+        subtitle: <strong>With Virto, you make your most innovative ideas come true!</strong>
+        description: Startup founders can create an organizational account on our platform to validate their business. Virto helps you receive payments, secure funding, and propose, vote, and finance ideas.
+        tag_one: Startups
+        tag_two: Lower Costs
+        tag_class: green
+        example_title: See it in action 👇
+        example: Imagine a startup creating an account on Virto to validate its business model. From managing payments from potential customers to receiving investments, our platform provides the necessary tools. Additionally, you'll be able to make collaborative decisions about resources.
+        img: "../img/startups.jpg"
+        button_more: Learn More
+        button_contact: Contact Us
+      - title: Self-Managed Teams
+        subtitle: <strong>Empower your teams to make autonomous and effective decisions!</strong>
+        description: With Virto, members can propose and vote on projects, optimize operations, and manage resources with the assigned budget.
+        tag_one: Teams
+        tag_two: Independence
+        tag_class: blue
+        example_title: See it in action 👇
+        example: Imagine a product team within your company using Virto to receive their budget. With our platform, the team can make decisions on how to use these resources, whether for specific projects or to optimize operations, ensuring efficient and transparent management.
+        img: "../img/equipos.jpg"
+        button_more: Learn More
+        button_contact: Contact Us
+      - title: Open Source Projects
+        subtitle: <strong>Join the community of innovative developers in open source projects!</strong>
+        description: With Virto, contribute and receive fair rewards for your contributions by proposing and defining transparent reward systems.
+        tag_one: Developers
+        tag_two: Innovation
+        tag_class: olive
+        example_title: See it in action 👇
+        example: Imagine a community of software developers using Virto to reward those who contribute to the open-source project. They define clear and transparent rules through Virto's decision-making system to ensure fairness and transparency in reward distribution.
+        img: "../img/desarrolladores.jpg"
+        button_more: Learn More
+        button_contact: Contact Us
+      - title: Governance in Blockchain Projects
+        subtitle: <strong>Virto helps you drive more effective and democratic decisions!</strong>
+        description: Empower the members of your blockchain community, allowing them to propose projects and vote on them. Achieve their maximum potential for the development of your community!
+        tag_one: Blockchain Communities
+        tag_two: Security
+        tag_class: olive
+        example_title: See it in action 👇
+        example: Imagine the members of your blockchain community being able to propose projects and vote on them in a secure and decentralized manner, ensuring maximum transparency and participation.
+        img: "../img/gobernanza.jpg"
+        button_more: Learn More
+        button_contact: Contact Us
+      - title: Token Creation and Management
+        subtitle: <strong>Take financial innovation to the next level with Virto!</strong>
+        description: Create and manage your own token using Virto's platform. Click on Learn more to discover all the benefits.
+        tag_one: Startups
+        tag_two: Tokens
+        tag_class: green
+        example_title: See it in action 👇
+        example: Imagine your startup creating a token for its e-commerce platform. This token allows you to reduce transactional costs compared to traditional markets. Using Virto, you can make key decisions about the issuance and usage policies of the token. This optimizes your operations and ensures transparent and participatory management of your digital resources. Additionally, you can offer exclusive rewards and discounts to your customers, fostering loyalty and attracting new users interested in unique benefits.
+        img: "../img/token.jpg"
+        button_more: Learn More
+        button_contact: Contact Us
+  - id: cta
+    eyebrow: Start now <br> <span class="dark-lavender-text"> Take the first step towards your organization's success with Virto</span>
+    title: Do you want to explore a new use case? <br> Schedule a call with our team!
+    cta: Know more
+services:
+  - id: intro
+    title_part_one: "Transform Your Organisation:"
+    title_part_two: <span class="lightest-lavender-text">Fast, Secure, and Lower Costs</span>
+    paragraph: At Virto, we transform your ability to operate and manage resources, enabling you to achieve goals faster and with less effort.
+    call_to_action: Our platform allows you to
+  - id: key_features
+    list:
+      - title: 'Organizational Wallet:'
+        content: Open a digital wallet for your organization in just a few steps, available in multiple currencies.
+        class: 
+      - title: 'Virto Payments:'
+        content: Flexibility and global reach in payments, including cryptocurrencies.
+        class: align-right
+      - title: 'Fund Management:'
+        content: Efficient and transparent management through a collaborative membership system.
+        class: 
+    last-title: Making team decisions has never been easier!
+  - id: optimize_resources
+    title: Maximize Resource Efficiency with Virto
+    paragraph: 'Through Virto, you will optimize the use of your financial resources and improve internal collaboration:'
+    list:
+      - title: Total Transparency
+        content: All movements and decisions are recorded, ensuring integrity and clarity.
+        img: 'all_ok.svg'
+      - title: Collaborative Fund Management
+        content: Allow members to co-manage resources, maintaining clear and detailed control over each operation.
+        img: 'group.svg'
+      - title: Defined Control
+        content: Establish specific roles and permissions to ensure proper and secure asset management.
+        img: 'rol_managment.svg'
+  - id: allies
+    title_part_one: "Innovation and Security:"
+    title_part_two: <span class="dark-green-text">Your Ally in Remote Management</span>
+    paragraph: We are Virto, <strong>pioneers in implementing web 3 infrastructure</strong> to provide a robust and secure platform.
+    strong_paragraph: Our tools are designed to overcome the challenges of remote management, reducing costs and increasing security in all your organizational operations.
+    cta: Learn about our Protocol
+    href: ./../docs/whitepaper.html
+  - id: cta_services
+    title: "Act Now: Simplify, Assure, and Save with Virto."
+    subtitle: The time is now!
+    paragraph: Sign up on Virto during July and experience how our platform transforms your organization's management with a free trial.
+    strong_paragraph: Enjoy quick setup and continuous support to ensure an efficient transition to more effective and profitable management.
+    placeholder_name: Enter your name.
+    placeholder_last_name: Enter your last name.
+    placeholder_email: Enter your email.
+    cta: Join our waitlist!

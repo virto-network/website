@@ -2,10 +2,8 @@ destination: ./_site/es
 site:
   description: Tu billetera multimoneda para gestionar fondos en grupo y tomar decisiones rápidas mediante un sistema de votación.
   base_url: https://virto.network/es
-
   data:
     lang: es
-    t: _data/trans.yml
     calendly: https://calendly.com/katherinelopezvirto/45min
     apply: https://apply.virto.network/
 pages:

@@ -203,7 +203,7 @@ section {
 
 </style>
 
-{% for service in site.data.tr[site.data.lang].services %}
+{% for service in site.data[site.data.lang].services %}
         <section {% if service.id == "intro" %} id="intro" class="services-section">
           <article class="services-section__content max animated">
             <div class="text-section lightest-lavender-text">

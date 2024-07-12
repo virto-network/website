@@ -94,7 +94,7 @@ article h3 a {
 }
 </style>
 
-{% for use_case in site.data.tr[site.data.lang].use_cases %}
+{% for use_case in site.data[site.data.lang].use_cases %}
 <section {% if use_case.id == "hero" %} id="hero" class="white-bg" >
     <article class="animated">
             <h1 class="dark-lavender-text">{{ use_case.title }}</h1>
