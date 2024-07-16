@@ -28,6 +28,14 @@ footer:
     route: /blog
   - link: Whitepaper
     route: /docs/whitepaper.html
+modal:
+  success:
+    title: "Thank you!"
+    message: "Your email has been successfully registered!"
+  error:
+    title: "Oops!"
+    message: "We encountered an error registering your email."
+    retry: "Please try again."
 home_sections:
   - id: home
     eyebrow: Facing complications establishing and managing your business?
