@@ -60,9 +60,25 @@ const mailButton = document.getElementById('mail-button');
 const closeButton = document.querySelector('.close-button');
 const modalMessage = document.getElementById('modal-message');
 
-function openModal(message) {
-    modalMessage.innerHTML = message;
-    modal.showModal();
+const userLang = navigator.language;
+const isSpanish = userLang.startsWith('es');
+
+console.log("language", userLang)
+const messages = {
+  success: {
+    en: `<img src="/img/success.svg" alt="success" /><h2>Thank you!</h2><h3>Your email has been successfully registered!</h3>`,
+    es: `<img src="/img/success.svg" alt="success" /><h2>¡Gracias!</h2><h3>¡Tu correo ha sido registrado exitosamente!</h3>`
+  },
+  error: {
+    en: `<img src="/img/error.svg" alt="error" /><h2>Oops!</h2><h3>We encountered an error registering your email.</h3><h3 class="bolder">Please try again.</h3>`,
+    es: `<img src="/img/error.svg" alt="error" /><h2>¡Ups!</h2><h3>Presentamos un error al registrar tu correo.</h3><h3 class="bolder">Inténtalo nuevamente, por favor.</h3>`
+  }
+};
+
+function openModal(type) {
+  const message = isSpanish ? messages[type].es : messages[type].en;
+  modalMessage.innerHTML = message;
+  modal.showModal();
 }
 
 closeButton.addEventListener('click', () => {
@@ -98,14 +114,13 @@ mailForm.addEventListener('submit', async (event) => {
       throw new Error(`Airtable API error: ${response.status}`);
     }
 
-    const result = await response.json();
-    openModal(`<img src="/img/success.svg" alt="success" /><h2>¡Gracias!</h2><h3>¡Tu correo ha sido registrado exitosamente!</h3>`);
-
-  } catch (error) {
-    console.error('Error:', error); // Log the error for debugging
-    openModal('<img src="/img/error.svg" alt="error" /><h2>¡Ups!</h2><h3>Presentamos un error al registrar tu correo.</h3><h3 class="bolder">Inténtalo nuevamente, por favor.</h3>');
-  }
-});
+		const result = await response.json();
+		openModal('success');
+		} catch (error) {
+		console.error('Error:', error);
+		openModal('error');
+		}
+	});
 
 </script>
 </body>
