@@ -18,6 +18,17 @@
 	<dialog data-modal class="light-green-bg">
         <span class="close-button boldest">X</span>
         <div id="modal-message" class="center"></div>
+        <template data-msg="success">
+            <img src="/img/success.svg" alt="success" />
+            <h2>{{ site.data[site.data.lang].modal.success.title }}</h2>
+            <h3>{{ site.data[site.data.lang].modal.success.message }}</h3>
+        </template>
+        <template data-msg="error">
+            <img src="/img/error.svg" alt="error" />
+            <h2>{{ site.data[site.data.lang].modal.error.title }}</h2>
+            <h3>{{ site.data[site.data.lang].modal.error.message }}</h3>
+            <h3 class="bolder">{{ site.data[site.data.lang].modal.error.retry }}</h3>
+        </template>
 	</dialog>
 		<main>{{ page.content }}</main>
 		<a href="#footer" class="scroll-down-link white-text center-arrow"> {{ site.data[site.data.lang].globals.go-down }}
@@ -60,24 +71,10 @@ const mailButton = document.getElementById('mail-button');
 const closeButton = document.querySelector('.close-button');
 const modalMessage = document.getElementById('modal-message');
 
-const userLang = navigator.language;
-const isSpanish = userLang.startsWith('es');
-
-const messages = {
-  success: {
-    en: `<img src="/img/success.svg" alt="success" /><h2>Thank you!</h2><h3>Your email has been successfully registered!</h3>`,
-    es: `<img src="/img/success.svg" alt="success" /><h2>¡Gracias!</h2><h3>¡Tu correo ha sido registrado exitosamente!</h3>`
-  },
-  error: {
-    en: `<img src="/img/error.svg" alt="error" /><h2>Oops!</h2><h3>We encountered an error registering your email.</h3><h3 class="bolder">Please try again.</h3>`,
-    es: `<img src="/img/error.svg" alt="error" /><h2>¡Ups!</h2><h3>Presentamos un error al registrar tu correo.</h3><h3 class="bolder">Inténtalo nuevamente, por favor.</h3>`
-  }
-};
-
 function openModal(type) {
-  const message = isSpanish ? messages[type].es : messages[type].en;
-  modalMessage.innerHTML = message;
-  modal.showModal();
+	const message = modal.querySelector(`[data-msg=${type}]`);
+	modalMessage.replaceChildren(message.content.cloneNode(true));
+  	modal.showModal();
 }
 
 closeButton.addEventListener('click', () => {
