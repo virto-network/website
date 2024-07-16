@@ -28,6 +28,14 @@ footer:
     route: /blog/
   - link: Whitepaper
     route: /docs/whitepaper.html
+modal:
+  success:
+    title: "¡Gracias!"
+    message: "¡Tu correo ha sido registrado exitosamente!"
+  error:
+    title: "¡Ups!"
+    message: "Presentamos un error al registrar tu correo."
+    retry: "Inténtalo nuevamente, por favor."
 home_sections:
   - id: home
     eyebrow: ¿Te enfrentas a complicaciones para establecer y administrar tu negocio?
