@@ -86,26 +86,26 @@ data:
 {% endif %}
 
 {% if home_section.id == "testimonials" %}
-	<section id="testimonials" class="light-lavender-bg center">
-		<article class="max animated column">
-			<h2 class="dark-lavender-text">{{ home_section.title }}</h2>
-			<div class="testimonials-container">
-				{% for testimonial in home_section.testimonials %}
-					<div class="testimonial {% unless forloop.first %}hidden{% endunless %}">
-						<img src="{{ testimonial.avatar }}" alt="Avatar de {{ testimonial.person }}" class="avatar">
-						<p class="testimonial-message">{{ testimonial.message }}</p>
-						<p class="testimonial-person bolder">{{ testimonial.person }}</p>
-					</div>
-				{% endfor %}
-				<a class="arrow left" id="prevTestimonial">
-					{% include "left.svg" %}
-				</a>
-				<a class="arrow right" id="nextTestimonial">
-					{% include "right.svg" %}
-				</a>
-			</div>
-		</article>
-	</section>
+    <section id="testimonials" class="light-lavender-bg center">
+        <article class="max animated column">
+		<h2 class="dark-lavender-text">{{ home_section.title }}</h2>
+            <div class="testimonials-container">
+                {% for testimonial in home_section.testimonials %}
+                    <div class="testimonial {% if forloop.first %}active{% endif %}">
+                        <img src="{{ testimonial.avatar }}" alt="Avatar de {{ testimonial.person }}" class="avatar">
+                        <p class="testimonial-message">{{ testimonial.message }}</p>
+                        <p class="testimonial-person bolder">{{ testimonial.person }}</p>
+                    </div>
+                {% endfor %}
+                <a class="arrow left" id="prevTestimonial">
+                    {% include "left.svg" %}
+                </a>
+                <a class="arrow right" id="nextTestimonial">
+                    {% include "right.svg" %}
+                </a>
+            </div>
+        </article>
+    </section>
 {% endif %}
 
 {% if home_section.id == "qa" %}
@@ -175,25 +175,37 @@ const whenVisible = (elements, fn, opts) => {
 	const ob = new IntersectionObserver(fn, opts);
 	$$(elements).forEach(e => ob.observe(e));
 };
-const makeSticky = ([br]) =>
-	br.target.nextElementSibling.classList.toggle('fixed', br.intersectionRatio === 1);
 
-whenVisible('main>section', addViewedClass, { threshold: 0.2 });
-whenVisible('.sticky-hack', makeSticky, { threshold: [0, 1] });
+document.addEventListener('DOMContentLoaded', () => {
+    const testimonials = document.querySelectorAll('.testimonial');
+    let currentIndex = 0;
 
-const testimonials = document.querySelectorAll('.testimonial');
-const prevButton = document.getElementById('prevTestimonial');
-const nextButton = document.getElementById('nextTestimonial');
-let currentTestimonial = 0;
+    function showTestimonial(index) {
+        testimonials.forEach((testimonial, i) => {
+            if (i === index) {
+                testimonial.classList.add('active');
+                testimonial.classList.remove('hidden');
+            } else {
+                if (testimonial.classList.contains('active')) {
+                    testimonial.classList.remove('active');
+                    testimonial.classList.add('hidden');
+                }
+            }
+        });
+    }
 
-function showTestimonial(index) {
-    testimonials[currentTestimonial].classList.add('hidden');
-    currentTestimonial = (index + testimonials.length) % testimonials.length;
-    testimonials[currentTestimonial].classList.remove('hidden');
-}
+    document.getElementById('prevTestimonial').addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? testimonials.length - 1 : currentIndex - 1;
+        showTestimonial(currentIndex);
+    });
 
-prevButton.addEventListener('click', () => showTestimonial(currentTestimonial - 1));
-nextButton.addEventListener('click', () => showTestimonial(currentTestimonial + 1));
+    document.getElementById('nextTestimonial').addEventListener('click', () => {
+        currentIndex = (currentIndex === testimonials.length - 1) ? 0 : currentIndex + 1;
+        showTestimonial(currentIndex);
+    });
+
+    showTestimonial(currentIndex);
+});
 
 const questionButtons = document.querySelectorAll('.question-button');
 
