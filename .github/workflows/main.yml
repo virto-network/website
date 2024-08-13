@@ -20,13 +20,27 @@ jobs:
           file: cobalt-v0.19.2-x86_64-unknown-linux-gnu.tar.gz
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate _data/env.json
+      - name: Generate _data/env.json for Spanish
         run: |
+          mkdir -p es/_data
           echo '{
             "AIRTABLE_API_KEY": "${AIRTABLE_API_KEY}",
             "AIRTABLE_BASE_ID": "${AIRTABLE_BASE_ID}",
             "AIRTABLE_TABLE_ID": "${AIRTABLE_TABLE_ID}"
-          }' > _data/env.json
+          }' > es/_data/env.json
+        env:
+          AIRTABLE_API_KEY: ${{ vars.AIRTABLE_API_KEY }}
+          AIRTABLE_BASE_ID: ${{ vars.AIRTABLE_BASE_ID }}
+          AIRTABLE_TABLE_ID: ${{ vars.AIRTABLE_TABLE_ID }}
+
+      - name: Generate _data/env.json for English
+        run: |
+          mkdir -p en/_data
+          echo '{
+            "AIRTABLE_API_KEY": "${AIRTABLE_API_KEY}",
+            "AIRTABLE_BASE_ID": "${AIRTABLE_BASE_ID}",
+            "AIRTABLE_TABLE_ID": "${AIRTABLE_TABLE_ID}"
+          }' > en/_data/env.json
         env:
           AIRTABLE_API_KEY: ${{ vars.AIRTABLE_API_KEY }}
           AIRTABLE_BASE_ID: ${{ vars.AIRTABLE_BASE_ID }}
