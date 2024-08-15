@@ -3,7 +3,7 @@ permalink: /inicio/
 title: Virto Network
 layout: landing.liquid
 data:
-  route: inicio
+  route: business-two
 ---
 
 <style>
@@ -57,11 +57,11 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 <section {% if landing_b.id == "section-a" %} id="section-a" class="light-green-bg">
 	<article class="max animated">
 		<div class="text-section dark-olive-text">
-			<p>¡Bienvenido a Virto!</p>
+			<p>{{ landing_b.eyebrow}}</p>
 			<h1>{{ landing_b.title }}</h1>
 			<p>{{ landing_b.question }}</p>
 			<p>{{ landing_b.paragraph }}</p>
-			<button><a class="track-cta">{{ landing_b.call_to_action }}</a></button>
+			<button><a class="track-cta" href="Form">{{ landing_b.call_to_action }}</a></button>
 		</div>
 		<figure class="arrow-right">
 				{% include "arrow_right.svg" %}
@@ -82,7 +82,6 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 			</figure>
 		</div>
 		<div class="text-section light-green-text">
-			<h3>{{ landing_b.subtitle }}</h3>
 			<ul class="auto-grid">
 		    {% for item in landing_b.list %}
 				<li class="animated">
@@ -91,11 +90,6 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 				</li>
             {% endfor %}
             </ul>
-			<a class="track-cta bold light-lavender-text center-arrow">{{ landing_b.call_to_action }}
-				<figure class="link-arrow light-lavender-text">
-					{% include "see_more.svg" %}
-				</figure>
-			</a>
 		</div>
 	</article>
 </section>
@@ -113,13 +107,7 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
                     </li>
                 {% endfor %}
             </ul>
-			<a class="track-cta bold light-lavender-text center-arrow">{{ landing_b.call_to_action }}
-				<figure class="link-arrow light-lavender-text">
-					{% include "see_more.svg" %}
-				</figure>
-			</a>
 		</div>
-
         <div class="column">
 			<h2 class="light-green-text">{{ landing_b.title }}</h2>
 			<figure class="logo img-c">
@@ -130,21 +118,23 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 </section>
 {% endif %}
 
-<section {% if landing_b.id == "section-d" %} id="section-d" class="whitest-bg">
-	<article class="max animated">
-		<div class="text-section">
-			<h2 class="dark-olive-text">{{ landing_b.title }}</h2>
-			<figure class="logo build-machine">
-				<img id="build_machine" src="/img/build_machine.svg" alt="Construir comunidad"/>
-			</figure>
-		</div>
-		<div class="text-section">
-			<h3 class="dark-olive-text">Transforma tu organización con facilidad.</h3>
-			<p class="dark-olive-text">{{ landing_b.paragraph }}</p>
-			<a class="track-cta dark-olive-text center-arrow" >{{ landing_b.call_to_action }}
-			<figure class="link-arrow">{% include "see_more.svg" %}</figure>
+<section {% if landing_b.id == "section-d" %} id="section-d" class="cta light-lavender-bg">
+	<article class="animated center dark-olive-text">
+		<h3 class="bolder">{{ landing_b.eyebrow }}</h3>
+		<h2 class="bolder">
+			<span>{{ landing_b.title }}</span>
+		</h2>
+		<h3 class="bolder">{{ landing_b.paragraph_one  }}</h3>
+		<h3>{{ landing_b.paragraph_two  }}</h3>
+		<a class="button" href={{ landing_b.link }} >{{ landing_b.call_to_action }}</a>
+		<ul>
+		{% for social in landing_b.socials %}
+			<a class="link-to" title={{ social.title }} href={{ social.link }}>
+				{% include social.svg %}
 			</a>
-		</div>
+		{% endfor %}
+		</ul>
+		<p>{{ landing_b.socials_text }}</p>
 	</article>
 </section>
 {% endif %}
