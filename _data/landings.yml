@@ -21,9 +21,9 @@ landing_a:
     - id: section-d
       eyebrow: No te quedes fuera de esta oportunidad
       title: Regístrate ahora y <span class="dark-lavender-text">sé uno de los primeros comercios</span> en acceder a una plataforma que transformará tu <span class="underlined-element">manera de gestionar las finanzas.</span>
-      paragraph_one: ¡Descubre la <strong class="dark-lavender-text">solución</strong> que estamos creando para ti!
+      paragraph_one: ¡Descubre la <span class="dark-lavender-text">solución</span> que estamos creando para ti!
       paragraph_two: <strong>Regístrate</strong> en la waiting list y comienza a transformar tu negocio hoy.
-      link: Add link to form
+      link: 
       call_to_action: ¡Únete Hoy y Asegura Tu Lugar en la Waiting List!
       socials:
         - title: Telegram
@@ -37,91 +37,89 @@ landing_a:
 #Landing-b
 landing_b:
     - id: section-a
-      title:  Optimiza <span class="dark-lavender-text"> Tu Gestión Organizacional </span>con DAOs
-      question: ¿Quieres mejorar la gestión en tu comunidad con tecnología Web 3.0?
-      paragraph: Virto te ofrece herramientas avanzadas para DAOs que transforman la eficiencia y la transparencia.
-      call_to_action: Agéndate y Obtén tu Consulta Gratuita
+      eyebrow: No más retrasos ni inconformidades.
+      title:  ¿Tus Socios <span class="dark-lavender-text">No Participan Activamente en las Decisiones de la Empresa?</span>
+      paragraph: Asegura que cada miembro de tu equipo participe activamente en la toma de decisiones, logrando un <strong>consenso rápido y efectivo.</strong>
+      call_to_action: Únete a nuestra comunidad y asegura tu lugar en la waiting list.
     - id: section-b
-      title: Innova con <br><span class="light-lavender-text">DAOs y Pagos P2P</span>
-      subtitle: 'Explora las capacidades que Virto tiene para tu organización:'
+      title: Facilita la <span class="light-lavender-text">Participación Activa en Cada Decisión</span>
       list:
-          - content: DAOs para una gobernanza transparente.
+          - content: La toma de decisiones rápidas es viable mediante un <strong>sistema de votación</strong> diseñado para que cada miembro del equipo participe activamente. 
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content:  Pagos P2P rápidos y seguros.
+          - content:  Además, Virto te permite llevar un <strong>registro claro y detallado</strong> de todas las decisiones, accesible para todos los socios. 
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content: Desarrollo a medida de dApps.
+          - content: <strong>Monitorea el estado de cada decisión</strong> en tiempo real y asegúrate de que todos estén alineados, mejorando la colaboración y la transparencia en la gestión.
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content: Chat privados para una comunicación segura.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-      call_to_action: Agéndate y Obtén tu Consulta Gratuita
     - id: section-c
-      title: Simplifica la Gobernanza con <br><span class="light-lavender-text">Herramientas Intuitivas</span>
-      subtitle: 'Superamos la complejidad de los productos tradicionales con soluciones fáciles de usar que potencian la colaboración:'
-      call_to_action: Agéndate y Obtén tu Consulta Gratuita
+      title: Agiliza la Toma de Decisiones y <br><span class="light-lavender-text">Fortalece la Unidad del Equipo</span>
+      subtitle: 'Al utilizar Virto, lograrás:' 
       list:
-          - content: Procesos de votación claros y seguros para una gobernanza efectiva.
+          - content: Procesos de decisión más ágiles, <strong>ahorrando tiempo y evitando conflictos.</strong>
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content:  Trazabilidad completa en cada transacción, garantizando transparencia total.
+          - content:  <strong>Mayor compromiso en tu equipo</strong>, al asegurar que cada voz sea escuchada y valorada. 
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content: Facilitamos la colaboración y aceleramos las decisiones con interfaces amigables y adaptativas.
+          - content: <strong>Mejorarás la transparencia</strong> en todas las operaciones, lo que fortalecerá la confianza y colaboración entre los socios.
             icon: ../img/lavender_cube.svg
             alt: cubo
     - id: section-d
-      title: Da el Salto a la Optimización <span class="dark-green-text">con Virto</span>
-      paragraph: Regístrate ahora y agenda una consultoría personalizada de Virto.<br><strong>¡No pierdas la oportunidad de disfrutar de tres meses gratuitos!</strong>
-      call_to_action: Agéndate y Obtén tu Consulta Gratuita
+      eyebrow: No te quedes fuera de esta innovación
+      title: <span class="dark-lavender-text">Regístrate ahora</span> y sé uno de los primeros comercios en acceder a una plataforma que transformará la <span class="underlined-element">manera manera en que tomas y gestionas decisiones.</span>
+      paragraph_one: ¡Descubre la <span class="dark-lavender-text">solución</span> que estamos creando para ti!
+      paragraph_two: <strong>Regístrate</strong> en la waiting list y comienza a transformar tu negocio hoy.
+      link: 
+      call_to_action: ¡Únete Hoy y Asegura Tu Lugar en la Waiting List!
+      socials:
+        - title: Telegram
+          svg: ../img/telegram.svg 
+          link: https://t.me/+573107887042
+        - title: Whatsapp
+          svg: ../img/whatsapp.svg
+          link: https://api.whatsapp.com/send?phone=573107887042
+      socials_text: Respondemos tus inquietudes <span class="dark-lavender-text">en tiempo real.</span>
 
 #Landing-c
 landing_c:
     - id: section-a
-      title: HOLA<span class="dark-lavender-text"> Dinero y Tiempo </span>con Gestión Eficaz
-      paragraph: ¿Frustrado con la burocracia y los procesos lentos?<br> Optimiza la gestión de capital humano y finanzas en tu organización con Virto.
-      call_to_action: Regístrate e Inicia tu Consulta Gratuita
+      eyebrow: Di adiós a las hojas de cálculo y a las herramientas obsoletas.
+      title: ¿Cansado de los <span class="dark-lavender-text">Errores y la Confusión</span> en Tus Finanzas?
+      paragraph_one: La falta de control y organización en la administración puede ser cara.
+      paragraph_two: <strong>Evita errores que afectan el crecimiento de tu negocio</strong> con una solución diseñada para mantener tus finanzas en orden y libres de complicaciones.
+      call_to_action: Únete a nuestra comunidad y asegura tu lugar en la waiting list.
     - id: section-b
-      title: Potencia Tu Operativa con <span class="light-lavender-text">Soluciones Inteligentes</span>
-      subtitle: 'Descubre lo que Virto puede hacer por ti:'
-      list:
-          - content: Sistemas de pago seguros y eficientes.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content:  Sistema para tomar decisiones con tu equipo.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content: Gestión transparente y trazable de fondos comunes.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content: Administración simplificada de contactos.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content: Conexiones estratégicas con otras organizaciones.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content: Innovación a través de nuestra infraestructura integrada con tecnología Web 3.0.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-      call_to_action: Regístrate e Inicia tu Consulta Gratuita
+      title: Simplifica la Gestión Financiera y <span class="light-lavender-text">Facilita Tus Pagos.</span>
+      subtitle: Virto es una plataforma de gestión financiera
+      paragraph_one: Virto te <strong>facilita realizar pagos y asegura el registro claro y preciso de todas tus transacciones.</strong>
+      paragraph_two: Mantén la organización y el control de tus finanzas de manera sencilla y eficaz.
     - id: section-c
-      title: Gestiona Mejor,<br><span class="light-lavender-text">Logra Más</span>
-      subtitle: Virto te equipa con herramientas diseñadas para el éxito.
-      paragraph: "Imagina gestionar proyectos sin estrés y con total transparencia.<br> Sé parte del cambio:"
-      call_to_action: Regístrate e Inicia tu Consulta Gratuita
+      title: Optimiza tu Tesorería y <br><span class="light-lavender-text">Mejora la Eficiencia de tu Negocio</span>
+      subtitle: 'Al utilizar Virto, lograrás:'
       list:
-          - content: Sistemas de pago seguros y eficientes.
+          - content: '<strong>Eficiencia organizativa:</strong> Mantén tus finanzas en orden, evitando errores que puedan costarte tiempo y dinero.'
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content:  Sistema para tomar decisiones con tu equipo.
+          - content:  '<strong>Control financiero:</strong> Centraliza todas tus transacciones en una plataforma intuitiva y precisa.'
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content: Gestión transparente y trazable de fondos comunes.
+          - content: '<strong>Confianza y tranquilidad:</strong> Sabes que cada movimiento financiero está registrado y controlado, asegurando una gestión transparente y sin complicaciones.'
             icon: ../img/lavender_cube.svg
             alt: cubo
     - id: section-d
-      title: Inicia Tu Transformación <span class="dark-green-text">con Virto</span>
-      paragraph: "Agenda una cita con el equipo Virto y comienza con una consultoría personalizada.<br><strong>Disfruta de los beneficios: Tres meses gratis y tarifas especiales.</strong>"
-      call_to_action: Regístrate e Inicia tu Consulta Gratuita
+      eyebrow: No dejes pasar esta oportunidad de optimizar tu negocio
+      title: <span class="dark-lavender-text">Regístrate ahora</span>  y sé uno de los primeros en acceder a una plataforma que transformará la <span class="underlined-element">manera en que manejas las finanzas de tu negocio.</span>
+      paragraph_one: ¡Descubre la <span class="dark-lavender-text">solución</span> que estamos creando para ti!
+      paragraph_two: <strong>Regístrate</strong> en la waiting list y comienza a transformar tu negocio hoy.
+      link: 
+      call_to_action: ¡Únete Hoy y Asegura Tu Lugar en la Waiting List!
+      socials:
+        - title: Telegram
+          svg: ../img/telegram.svg 
+          link: https://t.me/+573107887042
+        - title: Whatsapp
+          svg: ../img/whatsapp.svg
+          link: https://api.whatsapp.com/send?phone=573107887042
+      socials_text: Respondemos tus inquietudes <span class="dark-lavender-text">en tiempo real.</span>
