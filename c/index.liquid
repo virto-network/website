@@ -144,6 +144,12 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 
 
 <script>
+let url = new URL(window.location.href);
+
+url.searchParams.set('b', 'b-three');
+
+window.history.pushState({}, '', url);
+
 window.document.onload = () => { window.amplitude.track(`view:landing:b`); }
 
 let cta = document.querySelectorAll(".track-cta");
