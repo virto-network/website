@@ -3,9 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="sa-verify" content="fvirtonetwowv0n">
-
-	<meta name="description" content="{{ site.description }}">
+	{% if site.description %}
+		<meta name="description" content="{{ site.description }}">
+	  {% else %}
+		<meta name="description" content="Descripción por defecto">
+	{% endif %}
 	<title>{{ page.title }}</title>
 
 	<!-- change color -->
@@ -61,9 +63,6 @@
 </head>
 
 <body class="hidden">
-
-	<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-	<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8MP4KWQ"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

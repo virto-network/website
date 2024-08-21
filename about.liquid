@@ -137,8 +137,14 @@ section >  article {
 
 </style>
 <body>
-	{% for about in site.data[site.data.lang].about_us %}
+{% if site.data.lang %}
+  {% assign about = site.data[site.data.lang].about_us %}
+{% else %}
+  {% assign about = site.data.en.about_us %}
+{% endif %}
 
+{% if about %}
+  {% for about in about %}
 	<section {% if about.id == "hero" %} id="hero" class="left dark-olive-text">
 		<article class="animated">
 			<h1 class="maxwidth--text_desktop">{{ about.title }}</h1>
@@ -223,4 +229,7 @@ section >  article {
 {% endif %}
 
 {% endfor %}
+{% else %}
+<h3>Not found</h3>
+{% endif %}
 </body>
