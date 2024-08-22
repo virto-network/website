@@ -4,7 +4,7 @@ description: |
 #Landing-a
 landing_a:
     - id: section-a
-      eyebrow: <strong>No más caos en tu contabilidad.</strong>
+      eyebrow: No más caos en tu contabilidad.
       title: ¿Tus <span class="dark-lavender-text">Finanzas de Negocio</span> se Mezclan con las Personales?
       paragraph_one: Imagina tener todos tus ingresos organizados y claros, sin necesidad de herramientas costosas o complicadas.
       paragraph_two: Hemos diseñado una solución accesible especialmente para <strong>pequeños y medianos comercios</strong>, que  simplifica la gestión financiera. 
@@ -27,10 +27,10 @@ landing_a:
       call_to_action: ¡Únete Hoy y Asegura Tu Lugar en la Waiting List!
       socials:
         - title: Telegram
-          svg: ../img/telegram.svg 
+          svg: telegram.svg
           link: https://t.me/+573107887042
         - title: Whatsapp
-          svg: ../img/whatsapp.svg
+          svg: whatsapp.svg
           link: https://api.whatsapp.com/send?phone=573107887042
       socials_text: Respondemos tus inquietudes <span class="dark-lavender-text">en tiempo real.</span>
 
@@ -75,10 +75,10 @@ landing_b:
       call_to_action: ¡Únete Hoy y Asegura Tu Lugar en la Waiting List!
       socials:
         - title: Telegram
-          svg: ../img/telegram.svg 
+          svg: telegram.svg 
           link: https://t.me/+573107887042
         - title: Whatsapp
-          svg: ../img/whatsapp.svg
+          svg: whatsapp.svg
           link: https://api.whatsapp.com/send?phone=573107887042
       socials_text: Respondemos tus inquietudes <span class="dark-lavender-text">en tiempo real.</span>
 
@@ -117,9 +117,9 @@ landing_c:
       call_to_action: ¡Únete Hoy y Asegura Tu Lugar en la Waiting List!
       socials:
         - title: Telegram
-          svg: ../img/telegram.svg 
+          svg: telegram.svg 
           link: https://t.me/+573107887042
         - title: Whatsapp
-          svg: ../img/whatsapp.svg
+          svg: whatsapp.svg
           link: https://api.whatsapp.com/send?phone=573107887042
       socials_text: Respondemos tus inquietudes <span class="dark-lavender-text">en tiempo real.</span>
