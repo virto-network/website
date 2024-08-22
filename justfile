@@ -16,10 +16,10 @@ serve-main:
     cobalt serve --config _cobalt_{{ lang }}.yml
 
 build-landings: clean-landings
-    cobalt build --config _cobalt_landings.yml
+    cobalt build --config _cobalt.yml
 
 clean-landings:
-    cobalt clean --config _cobalt_landings.yml
+    cobalt clean --config _cobalt.yml
 
 serve-landings:
-    cobalt serve --config _cobalt_landings.yml
+    cobalt serve --config _cobalt.yml
