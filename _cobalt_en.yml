@@ -6,12 +6,10 @@ site:
     lang: en
     calendly: https://calendly.com/katherinelopezvirto/45min
     apply: https://apply.virto.network/
-pages:
-  default:
-    layout: landing.liquid
 ignore:
   - README.md
   - cobalt*
+  - landings
 posts:
   dir: blog
   rss: rss.xml

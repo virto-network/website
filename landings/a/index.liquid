@@ -1,9 +1,9 @@
 ---
-permalink: /home/
+permalink: /b-1
 title: Virto Network
 layout: landing.liquid
 data:
-  route: home
+  route: business-one
 ---
 
 <style>
@@ -58,10 +58,11 @@ ul li, .auto-grid li { display: flex; align-items: center; }
 <section {% if landing_a.id == "section-a" %} id="section-a" class="light-green-bg">
 	<article class="max animated">
 		<div class="text-section dark-olive-text">
-			<p>¡Bienvenido a Virto!</p>
+			<p class="bolder">{{ landing_a.eyebrow }}</p>
 			<h1>{{ landing_a.title }}</h1>
-			<p>{{ landing_a.paragraph }}</p>
-			<button><a class="track-cta">{{ landing_a.call_to_action }}</a></button>
+			<p>{{ landing_a.paragraph_one }}</p>
+			<p>{{ landing_a.paragraph_two }}</p>
+			<a class="track-cta button" href="https://waitlist.virto.network/">{{ landing_a.call_to_action }}</a>
 		</div>
 		<figure class="arrow-right">
 				{% include "arrow_right.svg" %}
@@ -83,19 +84,8 @@ ul li, .auto-grid li { display: flex; align-items: center; }
 		</div>
 		<div class="text-section light-green-text">
 			<h3>{{ landing_a.subtitle }}</h3>
-			<ul class="auto-grid">
-		    {% for item in landing_a.list %}
-				<li class="animated">
-                    <img src="{{ item.icon }}" alt="{{ item.alt }}" ></img>
-					<p>{{ item.content }}</p>
-				</li>
-            {% endfor %}
-            </ul>
-			<a class="track-cta bold light-lavender-text center-arrow">{{ landing_a.call_to_action }}
-				<figure class="link-arrow light-lavender-text">
-					{% include "see_more.svg" %}
-				</figure>
-			</a>
+			<p>{{ landing_a.paragraph_one }}</p>
+			<p>{{ landing_a.paragraph_two }}</p>
 		</div>
 	</article>
 </section>
@@ -104,21 +94,8 @@ ul li, .auto-grid li { display: flex; align-items: center; }
 <section  {% if landing_a.id == "section-c" %} id="section-c">
 	<article class="max animated">
 		<div class="text-section light-green-text">
-			<h3 class="light-lavender-text">{{ landing_a.subtitle }}</h3>
-            <p>{{ landing_a.paragraph }}</p>
-			<ul>
-                {% for item in landing_a.list %}
-                    <li class="animated">
-                        <img src="{{ item.icon }}" alt="{{ item.alt }}"></img>
-                        <p>{{ item.content }}</p>
-                    </li>
-                {% endfor %}
-            </ul>
-			<a class="track-cta bold light-lavender-text center-arrow">{{ landing_a.call_to_action }}
-				<figure class="link-arrow light-lavender-text">
-					{% include "see_more.svg" %}
-				</figure>
-			</a>
+            <p>{{ landing_a.paragraph_one }}</p>
+            <p>{{ landing_a.paragraph_two }}</p>
 		</div>
 
         <div class="column">
@@ -131,21 +108,23 @@ ul li, .auto-grid li { display: flex; align-items: center; }
 </section>
 {% endif %}
 
-<section {% if landing_a.id == "section-d" %} id="section-d" class="whitest-bg">
-	<article class="max animated">
-		<div class="text-section">
-			<h2 class="dark-olive-text">{{ landing_a.title }}</h2>
-			<figure class="logo build-machine">
-				<img id="build_machine" src="/img/build_machine.svg" alt="Construir comunidad"/>
-			</figure>
-		</div>
-		<div class="text-section">
-			<h3 class="dark-olive-text">¡Aprovecha esta oportunidad única!</h3>
-			<p class="dark-olive-text">{{ landing_a.paragraph }}</p>
-			<a class="track-cta dark-olive-text center-arrow">{{ landing_a.call_to_action }}
-			<figure class="link-arrow">{% include "see_more.svg" %}</figure>
+<section {% if landing_a.id == "section-d" %} id="section-d" class="cta light-lavender-bg">
+	<article class="animated center dark-olive-text">
+		<h3 class="bolder">{{ landing_a.eyebrow }}</h3>
+		<h2 class="bolder">
+			<span>{{ landing_a.title }}</span>
+		</h2>
+		<h3 class="bolder">{{ landing_a.paragraph_one  }}</h3>
+		<h3>{{ landing_a.paragraph_two  }}</h3>
+		<a class="button" href={{ landing_a.link }} >{{ landing_a.call_to_action }}</a>
+		<ul class="social-media__links">
+		{% for social in landing_a.socials %}
+			<a class="link-to" title={{ social.title }} href={{ social.link }}>
+				{% include social.svg %}
 			</a>
-		</div>
+		{% endfor %}
+		</ul>
+		<p>{{ landing_a.socials_text }}</p>
 	</article>
 </section>
 {% endif %}
@@ -154,6 +133,12 @@ ul li, .auto-grid li { display: flex; align-items: center; }
 
 
 <script>
+	let url = new URL(window.location.href);
+
+	url.searchParams.set('b', 'b-one');
+
+	window.history.pushState({}, '', url);
+
 	window.document.onload = () => { window.amplitude.track(`view:landing:a`); }
 
 	let cta = document.querySelectorAll(".track-cta");

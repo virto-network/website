@@ -1,11 +1,19 @@
 ---
+permalink: /
 title: Virto Network
 layout: index.liquid
 data:
   route: /
 ---
 
-{% for home_section in site.data[site.data.lang].home_sections %}
+{% if site.data.lang %}
+	{% assign home_sections = site.data[site.data.lang].home_sections %}
+  {% else %}
+	{% assign home_sections = site.data.en.home_sections %}
+  {% endif %}
+  
+{% if home_sections %}
+{% for home_section in home_sections %}
 <section {% if home_section.id == "home" %} id="home">
 	<article class="max animated">
 		<div class="text-section lightest-lavender-text">
@@ -163,6 +171,7 @@ data:
 </section>
 {% endif %}
 {% endfor %}
+{% endif %}
 
 <script>
 const $ = document.querySelector.bind(document),

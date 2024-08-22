@@ -1,0 +1,15 @@
+destination: ./_site/landings
+site:
+  description: Lleva tu negocio más allá
+  base_url: https://virto.network
+  data:
+    lang: es
+    calendly: https://calendly.com/katherinelopezvirto/45min
+    apply: https://apply.virto.network/
+pages:
+  default:
+    layout: landing.liquid
+ignore:
+  - README.md
+  - cobalt*
+
