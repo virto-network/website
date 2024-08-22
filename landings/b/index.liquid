@@ -1,5 +1,5 @@
 ---
-permalink: /business-two
+permalink: /b-2
 title: Virto Network
 layout: landing.liquid
 data:
@@ -57,11 +57,10 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 <section {% if landing_b.id == "section-a" %} id="section-a" class="light-green-bg">
 	<article class="max animated">
 		<div class="text-section dark-olive-text">
-			<p>{{ landing_b.eyebrow}}</p>
+			<p class="bolder">{{ landing_b.eyebrow}}</p>
 			<h1>{{ landing_b.title }}</h1>
-			<p>{{ landing_b.question }}</p>
 			<p>{{ landing_b.paragraph }}</p>
-			<button><a class="track-cta" href="https://waitlist.virto.network/">{{ landing_b.call_to_action }}</a></button>
+			<a class="track-cta button" href="https://waitlist.virto.network/">{{ landing_b.call_to_action }}</a>
 		</div>
 		<figure class="arrow-right">
 				{% include "arrow_right.svg" %}
@@ -127,7 +126,7 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 		<h3 class="bolder">{{ landing_b.paragraph_one  }}</h3>
 		<h3>{{ landing_b.paragraph_two  }}</h3>
 		<a class="button" href={{ landing_b.link }} >{{ landing_b.call_to_action }}</a>
-		<ul>
+		<ul class="social-media__links">
 		{% for social in landing_b.socials %}
 			<a class="link-to" title={{ social.title }} href={{ social.link }}>
 				{% include social.svg %}

@@ -276,3 +276,11 @@ figure.logo svg {
 .link-to:hover {
     transform: scale(1.2);
 }
+
+
+/*Landings*/
+
+.social-media__links {
+    display: flex;
+    gap: 2em;
+}
