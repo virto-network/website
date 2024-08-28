@@ -133,24 +133,25 @@ ul li, .auto-grid li { display: flex; align-items: center; }
 
 
 <script>
-	let url = new URL(window.location.href);
 
-	url.searchParams.set('b', 'b-one');
+let url = new URL(window.location.href);
 
-	window.history.pushState({}, '', url);
+url.searchParams.set('b', 'b-one');
 
-	window.document.onload = () => { window.amplitude.track(`view:landing:a`); }
+window.history.pushState({}, '', url);
 
-	let cta = document.querySelectorAll(".track-cta");
-		cta.forEach((c) => {
-			c.addEventListener('click', () => {
-			let newWindow = window.open();
-			let searchParams = new URL(window.location.href);
-			window.amplitude.track(`landing:a:click-apply`);
-			let url = `https://apply.virto.network${searchParams.search}`;
-			newWindow.location = url;
-		})
-	});
+window.document.onload = () => { window.amplitude.track(`view:landing:a`); }
+
+let cta = document.querySelectorAll(".track-cta");
+cta.forEach((c) => {
+  	c.addEventListener('click', () => {
+		let newWindow = window.open();
+		let searchParams = new URL(window.location.href).searchParams;
+		window.amplitude.track(`landing:a:click-apply`);
+		let url = `https://waitlist.virto.network/?b=${searchParams.get('b')}`;
+		newWindow.location = url;
+	})
+});
 
 const $ = document.querySelector.bind(document),
 	$$ = document.querySelectorAll.bind(document);
