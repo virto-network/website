@@ -132,16 +132,18 @@ ul li, .auto-grid li { display: flex; align-items: center; }
 {% endfor %}
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+window.document.onload = () => {
     let url = new URL(window.location.href);
     url.searchParams.set('b', 'b-one');
     window.history.pushState({}, '', url);
+    
+    window.amplitude.track(`view:landing:a`);
 
     let cta = document.querySelectorAll(".track-cta");
     cta.forEach((c) => {
-        c.addEventListener('click', (event) => {
-            event.preventDefault();
+        c.addEventListener('click', () => {
             let searchParams = new URL(window.location.href).searchParams;
+            window.amplitude.track(`landing:a:click-apply`);
             let url = `https://waitlist.virto.network/?b=${searchParams.get('b')}`;
             window.location.href = url;
         });
@@ -149,21 +151,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const $ = document.querySelector.bind(document);
     const $$ = document.querySelectorAll.bind(document);
-    
     const addViewedClass = ([e], ob) => {
         e.target.classList.add('viewed');
         ob.unobserve(e.target);
     };
-    
     const whenVisible = (elements, fn, opts) => {
         const ob = new IntersectionObserver(fn, opts);
         $$(elements).forEach(e => ob.observe(e));
     };
-    
     const makeSticky = ([br]) =>
         br.target.nextElementSibling.classList.toggle('fixed', br.intersectionRatio === 1);
 
     whenVisible('main>section', addViewedClass, { threshold: 0.2 });
     whenVisible('.sticky-hack', makeSticky, { threshold: [0, 1] });
-});
+};
 </script>
