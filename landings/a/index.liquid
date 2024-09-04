@@ -158,22 +158,25 @@ window.document.onload = () => {
     cta.forEach((c) => {
         c.addEventListener('click', () => {
             let searchParams = new URL(window.location.href).searchParams;
+			let w = window.open('_blank');
+        	w.location = url;
             window.amplitude.track(`landing:a:click-apply`);
             let url = `https://waitlist.virto.network/?b=${searchParams.get('b')}`;
-            window.location.href = url;
         });
     });
 
 	let telegram = document.getElementById("telegram");
     telegram.addEventListener('click', () => {
+		let w = window.open('_blank');
+        w.location = url;
         window.amplitude.track('landing:a:click-telegram');
-        window.location.href = url;
     });
 
     let whatsapp = document.getElementById("whatsapp");
     whatsapp.addEventListener('click', () => {
+		let w = window.open('_blank');
+        w.location = url;
         window.amplitude.track('landing:a:click-whatsapp');
-        window.location.href = url;
     });
 
     const $ = document.querySelector.bind(document);
