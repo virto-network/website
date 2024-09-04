@@ -1,30 +1,49 @@
 description: |
   Impactful marketplace infrastructure for
 
-#Landing-a
 landing_a:
     - id: section-a
-      eyebrow: No más caos en tu contabilidad.
-      title: ¿Tus <span class="dark-lavender-text">Finanzas de Negocio</span> se Mezclan con las Personales?
-      paragraph_one: Imagina tener todos tus ingresos organizados y claros, sin necesidad de herramientas costosas o complicadas.
-      paragraph_two: Hemos diseñado una solución accesible especialmente para <strong>pequeños y medianos comercios</strong>, que  simplifica la gestión financiera. 
-      call_to_action: ¡Únete Hoy y Asegura Tu Lugar en la Waiting List!
+      eyebrow: Olvidate del desorden financiero para siempre.
+      title: ¡Organiza las finanzas de tu negocio <span class="dark-lavender-text">de manera simple y eficiente!</span> 
+      paragraph_one: Con nuestra herramienta, mantén las finanzas de tu negocio separadas de las personales. Obtén una <span class="dark-lavender-text bolder">contabilidad clara y organizada sin necesidad de sistemas costosos o complicados.</span> Todo 100% online y accesible desde tu computadora.
+      paragraph_two: <span class="dark-lavender-text bolder">Simplifica la gestión financiera de tu negocio con Virto</span> y enfócate en su crecimiento, controlando los ingresos en un solo lugar.
+      call_to_action: ¡Únete hoy a la comunidad exclusiva!
     - id: section-b
-      title: Controla Tus Finanzas y Toma <span class="light-lavender-text">Decisiones Informadas</span>
-      subtitle: Virto facilita tus pagos
-      paragraph_one: Y centraliza todos tus ingresos en un único lugar, manteniendo un registro claro de todas las transacciones con <strong>reportes automatizados.</strong> 
-      paragraph_two: Mantén un control preciso de tus finanzas y disfruta de los recursos que te permiten <strong>tomar decisiones clave</strong> de manera rápida y colaborativa.
+      title: El <span class="light-lavender-text">desafío en tu negocio</span>
+      subtitle: <span class="light-lavender-text boldest">Muchos comercios optan por recibir pagos en sus cuentas personales</span> debido al alto costo y la complejidad de los productos financieros para negocios. ¿Es tu caso?
+      list_subtitle: Aunque puede parecer la solución más rápida, <span class="light-lavender-text boldest">esto puede generar un desorden financiero.</span>
+      list:
+          - content: <strong>Difícil seguimiento</strong> de ingresos.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: Toma de <strong>decisiones basadas en datos incompletos.</strong>
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: Confusión con los pagos.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: <strong>Limitantes para acceder</strong> a otros productos financieros.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
     - id: section-c
-      title: Haz Crecer Tu Negocio <br><span class="light-lavender-text">con Tranquilidad y Eficiencia</span>
-      paragraph_one: Nuestra solución es sencilla, accesible y pensada para ti, que buscas <strong>tranquilidad y eficiencia</strong> en la gestión de tu negocio. 
-      paragraph_two: Asegura un crecimiento sostenible y estratégico con herramientas que respaldan cada decisión.
+      title: Virto <span class="light-lavender-text">la solución <br>que tu negocio necesita</span>
+      subtitle: <span class="light-lavender-text boldest">Nuestra plataforma te da la solución</span>, ayudándote a mantener el control financiero y tomar decisiones infromadas, sin complicaciones ni altos costos.
+      list:
+          - content: <span class="light-lavender-text bolder">Centralización de pagos</span> en una única plataforma.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: Toma las <span class="light-lavender-text bolder">decisiones basadas en datos.</span>
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: Abre una <span class="light-lavender-text bolder">cuenta exclusiva para tu negocio.</span>
+            icon: ../img/lavender_cube.svg
+            alt: cubo
     - id: section-d
-      eyebrow: No te quedes fuera de esta oportunidad
-      title: Regístrate ahora y <span class="dark-lavender-text">sé uno de los primeros comercios</span> en acceder a una plataforma que transformará tu <span class="underlined-element">manera de gestionar las finanzas.</span>
+      eyebrow: No te quedes fuera de esta oportunidad.
+      title: Sé uno de los primeros comercios en acceder a una plataforma que <span class="dark-lavender-text">transformará tu <span class="underlined-element">manera de gestionar las finanzas.</span></span>
       paragraph_one: ¡Descubre la <span class="dark-lavender-text">solución</span> que estamos creando para ti!
-      paragraph_two: <strong>Regístrate</strong> en la waiting list y comienza a transformar tu negocio hoy.
       link: https://waitlist.virto.network/
-      call_to_action: ¡Únete Hoy y Asegura Tu Lugar en la Waiting List!
+      call_to_action: Regístrarme, quiero transformar mi negocio hoy
       socials:
         - title: Telegram
           svg: telegram.svg
@@ -33,46 +52,46 @@ landing_a:
           svg: whatsapp.svg
           link: https://api.whatsapp.com/send?phone=573107887042
       socials_text: Respondemos tus inquietudes <span class="dark-lavender-text">en tiempo real.</span>
-
 #Landing-b
 landing_b:
     - id: section-a
-      eyebrow: No más retrasos ni inconformidades.
-      title:  ¿Tus Socios <span class="dark-lavender-text">No Participan Activamente en las Decisiones de la Empresa?</span>
-      paragraph: Asegura que cada miembro de tu equipo participe activamente en la toma de decisiones, logrando un <strong>consenso rápido y efectivo.</strong>
-      call_to_action: Únete a nuestra comunidad y asegura tu lugar en la waiting list.
+      eyebrow: ¡Gestiona los fondos en equipo!
+      title:  Toma decisiones financieras junto a tus socios<span class="dark-lavender-text"> con transparencia y manteniendo control.</span>
+      paragraph: En Virto encuentras un sistema diseñado para <span class="dark-lavender-text bolder">facilitar la participación activa y transparente</span> en la toma de decisiones financieras de tu negocio.
+      call_to_action: ¡Únete hoy a la comunidad exclusiva!
     - id: section-b
-      title: Facilita la <span class="light-lavender-text">Participación Activa en Cada Decisión</span>
+      title: La dificultad de gestionar <span class="light-lavender-text">fondos en conjunto</span>
+      subtitle: <span  class="light-lavender-text boldest">Tomar decisiones financieras puede ser un desafío</span>, más aún cuando varias personas están involucradas en la gestión de fondos.
+      paragraph_one: "La falta de herramientas y sistemas claros puede llevarte a:"
       list:
-          - content: La toma de decisiones rápidas es viable mediante un <strong>sistema de votación</strong> diseñado para que cada miembro del equipo participe activamente. 
+          - content: <strong>Confusión</strong> sobre el uso de los fondos.
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content:  Además, Virto te permite llevar un <strong>registro claro y detallado</strong> de todas las decisiones, accesible para todos los socios. 
+          - content: <strong>Desacuerdos</strong> entre socios.
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content: <strong>Monitorea el estado de cada decisión</strong> en tiempo real y asegúrate de que todos estén alineados, mejorando la colaboración y la transparencia en la gestión.
+          - content: Decisiones financieras <strong>poco estratégicas.</strong>
             icon: ../img/lavender_cube.svg
             alt: cubo
     - id: section-c
-      title: Agiliza la Toma de Decisiones y <br><span class="light-lavender-text">Fortalece la Unidad del Equipo</span>
-      subtitle: 'Al utilizar Virto, lograrás:' 
+      title: Virto la plataforma para <br><span class="light-lavender-text">gestionar fondos de forma colaborativa</span>
+      subtitle: Nuestra plataforma permite a los socios <span class="light-lavender-text boldest">tomar decisiones financieras claras, organizadas y transparentes.</span>
       list:
-          - content: Procesos de decisión más ágiles, <strong>ahorrando tiempo y evitando conflictos.</strong>
+          - content: <span class="light-lavender-text bolder">Optimización de los recursos</span> del negocio.
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content:  <strong>Mayor compromiso en tu equipo</strong>, al asegurar que cada voz sea escuchada y valorada. 
+          - content:  Decisiones financieras <span class="light-lavender-text bolder">transparentes y colaborativas.</span>
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content: <strong>Mejorarás la transparencia</strong> en todas las operaciones, lo que fortalecerá la confianza y colaboración entre los socios.
+          - content: Control sobre <span class="light-lavender-text bolder">cuándo y cómo gastar.</span>
             icon: ../img/lavender_cube.svg
             alt: cubo
     - id: section-d
-      eyebrow: No te quedes fuera de esta innovación
-      title: <span class="dark-lavender-text">Regístrate ahora</span> y sé uno de los primeros comercios en acceder a una plataforma que transformará la <span class="underlined-element">manera manera en que tomas y gestionas decisiones.</span>
+      eyebrow: ¡Empieza a gestionar los fondos de forma colaborativa!
+      title: <span class="dark-lavender-text">Conviértete en un pionero</span> al acceder a una plataforma que transformará la manera en que<span class="underlined-element"> tomas y gestionas decisiones financieras.</span>
       paragraph_one: ¡Descubre la <span class="dark-lavender-text">solución</span> que estamos creando para ti!
-      paragraph_two: <strong>Regístrate</strong> en la waiting list y comienza a transformar tu negocio hoy.
       link: https://waitlist.virto.network/
-      call_to_action: ¡Únete Hoy y Asegura Tu Lugar en la Waiting List!
+      call_to_action: Regístrarme, quiero ser pionero
       socials:
         - title: Telegram
           svg: telegram.svg 
@@ -85,36 +104,42 @@ landing_b:
 #Landing-c
 landing_c:
     - id: section-a
-      eyebrow: Di adiós a las hojas de cálculo y a las herramientas obsoletas.
-      title: ¿Cansado de los <span class="dark-lavender-text">Errores y la Confusión</span> en Tus Finanzas?
-      paragraph_one: La falta de control y organización en la administración puede ser cara.
-      paragraph_two: <strong>Evita errores que afectan el crecimiento de tu negocio</strong> con una solución diseñada para mantener tus finanzas en orden y libres de complicaciones.
-      call_to_action: Únete a nuestra comunidad y asegura tu lugar en la waiting list.
+      eyebrow: Optimiza el control financiero de tu negocio.
+      title: Una solución única para <span class="dark-lavender-text">optimizar el control de tu tesorería</span> 
+      paragraph_one: <span class="dark-lavender-text bolder">Olvídate de las hojas de cálculo y de las herramientas obsoletas</span>, lleva un control financiero evita que se te pierda un centavo.
+      call_to_action: ¡Únete hoy a la comunidad exclusiva que quiere mejorar la tesorería de los negocios!
     - id: section-b
-      title: Simplifica la Gestión Financiera y <span class="light-lavender-text">Facilita Tus Pagos.</span>
-      subtitle: Virto es una plataforma de gestión financiera
-      paragraph_one: Virto te <strong>facilita realizar pagos y asegura el registro claro y preciso de todas tus transacciones.</strong>
-      paragraph_two: Mantén la organización y el control de tus finanzas de manera sencilla y eficaz.
-    - id: section-c
-      title: Optimiza tu Tesorería y <br><span class="light-lavender-text">Mejora la Eficiencia de tu Negocio</span>
-      subtitle: 'Al utilizar Virto, lograrás:'
+      title: El desafío de tener una <span class="light-lavender-text">herramienta para el control financiero</span>
+      subtitle: <span class="light-lavender-text boldest">Muchos comercios dependen de hojas de cálculo</span> para gestionar su tesorería de manera diaria o semanal.
+      paragraph_one: Aunque es una solución muy conveniente puede resultar en algunos problemas.
       list:
-          - content: '<strong>Eficiencia organizativa:</strong> Mantén tus finanzas en orden, evitando errores que puedan costarte tiempo y dinero.'
+          - content: <strong>Riesgo de errores</strong> en el registro de datos.
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content:  '<strong>Control financiero:</strong> Centraliza todas tus transacciones en una plataforma intuitiva y precisa.'
+          - content: <strong>Desorganización y pérdida de información.</strong>
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content: '<strong>Confianza y tranquilidad:</strong> Sabes que cada movimiento financiero está registrado y controlado, asegurando una gestión transparente y sin complicaciones.'
+          - content: <strong>Dificultad para mantener control</strong> riguroso y actualizado.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+    - id: section-c
+      title: Una mejora en la  <br><span class="light-lavender-text">gestión de tu tesorería</span>
+      subtitle:  <span class="light-lavender-text boldest">Virto ha creado una solución para un control financiero preciso y organizado</span>, reemplazamos las hojas de cálculo por un sistema que facilita el seguimiento de la tesorería de tu negocio cuando quieras. 
+      list:
+          - content: <span class="light-lavender-text bolder">Elimina los errores</span> al usar una hoja de cálculo.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content:  <span class="light-lavender-text bolder">Organiza la información financiera.</span>
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: Toma de decisiones <span class="light-lavender-text bolder">de acuerdo a la información registrada.</span>
             icon: ../img/lavender_cube.svg
             alt: cubo
     - id: section-d
-      eyebrow: No dejes pasar esta oportunidad de optimizar tu negocio
-      title: <span class="dark-lavender-text">Regístrate ahora</span>  y sé uno de los primeros en acceder a una plataforma que transformará la <span class="underlined-element">manera en que manejas las finanzas de tu negocio.</span>
-      paragraph_one: ¡Descubre la <span class="dark-lavender-text">solución</span> que estamos creando para ti!
-      paragraph_two: <strong>Regístrate</strong> en la waiting list y comienza a transformar tu negocio hoy.
+      eyebrow: No dejes pasar esta oportunidad de optimizar tu negocio.
+      title: <span class="dark-lavender-text">¡Transforma la manera en que manejas las finanzas de tu negocio </span><span class="underlined-element">usando nuestra plataforma!</span>
       link: https://waitlist.virto.network/
-      call_to_action: ¡Únete Hoy y Asegura Tu Lugar en la Waiting List!
+      call_to_action: Regístrate y comienza a transformar tu negocio hoy.
       socials:
         - title: Telegram
           svg: telegram.svg 
