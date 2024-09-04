@@ -129,7 +129,7 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 		<a class="button" href={{ landing_b.link }} >{{ landing_b.call_to_action }}</a>
 		<ul class="social-media__links">
 		{% for social in landing_b.socials %}
-			<a class="link-to" title={{ social.title }} href={{ social.link }}>
+			<a id={{ social.id }} class="link-to" title={{ social.title }} href={{ social.link }}>
 				{% include social.svg %}
 			</a>
 		{% endfor %}
@@ -158,6 +158,19 @@ window.document.onload = () => {
             window.location.href = url;
         });
     });
+
+	let telegram = document.getElementById("telegram");
+    telegram.addEventListener('click', () => {
+        window.amplitude.track('landing:b:click-telegram');
+        window.location.href = url;
+    });
+
+    let whatsapp = document.getElementById("whatsapp");
+    whatsapp.addEventListener('click', () => {
+        window.amplitude.track('landing:b:click-whatsapp');
+        window.location.href = url;
+    });
+
 
     const $ = document.querySelector.bind(document);
     const $$ = document.querySelectorAll.bind(document);

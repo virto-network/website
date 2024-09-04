@@ -127,7 +127,7 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 		</a>
 		<ul class="social-media__links">
 		{% for social in landing_c.socials %}
-			<a class="link-to" title={{ social.title }} href={{ social.link }}>
+			<a id={{ social.id }} class="link-to" title={{ social.title }} href={{ social.link }}>
 				{% include social.svg %}
 			</a>
 		{% endfor %}
@@ -155,6 +155,18 @@ window.document.onload = () => {
             let url = `https://waitlist.virto.network/?b=${searchParams.get('b')}`;
             window.location.href = url;
         });
+    });
+
+	let telegram = document.getElementById("telegram");
+    telegram.addEventListener('click', () => {
+        window.amplitude.track('landing:c:click-telegram');
+        window.location.href = url;
+    });
+
+    let whatsapp = document.getElementById("whatsapp");
+    whatsapp.addEventListener('click', () => {
+        window.amplitude.track('landing:c:click-whatsapp');
+        window.location.href = url;
     });
 
     const $ = document.querySelector.bind(document);

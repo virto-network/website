@@ -48,9 +48,11 @@ landing_a:
         - title: Telegram
           svg: telegram.svg
           link: https://t.me/+573107887042
+          id: telegram
         - title: Whatsapp
           svg: whatsapp.svg
           link: https://api.whatsapp.com/send?phone=573107887042
+          id: whatsapp
       socials_text: Respondemos tus inquietudes <span class="dark-lavender-text">en tiempo real.</span>
 #Landing-b
 landing_b:
@@ -96,9 +98,11 @@ landing_b:
         - title: Telegram
           svg: telegram.svg 
           link: https://t.me/+573107887042
+          id: telegram
         - title: Whatsapp
           svg: whatsapp.svg
           link: https://api.whatsapp.com/send?phone=573107887042
+          id: whatsapp
       socials_text: Respondemos tus inquietudes <span class="dark-lavender-text">en tiempo real.</span>
 
 #Landing-c
@@ -144,7 +148,9 @@ landing_c:
         - title: Telegram
           svg: telegram.svg 
           link: https://t.me/+573107887042
+          id: telegram
         - title: Whatsapp
           svg: whatsapp.svg
           link: https://api.whatsapp.com/send?phone=573107887042
+          id: whatsapp
       socials_text: Respondemos tus inquietudes <span class="dark-lavender-text">en tiempo real.</span>
