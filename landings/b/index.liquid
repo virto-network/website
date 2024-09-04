@@ -7,11 +7,9 @@ data:
 ---
 
 <style>
-img:not(#build_machine) {
-     width: 20px !important;
-     display: inline-block; 
-     vertical-align: middle;
-}
+
+p { --font-size-paragraph: 1.3em; }
+
 .logo.img-c svg { width: 700px; }
 
 ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
@@ -27,8 +25,11 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 
 #section-b h2 { max-width: 700px; margin-left: 20px; }
 #section-b .logo { margin-top: 2em; margin-left: 20px; }
-#section-b .text-section { gap: 5em; }
+/* #section-b .text-section { gap: 5em; } */
 
+#section-b ul li {
+    margin-bottom: 1em;
+}
 #section-c, #section-b {  align-items: center; flex-wrap: wrap; }
 #section-c { padding: 0 1rem; }
 #section-c .logo { margin-top: 2em; }
@@ -51,6 +52,8 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
     .column { order: -1; width: fit-content(300px); }
 }
 
+.column { max-width: 700px; gap: 1em;}
+
 </style>
 
 {% for landing_b in site.data.landings.landing_b %}
@@ -62,11 +65,8 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 			<p>{{ landing_b.paragraph }}</p>
 			<a class="track-cta button" href="https://waitlist.virto.network/">{{ landing_b.call_to_action }}</a>
 		</div>
-		<figure class="arrow-right">
-				{% include "arrow_right.svg" %}
-		</figure>
 		<figure class="logo image">
-			{% include "a.svg" %}
+			{% include "agree.svg" %}
 		</figure>
 	</article>
 </section>
@@ -77,10 +77,12 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 		<div class="column">
 			<h2 class="light-green-text">{{ landing_b.title }}</h2>
 			<figure class="logo">
-				{% include "presentamos_virto.svg" %}
+				{% include "group_decision.svg" %}
 			</figure>
 		</div>
 		<div class="text-section light-green-text">
+			<h3>{{ landing_b.subtitle }}</h3>
+			<p>{{ landing_b.paragraph_one }}</p>
 			<ul class="auto-grid">
 		    {% for item in landing_b.list %}
 				<li class="animated">
@@ -97,7 +99,7 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 <section  {% if landing_b.id == "section-c" %} id="section-c">
 	<article class="max animated">
 		<div class="text-section light-green-text">
-			<h3 class="light-lavender-text">{{ landing_b.subtitle }}</h3>
+			<h3 class="light-green-text">{{ landing_b.subtitle }}</h3>
 			<ul>
                 {% for item in landing_b.list %}
                     <li class="animated">
@@ -110,7 +112,7 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
         <div class="column">
 			<h2 class="light-green-text">{{ landing_b.title }}</h2>
 			<figure class="logo img-c">
-				{% include "c.svg" %}
+				{% include "participation.svg" %}
 			</figure>
 		</div>
 	</article>
@@ -124,7 +126,6 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 			<span>{{ landing_b.title }}</span>
 		</h2>
 		<h3 class="bolder">{{ landing_b.paragraph_one  }}</h3>
-		<h3>{{ landing_b.paragraph_two  }}</h3>
 		<a class="button" href={{ landing_b.link }} >{{ landing_b.call_to_action }}</a>
 		<ul class="social-media__links">
 		{% for social in landing_b.socials %}
