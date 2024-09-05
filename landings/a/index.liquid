@@ -148,22 +148,20 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 2em; }
 
 <script>
 window.document.onload = () => {
-    let url = new URL(window.location.href);
-    url.searchParams.set('b', 'b-one');
-    window.history.pushState({}, '', url);
-    
-    window.amplitude.track(`view:landing:a`);
+	window.amplitude.track('view:landing:a');
 
-    let cta = document.querySelectorAll(".track-cta");
-    cta.forEach((c) => {
-        c.addEventListener('click', () => {
-            let searchParams = new URL(window.location.href).searchParams;
-			let w = window.open('_blank');
-        	w.location = url;
-            window.amplitude.track(`landing:a:click-apply`);
-            url = `https://waitlist.virto.network/?b=${searchParams.get('b')}`;
-        });
-    });
+	function handleCtaClick(event) {
+		event.preventDefault();
+		let redirectUrl = new URL('https://waitlist.virto.network/');
+		redirectUrl.searchParams.set('b', 'b-one');
+		window.amplitude.track('landing:a:click-apply')
+		window.open(redirectUrl.toString(), '_blank');
+	}
+
+	let ctas = document.querySelectorAll('.track-cta');
+	ctas.forEach((cta) => {
+		cta.addEventListener('click', handleCtaClick);
+	});
 
 	let telegram = document.getElementById("telegram");
     telegram.addEventListener('click', () => {

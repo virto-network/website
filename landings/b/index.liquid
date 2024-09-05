@@ -142,22 +142,20 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 {% endfor %}
 
 <script>
-window.document.onload = () => {
-    let url = new URL(window.location.href);
-    url.searchParams.set('b', 'b-two');
-    window.history.pushState({}, '', url);
-    
-    window.amplitude.track(`view:landing:b`);
+document.addEventListener('DOMContentLoaded', function() {    
+    window.amplitude.track('view:landing:b');
 
-    let cta = document.querySelectorAll(".track-cta");
-    cta.forEach((c) => {
-        c.addEventListener('click', () => {
-            let searchParams = new URL(window.location.href).searchParams;
-			let w = window.open('_blank');
-            w.location = url;
-            window.amplitude.track(`landing:b:click-apply`);
-            url = `https://waitlist.virto.network/?b=${searchParams.get('b')}`;
-        });
+	function handleCtaClick(event) {
+        event.preventDefault();
+        let redirectUrl = new URL('https://waitlist.virto.network/');
+        redirectUrl.searchParams.set('b', 'b-two');
+        window.amplitude.track('landing:b:click-apply')
+        window.open(redirectUrl.toString(), '_blank');
+    }
+
+    let ctas = document.querySelectorAll('.track-cta');
+    ctas.forEach((cta) => {
+        cta.addEventListener('click', handleCtaClick);
     });
 
 	let telegram = document.getElementById("telegram");
@@ -190,5 +188,5 @@ window.document.onload = () => {
 
     whenVisible('main>section', addViewedClass, { threshold: 0.2 });
     whenVisible('.sticky-hack', makeSticky, { threshold: [0, 1] });
-};
+});
 </script>
