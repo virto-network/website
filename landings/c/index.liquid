@@ -154,7 +154,7 @@ window.document.onload = () => {
 			let w = window.open('_blank');
             w.location = url;
             window.amplitude.track(`landing:c:click-apply`);
-            let url = `https://waitlist.virto.network/?b=${searchParams.get('b')}`;
+            url = `https://waitlist.virto.network/?b=${searchParams.get('b')}`;
         });
     });
 
