@@ -140,7 +140,7 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 {% endfor %}
 
 <script>
-window.document.onload = () => {
+document.addEventListener('DOMContentLoaded', function() {    
 	window.amplitude.track('view:landing:c');
 
 	function handleCtaClick(event) {
@@ -185,5 +185,5 @@ window.document.onload = () => {
 
     whenVisible('main>section', addViewedClass, { threshold: 0.2 });
     whenVisible('.sticky-hack', makeSticky, { threshold: [0, 1] });
-};
+});
 </script>
