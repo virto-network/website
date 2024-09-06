@@ -127,7 +127,7 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 		</a>
 		<ul class="social-media__links">
 		{% for social in landing_c.socials %}
-			<a id={{ social.id }} class="link-to" title={{ social.title }} href={{ social.link }}>
+			<a id={{ social.id }} class="link-to" title={{ social.title }}>
 				{% include social.svg %}
 			</a>
 		{% endfor %}
@@ -157,18 +157,24 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 
 	let telegram = document.getElementById("telegram");
-    telegram.addEventListener('click', () => {
-		let w = window.open('_blank');
-        w.location = url;
-        window.amplitude.track('landing:c:click-telegram');
-    });
+	telegram.addEventListener('click', (event) => {
+		event.preventDefault();
+		let redirectUrl = new URL('https://t.me/+573107887042');
+		amplitude.track('landing:c:click-telegram')
+		.then(() => {
+			window.open(redirectUrl.toString(), '_blank');
+		});
+	});
 
-    let whatsapp = document.getElementById("whatsapp");
-    whatsapp.addEventListener('click', () => {
-		let w = window.open('_blank');
-        w.location = url;
-        window.amplitude.track('landing:c:click-whatsapp');
-    });
+	let whatsapp = document.getElementById("whatsapp");
+	whatsapp.addEventListener('click', (event) => {
+		event.preventDefault();
+		let redirectUrl = new URL('https://api.whatsapp.com/send?phone=573107887042');
+		amplitude.track('landing:c:click-whatsapp')
+		.then(() => {
+			window.open(redirectUrl.toString(), '_blank');
+		});
+	});
 
     const $ = document.querySelector.bind(document);
     const $$ = document.querySelectorAll.bind(document);
