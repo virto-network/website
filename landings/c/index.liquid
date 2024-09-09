@@ -7,6 +7,7 @@ data:
 ---
 
 <style>
+main { overflow: hidden; }
 
 p { --font-size-paragraph: 1.3em; }
 .main__logo svg {
@@ -46,6 +47,7 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 @media only screen and (max-width: 767px) {
     article div { width: 90%; }
     .text-section { max-width: 85%; }
+	.column { gap: .5em; }
 }
 @media only screen and (max-width: 1490px) {
     .column { order: -1; width: fit-content(300px); }
@@ -122,7 +124,7 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 		<h2 class="bolder">
 			<span>{{ landing_c.title }}</span>
 		</h2>
-		<a class="button" href={{ landing_c.link }}>
+		<a class="track-cta button" href={{ landing_c.link }}>
 			{{ landing_c.call_to_action }}
 		</a>
 		<ul class="social-media__links">
@@ -147,11 +149,15 @@ document.addEventListener('DOMContentLoaded', function() {
 		event.preventDefault();
 		let redirectUrl = new URL('https://waitlist.virto.network/');
 		redirectUrl.searchParams.set('b', 'b-three');
-		window.amplitude.track('landing:c:click-apply')
-		window.open(redirectUrl.toString(), '_blank');
+		if (event.currentTarget.classList.contains('track-superior-cta')) {
+        	window.amplitude.track('landing:c:click-superior-cta');
+    	} else if (event.currentTarget.classList.contains('track-inferior-cta')) {
+        	window.amplitude.track('landing:c:click-inferior-cta');
+    	}
+	window.open(redirectUrl.toString(), '_blank');
 	}
-
-	let ctas = document.querySelectorAll('.track-cta');
+	
+	let ctas = document.querySelectorAll('.button');
 	ctas.forEach((cta) => {
 		cta.addEventListener('click', handleCtaClick);
 	});
@@ -160,20 +166,22 @@ document.addEventListener('DOMContentLoaded', function() {
 	telegram.addEventListener('click', (event) => {
 		event.preventDefault();
 		let redirectUrl = new URL('https://t.me/+573107887042');
+		const newWindow = window.open('_blank');
 		amplitude.track('landing:c:click-telegram')
 		.then(() => {
-			window.open(redirectUrl.toString(), '_blank');
-		});
+			newWindow.location = redirectUrl.toString();
+		})
 	});
 
 	let whatsapp = document.getElementById("whatsapp");
 	whatsapp.addEventListener('click', (event) => {
 		event.preventDefault();
 		let redirectUrl = new URL('https://api.whatsapp.com/send?phone=573107887042');
+		const newWindow = window.open('_blank');
 		amplitude.track('landing:c:click-whatsapp')
 		.then(() => {
-			window.open(redirectUrl.toString(), '_blank');
-		});
+			newWindow.location = redirectUrl.toString();
+		})
 	});
 
     const $ = document.querySelector.bind(document);
