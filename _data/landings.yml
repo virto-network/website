@@ -7,19 +7,19 @@ landing_a:
       paragraph_one: Integra todos tus pagos, tanto <strong>locales</strong> como <strong>internacionales</strong>, en una plataforma única que ofrece trazabilidad en tiempo real y tarifas competitivas. 
       call_to_action: ¡Únete hoy a la comunidad exclusiva!
     - id: section-b
-      title: Virto La <span class="light-lavender-text">solución integral</span> para tus pagos globales
+      title: Virto, la <span class="light-lavender-text">solución integral</span> para tus pagos globales
       subtitle_one: Simplifica tus operaciones y enfócate en hacer crecer tu negocio.
       subtitle_two: Disfruta de servicios más <strong>rápidos, económicos y seguros.</strong>
     - id: section-c
       title: Haz más con menos esfuerzo
       list:
-          - content: <span class="light-lavender-text bolder">Recaudo centralizado en una sola plataforma.</span>
+          - content: Recaudo centralizado en <span class="light-lavender-text bolder">una sola plataforma.</span>
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content: <span class="light-lavender-text bolder">Control y trazabilidad de ingresos en tiempo real.</span>
+          - content: <span class="light-lavender-text bolder">Control y trazabilidad de ingresos</span> en tiempo real.
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content: <span class="light-lavender-text bolder">Comisiones bajas para pagos internacionales.</span>
+          - content: <span class="light-lavender-text bolder">Comisiones bajas</span> para pagos internacionales.
             icon: ../img/lavender_cube.svg
             alt: cubo
           - content: <span class="light-lavender-text bolder">Operaciones rápidas y seguras.</span>
