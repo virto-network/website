@@ -14,35 +14,23 @@ p { --font-size-paragraph: 1.3em; }
     width: clamp(700px, 30vw, 900px) !important;
 }
 
-.logo.img-c svg { width: 700px; }
-
-ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
-#section-c ul li { margin-bottom: 1em; }
-
 #section-a .text-section { max-width: clamp(300px, 50%, 700px); }
 #section-a figure.logo { align-items: start; }
-#section-a .arrow-right {
-	position: absolute;
-	right: clamp(37%, 2vw, 45%);
-	top: -20px;
-}
 
 #section-b h2 { max-width: 700px; margin-left: 20px; }
 #section-b .logo { margin-top: 2em; margin-left: 20px; }
 #section-b ul li { margin-bottom: 1em; }
+
 #section-c, #section-b {  align-items: center; flex-wrap: wrap; }
 #section-c { padding: 0 1rem; }
 #section-c .logo { margin-top: 2em; }
+.logo.img-c svg { width: 700px; }
+ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
+#section-c ul li { margin-bottom: 1em; }
 
-#section-d { display: grid; }
-#section-d article div { max-width: 41rem; }
-#section-d article div:nth-child(2) { margin-bottom: 1em; }
-#section-d .max .text-section {
-    gap: 2rem;
-    align-self: flex-end;
+#section-d article h2 {
+    max-width: 900px;
 }
-#section-d .max { flex-wrap: wrap; }
-
 /*MOBILE*/
 @media only screen and (max-width: 767px) {
     article div { width: 90%; }
@@ -76,7 +64,7 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 		<div class="column">
 			<h2 class="light-green-text">{{ landing_c.title }}</h2>
 			<figure class="logo">
-				{% include "danger.svg" %}
+				{% include "debit_card.svg" %}
 			</figure>
 		</div>
 		<div class="text-section light-green-text">

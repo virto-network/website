@@ -11,38 +11,24 @@ main { overflow: hidden; }
 
 p { --font-size-paragraph: 1.3em; }
 
-.logo.img-c svg { width: 700px; }
-
-ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
-#section-c ul li { margin-bottom: 1em; }
-
-#section-a .text-section { max-width: clamp(300px, 50%, 700px); }
-#section-a figure.logo { align-items: start; }
-#section-a .arrow-right {
-	position: absolute;
-	right: clamp(37%, 2vw, 45%);
-	top: -20px;
+.main__logo svg {
+    width: clamp(700px, 30vw, 900px) !important;
 }
+
+#section-a figure.logo { align-items: start; }
 
 #section-b h2 { max-width: 700px; margin-left: 20px; }
 #section-b .logo { margin-top: 2em; margin-left: 20px; }
-/* #section-b .text-section { gap: 5em; } */
+#section-b ul li { margin-bottom: 1em; }
 
-#section-b ul li {
-    margin-bottom: 1em;
-}
-#section-c, #section-b {  align-items: center; flex-wrap: wrap; }
+#section-c, #section-b { align-items: center; flex-wrap: wrap; }
 #section-c { padding: 0 1rem; }
 #section-c .logo { margin-top: 2em; }
+.logo.img-c svg { width: 700px; }
+ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
+#section-c ul li { margin-bottom: 1em; }
 
-#section-d { display: grid; }
-#section-d article div { max-width: 41rem; }
-#section-d article div:nth-child(2) { margin-bottom: 1em; }
-#section-d .max .text-section {
-    gap: 2rem;
-    align-self: flex-end;
-}
-#section-d .max { flex-wrap: wrap; }
+#section-d article h2 { max-width: 900px;}
 
 /*MOBILE*/
 @media only screen and (max-width: 767px) {
@@ -68,8 +54,8 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 			<p>{{ landing_b.paragraph }}</p>
 			<a class="track-superior-cta button" href="https://waitlist.virto.network/">{{ landing_b.call_to_action }}</a>
 		</div>
-		<figure class="logo image">
-			{% include "agree.svg" %}
+		<figure class="logo image main__logo">
+			{% include "w.svg" %}
 		</figure>
 	</article>
 </section>
@@ -80,7 +66,7 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 		<div class="column">
 			<h2 class="light-green-text">{{ landing_b.title }}</h2>
 			<figure class="logo">
-				{% include "group_decision.svg" %}
+				{% include "fast_payment.svg" %}
 			</figure>
 		</div>
 		<div class="text-section light-green-text">

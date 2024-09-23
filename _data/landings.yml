@@ -54,21 +54,21 @@ landing_b:
     - id: section-c
       title: Beneficios que harán <br><span class="light-lavender-text">crecer tu negocio</span>
       list:
-          - content: Pagos a tiempo y sin demoras para tu equipo global.<span class="light-lavender-text bolder"></span>
+          - content: <span class="light-lavender-text bolder">Pagos a tiempo y sin demoras</span> para tu equipo global.
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content:  Conversión de USD a moneda local con una tasa competitiva.<span class="light-lavender-text bolder"></span>
+          - content:  <span class="light-lavender-text bolder">Conversión de USD a moneda local</span> con una tasa competitiva.
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content: Reducción de comisiones y costos elevados en transacciones internacionales. <span class="light-lavender-text bolder"></span>
+          - content: <span class="light-lavender-text bolder">Reducción de comisiones y costos elevados</span> en transacciones internacionales. 
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content: Gestión simplificada de cuentas de colaboradores en diferentes países. <span class="light-lavender-text bolder"></span>
+          - content: <span class="light-lavender-text bolder">Gestión simplificada de cuentas de colaboradores</span> en diferentes países. 
             icon: ../img/lavender_cube.svg
             alt: cubo
     - id: section-d
       eyebrow: Descubre cómo Virto puede transformar el pago de nómina en tu empresa.
-      title: <span class="dark-lavender-text"></span> Optimiza tu gestión de nómina hoy mismo<span class="underlined-element"></span>
+      title: <span class="dark-lavender-text"> Optimiza tu gestión de nómina</span> hoy mismo<span class="underlined-element"></span>
       link: https://waitlist.virto.network/
       call_to_action:  Regístrate ahora y comienza tu consulta personalizada.
       socials:
@@ -87,7 +87,7 @@ landing_c:
     - id: section-a
       eyebrow: Supera barreras bancarias con Virto.
       title: Gestiona los fondos de tu empresa  <span class="dark-lavender-text">con facilidad y rapidez</span> 
-      paragraph_one: <span class="dark-lavender-text bolder">Accede de inmediato a los fondos de tu empresa, efectúa pagos globales sin obstáculos y lleva un registro claro de gastos a través de una plataforma segura y simple.</span>
+      paragraph_one: Accede de inmediato a los fondos de tu empresa, efectúa pagos globales sin obstáculos y lleva un registro claro de gastos <span class="dark-lavender-text bolder">a través de una plataforma segura y simple.</span>
       call_to_action: ¡Únete hoy a la comunidad exclusiva que quiere mejorar la tesorería de los negocios!
     - id: section-b
       title: Con Virto, <span class="light-lavender-text">¡tus gastos empresariales bajo control!</span>
@@ -100,7 +100,7 @@ landing_c:
             icon: ../img/lavender_cube.svg
             alt: cubo
     - id: section-c
-      title: Beneficios que <br><span class="light-lavender-text">impulsan el éxito de tu empresa</span>
+      title: Beneficios que <span class="light-lavender-text">impulsan el <br>éxito de tu empresa</span>
       list:
           - content: <span class="light-lavender-text bolder">Pagos internacionales sin barreras:</span> Realiza pagos a nivel global sin las limitaciones de los bancos tradicionales.
             icon: ../img/lavender_cube.svg
@@ -113,7 +113,7 @@ landing_c:
             alt: cubo
     - id: section-d
       title: <span class="dark-lavender-text">¡Toma el control</span> de tus finanzas <span class="underlined-element">empresariales hoy mismo</span>
-      paragraph: Descubre cómo la tarjeta débito de Virto puede facilitar y optimizar las finanzas de tu empresa.
+      paragraph: Descubre cómo la tarjeta débito de Virto puede <strong>facilitar y optimizar las finanzas de tu empresa.</strong>
       link: https://waitlist.virto.network/
       call_to_action: Regístrate ahora y comienza tu consulta personalizada.
       socials:
