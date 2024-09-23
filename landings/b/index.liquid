@@ -85,15 +85,7 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 		</div>
 		<div class="text-section light-green-text">
 			<h3>{{ landing_b.subtitle }}</h3>
-			<p>{{ landing_b.paragraph_one }}</p>
-			<ul class="auto-grid">
-		    {% for item in landing_b.list %}
-				<li class="animated">
-                    <img src="{{ item.icon }}" alt="{{ item.alt }}" ></img>
-					<p>{{ item.content }}</p>
-				</li>
-            {% endfor %}
-            </ul>
+			<h3>{{ landing_b.paragraph_one }}</h3>
 		</div>
 	</article>
 </section>
@@ -102,7 +94,6 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 <section  {% if landing_b.id == "section-c" %} id="section-c">
 	<article class="max animated">
 		<div class="text-section light-green-text">
-			<h3 class="light-green-text">{{ landing_b.subtitle }}</h3>
 			<ul>
                 {% for item in landing_b.list %}
                     <li class="animated">
@@ -128,7 +119,6 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 		<h2 class="bolder">
 			<span>{{ landing_b.title }}</span>
 		</h2>
-		<h3 class="bolder">{{ landing_b.paragraph_one  }}</h3>
 		<a class="track-inferior-cta button" href={{ landing_b.link }} >{{ landing_b.call_to_action }}</a>
 		<ul class="social-media__links">
 		{% for social in landing_b.socials %}

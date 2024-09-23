@@ -43,43 +43,34 @@ landing_a:
 #Landing-b
 landing_b:
     - id: section-a
-      eyebrow: ¡Gestiona los fondos en equipo!
-      title:  Toma decisiones financieras junto a tus socios<span class="dark-lavender-text"> con transparencia y manteniendo control.</span>
-      paragraph: En Virto encuentras un sistema diseñado para <span class="dark-lavender-text bolder">facilitar la participación activa y transparente</span> en la toma de decisiones financieras de tu negocio.
+      eyebrow: ¡Adiós a los altos costos y retrasos en los pagos globales! 
+      title: Paga a tu equipo global <span class="dark-lavender-text">de manera eficiente</span> 
+      paragraph: Con Virto, <span class="dark-lavender-text bolder"> paga la nómina local de manera rápida y sencilla desde fondos en dólares estadounidenses.</span>
       call_to_action: ¡Únete hoy a la comunidad exclusiva!
     - id: section-b
-      title: La dificultad de gestionar <span class="light-lavender-text">fondos en conjunto</span>
-      subtitle: <span  class="light-lavender-text boldest">Tomar decisiones financieras puede ser un desafío</span>, más aún cuando varias personas están involucradas en la gestión de fondos.
-      paragraph_one: "La falta de herramientas y sistemas claros puede llevarte a:"
-      list:
-          - content: <strong>Confusión</strong> sobre el uso de los fondos.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content: <strong>Desacuerdos</strong> entre socios.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content: Decisiones financieras <strong>poco estratégicas.</strong>
-            icon: ../img/lavender_cube.svg
-            alt: cubo
+      title: Procesa nominas  <span class="light-lavender-text">con facilidad y al instante</span> con Virto
+      subtitle: Emite nóminas con un clic, brindando a tu equipo su <span  class="light-lavender-text boldest">salario a tiempo y con las mejores tarifas.</span>
+      paragraph_one: Agiliza tus operaciones y brinda a tu equipo el respaldo que merecen.
     - id: section-c
-      title: Virto la plataforma para <br><span class="light-lavender-text">gestionar fondos de forma colaborativa</span>
-      subtitle: Nuestra plataforma permite a los socios <span class="light-lavender-text boldest">tomar decisiones financieras claras, organizadas y transparentes.</span>
+      title: Beneficios que harán <br><span class="light-lavender-text">crecer tu negocio</span>
       list:
-          - content: <span class="light-lavender-text bolder">Optimización de los recursos</span> del negocio.
+          - content: Pagos a tiempo y sin demoras para tu equipo global.<span class="light-lavender-text bolder"></span>
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content:  Decisiones financieras <span class="light-lavender-text bolder">transparentes y colaborativas.</span>
+          - content:  Conversión de USD a moneda local con una tasa competitiva.<span class="light-lavender-text bolder"></span>
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content: Control sobre <span class="light-lavender-text bolder">cuándo y cómo gastar.</span>
+          - content: Reducción de comisiones y costos elevados en transacciones internacionales. <span class="light-lavender-text bolder"></span>
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: Gestión simplificada de cuentas de colaboradores en diferentes países. <span class="light-lavender-text bolder"></span>
             icon: ../img/lavender_cube.svg
             alt: cubo
     - id: section-d
-      eyebrow: ¡Empieza a gestionar los fondos de forma colaborativa!
-      title: <span class="dark-lavender-text">Conviértete en un pionero</span> al acceder a una plataforma que transformará la manera en que<span class="underlined-element"> tomas y gestionas decisiones financieras.</span>
-      paragraph_one: ¡Descubre la <span class="dark-lavender-text">solución</span> que estamos creando para ti!
+      eyebrow: Descubre cómo Virto puede transformar el pago de nómina en tu empresa.
+      title: <span class="dark-lavender-text"></span> Optimiza tu gestión de nómina hoy mismo<span class="underlined-element"></span>
       link: https://waitlist.virto.network/
-      call_to_action: Regístrarme, quiero ser pionero
+      call_to_action:  Regístrate ahora y comienza tu consulta personalizada.
       socials:
         - title: Telegram
           svg: telegram.svg 
