@@ -81,7 +81,6 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 		</div>
 		<div class="text-section light-green-text">
 			<h3>{{ landing_c.subtitle }}</h3>
-			<p>{{ landing_c.paragraph_one }}</p>
 			<ul>
                 {% for item in landing_c.list %}
                     <li class="animated">
@@ -98,7 +97,6 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 <section  {% if landing_c.id == "section-c" %} id="section-c">
 	<article class="max animated">
 		<div class="text-section light-green-text">
-			<h3 class="light-green-text">{{ landing_c.subtitle }}</h3>
 			<ul>
                 {% for item in landing_c.list %}
                     <li class="animated">
@@ -120,10 +118,10 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 
 <section {% if landing_c.id == "section-d" %} id="section-d" class="cta light-lavender-bg">
 	<article class="animated center dark-olive-text">
-		<h3 class="bolder">{{ landing_c.eyebrow }}</h3>
 		<h2 class="bolder">
 			<span>{{ landing_c.title }}</span>
 		</h2>
+		<h3>{{ landing_c.paragraph }}</h3>
 		<a class="track-inferior-cta button" href={{ landing_c.link }}>
 			{{ landing_c.call_to_action }}
 		</a>
