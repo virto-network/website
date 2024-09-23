@@ -3,47 +3,33 @@ description: |
 
 landing_a:
     - id: section-a
-      eyebrow: Olvídate del desorden financiero para siempre.
-      title: ¡Organiza las finanzas de tu negocio <span class="dark-lavender-text">de manera simple y eficiente!</span> 
-      paragraph_one: Con nuestra herramienta, mantén las finanzas de tu negocio separadas de las personales. Obtén una <span class="dark-lavender-text bolder">contabilidad clara y organizada sin necesidad de sistemas costosos o complicados.</span> Todo 100% online y accesible desde tu computadora.
-      paragraph_two: <span class="dark-lavender-text bolder">Simplifica la gestión financiera de tu negocio con Virto</span> y enfócate en su crecimiento, controlando los ingresos en un solo lugar.
+      title: Simplifica tus finanzas, <span class="dark-lavender-text">potencia tu negocio</span> 
+      paragraph_one: Integra todos tus pagos, tanto <strong>locales</strong> como <strong>internacionales</strong>, en una plataforma única que ofrece trazabilidad en tiempo real y tarifas competitivas. 
       call_to_action: ¡Únete hoy a la comunidad exclusiva!
     - id: section-b
-      title: El <span class="light-lavender-text">desafío en tu negocio</span>
-      subtitle: <span class="light-lavender-text boldest">Muchos comercios optan por recibir pagos en sus cuentas personales</span> debido al alto costo y la complejidad de los productos financieros para negocios. ¿Es tu caso?
-      list_subtitle: Aunque puede parecer la solución más rápida, <span class="light-lavender-text boldest">esto puede generar un desorden financiero.</span>
-      list:
-          - content: <strong>Difícil seguimiento</strong> de ingresos.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content: Toma de <strong>decisiones basadas en datos incompletos.</strong>
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content: Confusión con los pagos.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content: <strong>Limitantes para acceder</strong> a otros productos financieros.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
+      title: Virto La <span class="light-lavender-text">solución integral</span> para tus pagos globales
+      subtitle_one: Simplifica tus operaciones y enfócate en hacer crecer tu negocio.
+      subtitle_two: Disfruta de servicios más <strong>rápidos, económicos y seguros.</strong>
     - id: section-c
-      title: Virto <span class="light-lavender-text">la solución <br>que tu negocio necesita</span>
-      subtitle: <span class="light-lavender-text boldest">Nuestra plataforma te da la solución</span>, ayudándote a mantener el control financiero y tomar decisiones infromadas, sin complicaciones ni altos costos.
+      title: Haz más con menos esfuerzo
       list:
-          - content: <span class="light-lavender-text bolder">Centralización de pagos</span> en una única plataforma.
+          - content: <span class="light-lavender-text bolder">Recaudo centralizado en una sola plataforma.</span>
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content: Toma las <span class="light-lavender-text bolder">decisiones basadas en datos.</span>
+          - content: <span class="light-lavender-text bolder">Control y trazabilidad de ingresos en tiempo real.</span>
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content: Abre una <span class="light-lavender-text bolder">cuenta exclusiva para tu negocio.</span>
+          - content: <span class="light-lavender-text bolder">Comisiones bajas para pagos internacionales.</span>
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: <span class="light-lavender-text bolder">Operaciones rápidas y seguras.</span>
             icon: ../img/lavender_cube.svg
             alt: cubo
     - id: section-d
-      eyebrow: No te quedes fuera de esta oportunidad.
-      title: Sé uno de los primeros comercios en acceder a una plataforma que <span class="dark-lavender-text">transformará tu <span class="underlined-element">manera de gestionar las finanzas.</span></span>
-      paragraph_one: ¡Descubre la <span class="dark-lavender-text">solución</span> que estamos creando para ti!
+      eyebrow: Descubre como optimizar tus finanzas.
+      title: Toma el control de tus finanzas <span class="dark-lavender-text underlined-element"><span class="">hoy mismo</span>
       link: https://waitlist.virto.network/
-      call_to_action: Regístrarme, quiero transformar mi negocio hoy
+      call_to_action: Regístrate ahora y comienza tu consulta personalizada.
       socials:
         - title: Telegram
           svg: telegram.svg
@@ -107,6 +93,56 @@ landing_b:
 
 #Landing-c
 landing_c:
+    - id: section-a
+      eyebrow: Optimiza el control financiero de tu negocio.
+      title: Una solución única para <span class="dark-lavender-text">optimizar el control de tu tesorería</span> 
+      paragraph_one: <span class="dark-lavender-text bolder">Olvídate de las hojas de cálculo y de las herramientas obsoletas</span>, lleva un control financiero evita que se te pierda un centavo.
+      call_to_action: ¡Únete hoy a la comunidad exclusiva que quiere mejorar la tesorería de los negocios!
+    - id: section-b
+      title: El desafío de tener una <span class="light-lavender-text">herramienta para el control financiero</span>
+      subtitle: <span class="light-lavender-text boldest">Muchos comercios dependen de hojas de cálculo</span> para gestionar su tesorería de manera diaria o semanal.
+      paragraph_one: Aunque es una solución muy conveniente puede resultar en algunos problemas.
+      list:
+          - content: <strong>Riesgo de errores</strong> en el registro de datos.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: <strong>Desorganización y pérdida de información.</strong>
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: <strong>Dificultad para mantener control</strong> riguroso y actualizado.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+    - id: section-c
+      title: Una mejora en la  <br><span class="light-lavender-text">gestión de tu tesorería</span>
+      subtitle:  <span class="light-lavender-text boldest">Virto ha creado una solución para un control financiero preciso y organizado</span>, reemplazamos las hojas de cálculo por un sistema que facilita el seguimiento de la tesorería de tu negocio cuando quieras. 
+      list:
+          - content: <span class="light-lavender-text bolder">Elimina los errores</span> al usar una hoja de cálculo.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content:  <span class="light-lavender-text bolder">Organiza la información financiera.</span>
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: Toma de decisiones <span class="light-lavender-text bolder">de acuerdo a la información registrada.</span>
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+    - id: section-d
+      eyebrow: No dejes pasar esta oportunidad de optimizar tu negocio.
+      title: <span class="dark-lavender-text">¡Transforma la manera en que manejas las finanzas de tu negocio </span><span class="underlined-element">usando nuestra plataforma!</span>
+      link: https://waitlist.virto.network/
+      call_to_action: Regístrate y comienza a transformar tu negocio hoy.
+      socials:
+        - title: Telegram
+          svg: telegram.svg 
+          link: https://t.me/+573107887042
+          id: telegram
+        - title: Whatsapp
+          svg: whatsapp.svg
+          link: https://api.whatsapp.com/send?phone=573107887042
+          id: whatsapp
+      socials_text: Respondemos tus inquietudes <span class="dark-lavender-text">en tiempo real.</span>
+
+#Landing-d
+landing_d:
     - id: section-a
       eyebrow: Optimiza el control financiero de tu negocio.
       title: Una solución única para <span class="dark-lavender-text">optimizar el control de tu tesorería</span> 
