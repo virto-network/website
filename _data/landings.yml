@@ -4,7 +4,7 @@ description: |
 landing_a:
     - id: section-a
       title: Simplifica tus finanzas, <span class="dark-lavender-text">potencia tu negocio</span> 
-      paragraph_one: Integra todos tus pagos, tanto <strong>locales</strong> como <strong>internacionales</strong>, en una plataforma única que ofrece trazabilidad en tiempo real y tarifas competitivas. 
+      paragraph_one: Integra todos tus pagos, tanto <span class="dark-lavender-text bolder">locales</span> como <span class="dark-lavender-text bolder">internacionales</span>, en una plataforma única que ofrece trazabilidad en tiempo real y tarifas competitivas. 
       call_to_action: ¡Únete hoy a la comunidad exclusiva!
     - id: section-b
       title: Virto, la <span class="light-lavender-text">solución integral</span> para tus pagos globales
@@ -19,14 +19,14 @@ landing_a:
           - content: <span class="light-lavender-text bolder">Control y trazabilidad de ingresos</span> en tiempo real.
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content: <span class="light-lavender-text bolder">Comisiones bajas</span> para pagos internacionales.
+          - content: <span class="light-lavender-text bolder">Comisiones bajas</span> para pagos.
             icon: ../img/lavender_cube.svg
             alt: cubo
           - content: <span class="light-lavender-text bolder">Operaciones rápidas y seguras.</span>
             icon: ../img/lavender_cube.svg
             alt: cubo
     - id: section-d
-      eyebrow: Descubre como optimizar tus finanzas.
+      eyebrow: Descubre cómo optimizar tus finanzas.
       title: Toma el control de tus finanzas <span class="dark-lavender-text underlined-element"><span class="">hoy mismo</span>
       link: https://waitlist.virto.network/
       call_to_action: Regístrate ahora y comienza tu consulta personalizada.
@@ -45,11 +45,11 @@ landing_b:
     - id: section-a
       eyebrow: ¡Adiós a los altos costos y retrasos en los pagos globales! 
       title: Paga a tu equipo global <span class="dark-lavender-text">de manera eficiente</span> 
-      paragraph: Con Virto, <span class="dark-lavender-text bolder"> paga la nómina local de manera rápida y sencilla desde fondos en dólares estadounidenses.</span>
+      paragraph: Con Virto, <span class="dark-lavender-text bolder"> paga la nómina local de manera rápida y sencilla desde fondos en dólares.</span>
       call_to_action: ¡Únete hoy a la comunidad exclusiva!
     - id: section-b
-      title: Procesa nominas  <span class="light-lavender-text">con facilidad y al instante</span> con Virto
-      subtitle: Emite nóminas con un clic, brindando a tu equipo su <span  class="light-lavender-text boldest">salario a tiempo y con las mejores tarifas.</span>
+      title: Procesa nóminas <span class="light-lavender-text">con facilidad y al instante</span> con Virto
+      subtitle: Emite nóminas con un único clic, brindando a tu equipo su <span  class="light-lavender-text boldest">salario a tiempo y con las mejores tarifas.</span>
       paragraph_one: Agiliza tus operaciones y brinda a tu equipo el respaldo que merecen.
     - id: section-c
       title: Beneficios que harán <br><span class="light-lavender-text">crecer tu negocio</span>
@@ -86,9 +86,9 @@ landing_b:
 landing_c:
     - id: section-a
       eyebrow: Supera barreras bancarias con Virto.
-      title: Gestiona los fondos de tu empresa  <span class="dark-lavender-text">con facilidad y rapidez</span> 
-      paragraph_one: Accede de inmediato a los fondos de tu empresa, efectúa pagos globales sin obstáculos y lleva un registro claro de gastos <span class="dark-lavender-text bolder">a través de una plataforma segura y simple.</span>
-      call_to_action: ¡Únete hoy a la comunidad exclusiva que quiere mejorar la tesorería de los negocios!
+      title: Tarjeta débito empresarial <span class="dark-lavender-text">para gestionar los fondos de tu empresa</span> 
+      paragraph_one: <span class="dark-lavender-text bolder">Accede de inmediato a los fondos de tu empresa</span>, efectúa pagos globales sin obstáculos y lleva un registro claro de gastos <span class="dark-lavender-text bolder">a través de una plataforma segura y simple.</span>
+      call_to_action: ¡Inscríbete para solicitar tu Tarjeta!
     - id: section-b
       title: Con Virto, <span class="light-lavender-text">¡tus gastos empresariales bajo control!</span>
       subtitle: <span class="light-lavender-text boldest">La tarjeta débito de Virto </span> te permite controlar los gastos de tu empresa en herramientas, software y servicios, brindándote una visión completa de tus movimientos.
@@ -112,7 +112,7 @@ landing_c:
             icon: ../img/lavender_cube.svg
             alt: cubo
     - id: section-d
-      title: <span class="dark-lavender-text">¡Toma el control</span> de tus finanzas <span class="underlined-element">empresariales hoy mismo</span>
+      title: <span class="dark-lavender-text">¡Toma el control</span> de tus finanzas <span class="underlined-element">empresariales hoy mismo!</span>
       paragraph: Descubre cómo la tarjeta débito de Virto puede <strong>facilitar y optimizar las finanzas de tu empresa.</strong>
       link: https://waitlist.virto.network/
       call_to_action: Regístrate ahora y comienza tu consulta personalizada.
