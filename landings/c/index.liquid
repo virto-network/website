@@ -148,27 +148,26 @@ document.addEventListener('DOMContentLoaded', function() {
 		cta.addEventListener('click', handleCtaClick);
 	});
 
-	let telegram = document.getElementById("telegram");
-	telegram.addEventListener('click', (event) => {
-		event.preventDefault();
-		let redirectUrl = new URL('https://t.me/+573107887042');
-		const newWindow = window.open(redirectUrl, '_blank');
-		amplitude.track('landing:c:click-telegram')
-		setTimeout(() => {
-        	newWindow.location = redirectUrl.toString();
-    	}, 200)
-	});
+    telegram.addEventListener('click', (event) => {
+        event.preventDefault();
+        let redirectUrl = new URL('https://t.me/+573107887042');
+        const newWindow = window.open(redirectUrl, '_blank');
+        amplitude.track('landing:c:click-telegram');
+        setTimeout(function() {
+            newWindow.location = redirectUrl.toString();
+        }, 200);
+    });
 
-	let whatsapp = document.getElementById("whatsapp");
-	whatsapp.addEventListener('click', (event) => {
-		event.preventDefault();
-		let redirectUrl = new URL('https://api.whatsapp.com/send?phone=573107887042');
-		const newWindow = window.open(redirectUrl, '_blank');
-		amplitude.track('landing:c:click-whatsapp')
-		setTimeout(() => {
-        	newWindow.location = redirectUrl.toString();
-    	}, 200)
-	});
+    let whatsapp = document.getElementById("whatsapp");
+    whatsapp.addEventListener('click', (event) => {
+        event.preventDefault();
+        let redirectUrl = new URL('https://api.whatsapp.com/send?phone=573107887042');
+        const newWindow = window.open(redirectUrl, '_blank');
+        amplitude.track('landing:c:click-whatsapp');
+        setTimeout(function() {
+            newWindow.location = redirectUrl.toString();
+        }, 200);
+    });
 
     const $ = document.querySelector.bind(document);
     const $$ = document.querySelectorAll.bind(document);
