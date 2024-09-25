@@ -7,6 +7,7 @@ data:
 ---
 
 <style>
+
 main { overflow: hidden; }
 
 p { --font-size-paragraph: 1.3em; }
@@ -15,38 +16,20 @@ p { --font-size-paragraph: 1.3em; }
     width: clamp(700px, 30vw, 900px) !important;
 }
 
-
-.logo.img-c svg { width: 600px; }
-
-ul li, .auto-grid li { display: flex; align-items: center; gap: 2em; }
-#section-c ul li { margin-bottom: 1em; }
-
 #section-a figure.logo { align-items: start; }
-#section-a .arrow-right {
-	position: absolute;
-	right: clamp(37%, 2vw, 45%);
-	top: -20px;
-}
 
 #section-b h2 { max-width: 700px; }
 #section-b .logo { margin-top: 2em; margin-left: 20px; }
-#section-b ul li {
-    margin-bottom: 1em;
-}
+#section-b ul li { margin-bottom: 1em; }
 
 #section-c, #section-b { align-items: center;  flex-wrap: wrap; }
 #section-c { padding: 0 1rem; }
 #section-c .logo { margin-top: 2em; }
+.logo.img-c svg { width: 700px; }
+ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
+#section-c ul li { margin-bottom: 1em; }
 
-#section-d { padding: 0 1rem; display: grid; }
-#section-d article div { max-width: 41rem; }
-#section-d article div:nth-child(2) { margin-bottom: 1em; }
-#section-d .max .text-section {
-    gap: 2rem;
-    align-self: flex-end;
-    width: 90%;
-}
-#section-d .max { flex-wrap: wrap; }
+#section-d article h2 { max-width: 900px;}
 
 /*MOBILE*/
 @media only screen and (max-width: 767px) {
@@ -67,10 +50,8 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 2em; }
 	<section {% if landing_a.id == "section-a" %} id="section-a" class="light-green-bg">
 		<article class="max animated">
 			<div class="text-section dark-olive-text">
-				<p class="bolder">{{ landing_a.eyebrow }}</p>
 				<h1>{{ landing_a.title }}</h1>
 				<p>{{ landing_a.paragraph_one }}</p>
-				<p>{{ landing_a.paragraph_two }}</p>
 				<a class="track-superior-cta button" href="https://waitlist.virto.network/">{{ landing_a.call_to_action }}</a>
 			</div>
 			<figure class="logo image main__logo">
@@ -84,21 +65,13 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 2em; }
 		<article class="max animated">
 			<div class="column left light-green-text">
 				<h2>{{ landing_a.title }}</h2>
-				<h3>{{ landing_a.subtitle }}</h3>
-				<figure class="logo">
-					{% include "house_v_business.svg" %}
+				<figure class="logo center">
+					{% include "pagos_globales.svg" %}
 				</figure>
 			</div>
 			<div class="text-section light-green-text">
-				<h3>{{ landing_a.list_subtitle }}</h3>
-				<ul class="auto-grid">
-				{% for item in landing_a.list %}
-					<li class="animated">
-						<img src="{{ item.icon }}" alt="{{ item.alt }}" ></img>
-						<p>{{ item.content }}</p>
-					</li>
-				{% endfor %}
-				</ul>
+				<h3>{{ landing_a.subtitle_one }}</h3>
+				<h3>{{ landing_a.subtitle_two }}</h3>
 			</div>
 		</article>
 	</section>
@@ -107,7 +80,6 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 2em; }
 	<section  {% if landing_a.id == "section-c" %} id="section-c">
 		<article class="max animated">
 			<div class="text-section light-green-text">
-				<h3>{{ landing_a.subtitle }}</h3>
 				<ul class="auto-grid">
 				{% for item in landing_a.list %}
 					<li class="animated">
@@ -117,7 +89,6 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 2em; }
 				{% endfor %}
 				</ul>
 			</div>
-	
 			<div class="column">
 				<h2 class="light-green-text">{{ landing_a.title }}</h2>
 				<figure class="logo img-c">
@@ -132,7 +103,6 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 2em; }
 		<article class="animated center dark-olive-text">
 			<h3 class="bolder">{{ landing_a.eyebrow }}</h3>
 			<h2 class="bolder">{{ landing_a.title }}</h2>
-			<h3 class="bolder">{{ landing_a.paragraph_one  }}</h3>
 			<a class="track-inferior-cta button" href={{ landing_a.link }} >{{ landing_a.call_to_action }}</a>
 			<ul class="social-media__links">
 			{% for social in landing_a.socials %}

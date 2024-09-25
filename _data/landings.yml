@@ -3,47 +3,33 @@ description: |
 
 landing_a:
     - id: section-a
-      eyebrow: Olvídate del desorden financiero para siempre.
-      title: ¡Organiza las finanzas de tu negocio <span class="dark-lavender-text">de manera simple y eficiente!</span> 
-      paragraph_one: Con nuestra herramienta, mantén las finanzas de tu negocio separadas de las personales. Obtén una <span class="dark-lavender-text bolder">contabilidad clara y organizada sin necesidad de sistemas costosos o complicados.</span> Todo 100% online y accesible desde tu computadora.
-      paragraph_two: <span class="dark-lavender-text bolder">Simplifica la gestión financiera de tu negocio con Virto</span> y enfócate en su crecimiento, controlando los ingresos en un solo lugar.
+      title: Simplifica tus finanzas, <span class="dark-lavender-text">potencia tu negocio</span> 
+      paragraph_one: Integra todos tus pagos, tanto <span class="dark-lavender-text bolder">locales</span> como <span class="dark-lavender-text bolder">internacionales</span>, en una plataforma única que ofrece trazabilidad en tiempo real y tarifas competitivas. 
       call_to_action: ¡Únete hoy a la comunidad exclusiva!
     - id: section-b
-      title: El <span class="light-lavender-text">desafío en tu negocio</span>
-      subtitle: <span class="light-lavender-text boldest">Muchos comercios optan por recibir pagos en sus cuentas personales</span> debido al alto costo y la complejidad de los productos financieros para negocios. ¿Es tu caso?
-      list_subtitle: Aunque puede parecer la solución más rápida, <span class="light-lavender-text boldest">esto puede generar un desorden financiero.</span>
-      list:
-          - content: <strong>Difícil seguimiento</strong> de ingresos.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content: Toma de <strong>decisiones basadas en datos incompletos.</strong>
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content: Confusión con los pagos.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content: <strong>Limitantes para acceder</strong> a otros productos financieros.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
+      title: Virto, la <span class="light-lavender-text">solución integral</span> para tus pagos globales
+      subtitle_one: Simplifica tus operaciones y enfócate en hacer crecer tu negocio.
+      subtitle_two: Disfruta de servicios más <strong>rápidos, económicos y seguros.</strong>
     - id: section-c
-      title: Virto <span class="light-lavender-text">la solución <br>que tu negocio necesita</span>
-      subtitle: <span class="light-lavender-text boldest">Nuestra plataforma te da la solución</span>, ayudándote a mantener el control financiero y tomar decisiones infromadas, sin complicaciones ni altos costos.
+      title: Haz más con menos esfuerzo
       list:
-          - content: <span class="light-lavender-text bolder">Centralización de pagos</span> en una única plataforma.
+          - content: Recaudo centralizado en <span class="light-lavender-text bolder">una sola plataforma.</span>
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content: Toma las <span class="light-lavender-text bolder">decisiones basadas en datos.</span>
+          - content: <span class="light-lavender-text bolder">Control y trazabilidad de ingresos</span> en tiempo real.
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content: Abre una <span class="light-lavender-text bolder">cuenta exclusiva para tu negocio.</span>
+          - content: <span class="light-lavender-text bolder">Comisiones bajas</span> para pagos.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: <span class="light-lavender-text bolder">Operaciones rápidas y seguras.</span>
             icon: ../img/lavender_cube.svg
             alt: cubo
     - id: section-d
-      eyebrow: No te quedes fuera de esta oportunidad.
-      title: Sé uno de los primeros comercios en acceder a una plataforma que <span class="dark-lavender-text">transformará tu <span class="underlined-element">manera de gestionar las finanzas.</span></span>
-      paragraph_one: ¡Descubre la <span class="dark-lavender-text">solución</span> que estamos creando para ti!
+      eyebrow: Descubre cómo optimizar tus finanzas.
+      title: Toma el control de tus finanzas <span class="dark-lavender-text underlined-element"><span class="">hoy mismo</span>
       link: https://waitlist.virto.network/
-      call_to_action: Regístrarme, quiero transformar mi negocio hoy
+      call_to_action: Regístrate ahora y comienza tu consulta personalizada.
       socials:
         - title: Telegram
           svg: telegram.svg
@@ -57,43 +43,34 @@ landing_a:
 #Landing-b
 landing_b:
     - id: section-a
-      eyebrow: ¡Gestiona los fondos en equipo!
-      title:  Toma decisiones financieras junto a tus socios<span class="dark-lavender-text"> con transparencia y manteniendo control.</span>
-      paragraph: En Virto encuentras un sistema diseñado para <span class="dark-lavender-text bolder">facilitar la participación activa y transparente</span> en la toma de decisiones financieras de tu negocio.
+      eyebrow: ¡Adiós a los altos costos y retrasos en los pagos globales! 
+      title: Paga a tu equipo global <span class="dark-lavender-text">de manera eficiente</span> 
+      paragraph: Con Virto, <span class="dark-lavender-text bolder"> paga la nómina local de manera rápida y sencilla desde fondos en dólares.</span>
       call_to_action: ¡Únete hoy a la comunidad exclusiva!
     - id: section-b
-      title: La dificultad de gestionar <span class="light-lavender-text">fondos en conjunto</span>
-      subtitle: <span  class="light-lavender-text boldest">Tomar decisiones financieras puede ser un desafío</span>, más aún cuando varias personas están involucradas en la gestión de fondos.
-      paragraph_one: "La falta de herramientas y sistemas claros puede llevarte a:"
-      list:
-          - content: <strong>Confusión</strong> sobre el uso de los fondos.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content: <strong>Desacuerdos</strong> entre socios.
-            icon: ../img/lavender_cube.svg
-            alt: cubo
-          - content: Decisiones financieras <strong>poco estratégicas.</strong>
-            icon: ../img/lavender_cube.svg
-            alt: cubo
+      title: Procesa nóminas <span class="light-lavender-text">con facilidad y al instante</span> con Virto
+      subtitle: Emite nóminas con un único clic, brindando a tu equipo su <span  class="light-lavender-text boldest">salario a tiempo y con las mejores tarifas.</span>
+      paragraph_one: Agiliza tus operaciones y brinda a tu equipo el respaldo que merecen.
     - id: section-c
-      title: Virto la plataforma para <br><span class="light-lavender-text">gestionar fondos de forma colaborativa</span>
-      subtitle: Nuestra plataforma permite a los socios <span class="light-lavender-text boldest">tomar decisiones financieras claras, organizadas y transparentes.</span>
+      title: Beneficios que harán <br><span class="light-lavender-text">crecer tu negocio</span>
       list:
-          - content: <span class="light-lavender-text bolder">Optimización de los recursos</span> del negocio.
+          - content: <span class="light-lavender-text bolder">Pagos a tiempo y sin demoras</span> para tu equipo global.
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content:  Decisiones financieras <span class="light-lavender-text bolder">transparentes y colaborativas.</span>
+          - content:  <span class="light-lavender-text bolder">Conversión de USD a moneda local</span> con una tasa competitiva.
             icon: ../img/lavender_cube.svg
             alt: cubo
-          - content: Control sobre <span class="light-lavender-text bolder">cuándo y cómo gastar.</span>
+          - content: <span class="light-lavender-text bolder">Reducción de comisiones y costos elevados</span> en transacciones internacionales. 
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: <span class="light-lavender-text bolder">Gestión simplificada de cuentas de colaboradores</span> en diferentes países. 
             icon: ../img/lavender_cube.svg
             alt: cubo
     - id: section-d
-      eyebrow: ¡Empieza a gestionar los fondos de forma colaborativa!
-      title: <span class="dark-lavender-text">Conviértete en un pionero</span> al acceder a una plataforma que transformará la manera en que<span class="underlined-element"> tomas y gestionas decisiones financieras.</span>
-      paragraph_one: ¡Descubre la <span class="dark-lavender-text">solución</span> que estamos creando para ti!
+      eyebrow: Descubre cómo Virto puede transformar el pago de nómina en tu empresa.
+      title: <span class="dark-lavender-text"> Optimiza tu gestión de nómina</span> hoy mismo<span class="underlined-element"></span>
       link: https://waitlist.virto.network/
-      call_to_action: Regístrarme, quiero ser pionero
+      call_to_action:  Regístrate ahora y comienza tu consulta personalizada.
       socials:
         - title: Telegram
           svg: telegram.svg 
@@ -107,6 +84,51 @@ landing_b:
 
 #Landing-c
 landing_c:
+    - id: section-a
+      eyebrow: Supera barreras bancarias con Virto.
+      title: Tarjeta débito empresarial <span class="dark-lavender-text">para gestionar los fondos de tu empresa</span> 
+      paragraph_one: <span class="dark-lavender-text bolder">Accede de inmediato a los fondos de tu empresa</span>, efectúa pagos globales sin obstáculos y lleva un registro claro de gastos <span class="dark-lavender-text bolder">a través de una plataforma segura y simple.</span>
+      call_to_action: ¡Inscríbete para solicitar tu Tarjeta!
+    - id: section-b
+      title: Con Virto, <span class="light-lavender-text">¡tus gastos empresariales bajo control!</span>
+      subtitle: <span class="light-lavender-text boldest">La tarjeta débito de Virto </span> te permite controlar los gastos de tu empresa en herramientas, software y servicios, brindándote una visión completa de tus movimientos.
+      list:
+          - content: <span class="light-lavender-text bolder">Acceso instantáneo a fondos:</span> Utiliza tus fondos en tiempo real, sin esperas.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content:  <span class="light-lavender-text bolder">Control absoluto de gastos:</span> Mantén un registro detallado y categorizado de cada movimiento para una mejor gestión de presupuesto.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+    - id: section-c
+      title: Beneficios que <span class="light-lavender-text">impulsan el <br>éxito de tu empresa</span>
+      list:
+          - content: <span class="light-lavender-text bolder">Pagos internacionales sin barreras:</span> Realiza pagos a nivel global sin las limitaciones de los bancos tradicionales.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: <span class="light-lavender-text bolder">Seguridad y trazabilidad:</span> Monitorea cada transacción con total seguridad y transparencia, protegiendo los fondos de tu empresa.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+          - content: <span class="light-lavender-text bolder">Sin límites de uso:</span> Utiliza la tarjeta para cualquier tipo de gasto empresarial, desde software hasta proveedores internacionales.
+            icon: ../img/lavender_cube.svg
+            alt: cubo
+    - id: section-d
+      title: <span class="dark-lavender-text">¡Toma el control</span> de tus finanzas <span class="underlined-element">empresariales hoy mismo!</span>
+      paragraph: Descubre cómo la tarjeta débito de Virto puede <strong>facilitar y optimizar las finanzas de tu empresa.</strong>
+      link: https://waitlist.virto.network/
+      call_to_action: Regístrate ahora y comienza tu consulta personalizada.
+      socials:
+        - title: Telegram
+          svg: telegram.svg 
+          link: https://t.me/+573107887042
+          id: telegram
+        - title: Whatsapp
+          svg: whatsapp.svg
+          link: https://api.whatsapp.com/send?phone=573107887042
+          id: whatsapp
+      socials_text: Respondemos tus inquietudes <span class="dark-lavender-text">en tiempo real.</span>
+
+#Landing-d
+landing_d:
     - id: section-a
       eyebrow: Optimiza el control financiero de tu negocio.
       title: Una solución única para <span class="dark-lavender-text">optimizar el control de tu tesorería</span> 

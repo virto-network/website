@@ -1,9 +1,9 @@
 ---
-permalink: /b-3
+permalink: /b-4
 title: Virto Network
 layout: landing.liquid
 data:
-  route: business-three
+  route: business-four
 ---
 
 <style>
@@ -14,23 +14,35 @@ p { --font-size-paragraph: 1.3em; }
     width: clamp(700px, 30vw, 900px) !important;
 }
 
+.logo.img-c svg { width: 700px; }
+
+ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
+#section-c ul li { margin-bottom: 1em; }
+
 #section-a .text-section { max-width: clamp(300px, 50%, 700px); }
 #section-a figure.logo { align-items: start; }
+#section-a .arrow-right {
+	position: absolute;
+	right: clamp(37%, 2vw, 45%);
+	top: -20px;
+}
 
 #section-b h2 { max-width: 700px; margin-left: 20px; }
 #section-b .logo { margin-top: 2em; margin-left: 20px; }
 #section-b ul li { margin-bottom: 1em; }
-
 #section-c, #section-b {  align-items: center; flex-wrap: wrap; }
 #section-c { padding: 0 1rem; }
 #section-c .logo { margin-top: 2em; }
-.logo.img-c svg { width: 700px; }
-ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
-#section-c ul li { margin-bottom: 1em; }
 
-#section-d article h2 {
-    max-width: 900px;
+#section-d { display: grid; }
+#section-d article div { max-width: 41rem; }
+#section-d article div:nth-child(2) { margin-bottom: 1em; }
+#section-d .max .text-section {
+    gap: 2rem;
+    align-self: flex-end;
 }
+#section-d .max { flex-wrap: wrap; }
+
 /*MOBILE*/
 @media only screen and (max-width: 767px) {
     article div { width: 90%; }
@@ -43,34 +55,35 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 
 </style>
 
-{% for landing_c in site.data.landings.landing_c %}
-<section {% if landing_c.id == "section-a" %} id="section-a" class="light-green-bg">
+{% for landing_d in site.data.landings.landing_d %}
+<section {% if landing_d.id == "section-a" %} id="section-a" class="light-green-bg">
 	<article class="max animated">
 		<div class="text-section dark-olive-text">
-			<p class="bolder">{{ landing_c.eyebrow }}</p>
-			<h1>{{ landing_c.title }}</h1>
-			<p>{{ landing_c.paragraph_one }}</p>
-			<a class="track-superior-cta button" href="https://waitlist.virto.network/">{{ landing_c.call_to_action }}</a>
+			<p class="bolder">{{ landing_d.eyebrow }}</p>
+			<h1>{{ landing_d.title }}</h1>
+			<p>{{ landing_d.paragraph_one }}</p>
+			<a class="track-superior-cta button" href="https://waitlist.virto.network/">{{ landing_d.call_to_action }}</a>
 		</div>
 		<figure class="logo image main__logo">
-			{% include "Virto card.svg" %}
+			{% include "w.svg" %}
 		</figure>
 	</article>
 </section>
 {% endif %}
 
-<section {% if landing_c.id == "section-b" %} id="section-b">
+<section {% if landing_d.id == "section-b" %} id="section-b">
 	<article class="max animated">
 		<div class="column">
-			<h2 class="light-green-text">{{ landing_c.title }}</h2>
+			<h2 class="light-green-text">{{ landing_d.title }}</h2>
 			<figure class="logo">
-				{% include "debit_card.svg" %}
+				{% include "danger.svg" %}
 			</figure>
 		</div>
 		<div class="text-section light-green-text">
-			<h3>{{ landing_c.subtitle }}</h3>
+			<h3>{{ landing_d.subtitle }}</h3>
+			<p>{{ landing_d.paragraph_one }}</p>
 			<ul>
-                {% for item in landing_c.list %}
+                {% for item in landing_d.list %}
                     <li class="animated">
                         <img src="{{ item.icon }}" alt="{{ item.alt }}"></img>
                         <p>{{ item.content }}</p>
@@ -82,11 +95,12 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 </section>
 {% endif %}
 
-<section  {% if landing_c.id == "section-c" %} id="section-c">
+<section  {% if landing_d.id == "section-c" %} id="section-c">
 	<article class="max animated">
 		<div class="text-section light-green-text">
+			<h3 class="light-green-text">{{ landing_d.subtitle }}</h3>
 			<ul>
-                {% for item in landing_c.list %}
+                {% for item in landing_d.list %}
                     <li class="animated">
                         <img src="{{ item.icon }}" alt="{{ item.alt }}"></img>
                         <p>{{ item.content }}</p>
@@ -95,7 +109,7 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
             </ul>
 		</div>
         <div class="column">
-			<h2 class="light-green-text">{{ landing_c.title }}</h2>
+			<h2 class="light-green-text">{{ landing_d.title }}</h2>
 			<figure class="logo img-c">
 				{% include "solution.svg" %}
 			</figure>
@@ -104,23 +118,23 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 </section>
 {% endif %}
 
-<section {% if landing_c.id == "section-d" %} id="section-d" class="cta light-lavender-bg">
+<section {% if landing_d.id == "section-d" %} id="section-d" class="cta light-lavender-bg">
 	<article class="animated center dark-olive-text">
+		<h3 class="bolder">{{ landing_d.eyebrow }}</h3>
 		<h2 class="bolder">
-			<span>{{ landing_c.title }}</span>
+			<span>{{ landing_d.title }}</span>
 		</h2>
-		<h3>{{ landing_c.paragraph }}</h3>
-		<a class="track-inferior-cta button" href={{ landing_c.link }}>
-			{{ landing_c.call_to_action }}
+		<a class="track-inferior-cta button" href={{ landing_d.link }}>
+			{{ landing_d.call_to_action }}
 		</a>
 		<ul class="social-media__links">
-		{% for social in landing_c.socials %}
+		{% for social in landing_d.socials %}
 			<a id={{ social.id }} class="link-to" title={{ social.title }}>
 				{% include social.svg %}
 			</a>
 		{% endfor %}
 		</ul>
-		<p>{{ landing_c.socials_text }}</p>
+		<p>{{ landing_d.socials_text }}</p>
 	</article>
 </section>
 {% endif %}
@@ -129,16 +143,16 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {    
-	window.amplitude.track('view:landing:c');
+	window.amplitude.track('view:landing:d');
 
 	function handleCtaClick(event) {
 		event.preventDefault();
 		let redirectUrl = new URL('https://waitlist.virto.network/');
-		redirectUrl.searchParams.set('b', 'b-three');
+		redirectUrl.searchParams.set('b', 'b-four');
 		if (event.currentTarget.classList.contains('track-superior-cta')) {
-        	window.amplitude.track('landing:c:click-superior-cta');
+        	window.amplitude.track('landing:d:click-superior-cta');
     	} else if (event.currentTarget.classList.contains('track-inferior-cta')) {
-        	window.amplitude.track('landing:c:click-inferior-cta');
+        	window.amplitude.track('landing:d:click-inferior-cta');
     	}
 	window.open(redirectUrl.toString(), '_blank');
 	}
@@ -153,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		event.preventDefault();
 		let redirectUrl = new URL('https://t.me/+573107887042');
 		const newWindow = window.open(redirectUrl, '_blank');
-		amplitude.track('landing:c:click-telegram')
+		amplitude.track('landing:d:click-telegram')
 		setTimeout(() => {
         	newWindow.location = redirectUrl.toString();
     	}, 200)
@@ -164,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		event.preventDefault();
 		let redirectUrl = new URL('https://api.whatsapp.com/send?phone=573107887042');
 		const newWindow = window.open(redirectUrl, '_blank');
-		amplitude.track('landing:c:click-whatsapp')
+		amplitude.track('landing:d:click-whatsapp')
 		setTimeout(() => {
         	newWindow.location = redirectUrl.toString();
     	}, 200)
