@@ -17,6 +17,7 @@ nav:
   - link: Go to the app
     route: https://virto.app/
     class: app-button-link button
+ 
 footer:
   - link: About Us
     route: /about
@@ -28,6 +29,7 @@ footer:
     route: /blog
   - link: Whitepaper
     route: /docs/whitepaper.html
+
 modal:
   success:
     title: "Thank you!"
