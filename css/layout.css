@@ -122,6 +122,12 @@ footer {
   gap: 3rem;
 }
 
+.services-policy {
+  width: 100%;
+  text-align: center;
+  color: var(--clr-olive-lighter);
+}
+
 footer > nav {
   display: flex;
   flex-direction: column;
