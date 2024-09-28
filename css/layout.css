@@ -125,7 +125,7 @@ footer {
 .services-policy {
   width: 100%;
   text-align: center;
-  color: white;
+  color: var(--clr-olive-lighter);
 }
 
 footer > nav {
