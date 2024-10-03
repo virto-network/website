@@ -121,31 +121,33 @@ ul li, .auto-grid li { display: flex; align-items: center; gap: 1.75em; }
 {% endfor %}
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {    
+document.addEventListener('DOMContentLoaded', function() {
     window.amplitude.track('view:landing:b');
 
-	function handleCtaClick(event) {
-		event.preventDefault();
-		let redirectUrl = new URL('https://waitlist.virto.network/');
-		redirectUrl.searchParams.set('b', 'b-two');
-		if (event.currentTarget.classList.contains('track-superior-cta')) {
-        	window.amplitude.track('landing:b:click-superior-cta');
-    	} else if (event.currentTarget.classList.contains('track-inferior-cta')) {
-        	window.amplitude.track('landing:b:click-inferior-cta');
-    	}
-	window.open(redirectUrl.toString(), '_blank');
-	}
+    let superior = document.querySelector('.track-superior-cta');
+    superior.addEventListener('click', (event) => {
+        event.preventDefault();
+        let redirectUrl = new URL('https://waitlist.virto.network/');
+        redirectUrl.searchParams.set('b', 'b-two');
+        window.amplitude.track('landing:b:superior');
+        window.open(redirectUrl.toString(), '_blank');
+    });
 
-	let ctas = document.querySelectorAll('.button');
-	ctas.forEach((cta) => {
-		cta.addEventListener('click', handleCtaClick);
-	});
+    let inferior = document.querySelector('.track-inferior-cta');
+    inferior.addEventListener('click', (event) => {
+        event.preventDefault();
+        let redirectUrl = new URL('https://waitlist.virto.network/');
+        redirectUrl.searchParams.set('b', 'b-two');
+        window.amplitude.track('landing:b:click-inferior-cta');
+        window.open(redirectUrl.toString(), '_blank');
+    });
+
     let telegram = document.getElementById("telegram");
     telegram.addEventListener('click', (event) => {
         event.preventDefault();
         let redirectUrl = new URL('https://t.me/+573107887042');
         const newWindow = window.open(redirectUrl, '_blank');
-        amplitude.track('landing:b:click-telegram');
+        window.amplitude.track('landing:b:click-telegram');
         setTimeout(function() {
             newWindow.location = redirectUrl.toString();
         }, 200);
@@ -153,10 +155,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let whatsapp = document.getElementById("whatsapp");
     whatsapp.addEventListener('click', (event) => {
-        event.preventDefault();
+		event.preventDefault();
         let redirectUrl = new URL('https://api.whatsapp.com/send?phone=573107887042');
         const newWindow = window.open(redirectUrl, '_blank');
-        amplitude.track('landing:b:click-whatsapp');
+        window.amplitude.track('landing:b:click-whatsapp');
         setTimeout(function() {
             newWindow.location = redirectUrl.toString();
         }, 200);
