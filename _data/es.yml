@@ -1,6 +1,7 @@
 globals:
   go-up: Volver arriba
   go-down: Ir al final
+  apply_url: https://apply.virto.network/
 nav:
   - link: Sobre Nosotros
     route: /about
@@ -14,8 +15,8 @@ nav:
   - link: Blog
     route: /blog
     class: menu-item
-  - link: Ingresar a la app
-    route: https://virto.app/
+  - link: Explorar virto-connect
+    route: https://demo.virto.dev/
     class: app-button-link button
 footer:
   - link: Sobre Nosotros
@@ -38,53 +39,47 @@ modal:
     retry: "Inténtalo nuevamente, por favor."
 home_sections:
   - id: home
-    eyebrow: ¿Te enfrentas a complicaciones para establecer y administrar tu negocio?
-    title: <span class="dark-green-text">Crea y Gestiona</span> tu Organización en Minutos
-    paragraph: 'Virto te ofrece una cuenta organizacional que simplifica la creación y gestión de tu organización, permitiéndote enfocarte en lo que realmente importa: hacer crecer tu negocio.'
-    call_to_action: Quiero más información
+    products:
+      - eyebrow: ¿No tenés equipo de blockchain ni backend? No hay problema.
+        title: <span class="dark-green-text">Infraestructura <span class="tooltip" data-tooltip="Un nuevo modelo de internet donde los usuarios son dueños de sus datos, identidades y activos — construido sobre tecnología blockchain.">Web3</span></span> que se siente como <span class="tooltip" data-tooltip="La etapa de la web donde las personas interactúan a través de plataformas sociales y servicios centralizados.">Web2</span>
+        paragraph: '¿Cansado de depender de proveedores centralizados y caídas de servidores? Virto te ofrece servicios de backend descentralizados que simplemente funcionan — <span class="dark-green-text bold">si un servidor falla, tu app sigue en línea.</span>'
+        call_to_action: Contáctanos para agendar una sesión 1:1
+      - eyebrow: Iniciar sesión sin wallets significa sin fricción.
+        title: Integrá <span class="dark-green-text">virto-connect</span> en minutos
+        paragraph: 'Nuestro <span class="dark-green-text bold">Web Component listo para usar</span> permite que tus usuarios se registren en blockchain sin necesidad de una wallet. Ahora soporta <span class="dark-green-text bold">passkeys y otros métodos de login sin contraseñas</span>, combinando seguridad Web3 con la simplicidad de Web2.'
+        call_to_action: Probalo gratis — incluye soporte
+      - eyebrow: Construí más inteligente con blockchain
+        title: Próximamente:<span class="dark-green-text">VOS</span> — el backend descentralizado
+        paragraph: 'VOS te permite ejecutar lógica de backend con smart contracts. <span class="dark-green-text bold">Pensalo como microservicios, pero sin intermediarios y a prueba de fallos.</span>'
+        call_to_action: ¿Te da curiosidad? ¡Contáctanos!
   - id: jobs
-    title: Cómo Virto <br/><span class="light-lavender-text">Hace el Trabajo por Ti</span>
+    title: ¿Implementar blockchain es muy complicado?<br/><span class="light-lavender-text">¡Virto lo simplifica para ti!</span>
     cards:
-      - title: "Configuración Rápida y Fácil:"
-        content: Crea tu empresa en menos de 15 minutos, sin complicaciones.
-      - title: "Gestión de Miembros Simplificada:"
-        content: Organiza tu equipo con membresías, asigna roles y administra decisiones.
-      - title: "Recepción y Ejecución de Pagos Eficiente: "
-        content: Realiza transacciones globales de manera segura y rápida.
-      - title: "Gobernanza de Fondos Avanzada:"
-        content: Toma decisiones financieras informadas y gestiona tus recursos con eficacia.
-      - title: "Acceso a la billetera organizacional:"
-        content: Mantén los recursos de tu organización y realiza movimientos cuando lo necesites.
-        class: center
+      - title: "Habla Web2"
+        content: Usá las herramientas y flujos de trabajo que ya conocés. Hicimos que Web3 se sienta como Web2.
+      - title: "Sin punto único de falla"
+        content: Los proveedores centralizados se caen — y arrastran todo con ellos. Virto es descentralizado, así que tus servicios siguen funcionando, siempre.
+      - title: "Siempre te acompañamos"
+        content: Es fácil de integrar. Y si necesitás ayuda, nuestro equipo está para apoyarte.
+
   - id: mail-cta
-    title: ¿Quieres ser una de las primeras organizaciones en tener una cuenta en Virto?
-    placeholder_name: Ingresa tu nombre.
-    placeholder_last_name: Ingresa tu apellido.
-    placeholder_email: Ingresa tu correo electrónico.
-    cta: ¡Ingresa a nuestra lista de espera!
-  - id: benefits
-    title: Beneficios de Usar <span class="light-lavender-text">Virto</span>
-    cards:
-      - title: Ahorra Tiempo
-        content: Inicia tu empresa rápidamente y reduce el tiempo dedicado a tareas administrativas.
-        svg: "Ahorra Tiempo.svg"
-        class: benefits-row
-      - title: Optimiza la Gestión Financiera
-        content: Mantén un control claro y preciso sobre tus fondos.
-        svg: "Gestion Financiera.svg"
-        class: benefits-row-reverse
-      - title: Simplifica la Colaboración
-        content: Facilita la comunicación y coordinación dentro de tu equipo.
-        svg: "Colaboracion.svg"
-        class: benefits-row
-      - title: Garantiza la Seguridad
-        content: Protege tu información y transacciones con las mejores prácticas de seguridad manteniendo trazabilidad de las mismas.
-        svg: "Seguridad.svg"
-        class: benefits-row-reverse
-      - title: Conectividad Estratégica
-        content: Establece conexiones valiosas con otras organizaciones afines y promoviendo oportunidades de colaboración.
-        svg: "Conectividad Estrategica.svg"
-        class: benefits-row
+    title: Ingresa tu email para saber más sobre Virto!
+    placeholder_email: Escribe tu email aquí
+    cta: Dejar mi email en una base de datos desconocida o...
+    subtitle: Contactarme por otros medios
+    socials:
+      - title: E-mail
+        svg: email.svg
+        link: mailto:contact@virto.team
+      - title: Telegram
+        svg: telegram.svg
+        link: https://t.me/+573107887042
+      - title: Element
+        svg: element.svg
+        link: https://www.linkedin.com/company/virto-network/
+      - title: Calendar
+        svg: calendar.svg
+        link: https://calendly.com/virtonetwork
   - id: testimonials
     title: Testimonios
     testimonials:
@@ -94,21 +89,21 @@ home_sections:
       - avatar: https://avatars.githubusercontent.com/u/1329925?v=4
         person: Daniel Olano, CEO de Virto
         message: Como fundador de Virto, he experimentado de primera mano los beneficios de utilizar nuestra tecnología blockchain. Ha facilitado nuestro proceso de toma de decisiones, automatizado el manejo de mi equipo y pagos, y aumentado la transparencia en toda nuestra organización.
-  - id: qa
-    title: Preguntas Frecuentes
-    questions:
-      - question: ¿Qué es Virto?
-        answer: Virto es una cuenta organizacional que permite a las organizaciones recibir y realizar pagos, así como co-administrar fondos de manera transparente entre todos sus miembros.
-      - question: ¿Quién puede usar Virto?
-        answer: Virto está diseñado para cualquier tipo de organización, desde pequeñas empresas y startups hasta grandes corporaciones y organizaciones sin fines de lucro que necesiten una solución para la administración de sus fondos de manera colaborativa. <a href="/casos-de-uso/">Conoce nuestros casos de uso.</a>
-      - question: ¿Es seguro utilizar Virto para transacciones financieras?
-        answer: Sí, Virto  usa criptografia avanzada en su tecnologia blockhain para proteger la información financiera y las transacciones de la organización.
-      - question: ¿Cómo se realiza la configuración inicial de una cuenta en Virto?
-        answer: La configuración inicial de una cuenta en Virto es sencilla. Solo necesitas registrarte, agregar los miembros de tu organización, y empezar a utilizar la plataforma para gestionar los fondos.
-      - question: ¿Cómo puedo recargar fondos en mi cuenta Virto?
-        answer: Para recargar fondos en tu cuenta Virto, inicia sesión en tu cuenta, selecciona la opción "Recargar fondos", elige el método de pago que prefieras (transferencia bancaria, tarjeta de crédito, etc.), ingresa el monto que deseas recargar y confirma la transacción.
-      - question: ¿Qué se necesita para abrir una cuenta con Virto?
-        answer: Para abrir una cuenta con Virto, necesitas proporcionar información básica sobre tu organización, incluyendo nombre, sector y descripción. Además podrás configurar tu cuenta y agregar miembros de tu organización.
+  - id: roadmap
+    title: ¿Qué estamos construyendo?
+    milestones:
+      - step: 'Recién lanzado: virto-connect'
+        description: Lanzamos virto-connect y comunidades, habilitando un onboarding y gestión de identidad Web3 sin interrupciones.
+        time: 2025 Q1
+      - step: Virto-connect v2.0
+        description: Estamos refinando el inicio de sesión basado en passkey y el onboarding sin billetera. Las integraciones de inicio de sesión social (Google, Apple) y las sesiones restringidas están en marcha.
+        time: 2025 Q2
+      - step: VOS como backend
+        description: VOS proporcionará APIs con capacidad de contrato inteligente para empresas, permitiendo que cada organización ejecute su propia instancia de backend.
+        time: 2025 Q4
+      - step: 'JAM y ZK'
+        description: Pronto, VOS se ejecutará en JAM, nuestro tiempo de ejecución descentralizado. También integraremos la lógica Zero Knowledge para una ejecución privada y fuera de la cadena.
+        time: 2026
   - id: virto-supporters
     title: Conoce a Quienes nos Apoyan
     supporters:
@@ -124,8 +119,8 @@ home_sections:
   - id: cta
     eyebrow: Comienza Ahora
     title: Da el primer paso hacia el éxito de tu <span class="underlined-element">organización con Virto.</span>
-    content: Regístrate <strong>antes de que finalice julio</strong> y prueba gratis nuestra plataforma, diseñada para simplificar la creación y gestión de tu negocio.
-    call_to_action: Regístrate ahora
+    content: ¡Comienza tu <strong>camino en blockchain</strong> con nosotros!
+    call_to_action: ¡Sólo un click!
     socials:
       - title: E-mail
         svg: email.svg
