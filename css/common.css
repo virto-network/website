@@ -84,7 +84,7 @@ span { font-family: inherit; }
 /*Add one of this classes to your element to add a background-color*/
 .white-bg { background-color: var(--clr-white); }
 .whitest-bg { background-color: var(--clr-whitest); }
-.dark-olive-bg { background-color: var(--clr-olive-darker); }
+.dark-olive-bg { background-color: #071914; }
 .dark-green-bg { background-color: var(--clr-green-darker); }
 .light-green-bg { background-color: var(--clr-green-lighter); }
 .light-lavender-bg { background-color: var(--clr-lavender-lightest); }
@@ -138,8 +138,8 @@ span { font-family: inherit; }
 
 /*Button and anchor hovers and focus*/
 button.medium-lavender-bg:hover { background-color: var(--clr-green-darker); color: var(--clr-olive-darker); }
-a:hover{ text-decoration: underline var(--clr-white); }
-a:focus-visible {
+a:not(.top-nav a):hover{ text-decoration: underline var(--clr-white); }
+a:not(.top-nav a):focus-visible {
     text-decoration: underline var(--clr-white);
     outline: 2px solid var(--clr-lavender-darker);
 }
@@ -226,7 +226,7 @@ dialog img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2em;
+    padding: 2em 0 2em 2em; /*donde?*/
 }
 
 #mail-form {
@@ -234,7 +234,7 @@ dialog img {
     flex-direction: column;
     gap: 1em;
     width: 100%;
-    margin: 1em 0;
+    margin: 1em 0; /*donde?*/
 }
   
 #mail-form input {

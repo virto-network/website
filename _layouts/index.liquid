@@ -84,15 +84,11 @@ closeButton.addEventListener('click', () => {
 mailForm.addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  const contactName = event.target.elements['contactName'].value;
-  const contactLastName = event.target.elements['contactLastName'].value;
   const contactEmail = event.target.elements['contactEmail'].value;
 
   try {
   const data = {
     fields: {
-      "Name": contactName,
-      "LastName": contactLastName,
       "Email": contactEmail,
     }
   };

@@ -16,32 +16,31 @@ data:
 {% for home_section in home_sections %}
 <section {% if home_section.id == "home" %} id="home">
 	<article class="max animated">
-		<div class="text-section lightest-lavender-text">
-			<p>{{ home_section.eyebrow }}</p>
-			<h1>Virto: {{ home_section.title }}</h1>
-			<p>{{ home_section.paragraph }}</p>
-			<a href="#mail-cta" class="scroll-link">
-                <span class="dark-green-text">{{ home_section.call_to_action }}</span>
-                <figure class="scroll-arrow">
-                    {% include "services_arrow.svg" %} 
-                </figure>
-            </a>
-		</div>
-		<div class="buttons-container hide">
-			<figure>
-				{% include "right.svg" %}
-			</figure>
-			<figure>
-				{% include "left.svg" %}
-			</figure>
-		</div>
-		<figure class="arrow-right">
-				{% include "arrow_right.svg" %}
-			</figure>
+			{% for product in home_section.products %}
+			<div class="hero-product-card lightest-lavender-text">
+				<p>{{ product.eyebrow }}</p>
+				<h2>{{ product.title }}</h2>
+				<p>{{ product.paragraph }}</p>
+				<a href="#mail-cta" class="scroll-link">
+				<span class="dark-green-text">{{ product.call_to_action }}</span>
+				<figure class="scroll-arrow">
+					{% include "services_arrow.svg" %}
+				</figure>
+				</a>
+			</div>
+			{% endfor %}
+			<div class="buttons-container">
+				<figure id="hero-prev" title="Previous">
+				  {% include "left.svg" %}
+				</figure>
+				<figure id="hero-next" title="Next">
+				  {% include "right.svg" %}
+				</figure>
+			</div>
 		<figure class="logo">
 			{% include "Apps.svg" %}
 		</figure>
-	</article>
+		</article>
 </section>
 {% endif %}
 
@@ -50,8 +49,8 @@ data:
 	<article class="max">
 			{% for card in home_section.cards %}
 				<div class="animated box">
-					<h3 class="regular outfit">{{ card.title }}</h3>
-					<p class="regular">{{ card.content }}</p>
+					<h3 class="boldest outfit dark-green-text">{{ card.title }}</h3>
+					<p class="regular dark-olive-text">{{ card.content }}</p>
 				</div>
 		{% endfor %}
 	</article>
@@ -61,40 +60,24 @@ data:
 <section {% if home_section.id == "mail-cta" %} id="mail-cta" class="mail light-lavender-bg dark-olive-text">
 	<article class="animated max">
 		<h3 class="header-1 boldest">{{ home_section.title }}</h3>
-		<form id="mail-form">
-			<input type="text" name="contactName" placeholder="{{ home_section.placeholder_name }}">
-			<input type="text" name="contactLastName" placeholder="{{ home_section.placeholder_last_name }}">
-			<input type="email" name="contactEmail" placeholder="{{ home_section.placeholder_email }}" required>
-			<button type="submit" id="mail-button">{{ home_section.cta }}</button>
-		</form>
+			<form id="mail-form">
+				<input type="email" name="contactEmail" placeholder="{{ home_section.placeholder_email }}" required>
+				<button type="submit" id="mail-button">{{ home_section.cta }}</button>
+				<p class="center">{{ home_section.subtitle }}</p>
+				<ul>
+				{% for social in home_section.socials %}
+				<a class="link-to" title={{ social.title }} href={{ social.link }}>
+					{% include social.svg %}
+				</a>
+				{% endfor %}
+				</ul>
+			</form>
 	</article>
+	<img class="img-container" src="./img/equipos.jpg"></img>
 </section>
 {% endif %}
 
-<section {% if home_section.id == "benefits" %} id="benefits" class="white-bg">
-	<article class="max column">
-		<h2 class="dark-green-text">{{ home_section.title }}</h2>
-		<div class="benefits-container dark-olive-text">
-			{% for card in home_section.cards %}
-			<div class={{ card.class }}>
-				<div class="animated benefits-column">
-					<figure class="benefits-image">
-						{% include card.svg %}
-					</figure>
-				</div>
-				<div class="animated benefits-column text">
-					<h2>{{ card.title }}</h2>
-					<p>{{ card.content }}</p>
-				</div>  
-			</div>
-		{% endfor %}
-      
-	</article>
-</section>
-{% endif %}
-
-{% if home_section.id == "testimonials" %}
-    <section id="testimonials" class="light-lavender-bg center">
+<section {% if home_section.id == "testimonials" %} id="testimonials" class="light-lavender-bg center">
         <article class="max animated column">
 		<h2 class="dark-lavender-text">{{ home_section.title }}</h2>
             <div class="testimonials-container">
@@ -113,30 +96,40 @@ data:
                 </a>
             </div>
         </article>
-    </section>
+</section>
 {% endif %}
 
-{% if home_section.id == "qa" %}
-	<section id="q&a" class="white-bg">
-		<article class="max animated">
-			<h2 class="dark-green-text">{{ home_section.title }}</h2>
-			<div class="q&a-container">
-				<ul class="faq-list">
-					{% for question in home_section.questions %}
-						<li>
-							<button class="question-button">{{ question.question }}</button>
-							<div class="answer hidden">
-								<p>{{ question.answer }}</p>
-							</div>
-						</li>
-					{% endfor %}
-				</ul>
-			</div>
+<section {% if home_section.id == "roadmap" %} id="roadmap" class="column white-bg">
+		<h2>{{ home_section.title }}</h2>
+		<h4 class="grey-text">One piece at a time</h4>
+		<article class="animated max">
+		<div class="roadmap-container">
+		  <div class="roadmap-line-bg white-bg">
+			<div id="roadmap-progress" class="roadmap-line-progress dark-green-bg"></div>
+		  </div>
+		  <div id="milestones-container" class="milestones-wrapper">
+			{% for step in home_section.milestones %}
+			  <div class="grey-text center milestone-item{% if forloop.first %} active{% endif %}" data-index="{{ forloop.index0 }}">
+				<div class="milestone-dot white-bg"></div>
+				<h4 class="milestone-label">{{ step.step }}</h4>
+				<h5 class="grey-text">{{ step.time }}</h5>
+			  </div>
+			{% endfor %}
+		  </div>
+		</div>
+		<div class="roadmap-content-card whitest-bg">
+		  <h3 id="roadmap-content-title" class="roadmap-content-title bold">
+			{% if home_section.milestones.first %}{{ home_section.milestones.first.step }}{% endif %}
+		  </h3>
+		  <p id="roadmap-content-description" class="roadmap-content-description">
+			{% if home_section.milestones.first %}{{ home_section.milestones.first.description }}{% endif %}
+		  </p>
+		</div>
 		</article>
-	</section>
+	  </section>
 {% endif %}
 
-	<section {% if home_section.id == "virto-supporters" %} id="virto-supporters" class="whitest-bg">
+<section {% if home_section.id == "virto-supporters" %} id="virto-supporters" class="whitest-bg">
 		<article class="max animated column">
 			<h3 class="dark-olive-text boldest header-2">{{ home_section.title }}</h3>
 				<ul class="supporters-list">
@@ -149,7 +142,7 @@ data:
 					{% endfor %}
 				</ul>
 		</article>
-	</section>
+</section>
 {% endif %}
 
 <section {% if home_section.id == "cta" %} id="cta" class="cta light-lavender-bg">
@@ -159,7 +152,7 @@ data:
 			<span>{{ home_section.title }}</span>
 		</h2>
 		<h3>{{ home_section.content  }}</h3>
-		<a class="button" href={{ site.data.apply }} >{{ home_section.call_to_action }}</a>
+		<a class="button" href={{ site.data[site.data.lang].globals.apply_url }} >{{ home_section.call_to_action }}</a>
 		<ul>
 		{% for social in home_section.socials %}
 			<a class="link-to" title={{ social.title }} href={{ social.link }}>
@@ -185,8 +178,55 @@ const whenVisible = (elements, fn, opts) => {
 	$$(elements).forEach(e => ob.observe(e));
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-    const testimonials = document.querySelectorAll('.testimonial');
+document.addEventListener('DOMContentLoaded', function() {
+
+/*HERO SLIDER CODE*/
+	const cards = document.querySelectorAll('.hero-product-card');
+	const prevBtn = document.getElementById('hero-prev');
+	const nextBtn = document.getElementById('hero-next');
+	let current = 0;
+	let slideInterval;
+
+	function showCard(index) {
+		cards.forEach((card, i) => {
+			card.classList.toggle('active', i === index);
+		});
+	}
+
+	function nextCard() {
+		current = (current + 1) % cards.length;
+		showCard(current);
+	}
+
+	function prevCard() {
+		current = (current - 1 + cards.length) % cards.length;
+		showCard(current);
+	}
+
+	function startAutoSlide() {
+		slideInterval = setInterval(nextCard, 7000);
+	}
+
+	function resetAutoSlide() {
+		clearInterval(slideInterval);
+		startAutoSlide();
+	}
+
+	prevBtn.addEventListener('click', () => {
+		prevCard();
+		resetAutoSlide();
+	});
+
+	nextBtn.addEventListener('click', () => {
+		nextCard();
+		resetAutoSlide();
+	});
+
+	showCard(current);
+	startAutoSlide();
+
+/*TODO: Imrpove TESTOMONIALS*/
+	const testimonials = document.querySelectorAll('.testimonial');
     let currentIndex = 0;
 
     function showTestimonial(index) {
@@ -214,15 +254,61 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     showTestimonial(currentIndex);
-});
 
-const questionButtons = document.querySelectorAll('.question-button');
+/*ROADMAP*/
+	{% for home_section in home_sections %}
+		{% if home_section.id == "roadmap" %}
+			const roadmapData = [
+			{% for step in home_section.milestones %}
+				{
+				title: "{{ step.step | escape }}",
+				content: "{{ step.description | escape }}"
+				}{% unless forloop.last %},{% endunless %}
+			{% endfor %}
+			];
+		{% endif %}
+	{% endfor %}
 
-questionButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const answer = button.nextElementSibling;
-        answer.classList.toggle('show');
-    });
-});
+	const milestones = document.querySelectorAll('.milestone-item');
+	const progressBar = document.getElementById('roadmap-progress');
+	const contentTitle = document.getElementById('roadmap-content-title');
+	const contentDescription = document.getElementById('roadmap-content-description');
 
+	let activeIndex = 0;
+
+	function updateRoadmap(index) {
+		activeIndex = index;
+		milestones.forEach((item, i) => {
+			item.classList.toggle('active', i === index);
+		});
+		contentTitle.textContent = roadmapData[index].title;
+		contentDescription.textContent = roadmapData[index].content;
+		let progress;
+		if (roadmapData.length === 1) {
+			progress = 100;
+		} else {
+			progress = (index / (roadmapData.length - 1)) * 100;
+			if (index === 0 && progress < 15) progress = 15;
+		}
+		
+		if (window.matchMedia('(max-width: 767px)').matches) {
+			progressBar.style.height = progress + '%';
+			progressBar.style.width = '100%';
+		} else {
+			progressBar.style.width = progress + '%';
+			progressBar.style.height = '100%';
+		}
+	}
+
+	function handleResize() {
+  		updateRoadmap(activeIndex);
+	}
+
+	milestones.forEach((item, i) => {
+		item.addEventListener('click', () => updateRoadmap(i));
+	});
+
+	updateRoadmap(0);
+	window.addEventListener('resize', handleResize);
+	});
 </script>

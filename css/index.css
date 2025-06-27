@@ -1,3 +1,5 @@
+section article { padding: 0 1em;}
+
 figure.logo svg {
     width: clamp(250px, 30vw, 500px);
     height: fit-content;
@@ -15,10 +17,43 @@ figure.logo svg {
     }
 }
 
-.buttons-container { position: absolute; left: 1%; }
+.buttons-container { position: absolute; left: 5%; display: flex; flex-direction: column;}
 .buttons-container > figure:nth-child(1) { margin-bottom: 2rem; }
 
 #home { justify-content: space-evenly;}
+
+#home .tooltip {
+    position: relative;
+    cursor: help;
+}
+
+#home .tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2e2e2e;
+    color: #f9f9f9;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 1000;
+    width: 280px;
+    max-width: 580px;
+    text-align: left;
+    pointer-events: none;
+}
+
+ #home .tooltip:hover::after {
+    opacity: 1;
+}
+
 #home figure.logo { align-items: start; }
 #home .arrow-right {
 	position: absolute;
@@ -26,34 +61,103 @@ figure.logo svg {
 	top: -80px;
 }
 
-#jobs { 
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 4rem;
+@keyframes fadeSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(32px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeSlideOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-32px);
+    }
+  }
+
+.hero-product-card { 
+    display: none;
+    flex-direction: column;
+	text-align: left;
+    max-width: clamp(300px, 50%, 750px);
+    gap: 2em;
+    pointer-events: none;
+    border-radius: 25px;
+    padding: 2rem;
+    border: 4px solid var(--clr-green-darker);
+}
+  
+.hero-product-card.exiting {
+    animation: fadeSlideOut 0.8s forwards;
+}
+      
+.hero-product-card.active { 
+    display: flex; 
+    transition: all 0.3s ease;
+    opacity: 1;
+    animation: fadeSlideIn 0.8s forwards;
+    pointer-events: auto; 
+}
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.buttons-container figure {
+  width: 40px;
+  height: 40px;
+  user-select: none;
 }
 
-#jobs .box:last-child { max-width: 700px;}
+#jobs {
+    flex-direction: column;
+}
+
+#jobs article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    width: 80%;
+    max-width: 1100px;
+    align-items: stretch;
+}
 
 .box {
-    flex: 1 1 calc(50% - 2.15rem);
-    padding: 2rem;
-    border-radius: 15px;
-    min-height: 170px;
-    max-height: 200px;
-    min-width: 230px;
-    border: 2px solid var(--clr-green-darker);
+    text-align: center;
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s cubic-bezier(.25,.8,.25,1) !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 250px;
+}
+
+.box:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 6px 24px hsla(265, 54%, 88%, 0.625);
 }
 
 .box h3 {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; 
 }
 
-@media (max-width: 1279px) {
-    .box {
-        flex: 1 1 70%;
-        min-height: none;
-    }
-    #jobs { padding: 1rem; }
+.box p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    line-height: 1.5;
 }
 
 .outfit {
@@ -61,10 +165,10 @@ figure.logo svg {
     font-size: 1.75rem;
 }
 
-.benefits-column h2 { max-width: 700px; font-size: 2em; font-family: 'Plus Jakarta Sans', sans-serif;}
-
 #cta article h2 span { display: block; }
-#cta article ul {
+
+/*TODO: Turned to general class so we should move it*/
+article ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -79,92 +183,15 @@ figure.logo svg {
     width: 7vw;
 }
 
-/*Media queries*/
-@media (max-width: 750px) {
-    h2 { max-width: 320px;}
-    #home .text-section, #jobs>article> * {
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-    }
-    #home .logo { order: 0; align-self: center; }
+#mail-cta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-@media (min-width: 586px) {
-    #home .logo { order: 2 !important; }
-}
-
-@media (max-width: 1200px) {
-    #home .text-section { order: 2; }
-    .arrow-right {
-        display: none;
-    }
-    figure { display: flex; } 
-}
-
-/*Benefits*/
-#benefits article { 
-    padding: 1rem;
-}
-
-.benefits-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 100vw;
-    gap: 1rem;
-}
-
-.benefits-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    text-align: right;
-
-}
-
-.benefits-row-reverse {
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    width: 100%;
-    text-align: left;
-}
-
-.benefits-column {
-    flex: 1;
-    display: flex;
-    gap: 4rem;
-}
-
-.benefits-column.text {
-    flex-direction: column;
-    max-width: 450px;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-.benefits-column {
-    max-width: 700px;
-}
-
-.benefits-column.benefits-image {
-    width: 100%;
-}
-
-.benefits-image svg {
-    max-width: 100%;
-    height: auto;
-}
-
-@media (max-width: 1279px) {
-    .benefits-row, .benefits-row-reverse {
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem;
-        font-size: smaller;
-    }
+.img-container {
+	width: 100%;
+    padding-left: 2em;
+    border-radius: 10% 30% 50% 70%;
 }
 
 /*Testimonial*/
@@ -240,22 +267,6 @@ figure.logo svg {
     right: 15px;
 }
 
-/*QA*/
-.question-button {
-    background: none;
-    width: 100%;
-    text-align: left;
-}
-
-.answer {
-    display: none;
-    padding: 1rem;
-}
-
-.answer.show {
-    display: block;
-}
-
 #virto-supporters {
     min-height: 400px;
 }
@@ -277,10 +288,185 @@ figure.logo svg {
     transform: scale(1.2);
 }
 
+/*ROADMAP*/
+.roadmap-container {
+    position: relative;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
 
-/*Landings*/
+.roadmap-line-bg {
+    position: relative;
+    height: 4px;
+    margin: 32px 0 24px 0;
+    border-radius: 2px;
+}
 
+.roadmap-line-progress {
+    position: absolute;
+    height: 100%;
+    border-radius: 2px;
+    width: 0;
+    transition: width 0.5s;
+}
+
+.milestones-wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    min-width: 600px;
+    top: -20px;
+}
+
+.milestone-item {
+    word-wrap: break-word;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    min-width: 150px;
+    max-width: 280px;
+    cursor: pointer;
+    transition: color 0.3s;
+    padding: 0 1.5rem;
+}
+
+.milestone-item.active {
+    color: var(--clr-green-darker);
+}
+
+.milestone-dot {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--clr-grey);
+    border-radius: 50%;
+    margin-bottom: 6px;
+    transition: background 0.3s, border 0.3s;
+}
+
+.milestone-item.active .milestone-dot {
+    background: var(--clr-green-darker);
+    border-color: var(--clr-green-darker);
+}
+
+.roadmap-content-card {
+    margin-top: 32px;
+    padding: 24px;
+    border-left: 6px solid var(--clr-green-darker);;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border-radius: 5px;
+}
+
+.milestone-label {
+    margin-top: 0.5rem;
+}
+
+.roadmap-content-title {
+    margin-top: 0.25rem;
+}
+
+/*Specific for trial landings*/
 .social-media__links {
     display: flex;
     gap: 2em;
 }
+
+/*Media queries*/
+@media (max-width: 750px) {
+    h2 { max-width: 320px;}
+    #home .text-section, #jobs>article> * {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    #home .logo { order: 0; align-self: center; }
+}
+
+@media (min-width: 586px) {
+    #home .logo { order: 2 !important; }
+}
+
+@media (max-width: 1200px) {
+    #home .text-section { order: 2; }
+    .arrow-right {
+        display: none;
+    }
+    figure { display: flex; } 
+}
+
+/*TODO: try to join media queries in a more compehensive way*/
+@media (max-width: 900px) {
+    #jobs article
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    #jobs article,
+    .milestones-wrapper {
+        grid-template-columns: 1fr;
+        width: 100%;
+        flex-direction: column;
+    }
+    .box {
+        min-height: 120px;
+    }
+    .box,
+    .milestone-item {
+        min-height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+/*Media queries for roadmap*/
+@media (max-width: 767px) {
+    .roadmap-container {
+      overflow-x: visible;
+      padding-bottom: 0;
+    }
+    
+    .roadmap-line-bg {
+      position: absolute;
+      width: 4px;
+      height: calc(100% - 50px);
+      left: 20px;
+      top: 10px;
+      margin: 0 0 40px 0;
+      background: var(--clr-green-darker);
+    }
+    
+    .roadmap-line-progress {
+      width: 100%;
+      height: 0;
+      transition: height 0.5s ease;
+    }
+    
+    .milestones-wrapper {
+      flex-direction: column;
+      min-width: 100%;
+      align-items: flex-start;
+      padding-left: 40px;
+      top: 0;
+      justify-content: flex-start;
+    }
+    
+    .milestone-item {
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 30px;
+      width: 100%;
+      max-width: 100%;
+      text-align: left;
+      padding: 10px 0;
+    }
+    
+    .milestone-dot {
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+    
+    .milestone-label {
+      margin-top: 0;
+    }
+  }

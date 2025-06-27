@@ -1,6 +1,7 @@
 globals:
   go-up: Back to Top
   go-down: Scroll to Bottom
+  apply_url: https://apply.virto.network/
 nav:
   - link: About Us
     route: /about
@@ -14,8 +15,8 @@ nav:
   - link: Blog
     route: /blog
     class: menu-item
-  - link: Go to the app
-    route: https://virto.app/
+  - link: Explore virto-connect
+    route: https://demo.virto.dev/
     class: app-button-link button
  
 footer:
@@ -40,53 +41,47 @@ modal:
     retry: "Please try again."
 home_sections:
   - id: home
-    eyebrow: Facing complications establishing and managing your business?
-    title: <span class="dark-green-text">Create and Manage</span> Your Organization in Minutes
-    paragraph: 'Virto offers you an organizational account that simplifies the creation and management of your organization, allowing you to focus on what truly matters: growing your business.'
-    call_to_action: Learn More
+    products:
+      - eyebrow: No blockchain or backend team? No problem.
+        title: <span class="dark-green-text"><span class="tooltip" data-tooltip="A new model of the internet where users own their data, identities, and assets — built on blockchain technology.">Web3</span> Infrastructure</span> that feels like <span class="tooltip" data-tooltip="The version of the web where people interact through social platforms and centralized services.">Web2</span>
+        paragraph: 'Tired of vendor lock-ins and server crashes? Virto gives you decentralized backend services that just work — <span class="dark-green-text bold">if one server fails, your app stays online.</span>'
+        call_to_action: Book a free 1:1 session
+      - eyebrow: Login with no wallets means no friction.
+        title: Add <span class="dark-green-text">virto-connect</span> in minutes
+        paragraph: 'Our <span class="dark-green-text bold">plug & play Web Component</span> allows users sign up on-chain without needing a wallet. It now supports <span class="dark-green-text bold">passkeys and other passwordless login options</span>, combining Web3-grade security with Web2 simplicity.'
+        call_to_action: Try it free — support included
+      - eyebrow: Build smarter with blockchain
+        title: Coming soon:<span class="dark-green-text"> VOS</span> — the decentralized backend
+        paragraph: 'VOS lets you run backend logic with smart contracts. <span class="dark-green-text bold">Think microservices, but trustless and unstoppable.</span>'
+        call_to_action: Curious? Let’s chat — book a free session
   - id: jobs
-    title: How Virto <br/><span class="light-lavender-text">Does the Work for You</span>
+    title: Is implementing blockchain way too hard?<br/><span class="light-lavender-text">Virto makes it easy for you!</span>
     cards:
-      - title: "Quick and Easy Setup:"
-        content: Create your company in less than 15 minutes, hassle-free.
-      - title: "Simplified Member Management:"
-        content: Organize your team with memberships, assign roles, and manage decisions.
-      - title: "Efficient Payment Reception and Execution:"
-        content: Conduct global transactions securely and quickly.
-      - title: "Advanced Fund Governance:"
-        content: Make informed financial decisions and manage your resources effectively.
-      - title: "Access to Organizational Wallet:"
-        content: Keep your organization's resources and make movements as needed.
-        class: center
+      - title: "It speaks Web2"
+        content: Use the tools and workflows you already know. We made Web3 feel like Web2.
+      - title: "No single point of failure"
+        content: Centralized providers crash — and take everything with them. Virto is decentralized, so your services keep running, always. 
+      - title: "Always here to help"
+        content: Easy to integrate. And if you get stuck, our team’s got your back.
+  
   - id: mail-cta
-    title: Want to be one of the first organizations to have an account with Virto?
-    placeholder_name: Enter your name.
-    placeholder_last_name: Enter your last name.
-    placeholder_email: Enter your email.
-    cta: Join our waiting list!
-  - id: benefits
-    title: Benefits of Using <span class="light-lavender-text">Virto</span>
-    cards:
-      - title: Save Time
-        content: Start your company quickly and reduce time spent on administrative tasks.
-        svg: "Ahorra Tiempo.svg"
-        class: benefits-row
-      - title: Optimize Financial Management
-        content: Maintain clear and precise control over your funds.
-        svg: "Gestion Financiera.svg"
-        class: benefits-row-reverse
-      - title: Simplify Collaboration
-        content: Facilitate communication and coordination within your team.
-        svg: "Colaboracion.svg"
-        class: benefits-row
-      - title: Ensure Security
-        content: Protect your information and transactions with best security practices while maintaining traceability.
-        svg: "Seguridad.svg"
-        class: benefits-row-reverse
-      - title: Strategic Connectivity
-        content: Establish valuable connections with like-minded organizations and promote collaboration opportunities.
-        svg: "Conectividad Estrategica.svg"
-        class: benefits-row
+    title: You can leave your email to know more about Virto!
+    placeholder_email: Write your email here
+    cta: Submit my email to an unknown database or...
+    subtitle: Contact by some other ways
+    socials:
+      - title: E-mail
+        svg: email.svg
+        link: mailto:contact@virto.team
+      - title: Telegram
+        svg: telegram.svg
+        link: https://t.me/+573107887042
+      - title: Element
+        svg: element.svg
+        link: https://www.linkedin.com/company/virto-network/
+      - title: Calendar
+        svg: calendar.svg
+        link: https://calendly.com/virtonetwork
   - id: testimonials
     title: Testimonials
     testimonials:
@@ -96,21 +91,21 @@ home_sections:
       - avatar: https://avatars.githubusercontent.com/u/1329925?v=4
         person: Daniel Olano, CEO of Virto
         message: As the founder of Virto, I have firsthand experience with the benefits of using our blockchain technology. It has facilitated our decision-making process, automated team and payment management, and increased transparency throughout our organization.
-  - id: qa
-    title: Frequently Asked Questions
-    questions:
-      - question: What is Virto?
-        answer: Virto is an organizational account that allows organizations to receive and make payments, as well as co-manage funds transparently among all their members.
-      - question: Who can use Virto?
-        answer: Virto is designed for any type of organization, from small businesses and startups to large corporations and nonprofits that need a solution for collaboratively managing their funds. <a href="/cases/">Learn about our use cases.</a>
-      - question: Is it safe to use Virto for financial transactions?
-        answer: Yes, Virto uses advanced cryptography in its blockchain technology to protect the organization's financial information and transactions.
-      - question: How is the initial setup of a Virto account done?
-        answer: The initial setup of a Virto account is simple. You just need to sign up, add your organization's members, and start using the platform to manage funds.
-      - question: How can I reload funds into my Virto account?
-        answer: To reload funds into your Virto account, log in to your account, select the "Reload funds" option, choose your preferred payment method (bank transfer, credit card, etc.), enter the amount you wish to reload, and confirm the transaction.
-      - question: What do I need to open an account with Virto?
-        answer: To open an account with Virto, you need to provide basic information about your organization, including name, sector, and description. You can also set up your account and add members of your organization.
+  - id: roadmap
+    title: What we're building
+    milestones:
+      - step: 'Just launched: virto-connect'
+        description: We launched with virto-connect and communities, enabling seamless Web3 onboarding and identity management.
+        time: 2025 Q1
+      - step: Virto-connect v2.0
+        description: We are refining passkey-based login and walletless onboarding. Social login integrations (Google, Apple) and restricted sessions are underway.
+        time: 2025 Q2
+      - step: VOS as backend
+        description: VOS will provide smart-contract-capable APIs for businesses, letting each organization run its own backend instance.
+        time: 2025 Q4
+      - step: 'JAM and ZK'
+        description: Soon, VOS will run on JAM, our decentralized runtime. This step will focus on the integration of Zero Knowledge logic for private, off-chain execution.
+        time: 2026
   - id: virto-supporters
     title: Meet Our Supporters
     supporters:
@@ -123,11 +118,15 @@ home_sections:
       - icon: web3foundation.svg
         link: https://web3.foundation/
         title: Web3 Foundation
+#todo: update svg
+#      - icon: bloque.svg
+#        link: https://bloque.app/
+#        title: Bloque
   - id: cta
     eyebrow: Start Now
     title: Take the first step towards your organization's <span class="underlined-element">success with Virto.</span>
-    content: Sign up <strong>before the end of July</strong> and try our platform for free, designed to simplify the creation and management of your business.
-    call_to_action: Sign up now
+    content: Start your <strong>blockchain journey</strong> with us!
+    call_to_action: Just one click!
     socials:
       - title: E-mail
         svg: email.svg
