@@ -14,7 +14,8 @@ data:
   
 {% if home_sections %}
 {% for home_section in home_sections %}
-<section {% if home_section.id == "home" %} id="home">
+{% if home_section.id == "home" %}
+<section id="home">
 	<article class="max animated">
 			{% for product in home_section.products %}
 			<div class="hero-product-card lightest-lavender-text">
@@ -44,7 +45,8 @@ data:
 </section>
 {% endif %}
 
-<section {% if home_section.id == "jobs" %} id="jobs" class="light-green-text">
+{% if home_section.id == "jobs" %}
+<section id="jobs" class="light-green-text">
 	<h2 class="animated center title-max-width">{{ home_section.title }}</h2>
 	<article class="max">
 			{% for card in home_section.cards %}
@@ -57,7 +59,8 @@ data:
 </section>
 {% endif %}
 
-<section {% if home_section.id == "mail-cta" %} id="mail-cta" class="mail light-lavender-bg dark-olive-text">
+{% if home_section.id == "mail-cta" %}
+<section id="mail-cta" class="mail light-lavender-bg dark-olive-text">
 	<article class="animated max">
 		<h3 class="header-1 boldest">{{ home_section.title }}</h3>
 			<form id="mail-form">
@@ -77,7 +80,8 @@ data:
 </section>
 {% endif %}
 
-<section {% if home_section.id == "testimonials" %} id="testimonials" class="light-lavender-bg center">
+{% if home_section.id == "testimonials" %}
+<section id="testimonials" class="light-lavender-bg center">
         <article class="max animated column">
 		<h2 class="dark-lavender-text">{{ home_section.title }}</h2>
             <div class="testimonials-container">
@@ -99,7 +103,8 @@ data:
 </section>
 {% endif %}
 
-<section {% if home_section.id == "roadmap" %} id="roadmap" class="column white-bg">
+{% if home_section.id == "roadmap" %}
+<section id="roadmap" class="column white-bg">
 		<h2>{{ home_section.title }}</h2>
 		<h4 class="grey-text">One piece at a time</h4>
 		<article class="animated max">
@@ -129,7 +134,8 @@ data:
 	  </section>
 {% endif %}
 
-<section {% if home_section.id == "virto-supporters" %} id="virto-supporters" class="whitest-bg">
+{% if home_section.id == "virto-supporters" %}
+<section id="virto-supporters" class="whitest-bg">
 		<article class="max animated column">
 			<h3 class="dark-olive-text boldest header-2">{{ home_section.title }}</h3>
 				<ul class="supporters-list">
@@ -145,14 +151,15 @@ data:
 </section>
 {% endif %}
 
-<section {% if home_section.id == "cta" %} id="cta" class="cta light-lavender-bg">
+{% if home_section.id == "cta" %}
+<section id="cta" class="cta light-lavender-bg">
 	<article class="animated center dark-olive-text">
 		<h3 class="bolder">{{ home_section.eyebrow }}</h3>
 		<h2 class="bolder">
 			<span>{{ home_section.title }}</span>
 		</h2>
 		<h3>{{ home_section.content  }}</h3>
-		<a class="button" href={{ site.data[site.data.lang].globals.apply_url }} >{{ home_section.call_to_action }}</a>
+		<button href={{ site.data[site.data.lang].globals.apply_url }} >{{ home_section.call_to_action }}</button>
 		<ul>
 		{% for social in home_section.socials %}
 			<a class="link-to" title={{ social.title }} href={{ social.link }}>
