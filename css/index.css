@@ -118,6 +118,10 @@ figure.logo svg {
   user-select: none;
 }
 
+.arrow-light {
+    color: var(--clr-white);
+}
+
 #jobs {
     flex-direction: column;
 }
