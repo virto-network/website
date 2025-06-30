@@ -106,7 +106,7 @@ nav a:not(#virto-logo) {
   transition: width 300ms ease-in-out;
 }
 
-.top-nav a:not(.logo):hover::after {
+.top-nav a:not(#virto-logo):hover::after {
   width: 80%;
 }
 
@@ -134,6 +134,9 @@ nav a:not(#virto-logo) {
 @media screen and (max-width: 1300px) {
   .top-nav a:not(.menu-icon) {
     display: none;
+  }
+  .app-button-link {
+    margin-left: 0px;
   }
 }
 
