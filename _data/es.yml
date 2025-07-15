@@ -1,7 +1,7 @@
 globals:
   go-up: Volver arriba
   go-down: Ir al final
-  apply_url: https://apply.virto.network/
+  apply_url: https://forms.gle/pgFVmfbu4zv6qdMs8
 nav:
   - link: Sobre Nosotros
     route: /about

@@ -369,12 +369,6 @@ article ul {
     margin-top: 0.25rem;
 }
 
-/*Specific for trial landings*/
-.social-media__links {
-    display: flex;
-    gap: 2em;
-}
-
 /*Media queries*/
 @media (max-width: 750px) {
     h2 { max-width: 320px;}
