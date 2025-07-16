@@ -159,7 +159,7 @@ data:
 			<span>{{ home_section.title }}</span>
 		</h2>
 		<h3>{{ home_section.content  }}</h3>
-		<button href={{ site.data[site.data.lang].globals.apply_url }} >{{ home_section.call_to_action }}</button>
+		<a class="button" href={{ site.data[site.data.lang].globals.apply_url }} >{{ home_section.call_to_action }}</a>
 		<ul>
 		{% for social in home_section.socials %}
 			<a class="link-to" title={{ social.title }} href={{ social.link }}>

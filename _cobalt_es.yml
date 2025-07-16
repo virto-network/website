@@ -4,12 +4,11 @@ site:
   base_url: https://virto.network/es
   data:
     lang: es
-    calendly: https://calendly.com/katherinelopezvirto/45min
-    apply: https://apply.virto.network/
+    calendly: https://calendly.com/virtonetwork
+    apply: https://forms.gle/pgFVmfbu4zv6qdMs8
 ignore:
   - README.md
   - cobalt*
-  - landings
 posts:
   dir: blog
   rss: rss.xml

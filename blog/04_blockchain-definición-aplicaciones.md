@@ -83,8 +83,7 @@ Por ejemplo, varias universidades alrededor del mundo están adoptando blockchai
 ¿Quieres aplicar los beneficios del Blockchain a tu negocio? En Virto, entendemos tus desafíos. **Regístrate** y cuéntanos tus inquietudes, trabajaremos juntos para ofrecerte **soluciones personalizadas** que realmente funcionen para ti. 
 
 
-<button>
-	<a href="https://forms.gle/hSjzyETwuGMadsaU8" >
+
+<a class="button" href="https://forms.gle/pgFVmfbu4zv6qdMs8" >
 	¡Da el siguiente paso hacia el éxito digital! 🚀
-	</a>
-</button>
+</a>

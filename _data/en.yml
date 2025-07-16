@@ -1,7 +1,7 @@
 globals:
   go-up: Back to Top
   go-down: Scroll to Bottom
-  apply_url: https://apply.virto.network/
+  apply_url: https://forms.gle/pgFVmfbu4zv6qdMs8
 nav:
   - link: About Us
     route: /about

@@ -51,12 +51,3 @@ jobs:
           tar xfv cobalt-*
           rm -rf doc
           ./cobalt build
-
-      - name: Publish Cloudflare
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: website
-          directory: _site
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
