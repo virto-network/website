@@ -4,14 +4,9 @@ description = "Your multi-currency wallet for managing group funds and making qu
 default_language = "en"
 compile_sass = false
 build_search_index = false
-generate_feeds = true
-feed_filenames = ["rss.xml"]
-
 [languages.es]
 title = "Virto Network"
 description = "Tu billetera multimoneda para gestionar fondos en grupo y tomar decisiones rápidas mediante un sistema de votación."
-generate_feeds = true
-feed_filenames = ["rss.xml"]
 
 [extra]
 calendly = "https://calendly.com/virtonetwork"
@@ -36,12 +31,6 @@ route = "/cases"
 class = "menu-item"
 
 [[extra.nav]]
-link_en = "Blog"
-link_es = "Blog"
-route = "/blog"
-class = "menu-item"
-
-[[extra.nav]]
 link_en = "Explore virto-connect"
 link_es = "Explorar virto-connect"
 route = "https://demo.virto.dev/"
@@ -61,11 +50,6 @@ route = "/services"
 link_en = "Use Cases"
 link_es = "Casos de Uso"
 route = "/cases"
-
-[[extra.footer]]
-link_en = "Blog"
-link_es = "Blog"
-route = "/blog"
 
 [[extra.footer]]
 link_en = "Whitepaper"
