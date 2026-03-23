@@ -16,9 +16,6 @@ feed_filenames = ["rss.xml"]
 [extra]
 calendly = "https://calendly.com/virtonetwork"
 apply_url = "https://forms.gle/pgFVmfbu4zv6qdMs8"
-airtable_api_key = "AIRTABLE_API_KEY"
-airtable_base_id = "AIRTABLE_BASE_ID"
-airtable_table_id = "AIRTABLE_TABLE_ID"
 
 [[extra.nav]]
 link_en = "About Us"
@@ -74,18 +71,6 @@ route = "/blog"
 link_en = "Whitepaper"
 link_es = "Whitepaper"
 route = "/docs/whitepaper/"
-
-[extra.modal]
-success_title_en = "Thank you!"
-success_title_es = "¡Gracias!"
-success_message_en = "Your email has been successfully registered!"
-success_message_es = "¡Tu correo ha sido registrado exitosamente!"
-error_title_en = "Oops!"
-error_title_es = "¡Ups!"
-error_message_en = "We encountered an error registering your email."
-error_message_es = "Presentamos un error al registrar tu correo."
-error_retry_en = "Please try again."
-error_retry_es = "Inténtalo nuevamente, por favor."
 
 [extra.globals]
 go_up_en = "Back to Top"

@@ -1,21 +1,5 @@
 {% extends "base.html" %}
 {% block title %}Services - {{ config.title }}{% endblock %}
-{% block modal %}
-<dialog data-modal class="light-green-bg">
-	<span class="close-button boldest">X</span>
-	<div id="modal-message" class="center"></div>
-	<template data-msg="success">
-		<img src="/img/success.svg" alt="success" />
-		{% if lang == "es" %}<h2>{{ config.extra.modal.success_title_es }}</h2><h3>{{ config.extra.modal.success_message_es }}</h3>
-		{% else %}<h2>{{ config.extra.modal.success_title_en }}</h2><h3>{{ config.extra.modal.success_message_en }}</h3>{% endif %}
-	</template>
-	<template data-msg="error">
-		<img src="/img/error.svg" alt="error" />
-		{% if lang == "es" %}<h2>{{ config.extra.modal.error_title_es }}</h2><h3>{{ config.extra.modal.error_message_es }}</h3><h3 class="bolder">{{ config.extra.modal.error_retry_es }}</h3>
-		{% else %}<h2>{{ config.extra.modal.error_title_en }}</h2><h3>{{ config.extra.modal.error_message_en }}</h3><h3 class="bolder">{{ config.extra.modal.error_retry_en }}</h3>{% endif %}
-	</template>
-</dialog>
-{% endblock %}
 {% block content %}
 {% set data = load_data(path="data/" ~ lang ~ ".yml") %}
 
@@ -129,12 +113,6 @@ section { display: flex; gap: 2em; }
 		<div class="column">
 			<p>{{ service.paragraph }}</p>
 			<h3 class="bolder">{{ service.strong_paragraph }}</h3>
-			<form id="mail-form">
-				<input type="text" name="contactName" placeholder="{{ service.placeholder_name }}">
-				<input type="text" name="contactLastName" placeholder="{{ service.placeholder_last_name }}">
-				<input type="email" name="contactEmail" placeholder="{{ service.placeholder_email }}" required>
-				<button type="submit" id="mail-button" class="bolder dark-green-bg">{{ service.cta }}</button>
-			</form>
 		</div>
 		<figure class="cta_services--svg"><img src="/svg/dancingperson.svg" alt="dancing person"></figure>
 	</article>
@@ -144,39 +122,3 @@ section { display: flex; gap: 2em; }
 {% endfor %}
 {% endblock %}
 
-{% block scripts %}
-<script>
-const AIRTABLE_CONFIG = {
-	apiKeyAirtable: '{{ config.extra.airtable_api_key }}',
-	baseId: '{{ config.extra.airtable_base_id }}',
-	table: '{{ config.extra.airtable_table_id }}'
-};
-const modal = document.querySelector('[data-modal]');
-const closeButton = document.querySelector('.close-button');
-const modalMessage = document.getElementById('modal-message');
-function openModal(type) { const msg = modal.querySelector(`[data-msg=${type}]`); modalMessage.replaceChildren(msg.content.cloneNode(true)); modal.showModal(); }
-if (closeButton) closeButton.addEventListener('click', () => modal.close());
-async function handleFormSubmit(event) {
-	event.preventDefault();
-	const form = event.target;
-	const contactEmail = form.elements['contactEmail'].value;
-	const submitButton = form.querySelector('button[type="submit"]');
-	const orig = submitButton.textContent;
-	if (!contactEmail || !contactEmail.includes('@')) { openModal('error'); return; }
-	submitButton.disabled = true; submitButton.textContent = '...';
-	try {
-		const response = await fetch(`https://api.airtable.com/v0/${AIRTABLE_CONFIG.baseId}/${AIRTABLE_CONFIG.table}`, {
-			method: 'POST', headers: { 'Authorization': `Bearer ${AIRTABLE_CONFIG.apiKeyAirtable}`, 'Content-Type': 'application/json' },
-			body: JSON.stringify({ records: [{ fields: { "Mail": contactEmail } }] })
-		});
-		if (!response.ok) throw new Error('fail');
-		form.reset(); openModal('success');
-	} catch (e) { console.error(e); openModal('error'); }
-	finally { submitButton.disabled = false; submitButton.textContent = orig; }
-}
-document.addEventListener('DOMContentLoaded', function() {
-	const f = document.getElementById('mail-form');
-	if (f) f.addEventListener('submit', handleFormSubmit);
-});
-</script>
-{% endblock %}

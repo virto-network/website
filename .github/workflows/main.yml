@@ -19,7 +19,3 @@ jobs:
 
       - name: Build site
         run: zola build
-        env:
-          AIRTABLE_API_KEY: ${{ vars.AIRTABLE_API_KEY }}
-          AIRTABLE_BASE_ID: ${{ vars.AIRTABLE_BASE_ID }}
-          AIRTABLE_TABLE_ID: ${{ vars.AIRTABLE_TABLE_ID }}
