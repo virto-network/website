@@ -1,32 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 :root {
     --clr-blackest: #000;
     --clr-grey: #90A19C;
     --clr-whitest: #FFFFFF;
     --clr-white: #F3F5F4;
-    --clr-green-darker: hsl(125, 52%, 56%);
-    --clr-green-lighter: hsl(117, 69%, 82%);
-    --clr-olive-darker: hsl(163, 49%, 14%);
+    --clr-green-darker: hsl(160, 65%, 45%);
+    --clr-green-lighter: hsl(160, 50%, 75%);
+    --clr-terminal-green: hsl(150, 80%, 55%);
+    --clr-olive-darker: #071914;
     --clr-olive-medium: hsl(157, 41%, 19%);
     --clr-olive-lighter: hsl(160, 8%, 79%);
     --clr-lavender-darker: #8d52cb;
     --clr-lavender-lighter: hsl(266, 55%, 76%);
     --clr-lavender-lightest: hsl(266, 55%, 88%);
     --clr-blue-dark: hsl(200, 96%, 55%);
-	--clr-blue-light: hsl(196, 80%, 86%);
+    --clr-blue-light: hsl(196, 80%, 86%);
+
+    /* Glass variables */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-blur: 12px;
+    --glass-glow: 0 0 20px rgba(45, 212, 140, 0.15);
+
     --nav-height: calc(4rem + 2vh);
     --font-primary: 'Outfit', sans-serif;
     --font-secondary: 'Plus Jakarta Sans', sans-serif;
-/* The names of the font-sizes variables are temporary and subject to changes and suggestions */
+    --font-mono: 'JetBrains Mono', monospace;
+
     --font-size-main-title: clamp(3rem, 6vw, 5.25rem);
     --font-size-title-page: clamp(2rem, 5vw, 3.25rem);
     --font-size-small-title: clamp(1.3rem, 3vw, 2rem);
     --font-size-paragraph: clamp(1rem, 2vw, 1.2rem);
     --font-size-subtitle: clamp(1.1rem, 3vw, 1.5rem);
     --font-size-button: clamp(1rem, 3vw, 1.3rem);
-/*Font weights*/
+
     --font-weight-300: 300;
     --font-weight-400: 400;
     --font-weight-500: 500;

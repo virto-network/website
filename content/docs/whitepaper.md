@@ -2,6 +2,7 @@
 title = "Local Incentives Protocol"
 template = "docs.html"
 path = "docs/whitepaper"
+weight = 99
 +++
 
 # Local Incentives Protocol

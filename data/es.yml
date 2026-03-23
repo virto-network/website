@@ -1,310 +1,136 @@
-globals:
-  go-up: Volver arriba
-  go-down: Ir al final
-  apply_url: https://forms.gle/pgFVmfbu4zv6qdMs8
-nav:
-  - link: Sobre Nosotros
-    route: /about
-    class: menu-item
-  - link: Servicios
-    route: /services
-    class: menu-item
-  - link: Casos de Uso
-    route: /cases
-    class: menu-item
-  - link: Blog
-    route: /blog
-    class: menu-item
-  - link: Explorar virto-connect
-    route: https://demo.virto.dev/
-    class: app-button-link button
-footer:
-  - link: Sobre Nosotros
-    route: /about
-  - link: Servicios
-    route: /services
-  - link: Casos de Uso
-    route: /cases
-  - link: Blog
-    route: /blog/
-  - link: Whitepaper
-    route: /docs/whitepaper.html
-modal:
-  success:
-    title: "¡Gracias!"
-    message: "¡Tu correo ha sido registrado exitosamente!"
-  error:
-    title: "¡Ups!"
-    message: "Presentamos un error al registrar tu correo."
-    retry: "Inténtalo nuevamente, por favor."
-home_sections:
-  - id: home
-    products:
-      - eyebrow: ¿No tenés equipo de blockchain ni backend? No hay problema.
-        title: <span class="dark-green-text">Infraestructura <span class="tooltip" data-tooltip="Un nuevo modelo de internet donde los usuarios son dueños de sus datos, identidades y activos — construido sobre tecnología blockchain.">Web3</span></span> que se siente como <span class="tooltip" data-tooltip="La etapa de la web donde las personas interactúan a través de plataformas sociales y servicios centralizados.">Web2</span>
-        paragraph: '¿Cansado de depender de proveedores centralizados y caídas de servidores? Virto te ofrece servicios de backend descentralizados que simplemente funcionan — <span class="dark-green-text bold">si un servidor falla, tu app sigue en línea.</span>'
-        call_to_action: Contáctanos para agendar una sesión 1:1
-      - eyebrow: Iniciar sesión sin wallets significa sin fricción.
-        title: Integrá <span class="dark-green-text">virto-connect</span> en minutos
-        paragraph: 'Nuestro <span class="dark-green-text bold">Web Component listo para usar</span> permite que tus usuarios se registren en blockchain sin necesidad de una wallet. Ahora soporta <span class="dark-green-text bold">passkeys y otros métodos de login sin contraseñas</span>, combinando seguridad Web3 con la simplicidad de Web2.'
-        call_to_action: Probalo gratis — incluye soporte
-      - eyebrow: Construí más inteligente con blockchain
-        title: Próximamente:<span class="dark-green-text">VOS</span> — el backend descentralizado
-        paragraph: 'VOS te permite ejecutar lógica de backend con smart contracts. <span class="dark-green-text bold">Pensalo como microservicios, pero sin intermediarios y a prueba de fallos.</span>'
-        call_to_action: ¿Te da curiosidad? ¡Contáctanos!
-  - id: jobs
-    title: ¿Implementar blockchain es muy complicado?<br/><span class="light-lavender-text">¡Virto lo simplifica para ti!</span>
-    cards:
-      - title: "Habla Web2"
-        content: Usá las herramientas y flujos de trabajo que ya conocés. Hicimos que Web3 se sienta como Web2.
-      - title: "Sin punto único de falla"
-        content: Los proveedores centralizados se caen — y arrastran todo con ellos. Virto es descentralizado, así que tus servicios siguen funcionando, siempre.
-      - title: "Siempre te acompañamos"
-        content: Es fácil de integrar. Y si necesitás ayuda, nuestro equipo está para apoyarte.
+hero:
+  eyebrow: "$ npm install @virto/sdk"
+  title_pre: "Construye apps Web3"
+  title_accent: "sin la complejidad"
+  paragraph: Integra funcionalidades descentralizadas usando una API TypeScript que ya conoces. VirtoSDK maneja blockchain, identidad y pagos para que te enfoques en tu producto.
+  cta: Empezar
+  cta_link: /docs
 
-  - id: mail-cta
-    title: Ingresa tu email para saber más sobre Virto!
-    placeholder_email: Escribe tu email aquí
-    cta: Dejar mi email en una base de datos desconocida o...
-    subtitle: Contactarme por otros medios
-    socials:
-      - title: E-mail
-        svg: email.svg
-        link: mailto:contact@virto.team
-      - title: Telegram
-        svg: telegram.svg
-        link: https://t.me/+573107887042
-      - title: Element
-        svg: element.svg
-        link: https://www.linkedin.com/company/virto-network/
-      - title: Calendar
-        svg: calendar.svg
-        link: https://calendly.com/virtonetwork
-  - id: testimonials
-    title: Testimonios
-    testimonials:
-      - avatar: https://avatars.githubusercontent.com/u/5241972?v=4
-        person: David Barinas, YCombinator Founder
-        message: A través de Virto abrí la cuenta organizacional de mi empresa de manera rápida, lo que me permitió recibir y realizar pagos de manera eficiente sin limitaciones.
-      - avatar: https://avatars.githubusercontent.com/u/1329925?v=4
-        person: Daniel Olano, CEO de Virto
-        message: Como fundador de Virto, he experimentado de primera mano los beneficios de utilizar nuestra tecnología blockchain. Ha facilitado nuestro proceso de toma de decisiones, automatizado el manejo de mi equipo y pagos, y aumentado la transparencia en toda nuestra organización.
-  - id: roadmap
-    title: ¿Qué estamos construyendo?
-    milestones:
-      - step: 'Recién lanzado: virto-connect'
-        description: Lanzamos virto-connect y comunidades, habilitando un onboarding y gestión de identidad Web3 sin interrupciones.
-        time: 2025 Q1
-      - step: Virto-connect v2.0
-        description: Estamos refinando el inicio de sesión basado en passkey y el onboarding sin billetera. Las integraciones de inicio de sesión social (Google, Apple) y las sesiones restringidas están en marcha.
-        time: 2025 Q2
-      - step: VOS como backend
-        description: VOS proporcionará APIs con capacidad de contrato inteligente para empresas, permitiendo que cada organización ejecute su propia instancia de backend.
-        time: 2025 Q4
-      - step: 'JAM y ZK'
-        description: Pronto, VOS se ejecutará en JAM, nuestro tiempo de ejecución descentralizado. También integraremos la lógica Zero Knowledge para una ejecución privada y fuera de la cadena.
-        time: 2026
-  - id: virto-supporters
-    title: Conoce a Quienes nos Apoyan
-    supporters:
-      - icon: polkadot.svg
-        link: https://polkadot.network/
-        title: Polkadot
-      - icon: kusama.svg
-        link: https://kusama.network/
-        title: Kusama
-      - icon: web3foundation.svg
-        link: https://web3.foundation/
-        title: Web3 Foundation
-  - id: cta
-    eyebrow: Comienza Ahora
-    title: Da el primer paso hacia el éxito de tu <span class="underlined-element">organización con Virto.</span>
-    content: ¡Comienza tu <strong>camino en blockchain</strong> con nosotros!
-    call_to_action: ¡Sólo un click!
-    socials:
-      - title: E-mail
-        svg: email.svg
-        link: mailto:contact@virto.team
-      - title: Linkedin
-        svg: linkedin.svg
-        link: https://www.linkedin.com/company/virto-network/
+  code: |
+    <span class="keyword">import</span> { createClient } <span class="keyword">from</span> <span class="string">'@virto/sdk'</span>
+
+    <span class="keyword">const</span> virto = <span class="func">createClient</span>({
+      network: <span class="string">'kreivo'</span>,
+    })
+
+    <span class="comment">// Crear una comunidad con gobernanza</span>
+    <span class="keyword">const</span> community = <span class="keyword">await</span> virto.communities.<span class="func">create</span>({
+      name: <span class="string">'Mi DAO'</span>,
+      membership: <span class="string">'open'</span>,
+    })
+
+features:
+  title: "Por qu\xE9 los desarrolladores eligen Virto"
+  subtitle: Una experiencia de desarrollo familiar para infraestructura descentralizada.
+  cards:
+    - icon: "> _"
+      title: API Familiar
+      description: SDK TypeScript-first con patrones async/await. Si conoces fetch, conoces Virto.
+    - icon: "{ }"
+      title: "Dise\xF1o Modular"
+      description: "Usa solo lo que necesitas: pagos, identidad, gobernanza, o todos juntos."
+    - icon: "0x"
+      title: Impulsado por Kreivo
+      description: Construido sobre Kreivo, una blockchain optimizada para economias comunitarias y casos de uso reales.
+    - icon: "#!"
+      title: Sin Wallet Requerida
+      description: Incorpora usuarios con passkeys y login social. Sin extensiones, sin seed phrases.
+
+how_it_works:
+  title: "C\xF3mo funciona"
+  steps:
+    - number: "01"
+      title: Instala
+      description: Agrega el SDK a tu proyecto con npm o yarn. Cero dependencias nativas.
+    - number: "02"
+      title: Conecta
+      description: "Inicializa un cliente apuntando a Kreivo. Auth, pagos y gobernanza est\xE1n integrados."
+    - number: "03"
+      title: Despliega
+      description: "Despliega tu app. Virto maneja la infraestructura descentralizada por detr\xE1s."
+
+kreivo_teaser:
+  title: Impulsado por Kreivo
+  description: "Kreivo es una blockchain dise\xF1ada para econom\xEDas comunitarias. Producci\xF3n de bloques en tiempo real, gobernanza on-chain y soporte nativo multi-moneda."
+  block_counter: "#1,842,567"
+  block_label: "bloque m\xE1s reciente"
+
+supporters:
+  title: Respaldado por
+  list:
+    - icon: polkadot.svg
+      link: https://polkadot.network/
+      title: Polkadot
+    - icon: kusama.svg
+      link: https://kusama.network/
+      title: Kusama
+    - icon: web3foundation.svg
+      link: https://web3.foundation/
+      title: Web3 Foundation
+
+cta:
+  title: "Listo para construir?"
+  description: "Empieza a construir aplicaciones descentralizadas en minutos, no meses."
+  button: Empezar
+  button_link: /docs
+  socials:
+    - title: GitHub
+      svg: website.svg
+      link: https://github.com/virto-network
+    - title: E-mail
+      svg: email.svg
+      link: mailto:contact@virto.team
+    - title: Linkedin
+      svg: linkedin.svg
+      link: https://www.linkedin.com/company/virto-network/
+
+kreivo:
+  hero:
+    title_pre: Conoce
+    title_accent: Kreivo
+    description: "Una blockchain dise\xF1ada para econom\xEDas comunitarias. Kreivo proporciona la infraestructura descentralizada que impulsa las aplicaciones VirtoSDK."
+  architecture:
+    title: Arquitectura
+    cards:
+      - title: Parachain Runtime
+        description: "Kreivo funciona como una parachain de Polkadot, heredando seguridad compartida mientras mantiene soberan\xEDa sobre su propio estado y l\xF3gica."
+      - title: Community Pallets
+        description: "M\xF3dulos on-chain nativos para membres\xEDas, gobernanza y tesorer\xEDas multi-moneda. Construidos para organizaciones reales."
+      - title: VOS (Virto Operating System)
+        description: "Una capa de ejecuci\xF3n descentralizada que ejecuta l\xF3gica de backend como servicios inteligentes. Piensa en microservicios, pero sin intermediarios."
+  dashboard:
+    title: La Red de un Vistazo
+    metrics:
+      - id: block-height
+        value: "1,842,567"
+        label: Altura de Bloque
+      - id: communities
+        value: "128"
+        label: Comunidades Activas
+      - id: transactions
+        value: "4.2M"
+        label: Transacciones Totales
+      - id: validators
+        value: "7"
+        label: Collators
+
 about_us:
-  - id: hero
-    title: "Nuestra Misión: Ayudarte en Tu Viaje hacia el Éxito"
-  - id: issue
-    title: "El desafío: Un Mundo Complejo"
-    paragraph_one: En el mundo acelerado y exigente de hoy, te enfrentas a desafíos que pueden <i>ralentizar</i> el progreso de tu organización.
-    paragraph_two: Los altos costos de comisión, las demoras en las transacciones internacionales y la burocracia excesiva pueden parecer obstáculos insuperables.
-  - id: virto
-    title: "Tu Aliado en el Camino: Virto"
-    paragraph_one: En este escenario, surge Virto, proporcionando las herramientas necesarias para <span class="bolder dark-green-text">transformar estos desafíos en oportunidades</span>.
-    paragraph_two: A través de nuestra avanzada plataforma, facilitamos una gestión organizacional más eficiente y segura.
-    paragraph_three: "Podrás enfocarte en lo que realmente importa:" 
-    paragraph_four: <span class="bolder dark-green-text">El crecimiento de tu organización</span>.
-  - id: action-plan
-    title: "El Camino Claro: Tu Plan de Acción"
-    subtitle: "Para comenzar tu transformación, Virto te ofrece pasos concretos y simples:"
-    step_list:
-      - content: Regístrate y configura tu billetera organizacional en pocos minutos.
-        icon: step1.svg
-      - content: Gestiona pagos y fondos.
-        icon: step2.svg
-      - content: Fomenta la toma de decisiones democrática y colaborativa dentro de tu equipo.
-        icon: step3.svg
-  - id: team
-    title: Nuestro Equipo de Visionarios
-    subtitle: En Virto contamos con un selecto grupo de profesionales que creen en las nuevas tecnologías, y como estás son soluciones eficientes.
-    core_team:
-      - name: <span>Daniel</span><br> Olano
+  hero:
+    title: "Construyendo infraestructura para econom\xEDas comunitarias"
+  mission:
+    text: "Virto construye las herramientas e infraestructura que permiten a las comunidades coordinarse, gobernarse y realizar transacciones, sin depender de intermediarios centralizados. Creemos que el futuro de las organizaciones es descentralizado, transparente y accesible para todos."
+  team:
+    title: Equipo Principal
+    members:
+      - name: Daniel Olano
         link: https://github.com/olanod
         avatar: https://avatars.githubusercontent.com/u/1329925?v=4
-        role: Software Engineer
-      - name: <span>Pablo Andrés</span><br> Dorado Suárez
+        role: Fundador & CEO
+      - name: "Pablo Andr\xE9s Dorado Su\xE1rez"
         link: https://github.com/pandres95
         avatar: https://avatars.githubusercontent.com/u/2502577?v=4
         role: Blockchain Engineer
-      - name: <span>David</span><br> Barinas
+      - name: David Barinas
         link: https://github.com/S0c5
         avatar: https://avatars.githubusercontent.com/u/5241972?v=4
         role: Software Engineer
-  - id: cta_about
-    title: Únete y Transforma
-    subtitle: Da el primer paso hacia una gestión más eficiente y segura.
-    paragraph: Con nuestra prueba gratuita, podrás experimentar cómo nuestra plataforma puede aliviar los desafíos de tu día a día.
-    call_to_action: Regístrate en Virto
-use_cases:
-  - id: hero
-    title: ¿En qué casos usas Virto? 
-    paragraph: En Virto <strong>el compromiso es tranformar</strong> la manera en que las organizaciones gestionan sus recursos y toman decisiones, desde el desarrollo de una cuenta organizacional a sistema para poder tomar decisiones sobre los recursos.
-    subtitle: <strong> La solución de Virto aplica a varios escenarios. </strong> Acá te contamos 👇
-  - id: cases
-    cases:
-      - title: Crowdfunding, acceso a financiamiento
-        subtitle: <strong>¡Emprende con confianza usando Virto para acceder al financiamiento que necesitas!</strong> 
-        description: Crea una cuenta en nuestro ecosistema y presenta propuestas de financiamiento para recaudar fondos y gestionar recursos de forma transparente.
-        tag_one: Emprendimientos
-        tag_two: Transparencia
-        tag_class: lavender
-        example_title: Te lo explicamos con un ejemplo 👇
-        example: Imagina un emprendimiento que abre una cuenta en Virto para crear su perfil en la red blockchain. Con nuestra plataforma, pueden presentar propuestas de financiamiento a las tesorerías y obtener los fondos necesarios para poner en marcha su idea. Además, logran evidenciar resultados y gestionar recursos de manera transparente, lo que genera confianza entre los inversores y la comunidad.
-        img: "../img/financiamiento.jpg"
-        button_more: Ver más
-        button_contact: Contáctanos
-      - title: Organizaciones sin fines de lucro
-        subtitle: <strong>¡Virto asegura máxima transperencia en los fondos de ONGs!</strong>
-        description: Virto facilita a los miembros de tu ONG la capacidad para proponer sobre las decisiones cruciales del manejo de donaciones y la distribución de los fondos.
-        tag_one: ONG
-        tag_two: Transparencia
-        tag_class: light-green
-        example_title: Te lo explicamos con un ejemplo 👇
-        example: Imagina una ONG que utiliza Virto para gestionar sus donaciones y tomar decisiones clave sobre sus proyectos, garantizando la transparencia y la participación de todos los integrantes. Con Virto, cada miembro tiene la oportunidad de contribuir a la dirección estratégica de la organización y asegurar que los recursos se utilicen de manera efectiva y ética.
-        img: "../img/ong.jpg"
-        button_more: Ver más
-        button_contact: Contáctanos
-      - title: Validación de ideas para startups
-        subtitle: <strong>¡Con Virto haces realidad tus ideas más innovadoras!</strong>
-        description: Los fundadores de startups pueden crear una cuenta organizativa en nuestra plataforma para validar su negocio. Virto te ayuda a recibir pagos, asegurar financiamiento y proponer, votar y financiar ideas.
-        tag_one: Startups
-        tag_two: Menos costos
-        tag_class: green
-        example_title: Te lo explicamos con un ejemplo 👇
-        example: Imagina una startup que crea una cuenta en Virto para validar su modelo de negocio. Desde la gestión de pagos de clientes potenciales hasta la recepción de inversiones, nuestra plataforma proporciona las herramientas necesarias. Además, empieza a tomar decisiones de manera colaborativa sobre los recursos. 
-        img: "../img/startups.jpg"
-        button_more: Ver más
-        button_contact: Contáctanos
-      - title: Equipos Autogestionados
-        subtitle: <strong>¡Empodera a tus equipos para tomar decisiones autónomas y efectivas!</strong>
-        description: Con Virto, los miembros pueden proponer y votar proyectos, optimizar operaciones y gestionar recursos con el presupuesto asignado.
-        tag_one: Equipos
-        tag_two: Independencia
-        tag_class: blue
-        example_title: Te lo explicamos con un ejemplo 👇
-        example: Imagina un equipo de producto dentro de tu empresa utilizando Virto para recibir su presupuesto. Con nuestra plataforma, el equipo puede tomar decisiones sobre cómo utilizar estos recursos, ya sea para proyectos específicos o para optimizar operaciones, asegurando así una gestión eficiente y transparente.
-        img: "../img/equipos.jpg"
-        button_more: Ver más
-        button_contact: Contáctanos
-      - title: Proyectos de código abierto
-        subtitle: <strong>¡Únete a la comunidad de desarrolladores innovadores en proyectos de código abierto!</strong>
-        description: Con Virto, contribuye y recibe recompensas justas por tus aportaciones, proponiendo y definiendo sistemas de recompensas transparentes.
-        tag_one: Desarrolladores
-        tag_two: Innovación
-        tag_class: olive
-        example_title: Te lo explicamos con un ejemplo 👇
-        example: Imagina una comunidad de desarrolladores de software que utiliza Virto para recompensar a aquellos que contribuyen al proyecto de código abierto. Definen reglas claras y transparentes a través del sistema de toma de decisiones de Virto para garantizar la equidad y la transparencia en la distribución de recompensas.
-        img: "../img/desarrolladores.jpg"
-        button_more: Ver más
-        button_contact: Contáctanos
-      - title: Gobernanza en proyectos Blockchain
-        subtitle: <strong>¡Virto te ayuda a impulsar decisiones más efectivas y democráticas!</strong>
-        description: Empodera a los miembros de tu comunidad blockchain, permiteles proponer proyectos y votar sobre los mismos. ¡Obtén su máximo potencial en pro del desarrollo de tu comunidad!  
-        tag_one: Comunidades Blockchain
-        tag_two: Seguridad
-        tag_class: olive
-        example_title: Te lo explicamos con un ejemplo 👇
-        example: Imagina a los miembros de tu plataforma blockchain  utilizando Virto para proponer innovaciones y votar sobre mejoras en la red, tales como ajustes en las tarifas.
-        img: "../img/gobernanza.jpg"
-        button_more: Ver más
-        button_contact: Contáctanos
-      - title: Creación y administración de token
-        subtitle: <strong>¡Lleva la innovación financiera a un siguiente nivel con Virto!</strong>
-        description: Crea y administra tu propio token usando la plataforma de Virto. Haz click en Ver más para conocer todos los beneficios.
-        tag_one: Startups
-        tag_two: Tokens
-        tag_class: green
-        example_title: Te lo explicamos con un ejemplo 👇
-        example: Imagina que tu startup crea un token para su plataforma de ecommerce. Este token te permite reducir los costos transaccionales en comparación con los mercados tradicionales. Usando Virto, puedes tomar decisiones clave sobre la emisión y las políticas de uso del token. Esto optimiza tus operaciones y asegura una gestión transparente y participativa de tus recursos digitales. Además, puedes ofrecer recompensas y descuentos exclusivos a tus clientes, fomentando la lealtad y atrayendo a nuevos usuarios interesados en beneficios únicos. 
-        img: "../img/token.jpg"
-        button_more: Ver más
-        button_contact: Contáctanos
-  - id: cta
-    eyebrow: Comienza ahora <br> <span class="dark-lavender-text"> Da el primer paso hacia el éxito de tu organización con Virto</span>
-    title: ¿Quieres explorar un nuevo caso de uso? <br> ¡Agenda una llamada con nuestro equipo!
-    cta: Más información
-services:
-  - id: intro
-    title_part_one: "Transforma tu Gestión:"
-    title_part_two: <span class="lightest-lavender-text">Rápido, Seguro y con Menos Costos</span>
-    paragraph: En Virto, transformamos tu capacidad de operar y administrar recursos, permitiéndote alcanzar metas con mayor rapidez y menos esfuerzo.
-    call_to_action: Nuestra plataforma te permite
-  - id: key_features
-    list:
-      - title: 'Billetera Organizacional:'
-        content: Abre una billetera digital para tu organización en pocos pasos, disponible en múltiples monedas.
-        class: 
-      - title: 'Pagos Virto:'
-        content: Flexibilidad y alcance global en los pagos, incluyendo criptomonedas.
-        class: align-right
-      - title: 'Administración de Fondos:'
-        content: Gestión eficiente y transparente a través de un sistema de membresías colaborativas.
-        class: 
-    last-title: ¡Tomar decisiones en equipo nunca fue tan fácil!
-  - id: optimize_resources
-    title: Maximiza la Eficiencia de tus Recursos con Virto
-    paragraph: 'A través de Virto, optimizarás el uso de tus recursos financieros y mejorarás la colaboración interna:'
-    list:
-      - title: Transparencia Total
-        content: Todos los movimientos y decisiones son registrados, asegurando integridad y claridad.
-        img: 'all_ok.svg'
-      - title: Administración Colaborativa de Fondos
-        content: Permite a los miembros coadministrar recursos, manteniendo un control claro y detallado sobre cada operación.
-        img: 'group.svg'
-      - title: Control Definido
-        content: Establece roles y permisos específicos para garantizar una gestión adecuada y segura de tus activos.
-        img: 'rol_managment.svg'
-  - id: allies
-    title_part_one: "Innovación y Seguridad:"
-    title_part_two: <span class="dark-green-text">Tu Aliado en la Gestión Remota</span>
-    paragraph: Somos Virto, <strong>pioneros en implementar infraestructura web 3</strong> para proporcionar una plataforma robusta y segura.
-    strong_paragraph: Nuestras herramientas están diseñadas para superar los desafíos de la gestión remota, reduciendo costos y elevando la seguridad en todas tus operaciones organizacionales.
-    cta: Conoce nuestro Protocolo
-    href: ./../docs/whitepaper.html
-  - id: cta_services
-    title: "Actúa Ahora: Simplifica, Asegura y Economiza con Virto."
-    subtitle: ¡El momento es ahora!
-    paragraph: Regístrate en Virto antes de que finalice julio y experimenta cómo nuestra plataforma transforma la gestión de tu organización con una prueba gratuita.
-    strong_paragraph: Disfruta de configuración rápida y soporte continuo para asegurar una transición eficiente hacia una gestión más efectiva y rentable.
-    placeholder_name: Ingresa tu nombre.
-    placeholder_last_name: Ingresa tu apellido.
-    placeholder_email: Ingresa tu correo electrónico.
-    cta: ¡Ingresa a nuestra lista de espera!
-

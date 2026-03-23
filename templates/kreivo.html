@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Kreivo - {{ config.title }}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="/css/kreivo.css">
+{% endblock %}
+
+{% block content %}
+{% set data = load_data(path="data/" ~ lang ~ ".yml") %}
+{% set kreivo = data.kreivo %}
+
+<section id="kreivo-hero" class="grid-bg">
+	<h1 class="animated">{{ kreivo.hero.title_pre }} <span class="accent">{{ kreivo.hero.title_accent }}</span></h1>
+	<p class="animated">{{ kreivo.hero.description }}</p>
+	<a class="button animated" href="/docs">{% if lang == "es" %}Empezar a construir{% else %}Start Building{% endif %}</a>
+</section>
+
+<section id="architecture">
+	<h2 class="animated">{{ kreivo.architecture.title }}</h2>
+	<div class="arch-grid animated">
+		{% for card in kreivo.architecture.cards %}
+		<div class="glass-card">
+			<h3>{{ card.title }}</h3>
+			<p>{{ card.description }}</p>
+		</div>
+		{% endfor %}
+	</div>
+</section>
+
+<section id="dashboard">
+	<h2 class="animated">{{ kreivo.dashboard.title }}</h2>
+	<div class="dashboard-grid animated">
+		{% for metric in kreivo.dashboard.metrics %}
+		<div class="glass-card" id="{{ metric.id }}">
+			<div class="metric-value">{{ metric.value }}</div>
+			<div class="metric-label">{{ metric.label }}</div>
+		</div>
+		{% endfor %}
+	</div>
+</section>
+
+{% endblock %}

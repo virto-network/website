@@ -1,241 +1,93 @@
 {% extends "base.html" %}
 
-{% block title %}{{ section.title | default(value="Virto Network") }}{% endblock %}
-
+{% block title %}{{ section.title | default(value="Virto Network") }} - Developer Platform{% endblock %}
 
 {% block content %}
 {% set data = load_data(path="data/" ~ lang ~ ".yml") %}
-{% set home_sections = data.home_sections %}
+{% set hero = data.hero %}
+{% set features = data.features %}
+{% set how = data.how_it_works %}
+{% set kreivo = data.kreivo_teaser %}
+{% set supporters = data.supporters %}
+{% set cta = data.cta %}
 
-{% for home_section in home_sections %}
+<section id="hero" class="grid-bg">
+	<article class="animated">
+		<div class="hero-text">
+			<span class="eyebrow">{{ hero.eyebrow }}</span>
+			<h1>{{ hero.title_pre }} <span class="accent">{{ hero.title_accent }}</span></h1>
+			<p>{{ hero.paragraph }}</p>
+			<a class="button" href="{{ hero.cta_link }}">{{ hero.cta }}</a>
+		</div>
+		<div class="hero-code">
+			<div class="code-block">{{ hero.code | safe }}</div>
+		</div>
+	</article>
+</section>
 
-{% if home_section.id == "home" %}
-<section id="home">
-	<article class="max animated">
-		{% for product in home_section.products %}
-		<div class="hero-product-card lightest-lavender-text">
-			<p>{{ product.eyebrow }}</p>
-			<h2>{{ product.title | safe }}</h2>
-			<p>{{ product.paragraph | safe }}</p>
-			<a href="#mail-cta" class="scroll-link">
-				<span class="dark-green-text">{{ product.call_to_action }}</span>
-				<figure class="scroll-arrow">
-					<img src="/svg/services_arrow.svg" alt="arrow">
-				</figure>
+<section id="features">
+	<h2 class="animated">{{ features.title }}</h2>
+	<p class="subtitle animated">{{ features.subtitle }}</p>
+	<div class="features-grid animated">
+		{% for card in features.cards %}
+		<div class="glass-card">
+			<span class="icon mono">{{ card.icon }}</span>
+			<h3>{{ card.title }}</h3>
+			<p>{{ card.description }}</p>
+		</div>
+		{% endfor %}
+	</div>
+</section>
+
+<section id="how-it-works">
+	<h2 class="animated">{{ how.title }}</h2>
+	<div class="steps-row animated">
+		{% for step in how.steps %}
+		<div class="step">
+			<span class="step-number">{{ step.number }}</span>
+			<h3>{{ step.title }}</h3>
+			<p>{{ step.description }}</p>
+		</div>
+		{% endfor %}
+	</div>
+</section>
+
+<section id="kreivo-teaser">
+	<div class="glass-card animated">
+		<h2>{{ kreivo.title }}</h2>
+		<p>{{ kreivo.description }}</p>
+		<span class="block-counter">{{ kreivo.block_counter }}</span>
+		<span class="block-label">{{ kreivo.block_label }}</span>
+		<a class="button" href="/kreivo">{% if lang == "es" %}Explorar Kreivo{% else %}Explore Kreivo{% endif %}</a>
+	</div>
+</section>
+
+<section id="supporters">
+	<h3 class="animated bolder">{{ supporters.title }}</h3>
+	<ul class="supporters-list animated">
+		{% for supporter in supporters.list %}
+		<li>
+			<a title="{{ supporter.title }}" href="{{ supporter.link }}">
+				<img src="/svg/{{ supporter.icon }}" alt="{{ supporter.title }}" height="48">
 			</a>
-		</div>
+		</li>
 		{% endfor %}
-		<div class="buttons-container">
-			<figure id="hero-prev" title="Previous" class="arrow-light">
-				<img src="/svg/left.svg" alt="Previous">
-			</figure>
-			<figure id="hero-next" title="Next" class="arrow-light">
-				<img src="/svg/right.svg" alt="Next">
-			</figure>
-		</div>
-		<figure class="logo">
-			<img src="/svg/Apps.svg" alt="Apps">
-		</figure>
-	</article>
+	</ul>
 </section>
-{% endif %}
 
-{% if home_section.id == "jobs" %}
-<section id="jobs" class="light-green-text">
-	<h2 class="animated center title-max-width">{{ home_section.title | safe }}</h2>
-	<article class="max">
-		{% for card in home_section.cards %}
-		<div class="animated box">
-			<h3 class="boldest outfit dark-green-text">{{ card.title }}</h3>
-			<p class="regular dark-olive-text">{{ card.content }}</p>
-		</div>
-		{% endfor %}
-	</article>
-</section>
-{% endif %}
-
-{% if home_section.id == "mail-cta" %}
-<section id="mail-cta" class="mail light-lavender-bg dark-olive-text">
-	<article class="animated max">
-		<h3 class="header-1 boldest">{{ home_section.title }}</h3>
-		<p class="center">{{ home_section.subtitle }}</p>
-		<ul>
-		{% for social in home_section.socials %}
-			<a class="link-to" title="{{ social.title }}" href="{{ social.link }}">
-				<img src="/svg/{{ social.svg }}" alt="{{ social.title }}" width="32" height="32">
+<section id="cta">
+	<article class="animated">
+		<h2>{{ cta.title }}</h2>
+		<p>{{ cta.description }}</p>
+		<a class="button" href="{{ cta.button_link }}">{{ cta.button }}</a>
+		<div class="socials">
+			{% for social in cta.socials %}
+			<a title="{{ social.title }}" href="{{ social.link }}">
+				<img src="/svg/{{ social.svg }}" alt="{{ social.title }}" width="28" height="28">
 			</a>
-		{% endfor %}
-		</ul>
-	</article>
-	<img class="img-container" src="/img/equipos.jpg" alt="">
-</section>
-{% endif %}
-
-{% if home_section.id == "testimonials" %}
-<section id="testimonials" class="light-lavender-bg center">
-	<article class="max animated column">
-		<h2 class="dark-lavender-text">{{ home_section.title }}</h2>
-		<div class="testimonials-container">
-			{% for testimonial in home_section.testimonials %}
-			<div class="testimonial {% if loop.first %}active{% endif %}">
-				<img src="{{ testimonial.avatar }}" alt="Avatar de {{ testimonial.person }}" class="avatar">
-				<p class="testimonial-message">{{ testimonial.message }}</p>
-				<p class="testimonial-person bolder">{{ testimonial.person }}</p>
-			</div>
 			{% endfor %}
-			<a class="arrow left" id="prevTestimonial">
-				<img src="/svg/left.svg" alt="Previous">
-			</a>
-			<a class="arrow right" id="nextTestimonial">
-				<img src="/svg/right.svg" alt="Next">
-			</a>
 		</div>
 	</article>
 </section>
-{% endif %}
 
-{% if home_section.id == "roadmap" %}
-<section id="roadmap" class="column white-bg">
-	<h2>{{ home_section.title }}</h2>
-	<h4 class="grey-text">One piece at a time</h4>
-	<article class="animated max">
-		<div class="roadmap-container">
-			<div class="roadmap-line-bg white-bg">
-				<div id="roadmap-progress" class="roadmap-line-progress dark-green-bg"></div>
-			</div>
-			<div id="milestones-container" class="milestones-wrapper">
-				{% for step in home_section.milestones %}
-				<div class="grey-text center milestone-item{% if loop.first %} active{% endif %}" data-index="{{ loop.index0 }}">
-					<div class="milestone-dot white-bg"></div>
-					<h4 class="milestone-label">{{ step.step }}</h4>
-					<h5 class="grey-text">{{ step.time }}</h5>
-				</div>
-				{% endfor %}
-			</div>
-		</div>
-		<div class="roadmap-content-card whitest-bg">
-			<h3 id="roadmap-content-title" class="roadmap-content-title bold">
-				{{ home_section.milestones | first | get(key="step") }}
-			</h3>
-			<p id="roadmap-content-description" class="roadmap-content-description">
-				{{ home_section.milestones | first | get(key="description") }}
-			</p>
-		</div>
-	</article>
-</section>
-{% endif %}
-
-{% if home_section.id == "virto-supporters" %}
-<section id="virto-supporters" class="whitest-bg">
-	<article class="max animated column">
-		<h3 class="dark-olive-text boldest header-2">{{ home_section.title }}</h3>
-		<ul class="supporters-list">
-			{% for supporter in home_section.supporters %}
-			<li>
-				<a class="link-to" title="{{ supporter.title }}" href="{{ supporter.link }}">
-					<img src="/svg/{{ supporter.icon }}" alt="{{ supporter.title }}">
-				</a>
-			</li>
-			{% endfor %}
-		</ul>
-	</article>
-</section>
-{% endif %}
-
-{% if home_section.id == "cta" %}
-<section id="cta" class="cta light-lavender-bg">
-	<article class="animated center dark-olive-text">
-		<h3 class="bolder">{{ home_section.eyebrow }}</h3>
-		<h2 class="bolder">
-			<span>{{ home_section.title | safe }}</span>
-		</h2>
-		<h3>{{ home_section.content | safe }}</h3>
-		<a class="button" href="{{ config.extra.apply_url }}">{{ home_section.call_to_action }}</a>
-		<ul>
-		{% for social in home_section.socials %}
-			<a class="link-to" title="{{ social.title }}" href="{{ social.link }}">
-				<img src="/svg/{{ social.svg }}" alt="{{ social.title }}" width="32" height="32">
-			</a>
-		{% endfor %}
-		</ul>
-	</article>
-</section>
-{% endif %}
-
-{% endfor %}
-{% endblock %}
-
-{% block scripts %}
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-	/* HERO SLIDER */
-	const cards = document.querySelectorAll('.hero-product-card');
-	const prevBtn = document.getElementById('hero-prev');
-	const nextBtn = document.getElementById('hero-next');
-	let current = 0;
-	let slideInterval;
-
-	function showCard(index) { cards.forEach((card, i) => card.classList.toggle('active', i === index)); }
-	function nextCard() { current = (current + 1) % cards.length; showCard(current); }
-	function prevCard() { current = (current - 1 + cards.length) % cards.length; showCard(current); }
-	function startAutoSlide() { slideInterval = setInterval(nextCard, 7000); }
-	function resetAutoSlide() { clearInterval(slideInterval); startAutoSlide(); }
-
-	if (prevBtn) prevBtn.addEventListener('click', () => { prevCard(); resetAutoSlide(); });
-	if (nextBtn) nextBtn.addEventListener('click', () => { nextCard(); resetAutoSlide(); });
-	showCard(current);
-	startAutoSlide();
-
-	/* TESTIMONIALS */
-	const testimonials = document.querySelectorAll('.testimonial');
-	let currentIndex = 0;
-	function showTestimonial(index) {
-		testimonials.forEach((t, i) => {
-			if (i === index) { t.classList.add('active'); t.classList.remove('hidden'); }
-			else { if (t.classList.contains('active')) { t.classList.remove('active'); t.classList.add('hidden'); } }
-		});
-	}
-	const prevT = document.getElementById('prevTestimonial');
-	const nextT = document.getElementById('nextTestimonial');
-	if (prevT) prevT.addEventListener('click', () => { currentIndex = (currentIndex === 0) ? testimonials.length - 1 : currentIndex - 1; showTestimonial(currentIndex); });
-	if (nextT) nextT.addEventListener('click', () => { currentIndex = (currentIndex === testimonials.length - 1) ? 0 : currentIndex + 1; showTestimonial(currentIndex); });
-	showTestimonial(currentIndex);
-
-	/* ROADMAP */
-	{% set data = load_data(path="data/" ~ lang ~ ".yml") %}
-	{% for home_section in data.home_sections %}
-	{% if home_section.id == "roadmap" %}
-	const roadmapData = [
-		{% for step in home_section.milestones %}
-		{ title: "{{ step.step }}", content: "{{ step.description }}" }{% if not loop.last %},{% endif %}
-		{% endfor %}
-	];
-	{% endif %}
-	{% endfor %}
-
-	const milestones = document.querySelectorAll('.milestone-item');
-	const progressBar = document.getElementById('roadmap-progress');
-	const contentTitle = document.getElementById('roadmap-content-title');
-	const contentDescription = document.getElementById('roadmap-content-description');
-	let activeIndex = 0;
-
-	function updateRoadmap(index) {
-		activeIndex = index;
-		milestones.forEach((item, i) => item.classList.toggle('active', i === index));
-		if (contentTitle && roadmapData) {
-			contentTitle.textContent = roadmapData[index].title;
-			contentDescription.textContent = roadmapData[index].content;
-		}
-		let progress;
-		if (roadmapData.length === 1) { progress = 100; }
-		else { progress = (index / (roadmapData.length - 1)) * 100; if (index === 0 && progress < 15) progress = 15; }
-		if (window.matchMedia('(max-width: 767px)').matches) { progressBar.style.height = progress + '%'; progressBar.style.width = '100%'; }
-		else { progressBar.style.width = progress + '%'; progressBar.style.height = '100%'; }
-	}
-
-	milestones.forEach((item, i) => item.addEventListener('click', () => updateRoadmap(i)));
-	if (milestones.length) updateRoadmap(0);
-	window.addEventListener('resize', () => updateRoadmap(activeIndex));
-});
-</script>
 {% endblock %}

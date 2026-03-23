@@ -5,11 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="{{ config.description }}">
 	<title>{% block title %}{{ config.title }}{% endblock %}</title>
-	<meta name="theme-color" content="#10352B">
+	<meta name="theme-color" content="#071914">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="/css/variables.css">
 	<link rel="stylesheet" href="/css/common.css">
 	<link rel="stylesheet" href="/css/layout.css">
 	<link rel="stylesheet" href="/css/index.css">
+	{% block extra_css %}{% endblock %}
 </head>
 <body class="hidden">
 	{% include "nav.html" %}

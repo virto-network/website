@@ -2,157 +2,117 @@
 {% block title %}About Us - {{ config.title }}{% endblock %}
 {% block content %}
 {% set data = load_data(path="data/" ~ lang ~ ".yml") %}
-{% set about_sections = data.about_us %}
+{% set about = data.about_us %}
 
 <style>
-body { overflow-x: hidden !important; }
-section { padding: 2em;}
-#hero {
-	background-image: url('/img/about_bg.svg');
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	background-color: var(--clr-lavender-lightest);
+section { padding: 4rem 2rem; }
+
+#about-hero {
+	min-height: 60dvh;
+	flex-direction: column;
+	text-align: center;
 }
-section > article { flex-direction: column }
-.timeline-container {
-	content: '';
-	background: var(--clr-green-darker);
-	width: 10px;
-	left: 10%;
-	position: relative;
+
+#about-hero h1 {
+	color: var(--clr-whitest);
+	max-width: 700px;
 }
-.timeline-item { padding: 3em 1em 0 0; width: 90vw; }
-.timeline-item h2, .timeline-item h3 { margin: 28px; }
-.timeline-item h3 { line-height: 1.6; }
-.timeline-content { flex-wrap: wrap; max-width: 900px; }
-#action-plan ul.step-list {
-	display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; padding: 0;
+
+#mission {
+	min-height: 40dvh;
+	flex-direction: column;
+	text-align: center;
 }
-#action-plan ul.step-list li.step-card {
-	border-radius: 15px; padding: 2em; flex: 1 1 300px;
-	min-height: 200px; display: flex; flex-direction: column;
-	align-items: center; text-align: center;
+
+#mission p {
+	color: var(--clr-olive-lighter);
+	line-height: 1.8;
+	max-width: 700px;
+	font-size: var(--font-size-subtitle);
 }
-.step-icon { margin-bottom: 1em; }
-#team { position: relative; overflow: hidden; padding: 0; margin: 0; }
-#core-team { display: grid; grid-template-columns: repeat(3, 1fr); padding: 1em; }
-#core-team, #team h2, #team h3 { padding: 0 32px; }
-#core-team span { color: var(--clr-green-darker); }
-#core-team li:not(.space) { padding: 10px; display: flex; align-items: center; }
-#core-team div { border-left: 3px solid var(--clr-green-darker); padding-left: 10px; }
-#core-team img {
-	width: 100%; max-width: 20vw; height: auto;
-	aspect-ratio: 1 / 1; border-radius: 50%; margin-right: 10px;
-	background-color: var(--clr-whitest);
+
+#team {
+	flex-direction: column;
+	min-height: 50dvh;
 }
-#team-members {
-	background-image: url('/img/team_l.svg');
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: contain;
-	height: 700px; width: 100vw;
-	position: relative; bottom: 0; left: 0; overflow: hidden;
+
+#team h2 {
+	color: var(--clr-whitest);
+	text-align: center;
+	margin-bottom: 2rem;
 }
-@media (max-width: 1279px) {
-	#hero { background-image: url('/img/about_bg_sm.svg'); }
-	#core-team { display: flex; flex-direction: column; align-items: center; }
-	#core-team li { margin-top: 10px; }
-	.space { display: none; }
-	#team-members { background-image: url('/img/team_s.svg'); height: 300px; background-size: cover; }
+
+.team-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	max-width: var(--max-width);
+	width: 100%;
+}
+
+.team-grid .glass-card {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.team-grid img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 2px solid var(--clr-green-darker);
+}
+
+.team-grid h4 {
+	color: var(--clr-whitest);
+}
+
+.team-grid h4 a {
+	color: var(--clr-whitest);
+	transition: color 0.2s ease;
+}
+
+.team-grid h4 a:hover {
+	color: var(--clr-green-darker);
+}
+
+.team-grid .role {
+	color: var(--clr-green-darker);
+	font-family: var(--font-mono);
+	font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+	.team-grid {
+		grid-template-columns: 1fr;
+		max-width: 350px;
+	}
 }
 </style>
 
-{% for about in about_sections %}
-
-{% if about.id == "hero" %}
-<section id="hero" class="left dark-olive-text">
+<section id="about-hero" class="grid-bg">
 	<article class="animated">
-		<h1 class="maxwidth--text_desktop">{{ about.title }}</h1>
+		<h1>{{ about.hero.title }}</h1>
 	</article>
 </section>
-{% endif %}
 
-{% if about.id == "issue" %}
-<div id="issue" class="white-text timeline-container">
-	<div class="timeline-item">
-		<div class="timeline-content">
-			<h2 class="dark-green-text">{{ about.title }}</h2>
-			<h3 class="animated">{{ about.paragraph_one | safe }}</h3>
-			<h3 class="animated">{{ about.paragraph_two }}</h3>
+<section id="mission">
+	<p class="animated">{{ about.mission.text }}</p>
+</section>
+
+<section id="team">
+	<h2 class="animated">{{ about.team.title }}</h2>
+	<div class="team-grid animated">
+		{% for member in about.team.members %}
+		<div class="glass-card">
+			<img src="{{ member.avatar }}" alt="{{ member.name }}" loading="lazy">
+			<h4><a href="{{ member.link }}">{{ member.name }}</a></h4>
+			<span class="role">{{ member.role }}</span>
 		</div>
+		{% endfor %}
 	</div>
-</div>
-{% endif %}
-
-{% if about.id == "virto" %}
-<div id="virto" class="white-text timeline-container">
-	<div class="timeline-item">
-		<div class="timeline-content">
-			<h2 class="dark-green-text">{{ about.title }}</h2>
-			<h3 class="animated">{{ about.paragraph_one | safe }}</h3>
-			<h3 class="animated">{{ about.paragraph_two }}</h3>
-			<h3 class="animated">{{ about.paragraph_three }}</h3>
-			<h3 class="animated">{{ about.paragraph_four | safe }}</h3>
-		</div>
-	</div>
-</div>
-{% endif %}
-
-{% if about.id == "action-plan" %}
-<section id="action-plan" class="light-green-bg">
-	<article class="animated center">
-		<h2>{{ about.title }}</h2>
-		<h3>{{ about.subtitle }}</h3>
-		<ul class="step-list">
-			{% for step in about.step_list %}
-			<li class="step-card white-bg">
-				<div class="step-icon">
-					<img src="/svg/{{ step.icon }}" alt="step">
-				</div>
-				<h3>{{ step.content }}</h3>
-			</li>
-			{% endfor %}
-		</ul>
-	</article>
 </section>
-{% endif %}
 
-{% if about.id == "team" %}
-<section id="team" class="whitest-bg dark-olive-text">
-	<article class="animated">
-		<h2>{{ about.title }}</h2>
-		<h3>{{ about.subtitle }}</h3>
-		<ul id="core-team">
-			{% for core_member in about.core_team %}
-			<li>
-				<img src="{{ core_member.avatar }}" alt="{{ core_member.name }}" height="50">
-				<div>
-					<a href="{{ core_member.link }}" class="dark-olive-text">
-						<h4>{{ core_member.name | safe }}</h4>
-						<h5 class="thin">{{ core_member.role }}</h5>
-					</a>
-				</div>
-			</li>
-			<li class="space"></li>
-			{% endfor %}
-		</ul>
-		<div id="team-members"></div>
-	</article>
-</section>
-{% endif %}
-
-{% if about.id == "cta_about" %}
-<section id="cta_about" class="cta dark-green-text">
-	<article class="animated center">
-		<h3 class="regular">{{ about.subtitle }}</h3>
-		<h2>{{ about.title }}</h2>
-		<h3 class="bold white-text">{{ about.paragraph }}</h3>
-		<a class="button" href="{{ config.extra.apply_url }}">{{ about.call_to_action }}</a>
-	</article>
-</section>
-{% endif %}
-
-{% endfor %}
 {% endblock %}

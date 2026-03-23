@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Docs - {{ config.title }}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="/css/docs.css">
+{% endblock %}
+
+{% block content %}
+<div class="docs-layout">
+	<aside class="docs-sidebar">
+		<h3>{% if lang == "es" %}Documentos{% else %}Docs{% endif %}</h3>
+		<nav>
+			{% for page in section.pages %}
+			{% if page.slug != "whitepaper" %}
+			<a href="{{ page.permalink }}">{{ page.title }}</a>
+			{% endif %}
+			{% endfor %}
+			<a href="/docs/whitepaper/">Whitepaper</a>
+		</nav>
+	</aside>
+	<div class="docs-content">
+		{% if section.pages | length > 0 %}
+		{% set first_page = section.pages | first %}
+		<h1>{{ section.title }}</h1>
+		<p>{% if lang == "es" %}Bienvenido a la documentacion de VirtoSDK. Selecciona un tema de la barra lateral para comenzar.{% else %}Welcome to the VirtoSDK documentation. Select a topic from the sidebar to get started.{% endif %}</p>
+		<h2>{% if lang == "es" %}Inicio rapido{% else %}Quick Start{% endif %}</h2>
+		<p>{% if lang == "es" %}Instala el SDK e inicializa tu primer cliente:{% else %}Install the SDK and initialize your first client:{% endif %}</p>
+		<div class="code-block">
+<span class="comment"># Install VirtoSDK</span>
+npm install @virto/sdk
+
+<span class="comment"># Initialize in your project</span>
+<span class="keyword">import</span> { createClient } <span class="keyword">from</span> <span class="string">'@virto/sdk'</span>
+<span class="keyword">const</span> virto = <span class="func">createClient</span>({ network: <span class="string">'kreivo'</span> })
+		</div>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

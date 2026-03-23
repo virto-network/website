@@ -1,4 +1,6 @@
 +++
 title = "Documentation"
-render = false
+render = true
+template = "docs-section.html"
+sort_by = "weight"
 +++

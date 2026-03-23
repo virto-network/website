@@ -1,12 +1,12 @@
 base_url = "https://virto.network"
 title = "Virto Network"
-description = "Your multi-currency wallet for managing group funds and making quick decisions through a voting system."
+description = "Developer platform for building Web3 applications with VirtoSDK and the Kreivo blockchain."
 default_language = "en"
 compile_sass = false
 build_search_index = false
 [languages.es]
 title = "Virto Network"
-description = "Tu billetera multimoneda para gestionar fondos en grupo y tomar decisiones rápidas mediante un sistema de votación."
+description = "Plataforma para desarrolladores que construyen aplicaciones Web3 con VirtoSDK y la blockchain Kreivo."
 
 [extra]
 calendly = "https://calendly.com/virtonetwork"
@@ -19,21 +19,15 @@ route = "/about"
 class = "menu-item"
 
 [[extra.nav]]
-link_en = "Services"
-link_es = "Servicios"
-route = "/services"
+link_en = "Kreivo"
+link_es = "Kreivo"
+route = "/kreivo"
 class = "menu-item"
 
 [[extra.nav]]
-link_en = "Use Cases"
-link_es = "Casos de Uso"
-route = "/cases"
-class = "menu-item"
-
-[[extra.nav]]
-link_en = "Explore virto-connect"
-link_es = "Explorar virto-connect"
-route = "https://demo.virto.dev/"
+link_en = "Get Started"
+link_es = "Empezar"
+route = "/docs"
 class = "app-button-link button"
 
 [[extra.footer]]
@@ -42,14 +36,9 @@ link_es = "Sobre Nosotros"
 route = "/about"
 
 [[extra.footer]]
-link_en = "Services"
-link_es = "Servicios"
-route = "/services"
-
-[[extra.footer]]
-link_en = "Use Cases"
-link_es = "Casos de Uso"
-route = "/cases"
+link_en = "Kreivo"
+link_es = "Kreivo"
+route = "/kreivo"
 
 [[extra.footer]]
 link_en = "Whitepaper"

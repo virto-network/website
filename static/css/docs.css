@@ -1,0 +1,107 @@
+/* Docs Layout */
+.docs-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    min-height: calc(100vh - var(--nav-height));
+}
+
+.docs-sidebar {
+    position: sticky;
+    top: calc(var(--nav-height) + 2rem);
+    align-self: start;
+}
+
+.docs-sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.docs-sidebar h3 {
+    color: var(--clr-whitest);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-mono);
+}
+
+.docs-sidebar a {
+    color: var(--clr-olive-lighter);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: color 0.2s ease, background 0.2s ease;
+    border-left: 2px solid transparent;
+}
+
+.docs-sidebar a:hover,
+.docs-sidebar a.active {
+    color: var(--clr-green-darker);
+    background: var(--glass-bg);
+    border-left-color: var(--clr-green-darker);
+    text-decoration: none;
+}
+
+.docs-content {
+    color: var(--clr-olive-lighter);
+    line-height: 1.7;
+}
+
+.docs-content h1 {
+    color: var(--clr-whitest);
+    margin-bottom: 1rem;
+}
+
+.docs-content h2 {
+    color: var(--clr-whitest);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: var(--font-size-small-title);
+}
+
+.docs-content p {
+    margin-bottom: 1rem;
+}
+
+.docs-content code {
+    font-family: var(--font-mono);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: var(--clr-terminal-green);
+}
+
+@media (max-width: 768px) {
+    .docs-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .docs-sidebar {
+        position: static;
+        border-bottom: 1px solid var(--glass-border);
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .docs-sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .docs-sidebar a {
+        border-left: none;
+        border-bottom: 2px solid transparent;
+    }
+
+    .docs-sidebar a:hover,
+    .docs-sidebar a.active {
+        border-left: none;
+        border-bottom-color: var(--clr-green-darker);
+    }
+}

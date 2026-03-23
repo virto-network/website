@@ -155,10 +155,15 @@ footer {
   gap: 3rem;
 }
 
-.services-policy {
-  width: 100%;
-  text-align: center;
+footer .github-link {
   color: var(--clr-olive-lighter);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+
+footer .github-link:hover {
+  color: var(--clr-green-darker);
 }
 
 footer > nav {
