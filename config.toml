@@ -13,12 +13,6 @@ calendly = "https://calendly.com/virtonetwork"
 apply_url = "https://forms.gle/pgFVmfbu4zv6qdMs8"
 
 [[extra.nav]]
-link_en = "About Us"
-link_es = "Sobre Nosotros"
-route = "/about"
-class = "menu-item"
-
-[[extra.nav]]
 link_en = "Kreivo"
 link_es = "Kreivo"
 route = "/kreivo"
@@ -29,11 +23,6 @@ link_en = "Get Started"
 link_es = "Empezar"
 route = "/docs"
 class = "app-button-link button"
-
-[[extra.footer]]
-link_en = "About Us"
-link_es = "Sobre Nosotros"
-route = "/about"
 
 [[extra.footer]]
 link_en = "Kreivo"
