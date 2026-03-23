@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{ config.description }}">
+	<meta name="theme-color" content="#8d52cb">
+	<title>{{ page.title }} - {{ config.title }}</title>
+	<link rel="stylesheet" href="/css/variables.css">
+	<link rel="stylesheet" href="/css/common.css">
+	<link rel="stylesheet" href="/css/layout.css">
+	<style>
+	#whitepaper h2 { font-size: 2.5em; }
+	#whitepaper h3 { font-size: 2em; }
+	#whitepaper h4 { font-size: 1.7em; }
+	#whitepaper li, #whitepaper p { font-size: 1em; font-family: sans-serif !important; }
+	body { min-height: 100vh; }
+	main { display: block !important; margin: auto; padding: 2rem 1.5rem; line-height: 1.5; }
+	h1, h1+h3, h1+h3+p { column-span: all; text-align: center; }
+	#whitepaper h2, #whitepaper h3, #whitepaper h4 { margin-top: 2em; margin-bottom: 1em; }
+	p { text-align: justify; }
+	img { max-width: 100%; }
+	.max { width: 100%; max-width: var(--max-width); margin: auto; box-sizing: border-box; }
+	@media screen and (min-width: 700px) { main { columns: 2 auto; column-gap: 8vmin; } }
+	@media print { main { columns: 2 auto; column-gap: 5rem; font-family: serif; } }
+	</style>
+	<script defer data-domain="virto.network" src="https://plausible.io/js/script.js"></script>
+</head>
+<body class="white-bg">
+	{% include "nav.html" %}
+	<main class="max" id="whitepaper">
+		{{ page.content | safe }}
+	</main>
+</body>
+</html>

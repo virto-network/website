@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block title %}Use Cases - {{ config.title }}{% endblock %}
+{% block content %}
+{% set data = load_data(path="data/" ~ lang ~ ".yml") %}
+
+<style>
+#hero article { flex-direction: column; max-width: 1200px; padding: 1em; }
+article h3 a { font-size: 1em; color: var(--clr-green-darker); text-decoration: underline; }
+.use-cases-list { display: flex; gap: 2em; flex-direction: column; width: 100%; align-items: center; }
+.use-cases-card {
+	padding: 1em; width: 95%; border-radius: 35px;
+	box-shadow: 4px 4px 5px -3px rgba(158,158,158,0.47);
+}
+.img-container { width: 50%; }
+.use-cases-card img { float: left; width: 100%; border-radius: 35px 0 0 35px; }
+.use-cases-content { display: flex; flex-direction: column; padding: 1em; gap: 1em; flex-grow: 1; justify-content: space-between; }
+.use-cases-content p { font-size: 1.2em; line-height: 1.5; }
+.inline-container { display: flex; gap: 1em; }
+#tag { display: inline; padding: 10px 15px; border-radius: 25px; text-align: center; margin: 5px 0; align-self: flex-start; background-color: rgb(203, 187, 236); }
+#tag.green { background-color: var(--clr-green-darker); }
+#tag.lavender { background-color: var(--clr-lavender-darker); color: var(--clr-white); }
+#tag.olive { background-color: var(--clr-olive-darker); color: var(--clr-white); }
+#tag.light-green { background-color: var(--clr-green-lighter); }
+#tag.blue { background-color: var(--clr-blue-dark); color: var(--clr-white); }
+.examples { display: none; flex-direction: column; gap: 1em; opacity: 0; transition: opacity 0.5s ease-in-out; }
+@media (max-width: 1279px) {
+	.img-container { width: 100%; }
+	.use-cases-card img { border-radius: 35px 35px 0 0; }
+}
+</style>
+
+{% for use_case in data.use_cases %}
+
+{% if use_case.id == "hero" %}
+<section id="hero" class="white-bg">
+	<article class="animated">
+		<h1 class="dark-lavender-text">{{ use_case.title }}</h1>
+		<h3>{{ use_case.paragraph | safe }}</h3>
+		<h3><a href="#cases">{{ use_case.subtitle | safe }}</a></h3>
+		<figure class="lavender-arrow"><img src="/svg/arrow_down_lavender.svg" alt="arrow down"></figure>
+	</article>
+</section>
+{% endif %}
+
+{% if use_case.id == "cases" %}
+<section id="cases" class="whitest-bg dark-olive-text">
+	<article class="animated">
+		<ul class="use-cases-list">
+			{% for case in use_case.cases %}
+			<li class="animated white-bg use-cases-card">
+				<div class="img-container">
+					<img src="{{ case.img }}" loading="lazy" alt="{{ case.title }}">
+				</div>
+				<div class="use-cases-content">
+					<h3 class="boldest header-2">{{ case.title }}</h3>
+					<div class="inline-container">
+						<div id="tag" class="{{ case.tag_class }}">{{ case.tag_one }}</div>
+						<div id="tag">{{ case.tag_two }}</div>
+					</div>
+					<p>{{ case.subtitle | safe }}</p>
+					<p>{{ case.description }}</p>
+					<div class="examples">
+						<h3 class="bolder">{{ case.example_title }}</h3>
+						<p>{{ case.example }}</p>
+					</div>
+					<div class="inline-container">
+						<button class="show_more">{{ case.button_more }}</button>
+						<a class="button" href="{{ config.extra.calendly }}">{{ case.button_contact }}</a>
+					</div>
+				</div>
+			</li>
+			{% endfor %}
+		</ul>
+	</article>
+</section>
+{% endif %}
+
+{% if use_case.id == "cta" %}
+<section id="cta" class="cta light-lavender-bg dark-olive-text">
+	<article class="animated center">
+		<h3 class="bolder">{{ use_case.eyebrow | safe }}</h3>
+		<h2 class="header-1">{{ use_case.title | safe }}</h2>
+		<a class="button" href="{{ config.extra.calendly }}">{{ use_case.cta }}</a>
+	</article>
+</section>
+{% endif %}
+
+{% endfor %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+	const obs = new IntersectionObserver(entries => {
+		entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('animate'); obs.unobserve(e.target); } });
+	}, { threshold: 0.1 });
+	document.querySelectorAll('.animated').forEach(el => obs.observe(el));
+});
+document.querySelectorAll('.show_more').forEach(btn => {
+	btn.addEventListener('click', () => {
+		const ex = btn.closest('.use-cases-content').querySelector('.examples');
+		if (ex.style.display === 'flex') { ex.style.opacity = 0; setTimeout(() => { ex.style.display = 'none'; }, 100); }
+		else { ex.style.display = 'flex'; setTimeout(() => { ex.style.opacity = 1; }, 10); }
+	});
+});
+</script>
+{% endblock %}

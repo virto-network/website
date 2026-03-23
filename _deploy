@@ -2,11 +2,11 @@
 
 set -e
 
-DIR=_site/
+DIR=public/
 NOW=$(date '+%y%m%d_%H%M')
 PIN_SRV=$(ipfs pin remote service ls | cut -f1 -d' ')
 
-cobalt clean && cobalt build
+zola build
 
 CID=$(ipfs add --recursive --quiet  $DIR | tail -n1)
 
@@ -18,4 +18,3 @@ for srv in $PIN_SRV; do
 done
 
 echo $CID > _last_ipfs_deploy
-

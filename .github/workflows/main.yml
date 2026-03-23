@@ -3,7 +3,6 @@ name: Site
 on:
   push:
     branches: [main]
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
@@ -11,43 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - name: Fetch Github Release Asset
-        uses: dsaltares/fetch-gh-release-asset@0.06
+      - name: Install Zola
+        uses: taiki-e/install-action@v2
         with:
-          repo: cobalt-org/cobalt.rs
-          file: cobalt-v0.19.2-x86_64-unknown-linux-gnu.tar.gz
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate _data/env.json for Spanish
-        run: |
-          mkdir -p es/_data
-          echo '{
-            "AIRTABLE_API_KEY": "${AIRTABLE_API_KEY}",
-            "AIRTABLE_BASE_ID": "${AIRTABLE_BASE_ID}",
-            "AIRTABLE_TABLE_ID": "${AIRTABLE_TABLE_ID}"
-          }' > es/_data/env.json
-        env:
-          AIRTABLE_API_KEY: ${{ vars.AIRTABLE_API_KEY }}
-          AIRTABLE_BASE_ID: ${{ vars.AIRTABLE_BASE_ID }}
-          AIRTABLE_TABLE_ID: ${{ vars.AIRTABLE_TABLE_ID }}
-
-      - name: Generate _data/env.json for English
-        run: |
-          mkdir -p en/_data
-          echo '{
-            "AIRTABLE_API_KEY": "${AIRTABLE_API_KEY}",
-            "AIRTABLE_BASE_ID": "${AIRTABLE_BASE_ID}",
-            "AIRTABLE_TABLE_ID": "${AIRTABLE_TABLE_ID}"
-          }' > en/_data/env.json
-        env:
-          AIRTABLE_API_KEY: ${{ vars.AIRTABLE_API_KEY }}
-          AIRTABLE_BASE_ID: ${{ vars.AIRTABLE_BASE_ID }}
-          AIRTABLE_TABLE_ID: ${{ vars.AIRTABLE_TABLE_ID }}
+          tool: zola@0.19.2
 
       - name: Build site
-        run: |
-          tar xfv cobalt-*
-          rm -rf doc
-          ./cobalt build
+        run: zola build
+        env:
+          AIRTABLE_API_KEY: ${{ vars.AIRTABLE_API_KEY }}
+          AIRTABLE_BASE_ID: ${{ vars.AIRTABLE_BASE_ID }}
+          AIRTABLE_TABLE_ID: ${{ vars.AIRTABLE_TABLE_ID }}

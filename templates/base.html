@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{ config.description }}">
+	<title>{% block title %}{{ config.title }}{% endblock %}</title>
+	<meta name="theme-color" content="#10352B">
+	<link rel="stylesheet" href="/css/variables.css">
+	<link rel="stylesheet" href="/css/common.css">
+	<link rel="stylesheet" href="/css/layout.css">
+	<link rel="stylesheet" href="/css/index.css">
+	<script defer data-domain="virto.network" src="https://plausible.io/js/script.js"></script>
+</head>
+<body class="hidden">
+	{% include "nav.html" %}
+	{% block modal %}{% endblock %}
+	<main>{% block content %}{% endblock %}</main>
+	<a href="#footer" class="scroll-down-link white-text center-arrow">
+		{% if lang == "es" %}Ir al final{% else %}Scroll to Bottom{% endif %}
+		<figure class="link-arrow">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+		</figure>
+	</a>
+	{% include "footer.html" %}
+	{% block scripts %}{% endblock %}
+	<script>
+		const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+				if (entry.intersectionRatio > 0) {
+					entry.target.classList.add('animate');
+					observer.unobserve(entry.target);
+				}
+			});
+		}, { threshold: 0.2 });
+		document.querySelectorAll('.animated').forEach(el => observer.observe(el));
+		document.fonts.ready.then(() => document.body.classList.remove('hidden'));
+	</script>
+</body>
+</html>

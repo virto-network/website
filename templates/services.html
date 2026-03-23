@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+{% block title %}Services - {{ config.title }}{% endblock %}
+{% block modal %}
+<dialog data-modal class="light-green-bg">
+	<span class="close-button boldest">X</span>
+	<div id="modal-message" class="center"></div>
+	<template data-msg="success">
+		<img src="/img/success.svg" alt="success" />
+		{% if lang == "es" %}<h2>{{ config.extra.modal.success_title_es }}</h2><h3>{{ config.extra.modal.success_message_es }}</h3>
+		{% else %}<h2>{{ config.extra.modal.success_title_en }}</h2><h3>{{ config.extra.modal.success_message_en }}</h3>{% endif %}
+	</template>
+	<template data-msg="error">
+		<img src="/img/error.svg" alt="error" />
+		{% if lang == "es" %}<h2>{{ config.extra.modal.error_title_es }}</h2><h3>{{ config.extra.modal.error_message_es }}</h3><h3 class="bolder">{{ config.extra.modal.error_retry_es }}</h3>
+		{% else %}<h2>{{ config.extra.modal.error_title_en }}</h2><h3>{{ config.extra.modal.error_message_en }}</h3><h3 class="bolder">{{ config.extra.modal.error_retry_en }}</h3>{% endif %}
+	</template>
+</dialog>
+{% endblock %}
+{% block content %}
+{% set data = load_data(path="data/" ~ lang ~ ".yml") %}
+
+<style>
+section { display: flex; gap: 2em; }
+.services-section { justify-content: space-around; }
+.services-section__lock-icon img { width: clamp(250px, 30vw, 500px); height: auto; }
+#key_features { background-image: url('/img/features_bg.svg'); background-repeat: no-repeat; background-size: cover; }
+.key_features--list { display: flex; width: 90%; gap: 2em; flex-direction: column; }
+.key_features--list li { width: 40%; display: grid; gap: .5em; }
+.key_features--list li h2 { font-size: 1.75em; }
+.align-right { align-self:self-end; text-align: right; }
+.key_features--title { position: relative; bottom: -20px; width: 60%; }
+#optimize_resources > article { align-items: flex-start; display: grid; grid-template-columns: 1fr; margin: 5em 0; padding: 0 2em; }
+.optimize_resources--grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2em; grid-column: 1 / -1; }
+.optimize_resources--grid li { display: flex; flex-direction: column; gap: 1em; }
+.optimize_resources--svg_list img { width: 100%; object-fit: contain; height: auto; margin-bottom: 1em; }
+#allies { display: flex; }
+#allies article { gap: 3em; flex-direction: column; }
+.allies--container { display: flex; flex-direction: row; justify-content: center; align-items: center; max-width: 900px; }
+.allies--svg { width: 50%; }
+#cta_services { display: flex; flex-direction: column; align-items: flex-start; padding: 2em; width: 100% }
+#cta_services article { margin: 0; padding: 0; }
+#cta_services div { display: flex; gap: 1em; }
+.cta_services--svg { align-items: flex-start; max-width: 90%; }
+@media (max-width: 1279px) {
+	#cta_services article:nth-child(2) { flex-wrap: wrap; }
+	#key_features { background-image: url('/img/features_bg_sm.svg'); background-repeat: no-repeat; background-size: cover; }
+	.allies--container { flex-direction: column; max-width: 320px; }
+	.allies--container h3 { text-align: center; }
+	.allies--svg { height: 150px; position: relative; bottom: 180px; }
+}
+@media (min-width: 1279px) { #cta_services article:nth-child(2) { flex-wrap: nowrap; } }
+</style>
+
+{% for service in data.services %}
+
+{% if service.id == "intro" %}
+<section id="intro" class="services-section">
+	<article class="services-section__content max animated">
+		<div class="text-section lightest-lavender-text">
+			<h1 class="dark-green-text">{{ service.title_part_one }} {{ service.title_part_two | safe }}</h1>
+			<p>{{ service.paragraph }}</p>
+			<a href="#key_features" class="scroll-link">
+				<span class="dark-green-text">{{ service.call_to_action }}</span>
+				<figure class="scroll-arrow"><img src="/svg/services_arrow.svg" alt="arrow"></figure>
+			</a>
+		</div>
+		<figure class="services-section__lock-icon"><img src="/svg/lock-icon.svg" alt="lock icon"></figure>
+	</article>
+</section>
+{% endif %}
+
+{% if service.id == "key_features" %}
+<section id="key_features" class="light-lavender-bg">
+	<article class="max animated">
+		<ul class="key_features--list">
+			{% for item in service.list %}
+			<li class="{{ item.class }}">
+				<h2 class="dark-lavender-text">{{ item.title }}</h2>
+				<p class="thin">{{ item.content }}</p>
+			</li>
+			{% endfor %}
+		</ul>
+		{% if service["last-title"] is defined %}
+		<h2 class="key_features--title dark-lavender-text center">{{ service["last-title"] }}</h2>
+		{% endif %}
+	</article>
+</section>
+{% endif %}
+
+{% if service.id == "optimize_resources" %}
+<section id="optimize_resources" class="white-bg">
+	<article class="max animated dark-olive-text">
+		<h3 class="boldest">{{ service.title }}</h3>
+		<p>{{ service.paragraph }}</p>
+		<ul class="optimize_resources--grid">
+			{% for item in service.list %}
+			<li class="animated">
+				<figure class="optimize_resources--svg_list"><img src="/svg/{{ item.img }}" alt="{{ item.title }}"></figure>
+				<h3 class="bolder">{{ item.title }}</h3>
+				<p>{{ item.content }}</p>
+			</li>
+			{% endfor %}
+		</ul>
+	</article>
+</section>
+{% endif %}
+
+{% if service.id == "allies" %}
+<section id="allies" class="whitest-bg">
+	<article class="max animated dark-olive-text center">
+		<h2 class="maxwidth--text_desktop bold">{{ service.title_part_one }}{{ service.title_part_two | safe }}</h2>
+		<div class="allies--container">
+			<figure class="allies--svg"><img src="/svg/cubos.svg" alt="cubos"></figure>
+			<h3 class="left">{{ service.paragraph | safe }}</h3>
+		</div>
+		<h3 class="title-max-width dark-lavender-text bolder">{{ service.strong_paragraph }}</h3>
+		<a class="button" href="{{ service.href }}">{{ service.cta }}</a>
+	</article>
+</section>
+{% endif %}
+
+{% if service.id == "cta_services" %}
+<section id="cta_services" class="mail light-lavender-bg dark-olive-text">
+	<article class="column">
+		<h2 class="title-max-width bold">{{ service.title }}</h2>
+		<h2 class="title-max-width">{{ service.subtitle }}</h2>
+	</article>
+	<article class="max animated">
+		<div class="column">
+			<p>{{ service.paragraph }}</p>
+			<h3 class="bolder">{{ service.strong_paragraph }}</h3>
+			<form id="mail-form">
+				<input type="text" name="contactName" placeholder="{{ service.placeholder_name }}">
+				<input type="text" name="contactLastName" placeholder="{{ service.placeholder_last_name }}">
+				<input type="email" name="contactEmail" placeholder="{{ service.placeholder_email }}" required>
+				<button type="submit" id="mail-button" class="bolder dark-green-bg">{{ service.cta }}</button>
+			</form>
+		</div>
+		<figure class="cta_services--svg"><img src="/svg/dancingperson.svg" alt="dancing person"></figure>
+	</article>
+</section>
+{% endif %}
+
+{% endfor %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+const AIRTABLE_CONFIG = {
+	apiKeyAirtable: '{{ config.extra.airtable_api_key }}',
+	baseId: '{{ config.extra.airtable_base_id }}',
+	table: '{{ config.extra.airtable_table_id }}'
+};
+const modal = document.querySelector('[data-modal]');
+const closeButton = document.querySelector('.close-button');
+const modalMessage = document.getElementById('modal-message');
+function openModal(type) { const msg = modal.querySelector(`[data-msg=${type}]`); modalMessage.replaceChildren(msg.content.cloneNode(true)); modal.showModal(); }
+if (closeButton) closeButton.addEventListener('click', () => modal.close());
+async function handleFormSubmit(event) {
+	event.preventDefault();
+	const form = event.target;
+	const contactEmail = form.elements['contactEmail'].value;
+	const submitButton = form.querySelector('button[type="submit"]');
+	const orig = submitButton.textContent;
+	if (!contactEmail || !contactEmail.includes('@')) { openModal('error'); return; }
+	submitButton.disabled = true; submitButton.textContent = '...';
+	try {
+		const response = await fetch(`https://api.airtable.com/v0/${AIRTABLE_CONFIG.baseId}/${AIRTABLE_CONFIG.table}`, {
+			method: 'POST', headers: { 'Authorization': `Bearer ${AIRTABLE_CONFIG.apiKeyAirtable}`, 'Content-Type': 'application/json' },
+			body: JSON.stringify({ records: [{ fields: { "Mail": contactEmail } }] })
+		});
+		if (!response.ok) throw new Error('fail');
+		form.reset(); openModal('success');
+	} catch (e) { console.error(e); openModal('error'); }
+	finally { submitButton.disabled = false; submitButton.textContent = orig; }
+}
+document.addEventListener('DOMContentLoaded', function() {
+	const f = document.getElementById('mail-form');
+	if (f) f.addEventListener('submit', handleFormSubmit);
+});
+</script>
+{% endblock %}

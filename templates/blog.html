@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{ config.description }}">
+	<meta name="theme-color" content="#8d52cb">
+	<title>Blog - {{ config.title }}</title>
+	<link rel="stylesheet" href="/css/variables.css">
+	<link rel="stylesheet" href="/css/common.css">
+	<link rel="stylesheet" href="/css/layout.css">
+	<style>
+	body { display: flex; flex-direction: column; }
+	#blog { width: 100%; max-width: var(--max-width); margin: auto; }
+	main { flex: 1; padding: 1rem; }
+	figure { margin: 1em 0; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+	figure img { height: 100%; width: 100%; max-width: 200px; margin: auto; }
+	h1 { display: flex; }
+	#blog figure { margin: 4vw auto; width: 30vmin; }
+	#posts { flex: 1; margin: 0; padding: 0; list-style: none; }
+	#posts li { position: relative; width: 100%; margin: 1rem 0; }
+	#posts .card {
+		border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+		box-sizing: border-box; display: flex; flex-direction: column;
+		overflow: hidden; padding-bottom: 10%;
+	}
+	#posts .card img {
+		filter: saturate(50%) sepia(50%) hue-rotate(220deg) brightness(0.9);
+		flex-shrink: 0; height: 40vmin; object-fit: cover; order: -1;
+		transition: filter 300ms; width: 100%;
+	}
+	#posts li:nth-of-type(n+3) .card img { height: 30vmin; }
+	#posts :is(li:hover img, a:focus+img) { filter: saturate(100%) sepia(0%) hue-rotate(0deg); }
+	#posts .card time {
+		display: flex; align-items: center; color: var(--clr-lavender-lighter);
+		font-size: 0.9em; font-style: italic; justify-content: flex-end;
+		line-height: 1.5rem; flex: 1;
+	}
+	#posts .card a { display: flex; align-items: center; color: inherit; text-decoration: none; outline: none; flex: 2; }
+	#posts .card a:is(:hover,:focus) h2 { text-decoration: underline var(--clr-lavender-lighter) 3px; }
+	#posts .card a h2 { margin: 0; text-underline-offset: 4px; font-weight: 500; font-size: 1.4em; }
+	#posts li:nth-of-type(n+3) .card h2 { font-size: 1.3em; }
+	#posts .card :is(time,a,p) { padding: 0 1rem; box-sizing: border-box; }
+	#posts .card p { margin: 0; font-size: .750em; }
+	#posts li:nth-of-type(n+3) .card p { display: none; }
+	@media screen and (min-width: 700px) {
+		#posts { display: grid; grid-template-columns: repeat(6, 1fr); column-gap: 2rem; row-gap: 2rem; }
+		#posts li { grid-column: span 3; margin: 0; }
+		#posts li:before { content: ''; display: block; width: 100%; padding-top: 90%; }
+		#posts li:nth-of-type(n+3):before { padding-top: 80%; }
+		#posts .card { position: absolute; top: 0; left: 0; height: 100%; width: 100%; }
+		#posts .card img { height: 60%; }
+		#posts .card a h2 { font-size: calc(0.9em + 0.6vmin); }
+		#posts li:nth-of-type(n+3) .card a h2 { font-size: calc(0.7em + 0.6vmin); }
+		#posts .card p { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+		#posts li:nth-of-type(n+3) { grid-column: span 2; }
+	}
+	@media screen and (min-width: 950px) {
+		#posts li:before { padding-top: 80%; }
+		#posts li:nth-of-type(n+3):before { padding-top: 65%; }
+		#posts .card a h2 { font-size: 1.3em; }
+		#posts li:nth-of-type(n+3) .card a h2 { font-size: 1.1em; }
+		#posts .card img { height: 64%; }
+	}
+	</style>
+	<script defer data-domain="virto.network" src="https://plausible.io/js/script.js"></script>
+</head>
+<body class="white-bg">
+	{% include "nav.html" %}
+	<main class="max" id="blog">
+		<figure class="logo">
+			<img src="/svg/blog.svg" alt="Blog">
+			<h1>Blog</h1>
+		</figure>
+		<ul id="posts">
+		{% for page in section.pages %}
+			<li>
+				<div class="card">
+					<time datetime="{{ page.date }}">{{ page.date | date(format="%d %b") }}</time>
+					<a href="{{ page.permalink }}"><h2>{{ page.title }}</h2></a>
+					<img src="/img/blog/{{ page.slug }}_s.jpg" alt="Cover image">
+					<p>{{ page.description }}</p>
+				</div>
+			</li>
+		{% endfor %}
+		</ul>
+	</main>
+	{% include "footer.html" %}
+</body>
+</html>
