@@ -80,13 +80,6 @@
 		<h2>{{ cta.title }}</h2>
 		<p>{{ cta.description }}</p>
 		<a class="button" href="{{ cta.button_link }}">{{ cta.button }}</a>
-		<div class="socials">
-			{% for social in cta.socials %}
-			<a title="{{ social.title }}" href="{{ social.link }}">
-				<img src="/svg/{{ social.svg }}" alt="{{ social.title }}" width="28" height="28">
-			</a>
-			{% endfor %}
-		</div>
 	</article>
 </section>
 

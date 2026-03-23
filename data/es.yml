@@ -73,22 +73,15 @@ cta:
   description: "Empieza a construir aplicaciones descentralizadas en minutos, no meses."
   button: Empezar
   button_link: /docs
-  socials:
-    - title: GitHub
-      svg: website.svg
-      link: https://github.com/virto-network
-    - title: E-mail
-      svg: email.svg
-      link: mailto:contact@virto.team
-    - title: Linkedin
-      svg: linkedin.svg
-      link: https://www.linkedin.com/company/virto-network/
 
 kreivo:
   hero:
     title_pre: Conoce
     title_accent: Kreivo
-    description: "Una blockchain dise\xF1ada para econom\xEDas comunitarias. Kreivo proporciona la infraestructura descentralizada que impulsa las aplicaciones VirtoSDK."
+    subtitle: "Creatividad, en Kusama."
+    description: "Kreivo es una blockchain dise\xF1ada para econom\xEDas comunitarias. Proporciona la infraestructura descentralizada que impulsa VirtoSDK \u2014 gobernanza, pagos e identidad, todo on-chain."
+    matrix_label: "\xDAnete a la conversaci\xF3n"
+    matrix_link: https://matrix.to/#/#kreivo:virto.community
   architecture:
     title: Arquitectura
     cards:
@@ -98,6 +91,16 @@ kreivo:
         description: "M\xF3dulos on-chain nativos para membres\xEDas, gobernanza y tesorer\xEDas multi-moneda. Construidos para organizaciones reales."
       - title: VOS (Virto Operating System)
         description: "Una capa de ejecuci\xF3n descentralizada que ejecuta l\xF3gica de backend como servicios inteligentes. Piensa en microservicios, pero sin intermediarios."
+  ecosystem:
+    title: Construyendo sobre Kreivo
+    description: Equipos y proyectos que usan Kreivo para impulsar economias comunitarias reales.
+    projects:
+      - name: Bloque
+        description: "Una plataforma para comercio local impulsado por comunidades. Pagos, membres\xEDas y gobernanza para negocios de barrio."
+        link: https://www.bloque.app/
+      - name: Virto Marketplace
+        description: "Infraestructura de marketplace descentralizado con escrow on-chain, pagos multi-moneda y resoluci\xF3n de disputas comunitaria."
+        link: https://github.com/virto-network
   dashboard:
     title: La Red de un Vistazo
     metrics:
@@ -113,6 +116,11 @@ kreivo:
       - id: validators
         value: "7"
         label: Collators
+  cta:
+    title: Empieza a construir en Kreivo
+    description: Todo lo que necesitas para lanzar tu economia comunitaria.
+    button: Leer la Documentacion
+    button_link: /docs
 
 about_us:
   hero:

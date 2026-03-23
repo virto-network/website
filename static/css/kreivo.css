@@ -6,6 +6,13 @@
     text-align: center;
 }
 
+.kreivo-subtitle {
+    color: var(--clr-terminal-green);
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
 #kreivo-hero h1 {
     font-size: var(--font-size-main-title);
     color: var(--clr-whitest);
@@ -21,6 +28,24 @@
     max-width: 650px;
     line-height: 1.6;
     margin-bottom: 2rem;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.matrix-link {
+    color: var(--clr-olive-lighter);
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.matrix-link:hover {
+    color: var(--clr-green-darker);
 }
 
 /* Architecture Section */
@@ -53,6 +78,62 @@
     line-height: 1.6;
 }
 
+/* Ecosystem Section */
+#ecosystem {
+    padding: 6rem 2rem;
+    flex-direction: column;
+}
+
+#ecosystem h2 {
+    color: var(--clr-whitest);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.ecosystem-subtitle {
+    color: var(--clr-olive-lighter);
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.ecosystem-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 900px;
+    width: 100%;
+}
+
+.ecosystem-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-decoration: none !important;
+}
+
+.ecosystem-card h3 {
+    color: var(--clr-whitest);
+    font-size: var(--font-size-small-title);
+    transition: color 0.2s ease;
+}
+
+.ecosystem-card:hover h3 {
+    color: var(--clr-green-darker);
+}
+
+.ecosystem-card p {
+    color: var(--clr-olive-lighter);
+    line-height: 1.6;
+}
+
+.project-link {
+    color: var(--clr-green-darker);
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+
 /* Dashboard Section */
 #dashboard {
     padding: 6rem 2rem;
@@ -67,9 +148,9 @@
 
 .dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
-    max-width: 800px;
+    max-width: var(--max-width);
     width: 100%;
 }
 
@@ -79,7 +160,7 @@
 
 .metric-value {
     font-family: var(--font-mono);
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--clr-terminal-green);
     margin-bottom: 0.5rem;
@@ -87,8 +168,30 @@
 
 .metric-label {
     font-family: var(--font-mono);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--clr-grey);
+}
+
+/* Kreivo CTA */
+#kreivo-cta {
+    padding: 6rem 2rem;
+    min-height: 40dvh;
+}
+
+#kreivo-cta article {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+}
+
+#kreivo-cta h2 {
+    color: var(--clr-whitest);
+}
+
+#kreivo-cta p {
+    color: var(--clr-olive-lighter);
+    line-height: 1.6;
 }
 
 /* Responsive */
@@ -97,6 +200,16 @@
         grid-template-columns: 1fr;
     }
 
+    .ecosystem-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
     .dashboard-grid {
         grid-template-columns: 1fr;
     }

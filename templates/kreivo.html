@@ -10,9 +10,13 @@
 {% set kreivo = data.kreivo %}
 
 <section id="kreivo-hero" class="grid-bg">
+	<span class="kreivo-subtitle animated mono">{{ kreivo.hero.subtitle }}</span>
 	<h1 class="animated">{{ kreivo.hero.title_pre }} <span class="accent">{{ kreivo.hero.title_accent }}</span></h1>
 	<p class="animated">{{ kreivo.hero.description }}</p>
-	<a class="button animated" href="/docs">{% if lang == "es" %}Empezar a construir{% else %}Start Building{% endif %}</a>
+	<div class="hero-actions animated">
+		<a class="button" href="/docs">{% if lang == "es" %}Empezar a construir{% else %}Start Building{% endif %}</a>
+		<a class="matrix-link mono" href="{{ kreivo.hero.matrix_link }}">{{ kreivo.hero.matrix_label }} &rarr;</a>
+	</div>
 </section>
 
 <section id="architecture">
@@ -27,6 +31,20 @@
 	</div>
 </section>
 
+<section id="ecosystem">
+	<h2 class="animated">{{ kreivo.ecosystem.title }}</h2>
+	<p class="ecosystem-subtitle animated">{{ kreivo.ecosystem.description }}</p>
+	<div class="ecosystem-grid animated">
+		{% for project in kreivo.ecosystem.projects %}
+		<a class="glass-card ecosystem-card" href="{{ project.link }}">
+			<h3>{{ project.name }}</h3>
+			<p>{{ project.description }}</p>
+			<span class="project-link mono">{% if lang == "es" %}Visitar{% else %}Visit{% endif %} &rarr;</span>
+		</a>
+		{% endfor %}
+	</div>
+</section>
+
 <section id="dashboard">
 	<h2 class="animated">{{ kreivo.dashboard.title }}</h2>
 	<div class="dashboard-grid animated">
@@ -37,6 +55,14 @@
 		</div>
 		{% endfor %}
 	</div>
+</section>
+
+<section id="kreivo-cta">
+	<article class="animated">
+		<h2>{{ kreivo.cta.title }}</h2>
+		<p>{{ kreivo.cta.description }}</p>
+		<a class="button" href="{{ kreivo.cta.button_link }}">{{ kreivo.cta.button }}</a>
+	</article>
 </section>
 
 {% endblock %}
