@@ -105,7 +105,7 @@
 
 .tiers-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     max-width: var(--max-width);
     width: 100%;
@@ -156,6 +156,16 @@
     color: var(--clr-grey);
 }
 
+.price-note {
+    font-size: 0.75rem;
+    color: var(--clr-grey);
+}
+
+.per-seat {
+    font-size: 0.75rem;
+    color: var(--clr-grey);
+}
+
 .tier-description {
     color: var(--clr-olive-lighter);
     font-size: 0.9rem;
@@ -191,6 +201,50 @@
     letter-spacing: 0.05em;
 }
 
+.tier-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--clr-grey);
+}
+
+.meta-item {
+    cursor: help;
+    border-bottom: 1px dotted var(--clr-grey);
+}
+
+.meta-sep {
+    opacity: 0.4;
+}
+
+.tier-plus {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px dashed var(--glass-border);
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+.plus-label {
+    color: var(--clr-green-darker);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.plus-detail {
+    color: var(--clr-olive-lighter);
+    flex-grow: 1;
+}
+
+.plus-price {
+    color: var(--clr-whitest);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
 .tier-cta {
     display: block;
     text-align: center;
@@ -211,6 +265,66 @@
 
 .tier-card.featured .tier-cta {
     background: var(--clr-terminal-green);
+}
+
+/* Explorer row */
+.explorer-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    background: var(--glass-bg);
+    opacity: 0.55;
+    max-width: var(--max-width);
+    width: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.explorer-row:hover {
+    opacity: 0.85;
+}
+
+.explorer-label {
+    color: var(--clr-grey);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+.explorer-price {
+    color: var(--clr-olive-lighter);
+    font-size: 1.1rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.explorer-desc {
+    color: var(--clr-grey);
+    font-size: 0.85rem;
+    flex-grow: 1;
+}
+
+.explorer-cta {
+    color: var(--clr-green-darker);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.explorer-cta:hover {
+    color: var(--clr-terminal-green);
+}
+
+@media (max-width: 768px) {
+    .explorer-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
 }
 
 /* Supporters */
@@ -269,7 +383,7 @@
 /* Responsive */
 @media (max-width: 1100px) {
     .tiers-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

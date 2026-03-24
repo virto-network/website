@@ -25,45 +25,60 @@ home:
     dimensions:
       memberships: Members
       gas: Transactions
-      governance: Gov. tracks
-      voting: Voting power
+    tooltips:
+      governance: "Business units with independent decision-making"
+      voting: "Your org's influence on Kreivo chain governance"
+    explorer:
+      label: Explorer
+      price: "1 KSM"
+      description: "For crypto natives already in Kusama. 1 KSM = 5 members."
+      memberships: "5"
+      gas: "1K tx/mo"
+      governance: "1 track"
+      voting: "--"
     plans:
-      - name: XS
-        label: Starter
-        price: "$3"
-        memberships: "Up to 10"
-        gas: "1K tx/mo"
-        governance: "1 track"
-        voting: "--"
-        description: For small collectives and experiments.
       - name: S
         label: Community
-        price: "$5"
-        memberships: "Up to 50"
-        gas: "10K tx/mo"
-        governance: "3 tracks"
+        price: "$10"
+        per_seat: "$1/seat"
+        memberships: "Up to 10"
+        gas: "5K tx/mo"
+        governance: "1 business unit"
         voting: "1x"
-        description: For clubs, cooperatives, and small DAOs.
+        description: For small collectives, clubs, and early-stage DAOs.
+        plus:
+          price: "$18"
+          gas: "20K tx/mo"
       - name: M
         label: Organization
-        price: "$19"
-        memberships: "Up to 250"
+        price: "$80"
+        per_seat: "$0.80/seat"
+        memberships: "Up to 100"
         gas: "50K tx/mo"
-        governance: "5 tracks"
+        governance: "5 business units"
         voting: "3x"
         description: For growing orgs with active governance.
         featured: true
+        plus:
+          price: "$130"
+          gas: "200K tx/mo"
       - name: L
         label: Business
-        price: "$49"
+        price: "$700"
+        per_seat: "$0.70/seat"
         memberships: "Up to 1,000"
-        gas: "200K tx/mo"
-        governance: "10 tracks"
+        gas: "500K tx/mo"
+        governance: "10 business units"
         voting: "5x"
         description: For businesses onboarding customers at scale.
+        plus:
+          price: "$1,100"
+          gas: "2M tx/mo"
       - name: XL
         label: Enterprise
-        price: "$149"
+        price: "$0.50"
+        price_suffix: "/seat"
+        price_note: "min $1,500"
         memberships: "Unlimited"
         gas: "Unlimited"
         governance: "Unlimited"

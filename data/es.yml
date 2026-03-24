@@ -25,45 +25,60 @@ home:
     dimensions:
       memberships: Miembros
       gas: Transacciones
-      governance: Tracks de gov.
-      voting: Poder de voto
+    tooltips:
+      governance: "Unidades de negocio con toma de decisiones independiente"
+      voting: "La influencia de tu org en la gobernanza de Kreivo"
+    explorer:
+      label: Explorer
+      price: "1 KSM"
+      description: "Para cripto nativos en Kusama. 1 KSM = 5 miembros."
+      memberships: "5"
+      gas: "1K tx/mes"
+      governance: "1 track"
+      voting: "--"
     plans:
-      - name: XS
-        label: Starter
-        price: "$3"
-        memberships: "Hasta 10"
-        gas: "1K tx/mes"
-        governance: "1 track"
-        voting: "--"
-        description: "Para peque\xF1os colectivos y experimentos."
       - name: S
         label: Comunidad
-        price: "$5"
-        memberships: "Hasta 50"
-        gas: "10K tx/mes"
-        governance: "3 tracks"
+        price: "$10"
+        per_seat: "$1/seat"
+        memberships: "Hasta 10"
+        gas: "5K tx/mes"
+        governance: "1 unidad de negocio"
         voting: "1x"
-        description: "Para clubes, cooperativas y peque\xF1os DAOs."
+        description: "Para peque\xF1os colectivos, clubes y DAOs iniciales."
+        plus:
+          price: "$18"
+          gas: "20K tx/mes"
       - name: M
         label: "Organizaci\xF3n"
-        price: "$19"
-        memberships: "Hasta 250"
+        price: "$80"
+        per_seat: "$0.80/seat"
+        memberships: "Hasta 100"
         gas: "50K tx/mes"
-        governance: "5 tracks"
+        governance: "5 unidades de negocio"
         voting: "3x"
         description: Para organizaciones en crecimiento con gobernanza activa.
         featured: true
+        plus:
+          price: "$130"
+          gas: "200K tx/mes"
       - name: L
         label: Negocio
-        price: "$49"
+        price: "$700"
+        per_seat: "$0.70/seat"
         memberships: "Hasta 1,000"
-        gas: "200K tx/mes"
-        governance: "10 tracks"
+        gas: "500K tx/mes"
+        governance: "10 unidades de negocio"
         voting: "5x"
         description: Para negocios que incorporan clientes a escala.
+        plus:
+          price: "$1,100"
+          gas: "2M tx/mes"
       - name: XL
         label: Empresa
-        price: "$149"
+        price: "$0.50"
+        price_suffix: "/seat"
+        price_note: "min $1,500"
         memberships: Ilimitados
         gas: Ilimitadas
         governance: Ilimitados

@@ -37,7 +37,9 @@
 			<div class="tier-header">
 				<span class="tier-name mono">{{ plan.name }}</span>
 				<h3>{{ plan.label }}</h3>
-				<span class="tier-price">{{ plan.price }}<span class="price-period">/mo</span></span>
+				<span class="tier-price">{{ plan.price }}<span class="price-period">{% if plan.price_suffix %}{{ plan.price_suffix }}{% else %}/mo{% endif %}</span></span>
+				{% if plan.price_note %}<span class="price-note mono">{{ plan.price_note }}</span>{% endif %}
+				{% if plan.per_seat %}<span class="per-seat mono">{{ plan.per_seat }}</span>{% endif %}
 			</div>
 			<p class="tier-description">{{ plan.description }}</p>
 			<ul class="tier-specs">
@@ -49,18 +51,29 @@
 					<span class="spec-value mono">{{ plan.gas }}</span>
 					<span class="spec-label">{{ home.tiers.dimensions.gas }}</span>
 				</li>
-				<li>
-					<span class="spec-value mono">{{ plan.governance }}</span>
-					<span class="spec-label">{{ home.tiers.dimensions.governance }}</span>
-				</li>
-				<li>
-					<span class="spec-value mono">{{ plan.voting }}</span>
-					<span class="spec-label">{{ home.tiers.dimensions.voting }}</span>
-				</li>
 			</ul>
+			<div class="tier-meta">
+				<span class="meta-item" title="{{ home.tiers.tooltips.governance }}">{{ plan.governance }}</span>
+				<span class="meta-sep">&middot;</span>
+				<span class="meta-item" title="{{ home.tiers.tooltips.voting }}">{{ plan.voting }} {% if lang == "es" %}voto{% else %}vote{% endif %}</span>
+			</div>
+			{% if plan.plus %}
+			<div class="tier-plus">
+				<span class="plus-label mono">+</span>
+				<span class="plus-detail">{{ plan.plus.gas }}</span>
+				<span class="plus-price mono">{{ plan.plus.price }}/mo</span>
+			</div>
+			{% endif %}
 			<a class="tier-cta" href="#">{{ home.tiers.cta }}</a>
 		</div>
 		{% endfor %}
+	</div>
+	{% set explorer = home.tiers.explorer %}
+	<div class="explorer-row animated">
+		<span class="explorer-label mono">{{ explorer.label }}</span>
+		<span class="explorer-price mono">{{ explorer.price }}</span>
+		<span class="explorer-desc">{{ explorer.description }}</span>
+		<a class="explorer-cta mono" href="#">{{ home.tiers.cta }} &rarr;</a>
 	</div>
 </section>
 
