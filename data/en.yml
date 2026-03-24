@@ -167,15 +167,21 @@ kreivo:
     description: Kreivo is a community-governed blockchain on Kusama, built for community economies. Organizations that join Kreivo collectively govern the chain — bigger subscriptions get more voting power, but balanced so no single entity dominates.
     matrix_label: Join the conversation
     matrix_link: https://matrix.to/#/#kreivo:virto.community
-  architecture:
-    title: Architecture
-    cards:
-      - title: Kusama Parachain
-        description: Kreivo runs as a Kusama parachain, inheriting shared security while maintaining sovereignty over its own state and governance.
-      - title: Community Governance
-        description: Kreivo is governed by the organizations that use it. Voting power scales with subscription tier but stays balanced — unlike token-weighted chains where whales dominate.
-      - title: VOS (Virto Operating System)
-        description: A decentralized execution layer that runs backend logic as smart services. Think microservices, but trustless.
+  features:
+    title: What makes Kreivo different
+    list:
+      - title: No wallets needed
+        description: Users authenticate with passkeys, ZK proofs, and social login. No browser extensions, no seed phrases.
+      - title: Feeless transactions
+        description: Members of subscribed organizations transact without gas fees. The subscription covers it.
+      - title: Reversible payments
+        description: Escrow-based payment system with built-in dispute resolution. Safe for real commerce.
+      - title: Org governance
+        description: Advanced governance with multiple tracks for independent business units within a single organization.
+      - title: Marketplace primitives
+        description: Native tokenization, product listings, and shopping carts for building decentralized marketplaces.
+      - title: Community-governed chain
+        description: Kreivo is governed by its member organizations, not token whales. Voting power scales with subscription, not holdings.
   ecosystem:
     title: Building on Kreivo
     description: Teams and projects using Kreivo to power real-world community economies.

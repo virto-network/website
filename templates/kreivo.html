@@ -20,13 +20,16 @@
 	</div>
 </section>
 
-<section id="architecture">
-	<h2 class="animated">{{ kreivo.architecture.title }}</h2>
-	<div class="arch-grid animated">
-		{% for card in kreivo.architecture.cards %}
-		<div class="glass-card">
-			<h3>{{ card.title }}</h3>
-			<p>{{ card.description }}</p>
+<section id="features">
+	<h2 class="animated">{{ kreivo.features.title }}</h2>
+	<div class="features-list">
+		{% for feature in kreivo.features.list %}
+		<div class="feature-item animated">
+			<div class="feature-line"></div>
+			<div class="feature-content">
+				<h3>{{ feature.title }}</h3>
+				<p>{{ feature.description }}</p>
+			</div>
 		</div>
 		{% endfor %}
 	</div>

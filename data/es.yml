@@ -167,15 +167,21 @@ kreivo:
     description: "Kreivo es una blockchain gobernada por su comunidad en Kusama, construida para econom\xEDas comunitarias. Las organizaciones que se unen a Kreivo gobiernan la cadena colectivamente \u2014 suscripciones mayores obtienen m\xE1s poder de voto, pero balanceado para que ninguna entidad domine."
     matrix_label: "\xDAnete a la conversaci\xF3n"
     matrix_link: https://matrix.to/#/#kreivo:virto.community
-  architecture:
-    title: Arquitectura
-    cards:
-      - title: Parachain en Kusama
-        description: "Kreivo funciona como una parachain de Kusama, heredando seguridad compartida mientras mantiene soberan\xEDa sobre su propio estado y gobernanza."
-      - title: Gobernanza Comunitaria
-        description: "Kreivo es gobernado por las organizaciones que lo usan. El poder de voto escala con el plan de suscripci\xF3n pero se mantiene balanceado \u2014 a diferencia de cadenas gobernadas por tokens donde las ballenas dominan."
-      - title: VOS (Virto Operating System)
-        description: "Una capa de ejecuci\xF3n descentralizada que ejecuta l\xF3gica de backend como servicios inteligentes. Piensa en microservicios, pero sin intermediarios."
+  features:
+    title: "Qu\xE9 hace diferente a Kreivo"
+    list:
+      - title: Sin wallets
+        description: "Los usuarios se autentican con passkeys, pruebas ZK y login social. Sin extensiones, sin seed phrases."
+      - title: Transacciones sin gas
+        description: "Los miembros de organizaciones suscritas realizan transacciones sin tarifas de gas. La suscripci\xF3n lo cubre."
+      - title: Pagos reversibles
+        description: "Sistema de pagos basado en escrow con resoluci\xF3n de disputas integrada. Seguro para comercio real."
+      - title: Gobernanza organizacional
+        description: "Gobernanza avanzada con m\xFAltiples tracks para unidades de negocio independientes dentro de una misma organizaci\xF3n."
+      - title: Primitivas de marketplace
+        description: "Tokenizaci\xF3n nativa, listados de productos y carritos de compra para construir marketplaces descentralizados."
+      - title: Cadena gobernada por comunidades
+        description: "Kreivo es gobernado por sus organizaciones miembro, no por ballenas de tokens. El poder de voto escala con la suscripci\xF3n, no con los holdings."
   ecosystem:
     title: Construyendo sobre Kreivo
     description: Equipos y proyectos que usan Kreivo para impulsar economias comunitarias reales.
