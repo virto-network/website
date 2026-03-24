@@ -142,6 +142,20 @@
     font-size: 1.1rem;
 }
 
+.tier-price {
+    font-family: var(--font-mono);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--clr-whitest);
+    margin-top: 0.25rem;
+}
+
+.price-period {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--clr-grey);
+}
+
 .tier-description {
     color: var(--clr-olive-lighter);
     font-size: 0.9rem;

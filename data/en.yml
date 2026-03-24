@@ -26,37 +26,48 @@ home:
       memberships: Members
       gas: Transactions
       governance: Gov. tracks
+      voting: Voting power
     plans:
       - name: XS
         label: Starter
+        price: "$3"
         memberships: "Up to 10"
         gas: "1K tx/mo"
         governance: "1 track"
+        voting: "--"
         description: For small collectives and experiments.
       - name: S
         label: Community
+        price: "$5"
         memberships: "Up to 50"
         gas: "10K tx/mo"
         governance: "3 tracks"
+        voting: "1x"
         description: For clubs, cooperatives, and small DAOs.
       - name: M
         label: Organization
+        price: "$19"
         memberships: "Up to 250"
         gas: "50K tx/mo"
         governance: "5 tracks"
+        voting: "3x"
         description: For growing orgs with active governance.
         featured: true
       - name: L
         label: Business
+        price: "$49"
         memberships: "Up to 1,000"
         gas: "200K tx/mo"
         governance: "10 tracks"
+        voting: "5x"
         description: For businesses onboarding customers at scale.
       - name: XL
         label: Enterprise
+        price: "$149"
         memberships: "Unlimited"
         gas: "Unlimited"
         governance: "Unlimited"
+        voting: "8x"
         description: For large networks and platform operators.
     cta: Get started
   supporters:
@@ -138,16 +149,16 @@ kreivo:
     title_pre: "Meet"
     title_accent: "Kreivo"
     subtitle: "Creativity, in Kusama."
-    description: Kreivo is a purpose-built blockchain for community economies. It provides the decentralized infrastructure that powers VirtoSDK — governance, payments, and identity, all on-chain.
+    description: Kreivo is a community-governed blockchain on Kusama, built for community economies. Organizations that join Kreivo collectively govern the chain — bigger subscriptions get more voting power, but balanced so no single entity dominates.
     matrix_label: Join the conversation
     matrix_link: https://matrix.to/#/#kreivo:virto.community
   architecture:
     title: Architecture
     cards:
-      - title: Parachain Runtime
-        description: Kreivo runs as a Polkadot parachain, inheriting shared security while maintaining sovereignty over its own state and logic.
-      - title: Community Pallets
-        description: Native on-chain modules for memberships, governance, and multi-currency treasuries. Built for real organizations.
+      - title: Kusama Parachain
+        description: Kreivo runs as a Kusama parachain, inheriting shared security while maintaining sovereignty over its own state and governance.
+      - title: Community Governance
+        description: Kreivo is governed by the organizations that use it. Voting power scales with subscription tier but stays balanced — unlike token-weighted chains where whales dominate.
       - title: VOS (Virto Operating System)
         description: A decentralized execution layer that runs backend logic as smart services. Think microservices, but trustless.
   ecosystem:

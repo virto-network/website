@@ -37,6 +37,7 @@
 			<div class="tier-header">
 				<span class="tier-name mono">{{ plan.name }}</span>
 				<h3>{{ plan.label }}</h3>
+				<span class="tier-price">{{ plan.price }}<span class="price-period">/mo</span></span>
 			</div>
 			<p class="tier-description">{{ plan.description }}</p>
 			<ul class="tier-specs">
@@ -51,6 +52,10 @@
 				<li>
 					<span class="spec-value mono">{{ plan.governance }}</span>
 					<span class="spec-label">{{ home.tiers.dimensions.governance }}</span>
+				</li>
+				<li>
+					<span class="spec-value mono">{{ plan.voting }}</span>
+					<span class="spec-label">{{ home.tiers.dimensions.voting }}</span>
 				</li>
 			</ul>
 			<a class="tier-cta" href="#">{{ home.tiers.cta }}</a>
