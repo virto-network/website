@@ -1,48 +1,24 @@
 {% extends "base.html" %}
 
-{% block title %}{{ section.title | default(value="Virto Network") }} - Developer Platform{% endblock %}
+{% block title %}{{ section.title | default(value="Virto Network") }}{% endblock %}
 
 {% block content %}
 {% set data = load_data(path="data/" ~ lang ~ ".yml") %}
-{% set hero = data.hero %}
-{% set features = data.features %}
-{% set how = data.how_it_works %}
-{% set kreivo = data.kreivo_teaser %}
-{% set supporters = data.supporters %}
-{% set cta = data.cta %}
+{% set home = data.home %}
 
-<section id="hero" class="grid-bg">
+<section id="home-hero" class="grid-bg">
 	<article class="animated">
-		<div class="hero-text">
-			<span class="eyebrow">{{ hero.eyebrow }}</span>
-			<h1>{{ hero.title_pre }} <span class="accent">{{ hero.title_accent }}</span></h1>
-			<p>{{ hero.paragraph }}</p>
-			<a class="button" href="{{ hero.cta_link }}">{{ hero.cta }}</a>
-		</div>
-		<div class="hero-code">
-			<div class="code-block">{{ hero.code | safe }}</div>
-		</div>
+		<h1>{{ home.hero.title_pre }} <span class="accent">{{ home.hero.title_accent }}</span></h1>
+		<p>{{ home.hero.paragraph }}</p>
+		<a class="button" href="{{ home.hero.cta_link }}">{{ home.hero.cta }}</a>
 	</article>
 </section>
 
-<section id="features">
-	<h2 class="animated">{{ features.title }}</h2>
-	<p class="subtitle animated">{{ features.subtitle }}</p>
-	<div class="features-grid animated">
-		{% for card in features.cards %}
-		<div class="glass-card">
-			<span class="icon mono">{{ card.icon }}</span>
-			<h3>{{ card.title }}</h3>
-			<p>{{ card.description }}</p>
-		</div>
-		{% endfor %}
-	</div>
-</section>
-
-<section id="how-it-works">
-	<h2 class="animated">{{ how.title }}</h2>
+<section id="setup">
+	<h2 class="animated">{{ home.setup.title }}</h2>
+	<p class="setup-subtitle animated">{{ home.setup.subtitle }}</p>
 	<div class="steps-row animated">
-		{% for step in how.steps %}
+		{% for step in home.setup.steps %}
 		<div class="step">
 			<span class="step-number">{{ step.number }}</span>
 			<h3>{{ step.title }}</h3>
@@ -52,20 +28,41 @@
 	</div>
 </section>
 
-<section id="kreivo-teaser">
-	<div class="glass-card animated">
-		<h2>{{ kreivo.title }}</h2>
-		<p>{{ kreivo.description }}</p>
-		<span class="block-counter">{{ kreivo.block_counter }}</span>
-		<span class="block-label">{{ kreivo.block_label }}</span>
-		<a class="button" href="/kreivo">{% if lang == "es" %}Explorar Kreivo{% else %}Explore Kreivo{% endif %}</a>
+<section id="tiers">
+	<h2 class="animated">{{ home.tiers.title }}</h2>
+	<p class="tiers-subtitle animated">{{ home.tiers.subtitle }}</p>
+	<div class="tiers-grid animated">
+		{% for plan in home.tiers.plans %}
+		<div class="tier-card glass-card{% if plan.featured %} featured{% endif %}">
+			<div class="tier-header">
+				<span class="tier-name mono">{{ plan.name }}</span>
+				<h3>{{ plan.label }}</h3>
+			</div>
+			<p class="tier-description">{{ plan.description }}</p>
+			<ul class="tier-specs">
+				<li>
+					<span class="spec-value mono">{{ plan.memberships }}</span>
+					<span class="spec-label">{{ home.tiers.dimensions.memberships }}</span>
+				</li>
+				<li>
+					<span class="spec-value mono">{{ plan.gas }}</span>
+					<span class="spec-label">{{ home.tiers.dimensions.gas }}</span>
+				</li>
+				<li>
+					<span class="spec-value mono">{{ plan.governance }}</span>
+					<span class="spec-label">{{ home.tiers.dimensions.governance }}</span>
+				</li>
+			</ul>
+			<a class="tier-cta" href="#">{{ home.tiers.cta }}</a>
+		</div>
+		{% endfor %}
 	</div>
 </section>
 
 <section id="supporters">
-	<h3 class="animated bolder">{{ supporters.title }}</h3>
+	<h3 class="animated bolder">{{ home.supporters.title }}</h3>
 	<ul class="supporters-list animated">
-		{% for supporter in supporters.list %}
+		{% for supporter in home.supporters.list %}
 		<li>
 			<a title="{{ supporter.title }}" href="{{ supporter.link }}">
 				<img src="/svg/{{ supporter.icon }}" alt="{{ supporter.title }}" height="48">
@@ -75,11 +72,11 @@
 	</ul>
 </section>
 
-<section id="cta">
+<section id="home-cta">
 	<article class="animated">
-		<h2>{{ cta.title }}</h2>
-		<p>{{ cta.description }}</p>
-		<a class="button" href="{{ cta.button_link }}">{{ cta.button }}</a>
+		<h2>{{ home.cta.title }}</h2>
+		<p>{{ home.cta.description }}</p>
+		<a class="button" href="{{ home.cta.button_link }}">{{ home.cta.button }}</a>
 	</article>
 </section>
 

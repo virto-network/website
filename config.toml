@@ -1,12 +1,12 @@
 base_url = "https://virto.network"
 title = "Virto Network"
-description = "Developer platform for building Web3 applications with VirtoSDK and the Kreivo blockchain."
+description = "Decentralized infrastructure for organizations — payments, memberships, and governance on-chain."
 default_language = "en"
 compile_sass = false
 build_search_index = false
 [languages.es]
 title = "Virto Network"
-description = "Plataforma para desarrolladores que construyen aplicaciones Web3 con VirtoSDK y la blockchain Kreivo."
+description = "Infraestructura descentralizada para organizaciones — pagos, membresias y gobernanza on-chain."
 
 [extra]
 calendly = "https://calendly.com/virtonetwork"
@@ -19,15 +19,26 @@ route = "/kreivo"
 class = "menu-item"
 
 [[extra.nav]]
+link_en = "SDK"
+link_es = "SDK"
+route = "/sdk"
+class = "menu-item"
+
+[[extra.nav]]
 link_en = "Get Started"
 link_es = "Empezar"
-route = "/docs"
+route = "/#tiers"
 class = "app-button-link button"
 
 [[extra.footer]]
 link_en = "Kreivo"
 link_es = "Kreivo"
 route = "/kreivo"
+
+[[extra.footer]]
+link_en = "SDK & Docs"
+link_es = "SDK & Docs"
+route = "/sdk"
 
 [[extra.footer]]
 link_en = "Whitepaper"

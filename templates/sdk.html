@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}VirtoSDK - {{ config.title }}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="/css/sdk.css">
+{% endblock %}
+
+{% block content %}
+{% set data = load_data(path="data/" ~ lang ~ ".yml") %}
+{% set sdk = data.sdk %}
+
+<section id="sdk-hero" class="grid-bg">
+	<article class="animated">
+		<div class="hero-text">
+			<span class="eyebrow">{{ sdk.hero.eyebrow }}</span>
+			<h1>{{ sdk.hero.title_pre }} <span class="accent">{{ sdk.hero.title_accent }}</span></h1>
+			<p>{{ sdk.hero.paragraph }}</p>
+			<a class="button" href="{{ sdk.hero.cta_link }}">{{ sdk.hero.cta }}</a>
+		</div>
+		<div class="hero-code">
+			<div class="code-block">{{ sdk.hero.code | safe }}</div>
+		</div>
+	</article>
+</section>
+
+<section id="sdk-features">
+	<h2 class="animated">{{ sdk.features.title }}</h2>
+	<p class="subtitle animated">{{ sdk.features.subtitle }}</p>
+	<div class="features-grid animated">
+		{% for card in sdk.features.cards %}
+		<div class="glass-card">
+			<span class="icon mono">{{ card.icon }}</span>
+			<h3>{{ card.title }}</h3>
+			<p>{{ card.description }}</p>
+		</div>
+		{% endfor %}
+	</div>
+</section>
+
+<section id="sdk-how">
+	<h2 class="animated">{{ sdk.how_it_works.title }}</h2>
+	<div class="steps-row animated">
+		{% for step in sdk.how_it_works.steps %}
+		<div class="step">
+			<span class="step-number">{{ step.number }}</span>
+			<h3>{{ step.title }}</h3>
+			<p>{{ step.description }}</p>
+		</div>
+		{% endfor %}
+	</div>
+</section>
+
+<section id="sdk-cta">
+	<article class="animated">
+		<h2>{{ sdk.cta.title }}</h2>
+		<p>{{ sdk.cta.description }}</p>
+		<a class="button" href="{{ sdk.cta.button_link }}">{{ sdk.cta.button }}</a>
+	</article>
+</section>
+
+{% endblock %}

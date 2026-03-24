@@ -1,79 +1,138 @@
-hero:
-  eyebrow: "$ npm install @virto/sdk"
-  title_pre: "Construye apps Web3"
-  title_accent: "sin la complejidad"
-  paragraph: Integra funcionalidades descentralizadas usando una API TypeScript que ya conoces. VirtoSDK maneja blockchain, identidad y pagos para que te enfoques en tu producto.
-  cta: Empezar
-  cta_link: /docs
+# Homepage — Onboarding de organizaciones
+home:
+  hero:
+    title_pre: "Lanza tu organizacion"
+    title_accent: "on-chain"
+    paragraph: "Virto le da a tu organizaci\xF3n infraestructura descentralizada para pagos, membres\xEDas y gobernanza. Config\xFArala en minutos, escala a miles."
+    cta: Elige tu plan
+    cta_link: "#tiers"
+  setup:
+    title: Listo en 3 pasos
+    subtitle: "De cero a una organizaci\xF3n on-chain completamente operativa."
+    steps:
+      - number: "01"
+        title: Elige un plan
+        description: "Escoge un plan que se ajuste al tama\xF1o y necesidades de tu organizaci\xF3n."
+      - number: "02"
+        title: Configura tu org
+        description: "Configura membres\xEDas, reglas de gobernanza y m\xE9todos de pago desde un panel simple."
+      - number: "03"
+        title: Lanza
+        description: "Tu organizaci\xF3n est\xE1 activa. Los miembros se unen, votan y realizan transacciones \u2014 todo on-chain."
+  tiers:
+    title: Planes para cada organizacion
+    subtitle: "Desde un peque\xF1o colectivo hasta una gran empresa. Escala membres\xEDas, rendimiento y gobernanza a medida que creces."
+    dimensions:
+      memberships: Miembros
+      gas: Transacciones
+      governance: Tracks de gov.
+    plans:
+      - name: XS
+        label: Starter
+        memberships: "Hasta 10"
+        gas: "1K tx/mes"
+        governance: "1 track"
+        description: "Para peque\xF1os colectivos y experimentos."
+      - name: S
+        label: Comunidad
+        memberships: "Hasta 50"
+        gas: "10K tx/mes"
+        governance: "3 tracks"
+        description: "Para clubes, cooperativas y peque\xF1os DAOs."
+      - name: M
+        label: "Organizaci\xF3n"
+        memberships: "Hasta 250"
+        gas: "50K tx/mes"
+        governance: "5 tracks"
+        description: Para organizaciones en crecimiento con gobernanza activa.
+        featured: true
+      - name: L
+        label: Negocio
+        memberships: "Hasta 1,000"
+        gas: "200K tx/mes"
+        governance: "10 tracks"
+        description: Para negocios que incorporan clientes a escala.
+      - name: XL
+        label: Empresa
+        memberships: Ilimitados
+        gas: Ilimitadas
+        governance: Ilimitados
+        description: Para grandes redes y operadores de plataforma.
+    cta: Empezar
+  supporters:
+    title: Respaldado por
+    list:
+      - icon: polkadot.svg
+        link: https://polkadot.network/
+        title: Polkadot
+      - icon: kusama.svg
+        link: https://kusama.network/
+        title: Kusama
+      - icon: web3foundation.svg
+        link: https://web3.foundation/
+        title: Web3 Foundation
+  cta:
+    title: "Listo para lanzar?"
+    description: "Configura tu organizaci\xF3n en Kreivo y empieza a incorporar miembros hoy."
+    button: Empezar
+    button_link: "#tiers"
 
-  code: |
-    <span class="keyword">import</span> { createClient } <span class="keyword">from</span> <span class="string">'@virto/sdk'</span>
+# SDK page
+sdk:
+  hero:
+    eyebrow: "$ npm install @virto/sdk"
+    title_pre: "Construye apps Web3"
+    title_accent: "sin la complejidad"
+    paragraph: "Integra funcionalidades descentralizadas usando una API TypeScript que ya conoces. VirtoSDK maneja blockchain, identidad y pagos para que te enfoques en tu producto."
+    cta: Leer la Documentacion
+    cta_link: /docs
+    code: |
+      <span class="keyword">import</span> { createClient } <span class="keyword">from</span> <span class="string">'@virto/sdk'</span>
 
-    <span class="keyword">const</span> virto = <span class="func">createClient</span>({
-      network: <span class="string">'kreivo'</span>,
-    })
+      <span class="keyword">const</span> virto = <span class="func">createClient</span>({
+        network: <span class="string">'kreivo'</span>,
+      })
 
-    <span class="comment">// Crear una comunidad con gobernanza</span>
-    <span class="keyword">const</span> community = <span class="keyword">await</span> virto.communities.<span class="func">create</span>({
-      name: <span class="string">'Mi DAO'</span>,
-      membership: <span class="string">'open'</span>,
-    })
+      <span class="comment">// Crear una comunidad con gobernanza</span>
+      <span class="keyword">const</span> community = <span class="keyword">await</span> virto.communities.<span class="func">create</span>({
+        name: <span class="string">'Mi DAO'</span>,
+        membership: <span class="string">'open'</span>,
+      })
+  features:
+    title: "Por qu\xE9 los desarrolladores eligen Virto"
+    subtitle: Una experiencia de desarrollo familiar para infraestructura descentralizada.
+    cards:
+      - icon: "> _"
+        title: API Familiar
+        description: SDK TypeScript-first con patrones async/await. Si conoces fetch, conoces Virto.
+      - icon: "{ }"
+        title: "Dise\xF1o Modular"
+        description: "Usa solo lo que necesitas: pagos, identidad, gobernanza, o todos juntos."
+      - icon: "0x"
+        title: Impulsado por Kreivo
+        description: Construido sobre Kreivo, una blockchain optimizada para economias comunitarias y casos de uso reales.
+      - icon: "#!"
+        title: Sin Wallet Requerida
+        description: Incorpora usuarios con passkeys y login social. Sin extensiones, sin seed phrases.
+  how_it_works:
+    title: "C\xF3mo funciona"
+    steps:
+      - number: "01"
+        title: Instala
+        description: Agrega el SDK a tu proyecto con npm o yarn. Cero dependencias nativas.
+      - number: "02"
+        title: Conecta
+        description: "Inicializa un cliente apuntando a Kreivo. Auth, pagos y gobernanza est\xE1n integrados."
+      - number: "03"
+        title: Despliega
+        description: "Despliega tu app. Virto maneja la infraestructura descentralizada por detr\xE1s."
+  cta:
+    title: "Listo para construir?"
+    description: "Empieza a construir aplicaciones descentralizadas en minutos, no meses."
+    button: Leer la Documentacion
+    button_link: /docs
 
-features:
-  title: "Por qu\xE9 los desarrolladores eligen Virto"
-  subtitle: Una experiencia de desarrollo familiar para infraestructura descentralizada.
-  cards:
-    - icon: "> _"
-      title: API Familiar
-      description: SDK TypeScript-first con patrones async/await. Si conoces fetch, conoces Virto.
-    - icon: "{ }"
-      title: "Dise\xF1o Modular"
-      description: "Usa solo lo que necesitas: pagos, identidad, gobernanza, o todos juntos."
-    - icon: "0x"
-      title: Impulsado por Kreivo
-      description: Construido sobre Kreivo, una blockchain optimizada para economias comunitarias y casos de uso reales.
-    - icon: "#!"
-      title: Sin Wallet Requerida
-      description: Incorpora usuarios con passkeys y login social. Sin extensiones, sin seed phrases.
-
-how_it_works:
-  title: "C\xF3mo funciona"
-  steps:
-    - number: "01"
-      title: Instala
-      description: Agrega el SDK a tu proyecto con npm o yarn. Cero dependencias nativas.
-    - number: "02"
-      title: Conecta
-      description: "Inicializa un cliente apuntando a Kreivo. Auth, pagos y gobernanza est\xE1n integrados."
-    - number: "03"
-      title: Despliega
-      description: "Despliega tu app. Virto maneja la infraestructura descentralizada por detr\xE1s."
-
-kreivo_teaser:
-  title: Impulsado por Kreivo
-  description: "Kreivo es una blockchain dise\xF1ada para econom\xEDas comunitarias. Producci\xF3n de bloques en tiempo real, gobernanza on-chain y soporte nativo multi-moneda."
-  block_counter: "#1,842,567"
-  block_label: "bloque m\xE1s reciente"
-
-supporters:
-  title: Respaldado por
-  list:
-    - icon: polkadot.svg
-      link: https://polkadot.network/
-      title: Polkadot
-    - icon: kusama.svg
-      link: https://kusama.network/
-      title: Kusama
-    - icon: web3foundation.svg
-      link: https://web3.foundation/
-      title: Web3 Foundation
-
-cta:
-  title: "Listo para construir?"
-  description: "Empieza a construir aplicaciones descentralizadas en minutos, no meses."
-  button: Empezar
-  button_link: /docs
-
+# Kreivo page
 kreivo:
   hero:
     title_pre: Conoce
@@ -122,6 +181,7 @@ kreivo:
     button: Leer la Documentacion
     button_link: /docs
 
+# About page
 about_us:
   hero:
     title: "Construyendo infraestructura para econom\xEDas comunitarias"

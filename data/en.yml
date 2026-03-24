@@ -1,79 +1,138 @@
-hero:
-  eyebrow: "$ npm install @virto/sdk"
-  title_pre: "Build Web3 apps"
-  title_accent: "without the complexity"
-  paragraph: Ship decentralized features using a TypeScript API you already know. VirtoSDK handles blockchain, identity, and payments so you can focus on your product.
-  cta: Get Started
-  cta_link: /docs
+# Homepage — Organization onboarding
+home:
+  hero:
+    title_pre: "Launch your organization"
+    title_accent: "on-chain"
+    paragraph: Virto gives your organization decentralized infrastructure for payments, memberships, and governance. Set up in minutes, scale to thousands.
+    cta: Choose your plan
+    cta_link: "#tiers"
+  setup:
+    title: Ready to go in 3 steps
+    subtitle: From zero to a fully operational on-chain organization.
+    steps:
+      - number: "01"
+        title: Pick a tier
+        description: Choose a plan that fits your organization's size and needs.
+      - number: "02"
+        title: Set up your org
+        description: Configure memberships, governance rules, and payment methods through a simple dashboard.
+      - number: "03"
+        title: Launch
+        description: Your organization is live. Members join, vote, and transact — all on-chain.
+  tiers:
+    title: Plans for every organization
+    subtitle: From a small collective to a large enterprise. Scale memberships, throughput, and governance as you grow.
+    dimensions:
+      memberships: Members
+      gas: Transactions
+      governance: Gov. tracks
+    plans:
+      - name: XS
+        label: Starter
+        memberships: "Up to 10"
+        gas: "1K tx/mo"
+        governance: "1 track"
+        description: For small collectives and experiments.
+      - name: S
+        label: Community
+        memberships: "Up to 50"
+        gas: "10K tx/mo"
+        governance: "3 tracks"
+        description: For clubs, cooperatives, and small DAOs.
+      - name: M
+        label: Organization
+        memberships: "Up to 250"
+        gas: "50K tx/mo"
+        governance: "5 tracks"
+        description: For growing orgs with active governance.
+        featured: true
+      - name: L
+        label: Business
+        memberships: "Up to 1,000"
+        gas: "200K tx/mo"
+        governance: "10 tracks"
+        description: For businesses onboarding customers at scale.
+      - name: XL
+        label: Enterprise
+        memberships: "Unlimited"
+        gas: "Unlimited"
+        governance: "Unlimited"
+        description: For large networks and platform operators.
+    cta: Get started
+  supporters:
+    title: Backed by
+    list:
+      - icon: polkadot.svg
+        link: https://polkadot.network/
+        title: Polkadot
+      - icon: kusama.svg
+        link: https://kusama.network/
+        title: Kusama
+      - icon: web3foundation.svg
+        link: https://web3.foundation/
+        title: Web3 Foundation
+  cta:
+    title: Ready to launch?
+    description: Set up your organization on Kreivo and start onboarding members today.
+    button: Get started
+    button_link: "#tiers"
 
-  code: |
-    <span class="keyword">import</span> { createClient } <span class="keyword">from</span> <span class="string">'@virto/sdk'</span>
+# SDK page — Developer-focused
+sdk:
+  hero:
+    eyebrow: "$ npm install @virto/sdk"
+    title_pre: "Build Web3 apps"
+    title_accent: "without the complexity"
+    paragraph: Ship decentralized features using a TypeScript API you already know. VirtoSDK handles blockchain, identity, and payments so you can focus on your product.
+    cta: Read the Docs
+    cta_link: /docs
+    code: |
+      <span class="keyword">import</span> { createClient } <span class="keyword">from</span> <span class="string">'@virto/sdk'</span>
 
-    <span class="keyword">const</span> virto = <span class="func">createClient</span>({
-      network: <span class="string">'kreivo'</span>,
-    })
+      <span class="keyword">const</span> virto = <span class="func">createClient</span>({
+        network: <span class="string">'kreivo'</span>,
+      })
 
-    <span class="comment">// Create a community with governance</span>
-    <span class="keyword">const</span> community = <span class="keyword">await</span> virto.communities.<span class="func">create</span>({
-      name: <span class="string">'My DAO'</span>,
-      membership: <span class="string">'open'</span>,
-    })
+      <span class="comment">// Create a community with governance</span>
+      <span class="keyword">const</span> community = <span class="keyword">await</span> virto.communities.<span class="func">create</span>({
+        name: <span class="string">'My DAO'</span>,
+        membership: <span class="string">'open'</span>,
+      })
+  features:
+    title: Why developers choose Virto
+    subtitle: A familiar developer experience for unfamiliar infrastructure.
+    cards:
+      - icon: "> _"
+        title: Familiar API
+        description: TypeScript-first SDK with async/await patterns. If you know fetch, you know Virto.
+      - icon: "{ }"
+        title: Modular by Design
+        description: Use only what you need — payments, identity, governance, or all of them together.
+      - icon: "0x"
+        title: Kreivo-Powered
+        description: Built on Kreivo, a blockchain optimized for community economies and real-world use cases.
+      - icon: "#!"
+        title: No Wallet Required
+        description: Onboard users with passkeys and social login. No extensions, no seed phrases.
+  how_it_works:
+    title: How it works
+    steps:
+      - number: "01"
+        title: Install
+        description: Add the SDK to your project with npm or yarn. Zero native dependencies.
+      - number: "02"
+        title: Connect
+        description: Initialize a client pointing to Kreivo. Auth, payments, and governance are built in.
+      - number: "03"
+        title: Ship
+        description: Deploy your app. Virto handles the decentralized infrastructure behind the scenes.
+  cta:
+    title: Ready to build?
+    description: Start building decentralized applications in minutes, not months.
+    button: Read the Docs
+    button_link: /docs
 
-features:
-  title: Why developers choose Virto
-  subtitle: A familiar developer experience for unfamiliar infrastructure.
-  cards:
-    - icon: "> _"
-      title: Familiar API
-      description: TypeScript-first SDK with async/await patterns. If you know fetch, you know Virto.
-    - icon: "{ }"
-      title: Modular by Design
-      description: Use only what you need — payments, identity, governance, or all of them together.
-    - icon: "0x"
-      title: Kreivo-Powered
-      description: Built on Kreivo, a blockchain optimized for community economies and real-world use cases.
-    - icon: "#!"
-      title: No Wallet Required
-      description: Onboard users with passkeys and social login. No extensions, no seed phrases.
-
-how_it_works:
-  title: How it works
-  steps:
-    - number: "01"
-      title: Install
-      description: Add the SDK to your project with npm or yarn. Zero native dependencies.
-    - number: "02"
-      title: Connect
-      description: Initialize a client pointing to Kreivo. Auth, payments, and governance are built in.
-    - number: "03"
-      title: Ship
-      description: Deploy your app. Virto handles the decentralized infrastructure behind the scenes.
-
-kreivo_teaser:
-  title: Powered by Kreivo
-  description: Kreivo is a purpose-built blockchain for community economies. Real-time block production, on-chain governance, and native multi-currency support.
-  block_counter: "#1,842,567"
-  block_label: latest block
-
-supporters:
-  title: Backed by
-  list:
-    - icon: polkadot.svg
-      link: https://polkadot.network/
-      title: Polkadot
-    - icon: kusama.svg
-      link: https://kusama.network/
-      title: Kusama
-    - icon: web3foundation.svg
-      link: https://web3.foundation/
-      title: Web3 Foundation
-
-cta:
-  title: Ready to build?
-  description: Start building decentralized applications in minutes, not months.
-  button: Get Started
-  button_link: /docs
-
+# Kreivo page
 kreivo:
   hero:
     title_pre: "Meet"
@@ -122,6 +181,7 @@ kreivo:
     button: Read the Docs
     button_link: /docs
 
+# About page
 about_us:
   hero:
     title: Building infrastructure for community economies
