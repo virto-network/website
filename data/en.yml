@@ -192,26 +192,11 @@ kreivo:
       - name: Virto Marketplace
         description: Decentralized marketplace infrastructure with on-chain escrow, multi-currency payments, and community-driven dispute resolution.
         link: https://github.com/virto-network
-  dashboard:
-    title: Network at a Glance
-    metrics:
-      - id: block-height
-        value: "1,842,567"
-        label: Block Height
-      - id: communities
-        value: "128"
-        label: Active Communities
-      - id: transactions
-        value: "4.2M"
-        label: Total Transactions
-      - id: validators
-        value: "7"
-        label: Collators
   cta:
-    title: Start building on Kreivo
-    description: Everything you need to launch your community economy.
-    button: Read the Docs
-    button_link: /docs
+    title: Explore the Kreivo network
+    description: Live blocks, communities, governance, and network stats — all in one place.
+    button: Open Explorer
+    button_link: /kreivo/explorer
 
 # About page
 about_us:

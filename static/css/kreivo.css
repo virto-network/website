@@ -175,44 +175,6 @@
     margin-top: auto;
 }
 
-/* Dashboard Section */
-#dashboard {
-    padding: 6rem 2rem;
-    flex-direction: column;
-}
-
-#dashboard h2 {
-    color: var(--clr-whitest);
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.dashboard-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    max-width: var(--max-width);
-    width: 100%;
-}
-
-.dashboard-grid .glass-card {
-    text-align: center;
-}
-
-.metric-value {
-    font-family: var(--font-mono);
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--clr-terminal-green);
-    margin-bottom: 0.5rem;
-}
-
-.metric-label {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    color: var(--clr-grey);
-}
-
 /* Kreivo CTA */
 #kreivo-cta {
     padding: 6rem 2rem;
@@ -241,18 +203,11 @@
         grid-template-columns: 1fr;
     }
 
-    .dashboard-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 @media (max-width: 600px) {
     .feature-item {
         gap: 1rem;
         padding: 1.5rem 0;
-    }
-
-    .dashboard-grid {
-        grid-template-columns: 1fr;
     }
 }

@@ -192,26 +192,11 @@ kreivo:
       - name: Virto Marketplace
         description: "Infraestructura de marketplace descentralizado con escrow on-chain, pagos multi-moneda y resoluci\xF3n de disputas comunitaria."
         link: https://github.com/virto-network
-  dashboard:
-    title: La Red de un Vistazo
-    metrics:
-      - id: block-height
-        value: "1,842,567"
-        label: Altura de Bloque
-      - id: communities
-        value: "128"
-        label: Comunidades Activas
-      - id: transactions
-        value: "4.2M"
-        label: Transacciones Totales
-      - id: validators
-        value: "7"
-        label: Collators
   cta:
-    title: Empieza a construir en Kreivo
-    description: Todo lo que necesitas para lanzar tu economia comunitaria.
-    button: Leer la Documentacion
-    button_link: /docs
+    title: Explora la red Kreivo
+    description: Bloques en vivo, comunidades, gobernanza y estadisticas de la red, todo en un solo lugar.
+    button: Abrir Explorer
+    button_link: /kreivo/explorer
 
 # About page
 about_us:

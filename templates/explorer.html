@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Kreivo blockchain explorer — blocks, accounts, communities, governance.">
+	<title>{{ page.title }} - {{ config.title }}</title>
+	<meta name="theme-color" content="#071914">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="/css/variables.css">
+	<link rel="stylesheet" href="/css/explorer.css">
+	<script type="module" src="/js/kreivo-dashboard.js"></script>
+</head>
+<body>
+	<nav id="nav" class="explorer-nav">
+		<div class="nav-inner">
+			<a href="/kreivo" class="nav-brand">
+				<img src="/svg/kreivo.svg" alt="Kreivo" width="28" height="28">
+				<span>Kreivo</span>
+			</a>
+			<div class="nav-links">
+				<a href="/" class="nav-link">Virto</a>
+				<a href="/sdk" class="nav-link">SDK</a>
+				<button id="connect-btn" class="nav-cta">Connect</button>
+			</div>
+		</div>
+	</nav>
+	<main>
+		<kreivo-dashboard>
+			<kreivo-blocks slot="widget"></kreivo-blocks>
+			<kreivo-account slot="widget"></kreivo-account>
+			<kreivo-communities slot="widget"></kreivo-communities>
+			<kreivo-assets slot="widget"></kreivo-assets>
+			<kreivo-governance slot="widget"></kreivo-governance>
+			<kreivo-network slot="widget"></kreivo-network>
+			<kreivo-extrinsics slot="widget"></kreivo-extrinsics>
+		</kreivo-dashboard>
+		<kreivo-panel></kreivo-panel>
+	</main>
+</body>
+</html>
