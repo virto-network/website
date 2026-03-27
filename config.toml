@@ -19,10 +19,20 @@ route = "/kreivo"
 class = "menu-item"
 
 [[extra.nav]]
-link_en = "SDK"
-link_es = "SDK"
+link_en = "Explore"
+link_es = "Explorar"
+route = "#"
+class = "menu-item has-submenu"
+
+[[extra.nav.submenu]]
+link_en = "VirtoSDK"
+link_es = "VirtoSDK"
 route = "/sdk"
-class = "menu-item"
+
+[[extra.nav.submenu]]
+link_en = "Kunekt Book"
+link_es = "Kunekt Book"
+route = "/kunekt"
 
 [[extra.nav]]
 link_en = "Get Started"
@@ -39,6 +49,11 @@ route = "/kreivo"
 link_en = "SDK & Docs"
 link_es = "SDK & Docs"
 route = "/sdk"
+
+[[extra.footer]]
+link_en = "Kunekt Book"
+link_es = "Kunekt Book"
+route = "/kunekt"
 
 [[extra.footer]]
 link_en = "Whitepaper"

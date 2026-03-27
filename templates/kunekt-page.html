@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} - Kunekt Book - {{ config.title }}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="/css/docs.css">
+{% endblock %}
+
+{% block content %}
+{% set kunekt = get_section(path="kunekt/_index.md") %}
+<div class="docs-layout">
+	<aside class="docs-sidebar">
+		<h3><a href="/kunekt" style="color: inherit; text-decoration: none;">Kunekt Book</a></h3>
+		<nav>
+			{% for p in kunekt.pages %}
+			<a href="{{ p.permalink }}"{% if p.permalink == page.permalink %} class="active"{% endif %}>{{ p.title }}</a>
+			{% endfor %}
+		</nav>
+	</aside>
+	<div class="docs-content">
+		<h1>{{ page.title }}</h1>
+		{{ page.content | safe }}
+	</div>
+</div>
+{% endblock %}

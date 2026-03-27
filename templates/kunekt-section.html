@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Kunekt Book - {{ config.title }}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="/css/docs.css">
+{% endblock %}
+
+{% block content %}
+<div class="docs-layout">
+	<aside class="docs-sidebar">
+		<h3><a href="/kunekt" style="color: inherit; text-decoration: none;">Kunekt Book</a></h3>
+		<nav>
+			{% for page in section.pages %}
+			<a href="{{ page.permalink }}">{{ page.title }}</a>
+			{% endfor %}
+		</nav>
+	</aside>
+	<div class="docs-content">
+		<h1>{{ section.title }}</h1>
+		<p>{% if lang == "es" %}Protocolo para construir una internet privada por defecto. Selecciona un capitulo de la barra lateral.{% else %}A protocol for building a private-by-default internet. Select a chapter from the sidebar to start reading.{% endif %}</p>
+		{% if section.pages | length > 0 %}
+		{% set first = section.pages | first %}
+		<h2>{{ first.title }}</h2>
+		{{ first.content | safe }}
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

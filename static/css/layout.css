@@ -100,6 +100,62 @@ body.hidden {
   color: var(--clr-green-darker);
 }
 
+/* Submenu dropdown */
+.submenu-wrap {
+  position: relative;
+}
+
+.submenu-wrap > a {
+  gap: 0.35rem;
+}
+
+.submenu-wrap .chevron {
+  transition: transform 0.2s ease;
+}
+
+.submenu-wrap:hover .chevron {
+  transform: rotate(180deg);
+}
+
+.submenu {
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 0;
+  min-width: 160px;
+  background: var(--clr-olive-darker);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 100;
+}
+
+.submenu-wrap:hover .submenu,
+.submenu-wrap:focus-within .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.submenu a {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: var(--clr-olive-lighter);
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.submenu a:hover {
+  color: var(--clr-whitest);
+  background: var(--glass-bg);
+  text-decoration: none;
+}
+
 .top-nav .nav-links a.app-button-link {
   margin-left: 0.5rem;
   font-weight: var(--font-weight-600);

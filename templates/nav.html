@@ -9,9 +9,24 @@
 		<div class="nav-links">
 			{% for item in config.extra.nav %}
 				{% if lang == "es" %}{% set link_text = item.link_es %}{% else %}{% set link_text = item.link_en %}{% endif %}
+				{% if item.submenu %}
+				<div class="submenu-wrap">
+					<a class="{{ item.class }}" href="{{ item.route }}" role="menuitem" aria-label="{{ link_text }}">
+						{{ link_text }}
+						<svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+					</a>
+					<div class="submenu">
+						{% for sub in item.submenu %}
+							{% if lang == "es" %}{% set sub_text = sub.link_es %}{% else %}{% set sub_text = sub.link_en %}{% endif %}
+							<a href="{{ sub.route }}">{{ sub_text }}</a>
+						{% endfor %}
+					</div>
+				</div>
+				{% else %}
 				<a class="{{ item.class }}{% if current_path is starting_with(item.route) %} current{% endif %}" href="{{ item.route }}" role="menuitem" aria-label="{{ link_text }}">
 					{{ link_text }}
 				</a>
+				{% endif %}
 			{% endfor %}
 		</div>
 		<a id="menu-icon" class="menu-icon" aria-label="{% if lang == 'es' %}Abrir menu{% else %}Open menu{% endif %}">
@@ -30,9 +45,16 @@
 			</a>
 			{% for item in config.extra.nav %}
 				{% if lang == "es" %}{% set link_text = item.link_es %}{% else %}{% set link_text = item.link_en %}{% endif %}
+				{% if item.submenu %}
+					{% for sub in item.submenu %}
+						{% if lang == "es" %}{% set sub_text = sub.link_es %}{% else %}{% set sub_text = sub.link_en %}{% endif %}
+						<a href="{{ sub.route }}" role="menuitem">{{ sub_text }}</a>
+					{% endfor %}
+				{% else %}
 				<a class="{{ item.class }}{% if current_path is starting_with(item.route) %} current{% endif %}" href="{{ item.route }}" role="menuitem">
 					{{ link_text }}
 				</a>
+				{% endif %}
 			{% endfor %}
 		</div>
 	</div>

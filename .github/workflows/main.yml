@@ -18,6 +18,9 @@ jobs:
         with:
           tool: zola@0.22.1
 
+      - name: Fetch Kunekt docs
+        run: bash scripts/fetch-kunekt.sh
+
       - name: Build site
         run: zola build
 

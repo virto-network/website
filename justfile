@@ -1,9 +1,12 @@
 # default
-build:
+build: fetch-kunekt
     zola build
 
-serve:
+serve: fetch-kunekt
     zola serve
 
+fetch-kunekt:
+    bash scripts/fetch-kunekt.sh
+
 clean:
-    rm -rf public
+    rm -rf public content/kunekt
