@@ -13,16 +13,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Zola
+      - name: Install tools
         uses: taiki-e/install-action@v2
         with:
-          tool: zola@0.22.1
+          tool: zola@0.22.1,just@1.40.0
 
-      - name: Fetch Kunekt docs
-        run: bash scripts/fetch-kunekt.sh
+      - name: Install Nushell
+        uses: hustcer/setup-nu@v3
 
       - name: Build site
-        run: zola build
+        run: just build
 
       - name: Deploy to Cloudflare Pages
         if: github.ref == 'refs/heads/main'
