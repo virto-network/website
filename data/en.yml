@@ -30,8 +30,8 @@ home:
       voting: "Your org's influence on Kreivo chain governance"
     explorer:
       label: Explorer
-      price: "1 KSM"
-      description: "For crypto natives already in Kusama. 1 KSM = 5 members."
+      price: "0.8 KSM"
+      description: "For crypto natives already in Kusama. 0.8 KSM = 5 members."
       memberships: "5"
       gas: "1K tx/mo"
       governance: "1 track"
@@ -170,6 +170,8 @@ kreivo:
   features:
     title: What makes Kreivo different
     list:
+      - title: "0.5s blocks \xB7 12 cores"
+        description: The fastest parachain in the ecosystem. 0.5-second block times with 12 execution cores delivering unmatched throughput for real-time applications.
       - title: No wallets needed
         description: Users authenticate with passkeys, ZK proofs, and social login. No browser extensions, no seed phrases.
       - title: Feeless transactions

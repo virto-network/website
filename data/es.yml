@@ -30,8 +30,8 @@ home:
       voting: "La influencia de tu org en la gobernanza de Kreivo"
     explorer:
       label: Explorer
-      price: "1 KSM"
-      description: "Para cripto nativos en Kusama. 1 KSM = 5 miembros."
+      price: "0.8 KSM"
+      description: "Para cripto nativos en Kusama. 0.8 KSM = 5 miembros."
       memberships: "5"
       gas: "1K tx/mes"
       governance: "1 track"
@@ -170,6 +170,8 @@ kreivo:
   features:
     title: "Qu\xE9 hace diferente a Kreivo"
     list:
+      - title: "Bloques de 0.5s \xB7 12 cores"
+        description: "La parachain m\xE1s r\xE1pida del ecosistema. Bloques de 0.5 segundos con 12 n\xFAcleos de ejecuci\xF3n que entregan un rendimiento sin igual para aplicaciones en tiempo real."
       - title: Sin wallets
         description: "Los usuarios se autentican con passkeys, pruebas ZK y login social. Sin extensiones, sin seed phrases."
       - title: Transacciones sin gas
